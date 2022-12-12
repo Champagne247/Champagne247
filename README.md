@@ -11,3 +11,38 @@
 <p>In addition to the regular classes, CC's Active Teens 4 Success After-School Program will offer additional activities and services that will enhance the students' learning experience and provide additional value to the parents. These could include workshops, seminars, and camps, as well as opportunities to participate in competitions and demonstrations.</p>
 
 <p>Overall, CC's Active Teens 4 Success After-School Program will provide a fun, challenging, and rewarding learning experience for teenagers, and will help them develop their physical and mental skills, confidence, and discipline. The program will be a positive and supportive community for the students, and will provide a valuable and enjoyable after-school activity for families.</p>
+
+CC's Teens 4 Success After-School Program
+
+Our program aims to help teens build strength and confidence through martial arts training. We specialize in striking and grappling martial arts, which can help teens develop discipline, focus, and self-defense skills, as well as improve their physical fitness.
+
+Weekly Schedule:
+
+Monday:
+- 5:00-5:30pm: Warm-up and stretching
+- 5:30-6:30pm: Kickboxing training
+- 6:30-7:00pm: Cool-down and meditation
+
+Tuesday:
+- 5:00-5:30pm: Warm-up and stretching
+- 5:30-6:30pm: Brazilian Jiu-Jitsu training
+- 6:30-7:00pm: Cool-down and meditation
+
+Wednesday:
+- 5:00-5:30pm: Warm-up and stretching
+- 5:30-6:30pm: Boxing training
+- 6:30-7:00pm: Cool-down and meditation
+
+Thursday:
+- 5:00-5:30pm: Warm-up and stretching
+- 5:30-6:30pm: Wrestling training
+- 6:30-7:00pm: Cool-down and meditation
+
+Friday:
+- 5:00-5:30pm: Warm-up and stretching
+- 5:30-6:30pm: Mixed martial arts training
+- 6:30-7:00pm: Cool-down and meditation
+
+*Note: The weekly schedule may be subject to change.
+
+Our program is open to all teens aged 12
