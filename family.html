@@ -1,59 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Family | M.A.P</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Family | M.A.P</title>
+  <style>
+    :root{
+      --bg:#05070d; --panel:#11141c; --text:#f5f7fb; --muted:#9aa4b2;
+      --line:rgba(255,255,255,.08); --blue:#42b3ff; --glow:0 0 24px rgba(66,179,255,.18);
+    }
+    *{box-sizing:border-box} html,body{margin:0;padding:0}
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top, rgba(66,179,255,.12), transparent 28%),
+        linear-gradient(180deg, #05070d 0%, #080b12 100%);
+      min-height:100vh;
+    }
+    .shell{width:min(920px, calc(100% - 32px)); margin:0 auto; padding:28px 0 48px}
+    .back{
+      display:inline-flex; align-items:center; gap:8px; margin-bottom:18px;
+      color:#cfeeff; text-decoration:none; border:1px solid var(--line);
+      padding:10px 14px; border-radius:999px; background:rgba(255,255,255,.03)
+    }
+    .panel{
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border-radius:28px; padding:28px 22px; box-shadow:var(--glow);
+    }
+    h1{margin:0; font-size:clamp(34px, 7vw, 62px); line-height:1}
+    p{font-size:clamp(18px, 2.8vw, 24px); color:#dbe5ef}
+    .muted{color:var(--muted); font-size:16px}
+  </style>
 </head>
 <body>
-
-    <header class="topbar">
-        <div class="topbar-inner">
-            <a class="brand" href="index.html">
-                <span class="brand-mark">↑</span>
-                <span class="brand-text">M.A.P</span>
-            </a>
-
-            <nav class="nav">
-                <a class="active" href="family.html">Family</a>
-                <a href="freeflight.html">Freeflight</a>
-                <a href="fitness.html">Fitness</a>
-                <a href="fun.html">Fun</a>
-                <a href="professional.html">Professional</a>
-            </nav>
-        </div>
-    </header>
-
-    <main class="page">
-        <section class="page-hero">
-            <div class="page-emoji">👨‍👩‍👦</div>
-            <h1 class="page-title">Family</h1>
-            <p class="page-sub">
-                Legacy. Leadership. Love. The center point that gives the rest of the mission meaning.
-            </p>
-        </section>
-
-        <section class="section">
-            <div class="panel">
-                <h2 class="section-title">What This Means</h2>
-                <p class="section-copy">
-                    Family is the foundation behind everything I build. It shapes my discipline, my purpose,
-                    and the future I’m creating.
-                </p>
-                <ul class="list">
-                    <li>Building legacy through example</li>
-                    <li>Leading with strength and presence</li>
-                    <li>Creating meaningful memories and momentum</li>
-                </ul>
-            </div>
-        </section>
-
-        <div class="back-row">
-            <a class="back-link" href="index.html">← Back to Home</a>
-        </div>
-
-        <footer class="footer">M.A.P — Family First.</footer>
-    </main>
-
+  <div class="shell">
+    <a class="back" href="index.html">← Back</a>
+    <section class="panel">
+      <h1>👨‍👩‍👦 FAMILY</h1>
+      <p>Legacy. Leadership. Love.</p>
+      <p class="muted">This is where family, growth, and generational purpose come first.</p>
+    </section>
+  </div>
 </body>
 </html>
