@@ -2,43 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Christopher Champagne | M.A.P</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="shell">
-    <div class="topbar">
-      <div class="brand">
-        <div class="brand-badge">↑</div>
-        <div>M.A.P</div>
-      </div>
-    </div>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="M.A.P Home">
+        <span class="brand-badge">↑</span>
+        <span class="brand-text">M.A.P</span>
+      </a>
+    </header>
 
-    <section class="hero">
-      <div class="eyebrow">Mission Alignment Protocol</div>
+    <main class="landing">
+      <p class="eyebrow">Mission Alignment Protocol</p>
+      <h1>Christopher Champagne</h1>
+      <p class="subline">Click a section of the wheel to enter my life map.</p>
 
-      <div class="profile-pic">
-        <img src="Screenshot_20260322_100453_Gallery.jpg" alt="Christopher Champagne M.A.P graphic">
-      </div>
+      <section class="map-wrap" aria-label="Interactive life map">
+        <div class="wheel-frame">
+          <img
+            src="Screenshot_20260322_100453_Gallery.jpg"
+            alt="Christopher Champagne pie chart life map"
+            class="wheel-image"
+          />
 
-      <h1>Christopher<br>Champagne</h1>
+          <svg class="wheel-overlay" viewBox="0 0 100 100" aria-hidden="true">
+            <a href="family.html" class="slice-link" aria-label="Go to Family">
+              <title>Family</title>
+              <path d="M50,50 L50,2 A48,48 0 0,1 95.65,35.17 Z"></path>
+            </a>
 
-      <p class="sub">M.A.P — My Accountability Program</p>
-      <p class="tag">
-        Built in real time. Family. Flight. Fitness. Fun. Professional execution.
-      </p>
+            <a href="freeflight.html" class="slice-link" aria-label="Go to Freeflight">
+              <title>Freeflight</title>
+              <path d="M50,50 L95.65,35.17 A48,48 0 0,1 78.21,88.83 Z"></path>
+            </a>
 
-      <div class="grid">
-        <a href="family.html" class="card"><div><span>👨‍👩‍👦</span>FAMILY</div></a>
-        <a href="freeflight.html" class="card"><div><span>✈️</span>FREEFLIGHT</div></a>
-        <a href="fitness.html" class="card"><div><span>💪</span>FITNESS</div></a>
-        <a href="fun.html" class="card"><div><span>🎯</span>FUN</div></a>
-        <a href="professional.html" class="card"><div><span>⚡</span>PROFESSIONAL</div></a>
-      </div>
-    </section>
+            <a href="fitness.html" class="slice-link" aria-label="Go to Fitness">
+              <title>Fitness</title>
+              <path d="M50,50 L78.21,88.83 A48,48 0 0,1 21.79,88.83 Z"></path>
+            </a>
 
-    <div class="footer">Your M.A.P to your future.</div>
+            <a href="fun.html" class="slice-link" aria-label="Go to Fun">
+              <title>Fun</title>
+              <path d="M50,50 L21.79,88.83 A48,48 0 0,1 4.35,35.17 Z"></path>
+            </a>
+
+            <a href="professional.html" class="slice-link" aria-label="Go to Professional">
+              <title>Professional</title>
+              <path d="M50,50 L4.35,35.17 A48,48 0 0,1 50,2 Z"></path>
+            </a>
+          </svg>
+        </div>
+
+        <div class="wheel-labels">
+          <a href="family.html" class="map-chip">Family</a>
+          <a href="freeflight.html" class="map-chip">Freeflight</a>
+          <a href="fitness.html" class="map-chip">Fitness</a>
+          <a href="fun.html" class="map-chip">Fun</a>
+          <a href="professional.html" class="map-chip">Professional</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      Your M.A.P to your future.
+    </footer>
   </div>
 </body>
 </html>
