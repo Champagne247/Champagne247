@@ -1,79 +1,99 @@
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Christopher Champagne | M.A.P</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0f0f0f;
-            color: white;
-            text-align: center;
-        }
-
-        h1 {
-            margin-top: 40px;
-            font-size: 32px;
-        }
-
-        p {
-            color: #aaa;
-        }
-
-        .container {
-            padding: 30px 20px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            max-width: 500px;
-            margin: auto;
-        }
-
-        .card {
-            background: #1c1c1c;
-            padding: 30px 10px;
-            border-radius: 12px;
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-            display: block;
-        }
-
-        .card:hover {
-            background: #2a2a2a;
-        }
-
-        .footer {
-            margin-top: 40px;
-            color: #777;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-    <h1>Christopher Champagne</h1>
-    <p>M.A.P – My Accountability Program</p>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">↑</span>
+                <span class="brand-text">M.A.P</span>
+            </a>
 
-    <div class="container">
-        <div class="grid">
-            <a href="/Champagne247/family.html" class="card">👨‍👩‍👦 FAMILY</a>
-            <a href="/Champagne247/freeflight.html" class="card">✈️ FREEFLIGHT</a>
-            <a href="/Champagne247/fitness.html" class="card">💪 FITNESS</a>
-            <a href="/Champagne247/fun.html" class="card">🎯 FUN</a>
-            <a href="/Champagne247/professional.html" class="card">⚡ PROFESSIONAL</a>
+            <nav class="nav">
+                <a href="family.html">Family</a>
+                <a href="freeflight.html">Freeflight</a>
+                <a href="fitness.html">Fitness</a>
+                <a href="fun.html">Fun</a>
+                <a href="professional.html">Professional</a>
+            </nav>
         </div>
-    </div>
+    </header>
 
-    <div class="footer">
-        Built in real time.
-    </div>
+    <main class="page">
+        <section class="hero">
+            <img class="hero-logo" src="map-logo.jpg" alt="M.A.P logo">
+
+            <div class="kicker">Mission Alignment Protocol</div>
+            <h1>Christopher Champagne</h1>
+            <p class="sub">
+                M.A.P — My Accountability Program. A focused system for family, freeflight,
+                fitness, fun, and professional execution.
+            </p>
+
+            <div class="cta-row">
+                <a class="btn" href="freeflight.html">Enter the System</a>
+                <a class="btn secondary" href="professional.html">Professional Services</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">My Core Pillars</h2>
+            <p class="section-copy">
+                Five aligned areas that define how I build, live, and move forward.
+            </p>
+
+            <div class="grid">
+                <a class="card" href="family.html">
+                    <span class="card-icon">👨‍👩‍👦</span>
+                    <h3 class="card-title">Family</h3>
+                    <p class="card-copy">Legacy, leadership, love, and the foundation behind everything.</p>
+                </a>
+
+                <a class="card" href="freeflight.html">
+                    <span class="card-icon">✈️</span>
+                    <h3 class="card-title">Freeflight</h3>
+                    <p class="card-copy">Looking4Lift. Freedom, elevation, perspective, and flight.</p>
+                </a>
+
+                <a class="card" href="fitness.html">
+                    <span class="card-icon">💪</span>
+                    <h3 class="card-title">Fitness</h3>
+                    <p class="card-copy">Discipline, strength, recovery, and the Certified MONSTER mindset.</p>
+                </a>
+
+                <a class="card" href="fun.html">
+                    <span class="card-icon">🎯</span>
+                    <h3 class="card-title">Fun</h3>
+                    <p class="card-copy">Create, explore, enjoy the process, and stay alive in the moment.</p>
+                </a>
+
+                <a class="card" href="professional.html">
+                    <span class="card-icon">⚡</span>
+                    <h3 class="card-title">Professional</h3>
+                    <p class="card-copy">HVAC, systems, execution, and building real-world solutions daily.</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="panel">
+                <h2 class="section-title">Built in Real Time</h2>
+                <p class="section-copy">
+                    This is not theory. This is a live system being built and refined through real family,
+                    real work, real flight, real discipline, and real momentum.
+                </p>
+            </div>
+        </section>
+
+        <footer class="footer">
+            M.A.P — Built in real time.
+        </footer>
+    </main>
 
 </body>
 </html>
