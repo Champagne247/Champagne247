@@ -1,20 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Professional | M.A.P</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional | M.A.P</title>
+  <style>
+    :root{--line:rgba(255,255,255,.08);--muted:#9aa4b2;--glow:0 0 24px rgba(66,179,255,.18)}
+    *{box-sizing:border-box} html,body{margin:0;padding:0}
+    body{font-family:Arial,Helvetica,sans-serif;color:#f5f7fb;background:radial-gradient(circle at top, rgba(66,179,255,.12), transparent 28%),linear-gradient(180deg,#05070d 0%,#080b12 100%);min-height:100vh}
+    .shell{width:min(920px, calc(100% - 32px));margin:0 auto;padding:28px 0 48px}
+    .back{display:inline-flex;align-items:center;gap:8px;margin-bottom:18px;color:#cfeeff;text-decoration:none;border:1px solid var(--line);padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.03)}
+    .panel{border:1px solid var(--line);background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border-radius:28px;padding:28px 22px;box-shadow:var(--glow)}
+    h1{margin:0;font-size:clamp(34px, 7vw, 62px);line-height:1}
+    p{font-size:clamp(18px, 2.8vw, 24px);color:#dbe5ef}
+    .muted{color:var(--muted);font-size:16px}
+  </style>
 </head>
-
-<body style="background:black;color:white;font-family:Arial;text-align:center;">
-
-    <h1>⚡ PROFESSIONAL</h1>
-
-    <p>HVAC. Tech. Systems. Execution.</p>
-    <p>Building real-world solutions daily.</p>
-
-    <br><br>
-
-    <a href="/Champagne247/index.html" style="color:white;">← Back</a>
-
+<body>
+  <div class="shell">
+    <a class="back" href="index.html">← Back</a>
+    <section class="panel">
+      <h1>⚡ PROFESSIONAL</h1>
+      <p>HVAC. Tech. Systems. Execution.</p>
+      <p class="muted">Real-world skill, technical work, and building practical solutions daily.</p>
+    </section>
+  </div>
 </body>
 </html>
