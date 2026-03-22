@@ -4,181 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Christopher Champagne | M.A.P</title>
-  <style>
-    :root{
-      --bg:#05070d;
-      --panel:#11141c;
-      --panel-2:#171b24;
-      --text:#f5f7fb;
-      --muted:#9aa4b2;
-      --line:rgba(255,255,255,.08);
-      --blue:#42b3ff;
-      --blue-soft:rgba(66,179,255,.18);
-      --glow:0 0 24px rgba(66,179,255,.18);
-      --radius:22px;
-      --max:1100px;
-    }
-
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{
-      font-family: Arial, Helvetica, sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(circle at top, rgba(66,179,255,.12), transparent 28%),
-        radial-gradient(circle at bottom, rgba(66,179,255,.08), transparent 30%),
-        linear-gradient(180deg, #05070d 0%, #080b12 100%);
-      min-height:100vh;
-    }
-
-    a{color:inherit;text-decoration:none}
-
-    .shell{
-      width:min(var(--max), calc(100% - 32px));
-      margin:0 auto;
-      padding:28px 0 48px;
-    }
-
-    .topbar{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      margin-bottom:28px;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      font-weight:700;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      color:#dff3ff;
-    }
-
-    .brand-badge{
-      width:42px;
-      height:42px;
-      border-radius:14px;
-      display:grid;
-      place-items:center;
-      background:linear-gradient(180deg, rgba(66,179,255,.22), rgba(66,179,255,.08));
-      border:1px solid rgba(66,179,255,.28);
-      box-shadow:var(--glow);
-      font-size:18px;
-    }
-
-    .hero{
-      border:1px solid var(--line);
-      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
-      border-radius:32px;
-      padding:34px 22px 26px;
-      box-shadow:var(--glow);
-      position:relative;
-      overflow:hidden;
-    }
-
-    .hero::after{
-      content:"";
-      position:absolute;
-      inset:auto -80px -80px auto;
-      width:220px;
-      height:220px;
-      background:radial-gradient(circle, rgba(66,179,255,.16), transparent 68%);
-      pointer-events:none;
-    }
-
-    .eyebrow{
-      display:inline-block;
-      font-size:12px;
-      letter-spacing:.18em;
-      text-transform:uppercase;
-      color:#9fd8ff;
-      margin-bottom:14px;
-    }
-
-    h1{
-      margin:0;
-      font-size:clamp(40px, 8vw, 82px);
-      line-height:.95;
-      letter-spacing:-.04em;
-    }
-
-    .sub{
-      margin:18px 0 10px;
-      font-size:clamp(18px, 3vw, 30px);
-      color:#d7e3f0;
-    }
-
-    .tag{
-      margin:0;
-      color:var(--muted);
-      font-size:clamp(14px, 2.5vw, 18px);
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(2, minmax(0,1fr));
-      gap:18px;
-      margin-top:24px;
-    }
-
-    .card{
-      min-height:132px;
-      padding:22px 18px;
-      border-radius:var(--radius);
-      border:1px solid var(--line);
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)),
-        linear-gradient(135deg, rgba(66,179,255,.08), transparent 45%);
-      box-shadow:var(--glow);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      transition:transform .18s ease, border-color .18s ease, background .18s ease;
-      font-size:clamp(18px, 3vw, 22px);
-      font-weight:700;
-      letter-spacing:.02em;
-    }
-
-    .card:hover{
-      transform:translateY(-2px);
-      border-color:rgba(66,179,255,.38);
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.025)),
-        linear-gradient(135deg, rgba(66,179,255,.12), transparent 45%);
-    }
-
-    .card span{
-      display:block;
-      font-size:34px;
-      margin-bottom:10px;
-    }
-
-    .footer{
-      text-align:center;
-      color:var(--muted);
-      margin-top:26px;
-      font-size:15px;
-    }
-
-    @media (max-width:700px){
-      .shell{width:min(100% - 24px, var(--max))}
-      .grid{grid-template-columns:1fr 1fr; gap:14px}
-      .card{min-height:110px; padding:16px 12px}
-    }
-
-    @media (max-width:520px){
-      .grid{grid-template-columns:1fr 1fr}
-      .hero{padding:28px 18px 22px}
-      .topbar{margin-bottom:18px}
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <div class="shell">
+
     <div class="topbar">
       <div class="brand">
         <div class="brand-badge">↑</div>
@@ -188,20 +19,28 @@
 
     <section class="hero">
       <div class="eyebrow">Mission Alignment Protocol</div>
+
+      <!-- PROFILE IMAGE -->
+      <div class="profile-pic">
+        <img src="profile.jpg" alt="Christopher Champagne">
+      </div>
+
       <h1>Christopher<br>Champagne</h1>
+
       <p class="sub">M.A.P — My Accountability Program</p>
       <p class="tag">Built in real time. Family. Flight. Fitness. Fun. Professional execution.</p>
 
       <div class="grid">
-        <a href="family.html" class="card"><div><span>👨‍👩‍👦</span>FAMILY</div></a>
-        <a href="freeflight.html" class="card"><div><span>✈️</span>FREEFLIGHT</div></a>
-        <a href="fitness.html" class="card"><div><span>💪</span>FITNESS</div></a>
-        <a href="fun.html" class="card"><div><span>🎯</span>FUN</div></a>
-        <a href="professional.html" class="card"><div><span>⚡</span>PROFESSIONAL</div></a>
+        <a href="#" class="card"><div><span>👨‍👩‍👦</span>FAMILY</div></a>
+        <a href="#" class="card"><div><span>✈️</span>FREEFLIGHT</div></a>
+        <a href="#" class="card"><div><span>💪</span>FITNESS</div></a>
+        <a href="#" class="card"><div><span>🎯</span>FUN</div></a>
+        <a href="#" class="card"><div><span>⚡</span>PROFESSIONAL</div></a>
       </div>
     </section>
 
     <div class="footer">Your M.A.P to your future.</div>
+
   </div>
 </body>
 </html>
