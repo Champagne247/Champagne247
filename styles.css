@@ -309,3 +309,115 @@ h1{
     min-height:132px;
   }
 }
+
+
+.circle-wrap{
+  position:relative;
+  max-width:760px;
+  margin:0 auto 26px;
+  padding:14px;
+  border-radius:32px;
+  background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+  border:1px solid var(--border);
+  box-shadow:var(--glow);
+}
+
+.circle-image{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:24px;
+}
+
+.hotspot{
+  position:absolute;
+  display:block;
+  border-radius:999px;
+  border:1px solid rgba(111,227,255,.18);
+  background:rgba(59,184,255,.08);
+  transition:.2s ease;
+}
+
+.hotspot:hover,
+.hotspot:focus{
+  background:rgba(59,184,255,.16);
+  border-color:rgba(111,227,255,.45);
+  box-shadow:0 0 20px rgba(59,184,255,.22);
+  outline:none;
+}
+
+.hotspot-label{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:#e9f7ff;
+  pointer-events:none;
+  white-space:nowrap;
+}
+
+.hs-flight{
+  left:21%;
+  top:14%;
+  width:24%;
+  height:15%;
+}
+
+.hs-warrior{
+  left:55%;
+  top:12%;
+  width:24%;
+  height:16%;
+}
+
+.hs-strength{
+  left:6%;
+  top:39%;
+  width:21%;
+  height:17%;
+}
+
+.hs-builder{
+  left:76%;
+  top:36%;
+  width:18%;
+  height:18%;
+}
+
+.hs-fitness{
+  left:12%;
+  top:61%;
+  width:24%;
+  height:18%;
+}
+
+.hs-fun{
+  left:63%;
+  top:60%;
+  width:23%;
+  height:18%;
+}
+
+.hs-center{
+  left:28%;
+  top:31%;
+  width:44%;
+  height:26%;
+  border-radius:50%;
+}
+
+@media (max-width:700px){
+  .hotspot-label{
+    font-size:10px;
+  }
+}
+
+@media (max-width:520px){
+  .hotspot-label{
+    display:none;
+  }
+}
