@@ -1,38 +1,953 @@
-/* Mission Alignment Protocol v2 */
+/* ==========================================================
+   Mission Alignment Protocol V3
+   Part 1 - Foundation
+========================================================== */
+
 :root{
---bg:#07111d;--bg2:#0c1b2d;--card:rgba(255,255,255,.06);--line:rgba(255,255,255,.08);
---text:#f4f7fb;--muted:#b5c2d6;--blue:#42b3ff;--gold:#ffca6a;
---glow:0 0 35px rgba(66,179,255,.35);--radius:24px}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:Inter,Arial,sans-serif;color:var(--text);
-background:radial-gradient(circle at top,#112a47 0%,transparent 40%),radial-gradient(circle at bottom,#08131f 0%,transparent 45%),linear-gradient(180deg,var(--bg2),#04080f);min-height:100vh}
-.page-shell{max-width:1280px;margin:auto;padding:28px}
-.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:60px}
-.brand{display:flex;gap:14px;align-items:center;color:#fff;text-decoration:none;font-weight:800}
-.brand-badge{width:54px;height:54px;display:grid;place-items:center;border-radius:18px;background:rgba(66,179,255,.08);border:1px solid rgba(66,179,255,.35);box-shadow:var(--glow)}
-.desktop-nav{display:flex;gap:18px;flex-wrap:wrap}
-.desktop-nav a,.map-chip{color:#fff;text-decoration:none;padding:12px 22px;border-radius:999px;background:var(--card);border:1px solid var(--line);transition:.3s}
-.desktop-nav a:hover,.map-chip:hover{transform:translateY(-3px);box-shadow:var(--glow);background:rgba(66,179,255,.12)}
-.landing{text-align:center}
-.eyebrow{letter-spacing:5px;color:#8fbef8;font-size:.85rem;margin-bottom:18px}
-h1{font-size:clamp(2.8rem,6vw,5.8rem);margin-bottom:18px}
-.subline{color:var(--muted);line-height:1.55;font-size:1.25rem;margin-bottom:40px}
-.map-wrap{display:flex;flex-direction:column;align-items:center;gap:28px}
-.wheel-frame{position:relative;display:inline-block}
-.wheel-image{width:min(92vw,760px);border-radius:28px;box-shadow:0 0 40px rgba(66,179,255,.28),0 25px 60px rgba(0,0,0,.45);transition:transform .35s ease}
-.wheel-image:hover{transform:scale(1.02)}
-.wheel-labels{display:flex;flex-wrap:wrap;justify-content:center;gap:18px}
-.intro-card{margin:70px auto;max-width:900px;padding:40px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);backdrop-filter:blur(14px);box-shadow:var(--glow)}
-.intro-card h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:22px}
-.intro-card p{color:var(--muted);font-size:1.25rem;line-height:1.7}
-.quick-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px;margin:60px 0}
-.feature-card{text-decoration:none;color:#fff;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:34px;transition:.35s;box-shadow:0 15px 35px rgba(0,0,0,.35)}
-.feature-card:hover{transform:translateY(-8px);box-shadow:0 0 40px rgba(255,202,106,.25)}
-.feature-card h3{font-size:2rem;margin:18px 0}
-.feature-card p{color:var(--muted);line-height:1.6}
-.footer{margin-top:80px;padding:50px 20px;text-align:center;border-top:1px solid var(--line);color:var(--muted)}
-.footer-links{margin:25px 0;display:flex;justify-content:center;gap:24px;flex-wrap:wrap}
-.footer-links a{color:#fff;text-decoration:none}
-@media(max-width:900px){.topbar{flex-direction:column;gap:24px}.desktop-nav{justify-content:center}.page-shell{padding:18px}.intro-card{padding:28px}.subline{font-size:1.1rem}}
-@media(max-width:600px){h1{font-size:3rem}.feature-card{padding:26px}.wheel-labels{gap:12px}.map-chip{width:45%;text-align:center}}
+    --bg:#050913;
+    --bg2:#0b1628;
+    --bg3:#132640;
+
+    --card:rgba(255,255,255,.06);
+    --cardHover:rgba(255,255,255,.10);
+
+    --border:rgba(255,255,255,.08);
+
+    --text:#f8fbff;
+    --muted:#aab8ca;
+
+    --blue:#49b7ff;
+    --gold:#ffcb65;
+
+    --shadow:
+        0 25px 70px rgba(0,0,0,.45);
+
+    --glow:
+        0 0 35px rgba(73,183,255,.35);
+
+    --radius:28px;
+
+    --max:1400px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    color:var(--text);
+
+    font-family:
+    "Inter",
+    Arial,
+    sans-serif;
+
+    min-height:100vh;
+
+    background:
+
+    radial-gradient(circle at top,
+    rgba(58,139,255,.18),
+    transparent 45%),
+
+    radial-gradient(circle at bottom,
+    rgba(0,80,255,.08),
+    transparent 40%),
+
+    linear-gradient(
+    180deg,
+    var(--bg3),
+    var(--bg2),
+    var(--bg));
+
+    overflow-x:hidden;
+
+}
+
+/* ========================= */
+
+.page-shell{
+
+    width:min(
+    94%,
+    var(--max));
+
+    margin:auto;
+
+}
+
+/* ========================= */
+
+.topbar{
+
+    display:flex;
+
+    justify-content:
+    space-between;
+
+    align-items:center;
+
+    padding:
+
+    28px
+    0
+    60px;
+
+}
+
+.brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+}
+
+.brand-badge{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:20px;
+
+    display:grid;
+
+    place-items:center;
+
+    background:
+
+    rgba(73,183,255,.08);
+
+    border:
+
+    1px solid
+    rgba(73,183,255,.30);
+
+    box-shadow:
+
+    var(--glow);
+
+    transition:.35s;
+
+}
+
+.brand:hover .brand-badge{
+
+    transform:
+
+    translateY(-3px);
+
+}
+
+.brand-text{
+
+    font-size:1.45rem;
+
+}
+
+/* ========================= */
+
+.desktop-nav{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.desktop-nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:
+
+    14px
+    24px;
+
+    border-radius:999px;
+
+    background:
+
+    var(--card);
+
+    border:
+
+    1px solid
+    var(--border);
+
+    transition:.35s;
+
+    backdrop-filter:
+
+    blur(18px);
+
+}
+
+.desktop-nav a:hover{
+
+    transform:
+
+    translateY(-4px);
+
+    background:
+
+    var(--cardHover);
+
+    box-shadow:
+
+    var(--glow);
+
+}
+
+/* ========================= */
+
+.landing{
+
+    text-align:center;
+
+}
+
+.eyebrow{
+
+    letter-spacing:
+
+    6px;
+
+    color:
+
+    #9cc7ff;
+
+    font-size:
+
+    .82rem;
+
+    margin-bottom:
+
+    20px;
+
+}
+
+h1{
+
+    font-size:
+
+    clamp(
+    3rem,
+    6vw,
+    6rem);
+
+    font-weight:800;
+
+    line-height:1;
+
+    margin-bottom:
+
+    24px;
+
+}
+
+.subline{
+
+    color:
+
+    var(--muted);
+
+    font-size:
+
+    1.35rem;
+
+    line-height:
+
+    1.7;
+
+    max-width:
+
+    760px;
+
+    margin:
+
+    auto;
+
+    margin-bottom:
+
+    60px;
+
+}
+
+/* ========================= */
+
+.map-wrap{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:34px;
+
+}
+
+.wheel-frame{
+
+    position:relative;
+
+    display:inline-block;
+
+}
+
+.wheel-image{
+
+    width:
+
+    min(
+    92vw,
+    900px);
+
+    border-radius:
+
+    var(--radius);
+
+    box-shadow:
+
+    var(--shadow),
+    var(--glow);
+
+    transition:
+
+    .45s;
+
+}
+
+.wheel-image:hover{
+
+    transform:
+
+    scale(1.02);
+
+}
+
+
+
+/* ==========================================================
+   Mission Alignment Protocol V3
+   Part 2 - Cards • Buttons • Footer • Hover Effects
+========================================================== */
+
+/* ---------- Wheel Navigation ---------- */
+
+.wheel-labels{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin-top:10px;
+
+}
+
+.map-chip{
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:
+
+        14px
+        26px;
+
+    border-radius:999px;
+
+    background:
+
+        rgba(255,255,255,.06);
+
+    border:
+
+        1px solid
+        rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    transition:
+
+        .35s;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+}
+
+.map-chip:hover{
+
+    transform:
+
+        translateY(-5px)
+        scale(1.05);
+
+    box-shadow:
+
+        0 0 30px rgba(73,183,255,.35);
+
+    background:
+
+        rgba(73,183,255,.12);
+
+}
+
+/* ---------- Intro Card ---------- */
+
+.intro-card{
+
+    max-width:900px;
+
+    margin:
+
+        80px auto;
+
+    padding:
+
+        55px;
+
+    border-radius:
+
+        var(--radius);
+
+    background:
+
+        rgba(255,255,255,.05);
+
+    backdrop-filter:
+
+        blur(20px);
+
+    border:
+
+        1px solid
+        rgba(255,255,255,.08);
+
+    box-shadow:
+
+        0 25px 60px rgba(0,0,0,.45);
+
+}
+
+.intro-card h2{
+
+    font-size:
+
+        clamp(
+            2rem,
+            5vw,
+            3.2rem);
+
+    margin-bottom:24px;
+
+}
+
+.intro-card p{
+
+    color:var(--muted);
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+
+}
+
+/* ---------- Quick Links ---------- */
+
+.quick-links{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(
+            auto-fit,
+            minmax(280px,1fr));
+
+    gap:28px;
+
+    margin:
+
+        80px 0;
+
+}
+
+.feature-card{
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:36px;
+
+    border-radius:28px;
+
+    background:
+
+        rgba(255,255,255,.05);
+
+    border:
+
+        1px solid
+        rgba(255,255,255,.08);
+
+    backdrop-filter:
+
+        blur(18px);
+
+    transition:
+
+        .4s;
+
+    box-shadow:
+
+        0 15px 40px rgba(0,0,0,.35);
+
+}
+
+.feature-card:hover{
+
+    transform:
+
+        translateY(-12px)
+        scale(1.02);
+
+    box-shadow:
+
+        0 0 45px rgba(255,203,101,.25);
+
+}
+
+.feature-card h3{
+
+    font-size:2rem;
+
+    margin:
+
+        20px 0;
+
+}
+
+.feature-card p{
+
+    color:var(--muted);
+
+    line-height:1.7;
+
+}
+
+/* ---------- Footer ---------- */
+
+.footer{
+
+    margin-top:100px;
+
+    padding:
+
+        70px
+        20px
+        40px;
+
+    border-top:
+
+        1px solid rgba(255,255,255,.08);
+
+    text-align:center;
+
+}
+
+.footer-motto{
+
+    font-size:1.15rem;
+
+    font-weight:700;
+
+    line-height:2;
+
+    letter-spacing:2px;
+
+}
+
+.footer-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:26px;
+
+    margin:
+
+        35px 0;
+
+}
+
+.footer-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:var(--blue);
+
+}
+
+.copyright{
+
+    color:var(--muted);
+
+    font-size:.95rem;
+
+    line-height:1.8;
+
+}
+
+/* ---------- Universal Glow ---------- */
+
+.feature-card,
+.map-chip,
+.brand-badge,
+.wheel-image{
+
+    will-change:
+        transform;
+
+}
+
+
+/* ==========================================================
+   Mission Alignment Protocol V3
+   Part 3 - Mobile • Animations • Final Polish
+========================================================== */
+
+/* ---------- Animated Background ---------- */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:-25%;
+
+    pointer-events:none;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(73,183,255,.10), transparent 35%),
+        radial-gradient(circle at 80% 30%, rgba(255,203,101,.08), transparent 35%),
+        radial-gradient(circle at 50% 80%, rgba(73,183,255,.06), transparent 45%);
+
+    animation:
+        backgroundFloat 22s ease-in-out infinite alternate;
+
+    z-index:-2;
+
+}
+
+@keyframes backgroundFloat{
+
+    from{
+        transform:
+            translate(0,0)
+            scale(1);
+    }
+
+    to{
+        transform:
+            translate(-40px,-30px)
+            scale(1.08);
+    }
+
+}
+
+/* ---------- Hero Fade ---------- */
+
+.landing{
+
+    animation:
+        heroFade
+        1.2s ease;
+
+}
+
+@keyframes heroFade{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+/* ---------- Wheel Animation ---------- */
+
+.wheel-image{
+
+    animation:
+        wheelFloat
+        8s ease-in-out infinite;
+
+}
+
+@keyframes wheelFloat{
+
+    0%{
+
+        transform:
+            translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+.wheel-image:hover{
+
+    transform:
+        scale(1.03)
+        rotate(.5deg);
+
+}
+
+/* ---------- Selection ---------- */
+
+::selection{
+
+    background:
+        var(--blue);
+
+    color:white;
+
+}
+
+/* ---------- Scrollbar ---------- */
+
+::-webkit-scrollbar{
+
+    width:12px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#07111f;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:
+        linear-gradient(
+            var(--blue),
+            #1d5fa8);
+
+    border-radius:999px;
+
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width:1100px){
+
+    .topbar{
+
+        flex-direction:column;
+
+        gap:25px;
+
+    }
+
+    .desktop-nav{
+
+        justify-content:center;
+
+    }
+
+}
+
+@media (max-width:900px){
+
+    h1{
+
+        font-size:3.2rem;
+
+    }
+
+    .subline{
+
+        font-size:1.1rem;
+
+    }
+
+    .intro-card{
+
+        padding:35px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .desktop-nav{
+
+        gap:10px;
+
+    }
+
+    .desktop-nav a{
+
+        padding:
+            12px
+            18px;
+
+        font-size:.9rem;
+
+    }
+
+    .wheel-image{
+
+        width:100%;
+
+        max-width:600px;
+
+    }
+
+    .quick-links{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .feature-card{
+
+        padding:28px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .brand-text{
+
+        font-size:1.05rem;
+
+    }
+
+    h1{
+
+        font-size:2.5rem;
+
+    }
+
+    .subline{
+
+        font-size:1rem;
+
+    }
+
+    .intro-card{
+
+        padding:28px;
+
+        margin:55px auto;
+
+    }
+
+    .footer{
+
+        padding:50px 15px 30px;
+
+    }
+
+}
+
+/* ---------- Performance ---------- */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+button{
+
+    font-family:inherit;
+
+}
+
+/* ---------- End ---------- */
