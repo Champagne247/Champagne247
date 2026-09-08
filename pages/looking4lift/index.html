@@ -7,13 +7,11 @@
 <title>Looking4Lift | Road to Flying America</title>
 <meta name="description" content="Follow Christopher Champagne's Road to Flying America — hang gliding training, flights, sites flown and what's next with Looking4Lift.">
 
-<!-- FACEBOOK / SOCIAL SHARE PREVIEW -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Looking4Lift">
 <meta property="og:title" content="Looking4Lift | Road to Flying America">
 <meta property="og:description" content="Christopher Champagne's hang gliding journey — training, flying, sites across America and what's next.">
 <meta property="og:url" content="https://champagne247.github.io/Champagne247/pages/looking4lift/">
-
 <meta property="og:image" content="https://champagne247.github.io/Champagne247/pages/looking4lift/looking4lift-share.png">
 <meta property="og:image:secure_url" content="https://champagne247.github.io/Champagne247/pages/looking4lift/looking4lift-share.png">
 <meta property="og:image:type" content="image/png">
@@ -21,7 +19,6 @@
 <meta property="og:image:height" content="1024">
 <meta property="og:image:alt" content="Looking4Lift Road to Flying America hang gliding map">
 
-<!-- X / TWITTER SHARE PREVIEW -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Looking4Lift | Road to Flying America">
 <meta name="twitter:description" content="Christopher Champagne's hang gliding journey — training, flying and what's next.">
@@ -31,381 +28,120 @@
 
 <style>
 *{box-sizing:border-box}
-
-body{
-  margin:0;
-  background:#05070d;
-  color:#f5f7fb;
-  font-family:Arial,sans-serif
-}
-
-.top{
-  padding:18px 16px 14px;
-  background:linear-gradient(#09111c,#05070d);
-  border-bottom:1px solid #22303f
-}
-
-.eyebrow{
-  font-size:12px;
-  letter-spacing:.18em;
-  color:#76cfff;
-  margin:3px 0 5px
-}
-
-h1{
-  margin:0;
-  font-size:clamp(27px,7vw,48px)
-}
-
-.top p{
-  margin:7px 0;
-  color:#aab8c6
-}
-
-.stats,.filters{
-  display:flex;
-  gap:8px;
-  overflow:auto
-}
-
-.stats{
-  padding:12px 0 2px
-}
-
-.stat,.filter{
-  white-space:nowrap;
-  background:#101722;
-  border:1px solid #263444;
-  border-radius:999px;
-  padding:8px 11px;
-  font-size:13px
-}
-
-.filters{
-  padding:10px 12px;
-  background:#080c13
-}
-
-.filter{
-  color:#fff
-}
-
-.filter.active{
-  border-color:#70cfff;
-  background:#13283a
-}
-
-#map{
-  height:64vh;
-  min-height:470px
-}
-
-.legend,.private{
-  padding:12px 16px;
-  background:#080c13;
-  color:#b8c3ce;
-  font-size:13px;
-  line-height:1.7
-}
-
-.private{
-  background:#101722;
-  border-top:1px solid #263444
-}
-
-.dot{
-  display:inline-block;
-  width:11px;
-  height:11px;
-  border-radius:50%;
-  margin-right:4px
-}
-
-.leaflet-popup-content-wrapper,
-.leaflet-popup-tip{
-  background:#101722;
-  color:#fff
-}
-
-.leaflet-popup-content{
-  line-height:1.45
-}
-
-.tag{
-  font-size:11px;
-  padding:3px 6px;
-  border-radius:8px;
-  background:#263444;
-  display:inline-block;
-  margin:2px
-}
+body{margin:0;background:#05070d;color:#f5f7fb;font-family:Arial,sans-serif}
+.top{padding:18px 16px 14px;background:linear-gradient(#09111c,#05070d);border-bottom:1px solid #22303f}
+.eyebrow{font-size:12px;letter-spacing:.18em;color:#76cfff;margin:3px 0 5px}
+h1{margin:0;font-size:clamp(27px,7vw,48px)}
+.top p{margin:7px 0;color:#aab8c6}
+.stats,.filters{display:flex;gap:8px;overflow:auto}
+.stats{padding:12px 0 2px}
+.stat,.filter{white-space:nowrap;background:#101722;border:1px solid #263444;border-radius:999px;padding:8px 11px;font-size:13px}
+.filters{padding:10px 12px;background:#080c13}
+.filter{color:#fff}
+.filter.active{border-color:#70cfff;background:#13283a}
+#map{height:64vh;min-height:470px}
+.legend,.private{padding:12px 16px;background:#080c13;color:#b8c3ce;font-size:13px;line-height:1.7}
+.private{background:#101722;border-top:1px solid #263444}
+.dot{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:4px}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#101722;color:#fff}
+.leaflet-popup-content{line-height:1.45}
+.tag{font-size:11px;padding:3px 6px;border-radius:8px;background:#263444;display:inline-block;margin:2px}
+.map-cta{display:block;margin:0;padding:0;background:#05070d;text-decoration:none}
+.map-cta img{display:block;width:100%;height:auto;margin:0}
 </style>
 </head>
 
 <body>
-
 <header class="top">
-
 <div class="eyebrow">LOOKING4LIFT</div>
-
 <h1>Road to Flying America 🇺🇸</h1>
-
-<p>
-Christopher Champagne's hang gliding journey — training,
-flying and what's next.
-</p>
-
+<p>Christopher Champagne's hang gliding journey — training, flying and what's next.</p>
 <div class="stats">
-
 <span class="stat">🪂 17 Tandem Aerotows</span>
-
 <span class="stat">🛞 22 QuadTows</span>
-
 <span class="stat">🏔️ Solo Mountain Flight</span>
-
 <span class="stat">🔒 Private site respected</span>
-
 </div>
-
 </header>
 
 <div class="filters">
-
-<button class="filter active" data-f="all">
-All
-</button>
-
-<button class="filter" data-f="flowntrained">
-🟣 Flown + Trained
-</button>
-
-<button class="filter" data-f="trained">
-🔵 Trained
-</button>
-
-<button class="filter" data-f="planned">
-🟡 Flying Soon
-</button>
-
-<button class="filter" data-f="goal">
-🟠 Goals
-</button>
-
-<button class="filter" data-f="other">
-⚪ Explore
-</button>
-
+<button class="filter active" data-f="all">All</button>
+<button class="filter" data-f="flowntrained">🟣 Flown + Trained</button>
+<button class="filter" data-f="trained">🔵 Trained</button>
+<button class="filter" data-f="planned">🟡 Flying Soon</button>
+<button class="filter" data-f="goal">🟠 Goals</button>
+<button class="filter" data-f="other">⚪ Explore</button>
 </div>
 
 <div id="map"></div>
 
 <div class="private">
-
 🔒 <b>Private Oklahoma Training Site</b> — 22 QuadTows.
-
-It counts toward the journey, but its location and identifying
-details are intentionally not published.
-
+It counts toward the journey, but its location and identifying details are intentionally not published.
 </div>
 
 <div class="legend">
-
 <b>Personal map colors:</b><br>
-
-<span class="dot" style="background:#a855f7"></span>
-Flown + Trained &nbsp;
-
-<span class="dot" style="background:#2f9bff"></span>
-Trained &nbsp;
-
-<span class="dot" style="background:#ffd43b"></span>
-Flying Soon &nbsp;
-
-<span class="dot" style="background:#ff8c2f"></span>
-Goal &nbsp;
-
-<span class="dot" style="background:#c8d0d9"></span>
-Explore
-
+<span class="dot" style="background:#a855f7"></span> Flown + Trained &nbsp;
+<span class="dot" style="background:#2f9bff"></span> Trained &nbsp;
+<span class="dot" style="background:#ffd43b"></span> Flying Soon &nbsp;
+<span class="dot" style="background:#ff8c2f"></span> Goal &nbsp;
+<span class="dot" style="background:#c8d0d9"></span> Explore
 <br>
-
-Planning markers only — verify current site access,
-local rules, weather, airspace and rating requirements
-before flying.
-
+Planning markers only — verify current site access, local rules, weather, airspace and rating requirements before flying.
 </div>
 
+<!-- CREATE YOUR OWN M.A.P. CTA -->
+<a class="map-cta" href="../map/" aria-label="Create Your Own M.A.P.">
+  <img src="create-your-map.png" alt="Create Your Own M.A.P. - Mission Alignment Protocol">
+</a>
+
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
 <script>
-
 const sites=[
-
-['Lookout Mountain Flight Park','GA',
-34.86,-85.48,
-'flowntrained',
-'Solo • assisted launch • ridge soaring • thermalling • tandem aerotow training'],
-
-['Dockweiler Beach','CA',
-33.93,-118.44,
-'trained',
-'Training'],
-
-['Cowboy Up Hang Gliding','TX',
-29.31,-96.10,
-'trained',
-'Tandem aerotow training'],
-
-['Sonora Wings','AZ',
-32.99,-111.92,
-'trained',
-'Tandem aerotow training'],
-
-['Buffalo Mountain','OK',
-34.79,-95.90,
-'planned',
-'Flying soon'],
-
-['Point of the Mountain','UT',
-40.46,-111.89,
-'planned',
-'Flying soon • confirm North/South Side and current protocols'],
-
-['Kagel Mountain / Sylmar','CA',
-34.33,-118.38,
-'planned',
-'Flying soon'],
-
-['Fort Funston','CA',
-37.72,-122.50,
-'goal',
-'Goal site'],
-
-['Wilotree Park / Paradise Airsports','FL',
-28.58,-81.85,
-'goal',
-'Goal site'],
-
-['Kitty Hawk / Jockey’s Ridge','NC',
-35.96,-75.63,
-'goal',
-'Goal site'],
-
-['Crestline / Marshall','CA',
-34.21,-117.30,
-'other',
-'Explore'],
-
-['Torrey Pines','CA',
-32.89,-117.25,
-'other',
-'Explore • separately managed'],
-
-['Woodrat Mountain','OR',
-42.22,-123.06,
-'other',
-'Explore'],
-
-['Checkerboard','MT',
-48.10,-114.20,
-'other',
-'Explore'],
-
-['Storm Peak / Steamboat','CO',
-40.46,-106.82,
-'other',
-'Explore'],
-
-['Franklin Mountains','TX',
-31.90,-106.49,
-'other',
-'Explore']
-
+['Lookout Mountain Flight Park','GA',34.86,-85.48,'flowntrained','Solo • assisted launch • ridge soaring • thermalling • tandem aerotow training'],
+['Dockweiler Beach','CA',33.93,-118.44,'trained','Training'],
+['Cowboy Up Hang Gliding','TX',29.31,-96.10,'trained','Tandem aerotow training'],
+['Sonora Wings','AZ',32.99,-111.92,'trained','Tandem aerotow training'],
+['Buffalo Mountain','OK',34.79,-95.90,'planned','Flying soon'],
+['Point of the Mountain','UT',40.46,-111.89,'planned','Flying soon • confirm North/South Side and current protocols'],
+['Kagel Mountain / Sylmar','CA',34.33,-118.38,'planned','Flying soon'],
+['Fort Funston','CA',37.72,-122.50,'goal','Goal site'],
+['Wilotree Park / Paradise Airsports','FL',28.58,-81.85,'goal','Goal site'],
+['Kitty Hawk / Jockey’s Ridge','NC',35.96,-75.63,'goal','Goal site'],
+['Crestline / Marshall','CA',34.21,-117.30,'other','Explore'],
+['Torrey Pines','CA',32.89,-117.25,'other','Explore • separately managed'],
+['Woodrat Mountain','OR',42.22,-123.06,'other','Explore'],
+['Checkerboard','MT',48.10,-114.20,'other','Explore'],
+['Storm Peak / Steamboat','CO',40.46,-106.82,'other','Explore'],
+['Franklin Mountains','TX',31.90,-106.49,'other','Explore']
 ];
 
-const colors={
-flowntrained:'#a855f7',
-trained:'#2f9bff',
-planned:'#ffd43b',
-goal:'#ff8c2f',
-other:'#c8d0d9'
-};
-
-const labels={
-flowntrained:'Flown + Trained',
-trained:'Trained',
-planned:'Flying Soon',
-goal:'Goal',
-other:'Explore'
-};
-
+const colors={flowntrained:'#a855f7',trained:'#2f9bff',planned:'#ffd43b',goal:'#ff8c2f',other:'#c8d0d9'};
+const labels={flowntrained:'Flown + Trained',trained:'Trained',planned:'Flying Soon',goal:'Goal',other:'Explore'};
 const map=L.map('map').setView([38.4,-98.5],4);
 
-L.tileLayer(
-'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-{
-maxZoom:18,
-attribution:'&copy; OpenStreetMap contributors'
-}
-).addTo(map);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+maxZoom:18,attribution:'&copy; OpenStreetMap contributors'
+}).addTo(map);
 
 const marks=[];
-
 sites.forEach(x=>{
-
-let m=L.circleMarker(
-[x[2],x[3]],
-{
-radius:9,
-color:'#081018',
-weight:2,
-fillColor:colors[x[4]],
-fillOpacity:1
-}
-)
-
-.bindPopup(
-`<b>${x[0]}</b> • ${x[1]}
-<br>
-<span class="tag">${labels[x[4]]}</span>
-<br>
-${x[5]}
-<br>
-<small>
-Approximate planning marker — not navigation coordinates.
-</small>`
-);
-
+let m=L.circleMarker([x[2],x[3]],{
+radius:9,color:'#081018',weight:2,fillColor:colors[x[4]],fillOpacity:1
+}).bindPopup(`<b>${x[0]}</b> • ${x[1]}<br><span class="tag">${labels[x[4]]}</span><br>${x[5]}<br><small>Approximate planning marker — not navigation coordinates.</small>`);
 m.addTo(map);
-
 marks.push([m,x[4]]);
-
 });
 
-document.querySelectorAll('.filter').forEach(b=>
-
-b.onclick=()=>{
-
-document
-.querySelectorAll('.filter')
-.forEach(z=>z.classList.remove('active'));
-
+document.querySelectorAll('.filter').forEach(b=>b.onclick=()=>{
+document.querySelectorAll('.filter').forEach(z=>z.classList.remove('active'));
 b.classList.add('active');
-
 let f=b.dataset.f;
-
 marks.forEach(([m,s])=>{
-
-if(f==='all'||f===s)
-m.addTo(map);
-else
-map.removeLayer(m);
-
+if(f==='all'||f===s)m.addTo(map);else map.removeLayer(m);
 });
-
 });
-
 </script>
-
 </body>
 </html>
