@@ -3,12 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Explore My M.A.P. | Christopher Champagne</title>
-<meta name="description" content="Explore Christopher Champagne's Mission Alignment Protocol — one life, many paths, one mission.">
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<title>Explore My M.A.P. | Christopher Champagne</title>
+
+<meta name="description"
+content="Explore Christopher Champagne's Mission Alignment Protocol — one life, many paths, one mission.">
+
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
 <style>
+
 *{box-sizing:border-box}
 
 :root{
@@ -35,7 +40,9 @@ body{
   margin:auto;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 .hero{
   padding:34px 22px 28px;
@@ -52,17 +59,26 @@ body{
   margin-bottom:48px;
 }
 
+/* NEW M.A.P. ICON */
+
 .logo{
-  width:52px;
-  height:52px;
-  border:1px solid var(--blue);
+  width:58px;
+  height:58px;
+  flex:0 0 58px;
   border-radius:15px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:26px;
-  font-weight:800;
-  color:var(--blue);
+  overflow:hidden;
+  background:#06111c;
+  border:1px solid rgba(88,195,255,.7);
+  box-shadow:
+    0 0 16px rgba(88,195,255,.18),
+    inset 0 0 12px rgba(88,195,255,.08);
+}
+
+.logo img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
 }
 
 .brand strong{
@@ -104,7 +120,9 @@ h1 span{
   line-height:1.5;
 }
 
-/* FILTERS */
+/* =========================
+   FILTERS
+========================= */
 
 .filters{
   padding:22px 16px;
@@ -125,6 +143,7 @@ h1 span{
   gap:8px;
   overflow-x:auto;
   padding-bottom:5px;
+  scrollbar-width:thin;
 }
 
 .filter{
@@ -144,7 +163,9 @@ h1 span{
   border-color:var(--blue);
 }
 
-/* MAP */
+/* =========================
+   MAP
+========================= */
 
 .map-section{
   background:#050a10;
@@ -180,7 +201,36 @@ h1 span{
   line-height:1.45;
 }
 
-/* JOURNEY */
+/* =========================
+   LEGEND
+========================= */
+
+.legend{
+  padding:20px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:#080e16;
+}
+
+.legend-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.dot{
+  width:10px;
+  height:10px;
+  display:inline-block;
+  border-radius:50%;
+  margin-right:5px;
+}
+
+/* =========================
+   JOURNEY
+========================= */
 
 .journey{
   padding:55px 20px;
@@ -253,32 +303,9 @@ h1 span{
   color:#718298;
 }
 
-/* LEGEND */
-
-.legend{
-  padding:20px;
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  background:#080e16;
-}
-
-.legend-row{
-  display:flex;
-  flex-wrap:wrap;
-  gap:16px;
-  color:var(--muted);
-  font-size:13px;
-}
-
-.dot{
-  width:10px;
-  height:10px;
-  display:inline-block;
-  border-radius:50%;
-  margin-right:5px;
-}
-
-/* CTA */
+/* =========================
+   CTA
+========================= */
 
 .cta{
   text-align:center;
@@ -325,10 +352,13 @@ footer strong{
 }
 
 @media(min-width:750px){
+
   .cards{
     grid-template-columns:repeat(2,1fr);
   }
+
 }
+
 </style>
 </head>
 
@@ -339,11 +369,23 @@ footer strong{
 <header class="hero">
 
 <div class="brand">
-  <div class="logo">M</div>
-  <strong>MISSION ALIGNMENT<br>PROTOCOL</strong>
+
+  <div class="logo">
+    <img
+      src="../../../assets/map/branding/map-logo-icon.png"
+      alt="M.A.P. Mission Alignment Protocol">
+  </div>
+
+  <strong>
+    MISSION ALIGNMENT<br>
+    PROTOCOL
+  </strong>
+
 </div>
 
-<div class="eyebrow">Christopher's Journey</div>
+<div class="eyebrow">
+Christopher's Journey
+</div>
 
 <h1>
 EXPLORE<br>
@@ -351,14 +393,21 @@ MY <span>M.A.P.</span>
 </h1>
 
 <div class="hero-copy">
-One life. Many paths. One mission.<br><br>
+
+One life. Many paths. One mission.
+
+<br><br>
+
 A living map of where I've been, what I've accomplished,
 what I'm building and where I'm going next.
+
 </div>
 
 <div class="motto">
+
 Don't just dream about it.<br>
 M.A.P. it out. Get it Done ✔️
+
 </div>
 
 </header>
@@ -366,16 +415,40 @@ M.A.P. it out. Get it Done ✔️
 
 <section class="filters">
 
-<div class="filter-title">EXPLORE THE PATHS</div>
+<div class="filter-title">
+EXPLORE THE PATHS
+</div>
 
 <div class="filter-row">
-<button class="filter active" data-filter="all">ALL</button>
-<button class="filter" data-filter="family">❤️ Family</button>
-<button class="filter" data-filter="fitness">💪 Fitness</button>
-<button class="filter" data-filter="freeflight">✈️ Freeflight</button>
-<button class="filter" data-filter="professional">🔧 Professional</button>
-<button class="filter" data-filter="creator">🎨 Creator</button>
-<button class="filter" data-filter="travel">🌎 Food & Travel</button>
+
+<button class="filter active" data-filter="all">
+ALL
+</button>
+
+<button class="filter" data-filter="family">
+❤️ Family
+</button>
+
+<button class="filter" data-filter="fitness">
+💪 Fitness
+</button>
+
+<button class="filter" data-filter="freeflight">
+✈️ Freeflight
+</button>
+
+<button class="filter" data-filter="professional">
+🔧 Professional
+</button>
+
+<button class="filter" data-filter="creator">
+🎨 Creator
+</button>
+
+<button class="filter" data-filter="travel">
+🌎 Food & Travel
+</button>
+
 </div>
 
 </section>
@@ -417,13 +490,19 @@ Goal
 
 <section class="journey">
 
-<div class="section-label">THE JOURNEY</div>
+<div class="section-label">
+THE JOURNEY
+</div>
 
-<h2 id="journeyTitle">One Life. Every Part of It.</h2>
+<h2 id="journeyTitle">
+One Life. Every Part of It.
+</h2>
 
 <div class="section-copy" id="journeyCopy">
+
 Every pin represents an experience, milestone, project,
 mission or destination.
+
 </div>
 
 <div class="cards" id="cards"></div>
@@ -433,9 +512,13 @@ mission or destination.
 
 <section class="cta">
 
-<div class="section-label">YOUR TURN</div>
+<div class="section-label">
+YOUR TURN
+</div>
 
-<h2>What's on your M.A.P.?</h2>
+<h2>
+What's on your M.A.P.?
+</h2>
 
 <p>
 You don't need my path.<br>
@@ -471,8 +554,6 @@ Christopher Champagne
 /*
 =================================================
 YOUR M.A.P. DATA
-
-THIS is where we'll keep adding your life.
 
 category:
 family
@@ -605,7 +686,9 @@ const journeys=[
 ];
 
 
-/* COLORS */
+/* =========================
+   COLORS / LABELS
+========================= */
 
 const statusColors={
  done:"#a855f7",
@@ -631,39 +714,52 @@ const categoryLabels={
 };
 
 
-/* MAP */
+/* =========================
+   MAP
+========================= */
 
 const map=L.map("map",{
  zoomControl:true
 }).setView([34,-96],4);
 
 L.tileLayer(
-"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-{
- maxZoom:18,
- attribution:"&copy; OpenStreetMap contributors"
-}
+ "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+ {
+  maxZoom:18,
+  attribution:"&copy; OpenStreetMap contributors"
+ }
 ).addTo(map);
 
 let markers=[];
 
 
-/* SECURITY */
+/* =========================
+   SECURITY
+========================= */
 
 function esc(value){
- return String(value||"").replace(/[&<>"']/g,function(c){
-  return {
-   "&":"&amp;",
-   "<":"&lt;",
-   ">":"&gt;",
-   '"':"&quot;",
-   "'":"&#39;"
-  }[c];
- });
+
+ return String(value||"").replace(
+  /[&<>"']/g,
+  function(c){
+
+   return {
+    "&":"&amp;",
+    "<":"&lt;",
+    ">":"&gt;",
+    '"':"&quot;",
+    "'":"&#39;"
+   }[c];
+
+  }
+ );
+
 }
 
 
-/* RENDER */
+/* =========================
+   RENDER
+========================= */
 
 function render(filter="all"){
 
@@ -679,7 +775,8 @@ function render(filter="all"){
 
  visible.forEach(item=>{
 
-  const color=statusColors[item.status] || "#c8d0d9";
+  const color=
+   statusColors[item.status] || "#c8d0d9";
 
   const marker=L.circleMarker(
    [item.lat,item.lng],
@@ -693,6 +790,7 @@ function render(filter="all"){
   );
 
   marker.bindPopup(`
+
    <div class="popup-category">
     ${esc(categoryLabels[item.category])}
    </div>
@@ -702,9 +800,11 @@ function render(filter="all"){
    </div>
 
    <div class="popup-copy">
-    ${esc(item.location)}<br><br>
+    ${esc(item.location)}
+    <br><br>
     ${esc(item.story)}
    </div>
+
   `);
 
   marker.addTo(map);
@@ -712,9 +812,11 @@ function render(filter="all"){
 
 
   const card=document.createElement("article");
+
   card.className="card";
 
   card.innerHTML=`
+
    <div class="card-top">
 
     <div class="card-category">
@@ -727,13 +829,18 @@ function render(filter="all"){
 
    </div>
 
-   <h3>${esc(item.title)}</h3>
+   <h3>
+    ${esc(item.title)}
+   </h3>
 
-   <p>${esc(item.story)}</p>
+   <p>
+    ${esc(item.story)}
+   </p>
 
    <div class="card-date">
     📍 ${esc(item.location)} • ${esc(item.date)}
    </div>
+
   `;
 
   cards.appendChild(card);
@@ -744,18 +851,18 @@ function render(filter="all"){
  if(filter==="all"){
 
   document.getElementById("journeyTitle").textContent=
-  "One Life. Every Part of It.";
+   "One Life. Every Part of It.";
 
   document.getElementById("journeyCopy").textContent=
-  "Different paths. Same mission.";
+   "Different paths. Same mission.";
 
  }else{
 
   document.getElementById("journeyTitle").textContent=
-  categoryLabels[filter];
+   categoryLabels[filter];
 
   document.getElementById("journeyCopy").textContent=
-  "Explore this path inside the Mission Alignment Protocol.";
+   "Explore this path inside the Mission Alignment Protocol.";
 
  }
 
@@ -774,16 +881,22 @@ function render(filter="all"){
 
  }else if(markers.length===1){
 
-  map.setView(markers[0].getLatLng(),8);
+  map.setView(
+   markers[0].getLatLng(),
+   8
+  );
 
  }
 
 }
 
 
-/* FILTER BUTTONS */
+/* =========================
+   FILTER BUTTONS
+========================= */
 
-document.querySelectorAll(".filter").forEach(button=>{
+document.querySelectorAll(".filter")
+.forEach(button=>{
 
  button.addEventListener("click",function(){
 
