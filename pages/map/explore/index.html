@@ -61,7 +61,7 @@ body{
   z-index:-2;
 
   background-image:
-    url("../../../assets/map/Hero/hero-freeflight.png");
+    url("../../../assets/map/Hero/hero-all.png");
 
   background-size:cover;
   background-position:68% 35%;
@@ -72,7 +72,6 @@ body{
     contrast(1.04);
 
   transform:scale(1.01);
-
   transition:opacity .35s ease;
 }
 
@@ -468,6 +467,28 @@ h1 span{
   color:#718298;
 }
 
+.card-link{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 18px;
+  border-radius:12px;
+  border:1px solid var(--blue);
+  background:rgba(88,195,255,.10);
+  color:#fff;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.04em;
+  box-shadow:0 0 18px rgba(88,195,255,.12);
+  transition:.2s ease;
+}
+
+.card-link:hover{
+  background:var(--blue);
+  color:#04101a;
+  box-shadow:0 0 24px rgba(88,195,255,.30);
+}
+
 .empty-state{
   grid-column:1/-1;
   border:1px dashed #29415a;
@@ -492,7 +513,7 @@ h1 span{
 
 .cta{
   text-align:center;
-  padding:65px 22px;
+  padding:65px 22px 45px;
 }
 
 .cta h2{
@@ -519,6 +540,48 @@ h1 span{
   font-size:18px;
   box-shadow:0 10px 35px #0c7db755;
 }
+
+/* =================================================
+   CREATE YOUR MAP BANNER
+================================================= */
+
+.map-banner{
+  padding:10px 18px 45px;
+}
+
+.map-banner a{
+  display:block;
+  position:relative;
+  border-radius:20px;
+  overflow:hidden;
+  border:1px solid rgba(88,195,255,.55);
+  background:#03070d;
+  box-shadow:
+    0 0 22px rgba(88,195,255,.15),
+    0 16px 45px rgba(0,0,0,.40);
+  transition:
+    transform .2s ease,
+    border-color .2s ease,
+    box-shadow .2s ease;
+}
+
+.map-banner a:hover{
+  transform:translateY(-3px);
+  border-color:#8dd7ff;
+  box-shadow:
+    0 0 30px rgba(88,195,255,.30),
+    0 18px 50px rgba(0,0,0,.50);
+}
+
+.map-banner img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+/* =================================================
+   FOOTER
+================================================= */
 
 footer{
   text-align:center;
@@ -617,6 +680,14 @@ footer strong{
 
   .hero-copy{
     font-size:18px;
+  }
+
+  .map-banner{
+    padding:5px 10px 32px;
+  }
+
+  .map-banner a{
+    border-radius:12px;
   }
 }
 
@@ -869,6 +940,20 @@ footer strong{
 </section>
 
 
+<section class="map-banner">
+
+  <a href="../create/"
+     aria-label="Create Your Own M.A.P.">
+
+    <img
+      src="../../../assets/map/Hero/create-your-map.png"
+      alt="Create Your Own M.A.P.">
+
+  </a>
+
+</section>
+
+
 <footer>
 
   <strong>
@@ -898,7 +983,7 @@ src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
 const heroStates={
 
   all:{
-    image:"../../../assets/map/Hero/hero-freeflight.png",
+    image:"../../../assets/map/Hero/hero-all.png",
     eyebrow:"Christopher's Journey",
     title:'EXPLORE<br>MY <span>M.A.P.</span>',
     lead:"One life. Many paths. One mission.",
@@ -931,6 +1016,33 @@ const heroStates={
     lead:"The sky isn't the limit. It's the destination.",
     copy:
       "Training, mountain flights, milestones, community and the pursuit of freeflight."
+  },
+
+  professional:{
+    image:"../../../assets/map/Hero/hero-professional.png",
+    eyebrow:"Professional • Technical Solutions",
+    title:'BUILD. SOLVE.<br>GET IT <span>DONE.</span>',
+    lead:"Decades of experience. One mindset: figure it out.",
+    copy:
+      "Security. IT. Networking. Automation. Electrical. HVAC. Refrigeration. Different systems. Same mission — diagnose it, solve it, get it done."
+  },
+
+  creator:{
+    image:"../../../assets/map/Hero/hero-creator.png",
+    eyebrow:"Creator • Build The Vision",
+    title:'IDEAS<br>TO <span>IMPACT.</span>',
+    lead:"Create. Share. Inspire. Repeat.",
+    copy:
+      "Content, technology, VR, video and digital tools — turning ideas and experiences into something others can explore."
+  },
+
+  travel:{
+    image:"../../../assets/map/Hero/hero-travel.png",
+    eyebrow:"Food & Travel • Experience More",
+    title:'GO.<br>SEE. <span>TASTE.</span>',
+    lead:"Good food. Good places. Good memories.",
+    copy:
+      "Road trips, coastlines, fishing, local food and the experiences that make the journey worth remembering."
   }
 
 };
@@ -1011,7 +1123,9 @@ const journeys=[
   lng:-93.261,
   date:"Building Now",
   story:
-    "HVAC, electrical, refrigeration, restaurant equipment and technical services."
+    "HVAC, electrical, refrigeration, security, automation, IT and technical services.",
+  url:"https://ccstechnicalservices.com/",
+  cta:"Visit CC'S Technical Services →"
 },
 
 {
@@ -1267,6 +1381,20 @@ function render(filter="all"){
     card.className="card";
 
 
+    const cardLink=
+      item.url
+        ? `
+          <a
+            class="card-link"
+            href="${esc(item.url)}"
+            target="_blank"
+            rel="noopener noreferrer">
+            ${esc(item.cta || "Visit →")}
+          </a>
+        `
+        : "";
+
+
     card.innerHTML=`
 
       <div class="card-top">
@@ -1296,6 +1424,8 @@ function render(filter="all"){
         ${esc(item.date)}
 
       </div>
+
+      ${cardLink}
 
     `;
 
