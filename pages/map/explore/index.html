@@ -238,9 +238,7 @@ h1{
   text-shadow:0 5px 28px rgba(0,0,0,.75);
 }
 
-h1 span{
-  color:var(--blue);
-}
+h1 span{color:var(--blue)}
 
 .hero-copy{
   color:#d0d8e2;
@@ -250,9 +248,7 @@ h1 span{
   text-shadow:0 3px 14px #000;
 }
 
-.hero-copy strong{
-  color:#fff;
-}
+.hero-copy strong{color:#fff}
 
 .motto{
   margin-top:28px;
@@ -265,9 +261,7 @@ h1 span{
   text-shadow:0 3px 14px #000;
 }
 
-.motto span{
-  color:var(--blue);
-}
+.motto span{color:var(--blue)}
 
 /* =================================================
    FILTERS
@@ -276,8 +270,7 @@ h1 span{
 .filters{
   padding:22px 16px;
   border-bottom:1px solid var(--line);
-  background:
-    linear-gradient(180deg,#0c1c2b,#07101a);
+  background:linear-gradient(180deg,#0c1c2b,#07101a);
 }
 
 .filter-title{
@@ -324,9 +317,7 @@ h1 span{
    MAP
 ================================================= */
 
-.map-section{
-  background:#050a10;
-}
+.map-section{background:#050a10}
 
 #map{
   height:58vh;
@@ -337,6 +328,21 @@ h1 span{
 .leaflet-popup-tip{
   background:#0c1723;
   color:#fff;
+}
+
+.leaflet-popup-content{
+  margin:14px;
+  width:260px!important;
+}
+
+.popup-thumb{
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  display:block;
+  border-radius:10px;
+  margin-bottom:11px;
+  border:1px solid #28435c;
 }
 
 .popup-category{
@@ -356,6 +362,19 @@ h1 span{
 .popup-copy{
   color:#bac5d1;
   line-height:1.45;
+}
+
+.popup-link{
+  display:inline-block;
+  margin-top:12px;
+  padding:8px 11px;
+  border-radius:8px;
+  background:rgba(88,195,255,.12);
+  border:1px solid var(--blue);
+  color:#fff!important;
+  text-decoration:none;
+  font-size:11px;
+  font-weight:800;
 }
 
 /* =================================================
@@ -414,26 +433,85 @@ h1 span{
 
 .cards{
   display:grid;
-  gap:15px;
+  gap:18px;
 }
 
 .card{
   border:1px solid var(--line);
   border-radius:24px;
-  padding:23px;
-  background:
-    linear-gradient(145deg,#0d1824,#080f18);
-  transition:.2s ease;
+  overflow:hidden;
+  background:linear-gradient(145deg,#0d1824,#080f18);
+  transition:.25s ease;
+  box-shadow:0 14px 35px rgba(0,0,0,.18);
 }
 
 .card:hover{
-  border-color:#34506b;
-  transform:translateY(-2px);
+  border-color:#4f7698;
+  transform:translateY(-3px);
+  box-shadow:
+    0 18px 45px rgba(0,0,0,.30),
+    0 0 22px rgba(88,195,255,.08);
+}
+
+.card-media{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+  overflow:hidden;
+  background:#06101a;
+  border-bottom:1px solid var(--line);
+}
+
+.card-media::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.02) 35%,
+      rgba(4,9,15,.68) 100%
+    );
+  pointer-events:none;
+}
+
+.card-media img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  transition:transform .45s ease;
+}
+
+.card:hover .card-media img{
+  transform:scale(1.035);
+}
+
+.card-media-label{
+  position:absolute;
+  z-index:2;
+  left:16px;
+  bottom:14px;
+  padding:7px 10px;
+  border-radius:999px;
+  border:1px solid rgba(88,195,255,.45);
+  background:rgba(3,9,15,.78);
+  backdrop-filter:blur(6px);
+  color:#fff;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+.card-body{
+  padding:22px 23px 24px;
 }
 
 .card-top{
   display:flex;
   justify-content:space-between;
+  align-items:center;
   gap:10px;
 }
 
@@ -448,6 +526,7 @@ h1 span{
 .status{
   color:#b6c3d0;
   font-size:12px;
+  white-space:nowrap;
 }
 
 .card h3{
@@ -465,21 +544,31 @@ h1 span{
   margin-top:16px;
   font-size:12px;
   color:#718298;
+  line-height:1.6;
+}
+
+.card-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:19px;
 }
 
 .card-link{
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 18px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  padding:11px 16px;
   border-radius:12px;
   border:1px solid var(--blue);
   background:rgba(88,195,255,.10);
   color:#fff;
   text-decoration:none;
-  font-size:13px;
+  font-size:12px;
   font-weight:800;
   letter-spacing:.04em;
-  box-shadow:0 0 18px rgba(88,195,255,.12);
+  box-shadow:0 0 18px rgba(88,195,255,.10);
   transition:.2s ease;
 }
 
@@ -489,13 +578,24 @@ h1 span{
   box-shadow:0 0 24px rgba(88,195,255,.30);
 }
 
+.card-link.secondary{
+  border-color:#3c5269;
+  background:#0b1520;
+  color:#dce7f1;
+}
+
+.card-link.secondary:hover{
+  border-color:var(--blue);
+  color:#fff;
+  background:#122537;
+}
+
 .empty-state{
   grid-column:1/-1;
   border:1px dashed #29415a;
   border-radius:24px;
   padding:30px;
-  background:
-    linear-gradient(145deg,#0b1621,#070d14);
+  background:linear-gradient(145deg,#0b1621,#070d14);
   color:var(--muted);
   line-height:1.6;
 }
@@ -532,8 +632,7 @@ h1 span{
   margin-top:20px;
   padding:17px 27px;
   border-radius:16px;
-  background:
-    linear-gradient(135deg,#178ee0,#58c3ff);
+  background:linear-gradient(135deg,#178ee0,#58c3ff);
   color:white;
   text-decoration:none;
   font-weight:800;
@@ -630,13 +729,9 @@ footer strong{
       );
   }
 
-  .topbar{
-    display:block;
-  }
+  .topbar{display:block}
 
-  .brand-link{
-    width:max-content;
-  }
+  .brand-link{width:max-content}
 
   .brand-name{
     font-size:14px;
@@ -680,6 +775,23 @@ footer strong{
 
   .hero-copy{
     font-size:18px;
+  }
+
+  .card-body{
+    padding:19px;
+  }
+
+  .card h3{
+    font-size:22px;
+  }
+
+  .card-actions{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+
+  .card-link{
+    width:100%;
   }
 
   .map-banner{
@@ -750,9 +862,7 @@ footer strong{
     <nav class="main-nav"
          aria-label="Main navigation">
 
-      <a href="../">
-        HOME
-      </a>
+      <a href="../">HOME</a>
 
       <a href="./"
          class="active"
@@ -760,13 +870,9 @@ footer strong{
         EXPLORE
       </a>
 
-      <a href="../create/">
-        CREATE
-      </a>
+      <a href="../create/">CREATE</a>
 
-      <a href="../about/">
-        ABOUT
-      </a>
+      <a href="../about/">ABOUT</a>
 
     </nav>
 
@@ -817,38 +923,31 @@ footer strong{
 
   <div class="filter-row">
 
-    <button class="filter active"
-            data-filter="all">
+    <button class="filter active" data-filter="all">
       ALL
     </button>
 
-    <button class="filter"
-            data-filter="family">
+    <button class="filter" data-filter="family">
       ❤️ Family
     </button>
 
-    <button class="filter"
-            data-filter="fitness">
+    <button class="filter" data-filter="fitness">
       💪 Fitness
     </button>
 
-    <button class="filter"
-            data-filter="freeflight">
+    <button class="filter" data-filter="freeflight">
       ✈️ Freeflight
     </button>
 
-    <button class="filter"
-            data-filter="professional">
+    <button class="filter" data-filter="professional">
       🔧 Professional
     </button>
 
-    <button class="filter"
-            data-filter="creator">
+    <button class="filter" data-filter="creator">
       🎨 Creator
     </button>
 
-    <button class="filter"
-            data-filter="travel">
+    <button class="filter" data-filter="travel">
       🌎 Food & Travel
     </button>
 
@@ -1049,6 +1148,25 @@ const heroStates={
 
 
 /* =================================================
+   THUMBNAIL FALLBACKS
+
+   These use the hero artwork NOW.
+   Later we can replace any individual item with a
+   real photo by adding:
+   thumbnail:"../../../assets/whatever/photo.jpg"
+================================================= */
+
+const categoryThumbs={
+  family:"../../../assets/map/Hero/hero-family.png",
+  fitness:"../../../assets/map/Hero/hero-fitness.png",
+  freeflight:"../../../assets/map/Hero/hero-freeflight.png",
+  professional:"../../../assets/map/Hero/hero-professional.png",
+  creator:"../../../assets/map/Hero/hero-creator.png",
+  travel:"../../../assets/map/Hero/hero-travel.png"
+};
+
+
+/* =================================================
    JOURNEY DATA
 ================================================= */
 
@@ -1124,8 +1242,12 @@ const journeys=[
   date:"Building Now",
   story:
     "HVAC, electrical, refrigeration, security, automation, IT and technical services.",
-  url:"https://ccstechnicalservices.com/",
-  cta:"Visit CC'S Technical Services →"
+  links:[
+    {
+      label:"Visit CC'S Technical Services →",
+      url:"https://ccstechnicalservices.com/"
+    }
+  ]
 },
 
 {
@@ -1137,13 +1259,19 @@ const journeys=[
   lng:-92.9,
   date:"Building Now",
   story:
-    "Turning goals, experiences, projects and destinations into one living system."
+    "Turning goals, experiences, projects and destinations into one living system.",
+  links:[
+    {
+      label:"GitHub →",
+      url:"https://github.com/Champagne247"
+    }
+  ]
 },
 
 {
   category:"fitness",
   status:"progress",
-  title:"Strength & Mobility",
+  title:"Certified MONSTER • Strength & Mobility",
   location:"Louisiana",
   lat:31.2,
   lng:-93.2,
@@ -1253,6 +1381,51 @@ function esc(value){
 
 
 /* =================================================
+   HELPERS
+================================================= */
+
+function getThumb(item){
+
+  return item.thumbnail ||
+         categoryThumbs[item.category] ||
+         heroStates.all.image;
+
+}
+
+
+function renderLinks(item,forPopup=false){
+
+  if(!item.links || !item.links.length){
+    return "";
+  }
+
+  return item.links.map(function(link,index){
+
+    const className=
+      forPopup
+        ? "popup-link"
+        : (
+            index===0
+              ? "card-link"
+              : "card-link secondary"
+          );
+
+    return `
+      <a
+        class="${className}"
+        href="${esc(link.url)}"
+        target="_blank"
+        rel="noopener noreferrer">
+        ${esc(link.label)}
+      </a>
+    `;
+
+  }).join("");
+
+}
+
+
+/* =================================================
    HERO RENDER
 ================================================= */
 
@@ -1334,6 +1507,8 @@ function render(filter="all"){
       statusColors[item.status] ||
       "#c8d0d9";
 
+    const thumb=getThumb(item);
+
 
     const marker=
       L.circleMarker(
@@ -1350,6 +1525,11 @@ function render(filter="all"){
 
     marker.bindPopup(`
 
+      <img
+        class="popup-thumb"
+        src="${esc(thumb)}"
+        alt="${esc(item.title)}">
+
       <div class="popup-category">
         ${esc(categoryLabels[item.category])}
       </div>
@@ -1360,13 +1540,15 @@ function render(filter="all"){
 
       <div class="popup-copy">
 
-        ${esc(item.location)}
+        📍 ${esc(item.location)}
 
         <br><br>
 
         ${esc(item.story)}
 
       </div>
+
+      ${renderLinks(item,true)}
 
     `);
 
@@ -1381,51 +1563,59 @@ function render(filter="all"){
     card.className="card";
 
 
-    const cardLink=
-      item.url
-        ? `
-          <a
-            class="card-link"
-            href="${esc(item.url)}"
-            target="_blank"
-            rel="noopener noreferrer">
-            ${esc(item.cta || "Visit →")}
-          </a>
-        `
-        : "";
+    const links=renderLinks(item,false);
 
 
     card.innerHTML=`
 
-      <div class="card-top">
+      <div class="card-media">
 
-        <div class="card-category">
+        <img
+          src="${esc(thumb)}"
+          alt="${esc(item.title)}"
+          loading="lazy">
+
+        <div class="card-media-label">
           ${esc(categoryLabels[item.category])}
         </div>
 
-        <div class="status">
-          ● ${esc(statusLabels[item.status])}
+      </div>
+
+      <div class="card-body">
+
+        <div class="card-top">
+
+          <div class="card-category">
+            ${esc(categoryLabels[item.category])}
+          </div>
+
+          <div class="status">
+            ● ${esc(statusLabels[item.status])}
+          </div>
+
         </div>
 
+        <h3>
+          ${esc(item.title)}
+        </h3>
+
+        <p>
+          ${esc(item.story)}
+        </p>
+
+        <div class="card-date">
+          📍 ${esc(item.location)}
+          &nbsp; • &nbsp;
+          ${esc(item.date)}
+        </div>
+
+        ${
+          links
+            ? `<div class="card-actions">${links}</div>`
+            : ""
+        }
+
       </div>
-
-      <h3>
-        ${esc(item.title)}
-      </h3>
-
-      <p>
-        ${esc(item.story)}
-      </p>
-
-      <div class="card-date">
-
-        📍 ${esc(item.location)}
-        •
-        ${esc(item.date)}
-
-      </div>
-
-      ${cardLink}
 
     `;
 
