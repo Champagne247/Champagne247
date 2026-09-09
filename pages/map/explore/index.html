@@ -1,1 +1,510 @@
 
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Explore Christopher's M.A.P. | Mission Alignment Protocol</title>
+
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+<style>
+*{box-sizing:border-box}
+
+:root{
+  --bg:#03070d;
+  --panel:#0b1622;
+  --panel2:#101d2a;
+  --line:#223447;
+  --blue:#57c4ff;
+  --text:#f5f7fb;
+  --muted:#9cabbc;
+}
+
+html,body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Arial,sans-serif;
+}
+
+header{
+  padding:28px 22px 20px;
+  background:linear-gradient(180deg,#0b2638,#06121e);
+  border-bottom:1px solid var(--line);
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:18px;
+  font-weight:800;
+  letter-spacing:.08em;
+}
+
+.logo{
+  width:46px;
+  height:46px;
+  display:grid;
+  place-items:center;
+  border:1px solid var(--blue);
+  border-radius:14px;
+  color:var(--blue);
+  font-size:24px;
+  font-weight:900;
+}
+
+.eyebrow{
+  margin-top:35px;
+  color:var(--blue);
+  letter-spacing:.18em;
+  font-size:12px;
+  font-weight:800;
+}
+
+h1{
+  font-size:clamp(34px,8vw,58px);
+  margin:8px 0 8px;
+  line-height:1;
+}
+
+header p{
+  color:var(--muted);
+  font-size:17px;
+  line-height:1.5;
+  margin:0;
+}
+
+.filters{
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding:13px 12px;
+  background:#07101a;
+  border-bottom:1px solid var(--line);
+  scrollbar-width:none;
+}
+
+.filters::-webkit-scrollbar{display:none}
+
+.filter{
+  white-space:nowrap;
+  border:1px solid #294057;
+  background:#0d1926;
+  color:#dce6ef;
+  padding:10px 14px;
+  border-radius:999px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.filter.active{
+  background:#159ce3;
+  border-color:#6bd0ff;
+  color:white;
+}
+
+#map{
+  height:58vh;
+  min-height:480px;
+  width:100%;
+}
+
+.legend{
+  padding:14px 18px;
+  background:#08111c;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.legend-title{
+  color:var(--blue);
+  font-size:11px;
+  letter-spacing:.15em;
+  font-weight:bold;
+  margin-bottom:8px;
+}
+
+.legend-row{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  color:var(--muted);
+  font-size:12px;
+}
+
+.dot{
+  display:inline-block;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  margin-right:4px;
+}
+
+.info{
+  padding:34px 22px;
+}
+
+.info .eyebrow{
+  margin:0;
+}
+
+.info h2{
+  margin:8px 0 12px;
+  font-size:32px;
+}
+
+.info p{
+  color:var(--muted);
+  line-height:1.7;
+  max-width:700px;
+}
+
+.cta{
+  display:block;
+  text-decoration:none;
+  color:white;
+  text-align:center;
+  font-weight:800;
+  background:linear-gradient(135deg,#168fd5,#38baff);
+  border-radius:16px;
+  padding:17px;
+  margin-top:24px;
+  box-shadow:0 10px 30px rgba(35,174,240,.18);
+}
+
+footer{
+  text-align:center;
+  padding:30px 20px 45px;
+  border-top:1px solid var(--line);
+  color:#8997a7;
+  font-size:12px;
+  line-height:1.8;
+}
+
+.motto{
+  color:#e6edf4;
+  letter-spacing:.15em;
+  font-weight:bold;
+  margin-bottom:8px;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip{
+  background:#0c1825;
+  color:white;
+}
+
+.leaflet-popup-content{
+  line-height:1.45;
+  min-width:190px;
+}
+
+.popup-category{
+  color:#57c4ff;
+  font-size:11px;
+  font-weight:bold;
+  letter-spacing:.12em;
+}
+
+.popup-title{
+  font-size:17px;
+  font-weight:bold;
+  margin:4px 0;
+}
+
+.popup-status{
+  color:#aab7c5;
+  font-size:12px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="brand">
+  <div class="logo">M</div>
+  <div>MISSION ALIGNMENT<br>PROTOCOL</div>
+</div>
+
+<div class="eyebrow">
+CHRISTOPHER'S JOURNEY
+</div>
+
+<h1>Explore My M.A.P.</h1>
+
+<p>
+One life. Many paths. One mission.<br>
+Places, projects, milestones, adventures and what's next.
+</p>
+
+</header>
+
+<nav class="filters">
+<button class="filter active" data-cat="all">ALL</button>
+<button class="filter" data-cat="family">❤️ FAMILY</button>
+<button class="filter" data-cat="fitness">💪 FITNESS</button>
+<button class="filter" data-cat="freeflight">🪂 FREEFLIGHT</button>
+<button class="filter" data-cat="professional">🔧 PROFESSIONAL</button>
+<button class="filter" data-cat="creator">🎨 CREATOR</button>
+<button class="filter" data-cat="travel">🌎 FOOD + TRAVEL</button>
+</nav>
+
+<div id="map"></div>
+
+<section class="legend">
+
+<div class="legend-title">MISSION STATUS</div>
+
+<div class="legend-row">
+
+<span>
+<i class="dot" style="background:#a855f7"></i>
+Experienced
+</span>
+
+<span>
+<i class="dot" style="background:#2f9bff"></i>
+Active
+</span>
+
+<span>
+<i class="dot" style="background:#ffd43b"></i>
+Next
+</span>
+
+<span>
+<i class="dot" style="background:#ff8c2f"></i>
+Goal
+</span>
+
+</div>
+
+</section>
+
+<section class="info">
+
+<div class="eyebrow">THE LIVING M.A.P.</div>
+
+<h2>Every pin tells a story.</h2>
+
+<p>
+This isn't a list of places. It's a living record of the missions,
+people, experiences, projects and goals that make up my life.
+</p>
+
+<p>
+Some pins show where I've been. Some show what I'm doing now.
+Others mark where I'm headed next.
+</p>
+
+<a class="cta" href="../create/">
+Create Your Own M.A.P. →
+</a>
+
+</section>
+
+<footer>
+
+<div class="motto">
+WORK HARD. • FLY HIGH. • EAT WELL. • LIVE FREE.
+</div>
+
+M.A.P. • Mission Alignment Protocol<br>
+Christopher Champagne
+
+</footer>
+
+<script
+src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+
+<script>
+
+const statusColors={
+ experienced:"#a855f7",
+ active:"#2f9bff",
+ next:"#ffd43b",
+ goal:"#ff8c2f"
+};
+
+/*
+  STARTER M.A.P.
+  Add as many locations as we want here.
+*/
+
+const places=[
+
+{
+ title:"Lookout Mountain Flight Park",
+ category:"freeflight",
+ categoryName:"FREEFLIGHT",
+ status:"active",
+ lat:34.905,
+ lng:-85.447,
+ description:
+ "Hang gliding • Mountain flights • Training • Wingman Weekend • VR • Looking4Lift"
+},
+
+{
+ title:"Fort Johnson / Leesville",
+ category:"professional",
+ categoryName:"PROFESSIONAL",
+ status:"active",
+ lat:31.1435,
+ lng:-93.261,
+ description:
+ "Home base • CC'S Technical Services • Building the next mission."
+},
+
+{
+ title:"Galveston",
+ category:"travel",
+ categoryName:"FOOD + TRAVEL",
+ status:"experienced",
+ lat:29.3013,
+ lng:-94.7977,
+ description:
+ "Travel • Gulf Coast • Fishing • Food • Family experiences."
+},
+
+{
+ title:"Panama City Beach",
+ category:"travel",
+ categoryName:"FOOD + TRAVEL",
+ status:"experienced",
+ lat:30.1766,
+ lng:-85.8055,
+ description:
+ "Gulf Coast • Family • Travel • Experiences."
+},
+
+{
+ title:"Southern California",
+ category:"family",
+ categoryName:"FAMILY",
+ status:"experienced",
+ lat:34.0522,
+ lng:-118.2437,
+ description:
+ "Roots • Family • Martial arts • The beginning of the journey."
+},
+
+{
+ title:"Next Freeflight Mission",
+ category:"freeflight",
+ categoryName:"FREEFLIGHT",
+ status:"goal",
+ lat:35.6,
+ lng:-82.5,
+ description:
+ "Future flying destinations and new experiences."
+}
+
+];
+
+const map=L.map("map",{
+ zoomControl:true
+}).setView([35.5,-91],5);
+
+L.tileLayer(
+ "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+ {
+   maxZoom:18,
+   attribution:"&copy; OpenStreetMap contributors"
+ }
+).addTo(map);
+
+let markerLayer=L.layerGroup().addTo(map);
+
+function drawPins(category="all"){
+
+ markerLayer.clearLayers();
+
+ const visible=places.filter(p=>
+   category==="all" || p.category===category
+ );
+
+ visible.forEach(p=>{
+
+   const color=statusColors[p.status] || "#c8d0d9";
+
+   const marker=L.circleMarker(
+     [p.lat,p.lng],
+     {
+       radius:9,
+       color:"#06101a",
+       weight:3,
+       fillColor:color,
+       fillOpacity:1
+     }
+   );
+
+   marker.bindPopup(`
+     <div class="popup-category">
+       ${p.categoryName}
+     </div>
+
+     <div class="popup-title">
+       ${p.title}
+     </div>
+
+     <div class="popup-status">
+       STATUS: ${p.status.toUpperCase()}
+     </div>
+
+     <p>${p.description}</p>
+   `);
+
+   marker.addTo(markerLayer);
+
+ });
+
+ if(visible.length>1){
+
+   const bounds=L.latLngBounds(
+     visible.map(p=>[p.lat,p.lng])
+   );
+
+   map.fitBounds(bounds,{
+     padding:[35,35],
+     maxZoom:7
+   });
+
+ }else if(visible.length===1){
+
+   map.setView(
+     [visible[0].lat,visible[0].lng],
+     8
+   );
+
+ }
+
+}
+
+document.querySelectorAll(".filter")
+.forEach(button=>{
+
+ button.addEventListener("click",()=>{
+
+   document.querySelectorAll(".filter")
+   .forEach(b=>b.classList.remove("active"));
+
+   button.classList.add("active");
+
+   drawPins(button.dataset.cat);
+
+ });
+
+});
+
+drawPins();
+
+</script>
+
+</body>
+</html>
