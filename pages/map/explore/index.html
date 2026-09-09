@@ -762,7 +762,6 @@ footer strong{
   .map-banner a{
     border-radius:12px;
   }
-
 }
 
 /* =================================================
@@ -788,7 +787,6 @@ footer strong{
   .cards{
     grid-template-columns:repeat(2,1fr);
   }
-
 }
 
 </style>
@@ -1117,9 +1115,6 @@ const journeys=[
   thumbnail:
   "../../../assets/map/Freeflight/dockweiler/dockweiler-2015-01.jpg",
 
-  popupImage:
-  "../../../assets/map/Freeflight/dockweiler/dockweiler-2015-02.jpg",
-
   links:[
     {
       label:"Windsports • Dockweiler Lessons →",
@@ -1402,22 +1397,13 @@ function esc(value){
 
 
 /* =================================================
-   IMAGE HELPERS
+   PRIMARY IMAGE
+   ONE IMAGE = CARD + MAP POPUP
 ================================================= */
 
 function getThumb(item){
 
   return item.thumbnail ||
-         categoryThumbs[item.category] ||
-         heroStates.all.image;
-
-}
-
-
-function getPopupImage(item){
-
-  return item.popupImage ||
-         item.thumbnail ||
          categoryThumbs[item.category] ||
          heroStates.all.image;
 
@@ -1542,11 +1528,13 @@ function render(filter="all"){
         statusColors[item.status] ||
         "#c8d0d9";
 
-      const thumb=
+      /*
+       * IMPORTANT:
+       * The exact same primary image is used
+       * by BOTH the journey card and map popup.
+       */
+      const primaryImage=
         getThumb(item);
-
-      const popupImage=
-        getPopupImage(item);
 
 
       /* -------------------------------------------
@@ -1574,9 +1562,9 @@ function render(filter="all"){
 
         <img
           class="popup-thumb"
-          src="${esc(popupImage)}"
+          src="${esc(primaryImage)}"
           alt="${esc(item.title)}"
-          onerror="this.src='${esc(categoryThumbs[item.category])}'">
+          onerror="this.src='${esc(categoryThumbs[item.category] || heroStates.all.image)}'">
 
         <div class="popup-category">
           ${esc(categoryLabels[item.category])}
@@ -1633,10 +1621,10 @@ function render(filter="all"){
         <div class="card-media">
 
           <img
-            src="${esc(thumb)}"
+            src="${esc(primaryImage)}"
             alt="${esc(item.title)}"
             loading="lazy"
-            onerror="this.src='${esc(categoryThumbs[item.category])}'">
+            onerror="this.src='${esc(categoryThumbs[item.category] || heroStates.all.image)}'">
 
           <div class="card-media-label">
             ${esc(categoryLabels[item.category])}
