@@ -17,9 +17,7 @@ href="https://champagne247.github.io/Champagne247/pages/map/explore/">
 ================================================= -->
 
 <meta property="og:type" content="website">
-
-<meta property="og:site_name"
-content="Mission Alignment Protocol">
+<meta property="og:site_name" content="Mission Alignment Protocol">
 
 <meta property="og:title"
 content="Explore My M.A.P. | Christopher Champagne">
@@ -36,8 +34,7 @@ content="https://champagne247.github.io/Champagne247/assets/map/Hero/hero-all.pn
 <meta property="og:image:alt"
 content="Explore Christopher Champagne's Mission Alignment Protocol">
 
-<meta name="twitter:card"
-content="summary_large_image">
+<meta name="twitter:card" content="summary_large_image">
 
 <meta name="twitter:title"
 content="Explore My M.A.P. | Christopher Champagne">
@@ -842,7 +839,7 @@ footer strong{
 
 <div class="topbar">
 
-<a href="../" class="brand-link">
+<a href="../" target="_top" class="brand-link">
 
 <div class="logo">
 <img
@@ -858,10 +855,10 @@ PROTOCOL
 </a>
 
 <nav class="main-nav">
-<a href="../">HOME</a>
-<a href="./" class="active">EXPLORE</a>
-<a href="../create/">CREATE</a>
-<a href="../about/">ABOUT</a>
+<a href="../" target="_top">HOME</a>
+<a href="./" target="_top" class="active">EXPLORE</a>
+<a href="../create/" target="_top">CREATE</a>
+<a href="../about/" target="_top">ABOUT</a>
 </nav>
 
 </div>
@@ -997,7 +994,7 @@ You don't need my path.<br>
 You need your own.
 </p>
 
-<a href="../create/" class="cta-button">
+<a href="../create/" target="_top" class="cta-button">
 Create Your M.A.P. →
 </a>
 
@@ -1005,7 +1002,7 @@ Create Your M.A.P. →
 
 <section class="map-banner">
 
-<a href="../create/">
+<a href="../create/" target="_top">
 
 <img
 src="../../../assets/map/Hero/create-your-map.png"
@@ -1032,6 +1029,36 @@ Christopher Champagne
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
+
+/* =================================================
+   CLEAN SHAREABLE PATH URLS
+================================================= */
+
+const pathRoutes={
+
+  all:
+  "/Champagne247/pages/map/explore/",
+
+  family:
+  "/Champagne247/pages/map/explore/family/",
+
+  fitness:
+  "/Champagne247/pages/map/explore/fitness/",
+
+  freeflight:
+  "/Champagne247/pages/map/explore/freeflight/",
+
+  professional:
+  "/Champagne247/pages/map/explore/professional/",
+
+  creator:
+  "/Champagne247/pages/map/explore/creator/",
+
+  travel:
+  "/Champagne247/pages/map/explore/travel/"
+
+};
+
 
 /* =================================================
    HERO STATES
@@ -1568,9 +1595,8 @@ function render(filter="all"){
         "#c8d0d9";
 
       /*
-       * IMPORTANT:
-       * The exact same primary image is used
-       * by BOTH the journey card and map popup.
+       * ONE PRIMARY IMAGE:
+       * PIN POPUP + JOURNEY CARD
        */
       const primaryImage=
         getThumb(item);
@@ -1828,7 +1854,40 @@ function render(filter="all"){
 
 
 /* =================================================
+   ACTIVE FILTER
+================================================= */
+
+function setActiveFilter(filter){
+
+  document.querySelectorAll(
+    ".filter"
+  ).forEach(
+    button=>{
+
+      button.classList.toggle(
+        "active",
+        button.dataset.filter===filter
+      );
+
+    }
+  );
+
+}
+
+
+/* =================================================
    FILTER CONTROLS
+
+   IMPORTANT:
+
+   A REAL USER TAP:
+   Opens that category's clean shareable URL.
+
+   THE AUTOMATIC CLICK FROM A CATEGORY WRAPPER:
+   Only renders the selected category.
+
+   event.isTrusted keeps the wrapper from recursively
+   loading itself inside another iframe.
 ================================================= */
 
 document.querySelectorAll(
@@ -1838,19 +1897,34 @@ document.querySelectorAll(
 
     button.addEventListener(
       "click",
-      function(){
+      function(event){
 
-        document.querySelectorAll(
-          ".filter"
-        ).forEach(
-          b=>b.classList.remove("active")
-        );
+        const filter=
+          this.dataset.filter;
 
-        this.classList.add("active");
+        setActiveFilter(filter);
 
-        render(
-          this.dataset.filter
-        );
+        render(filter);
+
+        /*
+         * Programmatic wrapper click:
+         * render only — DO NOT navigate.
+         */
+        if(!event.isTrusted){
+          return;
+        }
+
+        /*
+         * Real human click:
+         * move the WHOLE browser to the clean
+         * category/share URL.
+         */
+        const route=
+          pathRoutes[filter] ||
+          pathRoutes.all;
+
+        window.top.location.href=
+          route;
 
       }
     );
@@ -1862,6 +1936,8 @@ document.querySelectorAll(
 /* =================================================
    INITIAL LOAD
 ================================================= */
+
+setActiveFilter("all");
 
 render("all");
 
