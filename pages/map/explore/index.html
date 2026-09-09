@@ -36,147 +36,91 @@ body{
 }
 
 .shell{
-  width:100%;
-  max-width:1500px;
+  max-width:1100px;
   margin:auto;
-  overflow:hidden;
-  background:var(--bg);
 }
 
 /* =========================
-   CINEMATIC HERO
+   HERO
 ========================= */
 
 .hero{
   position:relative;
-  min-height:780px;
-  padding:28px 28px 58px;
+  min-height:720px;
+  padding:32px 22px 54px;
   overflow:hidden;
   isolation:isolate;
   display:flex;
   flex-direction:column;
   border-bottom:1px solid var(--line);
-  background:#03060b;
+  background:#03070d;
 }
+
+/* CLEAN FREEFLIGHT IMAGE */
 
 .hero::before{
   content:"";
   position:absolute;
   inset:0;
-  z-index:-4;
+  z-index:-2;
 
   background-image:
-    url("../../../assets/map/Hero/Map-hero-freeflight.png");
+    url("../../../assets/map/Hero/hero-freeflight.png");
 
   background-size:cover;
-  background-position:68% 33%;
+  background-position:68% 35%;
   background-repeat:no-repeat;
 
-  transform:scale(1.012);
+  filter:
+    saturate(1.08)
+    contrast(1.04);
+
+  transform:scale(1.01);
 }
 
-/* Overall cinematic grading */
+/* READABILITY OVERLAY */
 
 .hero::after{
   content:"";
   position:absolute;
   inset:0;
-  z-index:-3;
+  z-index:-1;
 
   background:
     linear-gradient(
       90deg,
-      rgba(3,6,11,.91) 0%,
-      rgba(3,6,11,.78) 28%,
-      rgba(3,6,11,.44) 52%,
-      rgba(3,6,11,.08) 82%
+      rgba(3,6,11,.96) 0%,
+      rgba(3,6,11,.82) 35%,
+      rgba(3,6,11,.38) 67%,
+      rgba(3,6,11,.08) 100%
     ),
     linear-gradient(
       180deg,
-      rgba(3,6,11,.10) 0%,
-      rgba(3,6,11,.04) 55%,
-      rgba(3,6,11,.88) 100%
+      rgba(3,6,11,.12) 0%,
+      rgba(3,6,11,.08) 50%,
+      rgba(3,6,11,.92) 100%
     );
-}
-
-/* Localized left mask:
-   specifically suppresses baked-in artwork text */
-
-.hero-mask{
-  position:absolute;
-  z-index:-2;
-  left:0;
-  top:105px;
-  bottom:0;
-  width:min(720px,68%);
-  pointer-events:none;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(3,6,11,.97) 0%,
-      rgba(3,6,11,.94) 42%,
-      rgba(3,6,11,.80) 67%,
-      rgba(3,6,11,0) 100%
-    );
-
-  filter:blur(.2px);
-}
-
-.hero-glow{
-  position:absolute;
-  width:500px;
-  height:500px;
-  right:-230px;
-  top:70px;
-  z-index:-1;
-  pointer-events:none;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(88,195,255,.15),
-      rgba(88,195,255,0) 70%
-    );
-}
-
-/* =========================
-   TOP BAR
-========================= */
-
-.topbar{
-  position:relative;
-  z-index:10;
-
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:25px;
 }
 
 .brand{
+  position:relative;
+  z-index:2;
   display:flex;
   align-items:center;
   gap:14px;
-
-  color:#fff;
-  text-decoration:none;
 }
 
 .logo{
   width:58px;
   height:58px;
   flex:0 0 58px;
-
   border-radius:15px;
   overflow:hidden;
-
   background:#06111c;
-
-  border:1px solid rgba(88,195,255,.75);
+  border:1px solid rgba(88,195,255,.7);
 
   box-shadow:
-    0 0 18px rgba(88,195,255,.28),
+    0 0 18px rgba(88,195,255,.24),
     inset 0 0 12px rgba(88,195,255,.08);
 }
 
@@ -188,142 +132,60 @@ body{
 }
 
 .brand strong{
-  font-size:15px;
-  letter-spacing:.14em;
-  line-height:1.45;
-  text-shadow:0 2px 12px #000;
+  font-size:17px;
+  letter-spacing:.12em;
+  line-height:1.5;
+  text-shadow:0 3px 15px #000;
 }
-
-.nav{
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-
-.nav a{
-  position:relative;
-
-  padding:10px 12px;
-
-  color:#cbd5df;
-  text-decoration:none;
-
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:.13em;
-
-  transition:
-    color .2s ease,
-    background .2s ease;
-}
-
-.nav a:hover{
-  color:#fff;
-}
-
-.nav a.active{
-  color:var(--blue);
-}
-
-.nav a.active::after{
-  content:"";
-  position:absolute;
-  left:12px;
-  right:12px;
-  bottom:2px;
-  height:2px;
-
-  background:var(--blue);
-
-  box-shadow:
-    0 0 8px rgba(88,195,255,.75);
-}
-
-/* =========================
-   HERO CONTENT
-========================= */
 
 .hero-content{
-  position:relative;
-  z-index:3;
-
   margin-top:auto;
-
-  width:min(640px,100%);
-
+  max-width:650px;
   padding-top:160px;
+  position:relative;
+  z-index:2;
 }
 
 .eyebrow{
-  display:flex;
-  align-items:center;
-  gap:10px;
-
   color:var(--blue);
-
   font-size:12px;
   letter-spacing:.2em;
   font-weight:800;
   text-transform:uppercase;
 
-  text-shadow:0 2px 12px #000;
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  text-shadow:0 3px 15px #000;
 }
 
 .eyebrow::before{
   content:"";
-  width:34px;
-  height:2px;
-  flex:none;
-
+  width:40px;
+  height:3px;
   background:var(--blue);
-
-  box-shadow:
-    0 0 10px rgba(88,195,255,.8);
+  box-shadow:0 0 12px var(--blue);
 }
 
 h1{
-  font-size:clamp(50px,8vw,88px);
-  line-height:.88;
-  letter-spacing:-.04em;
-
-  margin:17px 0 24px;
-
-  text-shadow:
-    0 4px 25px rgba(0,0,0,.95),
-    0 1px 2px #000;
+  font-size:clamp(48px,12vw,82px);
+  line-height:.92;
+  margin:18px 0 26px;
+  letter-spacing:-.035em;
+  text-shadow:0 5px 28px rgba(0,0,0,.75);
 }
 
 h1 span{
   color:var(--blue);
-
-  text-shadow:
-    0 0 25px rgba(88,195,255,.25),
-    0 4px 25px #000;
-}
-
-.hero-rule{
-  width:78px;
-  height:3px;
-  margin:0 0 22px;
-
-  background:
-    linear-gradient(
-      90deg,
-      var(--blue),
-      rgba(88,195,255,0)
-    );
-
-  box-shadow:
-    0 0 12px rgba(88,195,255,.45);
 }
 
 .hero-copy{
-  color:#c3cfda;
-  font-size:18px;
-  line-height:1.55;
-  max-width:590px;
-
-  text-shadow:0 2px 12px #000;
+  color:#d0d8e2;
+  font-size:19px;
+  line-height:1.6;
+  max-width:620px;
+  text-shadow:0 3px 14px #000;
 }
 
 .hero-copy strong{
@@ -331,15 +193,16 @@ h1 span{
 }
 
 .motto{
-  margin-top:24px;
-
+  margin-top:28px;
   color:#fff;
-
   font-size:18px;
   font-weight:800;
-  line-height:1.5;
+  line-height:1.55;
 
-  text-shadow:0 2px 12px #000;
+  border-left:3px solid var(--blue);
+  padding-left:15px;
+
+  text-shadow:0 3px 14px #000;
 }
 
 .motto span{
@@ -351,19 +214,10 @@ h1 span{
 ========================= */
 
 .filters{
-  position:relative;
-  z-index:5;
-
-  padding:22px 28px;
-
+  padding:22px 16px;
   border-bottom:1px solid var(--line);
-
   background:
-    linear-gradient(
-      180deg,
-      #07101a,
-      #070c13
-    );
+    linear-gradient(180deg,#0c1c2b,#07101a);
 }
 
 .filter-title{
@@ -384,25 +238,14 @@ h1 span{
 
 .filter{
   flex:none;
-
-  border:1px solid var(--line);
-
-  background:rgba(13,23,35,.94);
-
-  color:#fff;
-
+  border:1px solid #34506b;
+  background:rgba(13,23,35,.86);
+  color:white;
   padding:11px 15px;
-
   border-radius:30px;
-
   font-weight:700;
   cursor:pointer;
-
-  transition:
-    background .2s ease,
-    border-color .2s ease,
-    transform .2s ease,
-    box-shadow .2s ease;
+  transition:.2s ease;
 }
 
 .filter:hover{
@@ -414,9 +257,7 @@ h1 span{
   background:var(--blue);
   color:#04101a;
   border-color:var(--blue);
-
-  box-shadow:
-    0 0 20px rgba(88,195,255,.22);
+  box-shadow:0 0 18px rgba(88,195,255,.25);
 }
 
 /* =========================
@@ -428,8 +269,8 @@ h1 span{
 }
 
 #map{
-  height:62vh;
-  min-height:480px;
+  height:58vh;
+  min-height:450px;
 }
 
 .leaflet-popup-content-wrapper,
@@ -462,11 +303,9 @@ h1 span{
 ========================= */
 
 .legend{
-  padding:20px 28px;
-
+  padding:20px;
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
-
   background:#080e16;
 }
 
@@ -474,7 +313,6 @@ h1 span{
   display:flex;
   flex-wrap:wrap;
   gap:16px;
-
   color:var(--muted);
   font-size:13px;
 }
@@ -482,11 +320,8 @@ h1 span{
 .dot{
   width:10px;
   height:10px;
-
   display:inline-block;
-
   border-radius:50%;
-
   margin-right:5px;
 }
 
@@ -495,30 +330,25 @@ h1 span{
 ========================= */
 
 .journey{
-  max-width:1200px;
-  margin:auto;
-  padding:65px 28px;
+  padding:55px 20px;
 }
 
 .section-label{
   color:var(--blue);
-
   font-size:13px;
   letter-spacing:.2em;
   font-weight:800;
 }
 
 .journey h2{
-  font-size:clamp(34px,6vw,55px);
+  font-size:clamp(34px,8vw,55px);
   margin:12px 0;
 }
 
 .section-copy{
   color:var(--muted);
-
   font-size:18px;
   line-height:1.6;
-
   margin-bottom:30px;
 }
 
@@ -529,32 +359,18 @@ h1 span{
 
 .card{
   border:1px solid var(--line);
-
   border-radius:24px;
-
   padding:23px;
 
   background:
-    linear-gradient(
-      145deg,
-      #0d1824,
-      #080f18
-    );
+    linear-gradient(145deg,#0d1824,#080f18);
 
-  cursor:pointer;
-
-  transition:
-    transform .2s ease,
-    border-color .2s ease,
-    box-shadow .2s ease;
+  transition:.2s ease;
 }
 
 .card:hover{
-  transform:translateY(-3px);
-  border-color:#315d7d;
-
-  box-shadow:
-    0 12px 35px rgba(0,0,0,.22);
+  border-color:#34506b;
+  transform:translateY(-2px);
 }
 
 .card-top{
@@ -565,12 +381,9 @@ h1 span{
 
 .card-category{
   color:var(--blue);
-
   font-size:11px;
   font-weight:800;
-
   letter-spacing:.15em;
-
   text-transform:uppercase;
 }
 
@@ -602,19 +415,11 @@ h1 span{
 
 .cta{
   text-align:center;
-
-  padding:75px 22px;
-
-  background:
-    radial-gradient(
-      circle at center bottom,
-      rgba(38,142,208,.13),
-      transparent 55%
-    );
+  padding:65px 22px;
 }
 
 .cta h2{
-  font-size:clamp(34px,6vw,55px);
+  font-size:clamp(34px,8vw,55px);
   margin:10px 0;
 }
 
@@ -626,120 +431,50 @@ h1 span{
 
 .cta-button{
   display:inline-block;
-
   margin-top:20px;
-
   padding:17px 27px;
-
   border-radius:16px;
 
   background:
-    linear-gradient(
-      135deg,
-      #178ee0,
-      #58c3ff
-    );
+    linear-gradient(135deg,#178ee0,#58c3ff);
 
-  color:#fff;
-
+  color:white;
   text-decoration:none;
-
   font-weight:800;
   font-size:18px;
 
   box-shadow:
     0 10px 35px #0c7db755;
-
-  transition:
-    transform .2s ease,
-    box-shadow .2s ease;
-}
-
-.cta-button:hover{
-  transform:translateY(-2px);
-
-  box-shadow:
-    0 14px 40px #0c7db777;
 }
 
 footer{
   text-align:center;
-
   padding:45px 20px 60px;
-
   color:#718093;
-
   border-top:1px solid var(--line);
 }
 
 footer strong{
   display:block;
-
   color:#dce4ed;
-
   letter-spacing:.14em;
   line-height:1.7;
-
   margin-bottom:12px;
-}
-
-/* =========================
-   DESKTOP
-========================= */
-
-@media(min-width:900px){
-
-  .hero{
-    min-height:820px;
-    padding:34px 60px 72px;
-  }
-
-  .hero::before{
-    background-position:72% 34%;
-  }
-
-  .hero-mask{
-    width:59%;
-  }
-
-  .hero-content{
-    width:650px;
-    padding-top:180px;
-  }
-
-  .brand strong{
-    font-size:17px;
-  }
-
-  .filters{
-    padding-left:60px;
-    padding-right:60px;
-  }
-
-  .legend{
-    padding-left:60px;
-    padding-right:60px;
-  }
-
-  .cards{
-    grid-template-columns:repeat(2,1fr);
-  }
-
 }
 
 /* =========================
    MOBILE
 ========================= */
 
-@media(max-width:700px){
+@media(max-width:749px){
 
   .hero{
-    min-height:720px;
-    padding:28px 20px 48px;
+    min-height:760px;
+    padding:28px 22px 48px;
   }
 
   .hero::before{
-    background-position:65% 30%;
+    background-position:68% center;
   }
 
   .hero::after{
@@ -747,99 +482,54 @@ footer strong{
       linear-gradient(
         90deg,
         rgba(3,6,11,.86) 0%,
-        rgba(3,6,11,.67) 45%,
-        rgba(3,6,11,.16) 100%
+        rgba(3,6,11,.50) 55%,
+        rgba(3,6,11,.12) 100%
       ),
       linear-gradient(
         180deg,
-        rgba(3,6,11,.05) 0%,
-        rgba(3,6,11,.10) 48%,
-        #03060b 100%
+        rgba(3,6,11,.06) 0%,
+        rgba(3,6,11,.12) 42%,
+        rgba(3,6,11,.92) 72%,
+        rgba(3,6,11,.99) 100%
       );
-  }
-
-  .hero-mask{
-    top:120px;
-    width:74%;
-
-    background:
-      linear-gradient(
-        90deg,
-        rgba(3,6,11,.90),
-        rgba(3,6,11,.72) 55%,
-        rgba(3,6,11,0)
-      );
-  }
-
-  .hero-content{
-    padding-top:145px;
-  }
-
-  .hero-copy{
-    font-size:17px;
   }
 
   .brand strong{
-    font-size:14px;
+    font-size:16px;
   }
 
-  .nav{
-    position:absolute;
-    left:0;
-    right:0;
-    top:78px;
-
-    justify-content:flex-start;
-
-    overflow-x:auto;
-
-    padding-top:8px;
-
-    border-top:
-      1px solid rgba(255,255,255,.08);
-
-    scrollbar-width:none;
+  .hero-content{
+    padding-top:280px;
   }
 
-  .nav::-webkit-scrollbar{
-    display:none;
-  }
-
-  .nav a{
-    flex:none;
-    padding:10px 9px;
-    font-size:10px;
-  }
-
-  .filters{
-    padding-left:16px;
-    padding-right:16px;
-  }
-
-  #map{
-    min-height:450px;
+  .hero-copy{
+    font-size:18px;
   }
 
 }
 
 /* =========================
-   VERY SMALL MOBILE
+   DESKTOP
 ========================= */
 
-@media(max-width:390px){
+@media(min-width:750px){
 
-  .logo{
-    width:52px;
-    height:52px;
-    flex-basis:52px;
+  .hero{
+    min-height:760px;
+    padding:38px 48px 65px;
   }
 
-  .brand strong{
-    font-size:12px;
+  .hero::before{
+    background-position:70% 34%;
   }
 
-  h1{
-    font-size:48px;
+  .hero-content{
+    max-width:620px;
+    padding-top:220px;
+  }
+
+  .cards{
+    grid-template-columns:repeat(2,1fr);
   }
 
 }
@@ -851,21 +541,14 @@ footer strong{
 
 <div class="shell">
 
-<header class="hero" id="top">
+<header class="hero" id="hero">
 
-<div class="hero-mask"></div>
-<div class="hero-glow"></div>
-
-<div class="topbar">
-
-<a class="brand" href="../../../">
+<div class="brand">
 
   <div class="logo">
-
     <img
       src="../../../assets/map/branding/map-logo-icon.png"
       alt="M.A.P. Mission Alignment Protocol">
-
   </div>
 
   <strong>
@@ -873,69 +556,46 @@ footer strong{
     PROTOCOL
   </strong>
 
-</a>
-
-
-<nav class="nav" aria-label="M.A.P. navigation">
-
-<a href="../../../">
-HOME
-</a>
-
-<a class="active" href="./">
-EXPLORE
-</a>
-
-<a href="../create/">
-CREATE
-</a>
-
-<a href="../../../about.html">
-ABOUT
-</a>
-
-</nav>
-
 </div>
-
 
 <div class="hero-content">
 
-<div class="eyebrow">
-Christopher's Journey
-</div>
+  <div class="eyebrow">
+    Christopher's Journey
+  </div>
 
-<h1>
-EXPLORE<br>
-MY <span>M.A.P.</span>
-</h1>
+  <h1>
+    EXPLORE<br>
+    MY <span>M.A.P.</span>
+  </h1>
 
-<div class="hero-rule"></div>
+  <div class="hero-copy">
 
-<div class="hero-copy">
+    <strong>
+      One life. Many paths. One mission.
+    </strong>
 
-<strong>One life. Many paths. One mission.</strong>
+    <br><br>
 
-<br><br>
+    A living map of where I've been,
+    what I've accomplished,
+    what I'm building and where I'm going next.
 
-A living map of where I've been, what I've accomplished,
-what I'm building and where I'm going next.
+  </div>
 
-</div>
+  <div class="motto">
 
-<div class="motto">
+    Don't just dream about it.<br>
+    <span>M.A.P. it out.</span> Get it Done ✔️
 
-Don't just dream about it.<br>
-<span>M.A.P. it out.</span> Get it Done ✔️
-
-</div>
+  </div>
 
 </div>
 
 </header>
 
 
-<section class="filters" id="paths">
+<section class="filters">
 
 <div class="filter-title">
 EXPLORE THE PATHS
@@ -1021,8 +681,7 @@ One Life. Every Part of It.
 </h2>
 
 <div class="section-copy" id="journeyCopy">
-Every pin represents an experience, milestone, project,
-mission or destination.
+Different paths. Same mission.
 </div>
 
 <div class="cards" id="cards"></div>
@@ -1192,6 +851,10 @@ const journeys=[
 ];
 
 
+/* =========================
+   COLORS / LABELS
+========================= */
+
 const statusColors={
  done:"#a855f7",
  progress:"#2f9bff",
@@ -1316,11 +979,6 @@ function render(filter="all"){
   const card=document.createElement("article");
 
   card.className="card";
-  card.tabIndex=0;
-  card.setAttribute(
-    "aria-label",
-    "Show " + item.title + " on the map"
-  );
 
   card.innerHTML=`
 
@@ -1349,36 +1007,6 @@ function render(filter="all"){
    </div>
 
   `;
-
-  function focusMarker(){
-
-    map.setView(
-      marker.getLatLng(),
-      Math.max(map.getZoom(),7),
-      {animate:true}
-    );
-
-    marker.openPopup();
-
-    document
-      .querySelector(".map-section")
-      .scrollIntoView({
-        behavior:"smooth",
-        block:"center"
-      });
-
-  }
-
-  card.addEventListener("click",focusMarker);
-
-  card.addEventListener("keydown",event=>{
-
-    if(event.key==="Enter" || event.key===" "){
-      event.preventDefault();
-      focusMarker();
-    }
-
-  });
 
   cards.appendChild(card);
 
