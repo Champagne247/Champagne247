@@ -39,9 +39,7 @@ body{
   margin:auto;
 }
 
-/* =================================================
-   HERO
-================================================= */
+/* ================= HERO ================= */
 
 .hero{
   position:relative;
@@ -59,18 +57,11 @@ body{
   position:absolute;
   inset:0;
   z-index:-2;
-
-  background-image:
-    url("../../../assets/map/Hero/hero-all.png");
-
+  background-image:url("../../../assets/map/Hero/hero-all.png");
   background-size:cover;
   background-position:68% 35%;
   background-repeat:no-repeat;
-
-  filter:
-    saturate(1.08)
-    contrast(1.04);
-
+  filter:saturate(1.08) contrast(1.04);
   transform:scale(1.01);
   transition:opacity .35s ease;
 }
@@ -79,7 +70,6 @@ body{
   position:absolute;
   inset:0;
   z-index:-1;
-
   background:
     linear-gradient(
       90deg,
@@ -96,9 +86,7 @@ body{
     );
 }
 
-/* =================================================
-   NAVIGATION
-================================================= */
+/* ================= NAV ================= */
 
 .topbar{
   position:relative;
@@ -126,18 +114,9 @@ body{
   overflow:hidden;
   background:#06111c;
   border:1px solid rgba(88,195,255,.7);
-
   box-shadow:
     0 0 18px rgba(88,195,255,.24),
     inset 0 0 12px rgba(88,195,255,.08);
-
-  transition:.2s ease;
-}
-
-.brand-link:hover .logo{
-  transform:translateY(-2px) scale(1.03);
-  border-color:#8dd7ff;
-  box-shadow:0 0 26px rgba(88,195,255,.42);
 }
 
 .logo img{
@@ -172,7 +151,6 @@ body{
   font-weight:800;
   letter-spacing:.13em;
   border-radius:10px;
-  transition:.2s ease;
 }
 
 .main-nav a:hover{
@@ -191,14 +169,11 @@ body{
   right:13px;
   bottom:4px;
   height:2px;
-  border-radius:2px;
   background:var(--blue);
   box-shadow:0 0 10px var(--blue);
 }
 
-/* =================================================
-   HERO CONTENT
-================================================= */
+/* ================= HERO CONTENT ================= */
 
 .hero-content{
   margin-top:auto;
@@ -214,11 +189,9 @@ body{
   letter-spacing:.2em;
   font-weight:800;
   text-transform:uppercase;
-
   display:flex;
   align-items:center;
   gap:12px;
-
   text-shadow:0 3px 15px #000;
 }
 
@@ -263,9 +236,7 @@ h1 span{color:var(--blue)}
 
 .motto span{color:var(--blue)}
 
-/* =================================================
-   FILTERS
-================================================= */
+/* ================= FILTERS ================= */
 
 .filters{
   padding:22px 16px;
@@ -286,7 +257,6 @@ h1 span{color:var(--blue)}
   gap:8px;
   overflow-x:auto;
   padding-bottom:5px;
-  scrollbar-width:thin;
 }
 
 .filter{
@@ -298,12 +268,10 @@ h1 span{color:var(--blue)}
   border-radius:30px;
   font-weight:700;
   cursor:pointer;
-  transition:.2s ease;
 }
 
 .filter:hover{
   border-color:var(--blue);
-  transform:translateY(-1px);
 }
 
 .filter.active{
@@ -313,11 +281,11 @@ h1 span{color:var(--blue)}
   box-shadow:0 0 18px rgba(88,195,255,.25);
 }
 
-/* =================================================
-   MAP
-================================================= */
+/* ================= MAP ================= */
 
-.map-section{background:#050a10}
+.map-section{
+  background:#050a10;
+}
 
 #map{
   height:58vh;
@@ -331,8 +299,8 @@ h1 span{color:var(--blue)}
 }
 
 .leaflet-popup-content{
-  margin:14px;
-  width:260px!important;
+  margin:12px;
+  width:280px!important;
 }
 
 .popup-thumb{
@@ -340,23 +308,29 @@ h1 span{color:var(--blue)}
   aspect-ratio:16/9;
   object-fit:cover;
   display:block;
-  border-radius:10px;
-  margin-bottom:11px;
+  border-radius:12px;
+  margin-bottom:12px;
   border:1px solid #28435c;
 }
 
 .popup-category{
   color:var(--blue);
-  font-size:11px;
-  font-weight:bold;
-  letter-spacing:.1em;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.12em;
   text-transform:uppercase;
 }
 
 .popup-title{
-  font-size:17px;
+  font-size:18px;
   font-weight:800;
-  margin:5px 0;
+  margin:6px 0;
+}
+
+.popup-location{
+  color:#8194a8;
+  font-size:12px;
+  margin-bottom:9px;
 }
 
 .popup-copy{
@@ -364,10 +338,16 @@ h1 span{color:var(--blue)}
   line-height:1.45;
 }
 
+.popup-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:12px;
+}
+
 .popup-link{
   display:inline-block;
-  margin-top:12px;
-  padding:8px 11px;
+  padding:9px 11px;
   border-radius:8px;
   background:rgba(88,195,255,.12);
   border:1px solid var(--blue);
@@ -377,9 +357,7 @@ h1 span{color:var(--blue)}
   font-weight:800;
 }
 
-/* =================================================
-   LEGEND
-================================================= */
+/* ================= LEGEND ================= */
 
 .legend{
   padding:20px;
@@ -404,9 +382,7 @@ h1 span{color:var(--blue)}
   margin-right:5px;
 }
 
-/* =================================================
-   JOURNEY
-================================================= */
+/* ================= JOURNEY ================= */
 
 .journey{
   padding:55px 20px;
@@ -419,7 +395,8 @@ h1 span{color:var(--blue)}
   font-weight:800;
 }
 
-.journey h2{
+.journey h2,
+.cta h2{
   font-size:clamp(34px,8vw,55px);
   margin:12px 0;
 }
@@ -466,13 +443,11 @@ h1 span{color:var(--blue)}
   content:"";
   position:absolute;
   inset:0;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,.02) 35%,
-      rgba(4,9,15,.68) 100%
-    );
-  pointer-events:none;
+  background:linear-gradient(
+    180deg,
+    transparent 30%,
+    rgba(4,9,15,.75) 100%
+  );
 }
 
 .card-media img{
@@ -484,7 +459,7 @@ h1 span{color:var(--blue)}
 }
 
 .card:hover .card-media img{
-  transform:scale(1.035);
+  transform:scale(1.04);
 }
 
 .card-media-label{
@@ -495,8 +470,7 @@ h1 span{color:var(--blue)}
   padding:7px 10px;
   border-radius:999px;
   border:1px solid rgba(88,195,255,.45);
-  background:rgba(3,9,15,.78);
-  backdrop-filter:blur(6px);
+  background:rgba(3,9,15,.82);
   color:#fff;
   font-size:10px;
   font-weight:800;
@@ -524,7 +498,6 @@ h1 span{color:var(--blue)}
 }
 
 .status{
-  color:#b6c3d0;
   font-size:12px;
   white-space:nowrap;
 }
@@ -567,28 +540,19 @@ h1 span{color:var(--blue)}
   text-decoration:none;
   font-size:12px;
   font-weight:800;
-  letter-spacing:.04em;
-  box-shadow:0 0 18px rgba(88,195,255,.10);
-  transition:.2s ease;
 }
 
 .card-link:hover{
   background:var(--blue);
   color:#04101a;
-  box-shadow:0 0 24px rgba(88,195,255,.30);
 }
 
 .card-link.secondary{
   border-color:#3c5269;
   background:#0b1520;
-  color:#dce7f1;
 }
 
-.card-link.secondary:hover{
-  border-color:var(--blue);
-  color:#fff;
-  background:#122537;
-}
+/* ================= EMPTY ================= */
 
 .empty-state{
   grid-column:1/-1;
@@ -607,18 +571,11 @@ h1 span{color:var(--blue)}
   margin-bottom:8px;
 }
 
-/* =================================================
-   CTA
-================================================= */
+/* ================= CTA ================= */
 
 .cta{
   text-align:center;
   padding:65px 22px 45px;
-}
-
-.cta h2{
-  font-size:clamp(34px,8vw,55px);
-  margin:10px 0;
 }
 
 .cta p{
@@ -640,9 +597,7 @@ h1 span{color:var(--blue)}
   box-shadow:0 10px 35px #0c7db755;
 }
 
-/* =================================================
-   CREATE YOUR MAP BANNER
-================================================= */
+/* ================= BANNER ================= */
 
 .map-banner{
   padding:10px 18px 45px;
@@ -650,7 +605,6 @@ h1 span{color:var(--blue)}
 
 .map-banner a{
   display:block;
-  position:relative;
   border-radius:20px;
   overflow:hidden;
   border:1px solid rgba(88,195,255,.55);
@@ -658,29 +612,14 @@ h1 span{color:var(--blue)}
   box-shadow:
     0 0 22px rgba(88,195,255,.15),
     0 16px 45px rgba(0,0,0,.40);
-  transition:
-    transform .2s ease,
-    border-color .2s ease,
-    box-shadow .2s ease;
-}
-
-.map-banner a:hover{
-  transform:translateY(-3px);
-  border-color:#8dd7ff;
-  box-shadow:
-    0 0 30px rgba(88,195,255,.30),
-    0 18px 50px rgba(0,0,0,.50);
 }
 
 .map-banner img{
   display:block;
   width:100%;
-  height:auto;
 }
 
-/* =================================================
-   FOOTER
-================================================= */
+/* ================= FOOTER ================= */
 
 footer{
   text-align:center;
@@ -697,9 +636,7 @@ footer strong{
   margin-bottom:12px;
 }
 
-/* =================================================
-   MOBILE
-================================================= */
+/* ================= MOBILE ================= */
 
 @media(max-width:749px){
 
@@ -716,16 +653,16 @@ footer strong{
     background:
       linear-gradient(
         90deg,
-        rgba(3,6,11,.86) 0%,
-        rgba(3,6,11,.50) 55%,
-        rgba(3,6,11,.12) 100%
+        rgba(3,6,11,.86),
+        rgba(3,6,11,.45) 58%,
+        rgba(3,6,11,.10)
       ),
       linear-gradient(
         180deg,
-        rgba(3,6,11,.06) 0%,
+        rgba(3,6,11,.05),
         rgba(3,6,11,.12) 42%,
-        rgba(3,6,11,.92) 72%,
-        rgba(3,6,11,.99) 100%
+        rgba(3,6,11,.94) 75%,
+        #03060b 100%
       );
   }
 
@@ -735,7 +672,6 @@ footer strong{
 
   .brand-name{
     font-size:14px;
-    letter-spacing:.1em;
   }
 
   .logo{
@@ -751,7 +687,6 @@ footer strong{
     border-top:1px solid rgba(88,195,255,.18);
     border-bottom:1px solid rgba(88,195,255,.18);
     background:rgba(3,9,15,.42);
-    backdrop-filter:blur(6px);
   }
 
   .main-nav a{
@@ -761,12 +696,6 @@ footer strong{
     font-size:10px;
     letter-spacing:.08em;
     border-radius:0;
-  }
-
-  .main-nav a.active::after{
-    left:20%;
-    right:20%;
-    bottom:3px;
   }
 
   .hero-content{
@@ -779,10 +708,6 @@ footer strong{
 
   .card-body{
     padding:19px;
-  }
-
-  .card h3{
-    font-size:22px;
   }
 
   .card-actions{
@@ -803,9 +728,7 @@ footer strong{
   }
 }
 
-/* =================================================
-   DESKTOP
-================================================= */
+/* ================= DESKTOP ================= */
 
 @media(min-width:750px){
 
@@ -835,920 +758,720 @@ footer strong{
 
 <div class="shell">
 
-<header class="hero" id="hero">
+<header class="hero">
 
-  <div class="hero-bg" id="heroBg"></div>
-  <div class="hero-overlay"></div>
+<div class="hero-bg" id="heroBg"></div>
+<div class="hero-overlay"></div>
 
-  <div class="topbar">
+<div class="topbar">
 
-    <a href="../"
-       class="brand-link"
-       aria-label="M.A.P. Home">
+<a href="../" class="brand-link">
 
-      <div class="logo">
-        <img
-          src="../../../assets/map/branding/map-logo-icon.png"
-          alt="M.A.P.">
-      </div>
+<div class="logo">
+<img src="../../../assets/map/branding/map-logo-icon.png"
+alt="M.A.P.">
+</div>
 
-      <div class="brand-name">
-        MISSION ALIGNMENT<br>
-        PROTOCOL
-      </div>
+<div class="brand-name">
+MISSION ALIGNMENT<br>
+PROTOCOL
+</div>
 
-    </a>
+</a>
 
-    <nav class="main-nav"
-         aria-label="Main navigation">
+<nav class="main-nav">
+<a href="../">HOME</a>
+<a href="./" class="active">EXPLORE</a>
+<a href="../create/">CREATE</a>
+<a href="../about/">ABOUT</a>
+</nav>
 
-      <a href="../">HOME</a>
+</div>
 
-      <a href="./"
-         class="active"
-         aria-current="page">
-        EXPLORE
-      </a>
+<div class="hero-content">
 
-      <a href="../create/">CREATE</a>
+<div class="eyebrow" id="heroEyebrow">
+Christopher's Journey
+</div>
 
-      <a href="../about/">ABOUT</a>
+<h1 id="heroTitle">
+EXPLORE<br>MY <span>M.A.P.</span>
+</h1>
 
-    </nav>
+<div class="hero-copy" id="heroCopy">
+<strong>One life. Many paths. One mission.</strong>
+<br><br>
+A living map of where I've been, what I've accomplished,
+what I'm building and where I'm going next.
+</div>
 
-  </div>
+<div class="motto">
+Don't just dream about it.<br>
+<span>M.A.P. it out.</span> Get it Done ✔️
+</div>
 
-  <div class="hero-content">
-
-    <div class="eyebrow"
-         id="heroEyebrow">
-      Christopher's Journey
-    </div>
-
-    <h1 id="heroTitle">
-      EXPLORE<br>
-      MY <span>M.A.P.</span>
-    </h1>
-
-    <div class="hero-copy"
-         id="heroCopy">
-
-      <strong>
-        One life. Many paths. One mission.
-      </strong>
-
-      <br><br>
-
-      A living map of where I've been,
-      what I've accomplished,
-      what I'm building and where I'm going next.
-
-    </div>
-
-    <div class="motto">
-      Don't just dream about it.<br>
-      <span>M.A.P. it out.</span> Get it Done ✔️
-    </div>
-
-  </div>
+</div>
 
 </header>
 
-
 <section class="filters">
 
-  <div class="filter-title">
-    EXPLORE THE PATHS
-  </div>
+<div class="filter-title">EXPLORE THE PATHS</div>
 
-  <div class="filter-row">
+<div class="filter-row">
 
-    <button class="filter active" data-filter="all">
-      ALL
-    </button>
+<button class="filter active" data-filter="all">ALL</button>
+<button class="filter" data-filter="family">❤️ Family</button>
+<button class="filter" data-filter="fitness">💪 Fitness</button>
+<button class="filter" data-filter="freeflight">✈️ Freeflight</button>
+<button class="filter" data-filter="professional">🔧 Professional</button>
+<button class="filter" data-filter="creator">🎨 Creator</button>
+<button class="filter" data-filter="travel">🌎 Food & Travel</button>
 
-    <button class="filter" data-filter="family">
-      ❤️ Family
-    </button>
-
-    <button class="filter" data-filter="fitness">
-      💪 Fitness
-    </button>
-
-    <button class="filter" data-filter="freeflight">
-      ✈️ Freeflight
-    </button>
-
-    <button class="filter" data-filter="professional">
-      🔧 Professional
-    </button>
-
-    <button class="filter" data-filter="creator">
-      🎨 Creator
-    </button>
-
-    <button class="filter" data-filter="travel">
-      🌎 Food & Travel
-    </button>
-
-  </div>
+</div>
 
 </section>
-
 
 <section class="map-section">
-  <div id="map"></div>
+<div id="map"></div>
 </section>
-
 
 <section class="legend">
 
-  <div class="legend-row">
+<div class="legend-row">
 
-    <span>
-      <span class="dot"
-            style="background:#a855f7"></span>
-      Experienced
-    </span>
+<span><span class="dot" style="background:#a855f7"></span>Experienced</span>
+<span><span class="dot" style="background:#2f9bff"></span>In Progress</span>
+<span><span class="dot" style="background:#ffd43b"></span>Next</span>
+<span><span class="dot" style="background:#ff8c2f"></span>Goal</span>
 
-    <span>
-      <span class="dot"
-            style="background:#2f9bff"></span>
-      In Progress
-    </span>
-
-    <span>
-      <span class="dot"
-            style="background:#ffd43b"></span>
-      Next
-    </span>
-
-    <span>
-      <span class="dot"
-            style="background:#ff8c2f"></span>
-      Goal
-    </span>
-
-  </div>
+</div>
 
 </section>
-
 
 <section class="journey">
 
-  <div class="section-label">
-    THE JOURNEY
-  </div>
+<div class="section-label">THE JOURNEY</div>
 
-  <h2 id="journeyTitle">
-    One Life. Every Part of It.
-  </h2>
+<h2 id="journeyTitle">
+One Life. Every Part of It.
+</h2>
 
-  <div class="section-copy"
-       id="journeyCopy">
-    Different paths. Same mission.
-  </div>
+<div class="section-copy" id="journeyCopy">
+Different paths. Same mission.
+</div>
 
-  <div class="cards"
-       id="cards">
-  </div>
+<div class="cards" id="cards"></div>
 
 </section>
-
 
 <section class="cta">
 
-  <div class="section-label">
-    YOUR TURN
-  </div>
+<div class="section-label">YOUR TURN</div>
 
-  <h2>
-    What's on your M.A.P.?
-  </h2>
+<h2>What's on your M.A.P.?</h2>
 
-  <p>
-    You don't need my path.<br>
-    You need your own.
-  </p>
+<p>
+You don't need my path.<br>
+You need your own.
+</p>
 
-  <a href="../create/"
-     class="cta-button">
-    Create Your M.A.P. →
-  </a>
+<a href="../create/" class="cta-button">
+Create Your M.A.P. →
+</a>
 
 </section>
-
 
 <section class="map-banner">
 
-  <a href="../create/"
-     aria-label="Create Your Own M.A.P.">
+<a href="../create/">
 
-    <img
-      src="../../../assets/map/Hero/create-your-map.png"
-      alt="Create Your Own M.A.P.">
+<img
+src="../../../assets/map/Hero/create-your-map.png"
+alt="Create Your Own M.A.P.">
 
-  </a>
+</a>
 
 </section>
 
-
 <footer>
 
-  <strong>
-    WORK HARD. • FLY HIGH.<br>
-    EAT WELL. • LIVE FREE.
-  </strong>
+<strong>
+WORK HARD. • FLY HIGH.<br>
+EAT WELL. • LIVE FREE.
+</strong>
 
-  M.A.P. • Mission Alignment Protocol<br>
-  Christopher Champagne
+M.A.P. • Mission Alignment Protocol<br>
+Christopher Champagne
 
 </footer>
 
 </div>
 
-
-<script
-src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
-</script>
-
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
 
-/* =================================================
-   HERO STATES
-================================================= */
+/* ================= HERO STATES ================= */
 
 const heroStates={
 
-  all:{
-    image:"../../../assets/map/Hero/hero-all.png",
-    eyebrow:"Christopher's Journey",
-    title:'EXPLORE<br>MY <span>M.A.P.</span>',
-    lead:"One life. Many paths. One mission.",
-    copy:
-      "A living map of where I've been, what I've accomplished, what I'm building and where I'm going next."
-  },
+all:{
+ image:"../../../assets/map/Hero/hero-all.png",
+ eyebrow:"Christopher's Journey",
+ title:'EXPLORE<br>MY <span>M.A.P.</span>',
+ lead:"One life. Many paths. One mission.",
+ copy:"A living map of where I've been, what I've accomplished, what I'm building and where I'm going next."
+},
 
-  family:{
-    image:"../../../assets/map/Hero/hero-family.png",
-    eyebrow:"Family • The Foundation",
-    title:'FAMILY<br>IS <span>HOME.</span>',
-    lead:"The people behind the mission.",
-    copy:
-      "The memories, milestones and people that make every other path worth taking."
-  },
+family:{
+ image:"../../../assets/map/Hero/hero-family.png",
+ eyebrow:"Family • The Foundation",
+ title:'FAMILY<br>IS <span>HOME.</span>',
+ lead:"The people behind the mission.",
+ copy:"The memories, milestones and people that make every other path worth taking."
+},
 
-  fitness:{
-    image:"../../../assets/map/Hero/hero-fitness.png",
-    eyebrow:"Fitness • Strength For Life",
-    title:'STRENGTH<br>FOR <span>LIFE.</span>',
-    lead:"Stronger body. Sharper mind. Longer journey.",
-    copy:
-      "Build the physical and mental capacity to do more, experience more and live the life you want."
-  },
+fitness:{
+ image:"../../../assets/map/Hero/hero-fitness.png",
+ eyebrow:"Fitness • Strength For Life",
+ title:'STRENGTH<br>FOR <span>LIFE.</span>',
+ lead:"Stronger body. Sharper mind. Longer journey.",
+ copy:"Build the physical and mental capacity to do more, experience more and live the life you want."
+},
 
-  freeflight:{
-    image:"../../../assets/map/Hero/hero-freeflight.png",
-    eyebrow:"Looking4Lift • Freeflight",
-    title:'BORN<br>TO <span>FLY.</span>',
-    lead:"The sky isn't the limit. It's the destination.",
-    copy:
-      "Training, mountain flights, milestones, community and the pursuit of freeflight."
-  },
+freeflight:{
+ image:"../../../assets/map/Hero/hero-freeflight.png",
+ eyebrow:"Looking4Lift • Freeflight",
+ title:'BORN<br>TO <span>FLY.</span>',
+ lead:"The sky isn't the limit. It's the destination.",
+ copy:"Training, mountain flights, milestones, community and the pursuit of freeflight."
+},
 
-  professional:{
-    image:"../../../assets/map/Hero/hero-professional.png",
-    eyebrow:"Professional • Technical Solutions",
-    title:'BUILD. SOLVE.<br>GET IT <span>DONE.</span>',
-    lead:"Decades of experience. One mindset: figure it out.",
-    copy:
-      "Security. IT. Networking. Automation. Electrical. HVAC. Refrigeration. Different systems. Same mission — diagnose it, solve it, get it done."
-  },
+professional:{
+ image:"../../../assets/map/Hero/hero-professional.png",
+ eyebrow:"Professional • Technical Solutions",
+ title:'BUILD. SOLVE.<br>GET IT <span>DONE.</span>',
+ lead:"Decades of experience. One mindset: figure it out.",
+ copy:"Security. IT. Networking. Automation. Electrical. HVAC. Refrigeration. Different systems. Same mission — diagnose it, solve it, get it done."
+},
 
-  creator:{
-    image:"../../../assets/map/Hero/hero-creator.png",
-    eyebrow:"Creator • Build The Vision",
-    title:'IDEAS<br>TO <span>IMPACT.</span>',
-    lead:"Create. Share. Inspire. Repeat.",
-    copy:
-      "Content, technology, VR, video and digital tools — turning ideas and experiences into something others can explore."
-  },
+creator:{
+ image:"../../../assets/map/Hero/hero-creator.png",
+ eyebrow:"Creator • Build The Vision",
+ title:'IDEAS<br>TO <span>IMPACT.</span>',
+ lead:"Create. Share. Inspire. Repeat.",
+ copy:"Content, technology, VR, video and digital tools — turning ideas and experiences into something others can explore."
+},
 
-  travel:{
-    image:"../../../assets/map/Hero/hero-travel.png",
-    eyebrow:"Food & Travel • Experience More",
-    title:'GO.<br>SEE. <span>TASTE.</span>',
-    lead:"Good food. Good places. Good memories.",
-    copy:
-      "Road trips, coastlines, fishing, local food and the experiences that make the journey worth remembering."
-  }
+travel:{
+ image:"../../../assets/map/Hero/hero-travel.png",
+ eyebrow:"Food & Travel • Experience More",
+ title:'GO.<br>SEE. <span>TASTE.</span>',
+ lead:"Good food. Good places. Good memories.",
+ copy:"Road trips, coastlines, fishing, local food and the experiences that make the journey worth remembering."
+}
 
 };
 
-
-/* =================================================
-   THUMBNAIL FALLBACKS
-
-   These use the hero artwork NOW.
-   Later we can replace any individual item with a
-   real photo by adding:
-   thumbnail:"../../../assets/whatever/photo.jpg"
-================================================= */
+/* ================= THUMBNAILS ================= */
 
 const categoryThumbs={
-  family:"../../../assets/map/Hero/hero-family.png",
-  fitness:"../../../assets/map/Hero/hero-fitness.png",
-  freeflight:"../../../assets/map/Hero/hero-freeflight.png",
-  professional:"../../../assets/map/Hero/hero-professional.png",
-  creator:"../../../assets/map/Hero/hero-creator.png",
-  travel:"../../../assets/map/Hero/hero-travel.png"
+ family:"../../../assets/map/Hero/hero-family.png",
+ fitness:"../../../assets/map/Hero/hero-fitness.png",
+ freeflight:"../../../assets/map/Hero/hero-freeflight.png",
+ professional:"../../../assets/map/Hero/hero-professional.png",
+ creator:"../../../assets/map/Hero/hero-creator.png",
+ travel:"../../../assets/map/Hero/hero-travel.png"
 };
 
-
-/* =================================================
-   JOURNEY DATA
-================================================= */
+/* ================= JOURNEY DATA ================= */
 
 const journeys=[
 
 {
-  category:"freeflight",
-  status:"done",
-  title:"Dockweiler Flight Training",
-  location:"Dockweiler Beach, California",
-  lat:33.936,
-  lng:-118.440,
-  date:"Training",
-  story:
-    "Coastal hang gliding training and flights at Dockweiler Beach."
+ category:"freeflight",
+ status:"done",
+ title:"Dockweiler • First Day of Flying Lessons",
+ location:"Dockweiler Beach, California",
+ lat:33.936,
+ lng:-118.440,
+ date:"August 24, 2015 • Full-day lesson • 10 flights",
+ story:"The beginning of my freeflight journey. A full day learning to launch, control and land a hang glider on the training slopes at Dockweiler Beach.",
+ thumbnail:"../../../assets/map/journey/dockweiler-2015-01.jpg",
+ popupImage:"../../../assets/map/journey/dockweiler-2015-02.jpg",
+ links:[
+   {
+     label:"Windsports • Dockweiler Lessons →",
+     url:"https://www.windsports.com/beach"
+   }
+ ]
 },
 
 {
-  category:"freeflight",
-  status:"done",
-  title:"Lookout Mountain Flight Park",
-  location:"Rising Fawn, Georgia",
-  lat:34.834,
-  lng:-85.489,
-  date:"2025–2026",
-  story:
-    "Mountain flying, training hills, ridge soaring, thermalling and a major chapter in my freeflight journey."
+ category:"freeflight",
+ status:"done",
+ title:"Lookout Mountain Flight Park",
+ location:"Rising Fawn, Georgia",
+ lat:34.834,
+ lng:-85.489,
+ date:"2025–2026",
+ story:"Mountain flying, training hills, ridge soaring, thermalling and a major chapter in my freeflight journey."
 },
 
 {
-  category:"freeflight",
-  status:"done",
-  title:"100 Flights",
-  location:"Lookout Mountain Flight Park",
-  lat:34.835,
-  lng:-85.487,
-  date:"August 2026",
-  story:
-    "Crossed the 100-flight milestone during Wingman Weekend."
+ category:"freeflight",
+ status:"done",
+ title:"100 Flights",
+ location:"Lookout Mountain Flight Park",
+ lat:34.835,
+ lng:-85.487,
+ date:"August 2026",
+ story:"Crossed the 100-flight milestone during Wingman Weekend."
 },
 
 {
-  category:"freeflight",
-  status:"done",
-  title:"24 Minute Mountain Flight",
-  location:"Lookout Mountain Flight Park",
-  lat:34.836,
-  lng:-85.486,
-  date:"August 2026",
-  story:
-    "Ridge soared and thermalled for approximately 24 minutes — smashing my previous mountain-flight personal best."
+ category:"freeflight",
+ status:"done",
+ title:"24 Minute Mountain Flight",
+ location:"Lookout Mountain Flight Park",
+ lat:34.836,
+ lng:-85.486,
+ date:"August 2026",
+ story:"Ridge soared and thermalled for approximately 24 minutes — smashing my previous mountain-flight personal best."
 },
 
 {
-  category:"freeflight",
-  status:"progress",
-  title:"Looking4Lift",
-  location:"United States",
-  lat:35.5,
-  lng:-92.5,
-  date:"Building Now",
-  story:
-    "Freeflight, hang gliding, VR training, travel and community."
+ category:"freeflight",
+ status:"progress",
+ title:"Looking4Lift",
+ location:"United States",
+ lat:35.5,
+ lng:-92.5,
+ date:"Building Now",
+ story:"Freeflight, hang gliding, VR training, travel and community."
 },
 
 {
-  category:"professional",
-  status:"progress",
-  title:"CC'S Technical Services",
-  location:"Leesville, Louisiana",
-  lat:31.1435,
-  lng:-93.261,
-  date:"Building Now",
-  story:
-    "HVAC, electrical, refrigeration, security, automation, IT and technical services.",
-  links:[
-    {
-      label:"Visit CC'S Technical Services →",
-      url:"https://ccstechnicalservices.com/"
-    }
-  ]
+ category:"professional",
+ status:"progress",
+ title:"CC'S Technical Services",
+ location:"Leesville, Louisiana",
+ lat:31.1435,
+ lng:-93.261,
+ date:"Building Now",
+ story:"HVAC, electrical, refrigeration, security, automation, IT and technical services.",
+ links:[
+   {
+     label:"Visit CC'S Technical Services →",
+     url:"https://ccstechnicalservices.com/"
+   }
+ ]
 },
 
 {
-  category:"creator",
-  status:"progress",
-  title:"Mission Alignment Protocol",
-  location:"Louisiana",
-  lat:31.1,
-  lng:-92.9,
-  date:"Building Now",
-  story:
-    "Turning goals, experiences, projects and destinations into one living system.",
-  links:[
-    {
-      label:"GitHub →",
-      url:"https://github.com/Champagne247"
-    }
-  ]
+ category:"creator",
+ status:"progress",
+ title:"Mission Alignment Protocol",
+ location:"Louisiana",
+ lat:31.1,
+ lng:-92.9,
+ date:"Building Now",
+ story:"Turning goals, experiences, projects and destinations into one living system.",
+ links:[
+   {
+     label:"GitHub →",
+     url:"https://github.com/Champagne247"
+   }
+ ]
 },
 
 {
-  category:"fitness",
-  status:"progress",
-  title:"Certified MONSTER • Strength & Mobility",
-  location:"Louisiana",
-  lat:31.2,
-  lng:-93.2,
-  date:"Ongoing",
-  story:
-    "Controlled strength, mobility, conditioning and lifelong physical capability."
+ category:"fitness",
+ status:"progress",
+ title:"Certified MONSTER • Strength & Mobility",
+ location:"Louisiana",
+ lat:31.2,
+ lng:-93.2,
+ date:"Ongoing",
+ story:"Controlled strength, mobility, conditioning and lifelong physical capability."
 },
 
 {
-  category:"travel",
-  status:"done",
-  title:"Galveston",
-  location:"Galveston, Texas",
-  lat:29.301,
-  lng:-94.797,
-  date:"2026",
-  story:
-    "Travel, fishing, food and another experience added to the M.A.P."
+ category:"travel",
+ status:"done",
+ title:"Galveston",
+ location:"Galveston, Texas",
+ lat:29.301,
+ lng:-94.797,
+ date:"2026",
+ story:"Travel, fishing, food and another experience added to the M.A.P."
 },
 
 {
-  category:"travel",
-  status:"done",
-  title:"Panama City Beach",
-  location:"Panama City Beach, Florida",
-  lat:30.1766,
-  lng:-85.8055,
-  date:"2026",
-  story:
-    "Family travel, Gulf Coast and another destination on the journey."
+ category:"travel",
+ status:"done",
+ title:"Panama City Beach",
+ location:"Panama City Beach, Florida",
+ lat:30.1766,
+ lng:-85.8055,
+ date:"2026",
+ story:"Family travel, Gulf Coast and another destination on the journey."
 }
 
 ];
 
-
-/* =================================================
-   LABELS
-================================================= */
+/* ================= LABELS ================= */
 
 const statusColors={
-  done:"#a855f7",
-  progress:"#2f9bff",
-  next:"#ffd43b",
-  goal:"#ff8c2f"
+ done:"#a855f7",
+ progress:"#2f9bff",
+ next:"#ffd43b",
+ goal:"#ff8c2f"
 };
 
 const statusLabels={
-  done:"Experienced",
-  progress:"In Progress",
-  next:"Next",
-  goal:"Goal"
+ done:"Experienced",
+ progress:"In Progress",
+ next:"Next",
+ goal:"Goal"
 };
 
 const categoryLabels={
-  family:"Family",
-  fitness:"Fitness",
-  freeflight:"Freeflight",
-  professional:"Professional",
-  creator:"Creator",
-  travel:"Food & Travel"
+ family:"Family",
+ fitness:"Fitness",
+ freeflight:"Freeflight",
+ professional:"Professional",
+ creator:"Creator",
+ travel:"Food & Travel"
 };
 
-
-/* =================================================
-   MAP
-================================================= */
+/* ================= MAP ================= */
 
 const map=L.map("map",{
-  zoomControl:true
+ zoomControl:true
 }).setView([34,-96],4);
 
-
 L.tileLayer(
-  "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-  {
-    maxZoom:18,
-    attribution:"&copy; OpenStreetMap contributors"
-  }
+ "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+ {
+   maxZoom:18,
+   attribution:"&copy; OpenStreetMap contributors"
+ }
 ).addTo(map);
-
 
 let markers=[];
 
-
-/* =================================================
-   SECURITY
-================================================= */
+/* ================= SECURITY ================= */
 
 function esc(value){
 
-  return String(value||"").replace(
-    /[&<>"']/g,
-    function(c){
-
-      return{
-        "&":"&amp;",
-        "<":"&lt;",
-        ">":"&gt;",
-        '"':"&quot;",
-        "'":"&#39;"
-      }[c];
-
-    }
-  );
+ return String(value||"").replace(
+   /[&<>"']/g,
+   function(c){
+     return{
+       "&":"&amp;",
+       "<":"&lt;",
+       ">":"&gt;",
+       '"':"&quot;",
+       "'":"&#39;"
+     }[c];
+   }
+ );
 
 }
 
-
-/* =================================================
-   HELPERS
-================================================= */
+/* ================= HELPERS ================= */
 
 function getThumb(item){
 
-  return item.thumbnail ||
-         categoryThumbs[item.category] ||
-         heroStates.all.image;
+ return item.thumbnail ||
+        categoryThumbs[item.category] ||
+        heroStates.all.image;
 
 }
 
+function getPopupImage(item){
+
+ return item.popupImage ||
+        item.thumbnail ||
+        categoryThumbs[item.category] ||
+        heroStates.all.image;
+
+}
 
 function renderLinks(item,forPopup=false){
 
-  if(!item.links || !item.links.length){
-    return "";
-  }
+ if(!item.links || !item.links.length){
+   return "";
+ }
 
-  return item.links.map(function(link,index){
+ return item.links.map(function(link,index){
 
-    const className=
-      forPopup
-        ? "popup-link"
-        : (
-            index===0
-              ? "card-link"
-              : "card-link secondary"
-          );
+   const className=
+     forPopup
+       ? "popup-link"
+       : index===0
+         ? "card-link"
+         : "card-link secondary";
 
-    return `
-      <a
-        class="${className}"
-        href="${esc(link.url)}"
-        target="_blank"
-        rel="noopener noreferrer">
-        ${esc(link.label)}
-      </a>
-    `;
+   return `
+     <a
+       class="${className}"
+       href="${esc(link.url)}"
+       target="_blank"
+       rel="noopener noreferrer">
+       ${esc(link.label)}
+     </a>
+   `;
 
-  }).join("");
+ }).join("");
 
 }
 
-
-/* =================================================
-   HERO RENDER
-================================================= */
+/* ================= HERO ================= */
 
 function renderHero(filter){
 
-  const state=
-    heroStates[filter] ||
-    heroStates.all;
+ const state=heroStates[filter] || heroStates.all;
 
-  const heroBg=
-    document.getElementById("heroBg");
+ const heroBg=document.getElementById("heroBg");
 
-  heroBg.style.opacity=".15";
+ heroBg.style.opacity=".15";
 
-  setTimeout(function(){
+ setTimeout(function(){
 
-    heroBg.style.backgroundImage=
-      `url("${state.image}")`;
+   heroBg.style.backgroundImage=
+     `url("${state.image}")`;
 
-    heroBg.style.opacity="1";
+   heroBg.style.opacity="1";
 
-  },150);
+ },150);
 
+ document.getElementById("heroEyebrow").textContent=
+   state.eyebrow;
 
-  document.getElementById(
-    "heroEyebrow"
-  ).textContent=
-    state.eyebrow;
+ document.getElementById("heroTitle").innerHTML=
+   state.title;
 
-
-  document.getElementById(
-    "heroTitle"
-  ).innerHTML=
-    state.title;
-
-
-  document.getElementById(
-    "heroCopy"
-  ).innerHTML=
-    `<strong>${esc(state.lead)}</strong>
-     <br><br>
-     ${esc(state.copy)}`;
+ document.getElementById("heroCopy").innerHTML=
+   `<strong>${esc(state.lead)}</strong>
+    <br><br>
+    ${esc(state.copy)}`;
 
 }
 
-
-/* =================================================
-   JOURNEY RENDER
-================================================= */
+/* ================= RENDER ================= */
 
 function render(filter="all"){
 
-  renderHero(filter);
+ renderHero(filter);
 
+ markers.forEach(marker=>map.removeLayer(marker));
+ markers=[];
 
-  markers.forEach(
-    marker=>map.removeLayer(marker)
-  );
+ const cards=document.getElementById("cards");
+ cards.innerHTML="";
 
-  markers=[];
+ const visible=journeys.filter(item=>
+   filter==="all" ||
+   item.category===filter
+ );
 
+ visible.forEach(item=>{
 
-  const cards=
-    document.getElementById("cards");
+   const color=statusColors[item.status] || "#c8d0d9";
 
-  cards.innerHTML="";
+   const thumb=getThumb(item);
+   const popupImage=getPopupImage(item);
 
+   const marker=L.circleMarker(
+     [item.lat,item.lng],
+     {
+       radius:9,
+       color:"#07101a",
+       weight:3,
+       fillColor:color,
+       fillOpacity:1
+     }
+   );
 
-  const visible=
-    journeys.filter(item=>
-      filter==="all" ||
-      item.category===filter
-    );
+   const popupLinks=renderLinks(item,true);
 
+   marker.bindPopup(`
 
-  visible.forEach(item=>{
+     <img
+       class="popup-thumb"
+       src="${esc(popupImage)}"
+       alt="${esc(item.title)}">
 
-    const color=
-      statusColors[item.status] ||
-      "#c8d0d9";
+     <div class="popup-category">
+       ${esc(categoryLabels[item.category])}
+     </div>
 
-    const thumb=getThumb(item);
+     <div class="popup-title">
+       ${esc(item.title)}
+     </div>
 
+     <div class="popup-location">
+       📍 ${esc(item.location)} • ${esc(item.date)}
+     </div>
 
-    const marker=
-      L.circleMarker(
-        [item.lat,item.lng],
-        {
-          radius:9,
-          color:"#07101a",
-          weight:3,
-          fillColor:color,
-          fillOpacity:1
-        }
-      );
+     <div class="popup-copy">
+       ${esc(item.story)}
+     </div>
 
+     ${
+       popupLinks
+       ? `<div class="popup-actions">${popupLinks}</div>`
+       : ""
+     }
 
-    marker.bindPopup(`
+   `);
 
-      <img
-        class="popup-thumb"
-        src="${esc(thumb)}"
-        alt="${esc(item.title)}">
+   marker.addTo(map);
+   markers.push(marker);
 
-      <div class="popup-category">
-        ${esc(categoryLabels[item.category])}
-      </div>
+   const card=document.createElement("article");
+   card.className="card";
 
-      <div class="popup-title">
-        ${esc(item.title)}
-      </div>
+   const links=renderLinks(item,false);
 
-      <div class="popup-copy">
+   card.innerHTML=`
 
-        📍 ${esc(item.location)}
+     <div class="card-media">
 
-        <br><br>
+       <img
+         src="${esc(thumb)}"
+         alt="${esc(item.title)}"
+         loading="lazy"
+         onerror="this.src='${esc(categoryThumbs[item.category])}'">
 
-        ${esc(item.story)}
+       <div class="card-media-label">
+         ${esc(categoryLabels[item.category])}
+       </div>
 
-      </div>
+     </div>
 
-      ${renderLinks(item,true)}
+     <div class="card-body">
 
-    `);
+       <div class="card-top">
 
+         <div class="card-category">
+           ${esc(categoryLabels[item.category])}
+         </div>
 
-    marker.addTo(map);
-    markers.push(marker);
+         <div class="status" style="color:${color}">
+           ● ${esc(statusLabels[item.status])}
+         </div>
 
+       </div>
 
-    const card=
-      document.createElement("article");
+       <h3>${esc(item.title)}</h3>
 
-    card.className="card";
+       <p>${esc(item.story)}</p>
 
+       <div class="card-date">
+         📍 ${esc(item.location)}
+         <br>
+         ${esc(item.date)}
+       </div>
 
-    const links=renderLinks(item,false);
+       ${
+         links
+         ? `<div class="card-actions">${links}</div>`
+         : ""
+       }
 
+     </div>
 
-    card.innerHTML=`
+   `;
 
-      <div class="card-media">
+   cards.appendChild(card);
 
-        <img
-          src="${esc(thumb)}"
-          alt="${esc(item.title)}"
-          loading="lazy">
+ });
 
-        <div class="card-media-label">
-          ${esc(categoryLabels[item.category])}
-        </div>
+ if(visible.length===0){
 
-      </div>
+   cards.innerHTML=`
 
-      <div class="card-body">
+     <div class="empty-state">
 
-        <div class="card-top">
+       <strong>
+         ${esc(categoryLabels[filter] || "This path")}
+       </strong>
 
-          <div class="card-category">
-            ${esc(categoryLabels[item.category])}
-          </div>
+       This path is ready. We're building its real
+       milestones, destinations and goals next.
 
-          <div class="status">
-            ● ${esc(statusLabels[item.status])}
-          </div>
+     </div>
 
-        </div>
+   `;
 
-        <h3>
-          ${esc(item.title)}
-        </h3>
+ }
 
-        <p>
-          ${esc(item.story)}
-        </p>
+ if(filter==="all"){
 
-        <div class="card-date">
-          📍 ${esc(item.location)}
-          &nbsp; • &nbsp;
-          ${esc(item.date)}
-        </div>
+   document.getElementById("journeyTitle").textContent=
+     "One Life. Every Part of It.";
 
-        ${
-          links
-            ? `<div class="card-actions">${links}</div>`
-            : ""
-        }
+   document.getElementById("journeyCopy").textContent=
+     "Different paths. Same mission.";
 
-      </div>
+ }else{
 
-    `;
+   document.getElementById("journeyTitle").textContent=
+     categoryLabels[filter];
 
+   document.getElementById("journeyCopy").textContent=
+     "Explore the milestones, places and stories that make up this path.";
 
-    cards.appendChild(card);
+ }
 
-  });
+ if(markers.length>1){
 
+   const group=L.featureGroup(markers);
 
-  /* EMPTY CATEGORY */
+   map.fitBounds(
+     group.getBounds(),
+     {
+       padding:[35,35],
+       maxZoom:7
+     }
+   );
 
-  if(visible.length===0){
+ }else if(markers.length===1){
 
-    cards.innerHTML=`
+   map.setView(
+     markers[0].getLatLng(),
+     8
+   );
 
-      <div class="empty-state">
+ }else{
 
-        <strong>
-          ${esc(categoryLabels[filter] || "This path")}
-        </strong>
+   map.setView([34,-96],4);
 
-        This path is ready.
-        We're building its real milestones,
-        destinations and goals next.
-
-      </div>
-
-    `;
-
-  }
-
-
-  /* JOURNEY HEADINGS */
-
-  if(filter==="all"){
-
-    document.getElementById(
-      "journeyTitle"
-    ).textContent=
-      "One Life. Every Part of It.";
-
-
-    document.getElementById(
-      "journeyCopy"
-    ).textContent=
-      "Different paths. Same mission.";
-
-  }else{
-
-    document.getElementById(
-      "journeyTitle"
-    ).textContent=
-      categoryLabels[filter];
-
-
-    document.getElementById(
-      "journeyCopy"
-    ).textContent=
-      "Explore this path inside the Mission Alignment Protocol.";
-
-  }
-
-
-  /* MAP CAMERA */
-
-  if(markers.length>1){
-
-    const group=
-      L.featureGroup(markers);
-
-
-    map.fitBounds(
-      group.getBounds(),
-      {
-        padding:[35,35],
-        maxZoom:7
-      }
-    );
-
-  }
-
-  else if(markers.length===1){
-
-    map.setView(
-      markers[0].getLatLng(),
-      8
-    );
-
-  }
-
-  else{
-
-    map.setView(
-      [34,-96],
-      4
-    );
-
-  }
+ }
 
 }
 
+/* ================= FILTER CONTROLS ================= */
 
-/* =================================================
-   FILTER CONTROLS
-================================================= */
+document.querySelectorAll(".filter").forEach(button=>{
 
-document.querySelectorAll(
-  ".filter"
-).forEach(button=>{
+ button.addEventListener("click",function(){
 
-  button.addEventListener(
-    "click",
-    function(){
+   document.querySelectorAll(".filter").forEach(
+     b=>b.classList.remove("active")
+   );
 
-      document.querySelectorAll(
-        ".filter"
-      ).forEach(
-        b=>b.classList.remove("active")
-      );
+   this.classList.add("active");
 
+   render(this.dataset.filter);
 
-      this.classList.add("active");
-
-
-      render(
-        this.dataset.filter
-      );
-
-    }
-  );
+ });
 
 });
-
 
 render("all");
 
