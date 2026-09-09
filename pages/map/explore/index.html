@@ -55,11 +55,6 @@ body{
   background:#03070d;
 }
 
-/*
-  Hero artwork is now controlled by JavaScript.
-  Only the image layer changes.
-*/
-
 .hero-bg{
   position:absolute;
   inset:0;
@@ -78,9 +73,7 @@ body{
 
   transform:scale(1.01);
 
-  transition:
-    opacity .35s ease,
-    background-image .35s ease;
+  transition:opacity .35s ease;
 }
 
 .hero-overlay{
@@ -145,9 +138,7 @@ body{
 .brand-link:hover .logo{
   transform:translateY(-2px) scale(1.03);
   border-color:#8dd7ff;
-
-  box-shadow:
-    0 0 26px rgba(88,195,255,.42);
+  box-shadow:0 0 26px rgba(88,195,255,.42);
 }
 
 .logo img{
@@ -286,7 +277,6 @@ h1 span{
 .filters{
   padding:22px 16px;
   border-bottom:1px solid var(--line);
-
   background:
     linear-gradient(180deg,#0c1c2b,#07101a);
 }
@@ -328,9 +318,7 @@ h1 span{
   background:var(--blue);
   color:#04101a;
   border-color:var(--blue);
-
-  box-shadow:
-    0 0 18px rgba(88,195,255,.25);
+  box-shadow:0 0 18px rgba(88,195,255,.25);
 }
 
 /* =================================================
@@ -434,10 +422,8 @@ h1 span{
   border:1px solid var(--line);
   border-radius:24px;
   padding:23px;
-
   background:
     linear-gradient(145deg,#0d1824,#080f18);
-
   transition:.2s ease;
 }
 
@@ -487,10 +473,8 @@ h1 span{
   border:1px dashed #29415a;
   border-radius:24px;
   padding:30px;
-
   background:
     linear-gradient(145deg,#0b1621,#070d14);
-
   color:var(--muted);
   line-height:1.6;
 }
@@ -527,17 +511,13 @@ h1 span{
   margin-top:20px;
   padding:17px 27px;
   border-radius:16px;
-
   background:
     linear-gradient(135deg,#178ee0,#58c3ff);
-
   color:white;
   text-decoration:none;
   font-weight:800;
   font-size:18px;
-
-  box-shadow:
-    0 10px 35px #0c7db755;
+  box-shadow:0 10px 35px #0c7db755;
 }
 
 footer{
@@ -610,10 +590,8 @@ footer strong{
     margin-top:18px;
     width:100%;
     justify-content:space-between;
-
     border-top:1px solid rgba(88,195,255,.18);
     border-bottom:1px solid rgba(88,195,255,.18);
-
     background:rgba(3,9,15,.42);
     backdrop-filter:blur(6px);
   }
@@ -640,7 +618,6 @@ footer strong{
   .hero-copy{
     font-size:18px;
   }
-
 }
 
 /* =================================================
@@ -666,23 +643,19 @@ footer strong{
   .cards{
     grid-template-columns:repeat(2,1fr);
   }
-
 }
 
 </style>
 </head>
 
-
 <body>
 
 <div class="shell">
-
 
 <header class="hero" id="hero">
 
   <div class="hero-bg" id="heroBg"></div>
   <div class="hero-overlay"></div>
-
 
   <div class="topbar">
 
@@ -691,22 +664,17 @@ footer strong{
        aria-label="M.A.P. Home">
 
       <div class="logo">
-
         <img
-        src="../../../assets/map/branding/map-logo-icon.png"
-        alt="M.A.P.">
-
+          src="../../../assets/map/branding/map-logo-icon.png"
+          alt="M.A.P.">
       </div>
 
       <div class="brand-name">
-
         MISSION ALIGNMENT<br>
         PROTOCOL
-
       </div>
 
     </a>
-
 
     <nav class="main-nav"
          aria-label="Main navigation">
@@ -732,7 +700,6 @@ footer strong{
     </nav>
 
   </div>
-
 
   <div class="hero-content">
 
@@ -762,10 +729,8 @@ footer strong{
     </div>
 
     <div class="motto">
-
       Don't just dream about it.<br>
       <span>M.A.P. it out.</span> Get it Done ✔️
-
     </div>
 
   </div>
@@ -775,153 +740,144 @@ footer strong{
 
 <section class="filters">
 
-<div class="filter-title">
-EXPLORE THE PATHS
-</div>
+  <div class="filter-title">
+    EXPLORE THE PATHS
+  </div>
 
+  <div class="filter-row">
 
-<div class="filter-row">
+    <button class="filter active"
+            data-filter="all">
+      ALL
+    </button>
 
-<button class="filter active"
-        data-filter="all">
-ALL
-</button>
+    <button class="filter"
+            data-filter="family">
+      ❤️ Family
+    </button>
 
-<button class="filter"
-        data-filter="family">
-❤️ Family
-</button>
+    <button class="filter"
+            data-filter="fitness">
+      💪 Fitness
+    </button>
 
-<button class="filter"
-        data-filter="fitness">
-💪 Fitness
-</button>
+    <button class="filter"
+            data-filter="freeflight">
+      ✈️ Freeflight
+    </button>
 
-<button class="filter"
-        data-filter="freeflight">
-✈️ Freeflight
-</button>
+    <button class="filter"
+            data-filter="professional">
+      🔧 Professional
+    </button>
 
-<button class="filter"
-        data-filter="professional">
-🔧 Professional
-</button>
+    <button class="filter"
+            data-filter="creator">
+      🎨 Creator
+    </button>
 
-<button class="filter"
-        data-filter="creator">
-🎨 Creator
-</button>
+    <button class="filter"
+            data-filter="travel">
+      🌎 Food & Travel
+    </button>
 
-<button class="filter"
-        data-filter="travel">
-🌎 Food & Travel
-</button>
-
-</div>
+  </div>
 
 </section>
 
 
 <section class="map-section">
-
-<div id="map"></div>
-
+  <div id="map"></div>
 </section>
 
 
 <section class="legend">
 
-<div class="legend-row">
+  <div class="legend-row">
 
-<span>
-<span class="dot"
-style="background:#a855f7"></span>
-Experienced
-</span>
+    <span>
+      <span class="dot"
+            style="background:#a855f7"></span>
+      Experienced
+    </span>
 
-<span>
-<span class="dot"
-style="background:#2f9bff"></span>
-In Progress
-</span>
+    <span>
+      <span class="dot"
+            style="background:#2f9bff"></span>
+      In Progress
+    </span>
 
-<span>
-<span class="dot"
-style="background:#ffd43b"></span>
-Next
-</span>
+    <span>
+      <span class="dot"
+            style="background:#ffd43b"></span>
+      Next
+    </span>
 
-<span>
-<span class="dot"
-style="background:#ff8c2f"></span>
-Goal
-</span>
+    <span>
+      <span class="dot"
+            style="background:#ff8c2f"></span>
+      Goal
+    </span>
 
-</div>
+  </div>
 
 </section>
 
 
 <section class="journey">
 
-<div class="section-label">
-THE JOURNEY
-</div>
+  <div class="section-label">
+    THE JOURNEY
+  </div>
 
-<h2 id="journeyTitle">
-One Life. Every Part of It.
-</h2>
+  <h2 id="journeyTitle">
+    One Life. Every Part of It.
+  </h2>
 
-<div class="section-copy"
-     id="journeyCopy">
+  <div class="section-copy"
+       id="journeyCopy">
+    Different paths. Same mission.
+  </div>
 
-Different paths. Same mission.
-
-</div>
-
-<div class="cards"
-     id="cards">
-</div>
+  <div class="cards"
+       id="cards">
+  </div>
 
 </section>
 
 
 <section class="cta">
 
-<div class="section-label">
-YOUR TURN
-</div>
+  <div class="section-label">
+    YOUR TURN
+  </div>
 
-<h2>
-What's on your M.A.P.?
-</h2>
+  <h2>
+    What's on your M.A.P.?
+  </h2>
 
-<p>
-You don't need my path.<br>
-You need your own.
-</p>
+  <p>
+    You don't need my path.<br>
+    You need your own.
+  </p>
 
-<a href="../create/"
-   class="cta-button">
-
-Create Your M.A.P. →
-
-</a>
+  <a href="../create/"
+     class="cta-button">
+    Create Your M.A.P. →
+  </a>
 
 </section>
 
 
 <footer>
 
-<strong>
+  <strong>
+    WORK HARD. • FLY HIGH.<br>
+    EAT WELL. • LIVE FREE.
+  </strong>
 
-WORK HARD. • FLY HIGH.<br>
-EAT WELL. • LIVE FREE.
-
-</strong>
-
-M.A.P. • Mission Alignment Protocol<br>
-Christopher Champagne
+  M.A.P. • Mission Alignment Protocol<br>
+  Christopher Champagne
 
 </footer>
 
@@ -941,32 +897,41 @@ src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
 
 const heroStates={
 
- all:{
-  image:"../../../assets/map/Hero/hero-freeflight.png",
-  eyebrow:"Christopher's Journey",
-  title:'EXPLORE<br>MY <span>M.A.P.</span>',
-  lead:"One life. Many paths. One mission.",
-  copy:
-   "A living map of where I've been, what I've accomplished, what I'm building and where I'm going next."
- },
+  all:{
+    image:"../../../assets/map/Hero/hero-freeflight.png",
+    eyebrow:"Christopher's Journey",
+    title:'EXPLORE<br>MY <span>M.A.P.</span>',
+    lead:"One life. Many paths. One mission.",
+    copy:
+      "A living map of where I've been, what I've accomplished, what I'm building and where I'm going next."
+  },
 
- family:{
-  image:"../../../assets/map/Hero/hero-family.png",
-  eyebrow:"Family • The Foundation",
-  title:'FAMILY<br>IS <span>HOME.</span>',
-  lead:"The people behind the mission.",
-  copy:
-   "The memories, milestones and people that make every other path worth taking."
- },
+  family:{
+    image:"../../../assets/map/Hero/hero-family.png",
+    eyebrow:"Family • The Foundation",
+    title:'FAMILY<br>IS <span>HOME.</span>',
+    lead:"The people behind the mission.",
+    copy:
+      "The memories, milestones and people that make every other path worth taking."
+  },
 
- freeflight:{
-  image:"../../../assets/map/Hero/hero-freeflight.png",
-  eyebrow:"Looking4Lift • Freeflight",
-  title:'BORN<br>TO <span>FLY.</span>',
-  lead:"The sky isn't the limit. It's the destination.",
-  copy:
-   "Training, mountain flights, milestones, community and the pursuit of freeflight."
- }
+  fitness:{
+    image:"../../../assets/map/Hero/hero-fitness.png",
+    eyebrow:"Fitness • Strength For Life",
+    title:'STRENGTH<br>FOR <span>LIFE.</span>',
+    lead:"Stronger body. Sharper mind. Longer journey.",
+    copy:
+      "Build the physical and mental capacity to do more, experience more and live the life you want."
+  },
+
+  freeflight:{
+    image:"../../../assets/map/Hero/hero-freeflight.png",
+    eyebrow:"Looking4Lift • Freeflight",
+    title:'BORN<br>TO <span>FLY.</span>',
+    lead:"The sky isn't the limit. It's the destination.",
+    copy:
+      "Training, mountain flights, milestones, community and the pursuit of freeflight."
+  }
 
 };
 
@@ -978,123 +943,123 @@ const heroStates={
 const journeys=[
 
 {
- category:"freeflight",
- status:"done",
- title:"Dockweiler Flight Training",
- location:"Dockweiler Beach, California",
- lat:33.936,
- lng:-118.440,
- date:"Training",
- story:
- "Coastal hang gliding training and flights at Dockweiler Beach."
+  category:"freeflight",
+  status:"done",
+  title:"Dockweiler Flight Training",
+  location:"Dockweiler Beach, California",
+  lat:33.936,
+  lng:-118.440,
+  date:"Training",
+  story:
+    "Coastal hang gliding training and flights at Dockweiler Beach."
 },
 
 {
- category:"freeflight",
- status:"done",
- title:"Lookout Mountain Flight Park",
- location:"Rising Fawn, Georgia",
- lat:34.834,
- lng:-85.489,
- date:"2025–2026",
- story:
- "Mountain flying, training hills, ridge soaring, thermalling and a major chapter in my freeflight journey."
+  category:"freeflight",
+  status:"done",
+  title:"Lookout Mountain Flight Park",
+  location:"Rising Fawn, Georgia",
+  lat:34.834,
+  lng:-85.489,
+  date:"2025–2026",
+  story:
+    "Mountain flying, training hills, ridge soaring, thermalling and a major chapter in my freeflight journey."
 },
 
 {
- category:"freeflight",
- status:"done",
- title:"100 Flights",
- location:"Lookout Mountain Flight Park",
- lat:34.835,
- lng:-85.487,
- date:"August 2026",
- story:
- "Crossed the 100-flight milestone during Wingman Weekend."
+  category:"freeflight",
+  status:"done",
+  title:"100 Flights",
+  location:"Lookout Mountain Flight Park",
+  lat:34.835,
+  lng:-85.487,
+  date:"August 2026",
+  story:
+    "Crossed the 100-flight milestone during Wingman Weekend."
 },
 
 {
- category:"freeflight",
- status:"done",
- title:"24 Minute Mountain Flight",
- location:"Lookout Mountain Flight Park",
- lat:34.836,
- lng:-85.486,
- date:"August 2026",
- story:
- "Ridge soared and thermalled for approximately 24 minutes — smashing my previous mountain-flight personal best."
+  category:"freeflight",
+  status:"done",
+  title:"24 Minute Mountain Flight",
+  location:"Lookout Mountain Flight Park",
+  lat:34.836,
+  lng:-85.486,
+  date:"August 2026",
+  story:
+    "Ridge soared and thermalled for approximately 24 minutes — smashing my previous mountain-flight personal best."
 },
 
 {
- category:"freeflight",
- status:"progress",
- title:"Looking4Lift",
- location:"United States",
- lat:35.5,
- lng:-92.5,
- date:"Building Now",
- story:
- "Freeflight, hang gliding, VR training, travel and community."
+  category:"freeflight",
+  status:"progress",
+  title:"Looking4Lift",
+  location:"United States",
+  lat:35.5,
+  lng:-92.5,
+  date:"Building Now",
+  story:
+    "Freeflight, hang gliding, VR training, travel and community."
 },
 
 {
- category:"professional",
- status:"progress",
- title:"CC'S Technical Services",
- location:"Leesville, Louisiana",
- lat:31.1435,
- lng:-93.261,
- date:"Building Now",
- story:
- "HVAC, electrical, refrigeration, restaurant equipment and technical services."
+  category:"professional",
+  status:"progress",
+  title:"CC'S Technical Services",
+  location:"Leesville, Louisiana",
+  lat:31.1435,
+  lng:-93.261,
+  date:"Building Now",
+  story:
+    "HVAC, electrical, refrigeration, restaurant equipment and technical services."
 },
 
 {
- category:"creator",
- status:"progress",
- title:"Mission Alignment Protocol",
- location:"Louisiana",
- lat:31.1,
- lng:-92.9,
- date:"Building Now",
- story:
- "Turning goals, experiences, projects and destinations into one living system."
+  category:"creator",
+  status:"progress",
+  title:"Mission Alignment Protocol",
+  location:"Louisiana",
+  lat:31.1,
+  lng:-92.9,
+  date:"Building Now",
+  story:
+    "Turning goals, experiences, projects and destinations into one living system."
 },
 
 {
- category:"fitness",
- status:"progress",
- title:"Strength & Mobility",
- location:"Louisiana",
- lat:31.2,
- lng:-93.2,
- date:"Ongoing",
- story:
- "Controlled strength, mobility, conditioning and lifelong physical capability."
+  category:"fitness",
+  status:"progress",
+  title:"Strength & Mobility",
+  location:"Louisiana",
+  lat:31.2,
+  lng:-93.2,
+  date:"Ongoing",
+  story:
+    "Controlled strength, mobility, conditioning and lifelong physical capability."
 },
 
 {
- category:"travel",
- status:"done",
- title:"Galveston",
- location:"Galveston, Texas",
- lat:29.301,
- lng:-94.797,
- date:"2026",
- story:
- "Travel, fishing, food and another experience added to the M.A.P."
+  category:"travel",
+  status:"done",
+  title:"Galveston",
+  location:"Galveston, Texas",
+  lat:29.301,
+  lng:-94.797,
+  date:"2026",
+  story:
+    "Travel, fishing, food and another experience added to the M.A.P."
 },
 
 {
- category:"travel",
- status:"done",
- title:"Panama City Beach",
- location:"Panama City Beach, Florida",
- lat:30.1766,
- lng:-85.8055,
- date:"2026",
- story:
- "Family travel, Gulf Coast and another destination on the journey."
+  category:"travel",
+  status:"done",
+  title:"Panama City Beach",
+  location:"Panama City Beach, Florida",
+  lat:30.1766,
+  lng:-85.8055,
+  date:"2026",
+  story:
+    "Family travel, Gulf Coast and another destination on the journey."
 }
 
 ];
@@ -1105,26 +1070,26 @@ const journeys=[
 ================================================= */
 
 const statusColors={
- done:"#a855f7",
- progress:"#2f9bff",
- next:"#ffd43b",
- goal:"#ff8c2f"
+  done:"#a855f7",
+  progress:"#2f9bff",
+  next:"#ffd43b",
+  goal:"#ff8c2f"
 };
 
 const statusLabels={
- done:"Experienced",
- progress:"In Progress",
- next:"Next",
- goal:"Goal"
+  done:"Experienced",
+  progress:"In Progress",
+  next:"Next",
+  goal:"Goal"
 };
 
 const categoryLabels={
- family:"Family",
- fitness:"Fitness",
- freeflight:"Freeflight",
- professional:"Professional",
- creator:"Creator",
- travel:"Food & Travel"
+  family:"Family",
+  fitness:"Fitness",
+  freeflight:"Freeflight",
+  professional:"Professional",
+  creator:"Creator",
+  travel:"Food & Travel"
 };
 
 
@@ -1133,16 +1098,16 @@ const categoryLabels={
 ================================================= */
 
 const map=L.map("map",{
- zoomControl:true
+  zoomControl:true
 }).setView([34,-96],4);
 
 
 L.tileLayer(
- "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
- {
-  maxZoom:18,
-  attribution:"&copy; OpenStreetMap contributors"
- }
+  "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+  {
+    maxZoom:18,
+    attribution:"&copy; OpenStreetMap contributors"
+  }
 ).addTo(map);
 
 
@@ -1155,20 +1120,20 @@ let markers=[];
 
 function esc(value){
 
- return String(value||"").replace(
-  /[&<>"']/g,
-  function(c){
+  return String(value||"").replace(
+    /[&<>"']/g,
+    function(c){
 
-   return{
-    "&":"&amp;",
-    "<":"&lt;",
-    ">":"&gt;",
-    '"':"&quot;",
-    "'":"&#39;"
-   }[c];
+      return{
+        "&":"&amp;",
+        "<":"&lt;",
+        ">":"&gt;",
+        '"':"&quot;",
+        "'":"&#39;"
+      }[c];
 
-  }
- );
+    }
+  );
 
 }
 
@@ -1179,43 +1144,43 @@ function esc(value){
 
 function renderHero(filter){
 
- const state=
-  heroStates[filter] ||
-  heroStates.all;
+  const state=
+    heroStates[filter] ||
+    heroStates.all;
 
- const heroBg=
-  document.getElementById("heroBg");
+  const heroBg=
+    document.getElementById("heroBg");
 
- heroBg.style.opacity=".15";
+  heroBg.style.opacity=".15";
 
- setTimeout(function(){
+  setTimeout(function(){
 
-  heroBg.style.backgroundImage=
-   `url("${state.image}")`;
+    heroBg.style.backgroundImage=
+      `url("${state.image}")`;
 
-  heroBg.style.opacity="1";
+    heroBg.style.opacity="1";
 
- },150);
-
-
- document.getElementById(
-  "heroEyebrow"
- ).textContent=
-  state.eyebrow;
+  },150);
 
 
- document.getElementById(
-  "heroTitle"
- ).innerHTML=
-  state.title;
+  document.getElementById(
+    "heroEyebrow"
+  ).textContent=
+    state.eyebrow;
 
 
- document.getElementById(
-  "heroCopy"
- ).innerHTML=
-  `<strong>${esc(state.lead)}</strong>
-   <br><br>
-   ${esc(state.copy)}`;
+  document.getElementById(
+    "heroTitle"
+  ).innerHTML=
+    state.title;
+
+
+  document.getElementById(
+    "heroCopy"
+  ).innerHTML=
+    `<strong>${esc(state.lead)}</strong>
+     <br><br>
+     ${esc(state.copy)}`;
 
 }
 
@@ -1226,215 +1191,209 @@ function renderHero(filter){
 
 function render(filter="all"){
 
- renderHero(filter);
+  renderHero(filter);
 
 
- markers.forEach(
-  marker=>map.removeLayer(marker)
- );
-
- markers=[];
-
-
- const cards=
-  document.getElementById("cards");
-
- cards.innerHTML="";
-
-
- const visible=
-  journeys.filter(item=>
-   filter==="all" ||
-   item.category===filter
+  markers.forEach(
+    marker=>map.removeLayer(marker)
   );
 
+  markers=[];
 
- visible.forEach(item=>{
 
-  const color=
-   statusColors[item.status] ||
-   "#c8d0d9";
+  const cards=
+    document.getElementById("cards");
 
+  cards.innerHTML="";
 
-  const marker=
-   L.circleMarker(
-    [item.lat,item.lng],
-    {
-     radius:9,
-     color:"#07101a",
-     weight:3,
-     fillColor:color,
-     fillOpacity:1
-    }
-   );
 
+  const visible=
+    journeys.filter(item=>
+      filter==="all" ||
+      item.category===filter
+    );
 
-  marker.bindPopup(`
 
-   <div class="popup-category">
-    ${esc(categoryLabels[item.category])}
-   </div>
+  visible.forEach(item=>{
 
-   <div class="popup-title">
-    ${esc(item.title)}
-   </div>
+    const color=
+      statusColors[item.status] ||
+      "#c8d0d9";
 
-   <div class="popup-copy">
 
-    ${esc(item.location)}
+    const marker=
+      L.circleMarker(
+        [item.lat,item.lng],
+        {
+          radius:9,
+          color:"#07101a",
+          weight:3,
+          fillColor:color,
+          fillOpacity:1
+        }
+      );
 
-    <br><br>
 
-    ${esc(item.story)}
+    marker.bindPopup(`
 
-   </div>
+      <div class="popup-category">
+        ${esc(categoryLabels[item.category])}
+      </div>
 
-  `);
+      <div class="popup-title">
+        ${esc(item.title)}
+      </div>
 
+      <div class="popup-copy">
 
-  marker.addTo(map);
+        ${esc(item.location)}
 
-  markers.push(marker);
+        <br><br>
 
+        ${esc(item.story)}
 
-  const card=
-   document.createElement("article");
+      </div>
 
+    `);
 
-  card.className="card";
 
+    marker.addTo(map);
+    markers.push(marker);
 
-  card.innerHTML=`
 
-   <div class="card-top">
+    const card=
+      document.createElement("article");
 
-    <div class="card-category">
-     ${esc(categoryLabels[item.category])}
-    </div>
+    card.className="card";
 
-    <div class="status">
-     ● ${esc(statusLabels[item.status])}
-    </div>
 
-   </div>
+    card.innerHTML=`
 
+      <div class="card-top">
 
-   <h3>
-    ${esc(item.title)}
-   </h3>
+        <div class="card-category">
+          ${esc(categoryLabels[item.category])}
+        </div>
 
+        <div class="status">
+          ● ${esc(statusLabels[item.status])}
+        </div>
 
-   <p>
-    ${esc(item.story)}
-   </p>
+      </div>
 
+      <h3>
+        ${esc(item.title)}
+      </h3>
 
-   <div class="card-date">
+      <p>
+        ${esc(item.story)}
+      </p>
 
-    📍 ${esc(item.location)}
-    •
-    ${esc(item.date)}
+      <div class="card-date">
 
-   </div>
+        📍 ${esc(item.location)}
+        •
+        ${esc(item.date)}
 
-  `;
+      </div>
 
+    `;
 
-  cards.appendChild(card);
 
- });
+    cards.appendChild(card);
 
+  });
 
- /* NO DATA YET */
 
- if(visible.length===0){
+  /* EMPTY CATEGORY */
 
-  cards.innerHTML=`
+  if(visible.length===0){
 
-   <div class="empty-state">
+    cards.innerHTML=`
 
-    <strong>
-     ${esc(categoryLabels[filter] || "This path")}
-    </strong>
+      <div class="empty-state">
 
-    This path is ready.
+        <strong>
+          ${esc(categoryLabels[filter] || "This path")}
+        </strong>
 
-    We're building its real milestones,
-    destinations and goals next.
+        This path is ready.
+        We're building its real milestones,
+        destinations and goals next.
 
-   </div>
+      </div>
 
-  `;
+    `;
 
- }
+  }
 
 
- /* JOURNEY HEADINGS */
+  /* JOURNEY HEADINGS */
 
- if(filter==="all"){
+  if(filter==="all"){
 
-  document.getElementById(
-   "journeyTitle"
-  ).textContent=
-   "One Life. Every Part of It.";
+    document.getElementById(
+      "journeyTitle"
+    ).textContent=
+      "One Life. Every Part of It.";
 
 
-  document.getElementById(
-   "journeyCopy"
-  ).textContent=
-   "Different paths. Same mission.";
+    document.getElementById(
+      "journeyCopy"
+    ).textContent=
+      "Different paths. Same mission.";
 
- }else{
+  }else{
 
-  document.getElementById(
-   "journeyTitle"
-  ).textContent=
-   categoryLabels[filter];
+    document.getElementById(
+      "journeyTitle"
+    ).textContent=
+      categoryLabels[filter];
 
 
-  document.getElementById(
-   "journeyCopy"
-  ).textContent=
-   "Explore this path inside the Mission Alignment Protocol.";
+    document.getElementById(
+      "journeyCopy"
+    ).textContent=
+      "Explore this path inside the Mission Alignment Protocol.";
 
- }
+  }
 
 
- /* MAP CAMERA */
+  /* MAP CAMERA */
 
- if(markers.length>1){
+  if(markers.length>1){
 
-  const group=
-   L.featureGroup(markers);
+    const group=
+      L.featureGroup(markers);
 
 
-  map.fitBounds(
-   group.getBounds(),
-   {
-    padding:[35,35],
-    maxZoom:7
-   }
-  );
+    map.fitBounds(
+      group.getBounds(),
+      {
+        padding:[35,35],
+        maxZoom:7
+      }
+    );
 
- }
+  }
 
- else if(markers.length===1){
+  else if(markers.length===1){
 
-  map.setView(
-   markers[0].getLatLng(),
-   8
-  );
+    map.setView(
+      markers[0].getLatLng(),
+      8
+    );
 
- }
+  }
 
- else{
+  else{
 
-  map.setView(
-   [34,-96],
-   4
-  );
+    map.setView(
+      [34,-96],
+      4
+    );
 
- }
+  }
 
 }
 
@@ -1444,29 +1403,29 @@ function render(filter="all"){
 ================================================= */
 
 document.querySelectorAll(
- ".filter"
+  ".filter"
 ).forEach(button=>{
 
- button.addEventListener(
-  "click",
-  function(){
+  button.addEventListener(
+    "click",
+    function(){
 
-   document.querySelectorAll(
-    ".filter"
-   ).forEach(
-    b=>b.classList.remove("active")
-   );
-
-
-   this.classList.add("active");
+      document.querySelectorAll(
+        ".filter"
+      ).forEach(
+        b=>b.classList.remove("active")
+      );
 
 
-   render(
-    this.dataset.filter
-   );
+      this.classList.add("active");
 
-  }
- );
+
+      render(
+        this.dataset.filter
+      );
+
+    }
+  );
 
 });
 
