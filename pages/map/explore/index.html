@@ -38,28 +38,100 @@ body{
 .shell{
   max-width:1100px;
   margin:auto;
+  overflow:hidden;
 }
 
 /* =========================
-   HEADER
+   CINEMATIC HERO
 ========================= */
 
 .hero{
-  padding:34px 22px 28px;
-  background:
-    radial-gradient(circle at top right,#10334a 0,transparent 45%),
-    linear-gradient(180deg,#0b1d2b,#050a11);
+  position:relative;
+  min-height:760px;
+  padding:28px 22px 54px;
+  overflow:hidden;
+  isolation:isolate;
+  display:flex;
+  flex-direction:column;
   border-bottom:1px solid var(--line);
+  background:#03060b;
+}
+
+/* HERO ART */
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-3;
+
+  background-image:
+    url("../../../assets/map/Hero/Map-hero-freeflight.png");
+
+  background-size:cover;
+  background-position:66% 35%;
+  background-repeat:no-repeat;
+
+  transform:scale(1.015);
+}
+
+/* DARK CINEMATIC OVERLAY
+   Hides the text baked into the source artwork
+   while preserving the glider / mountain / sunset.
+*/
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3,6,11,.99) 0%,
+      rgba(3,6,11,.97) 30%,
+      rgba(3,6,11,.88) 48%,
+      rgba(3,6,11,.42) 72%,
+      rgba(3,6,11,.12) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3,6,11,.20) 0%,
+      rgba(3,6,11,.10) 45%,
+      rgba(3,6,11,.42) 72%,
+      #03060b 100%
+    );
+}
+
+/* subtle cyan atmosphere */
+
+.hero-glow{
+  position:absolute;
+  width:420px;
+  height:420px;
+  right:-210px;
+  top:80px;
+  z-index:-1;
+  pointer-events:none;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(88,195,255,.18),
+      rgba(88,195,255,0) 70%
+    );
+
+  filter:blur(10px);
 }
 
 .brand{
   display:flex;
   align-items:center;
   gap:14px;
-  margin-bottom:48px;
+  position:relative;
+  z-index:2;
 }
-
-/* NEW M.A.P. ICON */
 
 .logo{
   width:58px;
@@ -67,10 +139,13 @@ body{
   flex:0 0 58px;
   border-radius:15px;
   overflow:hidden;
+
   background:#06111c;
-  border:1px solid rgba(88,195,255,.7);
+
+  border:1px solid rgba(88,195,255,.75);
+
   box-shadow:
-    0 0 16px rgba(88,195,255,.18),
+    0 0 18px rgba(88,195,255,.28),
     inset 0 0 12px rgba(88,195,255,.08);
 }
 
@@ -82,42 +157,110 @@ body{
 }
 
 .brand strong{
-  font-size:17px;
-  letter-spacing:.12em;
-  line-height:1.5;
+  font-size:15px;
+  letter-spacing:.14em;
+  line-height:1.45;
+  text-shadow:0 2px 12px #000;
+}
+
+.hero-content{
+  margin-top:auto;
+  position:relative;
+  z-index:2;
+  max-width:650px;
+  padding-top:170px;
 }
 
 .eyebrow{
+  display:flex;
+  align-items:center;
+  gap:10px;
+
   color:var(--blue);
+
   font-size:12px;
   letter-spacing:.2em;
   font-weight:800;
   text-transform:uppercase;
+
+  text-shadow:0 2px 12px #000;
+}
+
+.eyebrow::before{
+  content:"";
+  display:block;
+  width:34px;
+  height:2px;
+  background:var(--blue);
+
+  box-shadow:
+    0 0 10px rgba(88,195,255,.8);
 }
 
 h1{
-  font-size:clamp(42px,11vw,76px);
-  line-height:.95;
-  margin:14px 0 22px;
+  font-size:clamp(50px,13vw,82px);
+  line-height:.88;
+  letter-spacing:-.035em;
+
+  margin:17px 0 24px;
+
+  text-shadow:
+    0 4px 25px rgba(0,0,0,.95),
+    0 1px 2px #000;
 }
 
 h1 span{
   color:var(--blue);
+
+  text-shadow:
+    0 0 25px rgba(88,195,255,.25),
+    0 4px 25px #000;
+}
+
+.hero-rule{
+  width:78px;
+  height:3px;
+  margin:0 0 22px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--blue),
+      rgba(88,195,255,0)
+    );
+
+  box-shadow:
+    0 0 12px rgba(88,195,255,.45);
 }
 
 .hero-copy{
-  color:var(--muted);
-  font-size:19px;
-  line-height:1.6;
-  max-width:680px;
+  color:#c3cfda;
+  font-size:18px;
+  line-height:1.55;
+  max-width:590px;
+
+  text-shadow:
+    0 2px 12px #000;
+}
+
+.hero-copy strong{
+  color:#fff;
 }
 
 .motto{
-  margin-top:22px;
+  margin-top:24px;
+
   color:#fff;
   font-size:18px;
   font-weight:800;
   line-height:1.5;
+
+  text-shadow:
+    0 2px 12px #000;
+}
+
+.motto span{
+  color:var(--blue);
 }
 
 /* =========================
@@ -125,9 +268,19 @@ h1 span{
 ========================= */
 
 .filters{
+  position:relative;
+  z-index:5;
+
   padding:22px 16px;
+
   border-bottom:1px solid var(--line);
-  background:#070c13;
+
+  background:
+    linear-gradient(
+      180deg,
+      #050a10,
+      #070c13
+    );
 }
 
 .filter-title{
@@ -148,19 +301,38 @@ h1 span{
 
 .filter{
   flex:none;
+
   border:1px solid var(--line);
-  background:#0d1723;
+
+  background:
+    rgba(13,23,35,.9);
+
   color:white;
+
   padding:11px 15px;
+
   border-radius:30px;
+
   font-weight:700;
   cursor:pointer;
+
+  transition:
+    background .2s ease,
+    border-color .2s ease,
+    transform .2s ease;
+}
+
+.filter:hover{
+  border-color:var(--blue);
 }
 
 .filter.active{
   background:var(--blue);
   color:#04101a;
   border-color:var(--blue);
+
+  box-shadow:
+    0 0 20px rgba(88,195,255,.22);
 }
 
 /* =========================
@@ -207,8 +379,10 @@ h1 span{
 
 .legend{
   padding:20px;
+
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
+
   background:#080e16;
 }
 
@@ -216,6 +390,7 @@ h1 span{
   display:flex;
   flex-wrap:wrap;
   gap:16px;
+
   color:var(--muted);
   font-size:13px;
 }
@@ -223,8 +398,11 @@ h1 span{
 .dot{
   width:10px;
   height:10px;
+
   display:inline-block;
+
   border-radius:50%;
+
   margin-right:5px;
 }
 
@@ -238,6 +416,7 @@ h1 span{
 
 .section-label{
   color:var(--blue);
+
   font-size:13px;
   letter-spacing:.2em;
   font-weight:800;
@@ -245,13 +424,16 @@ h1 span{
 
 .journey h2{
   font-size:clamp(34px,8vw,55px);
+
   margin:12px 0;
 }
 
 .section-copy{
   color:var(--muted);
+
   font-size:18px;
   line-height:1.6;
+
   margin-bottom:30px;
 }
 
@@ -262,9 +444,26 @@ h1 span{
 
 .card{
   border:1px solid var(--line);
+
   border-radius:24px;
+
   padding:23px;
-  background:linear-gradient(145deg,#0d1824,#080f18);
+
+  background:
+    linear-gradient(
+      145deg,
+      #0d1824,
+      #080f18
+    );
+
+  transition:
+    transform .2s ease,
+    border-color .2s ease;
+}
+
+.card:hover{
+  transform:translateY(-2px);
+  border-color:#31506b;
 }
 
 .card-top{
@@ -275,9 +474,12 @@ h1 span{
 
 .card-category{
   color:var(--blue);
+
   font-size:11px;
   font-weight:800;
+
   letter-spacing:.15em;
+
   text-transform:uppercase;
 }
 
@@ -299,7 +501,9 @@ h1 span{
 
 .card-date{
   margin-top:16px;
+
   font-size:12px;
+
   color:#718298;
 }
 
@@ -309,52 +513,162 @@ h1 span{
 
 .cta{
   text-align:center;
+
   padding:65px 22px;
+
+  background:
+    radial-gradient(
+      circle at center bottom,
+      rgba(38,142,208,.12),
+      transparent 55%
+    );
 }
 
 .cta h2{
   font-size:clamp(34px,8vw,55px);
+
   margin:10px 0;
 }
 
 .cta p{
   color:var(--muted);
+
   font-size:18px;
   line-height:1.6;
 }
 
 .cta-button{
   display:inline-block;
+
   margin-top:20px;
+
   padding:17px 27px;
+
   border-radius:16px;
-  background:linear-gradient(135deg,#178ee0,#58c3ff);
+
+  background:
+    linear-gradient(
+      135deg,
+      #178ee0,
+      #58c3ff
+    );
+
   color:white;
+
   text-decoration:none;
+
   font-weight:800;
   font-size:18px;
-  box-shadow:0 10px 35px #0c7db755;
+
+  box-shadow:
+    0 10px 35px #0c7db755;
 }
 
 footer{
   text-align:center;
+
   padding:45px 20px 60px;
+
   color:#718093;
+
   border-top:1px solid var(--line);
 }
 
 footer strong{
   display:block;
+
   color:#dce4ed;
+
   letter-spacing:.14em;
   line-height:1.7;
+
   margin-bottom:12px;
 }
 
+/* =========================
+   DESKTOP
+========================= */
+
 @media(min-width:750px){
+
+  .hero{
+    min-height:760px;
+    padding:36px 48px 70px;
+  }
+
+  .hero::before{
+    background-position:72% 35%;
+  }
+
+  .hero::after{
+    background:
+      linear-gradient(
+        90deg,
+        rgba(3,6,11,.99) 0%,
+        rgba(3,6,11,.97) 25%,
+        rgba(3,6,11,.88) 43%,
+        rgba(3,6,11,.38) 66%,
+        rgba(3,6,11,.06) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(3,6,11,.12),
+        rgba(3,6,11,.08) 55%,
+        #03060b 100%
+      );
+  }
+
+  .hero-content{
+    padding-top:180px;
+  }
+
+  .brand strong{
+    font-size:17px;
+  }
 
   .cards{
     grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:500px){
+
+  .hero{
+    min-height:720px;
+  }
+
+  .hero::before{
+    background-position:65% 30%;
+  }
+
+  .hero::after{
+    background:
+      linear-gradient(
+        90deg,
+        rgba(3,6,11,.98) 0%,
+        rgba(3,6,11,.91) 44%,
+        rgba(3,6,11,.42) 76%,
+        rgba(3,6,11,.12) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(3,6,11,.12),
+        rgba(3,6,11,.18) 52%,
+        #03060b 100%
+      );
+  }
+
+  .hero-content{
+    padding-top:155px;
+  }
+
+  .hero-copy{
+    font-size:17px;
   }
 
 }
@@ -368,12 +682,16 @@ footer strong{
 
 <header class="hero">
 
+<div class="hero-glow"></div>
+
 <div class="brand">
 
   <div class="logo">
+
     <img
       src="../../../assets/map/branding/map-logo-icon.png"
       alt="M.A.P. Mission Alignment Protocol">
+
   </div>
 
   <strong>
@@ -382,6 +700,9 @@ footer strong{
   </strong>
 
 </div>
+
+
+<div class="hero-content">
 
 <div class="eyebrow">
 Christopher's Journey
@@ -392,9 +713,11 @@ EXPLORE<br>
 MY <span>M.A.P.</span>
 </h1>
 
+<div class="hero-rule"></div>
+
 <div class="hero-copy">
 
-One life. Many paths. One mission.
+<strong>One life. Many paths. One mission.</strong>
 
 <br><br>
 
@@ -406,7 +729,9 @@ what I'm building and where I'm going next.
 <div class="motto">
 
 Don't just dream about it.<br>
-M.A.P. it out. Get it Done ✔️
+<span>M.A.P. it out.</span> Get it Done ✔️
+
+</div>
 
 </div>
 
