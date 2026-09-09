@@ -1,1 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
+<title>Freeflight | Looking4Lift • Christopher's M.A.P.</title>
+
+<meta name="description"
+content="From my first hang gliding lessons at Dockweiler to mountain flying, soaring, thermalling and Looking4Lift. Explore my Freeflight journey.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Freeflight | Looking4Lift • Christopher's M.A.P.">
+<meta property="og:description" content="From my first hang gliding lessons at Dockweiler to mountain flying, soaring, thermalling and Looking4Lift. Explore my Freeflight journey.">
+<meta property="og:url" content="https://champagne247.github.io/Champagne247/pages/map/explore/freeflight/">
+<meta property="og:image" content="https://champagne247.github.io/Champagne247/assets/map/Hero/hero-freeflight.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Freeflight | Looking4Lift • Christopher's M.A.P.">
+<meta name="twitter:description" content="Training, mountain flights, milestones, community and the pursuit of freeflight.">
+<meta name="twitter:image" content="https://champagne247.github.io/Champagne247/assets/map/Hero/hero-freeflight.png">
+
+<style>
+html,body{
+  margin:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  background:#03060b;
+}
+
+iframe{
+  display:block;
+  width:100%;
+  height:100%;
+  border:0;
+}
+</style>
+</head>
+
+<body>
+
+<iframe
+id="mapFrame"
+src="../"
+title="Christopher Champagne Freeflight M.A.P.">
+</iframe>
+
+<script>
+const frame=document.getElementById("mapFrame");
+
+frame.addEventListener("load",function(){
+
+  try{
+
+    const button=
+      frame.contentDocument.querySelector(
+        '[data-filter="freeflight"]'
+      );
+
+    if(button){
+      button.click();
+    }
+
+  }catch(error){
+    console.error(error);
+  }
+
+});
+</script>
+
+</body>
+</html>
