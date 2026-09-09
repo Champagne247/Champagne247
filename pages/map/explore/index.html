@@ -36,9 +36,11 @@ body{
 }
 
 .shell{
-  max-width:1100px;
+  width:100%;
+  max-width:1500px;
   margin:auto;
   overflow:hidden;
+  background:var(--bg);
 }
 
 /* =========================
@@ -47,8 +49,8 @@ body{
 
 .hero{
   position:relative;
-  min-height:760px;
-  padding:28px 22px 54px;
+  min-height:780px;
+  padding:28px 28px 58px;
   overflow:hidden;
   isolation:isolate;
   display:flex;
@@ -57,86 +59,115 @@ body{
   background:#03060b;
 }
 
-/* HERO ART */
-
 .hero::before{
   content:"";
   position:absolute;
   inset:0;
-  z-index:-3;
+  z-index:-4;
 
   background-image:
     url("../../../assets/map/Hero/Map-hero-freeflight.png");
 
   background-size:cover;
-  background-position:66% 35%;
+  background-position:68% 33%;
   background-repeat:no-repeat;
 
-  transform:scale(1.015);
+  transform:scale(1.012);
 }
 
-/* DARK CINEMATIC OVERLAY
-   Hides the text baked into the source artwork
-   while preserving the glider / mountain / sunset.
-*/
+/* Overall cinematic grading */
 
 .hero::after{
   content:"";
   position:absolute;
   inset:0;
-  z-index:-2;
+  z-index:-3;
 
   background:
     linear-gradient(
       90deg,
-      rgba(3,6,11,.99) 0%,
-      rgba(3,6,11,.97) 30%,
-      rgba(3,6,11,.88) 48%,
-      rgba(3,6,11,.42) 72%,
-      rgba(3,6,11,.12) 100%
+      rgba(3,6,11,.91) 0%,
+      rgba(3,6,11,.78) 28%,
+      rgba(3,6,11,.44) 52%,
+      rgba(3,6,11,.08) 82%
     ),
     linear-gradient(
       180deg,
-      rgba(3,6,11,.20) 0%,
-      rgba(3,6,11,.10) 45%,
-      rgba(3,6,11,.42) 72%,
-      #03060b 100%
+      rgba(3,6,11,.10) 0%,
+      rgba(3,6,11,.04) 55%,
+      rgba(3,6,11,.88) 100%
     );
 }
 
-/* subtle cyan atmosphere */
+/* Localized left mask:
+   specifically suppresses baked-in artwork text */
+
+.hero-mask{
+  position:absolute;
+  z-index:-2;
+  left:0;
+  top:105px;
+  bottom:0;
+  width:min(720px,68%);
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3,6,11,.97) 0%,
+      rgba(3,6,11,.94) 42%,
+      rgba(3,6,11,.80) 67%,
+      rgba(3,6,11,0) 100%
+    );
+
+  filter:blur(.2px);
+}
 
 .hero-glow{
   position:absolute;
-  width:420px;
-  height:420px;
-  right:-210px;
-  top:80px;
+  width:500px;
+  height:500px;
+  right:-230px;
+  top:70px;
   z-index:-1;
   pointer-events:none;
 
   background:
     radial-gradient(
       circle,
-      rgba(88,195,255,.18),
+      rgba(88,195,255,.15),
       rgba(88,195,255,0) 70%
     );
+}
 
-  filter:blur(10px);
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar{
+  position:relative;
+  z-index:10;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
 }
 
 .brand{
   display:flex;
   align-items:center;
   gap:14px;
-  position:relative;
-  z-index:2;
+
+  color:#fff;
+  text-decoration:none;
 }
 
 .logo{
   width:58px;
   height:58px;
   flex:0 0 58px;
+
   border-radius:15px;
   overflow:hidden;
 
@@ -163,12 +194,64 @@ body{
   text-shadow:0 2px 12px #000;
 }
 
-.hero-content{
-  margin-top:auto;
+.nav{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.nav a{
   position:relative;
-  z-index:2;
-  max-width:650px;
-  padding-top:170px;
+
+  padding:10px 12px;
+
+  color:#cbd5df;
+  text-decoration:none;
+
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.13em;
+
+  transition:
+    color .2s ease,
+    background .2s ease;
+}
+
+.nav a:hover{
+  color:#fff;
+}
+
+.nav a.active{
+  color:var(--blue);
+}
+
+.nav a.active::after{
+  content:"";
+  position:absolute;
+  left:12px;
+  right:12px;
+  bottom:2px;
+  height:2px;
+
+  background:var(--blue);
+
+  box-shadow:
+    0 0 8px rgba(88,195,255,.75);
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content{
+  position:relative;
+  z-index:3;
+
+  margin-top:auto;
+
+  width:min(640px,100%);
+
+  padding-top:160px;
 }
 
 .eyebrow{
@@ -188,9 +271,10 @@ body{
 
 .eyebrow::before{
   content:"";
-  display:block;
   width:34px;
   height:2px;
+  flex:none;
+
   background:var(--blue);
 
   box-shadow:
@@ -198,9 +282,9 @@ body{
 }
 
 h1{
-  font-size:clamp(50px,13vw,82px);
+  font-size:clamp(50px,8vw,88px);
   line-height:.88;
-  letter-spacing:-.035em;
+  letter-spacing:-.04em;
 
   margin:17px 0 24px;
 
@@ -239,8 +323,7 @@ h1 span{
   line-height:1.55;
   max-width:590px;
 
-  text-shadow:
-    0 2px 12px #000;
+  text-shadow:0 2px 12px #000;
 }
 
 .hero-copy strong{
@@ -251,12 +334,12 @@ h1 span{
   margin-top:24px;
 
   color:#fff;
+
   font-size:18px;
   font-weight:800;
   line-height:1.5;
 
-  text-shadow:
-    0 2px 12px #000;
+  text-shadow:0 2px 12px #000;
 }
 
 .motto span{
@@ -271,14 +354,14 @@ h1 span{
   position:relative;
   z-index:5;
 
-  padding:22px 16px;
+  padding:22px 28px;
 
   border-bottom:1px solid var(--line);
 
   background:
     linear-gradient(
       180deg,
-      #050a10,
+      #07101a,
       #070c13
     );
 }
@@ -304,10 +387,9 @@ h1 span{
 
   border:1px solid var(--line);
 
-  background:
-    rgba(13,23,35,.9);
+  background:rgba(13,23,35,.94);
 
-  color:white;
+  color:#fff;
 
   padding:11px 15px;
 
@@ -319,11 +401,13 @@ h1 span{
   transition:
     background .2s ease,
     border-color .2s ease,
-    transform .2s ease;
+    transform .2s ease,
+    box-shadow .2s ease;
 }
 
 .filter:hover{
   border-color:var(--blue);
+  transform:translateY(-1px);
 }
 
 .filter.active{
@@ -344,8 +428,8 @@ h1 span{
 }
 
 #map{
-  height:58vh;
-  min-height:450px;
+  height:62vh;
+  min-height:480px;
 }
 
 .leaflet-popup-content-wrapper,
@@ -378,7 +462,7 @@ h1 span{
 ========================= */
 
 .legend{
-  padding:20px;
+  padding:20px 28px;
 
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
@@ -411,7 +495,9 @@ h1 span{
 ========================= */
 
 .journey{
-  padding:55px 20px;
+  max-width:1200px;
+  margin:auto;
+  padding:65px 28px;
 }
 
 .section-label{
@@ -423,8 +509,7 @@ h1 span{
 }
 
 .journey h2{
-  font-size:clamp(34px,8vw,55px);
-
+  font-size:clamp(34px,6vw,55px);
   margin:12px 0;
 }
 
@@ -456,14 +541,20 @@ h1 span{
       #080f18
     );
 
+  cursor:pointer;
+
   transition:
     transform .2s ease,
-    border-color .2s ease;
+    border-color .2s ease,
+    box-shadow .2s ease;
 }
 
 .card:hover{
-  transform:translateY(-2px);
-  border-color:#31506b;
+  transform:translateY(-3px);
+  border-color:#315d7d;
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,.22);
 }
 
 .card-top{
@@ -501,9 +592,7 @@ h1 span{
 
 .card-date{
   margin-top:16px;
-
   font-size:12px;
-
   color:#718298;
 }
 
@@ -514,25 +603,23 @@ h1 span{
 .cta{
   text-align:center;
 
-  padding:65px 22px;
+  padding:75px 22px;
 
   background:
     radial-gradient(
       circle at center bottom,
-      rgba(38,142,208,.12),
+      rgba(38,142,208,.13),
       transparent 55%
     );
 }
 
 .cta h2{
-  font-size:clamp(34px,8vw,55px);
-
+  font-size:clamp(34px,6vw,55px);
   margin:10px 0;
 }
 
 .cta p{
   color:var(--muted);
-
   font-size:18px;
   line-height:1.6;
 }
@@ -553,7 +640,7 @@ h1 span{
       #58c3ff
     );
 
-  color:white;
+  color:#fff;
 
   text-decoration:none;
 
@@ -562,6 +649,17 @@ h1 span{
 
   box-shadow:
     0 10px 35px #0c7db755;
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.cta-button:hover{
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 14px 40px #0c7db777;
 }
 
 footer{
@@ -589,41 +687,38 @@ footer strong{
    DESKTOP
 ========================= */
 
-@media(min-width:750px){
+@media(min-width:900px){
 
   .hero{
-    min-height:760px;
-    padding:36px 48px 70px;
+    min-height:820px;
+    padding:34px 60px 72px;
   }
 
   .hero::before{
-    background-position:72% 35%;
+    background-position:72% 34%;
   }
 
-  .hero::after{
-    background:
-      linear-gradient(
-        90deg,
-        rgba(3,6,11,.99) 0%,
-        rgba(3,6,11,.97) 25%,
-        rgba(3,6,11,.88) 43%,
-        rgba(3,6,11,.38) 66%,
-        rgba(3,6,11,.06) 100%
-      ),
-      linear-gradient(
-        180deg,
-        rgba(3,6,11,.12),
-        rgba(3,6,11,.08) 55%,
-        #03060b 100%
-      );
+  .hero-mask{
+    width:59%;
   }
 
   .hero-content{
+    width:650px;
     padding-top:180px;
   }
 
   .brand strong{
     font-size:17px;
+  }
+
+  .filters{
+    padding-left:60px;
+    padding-right:60px;
+  }
+
+  .legend{
+    padding-left:60px;
+    padding-right:60px;
   }
 
   .cards{
@@ -633,13 +728,14 @@ footer strong{
 }
 
 /* =========================
-   SMALL MOBILE
+   MOBILE
 ========================= */
 
-@media(max-width:500px){
+@media(max-width:700px){
 
   .hero{
     min-height:720px;
+    padding:28px 20px 48px;
   }
 
   .hero::before{
@@ -650,25 +746,100 @@ footer strong{
     background:
       linear-gradient(
         90deg,
-        rgba(3,6,11,.98) 0%,
-        rgba(3,6,11,.91) 44%,
-        rgba(3,6,11,.42) 76%,
-        rgba(3,6,11,.12) 100%
+        rgba(3,6,11,.86) 0%,
+        rgba(3,6,11,.67) 45%,
+        rgba(3,6,11,.16) 100%
       ),
       linear-gradient(
         180deg,
-        rgba(3,6,11,.12),
-        rgba(3,6,11,.18) 52%,
+        rgba(3,6,11,.05) 0%,
+        rgba(3,6,11,.10) 48%,
         #03060b 100%
       );
   }
 
+  .hero-mask{
+    top:120px;
+    width:74%;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(3,6,11,.90),
+        rgba(3,6,11,.72) 55%,
+        rgba(3,6,11,0)
+      );
+  }
+
   .hero-content{
-    padding-top:155px;
+    padding-top:145px;
   }
 
   .hero-copy{
     font-size:17px;
+  }
+
+  .brand strong{
+    font-size:14px;
+  }
+
+  .nav{
+    position:absolute;
+    left:0;
+    right:0;
+    top:78px;
+
+    justify-content:flex-start;
+
+    overflow-x:auto;
+
+    padding-top:8px;
+
+    border-top:
+      1px solid rgba(255,255,255,.08);
+
+    scrollbar-width:none;
+  }
+
+  .nav::-webkit-scrollbar{
+    display:none;
+  }
+
+  .nav a{
+    flex:none;
+    padding:10px 9px;
+    font-size:10px;
+  }
+
+  .filters{
+    padding-left:16px;
+    padding-right:16px;
+  }
+
+  #map{
+    min-height:450px;
+  }
+
+}
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media(max-width:390px){
+
+  .logo{
+    width:52px;
+    height:52px;
+    flex-basis:52px;
+  }
+
+  .brand strong{
+    font-size:12px;
+  }
+
+  h1{
+    font-size:48px;
   }
 
 }
@@ -680,11 +851,14 @@ footer strong{
 
 <div class="shell">
 
-<header class="hero">
+<header class="hero" id="top">
 
+<div class="hero-mask"></div>
 <div class="hero-glow"></div>
 
-<div class="brand">
+<div class="topbar">
+
+<a class="brand" href="../../../">
 
   <div class="logo">
 
@@ -698,6 +872,29 @@ footer strong{
     MISSION ALIGNMENT<br>
     PROTOCOL
   </strong>
+
+</a>
+
+
+<nav class="nav" aria-label="M.A.P. navigation">
+
+<a href="../../../">
+HOME
+</a>
+
+<a class="active" href="./">
+EXPLORE
+</a>
+
+<a href="../create/">
+CREATE
+</a>
+
+<a href="../../../about.html">
+ABOUT
+</a>
+
+</nav>
 
 </div>
 
@@ -738,7 +935,7 @@ Don't just dream about it.<br>
 </header>
 
 
-<section class="filters">
+<section class="filters" id="paths">
 
 <div class="filter-title">
 EXPLORE THE PATHS
@@ -824,10 +1021,8 @@ One Life. Every Part of It.
 </h2>
 
 <div class="section-copy" id="journeyCopy">
-
 Every pin represents an experience, milestone, project,
 mission or destination.
-
 </div>
 
 <div class="cards" id="cards"></div>
@@ -879,20 +1074,6 @@ Christopher Champagne
 /*
 =================================================
 YOUR M.A.P. DATA
-
-category:
-family
-fitness
-freeflight
-professional
-creator
-travel
-
-status:
-done
-progress
-next
-goal
 =================================================
 */
 
@@ -1010,10 +1191,6 @@ const journeys=[
 
 ];
 
-
-/* =========================
-   COLORS / LABELS
-========================= */
 
 const statusColors={
  done:"#a855f7",
@@ -1139,6 +1316,11 @@ function render(filter="all"){
   const card=document.createElement("article");
 
   card.className="card";
+  card.tabIndex=0;
+  card.setAttribute(
+    "aria-label",
+    "Show " + item.title + " on the map"
+  );
 
   card.innerHTML=`
 
@@ -1167,6 +1349,36 @@ function render(filter="all"){
    </div>
 
   `;
+
+  function focusMarker(){
+
+    map.setView(
+      marker.getLatLng(),
+      Math.max(map.getZoom(),7),
+      {animate:true}
+    );
+
+    marker.openPopup();
+
+    document
+      .querySelector(".map-section")
+      .scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+      });
+
+  }
+
+  card.addEventListener("click",focusMarker);
+
+  card.addEventListener("keydown",event=>{
+
+    if(event.key==="Enter" || event.key===" "){
+      event.preventDefault();
+      focusMarker();
+    }
+
+  });
 
   cards.appendChild(card);
 
