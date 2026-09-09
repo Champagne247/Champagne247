@@ -47,7 +47,7 @@ body{
 .hero{
   position:relative;
   min-height:720px;
-  padding:32px 22px 54px;
+  padding:28px 22px 54px;
   overflow:hidden;
   isolation:isolate;
   display:flex;
@@ -55,8 +55,6 @@ body{
   border-bottom:1px solid var(--line);
   background:#03070d;
 }
-
-/* CLEAN FREEFLIGHT IMAGE */
 
 .hero::before{
   content:"";
@@ -77,8 +75,6 @@ body{
 
   transform:scale(1.01);
 }
-
-/* READABILITY OVERLAY */
 
 .hero::after{
   content:"";
@@ -102,12 +98,26 @@ body{
     );
 }
 
-.brand{
+/* =========================
+   REAL NAVIGATION
+========================= */
+
+.topbar{
   position:relative;
-  z-index:2;
+  z-index:10;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:22px;
+}
+
+.brand-link{
   display:flex;
   align-items:center;
   gap:14px;
+  color:#fff;
+  text-decoration:none;
+  flex:none;
 }
 
 .logo{
@@ -122,6 +132,19 @@ body{
   box-shadow:
     0 0 18px rgba(88,195,255,.24),
     inset 0 0 12px rgba(88,195,255,.08);
+
+  transition:
+    transform .2s ease,
+    border-color .2s ease,
+    box-shadow .2s ease;
+}
+
+.brand-link:hover .logo{
+  transform:translateY(-2px) scale(1.03);
+  border-color:#8dd7ff;
+  box-shadow:
+    0 0 26px rgba(88,195,255,.42),
+    inset 0 0 12px rgba(88,195,255,.12);
 }
 
 .logo img{
@@ -131,12 +154,64 @@ body{
   object-fit:cover;
 }
 
-.brand strong{
+.brand-name{
   font-size:17px;
   letter-spacing:.12em;
   line-height:1.5;
+  font-weight:800;
   text-shadow:0 3px 15px #000;
 }
+
+.main-nav{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:6px;
+}
+
+.main-nav a{
+  position:relative;
+  display:block;
+  padding:11px 13px;
+
+  color:#d8e2ec;
+  text-decoration:none;
+
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.13em;
+
+  border-radius:10px;
+
+  transition:
+    color .2s ease,
+    background .2s ease;
+}
+
+.main-nav a:hover{
+  color:#fff;
+  background:rgba(88,195,255,.10);
+}
+
+.main-nav a.active{
+  color:var(--blue);
+}
+
+.main-nav a.active::after{
+  content:"";
+  position:absolute;
+  left:13px;
+  right:13px;
+  bottom:4px;
+  height:2px;
+  border-radius:2px;
+  background:var(--blue);
+  box-shadow:0 0 10px var(--blue);
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
 
 .hero-content{
   margin-top:auto;
@@ -470,7 +545,7 @@ footer strong{
 
   .hero{
     min-height:760px;
-    padding:28px 22px 48px;
+    padding:22px 18px 48px;
   }
 
   .hero::before{
@@ -494,12 +569,54 @@ footer strong{
       );
   }
 
-  .brand strong{
-    font-size:16px;
+  .topbar{
+    display:block;
+  }
+
+  .brand-link{
+    width:max-content;
+  }
+
+  .brand-name{
+    font-size:14px;
+    letter-spacing:.1em;
+  }
+
+  .logo{
+    width:52px;
+    height:52px;
+    flex-basis:52px;
+  }
+
+  .main-nav{
+    margin-top:18px;
+    width:100%;
+    justify-content:space-between;
+
+    border-top:1px solid rgba(88,195,255,.18);
+    border-bottom:1px solid rgba(88,195,255,.18);
+
+    background:rgba(3,9,15,.42);
+    backdrop-filter:blur(6px);
+  }
+
+  .main-nav a{
+    flex:1;
+    text-align:center;
+    padding:12px 4px;
+    font-size:10px;
+    letter-spacing:.08em;
+    border-radius:0;
+  }
+
+  .main-nav a.active::after{
+    left:20%;
+    right:20%;
+    bottom:3px;
   }
 
   .hero-content{
-    padding-top:280px;
+    padding-top:220px;
   }
 
   .hero-copy{
@@ -543,54 +660,80 @@ footer strong{
 
 <header class="hero" id="hero">
 
-<div class="brand">
+  <!-- REAL FUNCTIONAL HEADER -->
+  <div class="topbar">
 
-  <div class="logo">
-    <img
-      src="../../../assets/map/branding/map-logo-icon.png"
-      alt="M.A.P. Mission Alignment Protocol">
-  </div>
+    <a href="../" class="brand-link" aria-label="M.A.P. Home">
 
-  <strong>
-    MISSION ALIGNMENT<br>
-    PROTOCOL
-  </strong>
+      <div class="logo">
+        <img
+          src="../../../assets/map/branding/map-logo-icon.png"
+          alt="M.A.P.">
+      </div>
 
-</div>
+      <div class="brand-name">
+        MISSION ALIGNMENT<br>
+        PROTOCOL
+      </div>
 
-<div class="hero-content">
+    </a>
 
-  <div class="eyebrow">
-    Christopher's Journey
-  </div>
+    <nav class="main-nav" aria-label="Main navigation">
 
-  <h1>
-    EXPLORE<br>
-    MY <span>M.A.P.</span>
-  </h1>
+      <a href="../">
+        HOME
+      </a>
 
-  <div class="hero-copy">
+      <a href="./" class="active" aria-current="page">
+        EXPLORE
+      </a>
 
-    <strong>
-      One life. Many paths. One mission.
-    </strong>
+      <a href="../create/">
+        CREATE
+      </a>
 
-    <br><br>
+      <a href="../about/">
+        ABOUT
+      </a>
 
-    A living map of where I've been,
-    what I've accomplished,
-    what I'm building and where I'm going next.
-
-  </div>
-
-  <div class="motto">
-
-    Don't just dream about it.<br>
-    <span>M.A.P. it out.</span> Get it Done ✔️
+    </nav>
 
   </div>
 
-</div>
+
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      Christopher's Journey
+    </div>
+
+    <h1>
+      EXPLORE<br>
+      MY <span>M.A.P.</span>
+    </h1>
+
+    <div class="hero-copy">
+
+      <strong>
+        One life. Many paths. One mission.
+      </strong>
+
+      <br><br>
+
+      A living map of where I've been,
+      what I've accomplished,
+      what I'm building and where I'm going next.
+
+    </div>
+
+    <div class="motto">
+
+      Don't just dream about it.<br>
+      <span>M.A.P. it out.</span> Get it Done ✔️
+
+    </div>
+
+  </div>
 
 </header>
 
