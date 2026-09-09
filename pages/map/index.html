@@ -1,114 +1,730 @@
-
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Create Your Own M.A.P. | Mission Alignment Protocol</title>
-<meta name="description" content="Create your own Mission Alignment Protocol. Map where you've been, where you're going, and what's next.">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<meta name="theme-color" content="#05070d">
+
+<title>M.A.P. | Mission Alignment Protocol</title>
+
+<meta name="description" content="Mission Alignment Protocol — map your goals, passions, projects and experiences. Don't just dream about it. M.A.P. it out. Get it Done.">
+
 <style>
-*{box-sizing:border-box}body{margin:0;background:#05070d;color:#f5f7fb;font-family:Arial,sans-serif}
-.top{padding:18px 16px 14px;background:linear-gradient(#09111c,#05070d);border-bottom:1px solid #22303f}
-.eyebrow{font-size:12px;letter-spacing:.18em;color:#76cfff;margin:3px 0 5px}
-h1{margin:0;font-size:clamp(28px,7vw,48px)}.top p{margin:7px 0;color:#aab8c6}
-.tagline{font-weight:bold;color:#fff!important}.bar{display:flex;gap:8px;padding:10px 12px;overflow:auto;background:#080c13}
-button,input,select,textarea{font:inherit}button,.bar input{border:1px solid #263444;background:#101722;color:#fff;border-radius:10px;padding:10px}
-.bar input{min-width:170px}.primary{background:#1267b2;border-color:#70cfff;font-weight:bold}
-#map{height:60vh;min-height:430px}.panel{padding:14px 16px;background:#101722;border-top:1px solid #263444}
-.panel h3{margin:0 0 10px}.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
-.row input,.row select,.row textarea{flex:1;min-width:150px;border:1px solid #263444;background:#080c13;color:#fff;border-radius:9px;padding:10px}
-.row textarea{min-height:70px}.hint{color:#aab8c6;font-size:13px;line-height:1.6}.footer{text-align:center;padding:16px;color:#7f91a3;font-size:12px}
-.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:3px}.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#101722;color:#fff}
+:root{
+  --bg:#05070d;
+  --bg2:#080d15;
+  --card:#0d1520;
+  --card2:#101b29;
+  --line:#223245;
+  --text:#f7f9fc;
+  --muted:#9eafc0;
+  --blue:#64c8ff;
+  --blue2:#1686d9;
+  --green:#55e29d;
+  --radius:20px;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 50% -10%,#12334c 0,transparent 30%),
+    linear-gradient(180deg,#07101a 0,#05070d 38%,#05070d 100%);
+  color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.5;
+}
+
+a{color:inherit;text-decoration:none}
+
+.shell{
+  width:min(100%,1050px);
+  margin:auto;
+}
+
+/* HERO */
+
+.hero{
+  min-height:540px;
+  padding:28px 20px 38px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  border-bottom:1px solid var(--line);
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:48px;
+  font-weight:800;
+  letter-spacing:.12em;
+}
+
+.brand-mark{
+  width:40px;
+  height:40px;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  border:1px solid #4ebcff;
+  background:#0c1b29;
+  color:var(--blue);
+  font-size:20px;
+}
+
+.eyebrow{
+  color:var(--blue);
+  letter-spacing:.20em;
+  font-size:12px;
+  font-weight:700;
+  margin-bottom:12px;
+}
+
+h1{
+  margin:0;
+  font-size:clamp(50px,14vw,92px);
+  line-height:.9;
+  letter-spacing:-.055em;
+}
+
+.hero h1 span{
+  display:block;
+  color:var(--blue);
+}
+
+.hero-copy{
+  max-width:700px;
+  margin:24px 0 0;
+  color:#b9c5d0;
+  font-size:clamp(18px,4.5vw,24px);
+}
+
+.motto{
+  margin-top:20px;
+  font-size:clamp(18px,4.5vw,23px);
+  font-weight:800;
+  color:#fff;
+}
+
+/* PRIMARY ACTIONS */
+
+.actions{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+  margin-top:32px;
+}
+
+.action{
+  position:relative;
+  padding:22px;
+  border-radius:var(--radius);
+  border:1px solid var(--line);
+  background:linear-gradient(145deg,#101b29,#0a111b);
+  overflow:hidden;
+}
+
+.action.primary{
+  border-color:#55bfff;
+  box-shadow:0 0 35px rgba(31,155,230,.12);
+}
+
+.action-label{
+  font-size:11px;
+  letter-spacing:.16em;
+  color:var(--blue);
+  font-weight:700;
+}
+
+.action h2{
+  margin:5px 0;
+  font-size:25px;
+}
+
+.action p{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.arrow{
+  position:absolute;
+  right:20px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:27px;
+  color:var(--blue);
+}
+
+/* SECTIONS */
+
+.section{
+  padding:50px 18px;
+  border-bottom:1px solid #162332;
+}
+
+.section-head{
+  margin-bottom:24px;
+}
+
+.kicker{
+  color:var(--blue);
+  font-size:11px;
+  letter-spacing:.18em;
+  font-weight:800;
+}
+
+.section h2{
+  margin:6px 0 4px;
+  font-size:32px;
+  letter-spacing:-.03em;
+}
+
+.section-head p{
+  margin:0;
+  color:var(--muted);
+}
+
+/* PATHS */
+
+.paths{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.path{
+  min-height:132px;
+  padding:18px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:linear-gradient(145deg,#0d1723,#090f17);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.path-icon{
+  font-size:28px;
+}
+
+.path strong{
+  font-size:17px;
+}
+
+.path small{
+  display:block;
+  color:var(--muted);
+  margin-top:3px;
+}
+
+/* BRANDS */
+
+.brands{
+  display:grid;
+  gap:16px;
+}
+
+.brand-card{
+  padding:24px;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:linear-gradient(145deg,#101a27,#080e16);
+}
+
+.brand-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:15px;
+}
+
+.brand-card .icon{
+  font-size:34px;
+}
+
+.brand-card h3{
+  margin:15px 0 3px;
+  font-size:24px;
+}
+
+.brand-card .type{
+  color:var(--blue);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.10em;
+}
+
+.brand-card p{
+  color:var(--muted);
+  margin:12px 0 18px;
+}
+
+.visit{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:#fff;
+  font-weight:700;
+  font-size:14px;
+}
+
+/* SYSTEM */
+
+.system{
+  background:
+    radial-gradient(circle at 50% 0,rgba(51,168,230,.12),transparent 42%),
+    #07101a;
+}
+
+.flow{
+  display:grid;
+  gap:10px;
+  max-width:650px;
+  margin:auto;
+}
+
+.flow-item{
+  padding:17px 18px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#0c1520;
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.flow-num{
+  flex:0 0 35px;
+  height:35px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#11283a;
+  color:var(--blue);
+  font-weight:800;
+}
+
+.flow-item strong{
+  display:block;
+}
+
+.flow-item span{
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* SOCIAL */
+
+.socials{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+}
+
+.social{
+  padding:11px 15px;
+  border:1px solid var(--line);
+  background:#0d1621;
+  border-radius:999px;
+  font-size:14px;
+  font-weight:700;
+}
+
+/* CTA */
+
+.final{
+  text-align:center;
+  padding:65px 20px;
+}
+
+.final h2{
+  font-size:clamp(34px,9vw,55px);
+  margin:0;
+  line-height:1.05;
+}
+
+.final p{
+  color:var(--muted);
+  max-width:550px;
+  margin:18px auto 25px;
+}
+
+.big-btn{
+  display:inline-block;
+  background:linear-gradient(135deg,#1686d9,#2caef1);
+  padding:17px 26px;
+  border-radius:14px;
+  font-weight:800;
+  box-shadow:0 10px 35px rgba(21,143,215,.25);
+}
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+  padding:34px 20px 45px;
+  color:#74889a;
+  font-size:12px;
+}
+
+footer strong{
+  display:block;
+  color:#c9d4de;
+  letter-spacing:.14em;
+  margin-bottom:9px;
+}
+
+@media(min-width:720px){
+  .actions{grid-template-columns:1fr 1fr}
+  .paths{grid-template-columns:repeat(3,1fr)}
+  .brands{grid-template-columns:repeat(3,1fr)}
+  .hero{padding-left:35px;padding-right:35px}
+  .section{padding-left:35px;padding-right:35px}
+}
+
+@media(hover:hover){
+  .action,.path,.brand-card,.social{
+    transition:.2s ease;
+  }
+
+  .action:hover,.path:hover,.brand-card:hover{
+    transform:translateY(-3px);
+    border-color:#4b8eb7;
+  }
+
+  .social:hover{
+    border-color:var(--blue);
+  }
+}
 </style>
 </head>
+
 <body>
-<header class="top">
-<div class="eyebrow">M.A.P. • MISSION ALIGNMENT PROTOCOL</div>
-<h1>Create Your Own M.A.P. 🗺️</h1>
-<p>Map where you've been, where you're going, and what's next.</p>
-<p class="tagline">Don't just dream about it. M.A.P. it out. Get it Done ✔️</p>
+
+<div class="shell">
+
+<header class="hero">
+
+  <div class="brand">
+    <div class="brand-mark">M</div>
+    MISSION ALIGNMENT PROTOCOL
+  </div>
+
+  <div class="eyebrow">ONE LIFE • MANY PATHS • ONE MISSION</div>
+
+  <h1>
+    M.A.P.
+    <span>IT OUT.</span>
+  </h1>
+
+  <p class="hero-copy">
+    A living map of where you've been, where you're going,
+    what you're building and what comes next.
+  </p>
+
+  <div class="motto">
+    Don't just dream about it.<br>
+    M.A.P. it out. Get it Done ✔️
+  </div>
+
+  <div class="actions">
+
+    <a class="action primary" href="explore/">
+      <div class="action-label">CHRISTOPHER'S JOURNEY</div>
+      <h2>Explore My M.A.P.</h2>
+      <p>Follow the paths, projects, milestones and adventures.</p>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="action" href="create/">
+      <div class="action-label">BUILD YOUR OWN</div>
+      <h2>Create Your M.A.P.</h2>
+      <p>Turn goals, experiences and destinations into a plan.</p>
+      <span class="arrow">→</span>
+    </a>
+
+  </div>
+
 </header>
 
-<div class="bar">
-<input id="mapName" value="My M.A.P." aria-label="Map name">
-<button class="primary" id="addBtn">＋ Add Pin</button>
-<button id="shareBtn">🔗 Share</button>
-<button id="clearBtn">Reset</button>
-</div>
 
-<div id="map"></div>
+<section class="section">
 
-<section class="panel">
-<h3>Add a destination, goal or milestone</h3>
-<div class="row">
-<input id="title" placeholder="Pin name">
-<select id="category">
-<option value="done">🟣 Done / Experienced</option>
-<option value="progress">🔵 In Progress / Training</option>
-<option value="soon">🟡 Next / Soon</option>
-<option value="goal">🟠 Goal</option>
-<option value="explore">⚪ Explore</option>
-</select>
-<input id="media" placeholder="Photo/video link (optional)">
-</div>
-<div class="row">
-<textarea id="notes" placeholder="Story, notes, progress, what's next..."></textarea>
-<button class="primary" id="saveBtn">Save Pin</button>
-</div>
-<p class="hint">Tap <b>Add Pin</b>, then tap anywhere on the map. Your M.A.P. saves on this device. Share creates a link containing the current map.<br>
-<span class="dot" style="background:#a855f7"></span>Done &nbsp;
-<span class="dot" style="background:#2f9bff"></span>In Progress &nbsp;
-<span class="dot" style="background:#ffd43b"></span>Soon &nbsp;
-<span class="dot" style="background:#ff8c2f"></span>Goal &nbsp;
-<span class="dot" style="background:#c8d0d9"></span>Explore</p>
+  <div class="section-head">
+    <div class="kicker">MY PATHS</div>
+    <h2>One life. Every part of it.</h2>
+    <p>Different paths. Same mission.</p>
+  </div>
+
+  <div class="paths">
+
+    <div class="path">
+      <span class="path-icon">❤️</span>
+      <div>
+        <strong>Family</strong>
+        <small>Legacy • Life • Memories</small>
+      </div>
+    </div>
+
+    <div class="path">
+      <span class="path-icon">💪</span>
+      <div>
+        <strong>Fitness</strong>
+        <small>Strength • Mobility • Discipline</small>
+      </div>
+    </div>
+
+    <a class="path" href="../looking4lift/">
+      <span class="path-icon">✈️</span>
+      <div>
+        <strong>Freeflight</strong>
+        <small>Fly • Train • Explore</small>
+      </div>
+    </a>
+
+    <div class="path">
+      <span class="path-icon">🔧</span>
+      <div>
+        <strong>Professional</strong>
+        <small>Build • Repair • Solve</small>
+      </div>
+    </div>
+
+    <div class="path">
+      <span class="path-icon">🎨</span>
+      <div>
+        <strong>Creator</strong>
+        <small>AI • Code • Content</small>
+      </div>
+    </div>
+
+    <div class="path">
+      <span class="path-icon">🌎</span>
+      <div>
+        <strong>Food & Travel</strong>
+        <small>Eat Well • Go Somewhere</small>
+      </div>
+    </div>
+
+  </div>
+
 </section>
-<div class="footer">M.A.P. • Mission Alignment Protocol • WORK HARD. FLY HIGH. LIVE FREE.</div>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script>
-const colors={done:'#a855f7',progress:'#2f9bff',soon:'#ffd43b',goal:'#ff8c2f',explore:'#c8d0d9'};
-const labels={done:'Done / Experienced',progress:'In Progress / Training',soon:'Next / Soon',goal:'Goal',explore:'Explore'};
-const map=L.map('map').setView([38.4,-98.5],4);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
-const $=id=>document.getElementById(id);
-let pins=[],markers=[],pending=null,adding=false;
-function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function safeUrl(u){try{let x=new URL(u);return /^https?:$/.test(x.protocol)?x.href:''}catch(e){return ''}}
-function render(){
- markers.forEach(m=>map.removeLayer(m)); markers=[];
- pins.forEach((p,i)=>{
-  let u=safeUrl(p.media), media=u?`<br><a href="${esc(u)}" target="_blank" rel="noopener" style="color:#76cfff">View media ↗</a>`:'';
-  let m=L.circleMarker([p.lat,p.lng],{radius:9,color:'#081018',weight:2,fillColor:colors[p.cat]||colors.explore,fillOpacity:1})
-   .bindPopup(`<b>${esc(p.title)}</b><br>${esc(labels[p.cat]||'Explore')}<br>${esc(p.notes)}${media}<br><button onclick="removePin(${i})">Delete pin</button>`).addTo(map);
-  markers.push(m);
- });
- localStorage.setItem('map_mvp',JSON.stringify({name:$('mapName').value,pins}));
-}
-window.removePin=i=>{pins.splice(i,1);render()};
-function encodeData(d){return btoa(unescape(encodeURIComponent(JSON.stringify(d)))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')}
-function decodeData(s){s=s.replace(/-/g,'+').replace(/_/g,'/');while(s.length%4)s+='=';return JSON.parse(decodeURIComponent(escape(atob(s))))}
-function load(){
- let q=new URLSearchParams(location.search).get('m');
- if(q){try{let d=decodeData(q);pins=d.pins||[];$('mapName').value=d.name||'Shared M.A.P.';render();if(pins.length)map.fitBounds(L.latLngBounds(pins.map(p=>[p.lat,p.lng])),{padding:[30,30]});return}catch(e){}}
- try{let d=JSON.parse(localStorage.getItem('map_mvp'));if(d){pins=d.pins||[];$('mapName').value=d.name||'My M.A.P.'}}catch(e){}
- render();
-}
-$('addBtn').onclick=()=>{adding=true;$('addBtn').textContent='📍 Tap map to place pin'};
-map.on('click',e=>{if(!adding)return;pending=e.latlng;adding=false;$('addBtn').textContent='＋ Add Pin';$('title').focus()});
-$('saveBtn').onclick=()=>{
- if(!pending){alert('Tap Add Pin, then tap the map first.');return}
- let title=$('title').value.trim();if(!title){alert('Give your pin a name.');return}
- pins.push({title,cat:$('category').value,notes:$('notes').value.trim(),media:$('media').value.trim(),lat:+pending.lat.toFixed(5),lng:+pending.lng.toFixed(5)});
- pending=null;$('title').value='';$('notes').value='';$('media').value='';render();
-};
-$('mapName').onchange=render;
-$('clearBtn').onclick=()=>{if(confirm('Reset this M.A.P. and delete all local pins?')){pins=[];render()}};
-$('shareBtn').onclick=async()=>{
- let url=location.origin+location.pathname+'?m='+encodeData({name:$('mapName').value,pins});
- if(navigator.share){try{await navigator.share({title:$('mapName').value,text:'Check out my M.A.P.',url});return}catch(e){}}
- try{await navigator.clipboard.writeText(url);alert('Share link copied!')}catch(e){prompt('Copy your share link:',url)}
-};
-load();
-</script>
-</body></html>
+
+<section class="section">
+
+  <div class="section-head">
+    <div class="kicker">PROJECTS & BRANDS</div>
+    <h2>What I'm building.</h2>
+    <p>The projects living inside my M.A.P.</p>
+  </div>
+
+  <div class="brands">
+
+    <a class="brand-card"
+       href="https://ccstechnicalservices.com"
+       target="_blank"
+       rel="noopener">
+
+      <div class="brand-top">
+        <div class="type">PROFESSIONAL</div>
+        <div class="icon">🔧</div>
+      </div>
+
+      <h3>CC'S Technical Services</h3>
+
+      <p>
+        HVAC • Electrical • Refrigeration •
+        Restaurant Equipment • Technical Services
+      </p>
+
+      <span class="visit">Visit CC'S →</span>
+
+    </a>
+
+
+    <a class="brand-card"
+       href="../looking4lift/">
+
+      <div class="brand-top">
+        <div class="type">FREEFLIGHT</div>
+        <div class="icon">🪂</div>
+      </div>
+
+      <h3>Looking4Lift</h3>
+
+      <p>
+        Hang Gliding • Freeflight • VR Training •
+        Travel • Community
+      </p>
+
+      <span class="visit">Explore Looking4Lift →</span>
+
+    </a>
+
+
+    <div class="brand-card">
+
+      <div class="brand-top">
+        <div class="type">CREATOR • COMMUNITY</div>
+        <div class="icon">👹</div>
+      </div>
+
+      <h3>Certified MONSTER</h3>
+
+      <p>
+        Passion • Dedication • Community •
+        Creator projects and digital identity.
+      </p>
+
+      <span class="visit">Part of the M.A.P. →</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section system">
+
+  <div class="section-head">
+    <div class="kicker">THE PROTOCOL</div>
+    <h2>Dream → Map → Execute.</h2>
+    <p>M.A.P. isn't just about locations. It's about alignment.</p>
+  </div>
+
+  <div class="flow">
+
+    <div class="flow-item">
+      <div class="flow-num">1</div>
+      <div>
+        <strong>Define the Mission</strong>
+        <span>What do you actually want?</span>
+      </div>
+    </div>
+
+    <div class="flow-item">
+      <div class="flow-num">2</div>
+      <div>
+        <strong>Map the Path</strong>
+        <span>Turn the mission into destinations and milestones.</span>
+      </div>
+    </div>
+
+    <div class="flow-item">
+      <div class="flow-num">3</div>
+      <div>
+        <strong>Take Action</strong>
+        <span>Move something forward instead of just thinking about it.</span>
+      </div>
+    </div>
+
+    <div class="flow-item">
+      <div class="flow-num">4</div>
+      <div>
+        <strong>Track the Journey</strong>
+        <span>Document progress, experiences and lessons.</span>
+      </div>
+    </div>
+
+    <div class="flow-item">
+      <div class="flow-num">5</div>
+      <div>
+        <strong>Get It Done ✔️</strong>
+        <span>Finish the mission — then map what's next.</span>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section">
+
+  <div class="section-head">
+    <div class="kicker">CONNECTED</div>
+    <h2>Follow the journey.</h2>
+    <p>The M.A.P. continues across every platform.</p>
+  </div>
+
+  <div class="socials">
+
+    <a class="social"
+       href="https://www.youtube.com/@LOOKING4LIFT"
+       target="_blank" rel="noopener">
+       ▶ YouTube
+    </a>
+
+    <a class="social"
+       href="https://www.tiktok.com/@christopher.m.champagne"
+       target="_blank" rel="noopener">
+       ♪ TikTok
+    </a>
+
+    <a class="social"
+       href="https://www.instagram.com/certifiedmonster"
+       target="_blank" rel="noopener">
+       ◎ Instagram
+    </a>
+
+    <a class="social"
+       href="https://www.facebook.com/chrischampagne247/"
+       target="_blank" rel="noopener">
+       f Facebook
+    </a>
+
+    <a class="social"
+       href="https://x.com/CERTIFIEDMONST1"
+       target="_blank" rel="noopener">
+       𝕏 X
+    </a>
+
+  </div>
+
+</section>
+
+
+<section class="final">
+
+  <div class="kicker">YOUR TURN</div>
+
+  <h2>
+    What's on<br>
+    your M.A.P.?
+  </h2>
+
+  <p>
+    Map where you've been. Decide where you're going.
+    Put the next step in front of you.
+  </p>
+
+  <a class="big-btn" href="create/">
+    Create Your M.A.P. →
+  </a>
+
+</section>
+
+
+<footer>
+
+  <strong>
+    WORK HARD. • FLY HIGH. • EAT WELL. • LIVE FREE.
+  </strong>
+
+  M.A.P. • Mission Alignment Protocol<br>
+  Christopher Champagne
+
+</footer>
+
+</div>
+
+</body>
+</html>
