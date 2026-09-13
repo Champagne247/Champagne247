@@ -1,114 +1,1466 @@
-
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Create Your Own M.A.P. | Mission Alignment Protocol</title>
-<meta name="description" content="Create your own Mission Alignment Protocol. Map where you've been, where you're going, and what's next.">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<meta name="theme-color" content="#05070d">
+
+<title>Build Your M.A.P. | Mission Alignment Protocol</title>
+
+<meta name="description"
+content="Turn your vision into missions, milestones, actions and destinations with M.A.P. and NOVA.">
+
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
 <style>
-*{box-sizing:border-box}body{margin:0;background:#05070d;color:#f5f7fb;font-family:Arial,sans-serif}
-.top{padding:18px 16px 14px;background:linear-gradient(#09111c,#05070d);border-bottom:1px solid #22303f}
-.eyebrow{font-size:12px;letter-spacing:.18em;color:#76cfff;margin:3px 0 5px}
-h1{margin:0;font-size:clamp(28px,7vw,48px)}.top p{margin:7px 0;color:#aab8c6}
-.tagline{font-weight:bold;color:#fff!important}.bar{display:flex;gap:8px;padding:10px 12px;overflow:auto;background:#080c13}
-button,input,select,textarea{font:inherit}button,.bar input{border:1px solid #263444;background:#101722;color:#fff;border-radius:10px;padding:10px}
-.bar input{min-width:170px}.primary{background:#1267b2;border-color:#70cfff;font-weight:bold}
-#map{height:60vh;min-height:430px}.panel{padding:14px 16px;background:#101722;border-top:1px solid #263444}
-.panel h3{margin:0 0 10px}.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
-.row input,.row select,.row textarea{flex:1;min-width:150px;border:1px solid #263444;background:#080c13;color:#fff;border-radius:9px;padding:10px}
-.row textarea{min-height:70px}.hint{color:#aab8c6;font-size:13px;line-height:1.6}.footer{text-align:center;padding:16px;color:#7f91a3;font-size:12px}
-.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:3px}.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#101722;color:#fff}
+:root{
+  --bg:#05070d;
+  --card:#0b1723;
+  --card2:#0d1c29;
+  --line:#29485e;
+  --text:#f5f7fb;
+  --muted:#9eafbd;
+  --blue:#63c9ff;
+  --green:#55e29d;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 50% 0,
+    rgba(28,150,215,.15),transparent 25%),
+    #05070d;
+  color:var(--text);
+  font-family:Arial,sans-serif;
+}
+
+button,input,select,textarea{
+  font:inherit;
+}
+
+button{cursor:pointer}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.shell{
+  width:min(100%,1000px);
+  margin:auto;
+}
+
+/* HEADER */
+
+.top{
+  padding:18px 18px 24px;
+  background:
+    linear-gradient(180deg,#0a1622,#05070d);
+  border-bottom:1px solid #22303f;
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:25px;
+}
+
+.back{
+  color:#8ea2b2;
+  font-size:13px;
+  font-weight:800;
+}
+
+.powered{
+  color:var(--blue);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.18em;
+}
+
+.eyebrow{
+  font-size:11px;
+  letter-spacing:.18em;
+  color:#76cfff;
+  margin:3px 0 8px;
+}
+
+h1{
+  margin:0;
+  font-size:clamp(34px,9vw,58px);
+  line-height:1;
+  letter-spacing:-.04em;
+}
+
+.top p{
+  margin:12px 0 0;
+  color:#aab8c6;
+  font-size:16px;
+  line-height:1.5;
+}
+
+.tagline{
+  font-weight:bold;
+  color:#fff!important;
+}
+
+/* NOVA HANDOFF */
+
+.nova-loaded{
+  display:none;
+  margin:20px 16px;
+  padding:20px;
+  border:1px solid #2d698b;
+  border-radius:22px;
+  background:
+    radial-gradient(circle at 100% 0,
+    rgba(61,191,247,.14),transparent 40%),
+    linear-gradient(145deg,#0d2030,#08121c);
+}
+
+.nova-loaded.active{
+  display:block;
+}
+
+.status{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:var(--green);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.17em;
+}
+
+.status-dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--green);
+  box-shadow:0 0 12px var(--green);
+}
+
+.nova-loaded h2{
+  margin:15px 0 10px;
+  font-size:29px;
+  letter-spacing:-.03em;
+}
+
+.nova-loaded p{
+  color:#b8c6d0;
+  line-height:1.55;
+}
+
+.vision-preview{
+  margin-top:15px;
+  padding:15px;
+  border-left:3px solid var(--blue);
+  background:#07111a;
+  color:#dce7ed;
+  font-size:14px;
+  line-height:1.55;
+}
+
+.vision-preview.collapsed{
+  display:-webkit-box;
+  -webkit-line-clamp:4;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+
+.vision-toggle{
+  margin-top:10px;
+  padding:0;
+  border:0;
+  background:none;
+  color:var(--blue);
+  font-size:12px;
+  font-weight:800;
+}
+
+/* SYSTEM */
+
+.system{
+  padding:15px 16px 28px;
+}
+
+.section-label{
+  margin-bottom:8px;
+  color:var(--blue);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.18em;
+}
+
+.system h2{
+  margin:0;
+  font-size:32px;
+  letter-spacing:-.035em;
+}
+
+.system-intro{
+  margin:10px 0 20px;
+  color:#a9b9c5;
+  line-height:1.55;
+}
+
+.theme-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:9px;
+}
+
+.theme-card{
+  position:relative;
+  min-height:125px;
+  padding:15px;
+  overflow:hidden;
+  border:1px solid #28465b;
+  border-radius:17px;
+  background:
+    radial-gradient(circle at 100% 0,
+    rgba(75,191,245,.14),transparent 45%),
+    #0b1722;
+}
+
+.theme-number{
+  color:#7894a8;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.14em;
+}
+
+.theme-card strong{
+  display:block;
+  margin-top:24px;
+  font-size:18px;
+  line-height:1.1;
+}
+
+.theme-icon{
+  position:absolute;
+  right:13px;
+  top:13px;
+  font-size:25px;
+}
+
+.empty-vision{
+  grid-column:1/-1;
+  padding:18px;
+  border:1px dashed #36556a;
+  border-radius:15px;
+  color:#9fb0bd;
+  line-height:1.5;
+}
+
+/* PROTOCOL */
+
+.protocol{
+  margin:0 16px 28px;
+  border:1px solid #273d50;
+  border-radius:22px;
+  overflow:hidden;
+  background:#09131d;
+}
+
+.protocol-title{
+  padding:20px 18px 12px;
+}
+
+.protocol-title small{
+  color:var(--blue);
+  font-weight:900;
+  letter-spacing:.15em;
+}
+
+.protocol-title h2{
+  margin:7px 0;
+  font-size:28px;
+}
+
+.protocol-title p{
+  color:#a9b8c4;
+  line-height:1.5;
+}
+
+.steps{
+  padding:0 12px 14px;
+}
+
+.step{
+  display:flex;
+  gap:13px;
+  padding:14px 8px;
+  border-top:1px solid #1d3140;
+}
+
+.step-num{
+  flex:0 0 34px;
+  width:34px;
+  height:34px;
+  display:grid;
+  place-items:center;
+  border:1px solid #35759a;
+  border-radius:50%;
+  color:var(--blue);
+  font-size:12px;
+  font-weight:900;
+}
+
+.step strong{
+  display:block;
+  margin-bottom:3px;
+}
+
+.step span{
+  color:#96a9b7;
+  font-size:13px;
+  line-height:1.4;
+}
+
+/* GEOGRAPHIC MAP SECTION */
+
+.geo-head{
+  padding:26px 16px 16px;
+  border-top:1px solid #1d2b38;
+  background:#070b11;
+}
+
+.geo-head .section-label{
+  margin-bottom:7px;
+}
+
+.geo-head h2{
+  margin:0;
+  font-size:31px;
+  letter-spacing:-.035em;
+}
+
+.geo-head p{
+  color:#a8b7c3;
+  line-height:1.5;
+}
+
+.geo-note{
+  margin-top:14px;
+  padding:12px 14px;
+  border-left:3px solid var(--blue);
+  background:#0b1620;
+  color:#bfd0db;
+  font-size:13px;
+  line-height:1.5;
+}
+
+/* MAP BAR */
+
+.bar{
+  display:flex;
+  gap:8px;
+  padding:10px 12px;
+  overflow:auto;
+  background:#080c13;
+}
+
+button,
+.bar input{
+  border:1px solid #263444;
+  background:#101722;
+  color:#fff;
+  border-radius:10px;
+  padding:10px;
+}
+
+.bar input{
+  min-width:170px;
+}
+
+.primary{
+  background:#1267b2;
+  border-color:#70cfff;
+  font-weight:bold;
+}
+
+#map{
+  height:60vh;
+  min-height:430px;
+}
+
+/* PIN PANEL */
+
+.panel{
+  padding:18px 16px;
+  background:#101722;
+  border-top:1px solid #263444;
+}
+
+.panel h3{
+  margin:0 0 8px;
+  font-size:22px;
+}
+
+.panel-intro{
+  margin:0 0 14px;
+  color:#aab8c6;
+  font-size:14px;
+  line-height:1.5;
+}
+
+.row{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:8px;
+}
+
+.row input,
+.row select,
+.row textarea{
+  flex:1;
+  min-width:150px;
+  border:1px solid #263444;
+  background:#080c13;
+  color:#fff;
+  border-radius:9px;
+  padding:10px;
+}
+
+.row textarea{
+  min-height:70px;
+}
+
+.hint{
+  color:#aab8c6;
+  font-size:13px;
+  line-height:1.6;
+}
+
+.footer{
+  text-align:center;
+  padding:30px 16px 45px;
+  color:#657888;
+  font-size:11px;
+  letter-spacing:.08em;
+}
+
+.dot{
+  display:inline-block;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  margin-right:3px;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip{
+  background:#101722;
+  color:#fff;
+}
+
+@media(min-width:700px){
+
+  .top,
+  .system,
+  .geo-head,
+  .panel{
+    padding-left:30px;
+    padding-right:30px;
+  }
+
+  .nova-loaded,
+  .protocol{
+    margin-left:30px;
+    margin-right:30px;
+  }
+
+  .theme-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+}
 </style>
 </head>
+
 <body>
+
+<div class="shell">
+
 <header class="top">
-<div class="eyebrow">M.A.P. • MISSION ALIGNMENT PROTOCOL</div>
-<h1>Create Your Own M.A.P. 🗺️</h1>
-<p>Map where you've been, where you're going, and what's next.</p>
-<p class="tagline">Don't just dream about it. M.A.P. it out. Get it Done ✔️</p>
+
+  <div class="nav">
+    <a class="back" href="../">← M.A.P.</a>
+    <div class="powered">POWERED BY N.O.V.A.</div>
+  </div>
+
+  <div class="eyebrow">
+    M.A.P. • MISSION ALIGNMENT PROTOCOL
+  </div>
+
+  <h1>Build Your M.A.P.</h1>
+
+  <p>
+    Your vision is the destination.
+    Now we start building the path.
+  </p>
+
+  <p class="tagline">
+    See it. M.A.P. it. Get it Done ✔️
+  </p>
+
 </header>
 
+
+<!-- NOVA HANDOFF -->
+
+<section class="nova-loaded"
+         id="novaLoaded">
+
+  <div class="status">
+    <span class="status-dot"></span>
+    N.O.V.A. • VISION LOADED
+  </div>
+
+  <h2>I brought your vision with us.</h2>
+
+  <p>
+    We aren't starting over. Everything you just told me
+    is the foundation of this M.A.P.
+  </p>
+
+  <div class="vision-preview collapsed"
+       id="visionPreview"></div>
+
+  <button class="vision-toggle"
+          id="visionToggle">
+    SHOW FULL VISION ↓
+  </button>
+
+</section>
+
+
+<!-- VISION AREAS -->
+
+<section class="system">
+
+  <div class="section-label">
+    YOUR LIFE • ONE SYSTEM
+  </div>
+
+  <h2>Your Vision Areas</h2>
+
+  <p class="system-intro">
+    These are the major areas NOVA found in the life
+    you described. They aren't separate lives.
+    They're pieces of the same M.A.P.
+  </p>
+
+  <div class="theme-grid"
+       id="themeGrid"></div>
+
+</section>
+
+
+<!-- MAP PROTOCOL -->
+
+<section class="protocol">
+
+  <div class="protocol-title">
+
+    <small>THE M.A.P. PROTOCOL</small>
+
+    <h2>Vision becomes action.</h2>
+
+    <p>
+      Every part of your vision can move through the
+      same simple path.
+    </p>
+
+  </div>
+
+  <div class="steps">
+
+    <div class="step">
+      <div class="step-num">01</div>
+      <div>
+        <strong>VISION</strong>
+        <span>What does the life you want actually look like?</span>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">02</div>
+      <div>
+        <strong>MISSION</strong>
+        <span>What major outcome moves you toward that vision?</span>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">03</div>
+      <div>
+        <strong>MILESTONES</strong>
+        <span>What has to become true along the way?</span>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">04</div>
+      <div>
+        <strong>ACTIONS</strong>
+        <span>What can you actually do next?</span>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">05</div>
+      <div>
+        <strong>EXPERIENCE</strong>
+        <span>Do it. Live it. Record the story.</span>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- GEOGRAPHIC LAYER -->
+
+<section class="geo-head">
+
+  <div class="section-label">
+    M.A.P. • PLACES & DESTINATIONS
+  </div>
+
+  <h2>Where does your life take you? 🗺️</h2>
+
+  <p>
+    Some dreams have a place attached to them.
+    Put those destinations, experiences, goals and
+    milestones on the world.
+  </p>
+
+  <div class="geo-note">
+    <strong>This map is one layer of your M.A.P.</strong><br>
+    Your M.A.P. is your whole life system — not just geography.
+  </div>
+
+</section>
+
+
 <div class="bar">
-<input id="mapName" value="My M.A.P." aria-label="Map name">
-<button class="primary" id="addBtn">＋ Add Pin</button>
-<button id="shareBtn">🔗 Share</button>
-<button id="clearBtn">Reset</button>
+
+  <input id="mapName"
+         value="My M.A.P."
+         aria-label="Map name">
+
+  <button class="primary"
+          id="addBtn">
+    ＋ Add Pin
+  </button>
+
+  <button id="shareBtn">
+    🔗 Share
+  </button>
+
+  <button id="clearBtn">
+    Reset
+  </button>
+
 </div>
+
 
 <div id="map"></div>
 
-<section class="panel">
-<h3>Add a destination, goal or milestone</h3>
-<div class="row">
-<input id="title" placeholder="Pin name">
-<select id="category">
-<option value="done">🟣 Done / Experienced</option>
-<option value="progress">🔵 In Progress / Training</option>
-<option value="soon">🟡 Next / Soon</option>
-<option value="goal">🟠 Goal</option>
-<option value="explore">⚪ Explore</option>
-</select>
-<input id="media" placeholder="Photo/video link (optional)">
-</div>
-<div class="row">
-<textarea id="notes" placeholder="Story, notes, progress, what's next..."></textarea>
-<button class="primary" id="saveBtn">Save Pin</button>
-</div>
-<p class="hint">Tap <b>Add Pin</b>, then tap anywhere on the map. Your M.A.P. saves on this device. Share creates a link containing the current map.<br>
-<span class="dot" style="background:#a855f7"></span>Done &nbsp;
-<span class="dot" style="background:#2f9bff"></span>In Progress &nbsp;
-<span class="dot" style="background:#ffd43b"></span>Soon &nbsp;
-<span class="dot" style="background:#ff8c2f"></span>Goal &nbsp;
-<span class="dot" style="background:#c8d0d9"></span>Explore</p>
-</section>
-<div class="footer">M.A.P. • Mission Alignment Protocol • WORK HARD. FLY HIGH. LIVE FREE.</div>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script>
-const colors={done:'#a855f7',progress:'#2f9bff',soon:'#ffd43b',goal:'#ff8c2f',explore:'#c8d0d9'};
-const labels={done:'Done / Experienced',progress:'In Progress / Training',soon:'Next / Soon',goal:'Goal',explore:'Explore'};
-const map=L.map('map').setView([38.4,-98.5],4);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
-const $=id=>document.getElementById(id);
-let pins=[],markers=[],pending=null,adding=false;
-function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function safeUrl(u){try{let x=new URL(u);return /^https?:$/.test(x.protocol)?x.href:''}catch(e){return ''}}
-function render(){
- markers.forEach(m=>map.removeLayer(m)); markers=[];
- pins.forEach((p,i)=>{
-  let u=safeUrl(p.media), media=u?`<br><a href="${esc(u)}" target="_blank" rel="noopener" style="color:#76cfff">View media ↗</a>`:'';
-  let m=L.circleMarker([p.lat,p.lng],{radius:9,color:'#081018',weight:2,fillColor:colors[p.cat]||colors.explore,fillOpacity:1})
-   .bindPopup(`<b>${esc(p.title)}</b><br>${esc(labels[p.cat]||'Explore')}<br>${esc(p.notes)}${media}<br><button onclick="removePin(${i})">Delete pin</button>`).addTo(map);
-  markers.push(m);
- });
- localStorage.setItem('map_mvp',JSON.stringify({name:$('mapName').value,pins}));
-}
-window.removePin=i=>{pins.splice(i,1);render()};
-function encodeData(d){return btoa(unescape(encodeURIComponent(JSON.stringify(d)))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')}
-function decodeData(s){s=s.replace(/-/g,'+').replace(/_/g,'/');while(s.length%4)s+='=';return JSON.parse(decodeURIComponent(escape(atob(s))))}
-function load(){
- let q=new URLSearchParams(location.search).get('m');
- if(q){try{let d=decodeData(q);pins=d.pins||[];$('mapName').value=d.name||'Shared M.A.P.';render();if(pins.length)map.fitBounds(L.latLngBounds(pins.map(p=>[p.lat,p.lng])),{padding:[30,30]});return}catch(e){}}
- try{let d=JSON.parse(localStorage.getItem('map_mvp'));if(d){pins=d.pins||[];$('mapName').value=d.name||'My M.A.P.'}}catch(e){}
- render();
-}
-$('addBtn').onclick=()=>{adding=true;$('addBtn').textContent='📍 Tap map to place pin'};
-map.on('click',e=>{if(!adding)return;pending=e.latlng;adding=false;$('addBtn').textContent='＋ Add Pin';$('title').focus()});
-$('saveBtn').onclick=()=>{
- if(!pending){alert('Tap Add Pin, then tap the map first.');return}
- let title=$('title').value.trim();if(!title){alert('Give your pin a name.');return}
- pins.push({title,cat:$('category').value,notes:$('notes').value.trim(),media:$('media').value.trim(),lat:+pending.lat.toFixed(5),lng:+pending.lng.toFixed(5)});
- pending=null;$('title').value='';$('notes').value='';$('media').value='';render();
-};
-$('mapName').onchange=render;
-$('clearBtn').onclick=()=>{if(confirm('Reset this M.A.P. and delete all local pins?')){pins=[];render()}};
-$('shareBtn').onclick=async()=>{
- let url=location.origin+location.pathname+'?m='+encodeData({name:$('mapName').value,pins});
- if(navigator.share){try{await navigator.share({title:$('mapName').value,text:'Check out my M.A.P.',url});return}catch(e){}}
- try{await navigator.clipboard.writeText(url);alert('Share link copied!')}catch(e){prompt('Copy your share link:',url)}
-};
-load();
+<section class="panel">
+
+  <h3>Add a place to your story</h3>
+
+  <p class="panel-intro">
+    Add somewhere you've been, somewhere you're going,
+    or somewhere connected to the life you're building.
+  </p>
+
+  <div class="row">
+
+    <input id="title"
+           placeholder="Pin name">
+
+    <select id="category">
+      <option value="done">🟣 Done / Experienced</option>
+      <option value="progress">🔵 In Progress / Training</option>
+      <option value="soon">🟡 Next / Soon</option>
+      <option value="goal">🟠 Goal</option>
+      <option value="explore">⚪ Explore</option>
+    </select>
+
+    <input id="media"
+           placeholder="Photo/video link (optional)">
+
+  </div>
+
+  <div class="row">
+
+    <textarea id="notes"
+      placeholder="Story, notes, progress, what's next..."></textarea>
+
+    <button class="primary"
+            id="saveBtn">
+      Save Pin
+    </button>
+
+  </div>
+
+  <p class="hint">
+    Tap <b>Add Pin</b>, then tap anywhere on the map.
+    Your M.A.P. saves on this device. Share creates a
+    link containing the current geographic map.<br><br>
+
+    <span class="dot" style="background:#a855f7"></span>
+    Done &nbsp;
+
+    <span class="dot" style="background:#2f9bff"></span>
+    In Progress &nbsp;
+
+    <span class="dot" style="background:#ffd43b"></span>
+    Soon &nbsp;
+
+    <span class="dot" style="background:#ff8c2f"></span>
+    Goal &nbsp;
+
+    <span class="dot" style="background:#c8d0d9"></span>
+    Explore
+  </p>
+
+</section>
+
+
+<div class="footer">
+  SEE IT • M.A.P. IT • GET IT DONE<br><br>
+  M.A.P. • MISSION ALIGNMENT PROTOCOL
+</div>
+
+</div>
+
+
+<script
+src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
 </script>
-</body></html>
+
+<script>
+
+/* =========================================================
+   NOVA → M.A.P. HANDOFF
+   ========================================================= */
+
+const themeInfo = {
+
+  family:{
+    title:"Family & Legacy",
+    icon:"❤️"
+  },
+
+  flight:{
+    title:"Flight & Adventure",
+    icon:"🪽"
+  },
+
+  home:{
+    title:"Home & Place",
+    icon:"🏡"
+  },
+
+  health:{
+    title:"Strength & Health",
+    icon:"💪"
+  },
+
+  business:{
+    title:"Business & Career",
+    icon:"🛠️"
+  },
+
+  map:{
+    title:"M.A.P.",
+    icon:"🗺️"
+  },
+
+  nova:{
+    title:"NOVA",
+    icon:"✦"
+  },
+
+  money:{
+    title:"Financial Freedom",
+    icon:"◈"
+  },
+
+  travel:{
+    title:"Travel & Experiences",
+    icon:"🌎"
+  },
+
+  purpose:{
+    title:"Purpose & Impact",
+    icon:"🔥"
+  },
+
+  freedom:{
+    title:"Freedom",
+    icon:"☀️"
+  }
+
+};
+
+
+let novaVision = null;
+
+try{
+
+  novaVision =
+    JSON.parse(
+      localStorage.getItem("map_nova_vision")
+    );
+
+}catch(e){
+
+  novaVision = null;
+
+}
+
+
+const novaLoaded =
+  document.getElementById("novaLoaded");
+
+const visionPreview =
+  document.getElementById("visionPreview");
+
+const themeGrid =
+  document.getElementById("themeGrid");
+
+
+function renderNovaVision(){
+
+  if(
+    novaVision &&
+    novaVision.vision
+  ){
+
+    novaLoaded.classList.add("active");
+
+    visionPreview.textContent =
+      novaVision.vision;
+
+
+    let themes =
+      Array.isArray(novaVision.themes)
+      ? novaVision.themes
+      : [];
+
+
+    if(themes.length){
+
+      themeGrid.textContent = "";
+
+
+      themes.forEach((theme,index)=>{
+
+        const info =
+          themeInfo[theme.id] || {
+            title:theme.title || "Vision Area",
+            icon:"✦"
+          };
+
+
+        const card =
+          document.createElement("div");
+
+        card.className =
+          "theme-card";
+
+
+        const number =
+          document.createElement("div");
+
+        number.className =
+          "theme-number";
+
+        number.textContent =
+          "VISION " +
+          String(index+1).padStart(2,"0");
+
+
+        const icon =
+          document.createElement("div");
+
+        icon.className =
+          "theme-icon";
+
+        icon.textContent =
+          info.icon;
+
+
+        const title =
+          document.createElement("strong");
+
+        title.textContent =
+          info.title;
+
+
+        card.appendChild(number);
+        card.appendChild(icon);
+        card.appendChild(title);
+
+        themeGrid.appendChild(card);
+
+      });
+
+    }else{
+
+      showEmptyVision();
+
+    }
+
+  }else{
+
+    showEmptyVision();
+
+  }
+
+}
+
+
+function showEmptyVision(){
+
+  themeGrid.textContent = "";
+
+  const empty =
+    document.createElement("div");
+
+  empty.className =
+    "empty-vision";
+
+  empty.textContent =
+    "No NOVA vision is loaded on this device yet. " +
+    "You can still use the geographic M.A.P. below, " +
+    "or return to NOVA and build your vision first.";
+
+  themeGrid.appendChild(empty);
+
+}
+
+
+/* expand/collapse original vision */
+
+document
+.getElementById("visionToggle")
+.addEventListener("click",()=>{
+
+  const collapsed =
+    visionPreview.classList.toggle("collapsed");
+
+  document
+    .getElementById("visionToggle")
+    .textContent =
+      collapsed
+      ? "SHOW FULL VISION ↓"
+      : "COLLAPSE VISION ↑";
+
+});
+
+
+renderNovaVision();
+
+
+
+/* =========================================================
+   EXISTING GEOGRAPHIC M.A.P.
+   ========================================================= */
+
+const colors = {
+  done:"#a855f7",
+  progress:"#2f9bff",
+  soon:"#ffd43b",
+  goal:"#ff8c2f",
+  explore:"#c8d0d9"
+};
+
+
+const labels = {
+  done:"Done / Experienced",
+  progress:"In Progress / Training",
+  soon:"Next / Soon",
+  goal:"Goal",
+  explore:"Explore"
+};
+
+
+const map =
+  L.map("map")
+   .setView([38.4,-98.5],4);
+
+
+L.tileLayer(
+  "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+  {
+    maxZoom:18,
+    attribution:"&copy; OpenStreetMap contributors"
+  }
+).addTo(map);
+
+
+const $ =
+  id=>document.getElementById(id);
+
+
+let pins = [];
+let markers = [];
+let pending = null;
+let adding = false;
+
+
+/* escape user content */
+
+function esc(s){
+
+  return String(s||"")
+    .replace(
+      /[&<>"']/g,
+      c=>({
+        "&":"&amp;",
+        "<":"&lt;",
+        ">":"&gt;",
+        '"':"&quot;",
+        "'":"&#39;"
+      }[c])
+    );
+
+}
+
+
+/* validate links */
+
+function safeUrl(u){
+
+  try{
+
+    let x =
+      new URL(u);
+
+    return /^https?:$/.test(x.protocol)
+      ? x.href
+      : "";
+
+  }catch(e){
+
+    return "";
+
+  }
+
+}
+
+
+/* render pins */
+
+function render(){
+
+  markers.forEach(
+    m=>map.removeLayer(m)
+  );
+
+  markers = [];
+
+
+  pins.forEach((p,i)=>{
+
+    let u =
+      safeUrl(p.media);
+
+
+    let media =
+      u
+      ? `<br><a href="${esc(u)}"
+          target="_blank"
+          rel="noopener"
+          style="color:#76cfff">
+          View media ↗
+         </a>`
+      : "";
+
+
+    let m =
+      L.circleMarker(
+        [p.lat,p.lng],
+        {
+          radius:9,
+          color:"#081018",
+          weight:2,
+          fillColor:
+            colors[p.cat] ||
+            colors.explore,
+          fillOpacity:1
+        }
+      )
+
+      .bindPopup(
+        `<b>${esc(p.title)}</b>
+         <br>
+         ${esc(labels[p.cat] || "Explore")}
+         <br>
+         ${esc(p.notes)}
+         ${media}
+         <br><br>
+         <button onclick="removePin(${i})">
+         Delete pin
+         </button>`
+      )
+
+      .addTo(map);
+
+
+    markers.push(m);
+
+  });
+
+
+  localStorage.setItem(
+    "map_mvp",
+    JSON.stringify({
+      name:$("mapName").value,
+      pins:pins
+    })
+  );
+
+}
+
+
+/* delete */
+
+window.removePin =
+  i=>{
+
+    pins.splice(i,1);
+
+    render();
+
+  };
+
+
+/* share encoding */
+
+function encodeData(d){
+
+  return btoa(
+    unescape(
+      encodeURIComponent(
+        JSON.stringify(d)
+      )
+    )
+  )
+  .replace(/\+/g,"-")
+  .replace(/\//g,"_")
+  .replace(/=+$/,"");
+
+}
+
+
+function decodeData(s){
+
+  s =
+    s
+      .replace(/-/g,"+")
+      .replace(/_/g,"/");
+
+
+  while(s.length % 4){
+    s += "=";
+  }
+
+
+  return JSON.parse(
+    decodeURIComponent(
+      escape(
+        atob(s)
+      )
+    )
+  );
+
+}
+
+
+/* load existing map */
+
+function load(){
+
+  let q =
+    new URLSearchParams(
+      location.search
+    ).get("m");
+
+
+  if(q){
+
+    try{
+
+      let d =
+        decodeData(q);
+
+      pins =
+        d.pins || [];
+
+      $("mapName").value =
+        d.name || "Shared M.A.P.";
+
+      render();
+
+
+      if(pins.length){
+
+        map.fitBounds(
+          L.latLngBounds(
+            pins.map(
+              p=>[p.lat,p.lng]
+            )
+          ),
+          {
+            padding:[30,30]
+          }
+        );
+
+      }
+
+      return;
+
+    }catch(e){}
+
+  }
+
+
+  try{
+
+    let d =
+      JSON.parse(
+        localStorage.getItem("map_mvp")
+      );
+
+
+    if(d){
+
+      pins =
+        d.pins || [];
+
+      $("mapName").value =
+        d.name || "My M.A.P.";
+
+    }
+
+  }catch(e){}
+
+
+  render();
+
+}
+
+
+/* add pin */
+
+$("addBtn").onclick =
+()=>{
+
+  adding = true;
+
+  $("addBtn").textContent =
+    "📍 Tap map to place pin";
+
+};
+
+
+/* map click */
+
+map.on(
+  "click",
+  e=>{
+
+    if(!adding){
+      return;
+    }
+
+    pending =
+      e.latlng;
+
+    adding =
+      false;
+
+    $("addBtn").textContent =
+      "＋ Add Pin";
+
+    $("title").focus();
+
+  }
+);
+
+
+/* save pin */
+
+$("saveBtn").onclick =
+()=>{
+
+  if(!pending){
+
+    alert(
+      "Tap Add Pin, then tap the map first."
+    );
+
+    return;
+
+  }
+
+
+  let title =
+    $("title")
+      .value
+      .trim();
+
+
+  if(!title){
+
+    alert(
+      "Give your pin a name."
+    );
+
+    return;
+
+  }
+
+
+  pins.push({
+
+    title:title,
+
+    cat:
+      $("category").value,
+
+    notes:
+      $("notes")
+      .value
+      .trim(),
+
+    media:
+      $("media")
+      .value
+      .trim(),
+
+    lat:
+      +pending.lat
+       .toFixed(5),
+
+    lng:
+      +pending.lng
+       .toFixed(5)
+
+  });
+
+
+  pending = null;
+
+  $("title").value = "";
+  $("notes").value = "";
+  $("media").value = "";
+
+  render();
+
+};
+
+
+/* map name */
+
+$("mapName").onchange =
+  render;
+
+
+/* reset */
+
+$("clearBtn").onclick =
+()=>{
+
+  if(
+    confirm(
+      "Reset this geographic M.A.P. and delete all local pins? Your NOVA vision will remain saved."
+    )
+  ){
+
+    pins = [];
+
+    render();
+
+  }
+
+};
+
+
+/* share */
+
+$("shareBtn").onclick =
+async()=>{
+
+  let url =
+    location.origin +
+    location.pathname +
+    "?m=" +
+    encodeData({
+      name:$("mapName").value,
+      pins:pins
+    });
+
+
+  if(navigator.share){
+
+    try{
+
+      await navigator.share({
+        title:$("mapName").value,
+        text:"Check out my M.A.P.",
+        url:url
+      });
+
+      return;
+
+    }catch(e){}
+
+  }
+
+
+  try{
+
+    await navigator
+      .clipboard
+      .writeText(url);
+
+    alert(
+      "Share link copied!"
+    );
+
+  }catch(e){
+
+    prompt(
+      "Copy your share link:",
+      url
+    );
+
+  }
+
+};
+
+
+load();
+
+</script>
+
+</body>
+</html>
