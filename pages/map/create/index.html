@@ -8,7 +8,7 @@
 <title>Build Your M.A.P. | Mission Alignment Protocol</title>
 
 <meta name="description"
-content="Turn your vision into missions, milestones, actions and destinations with M.A.P. and NOVA.">
+content="Turn your vision into missions, milestones, actions, experiences and destinations with M.A.P. and NOVA.">
 
 <link rel="stylesheet"
 href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
@@ -23,6 +23,8 @@ href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   --muted:#9eafbd;
   --blue:#63c9ff;
   --green:#55e29d;
+  --gold:#ffd76b;
+  --red:#ff8d8d;
 }
 
 *{box-sizing:border-box}
@@ -39,28 +41,18 @@ body{
   font-family:Arial,sans-serif;
 }
 
-button,input,select,textarea{
-  font:inherit;
-}
-
+button,input,select,textarea{font:inherit}
 button{cursor:pointer}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
+a{color:inherit;text-decoration:none}
 
 .shell{
   width:min(100%,1000px);
   margin:auto;
 }
 
-/* HEADER */
-
 .top{
   padding:18px 18px 24px;
-  background:
-    linear-gradient(180deg,#0a1622,#05070d);
+  background:linear-gradient(180deg,#0a1622,#05070d);
   border-bottom:1px solid #22303f;
 }
 
@@ -110,7 +102,7 @@ h1{
   color:#fff!important;
 }
 
-/* NOVA HANDOFF */
+/* NOVA */
 
 .nova-loaded{
   display:none;
@@ -124,9 +116,7 @@ h1{
     linear-gradient(145deg,#0d2030,#08121c);
 }
 
-.nova-loaded.active{
-  display:block;
-}
+.nova-loaded.active{display:block}
 
 .status{
   display:flex;
@@ -149,7 +139,6 @@ h1{
 .nova-loaded h2{
   margin:15px 0 10px;
   font-size:29px;
-  letter-spacing:-.03em;
 }
 
 .nova-loaded p{
@@ -184,7 +173,7 @@ h1{
   font-weight:800;
 }
 
-/* SYSTEM */
+/* VISION AREAS */
 
 .system{
   padding:15px 16px 28px;
@@ -201,7 +190,6 @@ h1{
 .system h2{
   margin:0;
   font-size:32px;
-  letter-spacing:-.035em;
 }
 
 .system-intro{
@@ -218,7 +206,7 @@ h1{
 
 .theme-card{
   position:relative;
-  min-height:125px;
+  min-height:145px;
   padding:15px;
   overflow:hidden;
   border:1px solid #28465b;
@@ -227,6 +215,14 @@ h1{
     radial-gradient(circle at 100% 0,
     rgba(75,191,245,.14),transparent 45%),
     #0b1722;
+  color:#fff;
+  text-align:left;
+  transition:.18s ease;
+}
+
+.theme-card:active{
+  transform:scale(.98);
+  border-color:var(--blue);
 }
 
 .theme-number{
@@ -238,7 +234,8 @@ h1{
 
 .theme-card strong{
   display:block;
-  margin-top:24px;
+  margin-top:28px;
+  padding-right:25px;
   font-size:18px;
   line-height:1.1;
 }
@@ -250,6 +247,16 @@ h1{
   font-size:25px;
 }
 
+.mission-count{
+  position:absolute;
+  left:15px;
+  bottom:13px;
+  color:var(--blue);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.08em;
+}
+
 .empty-vision{
   grid-column:1/-1;
   padding:18px;
@@ -257,6 +264,304 @@ h1{
   border-radius:15px;
   color:#9fb0bd;
   line-height:1.5;
+}
+
+/* MISSION MODE */
+
+.mission-mode{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  overflow:auto;
+  background:
+    radial-gradient(circle at 50% 0,
+    rgba(35,161,224,.18),transparent 30%),
+    #05070d;
+}
+
+.mission-mode.active{display:block}
+
+.mission-shell{
+  width:min(100%,760px);
+  min-height:100vh;
+  margin:auto;
+  padding:18px 16px 60px;
+}
+
+.mission-nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:28px;
+}
+
+.close-mission{
+  padding:10px 13px;
+  border:1px solid #29485e;
+  border-radius:11px;
+  background:#0b1722;
+  color:#d8e5ed;
+  font-weight:800;
+}
+
+.mission-head{
+  padding:22px;
+  border:1px solid #326583;
+  border-radius:23px;
+  background:
+    radial-gradient(circle at 100% 0,
+    rgba(73,196,248,.16),transparent 40%),
+    #0a1824;
+}
+
+.mission-head-icon{
+  font-size:40px;
+  margin-bottom:12px;
+}
+
+.mission-head h2{
+  margin:6px 0 10px;
+  font-size:36px;
+  letter-spacing:-.04em;
+}
+
+.mission-head p{
+  color:#b4c3ce;
+  line-height:1.55;
+}
+
+.nova-question{
+  margin-top:18px;
+  padding:15px;
+  border-left:3px solid var(--blue);
+  background:#07111a;
+  line-height:1.5;
+}
+
+.mission-list-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin:28px 0 12px;
+}
+
+.mission-list-head h3{
+  margin:0;
+  font-size:25px;
+}
+
+.new-mission{
+  padding:11px 14px;
+  border:1px solid #5fcaff;
+  border-radius:12px;
+  background:#1267b2;
+  color:#fff;
+  font-weight:900;
+}
+
+.no-missions{
+  padding:25px 18px;
+  border:1px dashed #315069;
+  border-radius:17px;
+  color:#9eb0be;
+  text-align:center;
+  line-height:1.6;
+}
+
+.mission-card{
+  margin-top:12px;
+  padding:18px;
+  border:1px solid #29485e;
+  border-radius:18px;
+  background:#0b1722;
+}
+
+.mission-card.achieved{
+  border-color:#397a60;
+  background:
+    radial-gradient(circle at 100% 0,
+    rgba(85,226,157,.1),transparent 40%),
+    #0b1722;
+}
+
+.mission-state{
+  color:var(--blue);
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.15em;
+}
+
+.mission-card.achieved .mission-state{
+  color:var(--green);
+}
+
+.mission-card h4{
+  margin:8px 0 7px;
+  font-size:22px;
+}
+
+.mission-card p{
+  margin:0;
+  color:#aab9c5;
+  line-height:1.5;
+}
+
+.next-action-box{
+  margin-top:15px;
+  padding:13px;
+  border-left:3px solid var(--gold);
+  background:#11170e;
+}
+
+.next-action-box small{
+  color:var(--gold);
+  font-weight:900;
+  letter-spacing:.12em;
+}
+
+.next-action-box div{
+  margin-top:5px;
+  color:#eef1df;
+  line-height:1.45;
+}
+
+.milestones{
+  margin-top:17px;
+}
+
+.milestones-title{
+  color:#91a6b6;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.13em;
+}
+
+.milestone{
+  display:flex;
+  align-items:flex-start;
+  gap:9px;
+  padding:9px 0;
+  border-bottom:1px solid #1d303e;
+}
+
+.milestone input{
+  margin-top:3px;
+  accent-color:#55e29d;
+}
+
+.milestone.done span{
+  color:#738591;
+  text-decoration:line-through;
+}
+
+.mission-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:16px;
+}
+
+.small-btn{
+  padding:9px 11px;
+  border:1px solid #315069;
+  border-radius:9px;
+  background:#101e29;
+  color:#d5e0e7;
+  font-size:12px;
+  font-weight:800;
+}
+
+.achieve-btn{
+  border-color:#397a60;
+  color:#7af0b5;
+}
+
+.delete-btn{
+  color:#ff9b9b;
+}
+
+/* MISSION FORM */
+
+.form-card{
+  display:none;
+  margin-top:18px;
+  padding:20px;
+  border:1px solid #3a6c8c;
+  border-radius:20px;
+  background:#0a1722;
+}
+
+.form-card.active{display:block}
+
+.form-card h3{
+  margin:0 0 7px;
+  font-size:25px;
+}
+
+.form-help{
+  margin:0 0 18px;
+  color:#a8b8c4;
+  line-height:1.5;
+}
+
+.field{
+  margin-top:15px;
+}
+
+.field label{
+  display:block;
+  margin-bottom:7px;
+  color:#8fa7b8;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.12em;
+}
+
+.field input,
+.field textarea{
+  width:100%;
+  padding:13px;
+  border:1px solid #29485e;
+  border-radius:11px;
+  outline:none;
+  background:#07111a;
+  color:#fff;
+}
+
+.field textarea{
+  min-height:90px;
+  resize:vertical;
+}
+
+.milestone-inputs{
+  display:grid;
+  gap:7px;
+}
+
+.form-actions{
+  display:flex;
+  gap:8px;
+  margin-top:18px;
+}
+
+.save-mission{
+  flex:1;
+  padding:14px;
+  border:1px solid #63c9ff;
+  border-radius:12px;
+  background:#1267b2;
+  color:#fff;
+  font-weight:900;
+}
+
+.cancel-form{
+  padding:14px;
+  border:1px solid #29485e;
+  border-radius:12px;
+  background:#101722;
+  color:#cbd7df;
 }
 
 /* PROTOCOL */
@@ -289,9 +594,7 @@ h1{
   line-height:1.5;
 }
 
-.steps{
-  padding:0 12px 14px;
-}
+.steps{padding:0 12px 14px}
 
 .step{
   display:flex;
@@ -324,7 +627,7 @@ h1{
   line-height:1.4;
 }
 
-/* GEOGRAPHIC MAP SECTION */
+/* GEOGRAPHIC MAP */
 
 .geo-head{
   padding:26px 16px 16px;
@@ -332,14 +635,9 @@ h1{
   background:#070b11;
 }
 
-.geo-head .section-label{
-  margin-bottom:7px;
-}
-
 .geo-head h2{
   margin:0;
   font-size:31px;
-  letter-spacing:-.035em;
 }
 
 .geo-head p{
@@ -357,8 +655,6 @@ h1{
   line-height:1.5;
 }
 
-/* MAP BAR */
-
 .bar{
   display:flex;
   gap:8px;
@@ -367,8 +663,7 @@ h1{
   background:#080c13;
 }
 
-button,
-.bar input{
+button,.bar input{
   border:1px solid #263444;
   background:#101722;
   color:#fff;
@@ -376,9 +671,7 @@ button,
   padding:10px;
 }
 
-.bar input{
-  min-width:170px;
-}
+.bar input{min-width:170px}
 
 .primary{
   background:#1267b2;
@@ -390,8 +683,6 @@ button,
   height:60vh;
   min-height:430px;
 }
-
-/* PIN PANEL */
 
 .panel{
   padding:18px 16px;
@@ -405,7 +696,6 @@ button,
 }
 
 .panel-intro{
-  margin:0 0 14px;
   color:#aab8c6;
   font-size:14px;
   line-height:1.5;
@@ -418,9 +708,7 @@ button,
   margin-top:8px;
 }
 
-.row input,
-.row select,
-.row textarea{
+.row input,.row select,.row textarea{
   flex:1;
   min-width:150px;
   border:1px solid #263444;
@@ -430,9 +718,7 @@ button,
   padding:10px;
 }
 
-.row textarea{
-  min-height:70px;
-}
+.row textarea{min-height:70px}
 
 .hint{
   color:#aab8c6;
@@ -463,17 +749,12 @@ button,
 }
 
 @media(min-width:700px){
-
-  .top,
-  .system,
-  .geo-head,
-  .panel{
+  .top,.system,.geo-head,.panel{
     padding-left:30px;
     padding-right:30px;
   }
 
-  .nova-loaded,
-  .protocol{
+  .nova-loaded,.protocol{
     margin-left:30px;
     margin-right:30px;
   }
@@ -481,7 +762,6 @@ button,
   .theme-grid{
     grid-template-columns:repeat(3,1fr);
   }
-
 }
 </style>
 </head>
@@ -492,972 +772,1691 @@ button,
 
 <header class="top">
 
-  <div class="nav">
-    <a class="back" href="../">← M.A.P.</a>
-    <div class="powered">POWERED BY N.O.V.A.</div>
-  </div>
+<div class="nav">
+<a class="back" href="../">← M.A.P.</a>
+<div class="powered">POWERED BY N.O.V.A.</div>
+</div>
 
-  <div class="eyebrow">
-    M.A.P. • MISSION ALIGNMENT PROTOCOL
-  </div>
+<div class="eyebrow">
+M.A.P. • MISSION ALIGNMENT PROTOCOL
+</div>
 
-  <h1>Build Your M.A.P.</h1>
+<h1>Build Your M.A.P.</h1>
 
-  <p>
-    Your vision is the destination.
-    Now we start building the path.
-  </p>
+<p>
+Your vision is the destination.
+Now we start building the path.
+</p>
 
-  <p class="tagline">
-    See it. M.A.P. it. Get it Done ✔️
-  </p>
+<p class="tagline">
+See it. M.A.P. it. Get it Done ✔️
+</p>
 
 </header>
 
 
-<!-- NOVA HANDOFF -->
+<section class="nova-loaded" id="novaLoaded">
 
-<section class="nova-loaded"
-         id="novaLoaded">
+<div class="status">
+<span class="status-dot"></span>
+N.O.V.A. • VISION LOADED
+</div>
 
-  <div class="status">
-    <span class="status-dot"></span>
-    N.O.V.A. • VISION LOADED
-  </div>
+<h2>I brought your vision with us.</h2>
 
-  <h2>I brought your vision with us.</h2>
+<p>
+We aren't starting over. Everything you told me
+is the foundation of this M.A.P.
+</p>
 
-  <p>
-    We aren't starting over. Everything you just told me
-    is the foundation of this M.A.P.
-  </p>
+<div class="vision-preview collapsed"
+id="visionPreview"></div>
 
-  <div class="vision-preview collapsed"
-       id="visionPreview"></div>
-
-  <button class="vision-toggle"
-          id="visionToggle">
-    SHOW FULL VISION ↓
-  </button>
+<button class="vision-toggle"
+id="visionToggle">
+SHOW FULL VISION ↓
+</button>
 
 </section>
 
-
-<!-- VISION AREAS -->
 
 <section class="system">
 
-  <div class="section-label">
-    YOUR LIFE • ONE SYSTEM
-  </div>
+<div class="section-label">
+YOUR LIFE • ONE SYSTEM
+</div>
 
-  <h2>Your Vision Areas</h2>
+<h2>Your Vision Areas</h2>
 
-  <p class="system-intro">
-    These are the major areas NOVA found in the life
-    you described. They aren't separate lives.
-    They're pieces of the same M.A.P.
-  </p>
+<p class="system-intro">
+Tap any area of your life. We'll turn what you see
+into missions, milestones and the next action you
+can actually take.
+</p>
 
-  <div class="theme-grid"
-       id="themeGrid"></div>
+<div class="theme-grid"
+id="themeGrid"></div>
 
 </section>
 
-
-<!-- MAP PROTOCOL -->
 
 <section class="protocol">
 
-  <div class="protocol-title">
+<div class="protocol-title">
 
-    <small>THE M.A.P. PROTOCOL</small>
+<small>THE M.A.P. PROTOCOL</small>
 
-    <h2>Vision becomes action.</h2>
+<h2>Vision becomes action.</h2>
 
-    <p>
-      Every part of your vision can move through the
-      same simple path.
-    </p>
+<p>
+Every part of your vision moves through the same path.
+</p>
 
-  </div>
+</div>
 
-  <div class="steps">
+<div class="steps">
 
-    <div class="step">
-      <div class="step-num">01</div>
-      <div>
-        <strong>VISION</strong>
-        <span>What does the life you want actually look like?</span>
-      </div>
-    </div>
+<div class="step">
+<div class="step-num">01</div>
+<div>
+<strong>VISION</strong>
+<span>See the life you want.</span>
+</div>
+</div>
 
-    <div class="step">
-      <div class="step-num">02</div>
-      <div>
-        <strong>MISSION</strong>
-        <span>What major outcome moves you toward that vision?</span>
-      </div>
-    </div>
+<div class="step">
+<div class="step-num">02</div>
+<div>
+<strong>MISSION</strong>
+<span>Define an outcome that makes part of the vision real.</span>
+</div>
+</div>
 
-    <div class="step">
-      <div class="step-num">03</div>
-      <div>
-        <strong>MILESTONES</strong>
-        <span>What has to become true along the way?</span>
-      </div>
-    </div>
+<div class="step">
+<div class="step-num">03</div>
+<div>
+<strong>MILESTONES</strong>
+<span>Identify what must become true along the way.</span>
+</div>
+</div>
 
-    <div class="step">
-      <div class="step-num">04</div>
-      <div>
-        <strong>ACTIONS</strong>
-        <span>What can you actually do next?</span>
-      </div>
-    </div>
+<div class="step">
+<div class="step-num">04</div>
+<div>
+<strong>NEXT ACTION</strong>
+<span>Know exactly what you can do next.</span>
+</div>
+</div>
 
-    <div class="step">
-      <div class="step-num">05</div>
-      <div>
-        <strong>EXPERIENCE</strong>
-        <span>Do it. Live it. Record the story.</span>
-      </div>
-    </div>
+<div class="step">
+<div class="step-num">05</div>
+<div>
+<strong>EXPERIENCE</strong>
+<span>Do it. Live it. Record the story.</span>
+</div>
+</div>
 
-  </div>
+</div>
 
 </section>
 
 
-<!-- GEOGRAPHIC LAYER -->
-
 <section class="geo-head">
 
-  <div class="section-label">
-    M.A.P. • PLACES & DESTINATIONS
-  </div>
+<div class="section-label">
+M.A.P. • PLACES & DESTINATIONS
+</div>
 
-  <h2>Where does your life take you? 🗺️</h2>
+<h2>Where does your life take you? 🗺️</h2>
 
-  <p>
-    Some dreams have a place attached to them.
-    Put those destinations, experiences, goals and
-    milestones on the world.
-  </p>
+<p>
+Some dreams have a place attached to them.
+Put those destinations, experiences, goals
+and milestones on the world.
+</p>
 
-  <div class="geo-note">
-    <strong>This map is one layer of your M.A.P.</strong><br>
-    Your M.A.P. is your whole life system — not just geography.
-  </div>
+<div class="geo-note">
+<strong>This geographic map is one layer of your M.A.P.</strong><br>
+Your M.A.P. is your whole life system — not just geography.
+</div>
 
 </section>
 
 
 <div class="bar">
 
-  <input id="mapName"
-         value="My M.A.P."
-         aria-label="Map name">
+<input id="mapName"
+value="My M.A.P."
+aria-label="Map name">
 
-  <button class="primary"
-          id="addBtn">
-    ＋ Add Pin
-  </button>
+<button class="primary"
+id="addBtn">
+＋ Add Pin
+</button>
 
-  <button id="shareBtn">
-    🔗 Share
-  </button>
+<button id="shareBtn">
+🔗 Share
+</button>
 
-  <button id="clearBtn">
-    Reset
-  </button>
+<button id="clearBtn">
+Reset
+</button>
 
 </div>
-
 
 <div id="map"></div>
 
 
 <section class="panel">
 
-  <h3>Add a place to your story</h3>
+<h3>Add a place to your story</h3>
 
-  <p class="panel-intro">
-    Add somewhere you've been, somewhere you're going,
-    or somewhere connected to the life you're building.
-  </p>
+<p class="panel-intro">
+Add somewhere you've been, somewhere you're going,
+or somewhere connected to the life you're building.
+</p>
 
-  <div class="row">
+<div class="row">
 
-    <input id="title"
-           placeholder="Pin name">
+<input id="title"
+placeholder="Pin name">
 
-    <select id="category">
-      <option value="done">🟣 Done / Experienced</option>
-      <option value="progress">🔵 In Progress / Training</option>
-      <option value="soon">🟡 Next / Soon</option>
-      <option value="goal">🟠 Goal</option>
-      <option value="explore">⚪ Explore</option>
-    </select>
+<select id="category">
+<option value="done">🟣 Done / Experienced</option>
+<option value="progress">🔵 In Progress / Training</option>
+<option value="soon">🟡 Next / Soon</option>
+<option value="goal">🟠 Goal</option>
+<option value="explore">⚪ Explore</option>
+</select>
 
-    <input id="media"
-           placeholder="Photo/video link (optional)">
+<input id="media"
+placeholder="Photo/video link (optional)">
 
-  </div>
+</div>
 
-  <div class="row">
+<div class="row">
 
-    <textarea id="notes"
-      placeholder="Story, notes, progress, what's next..."></textarea>
+<textarea id="notes"
+placeholder="Story, notes, progress, what's next..."></textarea>
 
-    <button class="primary"
-            id="saveBtn">
-      Save Pin
-    </button>
+<button class="primary"
+id="saveBtn">
+Save Pin
+</button>
 
-  </div>
+</div>
 
-  <p class="hint">
-    Tap <b>Add Pin</b>, then tap anywhere on the map.
-    Your M.A.P. saves on this device. Share creates a
-    link containing the current geographic map.<br><br>
+<p class="hint">
+Tap <b>Add Pin</b>, then tap anywhere on the map.
+Your M.A.P. saves on this device.<br><br>
 
-    <span class="dot" style="background:#a855f7"></span>
-    Done &nbsp;
-
-    <span class="dot" style="background:#2f9bff"></span>
-    In Progress &nbsp;
-
-    <span class="dot" style="background:#ffd43b"></span>
-    Soon &nbsp;
-
-    <span class="dot" style="background:#ff8c2f"></span>
-    Goal &nbsp;
-
-    <span class="dot" style="background:#c8d0d9"></span>
-    Explore
-  </p>
+<span class="dot" style="background:#a855f7"></span>Done &nbsp;
+<span class="dot" style="background:#2f9bff"></span>In Progress &nbsp;
+<span class="dot" style="background:#ffd43b"></span>Soon &nbsp;
+<span class="dot" style="background:#ff8c2f"></span>Goal &nbsp;
+<span class="dot" style="background:#c8d0d9"></span>Explore
+</p>
 
 </section>
 
 
 <div class="footer">
-  SEE IT • M.A.P. IT • GET IT DONE<br><br>
-  M.A.P. • MISSION ALIGNMENT PROTOCOL
+SEE IT • M.A.P. IT • GET IT DONE<br><br>
+M.A.P. • MISSION ALIGNMENT PROTOCOL
 </div>
 
 </div>
+
+
+<!-- =====================================================
+     MISSION MODE
+===================================================== -->
+
+<section class="mission-mode"
+id="missionMode">
+
+<div class="mission-shell">
+
+<div class="mission-nav">
+
+<button class="close-mission"
+id="closeMission">
+← MY M.A.P.
+</button>
+
+<div class="powered">
+N.O.V.A. • MISSION MODE
+</div>
+
+</div>
+
+
+<div class="mission-head">
+
+<div class="status">
+<span class="status-dot"></span>
+N.O.V.A. ONLINE
+</div>
+
+<div class="mission-head-icon"
+id="missionIcon">
+✦
+</div>
+
+<div class="section-label"
+id="missionAreaLabel">
+VISION AREA
+</div>
+
+<h2 id="missionAreaTitle">
+Vision Area
+</h2>
+
+<p>
+Now we're going to take this part of the life
+you see and start making it real.
+</p>
+
+<div class="nova-question">
+<strong>NOVA:</strong><br><br>
+What would need to become true for you to look at
+this part of your life and say,
+<strong>“Yes. I'm living it.”</strong>
+</div>
+
+</div>
+
+
+<div class="mission-list-head">
+
+<h3>Your Missions</h3>
+
+<button class="new-mission"
+id="newMission">
+＋ Mission
+</button>
+
+</div>
+
+
+<div id="missionList"></div>
+
+
+<div class="form-card"
+id="missionForm">
+
+<h3>Create a Mission</h3>
+
+<p class="form-help">
+Don't describe everything. Pick one meaningful outcome
+that moves this part of your vision forward.
+</p>
+
+
+<div class="field">
+
+<label>MISSION</label>
+
+<input id="missionTitle"
+placeholder="What do I want to make real?">
+
+</div>
+
+
+<div class="field">
+
+<label>WHY THIS MATTERS</label>
+
+<textarea id="missionWhy"
+placeholder="Why does this matter to the life I see?"></textarea>
+
+</div>
+
+
+<div class="field">
+
+<label>MILESTONES</label>
+
+<div class="milestone-inputs">
+
+<input class="milestoneInput"
+placeholder="Milestone 1">
+
+<input class="milestoneInput"
+placeholder="Milestone 2">
+
+<input class="milestoneInput"
+placeholder="Milestone 3">
+
+<input class="milestoneInput"
+placeholder="Milestone 4">
+
+</div>
+
+</div>
+
+
+<div class="field">
+
+<label>NEXT ACTION</label>
+
+<input id="missionNext"
+placeholder="What's the next thing I can actually do?">
+
+</div>
+
+
+<div class="form-actions">
+
+<button class="cancel-form"
+id="cancelMission">
+Cancel
+</button>
+
+<button class="save-mission"
+id="saveMission">
+ADD TO MY M.A.P. →
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 
 
 <script
 src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
 </script>
 
+
 <script>
 
-/* =========================================================
-   NOVA → M.A.P. HANDOFF
-   ========================================================= */
+/* =====================================================
+   HELPERS
+===================================================== */
 
-const themeInfo = {
+const $ =
+id => document.getElementById(id);
 
-  family:{
-    title:"Family & Legacy",
-    icon:"❤️"
-  },
 
-  flight:{
-    title:"Flight & Adventure",
-    icon:"🪽"
-  },
+function makeId(){
 
-  home:{
-    title:"Home & Place",
-    icon:"🏡"
-  },
+return (
+Date.now().toString(36) +
+Math.random().toString(36).slice(2,8)
+);
 
-  health:{
-    title:"Strength & Health",
-    icon:"💪"
-  },
+}
 
-  business:{
-    title:"Business & Career",
-    icon:"🛠️"
-  },
 
-  map:{
-    title:"M.A.P.",
-    icon:"🗺️"
-  },
+/* =====================================================
+   NOVA VISION
+===================================================== */
 
-  nova:{
-    title:"NOVA",
-    icon:"✦"
-  },
+const themeInfo={
 
-  money:{
-    title:"Financial Freedom",
-    icon:"◈"
-  },
+family:{
+title:"Family & Legacy",
+icon:"❤️"
+},
 
-  travel:{
-    title:"Travel & Experiences",
-    icon:"🌎"
-  },
+flight:{
+title:"Flight & Adventure",
+icon:"🪽"
+},
 
-  purpose:{
-    title:"Purpose & Impact",
-    icon:"🔥"
-  },
+home:{
+title:"Home & Place",
+icon:"🏡"
+},
 
-  freedom:{
-    title:"Freedom",
-    icon:"☀️"
-  }
+health:{
+title:"Strength & Health",
+icon:"💪"
+},
+
+business:{
+title:"Business & Career",
+icon:"🛠️"
+},
+
+map:{
+title:"M.A.P.",
+icon:"🗺️"
+},
+
+nova:{
+title:"NOVA",
+icon:"✦"
+},
+
+money:{
+title:"Financial Freedom",
+icon:"◈"
+},
+
+travel:{
+title:"Travel & Experiences",
+icon:"🌎"
+},
+
+purpose:{
+title:"Purpose & Impact",
+icon:"🔥"
+},
+
+freedom:{
+title:"Freedom",
+icon:"☀️"
+}
 
 };
 
 
-let novaVision = null;
+let novaVision=null;
 
 try{
 
-  novaVision =
-    JSON.parse(
-      localStorage.getItem("map_nova_vision")
-    );
+novaVision=
+JSON.parse(
+localStorage.getItem("map_nova_vision")
+);
 
 }catch(e){
 
-  novaVision = null;
+novaVision=null;
 
 }
 
 
-const novaLoaded =
-  document.getElementById("novaLoaded");
+/* =====================================================
+   MISSIONS STORAGE
+===================================================== */
 
-const visionPreview =
-  document.getElementById("visionPreview");
+let missionData={};
 
-const themeGrid =
-  document.getElementById("themeGrid");
+try{
 
+missionData=
+JSON.parse(
+localStorage.getItem("map_missions")
+) || {};
+
+}catch(e){
+
+missionData={};
+
+}
+
+
+function saveMissionData(){
+
+localStorage.setItem(
+"map_missions",
+JSON.stringify(missionData)
+);
+
+renderVisionAreas();
+
+}
+
+
+/* =====================================================
+   VISION AREA CARDS
+===================================================== */
+
+function renderVisionAreas(){
+
+const grid=$("themeGrid");
+
+grid.textContent="";
+
+
+if(
+!novaVision ||
+!Array.isArray(novaVision.themes) ||
+!novaVision.themes.length
+){
+
+const empty=
+document.createElement("div");
+
+empty.className="empty-vision";
+
+empty.textContent=
+"No NOVA vision is loaded yet. Return to NOVA and build your vision first.";
+
+grid.appendChild(empty);
+
+return;
+
+}
+
+
+novaVision.themes.forEach((theme,index)=>{
+
+const info=
+themeInfo[theme.id] || {
+title:theme.title || "Vision Area",
+icon:"✦"
+};
+
+
+const card=
+document.createElement("button");
+
+card.className="theme-card";
+
+
+const number=
+document.createElement("div");
+
+number.className="theme-number";
+
+number.textContent=
+"VISION " +
+String(index+1).padStart(2,"0");
+
+
+const icon=
+document.createElement("div");
+
+icon.className="theme-icon";
+
+icon.textContent=info.icon;
+
+
+const title=
+document.createElement("strong");
+
+title.textContent=info.title;
+
+
+const count=
+document.createElement("div");
+
+count.className="mission-count";
+
+
+const areaMissions=
+missionData[theme.id] || [];
+
+
+const active=
+areaMissions.filter(
+m=>!m.achieved
+).length;
+
+
+const achieved=
+areaMissions.filter(
+m=>m.achieved
+).length;
+
+
+if(areaMissions.length===0){
+
+count.textContent="TAP TO BUILD →";
+
+}else{
+
+count.textContent=
+active +
+" ACTIVE • " +
+achieved +
+" ACHIEVED";
+
+}
+
+
+card.appendChild(number);
+card.appendChild(icon);
+card.appendChild(title);
+card.appendChild(count);
+
+
+card.addEventListener(
+"click",
+()=>openMissionMode(theme.id)
+);
+
+
+grid.appendChild(card);
+
+});
+
+}
+
+
+/* =====================================================
+   NOVA HANDOFF
+===================================================== */
 
 function renderNovaVision(){
 
-  if(
-    novaVision &&
-    novaVision.vision
-  ){
+if(
+novaVision &&
+novaVision.vision
+){
 
-    novaLoaded.classList.add("active");
+$("novaLoaded")
+.classList.add("active");
 
-    visionPreview.textContent =
-      novaVision.vision;
+$("visionPreview")
+.textContent=
+novaVision.vision;
 
+}
 
-    let themes =
-      Array.isArray(novaVision.themes)
-      ? novaVision.themes
-      : [];
-
-
-    if(themes.length){
-
-      themeGrid.textContent = "";
-
-
-      themes.forEach((theme,index)=>{
-
-        const info =
-          themeInfo[theme.id] || {
-            title:theme.title || "Vision Area",
-            icon:"✦"
-          };
-
-
-        const card =
-          document.createElement("div");
-
-        card.className =
-          "theme-card";
-
-
-        const number =
-          document.createElement("div");
-
-        number.className =
-          "theme-number";
-
-        number.textContent =
-          "VISION " +
-          String(index+1).padStart(2,"0");
-
-
-        const icon =
-          document.createElement("div");
-
-        icon.className =
-          "theme-icon";
-
-        icon.textContent =
-          info.icon;
-
-
-        const title =
-          document.createElement("strong");
-
-        title.textContent =
-          info.title;
-
-
-        card.appendChild(number);
-        card.appendChild(icon);
-        card.appendChild(title);
-
-        themeGrid.appendChild(card);
-
-      });
-
-    }else{
-
-      showEmptyVision();
-
-    }
-
-  }else{
-
-    showEmptyVision();
-
-  }
+renderVisionAreas();
 
 }
 
 
-function showEmptyVision(){
+$("visionToggle")
+.addEventListener(
+"click",
+()=>{
 
-  themeGrid.textContent = "";
+const collapsed=
+$("visionPreview")
+.classList.toggle("collapsed");
 
-  const empty =
-    document.createElement("div");
+$("visionToggle")
+.textContent=
+collapsed
+? "SHOW FULL VISION ↓"
+: "COLLAPSE VISION ↑";
 
-  empty.className =
-    "empty-vision";
+}
+);
 
-  empty.textContent =
-    "No NOVA vision is loaded on this device yet. " +
-    "You can still use the geographic M.A.P. below, " +
-    "or return to NOVA and build your vision first.";
 
-  themeGrid.appendChild(empty);
+/* =====================================================
+   MISSION MODE
+===================================================== */
+
+let currentArea=null;
+
+
+function openMissionMode(areaId){
+
+currentArea=areaId;
+
+const info=
+themeInfo[areaId] || {
+title:"Vision Area",
+icon:"✦"
+};
+
+
+$("missionIcon")
+.textContent=
+info.icon;
+
+
+$("missionAreaLabel")
+.textContent=
+"VISION AREA";
+
+
+$("missionAreaTitle")
+.textContent=
+info.title;
+
+
+$("missionMode")
+.classList.add("active");
+
+
+document.body.style.overflow="hidden";
+
+
+$("missionForm")
+.classList.remove("active");
+
+
+renderMissionList();
+
+
+$("missionMode")
+.scrollTo({
+top:0,
+behavior:"instant"
+});
 
 }
 
 
-/* expand/collapse original vision */
+function closeMissionMode(){
+
+$("missionMode")
+.classList.remove("active");
+
+document.body.style.overflow="";
+
+currentArea=null;
+
+renderVisionAreas();
+
+}
+
+
+$("closeMission")
+.onclick=
+closeMissionMode;
+
+
+/* =====================================================
+   NEW MISSION FORM
+===================================================== */
+
+$("newMission").onclick=
+()=>{
+
+$("missionForm")
+.classList.add("active");
+
+$("missionTitle").focus();
+
+};
+
+
+$("cancelMission").onclick=
+()=>{
+
+clearMissionForm();
+
+$("missionForm")
+.classList.remove("active");
+
+};
+
+
+function clearMissionForm(){
+
+$("missionTitle").value="";
+$("missionWhy").value="";
+$("missionNext").value="";
 
 document
-.getElementById("visionToggle")
-.addEventListener("click",()=>{
+.querySelectorAll(".milestoneInput")
+.forEach(input=>{
+input.value="";
+});
 
-  const collapsed =
-    visionPreview.classList.toggle("collapsed");
+}
 
-  document
-    .getElementById("visionToggle")
-    .textContent =
-      collapsed
-      ? "SHOW FULL VISION ↓"
-      : "COLLAPSE VISION ↑";
+
+/* =====================================================
+   SAVE MISSION
+===================================================== */
+
+$("saveMission").onclick=
+()=>{
+
+if(!currentArea){
+return;
+}
+
+
+const title=
+$("missionTitle")
+.value
+.trim();
+
+
+if(!title){
+
+alert(
+"Give this mission an outcome first."
+);
+
+$("missionTitle").focus();
+
+return;
+
+}
+
+
+const milestones=
+[...document.querySelectorAll(
+".milestoneInput"
+)]
+.map(input=>input.value.trim())
+.filter(Boolean)
+.map(text=>({
+id:makeId(),
+text:text,
+done:false
+}));
+
+
+const mission={
+
+id:makeId(),
+
+title:title,
+
+why:
+$("missionWhy")
+.value
+.trim(),
+
+next:
+$("missionNext")
+.value
+.trim(),
+
+milestones:milestones,
+
+achieved:false,
+
+createdAt:
+new Date().toISOString(),
+
+achievedAt:null
+
+};
+
+
+if(!missionData[currentArea]){
+
+missionData[currentArea]=[];
+
+}
+
+
+missionData[currentArea]
+.push(mission);
+
+
+saveMissionData();
+
+clearMissionForm();
+
+$("missionForm")
+.classList.remove("active");
+
+renderMissionList();
+
+};
+
+
+/* =====================================================
+   RENDER MISSIONS
+===================================================== */
+
+function renderMissionList(){
+
+const container=
+$("missionList");
+
+container.textContent="";
+
+
+const missions=
+missionData[currentArea] || [];
+
+
+if(!missions.length){
+
+const empty=
+document.createElement("div");
+
+empty.className="no-missions";
+
+empty.innerHTML=
+"<strong>No missions here yet.</strong><br><br>" +
+"This is where vision starts becoming reality.<br>" +
+"Create the first mission for this part of your life.";
+
+container.appendChild(empty);
+
+return;
+
+}
+
+
+missions.forEach(mission=>{
+
+const card=
+document.createElement("div");
+
+card.className=
+"mission-card" +
+(mission.achieved
+? " achieved"
+: "");
+
+
+/* STATUS */
+
+const state=
+document.createElement("div");
+
+state.className=
+"mission-state";
+
+state.textContent=
+mission.achieved
+? "✓ MISSION ACHIEVED"
+: "MISSION IN PROGRESS";
+
+
+/* TITLE */
+
+const title=
+document.createElement("h4");
+
+title.textContent=
+mission.title;
+
+
+card.appendChild(state);
+card.appendChild(title);
+
+
+/* WHY */
+
+if(mission.why){
+
+const why=
+document.createElement("p");
+
+why.textContent=
+mission.why;
+
+card.appendChild(why);
+
+}
+
+
+/* NEXT ACTION */
+
+if(
+mission.next &&
+!mission.achieved
+){
+
+const next=
+document.createElement("div");
+
+next.className=
+"next-action-box";
+
+
+const label=
+document.createElement("small");
+
+label.textContent=
+"NEXT ACTION";
+
+
+const text=
+document.createElement("div");
+
+text.textContent=
+mission.next;
+
+
+next.appendChild(label);
+next.appendChild(text);
+
+card.appendChild(next);
+
+}
+
+
+/* MILESTONES */
+
+if(
+Array.isArray(mission.milestones) &&
+mission.milestones.length
+){
+
+const milestones=
+document.createElement("div");
+
+milestones.className=
+"milestones";
+
+
+const heading=
+document.createElement("div");
+
+heading.className=
+"milestones-title";
+
+heading.textContent=
+"MILESTONES";
+
+
+milestones.appendChild(heading);
+
+
+mission.milestones
+.forEach(milestone=>{
+
+const row=
+document.createElement("label");
+
+row.className=
+"milestone" +
+(milestone.done
+? " done"
+: "");
+
+
+const check=
+document.createElement("input");
+
+check.type="checkbox";
+
+check.checked=
+!!milestone.done;
+
+check.disabled=
+mission.achieved;
+
+
+check.addEventListener(
+"change",
+()=>{
+
+milestone.done=
+check.checked;
+
+saveMissionData();
+
+renderMissionList();
+
+}
+);
+
+
+const text=
+document.createElement("span");
+
+text.textContent=
+milestone.text;
+
+
+row.appendChild(check);
+row.appendChild(text);
+
+milestones.appendChild(row);
 
 });
 
 
-renderNovaVision();
+card.appendChild(milestones);
+
+}
 
 
+/* ACTION BUTTONS */
 
-/* =========================================================
-   EXISTING GEOGRAPHIC M.A.P.
-   ========================================================= */
+const actions=
+document.createElement("div");
 
-const colors = {
-  done:"#a855f7",
-  progress:"#2f9bff",
-  soon:"#ffd43b",
-  goal:"#ff8c2f",
-  explore:"#c8d0d9"
+actions.className=
+"mission-actions";
+
+
+if(!mission.achieved){
+
+const achieve=
+document.createElement("button");
+
+achieve.className=
+"small-btn achieve-btn";
+
+achieve.textContent=
+"✓ Mission Achieved";
+
+
+achieve.onclick=
+()=>{
+
+if(
+confirm(
+"Mark this mission achieved?"
+)
+){
+
+mission.achieved=true;
+
+mission.achievedAt=
+new Date().toISOString();
+
+if(
+Array.isArray(mission.milestones)
+){
+
+mission.milestones
+.forEach(m=>{
+m.done=true;
+});
+
+}
+
+saveMissionData();
+
+renderMissionList();
+
+}
+
 };
 
 
-const labels = {
-  done:"Done / Experienced",
-  progress:"In Progress / Training",
-  soon:"Next / Soon",
-  goal:"Goal",
-  explore:"Explore"
+actions.appendChild(achieve);
+
+}
+
+
+/* DELETE */
+
+const del=
+document.createElement("button");
+
+del.className=
+"small-btn delete-btn";
+
+del.textContent=
+"Delete";
+
+
+del.onclick=
+()=>{
+
+if(
+confirm(
+"Delete this mission from your M.A.P.?"
+)
+){
+
+missionData[currentArea]=
+missionData[currentArea]
+.filter(m=>m.id!==mission.id);
+
+saveMissionData();
+
+renderMissionList();
+
+}
+
 };
 
 
-const map =
-  L.map("map")
-   .setView([38.4,-98.5],4);
+actions.appendChild(del);
+
+card.appendChild(actions);
+
+container.appendChild(card);
+
+});
+
+}
+
+
+/* =====================================================
+   GEOGRAPHIC M.A.P.
+===================================================== */
+
+const colors={
+done:"#a855f7",
+progress:"#2f9bff",
+soon:"#ffd43b",
+goal:"#ff8c2f",
+explore:"#c8d0d9"
+};
+
+
+const labels={
+done:"Done / Experienced",
+progress:"In Progress / Training",
+soon:"Next / Soon",
+goal:"Goal",
+explore:"Explore"
+};
+
+
+const map=
+L.map("map")
+.setView(
+[38.4,-98.5],
+4
+);
 
 
 L.tileLayer(
-  "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-  {
-    maxZoom:18,
-    attribution:"&copy; OpenStreetMap contributors"
-  }
+"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+{
+maxZoom:18,
+attribution:"&copy; OpenStreetMap contributors"
+}
 ).addTo(map);
 
 
-const $ =
-  id=>document.getElementById(id);
+let pins=[];
+let markers=[];
+let pending=null;
+let adding=false;
 
-
-let pins = [];
-let markers = [];
-let pending = null;
-let adding = false;
-
-
-/* escape user content */
 
 function esc(s){
 
-  return String(s||"")
-    .replace(
-      /[&<>"']/g,
-      c=>({
-        "&":"&amp;",
-        "<":"&lt;",
-        ">":"&gt;",
-        '"':"&quot;",
-        "'":"&#39;"
-      }[c])
-    );
+return String(s||"")
+.replace(
+/[&<>"']/g,
+c=>({
+"&":"&amp;",
+"<":"&lt;",
+">":"&gt;",
+'"':"&quot;",
+"'":"&#39;"
+}[c])
+);
 
 }
 
-
-/* validate links */
 
 function safeUrl(u){
 
-  try{
+try{
 
-    let x =
-      new URL(u);
+let x=
+new URL(u);
 
-    return /^https?:$/.test(x.protocol)
-      ? x.href
-      : "";
+return /^https?:$/.test(x.protocol)
+? x.href
+: "";
 
-  }catch(e){
+}catch(e){
 
-    return "";
-
-  }
+return "";
 
 }
 
+}
 
-/* render pins */
 
 function render(){
 
-  markers.forEach(
-    m=>map.removeLayer(m)
-  );
+markers.forEach(
+m=>map.removeLayer(m)
+);
 
-  markers = [];
-
-
-  pins.forEach((p,i)=>{
-
-    let u =
-      safeUrl(p.media);
+markers=[];
 
 
-    let media =
-      u
-      ? `<br><a href="${esc(u)}"
-          target="_blank"
-          rel="noopener"
-          style="color:#76cfff">
-          View media ↗
-         </a>`
-      : "";
+pins.forEach((p,i)=>{
+
+let u=
+safeUrl(p.media);
 
 
-    let m =
-      L.circleMarker(
-        [p.lat,p.lng],
-        {
-          radius:9,
-          color:"#081018",
-          weight:2,
-          fillColor:
-            colors[p.cat] ||
-            colors.explore,
-          fillOpacity:1
-        }
-      )
-
-      .bindPopup(
-        `<b>${esc(p.title)}</b>
-         <br>
-         ${esc(labels[p.cat] || "Explore")}
-         <br>
-         ${esc(p.notes)}
-         ${media}
-         <br><br>
-         <button onclick="removePin(${i})">
-         Delete pin
-         </button>`
-      )
-
-      .addTo(map);
+let media=
+u
+? `<br><a href="${esc(u)}"
+target="_blank"
+rel="noopener"
+style="color:#76cfff">
+View media ↗
+</a>`
+: "";
 
 
-    markers.push(m);
+let marker=
+L.circleMarker(
+[p.lat,p.lng],
+{
+radius:9,
+color:"#081018",
+weight:2,
+fillColor:
+colors[p.cat] ||
+colors.explore,
+fillOpacity:1
+}
+)
 
-  });
+.bindPopup(
+`<b>${esc(p.title)}</b>
+<br>
+${esc(labels[p.cat] || "Explore")}
+<br>
+${esc(p.notes)}
+${media}
+<br><br>
+<button onclick="removePin(${i})">
+Delete pin
+</button>`
+)
+
+.addTo(map);
 
 
-  localStorage.setItem(
-    "map_mvp",
-    JSON.stringify({
-      name:$("mapName").value,
-      pins:pins
-    })
-  );
+markers.push(marker);
+
+});
+
+
+localStorage.setItem(
+"map_mvp",
+JSON.stringify({
+name:$("mapName").value,
+pins:pins
+})
+);
 
 }
 
 
-/* delete */
+window.removePin=
+i=>{
 
-window.removePin =
-  i=>{
+pins.splice(i,1);
 
-    pins.splice(i,1);
+render();
 
-    render();
+};
 
-  };
-
-
-/* share encoding */
 
 function encodeData(d){
 
-  return btoa(
-    unescape(
-      encodeURIComponent(
-        JSON.stringify(d)
-      )
-    )
-  )
-  .replace(/\+/g,"-")
-  .replace(/\//g,"_")
-  .replace(/=+$/,"");
+return btoa(
+unescape(
+encodeURIComponent(
+JSON.stringify(d)
+)
+)
+)
+.replace(/\+/g,"-")
+.replace(/\//g,"_")
+.replace(/=+$/,"");
 
 }
 
 
 function decodeData(s){
 
-  s =
-    s
-      .replace(/-/g,"+")
-      .replace(/_/g,"/");
+s=
+s
+.replace(/-/g,"+")
+.replace(/_/g,"/");
 
 
-  while(s.length % 4){
-    s += "=";
-  }
-
-
-  return JSON.parse(
-    decodeURIComponent(
-      escape(
-        atob(s)
-      )
-    )
-  );
-
+while(s.length%4){
+s+="=";
 }
 
 
-/* load existing map */
+return JSON.parse(
+decodeURIComponent(
+escape(
+atob(s)
+)
+)
+);
+
+}
+
 
 function load(){
 
-  let q =
-    new URLSearchParams(
-      location.search
-    ).get("m");
+let q=
+new URLSearchParams(
+location.search
+).get("m");
 
 
-  if(q){
+if(q){
 
-    try{
+try{
 
-      let d =
-        decodeData(q);
+let d=
+decodeData(q);
 
-      pins =
-        d.pins || [];
+pins=d.pins || [];
 
-      $("mapName").value =
-        d.name || "Shared M.A.P.";
+$("mapName").value=
+d.name || "Shared M.A.P.";
 
-      render();
-
-
-      if(pins.length){
-
-        map.fitBounds(
-          L.latLngBounds(
-            pins.map(
-              p=>[p.lat,p.lng]
-            )
-          ),
-          {
-            padding:[30,30]
-          }
-        );
-
-      }
-
-      return;
-
-    }catch(e){}
-
-  }
+render();
 
 
-  try{
+if(pins.length){
 
-    let d =
-      JSON.parse(
-        localStorage.getItem("map_mvp")
-      );
+map.fitBounds(
+L.latLngBounds(
+pins.map(
+p=>[p.lat,p.lng]
+)
+),
+{
+padding:[30,30]
+}
+);
 
+}
 
-    if(d){
+return;
 
-      pins =
-        d.pins || [];
-
-      $("mapName").value =
-        d.name || "My M.A.P.";
-
-    }
-
-  }catch(e){}
-
-
-  render();
+}catch(e){}
 
 }
 
 
-/* add pin */
+try{
 
-$("addBtn").onclick =
-()=>{
-
-  adding = true;
-
-  $("addBtn").textContent =
-    "📍 Tap map to place pin";
-
-};
-
-
-/* map click */
-
-map.on(
-  "click",
-  e=>{
-
-    if(!adding){
-      return;
-    }
-
-    pending =
-      e.latlng;
-
-    adding =
-      false;
-
-    $("addBtn").textContent =
-      "＋ Add Pin";
-
-    $("title").focus();
-
-  }
+let d=
+JSON.parse(
+localStorage.getItem(
+"map_mvp"
+)
 );
 
 
-/* save pin */
+if(d){
 
-$("saveBtn").onclick =
+pins=d.pins || [];
+
+$("mapName").value=
+d.name || "My M.A.P.";
+
+}
+
+}catch(e){}
+
+
+render();
+
+}
+
+
+$("addBtn").onclick=
 ()=>{
 
-  if(!pending){
+adding=true;
 
-    alert(
-      "Tap Add Pin, then tap the map first."
-    );
-
-    return;
-
-  }
-
-
-  let title =
-    $("title")
-      .value
-      .trim();
-
-
-  if(!title){
-
-    alert(
-      "Give your pin a name."
-    );
-
-    return;
-
-  }
-
-
-  pins.push({
-
-    title:title,
-
-    cat:
-      $("category").value,
-
-    notes:
-      $("notes")
-      .value
-      .trim(),
-
-    media:
-      $("media")
-      .value
-      .trim(),
-
-    lat:
-      +pending.lat
-       .toFixed(5),
-
-    lng:
-      +pending.lng
-       .toFixed(5)
-
-  });
-
-
-  pending = null;
-
-  $("title").value = "";
-  $("notes").value = "";
-  $("media").value = "";
-
-  render();
+$("addBtn").textContent=
+"📍 Tap map to place pin";
 
 };
 
 
-/* map name */
+map.on(
+"click",
+e=>{
 
-$("mapName").onchange =
-  render;
+if(!adding){
+return;
+}
+
+pending=e.latlng;
+
+adding=false;
+
+$("addBtn").textContent=
+"＋ Add Pin";
+
+$("title").focus();
+
+}
+);
 
 
-/* reset */
-
-$("clearBtn").onclick =
+$("saveBtn").onclick=
 ()=>{
 
-  if(
-    confirm(
-      "Reset this geographic M.A.P. and delete all local pins? Your NOVA vision will remain saved."
-    )
-  ){
+if(!pending){
 
-    pins = [];
+alert(
+"Tap Add Pin, then tap the map first."
+);
 
-    render();
+return;
 
-  }
+}
+
+
+let title=
+$("title")
+.value
+.trim();
+
+
+if(!title){
+
+alert(
+"Give your pin a name."
+);
+
+return;
+
+}
+
+
+pins.push({
+
+title:title,
+
+cat:
+$("category").value,
+
+notes:
+$("notes")
+.value
+.trim(),
+
+media:
+$("media")
+.value
+.trim(),
+
+lat:
++pending.lat.toFixed(5),
+
+lng:
++pending.lng.toFixed(5)
+
+});
+
+
+pending=null;
+
+$("title").value="";
+$("notes").value="";
+$("media").value="";
+
+render();
 
 };
 
 
-/* share */
+$("mapName").onchange=
+render;
 
-$("shareBtn").onclick =
+
+$("clearBtn").onclick=
+()=>{
+
+if(
+confirm(
+"Reset this geographic map and delete all local pins? Your NOVA vision and missions will remain saved."
+)
+){
+
+pins=[];
+
+render();
+
+}
+
+};
+
+
+$("shareBtn").onclick=
 async()=>{
 
-  let url =
-    location.origin +
-    location.pathname +
-    "?m=" +
-    encodeData({
-      name:$("mapName").value,
-      pins:pins
-    });
+let url=
+location.origin +
+location.pathname +
+"?m=" +
+encodeData({
+name:$("mapName").value,
+pins:pins
+});
 
 
-  if(navigator.share){
+if(navigator.share){
 
-    try{
+try{
 
-      await navigator.share({
-        title:$("mapName").value,
-        text:"Check out my M.A.P.",
-        url:url
-      });
+await navigator.share({
+title:$("mapName").value,
+text:"Check out my M.A.P.",
+url:url
+});
 
-      return;
+return;
 
-    }catch(e){}
+}catch(e){}
 
-  }
+}
 
 
-  try{
+try{
 
-    await navigator
-      .clipboard
-      .writeText(url);
+await navigator.clipboard
+.writeText(url);
 
-    alert(
-      "Share link copied!"
-    );
+alert(
+"Share link copied!"
+);
 
-  }catch(e){
+}catch(e){
 
-    prompt(
-      "Copy your share link:",
-      url
-    );
+prompt(
+"Copy your share link:",
+url
+);
 
-  }
+}
 
 };
 
 
+/* =====================================================
+   START
+===================================================== */
+
+renderNovaVision();
 load();
 
 </script>
