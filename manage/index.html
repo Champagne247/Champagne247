@@ -1,0 +1,2245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+<title>Add to My Life | M.A.P.</title>
+
+<meta
+  name="description"
+  content="Create one Master Life Entry and connect it throughout My Life and My M.A.P.">
+
+<meta name="robots" content="noindex,nofollow">
+
+<style>
+*{box-sizing:border-box}
+
+:root{
+  --bg:#03060b;
+  --panel:#091521;
+  --line:#263c52;
+  --blue:#58c3ff;
+  --live:#52f2a8;
+  --gold:#ffd43b;
+  --text:#f5f7fb;
+  --muted:#9eacbd;
+  --danger:#ff6b6b;
+}
+
+html,
+body{
+  width:100%;
+  min-width:100%;
+  margin:0;
+  overflow-x:hidden;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+button,
+input,
+textarea,
+select{
+  width:100%;
+  max-width:100%;
+  font:inherit;
+}
+
+button,
+a,
+label{
+  -webkit-tap-highlight-color:transparent;
+}
+
+.app{
+  min-height:100vh;
+}
+
+.content{
+  width:100%;
+  max-width:760px;
+  margin:auto;
+}
+
+/* HEADER */
+
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  border-bottom:1px solid var(--line);
+  background:rgba(3,7,12,.97);
+  backdrop-filter:blur(18px);
+}
+
+.topbar-inner{
+  min-height:74px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  max-width:760px;
+  margin:auto;
+  padding:11px 16px;
+}
+
+.brand{
+  min-width:0;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo{
+  width:52px;
+  height:52px;
+  flex:0 0 52px;
+  overflow:hidden;
+  border:1px solid rgba(88,195,255,.68);
+  border-radius:14px;
+  background:#06111c;
+  box-shadow:0 0 18px rgba(88,195,255,.20);
+}
+
+.logo img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+
+.brand-title{
+  font-size:17px;
+  font-weight:900;
+}
+
+.brand-subtitle{
+  margin-top:4px;
+  color:var(--muted);
+  font-size:11px;
+}
+
+.close{
+  width:50px;
+  height:50px;
+  flex:0 0 50px;
+  display:grid;
+  place-items:center;
+  border:1px solid #314a62;
+  border-radius:15px;
+  background:#091522;
+  color:#fff;
+  text-decoration:none;
+  font-size:22px;
+}
+
+/* HERO */
+
+.hero{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  padding:42px 22px 36px;
+  border-bottom:1px solid var(--line);
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background:
+    url("../../../assets/map/Hero/hero-creator.webp")
+    center/cover no-repeat;
+  opacity:.25;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:
+    linear-gradient(90deg,rgba(3,7,12,.98),rgba(3,7,12,.62)),
+    linear-gradient(transparent,#03060b);
+}
+
+.eyebrow{
+  color:var(--blue);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.17em;
+}
+
+.hero h1{
+  margin:13px 0 13px;
+  font-size:clamp(40px,11vw,64px);
+  line-height:.94;
+  letter-spacing:-.04em;
+}
+
+.hero h1 span{
+  color:var(--blue);
+}
+
+.hero p{
+  margin:0;
+  color:#c3cdd8;
+  font-size:17px;
+  line-height:1.65;
+}
+
+.hero strong{
+  color:#fff;
+}
+
+/* PROGRESS */
+
+.progress-wrap{
+  position:sticky;
+  top:74px;
+  z-index:900;
+  border-bottom:1px solid var(--line);
+  background:rgba(6,14,23,.97);
+  backdrop-filter:blur(15px);
+}
+
+.progress{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  max-width:760px;
+  margin:auto;
+}
+
+.progress-step{
+  position:relative;
+  padding:14px 2px;
+  color:#718196;
+  text-align:center;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.07em;
+}
+
+.progress-step.active{
+  color:var(--blue);
+}
+
+.progress-step.active::after{
+  content:"";
+  position:absolute;
+  right:8px;
+  bottom:0;
+  left:8px;
+  height:3px;
+  background:var(--blue);
+}
+
+/* FORM */
+
+.form{
+  padding:18px 14px 135px;
+}
+
+.panel{
+  margin-bottom:16px;
+  padding:19px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:linear-gradient(145deg,#0b1824,#07101a);
+  box-shadow:0 14px 32px rgba(0,0,0,.20);
+}
+
+.panel-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:17px;
+}
+
+.panel-head h2{
+  margin:0;
+  font-size:20px;
+}
+
+.number{
+  width:33px;
+  height:33px;
+  flex:0 0 33px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(88,195,255,.55);
+  border-radius:50%;
+  color:var(--blue);
+  font-size:12px;
+  font-weight:900;
+}
+
+.field{
+  margin-bottom:16px;
+}
+
+.field:last-child{
+  margin-bottom:0;
+}
+
+.field label,
+.field-label{
+  display:block;
+  margin-bottom:8px;
+  color:#dce4ec;
+  font-size:12px;
+  font-weight:900;
+}
+
+.help{
+  display:block;
+  margin-top:7px;
+  color:#718196;
+  font-size:10px;
+  line-height:1.55;
+}
+
+input,
+textarea,
+select{
+  display:block;
+  min-width:0;
+  border:1px solid #31495f;
+  border-radius:14px;
+  outline:none;
+  background:#07111b;
+  color:#fff;
+}
+
+input,
+select{
+  min-height:51px;
+  padding:12px 14px;
+}
+
+textarea{
+  min-height:135px;
+  padding:14px;
+  resize:vertical;
+  line-height:1.55;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+  border-color:var(--blue);
+  box-shadow:0 0 0 3px rgba(88,195,255,.10);
+}
+
+input::placeholder,
+textarea::placeholder{
+  color:#607286;
+}
+
+/* CHOICES */
+
+.choices{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:8px;
+}
+
+.choice{
+  position:relative;
+  min-width:0;
+}
+
+.choice input{
+  position:absolute;
+  opacity:0;
+  pointer-events:none;
+}
+
+.choice label{
+  min-height:50px;
+  display:flex;
+  align-items:center;
+  gap:7px;
+  margin:0;
+  padding:10px;
+  overflow:hidden;
+  border:1px solid #31495f;
+  border-radius:14px;
+  background:#07111b;
+  color:#b8c4d1;
+  font-size:11px;
+  cursor:pointer;
+}
+
+.choice input:checked+label{
+  border-color:var(--blue);
+  background:rgba(88,195,255,.14);
+  color:#fff;
+}
+
+.choice input:checked+label::after{
+  content:"✓";
+  margin-left:auto;
+  color:var(--blue);
+  font-weight:900;
+}
+
+/* ROWS */
+
+.list{
+  display:grid;
+  gap:10px;
+}
+
+.item{
+  padding:12px;
+  border:1px solid #2b4358;
+  border-radius:15px;
+  background:#06101a;
+}
+
+.item-grid{
+  display:grid;
+  gap:8px;
+}
+
+.grid-two{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+
+.remove{
+  min-height:42px;
+  margin-top:9px;
+  border:1px solid rgba(255,107,107,.42);
+  border-radius:11px;
+  background:rgba(255,107,107,.07);
+  color:var(--danger);
+  font-size:11px;
+  font-weight:900;
+}
+
+.add{
+  min-height:46px;
+  margin-top:10px;
+  border:1px dashed #3a5a75;
+  border-radius:13px;
+  background:#07111b;
+  color:var(--blue);
+  font-size:12px;
+  font-weight:900;
+}
+
+/* UPLOAD */
+
+.upload{
+  min-height:135px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+  border:1px dashed #3a5a75;
+  border-radius:15px;
+  background:#06101a;
+  color:#a9b7c6;
+  text-align:center;
+}
+
+.upload strong{
+  display:block;
+  margin-bottom:6px;
+  color:var(--blue);
+}
+
+.upload input{
+  display:none;
+}
+
+.upload-preview{
+  display:none;
+  margin-top:13px;
+  overflow:hidden;
+  border:1px solid #30485f;
+  border-radius:15px;
+  background:#06101a;
+}
+
+.upload-preview.active{
+  display:block;
+}
+
+.upload-preview img,
+.upload-preview video{
+  width:100%;
+  max-height:430px;
+  display:block;
+  object-fit:contain;
+}
+
+.upload-name{
+  padding:11px;
+  color:#aebcca;
+  font-size:11px;
+}
+
+.notice{
+  margin-top:13px;
+  padding:13px;
+  border:1px solid rgba(255,212,59,.32);
+  border-radius:13px;
+  background:rgba(255,212,59,.06);
+  color:#d7cc99;
+  font-size:11px;
+  line-height:1.55;
+}
+
+/* PREVIEW */
+
+.preview{
+  display:none;
+  overflow:hidden;
+  margin-top:15px;
+  border:1px solid #35516b;
+  border-radius:19px;
+  background:#03080e;
+}
+
+.preview.active{
+  display:block;
+}
+
+.preview-head{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:15px;
+}
+
+.avatar{
+  width:43px;
+  height:43px;
+  flex:0 0 43px;
+  display:grid;
+  place-items:center;
+  border:1px solid #35516b;
+  border-radius:50%;
+  color:var(--blue);
+  font-weight:900;
+}
+
+.author{
+  font-size:13px;
+  font-weight:900;
+}
+
+.handle{
+  margin-top:3px;
+  color:var(--muted);
+  font-size:11px;
+}
+
+.preview-body{
+  padding:0 15px 17px;
+}
+
+.preview-status{
+  margin-bottom:9px;
+  color:var(--live);
+  font-size:11px;
+  font-weight:900;
+}
+
+.preview h3{
+  margin:0 0 10px;
+  font-size:23px;
+}
+
+.preview-story{
+  color:#bdc8d3;
+  line-height:1.65;
+  white-space:pre-line;
+}
+
+.preview-media{
+  display:none;
+  width:100%;
+  max-height:430px;
+  margin-top:14px;
+  object-fit:contain;
+  border:1px solid #2c455d;
+  border-radius:15px;
+}
+
+.preview-media.active{
+  display:block;
+}
+
+.preview-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:14px;
+}
+
+.tag{
+  padding:7px 10px;
+  border:1px solid #2c455d;
+  border-radius:999px;
+  color:#bce6ff;
+  font-size:10px;
+  font-weight:800;
+}
+
+.preview-location,
+.preview-hashtags{
+  margin-top:13px;
+  color:#8192a5;
+  font-size:11px;
+  line-height:1.6;
+}
+
+.preview-hashtags{
+  color:var(--blue);
+}
+
+/* OUTPUT */
+
+.output{
+  display:none;
+  margin-top:18px;
+}
+
+.output.active{
+  display:block;
+}
+
+.output textarea{
+  min-height:320px;
+  overflow:auto;
+  color:#bce6ff;
+  font-family:monospace;
+  font-size:10px;
+}
+
+.ready{
+  margin-bottom:13px;
+  padding:14px;
+  border:1px solid rgba(82,242,168,.40);
+  border-radius:13px;
+  background:rgba(82,242,168,.07);
+  color:#bfffe0;
+  font-size:11px;
+  line-height:1.55;
+}
+
+.actions{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:9px;
+  margin-top:10px;
+}
+
+.action{
+  min-height:49px;
+  padding:10px;
+  border:1px solid #35516b;
+  border-radius:13px;
+  background:#091622;
+  color:#fff;
+  font-size:11px;
+  font-weight:900;
+}
+
+.action.primary{
+  border-color:var(--blue);
+  background:linear-gradient(135deg,#178ee0,var(--blue));
+  color:#04101a;
+}
+
+.action.green{
+  border-color:var(--live);
+  background:rgba(82,242,168,.12);
+  color:var(--live);
+}
+
+/* BOTTOM BAR */
+
+.bottom{
+  position:fixed;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index:1200;
+  border-top:1px solid var(--line);
+  background:rgba(3,7,12,.97);
+  backdrop-filter:blur(18px);
+}
+
+.bottom-inner{
+  max-width:760px;
+  display:grid;
+  grid-template-columns:1fr 1.35fr;
+  gap:9px;
+  margin:auto;
+  padding:11px 14px;
+}
+
+.bottom button{
+  min-height:53px;
+  border:1px solid #35516b;
+  border-radius:15px;
+  background:#091522;
+  color:#fff;
+  font-size:12px;
+  font-weight:900;
+}
+
+.bottom .primary{
+  border-color:var(--blue);
+  background:linear-gradient(135deg,#178ee0,var(--blue));
+  color:#04101a;
+}
+
+footer{
+  padding:35px 20px 130px;
+  color:#718196;
+  text-align:center;
+  font-size:11px;
+  line-height:1.7;
+}
+
+@media(max-width:420px){
+  .grid-two{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(min-width:680px){
+  .choices{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+<header class="topbar">
+  <div class="topbar-inner">
+
+    <div class="brand">
+
+      <div class="logo">
+        <img
+          src="../../../assets/map/branding/map-logo-icon.png"
+          alt="My Life, My Mission, My M.A.P.">
+      </div>
+
+      <div>
+        <div class="brand-title">Add to My Life</div>
+        <div class="brand-subtitle">
+          Master M.A.P. Entry Composer
+        </div>
+      </div>
+
+    </div>
+
+    <a class="close" href="../life/" aria-label="Close">×</a>
+
+  </div>
+</header>
+
+<main class="content">
+
+<section class="hero">
+
+  <div class="eyebrow">
+    MY LIFE • MY MISSION • MY M.A.P.
+  </div>
+
+  <h1>
+    WHAT'S<br><span>HAPPENING?</span>
+  </h1>
+
+  <p>
+    Create one <strong>Master Life Entry</strong>.
+    Connect it to every path, place, picture, video,
+    opportunity and social destination it touches.
+  </p>
+
+</section>
+
+</main>
+
+<div class="progress-wrap">
+
+  <div class="progress">
+    <div class="progress-step active" data-progress="1">STORY</div>
+    <div class="progress-step" data-progress="2">CONNECT</div>
+    <div class="progress-step" data-progress="3">MEDIA</div>
+    <div class="progress-step" data-progress="4">PUBLISH</div>
+  </div>
+
+</div>
+
+<main class="content">
+
+<form class="form" id="entryForm">
+
+<!-- STORY -->
+
+<section class="panel" data-panel="1">
+
+  <div class="panel-head">
+    <h2>Tell the Story</h2>
+    <span class="number">1</span>
+  </div>
+
+  <div class="field">
+    <label for="title">Entry title</label>
+
+    <input
+      id="title"
+      type="text"
+      placeholder="What are you doing right now?"
+      required>
+  </div>
+
+  <div class="field">
+    <label for="story">Story or update</label>
+
+    <textarea
+      id="story"
+      placeholder="What happened? Why does it matter? What comes next?"
+      required></textarea>
+  </div>
+
+  <div class="field">
+    <label for="status">Journey status</label>
+
+    <select id="status">
+      <option value="now">Happening Now</option>
+      <option value="progress">In Progress</option>
+      <option value="next">Next</option>
+      <option value="goal">Goal</option>
+      <option value="done">Experienced</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label for="date">Date and time</label>
+    <input id="date" type="datetime-local">
+  </div>
+
+</section>
+
+<!-- PATHS AND LOCATION -->
+
+<section class="panel" data-panel="2">
+
+  <div class="panel-head">
+    <h2>Connect the Paths</h2>
+    <span class="number">2</span>
+  </div>
+
+  <div class="field">
+
+    <span class="field-label">
+      Where does this entry belong?
+    </span>
+
+    <div class="choices">
+
+      <div class="choice">
+        <input id="family" type="checkbox" name="paths" value="family">
+        <label for="family">❤️ Family</label>
+      </div>
+
+      <div class="choice">
+        <input id="fitness" type="checkbox" name="paths" value="fitness">
+        <label for="fitness">💪 Fitness</label>
+      </div>
+
+      <div class="choice">
+        <input id="freeflight" type="checkbox" name="paths" value="freeflight">
+        <label for="freeflight">✈️ Freeflight</label>
+      </div>
+
+      <div class="choice">
+        <input id="professional" type="checkbox" name="paths" value="professional">
+        <label for="professional">🔧 Professional</label>
+      </div>
+
+      <div class="choice">
+        <input id="creator" type="checkbox" name="paths" value="creator">
+        <label for="creator">🎨 Creator</label>
+      </div>
+
+      <div class="choice">
+        <input id="travel" type="checkbox" name="paths" value="travel">
+        <label for="travel">🌎 Food & Travel</label>
+      </div>
+
+    </div>
+
+    <span class="help">
+      Select every path touched by this entry.
+    </span>
+
+  </div>
+
+  <div class="field">
+
+    <span class="field-label">
+      Locations and map pins
+    </span>
+
+    <div class="list" id="locationList"></div>
+
+    <button class="add" id="addLocation" type="button">
+      ＋ Add Another Location
+    </button>
+
+    <span class="help">
+      Add latitude and longitude to create an exact map pin.
+    </span>
+
+  </div>
+
+  <div class="field">
+    <label for="hashtags">Hashtags</label>
+
+    <input
+      id="hashtags"
+      type="text"
+      placeholder="MyLife, MyMission, Fitness, Leesville">
+
+    <span class="help">
+      Separate tags with commas. The # symbol is optional.
+    </span>
+  </div>
+
+</section>
+
+<!-- MEDIA -->
+
+<section class="panel" data-panel="3">
+
+  <div class="panel-head">
+    <h2>Add Media</h2>
+    <span class="number">3</span>
+  </div>
+
+  <label class="upload" for="freshUpload">
+
+    <span>
+      <strong>📷 Take or Select a Picture/Video</strong>
+      Preview a fresh file and generate its suggested repository path.
+    </span>
+
+    <input
+      id="freshUpload"
+      type="file"
+      accept="image/*,video/*"
+      capture="environment">
+
+  </label>
+
+  <div class="upload-preview" id="uploadPreview">
+    <div id="uploadPreviewContent"></div>
+    <div class="upload-name" id="uploadName"></div>
+  </div>
+
+  <div class="notice">
+    GitHub Pages cannot permanently store a camera upload by itself.
+    Upload the file into the suggested assets folder, then use that
+    path in the media list below.
+  </div>
+
+  <div class="field" style="margin-top:17px">
+
+    <span class="field-label">
+      Pictures, videos and social media
+    </span>
+
+    <div class="list" id="mediaList"></div>
+
+    <button class="add" id="addMedia" type="button">
+      ＋ Add Another Picture, Video or Social Link
+    </button>
+
+  </div>
+
+</section>
+
+<!-- LINKS AND OPPORTUNITY -->
+
+<section class="panel">
+
+  <div class="panel-head">
+    <h2>Links & Opportunity</h2>
+    <span class="number">＋</span>
+  </div>
+
+  <div class="field">
+
+    <span class="field-label">
+      Connected buttons and links
+    </span>
+
+    <div class="list" id="linkList"></div>
+
+    <button class="add" id="addLink" type="button">
+      ＋ Add Another Link
+    </button>
+
+  </div>
+
+  <div class="field">
+    <label for="opportunityTitle">Opportunity title</label>
+
+    <input
+      id="opportunityTitle"
+      type="text"
+      placeholder="Fitness accountability content">
+  </div>
+
+  <div class="field">
+    <label for="opportunityDescription">
+      Opportunity description
+    </label>
+
+    <textarea
+      id="opportunityDescription"
+      placeholder="How could this entry become a service, product, partnership, sponsorship or future opportunity?"></textarea>
+  </div>
+
+  <div class="field">
+    <label for="opportunityActions">
+      Opportunity actions
+    </label>
+
+    <input
+      id="opportunityActions"
+      type="text"
+      placeholder="Create video, Contact partner, Build program">
+
+    <span class="help">
+      Separate actions with commas.
+    </span>
+  </div>
+
+</section>
+
+<!-- PUBLISH -->
+
+<section class="panel" data-panel="4">
+
+  <div class="panel-head">
+    <h2>Choose Destinations</h2>
+    <span class="number">4</span>
+  </div>
+
+  <div class="choices">
+
+    <div class="choice">
+      <input
+        id="mapPlatform"
+        type="checkbox"
+        name="platforms"
+        value="map"
+        checked>
+
+      <label for="mapPlatform">🗺️ My M.A.P.</label>
+    </div>
+
+    <div class="choice">
+      <input
+        id="facebook"
+        type="checkbox"
+        name="platforms"
+        value="facebook">
+
+      <label for="facebook">Facebook</label>
+    </div>
+
+    <div class="choice">
+      <input
+        id="instagram"
+        type="checkbox"
+        name="platforms"
+        value="instagram">
+
+      <label for="instagram">Instagram</label>
+    </div>
+
+    <div class="choice">
+      <input
+        id="tiktok"
+        type="checkbox"
+        name="platforms"
+        value="tiktok">
+
+      <label for="tiktok">TikTok</label>
+    </div>
+
+    <div class="choice">
+      <input
+        id="youtube"
+        type="checkbox"
+        name="platforms"
+        value="youtube">
+
+      <label for="youtube">YouTube</label>
+    </div>
+
+    <div class="choice">
+      <input
+        id="x"
+        type="checkbox"
+        name="platforms"
+        value="x">
+
+      <label for="x">X</label>
+    </div>
+
+    <div class="choice">
+      <input
+        id="linkedin"
+        type="checkbox"
+        name="platforms"
+        value="linkedin">
+
+      <label for="linkedin">LinkedIn</label>
+    </div>
+
+  </div>
+
+  <div class="field" style="margin-top:17px">
+
+    <label for="mode">Publishing mode</label>
+
+    <select id="mode">
+      <option value="draft">Prepare drafts for approval</option>
+      <option value="now">Publish/share now</option>
+      <option value="schedule">Schedule for later</option>
+    </select>
+
+  </div>
+
+  <div class="notice">
+    Platform selections are recorded in the master entry.
+    Direct automatic posting will be connected later through secure
+    platform authorization. For now, the composer prepares the
+    caption and opens the phone's share menu.
+  </div>
+
+</section>
+
+<!-- PREVIEW AND MASTER FILE -->
+
+<section class="panel">
+
+  <div class="panel-head">
+    <h2>Preview & Build</h2>
+    <span class="number">✓</span>
+  </div>
+
+  <button
+    class="action primary"
+    id="buildPreview"
+    type="button">
+    Build Master Entry
+  </button>
+
+  <article class="preview" id="preview">
+
+    <div class="preview-head">
+
+      <div class="avatar">CC</div>
+
+      <div>
+        <div class="author">
+          Christopher Champagne ◆
+        </div>
+
+        <div class="handle">
+          @Champagne247
+        </div>
+      </div>
+
+    </div>
+
+    <div class="preview-body">
+
+      <div class="preview-status" id="previewStatus">
+        ● Happening Now
+      </div>
+
+      <h3 id="previewTitle">Entry title</h3>
+
+      <div
+        class="preview-story"
+        id="previewStory">
+      </div>
+
+      <img
+        class="preview-media"
+        id="previewImage"
+        alt="Entry media">
+
+      <div
+        class="preview-tags"
+        id="previewTags">
+      </div>
+
+      <div
+        class="preview-location"
+        id="previewLocation">
+      </div>
+
+      <div
+        class="preview-hashtags"
+        id="previewHashtags">
+      </div>
+
+    </div>
+
+  </article>
+
+  <div class="output" id="output">
+
+    <div class="ready">
+      <strong>Complete replacement file prepared.</strong><br>
+      This contains the new entry plus every existing entry already
+      stored in your M.A.P.
+    </div>
+
+    <div class="field">
+
+      <label for="entryOutput">
+        New Entry Block
+      </label>
+
+      <textarea
+        id="entryOutput"
+        readonly></textarea>
+
+    </div>
+
+    <div class="field">
+
+      <label for="masterOutput">
+        Complete Replacement entries.js
+      </label>
+
+      <textarea
+        id="masterOutput"
+        readonly></textarea>
+
+    </div>
+
+    <div class="actions">
+
+      <button
+        class="action"
+        id="copyEntry"
+        type="button">
+        Copy New Entry
+      </button>
+
+      <button
+        class="action primary"
+        id="copyMaster"
+        type="button">
+        Copy Full entries.js
+      </button>
+
+      <button
+        class="action"
+        id="downloadMaster"
+        type="button">
+        Download entries.js
+      </button>
+
+      <button
+        class="action"
+        id="copyCaption"
+        type="button">
+        Copy Social Caption
+      </button>
+
+      <button
+        class="action green"
+        id="share"
+        type="button"
+        style="grid-column:1/-1">
+        Share Entry
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+</form>
+
+<footer>
+  MY LIFE • MY MISSION • MY M.A.P.<br>
+  Live once. Capture once. Connect everywhere.
+</footer>
+
+</main>
+
+<div class="bottom">
+
+  <div class="bottom-inner">
+
+    <button id="saveDraft" type="button">
+      Save Draft
+    </button>
+
+    <button
+      class="primary"
+      id="prepare"
+      type="button">
+      Prepare Entry →
+    </button>
+
+  </div>
+
+</div>
+
+</div>
+
+<!-- LOAD THE EXISTING MASTER DATA -->
+<script src="../../../assets/map/data/entries.js"></script>
+
+<script>
+const DATA=window.MAP_DATA || {
+  owner:{},
+  categories:{},
+  statuses:{},
+  entries:[]
+};
+
+const labels={
+  family:"Family",
+  fitness:"Fitness",
+  freeflight:"Freeflight",
+  professional:"Professional",
+  creator:"Creator",
+  travel:"Food & Travel"
+};
+
+const icons={
+  family:"❤️",
+  fitness:"💪",
+  freeflight:"✈️",
+  professional:"🔧",
+  creator:"🎨",
+  travel:"🌎"
+};
+
+const statusLabels={
+  now:"Happening Now",
+  progress:"In Progress",
+  next:"Next",
+  goal:"Goal",
+  done:"Experienced"
+};
+
+const statusColors={
+  now:"#52f2a8",
+  progress:"#2f9bff",
+  next:"#ffd43b",
+  goal:"#ff8c2f",
+  done:"#a855f7"
+};
+
+let freshFile=null;
+let freshFilePreview="";
+let currentEntry=null;
+let currentMasterFile="";
+let currentCaption="";
+
+const byId=function(id){
+  return document.getElementById(id);
+};
+
+function checkedValues(name){
+  return[
+    ...document.querySelectorAll(
+      `input[name="${name}"]:checked`
+    )
+  ].map(function(input){
+    return input.value;
+  });
+}
+
+function slug(text){
+  return String(text || "life-entry")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g,"-")
+    .replace(/^-+|-+$/g,"")
+    .slice(0,55);
+}
+
+function cleanTag(tag){
+  return String(tag)
+    .trim()
+    .replace(/^#+/,"")
+    .replace(/\s+/g,"");
+}
+
+function commaValues(value){
+  return String(value || "")
+    .split(",")
+    .map(function(item){
+      return item.trim();
+    })
+    .filter(Boolean);
+}
+
+function localDateValue(){
+  const now=new Date();
+
+  const local=new Date(
+    now.getTime() -
+    now.getTimezoneOffset()*60000
+  );
+
+  return local.toISOString().slice(0,16);
+}
+
+function displayDate(date,status){
+  const formatted=date.toLocaleString(
+    "en-US",
+    {
+      month:"long",
+      day:"numeric",
+      year:"numeric",
+      hour:"numeric",
+      minute:"2-digit"
+    }
+  );
+
+  return status==="now"
+    ? `${formatted} • Happening now`
+    : formatted;
+}
+
+function suggestedFolder(date,title){
+  const day=date.toISOString().slice(0,10);
+
+  return(
+    `../../../assets/map/Life/${day}-${slug(title)}/`
+  );
+}
+
+function addLocation(data={}){
+  const item=document.createElement("div");
+
+  item.className="item location-item";
+
+  item.innerHTML=`
+    <div class="item-grid">
+
+      <input
+        class="location-label"
+        type="text"
+        placeholder="All Hours Fitness • Leesville, Louisiana">
+
+      <div class="item-grid grid-two">
+
+        <input
+          class="location-lat"
+          type="number"
+          step="any"
+          placeholder="Latitude">
+
+        <input
+          class="location-lng"
+          type="number"
+          step="any"
+          placeholder="Longitude">
+
+      </div>
+
+    </div>
+
+    <button class="remove" type="button">
+      Remove Location
+    </button>
+  `;
+
+  item.querySelector(".location-label").value=
+    data.label || "";
+
+  item.querySelector(".location-lat").value=
+    data.lat ?? "";
+
+  item.querySelector(".location-lng").value=
+    data.lng ?? "";
+
+  byId("locationList").appendChild(item);
+}
+
+function addMedia(data={}){
+  const item=document.createElement("div");
+
+  item.className="item media-item";
+
+  item.innerHTML=`
+    <div class="item-grid">
+
+      <select class="media-type">
+        <option value="image">Picture</option>
+        <option value="video">Video</option>
+        <option value="social">Social Post</option>
+      </select>
+
+      <input
+        class="media-url"
+        type="text"
+        placeholder="../../../assets/map/Life/.../picture.jpg or https://...">
+
+      <input
+        class="media-caption-input"
+        type="text"
+        placeholder="Media caption">
+
+    </div>
+
+    <button class="remove" type="button">
+      Remove Media
+    </button>
+  `;
+
+  item.querySelector(".media-type").value=
+    data.type || "image";
+
+  item.querySelector(".media-url").value=
+    data.url || "";
+
+  item.querySelector(".media-caption-input").value=
+    data.caption || "";
+
+  byId("mediaList").appendChild(item);
+}
+
+function addLink(data={}){
+  const item=document.createElement("div");
+
+  item.className="item link-item";
+
+  item.innerHTML=`
+    <div class="item-grid">
+
+      <input
+        class="link-label"
+        type="text"
+        placeholder="Explore Fitness on My M.A.P. →">
+
+      <input
+        class="link-url"
+        type="text"
+        placeholder="../explore/fitness/ or https://...">
+
+    </div>
+
+    <button class="remove" type="button">
+      Remove Link
+    </button>
+  `;
+
+  item.querySelector(".link-label").value=
+    data.label || "";
+
+  item.querySelector(".link-url").value=
+    data.url || "";
+
+  byId("linkList").appendChild(item);
+}
+
+function collectLocations(){
+  return[
+    ...document.querySelectorAll(".location-item")
+  ].map(function(item){
+    const label=
+      item.querySelector(".location-label").value.trim();
+
+    const lat=parseFloat(
+      item.querySelector(".location-lat").value
+    );
+
+    const lng=parseFloat(
+      item.querySelector(".location-lng").value
+    );
+
+    if(!label){
+      return null;
+    }
+
+    const location={label};
+
+    if(Number.isFinite(lat)){
+      location.lat=lat;
+    }
+
+    if(Number.isFinite(lng)){
+      location.lng=lng;
+    }
+
+    return location;
+  }).filter(Boolean);
+}
+
+function collectMedia(){
+  return[
+    ...document.querySelectorAll(".media-item")
+  ].map(function(item){
+    const type=
+      item.querySelector(".media-type").value;
+
+    const url=
+      item.querySelector(".media-url").value.trim();
+
+    const caption=
+      item.querySelector(".media-caption-input").value.trim();
+
+    if(!url){
+      return null;
+    }
+
+    return{
+      type,
+      url,
+      caption
+    };
+  }).filter(Boolean);
+}
+
+function collectLinks(){
+  return[
+    ...document.querySelectorAll(".link-item")
+  ].map(function(item){
+    const label=
+      item.querySelector(".link-label").value.trim();
+
+    const url=
+      item.querySelector(".link-url").value.trim();
+
+    if(!label || !url){
+      return null;
+    }
+
+    return{
+      label,
+      url
+    };
+  }).filter(Boolean);
+}
+
+function collectOpportunity(){
+  const title=
+    byId("opportunityTitle").value.trim();
+
+  const description=
+    byId("opportunityDescription").value.trim();
+
+  const actions=
+    commaValues(byId("opportunityActions").value);
+
+  if(!title && !description && !actions.length){
+    return{
+      active:false,
+      type:"opportunity",
+      title:"",
+      description:"",
+      actions:[]
+    };
+  }
+
+  return{
+    active:true,
+    type:"opportunity",
+    title,
+    description,
+    actions
+  };
+}
+
+function buildEntry(){
+  const title=byId("title").value.trim();
+  const story=byId("story").value.trim();
+  const categories=checkedValues("paths");
+
+  if(!title){
+    alert("Add an entry title first.");
+    return null;
+  }
+
+  if(!story){
+    alert("Add the story or update first.");
+    return null;
+  }
+
+  if(!categories.length){
+    alert("Select at least one connected path.");
+    return null;
+  }
+
+  const date=byId("date").value
+    ? new Date(byId("date").value)
+    : new Date();
+
+  const status=byId("status").value;
+
+  const hashtags=commaValues(
+    byId("hashtags").value
+  ).map(cleanTag).filter(Boolean);
+
+  const id=`${slug(title)}-${date
+    .toISOString()
+    .slice(0,10)}`;
+
+  return{
+    id,
+    title,
+    story,
+    status,
+    datetime:date.toISOString(),
+    displayDate:displayDate(date,status),
+    categories,
+    locations:collectLocations(),
+    media:collectMedia(),
+    hashtags,
+    links:collectLinks(),
+    opportunity:collectOpportunity(),
+    platforms:checkedValues("platforms"),
+    publishMode:byId("mode").value
+  };
+}
+
+function buildSocialCaption(entry){
+  const hashtags=(entry.hashtags || [])
+    .map(function(tag){
+      return `#${tag}`;
+    })
+    .join(" ");
+
+  const location=(entry.locations || [])[0]?.label;
+
+  return[
+    entry.title,
+    "",
+    entry.story,
+    location ? `\n📍 ${location}` : "",
+    hashtags ? `\n${hashtags}` : "",
+    "",
+    "Follow the complete journey through My Life and My M.A.P."
+  ].filter(function(value){
+    return value !== "";
+  }).join("\n");
+}
+
+function masterFile(entry){
+  const oldEntries=Array.isArray(DATA.entries)
+    ? DATA.entries
+    : [];
+
+  const entries=[
+    entry,
+    ...oldEntries.filter(function(oldEntry){
+      return oldEntry.id !== entry.id;
+    })
+  ];
+
+  const completeData={
+    owner:DATA.owner || {},
+    categories:DATA.categories || {},
+    statuses:DATA.statuses || {},
+    entries
+  };
+
+  return(
+`/*
+=========================================================
+M.A.P. MASTER LIFE DATA
+=========================================================
+
+Single source of truth for:
+
+- My Life
+- My Mission
+- My M.A.P.
+- Category feeds
+- Map pins
+- Media galleries
+- Links and opportunities
+- Social publishing destinations
+- Future N.O.V.A. integration
+
+Create once. Connect everywhere.
+=========================================================
+*/
+
+window.MAP_DATA=${JSON.stringify(completeData,null,2)};
+`
+  );
+}
+
+function showPreview(){
+  const entry=buildEntry();
+
+  if(!entry){
+    return;
+  }
+
+  currentEntry=entry;
+  currentCaption=buildSocialCaption(entry);
+  currentMasterFile=masterFile(entry);
+
+  byId("previewStatus").textContent=
+    `● ${statusLabels[entry.status]}`;
+
+  byId("previewStatus").style.color=
+    statusColors[entry.status];
+
+  byId("previewTitle").textContent=
+    entry.title;
+
+  byId("previewStory").textContent=
+    entry.story;
+
+  byId("previewTags").innerHTML=
+    entry.categories.map(function(category){
+      return`
+        <span class="tag">
+          ${icons[category] || ""}
+          ${labels[category] || category}
+        </span>
+      `;
+    }).join("");
+
+  byId("previewLocation").innerHTML=
+    entry.locations.length
+      ? entry.locations.map(function(location){
+          return `📍 ${escapeHTML(location.label)}`;
+        }).join("<br>")
+      : "No location added";
+
+  byId("previewHashtags").textContent=
+    entry.hashtags.map(function(tag){
+      return `#${tag}`;
+    }).join(" ");
+
+  const firstImage=entry.media.find(function(media){
+    return media.type==="image" && media.url;
+  });
+
+  const previewImage=byId("previewImage");
+
+  if(freshFilePreview && freshFile?.type.startsWith("image/")){
+    previewImage.src=freshFilePreview;
+    previewImage.classList.add("active");
+  }else if(firstImage){
+    previewImage.src=firstImage.url;
+    previewImage.classList.add("active");
+  }else{
+    previewImage.removeAttribute("src");
+    previewImage.classList.remove("active");
+  }
+
+  byId("entryOutput").value=
+    JSON.stringify(entry,null,2);
+
+  byId("masterOutput").value=
+    currentMasterFile;
+
+  byId("preview").classList.add("active");
+  byId("output").classList.add("active");
+
+  saveDraft(false);
+
+  byId("preview").scrollIntoView({
+    behavior:"smooth",
+    block:"start"
+  });
+}
+
+function escapeHTML(value){
+  return String(value || "").replace(
+    /[&<>"']/g,
+    function(character){
+      return{
+        "&":"&amp;",
+        "<":"&lt;",
+        ">":"&gt;",
+        '"':"&quot;",
+        "'":"&#39;"
+      }[character];
+    }
+  );
+}
+
+async function copyText(text,message){
+  try{
+    await navigator.clipboard.writeText(text);
+    alert(message);
+  }catch(error){
+    alert(
+      "Your browser blocked automatic copying. " +
+      "Press and hold inside the text box and choose Select All."
+    );
+  }
+}
+
+function downloadMaster(){
+  if(!currentEntry){
+    showPreview();
+  }
+
+  if(!currentEntry){
+    return;
+  }
+
+  const blob=new Blob(
+    [currentMasterFile],
+    {type:"text/javascript"}
+  );
+
+  const url=URL.createObjectURL(blob);
+  const link=document.createElement("a");
+
+  link.href=url;
+  link.download="entries.js";
+  link.click();
+
+  URL.revokeObjectURL(url);
+}
+
+async function shareEntry(){
+  if(!currentEntry){
+    showPreview();
+  }
+
+  if(!currentEntry){
+    return;
+  }
+
+  const shareData={
+    title:currentEntry.title,
+    text:currentCaption,
+    url:
+      "https://champagne247.github.io/" +
+      "Champagne247/pages/map/life/"
+  };
+
+  if(navigator.share){
+    try{
+      await navigator.share(shareData);
+      return;
+    }catch(error){
+      if(error.name==="AbortError"){
+        return;
+      }
+    }
+  }
+
+  copyText(
+    currentCaption,
+    "Social caption copied."
+  );
+}
+
+function collectDraft(){
+  return{
+    title:byId("title").value,
+    story:byId("story").value,
+    status:byId("status").value,
+    date:byId("date").value,
+    paths:checkedValues("paths"),
+    hashtags:byId("hashtags").value,
+    locations:collectLocations(),
+    media:collectMedia(),
+    links:collectLinks(),
+    opportunityTitle:
+      byId("opportunityTitle").value,
+    opportunityDescription:
+      byId("opportunityDescription").value,
+    opportunityActions:
+      byId("opportunityActions").value,
+    platforms:checkedValues("platforms"),
+    mode:byId("mode").value
+  };
+}
+
+function saveDraft(notify=true){
+  localStorage.setItem(
+    "mapMasterLifeDraft",
+    JSON.stringify(collectDraft())
+  );
+
+  if(notify){
+    alert("Draft saved on this device.");
+  }
+}
+
+function restoreDraft(){
+  const stored=localStorage.getItem(
+    "mapMasterLifeDraft"
+  );
+
+  if(!stored){
+    return;
+  }
+
+  try{
+    const draft=JSON.parse(stored);
+
+    [
+      "title",
+      "story",
+      "status",
+      "date",
+      "hashtags",
+      "opportunityTitle",
+      "opportunityDescription",
+      "opportunityActions",
+      "mode"
+    ].forEach(function(id){
+      if(draft[id] !== undefined){
+        byId(id).value=draft[id];
+      }
+    });
+
+    ["paths","platforms"].forEach(function(name){
+      (draft[name] || []).forEach(function(value){
+        const input=document.querySelector(
+          `input[name="${name}"][value="${value}"]`
+        );
+
+        if(input){
+          input.checked=true;
+        }
+      });
+    });
+
+    if(draft.locations?.length){
+      byId("locationList").innerHTML="";
+      draft.locations.forEach(addLocation);
+    }
+
+    if(draft.media?.length){
+      byId("mediaList").innerHTML="";
+      draft.media.forEach(addMedia);
+    }
+
+    if(draft.links?.length){
+      byId("linkList").innerHTML="";
+      draft.links.forEach(addLink);
+    }
+  }catch(error){
+    console.warn("Draft could not be restored.",error);
+  }
+}
+
+byId("freshUpload").addEventListener(
+  "change",
+  function(event){
+    freshFile=event.target.files[0] || null;
+
+    if(!freshFile){
+      return;
+    }
+
+    if(freshFilePreview){
+      URL.revokeObjectURL(freshFilePreview);
+    }
+
+    freshFilePreview=
+      URL.createObjectURL(freshFile);
+
+    const title=
+      byId("title").value.trim() ||
+      freshFile.name.replace(/\.[^.]+$/,"");
+
+    const date=byId("date").value
+      ? new Date(byId("date").value)
+      : new Date();
+
+    const extension=
+      freshFile.name.split(".").pop().toLowerCase();
+
+    const suggestedName=
+      `${slug(title)}-${Date.now()}.${extension}`;
+
+    const suggestedPath=
+      suggestedFolder(date,title) + suggestedName;
+
+    byId("uploadPreviewContent").innerHTML=
+      freshFile.type.startsWith("video/")
+        ? `<video src="${freshFilePreview}" controls playsinline></video>`
+        : `<img src="${freshFilePreview}" alt="Fresh upload preview">`;
+
+    byId("uploadName").textContent=
+      `Suggested path: ${suggestedPath}`;
+
+    byId("uploadPreview").classList.add("active");
+
+    addMedia({
+      type:freshFile.type.startsWith("video/")
+        ? "video"
+        : "image",
+      url:suggestedPath,
+      caption:title
+    });
+  }
+);
+
+document.addEventListener(
+  "click",
+  function(event){
+    const remove=event.target.closest(".remove");
+
+    if(!remove){
+      return;
+    }
+
+    const item=remove.closest(".item");
+    const list=item?.parentElement;
+
+    if(!item || !list){
+      return;
+    }
+
+    if(list.children.length>1){
+      item.remove();
+    }else{
+      item.querySelectorAll("input").forEach(function(input){
+        input.value="";
+      });
+    }
+  }
+);
+
+document.querySelectorAll("[data-panel]").forEach(
+  function(panel){
+    const observer=new IntersectionObserver(
+      function(entries){
+        entries.forEach(function(entry){
+          if(!entry.isIntersecting){
+            return;
+          }
+
+          const active=
+            Number(panel.dataset.panel);
+
+          document.querySelectorAll(
+            "[data-progress]"
+          ).forEach(function(step){
+            step.classList.toggle(
+              "active",
+              Number(step.dataset.progress)===active
+            );
+          });
+        });
+      },
+      {
+        rootMargin:"-150px 0px -55% 0px",
+        threshold:0
+      }
+    );
+
+    observer.observe(panel);
+  }
+);
+
+byId("addLocation").onclick=function(){
+  addLocation();
+};
+
+byId("addMedia").onclick=function(){
+  addMedia();
+};
+
+byId("addLink").onclick=function(){
+  addLink();
+};
+
+byId("buildPreview").onclick=showPreview;
+byId("prepare").onclick=showPreview;
+
+byId("saveDraft").onclick=function(){
+  saveDraft(true);
+};
+
+byId("copyEntry").onclick=function(){
+  if(!currentEntry){
+    showPreview();
+  }
+
+  if(currentEntry){
+    copyText(
+      JSON.stringify(currentEntry,null,2),
+      "New entry copied."
+    );
+  }
+};
+
+byId("copyMaster").onclick=function(){
+  if(!currentEntry){
+    showPreview();
+  }
+
+  if(currentEntry){
+    copyText(
+      currentMasterFile,
+      "Complete entries.js copied."
+    );
+  }
+};
+
+byId("downloadMaster").onclick=
+  downloadMaster;
+
+byId("copyCaption").onclick=function(){
+  if(!currentEntry){
+    showPreview();
+  }
+
+  if(currentEntry){
+    copyText(
+      currentCaption,
+      "Social caption copied."
+    );
+  }
+};
+
+byId("share").onclick=shareEntry;
+
+byId("date").value=localDateValue();
+
+addLocation({
+  label:"Leesville, Louisiana",
+  lat:31.1437,
+  lng:-93.2610
+});
+
+addMedia();
+addLink();
+
+restoreDraft();
+</script>
+
+</body>
+  </html>
