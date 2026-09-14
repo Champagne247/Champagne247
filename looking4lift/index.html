@@ -3,145 +3,1392 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#05070d">
 
 <title>Looking4Lift | Road to Flying America</title>
-<meta name="description" content="Follow Christopher Champagne's Road to Flying America — hang gliding training, flights, sites flown and what's next with Looking4Lift.">
+
+<meta
+  name="description"
+  content="Follow Christopher Champagne's Road to Flying America—hang gliding training, mountain flights, flying sites and what's next with Looking4Lift.">
+
+<link
+  rel="canonical"
+  href="https://champagne247.github.io/Champagne247/looking4lift/">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Looking4Lift">
 <meta property="og:title" content="Looking4Lift | Road to Flying America">
-<meta property="og:description" content="Christopher Champagne's hang gliding journey — training, flying, sites across America and what's next.">
-<meta property="og:url" content="https://champagne247.github.io/Champagne247/pages/looking4lift/">
-<meta property="og:image" content="https://champagne247.github.io/Champagne247/pages/looking4lift/looking4lift-share.png">
-<meta property="og:image:secure_url" content="https://champagne247.github.io/Champagne247/pages/looking4lift/looking4lift-share.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1536">
-<meta property="og:image:height" content="1024">
-<meta property="og:image:alt" content="Looking4Lift Road to Flying America hang gliding map">
+
+<meta
+  property="og:description"
+  content="Christopher Champagne's hang gliding journey—training, mountain flying, sites across America and what's next.">
+
+<meta
+  property="og:url"
+  content="https://champagne247.github.io/Champagne247/looking4lift/">
+
+<meta
+  property="og:image"
+  content="https://champagne247.github.io/Champagne247/assets/map/Hero/hero-all.webp">
+
+<meta
+  property="og:image:alt"
+  content="Looking4Lift—Christopher Champagne's Road to Flying America">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Looking4Lift | Road to Flying America">
-<meta name="twitter:description" content="Christopher Champagne's hang gliding journey — training, flying and what's next.">
-<meta name="twitter:image" content="https://champagne247.github.io/Champagne247/pages/looking4lift/looking4lift-share.png">
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<meta
+  name="twitter:title"
+  content="Looking4Lift | Road to Flying America">
+
+<meta
+  name="twitter:description"
+  content="Christopher Champagne's hang gliding journey—training, flying and what's next.">
+
+<meta
+  name="twitter:image"
+  content="https://champagne247.github.io/Champagne247/assets/map/Hero/hero-all.webp">
+
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#05070d;color:#f5f7fb;font-family:Arial,sans-serif}
-.top{padding:18px 16px 14px;background:linear-gradient(#09111c,#05070d);border-bottom:1px solid #22303f}
-.eyebrow{font-size:12px;letter-spacing:.18em;color:#76cfff;margin:3px 0 5px}
-h1{margin:0;font-size:clamp(27px,7vw,48px)}
-.top p{margin:7px 0;color:#aab8c6}
-.stats,.filters{display:flex;gap:8px;overflow:auto}
-.stats{padding:12px 0 2px}
-.stat,.filter{white-space:nowrap;background:#101722;border:1px solid #263444;border-radius:999px;padding:8px 11px;font-size:13px}
-.filters{padding:10px 12px;background:#080c13}
-.filter{color:#fff}
-.filter.active{border-color:#70cfff;background:#13283a}
-#map{height:64vh;min-height:470px}
-.legend,.private{padding:12px 16px;background:#080c13;color:#b8c3ce;font-size:13px;line-height:1.7}
-.private{background:#101722;border-top:1px solid #263444}
-.dot{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:4px}
-.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#101722;color:#fff}
-.leaflet-popup-content{line-height:1.45}
-.tag{font-size:11px;padding:3px 6px;border-radius:8px;background:#263444;display:inline-block;margin:2px}
-.map-cta{display:block;margin:0;padding:0;background:#05070d;text-decoration:none}
-.map-cta img{display:block;width:100%;height:auto;margin:0}
+*{
+  box-sizing:border-box;
+}
+
+:root{
+  --bg:#05070d;
+  --panel:#0a1520;
+  --panel2:#101722;
+  --line:#263d52;
+  --blue:#63c9ff;
+  --green:#55e29d;
+  --text:#f5f7fb;
+  --muted:#aab8c6;
+  --purple:#a855f7;
+  --yellow:#ffd43b;
+  --orange:#ff8c2f;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  overflow-x:hidden;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+button,
+a{
+  -webkit-tap-highlight-color:transparent;
+}
+
+button{
+  font:inherit;
+}
+
+.shell{
+  width:100%;
+  max-width:1000px;
+  margin:auto;
+  overflow:hidden;
+  background:var(--bg);
+}
+
+/* HEADER */
+
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  padding:16px 18px;
+  border-bottom:1px solid var(--line);
+  background:#03080e;
+}
+
+.identity{
+  min-width:0;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo{
+  width:55px;
+  height:55px;
+  flex:0 0 55px;
+  overflow:hidden;
+  border:1px solid rgba(99,201,255,.68);
+  border-radius:15px;
+  background:#07121c;
+  box-shadow:0 0 18px rgba(99,201,255,.22);
+}
+
+.logo img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+
+.brand-name{
+  overflow:hidden;
+  font-size:17px;
+  font-weight:900;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.brand-subtitle{
+  margin-top:4px;
+  color:var(--muted);
+  font-size:12px;
+}
+
+.top-actions{
+  display:flex;
+  gap:8px;
+  flex:none;
+}
+
+.icon-link{
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  border:1px solid #304b63;
+  border-radius:14px;
+  background:#0a1622;
+  color:#fff;
+  text-decoration:none;
+  font-size:20px;
+}
+
+/* HERO */
+
+.hero{
+  position:relative;
+  isolation:isolate;
+  min-height:590px;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+  padding:40px 28px 48px;
+  border-bottom:1px solid var(--line);
+}
+
+.hero-bg{
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background:
+    url("/Champagne247/assets/map/Hero/hero-all.webp")
+    center/cover no-repeat;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3,7,12,.94),
+      rgba(3,7,12,.42) 70%,
+      rgba(3,7,12,.15)
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3,7,12,.06),
+      rgba(3,7,12,.14) 42%,
+      rgba(3,7,12,.97) 93%,
+      #05070d
+    );
+}
+
+.eyebrow{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:var(--blue);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.18em;
+}
+
+.live-dot{
+  width:11px;
+  height:11px;
+  flex:0 0 11px;
+  border-radius:50%;
+  background:var(--green);
+  box-shadow:0 0 0 0 rgba(85,226,157,.55);
+  animation:pulse 1.8s infinite;
+}
+
+@keyframes pulse{
+  70%{
+    box-shadow:0 0 0 11px rgba(85,226,157,0);
+  }
+}
+
+.hero h1{
+  margin:18px 0 20px;
+  font-size:clamp(50px,13vw,82px);
+  line-height:.93;
+  letter-spacing:-.045em;
+}
+
+.hero h1 span{
+  color:var(--blue);
+}
+
+.hero-lead{
+  max-width:680px;
+  margin:0;
+  color:#c6d0da;
+  font-size:19px;
+  line-height:1.65;
+}
+
+.hero-lead strong{
+  color:#fff;
+}
+
+.motto{
+  margin-top:27px;
+  padding-left:17px;
+  border-left:4px solid var(--blue);
+  font-size:15px;
+  font-weight:900;
+  line-height:1.7;
+}
+
+/* NAVIGATION */
+
+.nav{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  border-bottom:1px solid var(--line);
+  background:#07101a;
+}
+
+.nav a{
+  position:relative;
+  min-width:0;
+  padding:16px 3px;
+  color:var(--muted);
+  text-align:center;
+  text-decoration:none;
+  font-size:10px;
+  font-weight:900;
+}
+
+.nav a.active{
+  color:var(--blue);
+  background:rgba(99,201,255,.06);
+}
+
+.nav a.active::after{
+  content:"";
+  position:absolute;
+  right:12px;
+  bottom:0;
+  left:12px;
+  height:3px;
+  background:var(--blue);
+}
+
+/* INTRO AND STATS */
+
+.intro{
+  padding:38px 20px 24px;
+}
+
+.section-label{
+  color:var(--blue);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.18em;
+}
+
+.intro h2{
+  margin:10px 0;
+  font-size:clamp(32px,8vw,50px);
+}
+
+.intro p{
+  margin:0;
+  color:var(--muted);
+  font-size:17px;
+  line-height:1.6;
+}
+
+.stats{
+  display:flex;
+  gap:9px;
+  overflow-x:auto;
+  padding:20px 0 4px;
+}
+
+.stat{
+  flex:none;
+  padding:10px 13px;
+  border:1px solid #30475e;
+  border-radius:999px;
+  background:var(--panel2);
+  color:#dce6ee;
+  font-size:13px;
+  white-space:nowrap;
+}
+
+/* FILTERS */
+
+.filters{
+  position:sticky;
+  top:0;
+  z-index:600;
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding:13px 12px;
+  border-block:1px solid var(--line);
+  background:rgba(8,12,19,.97);
+  backdrop-filter:blur(15px);
+}
+
+.filter{
+  flex:none;
+  padding:10px 13px;
+  border:1px solid #30475e;
+  border-radius:999px;
+  background:var(--panel2);
+  color:#fff;
+  cursor:pointer;
+  white-space:nowrap;
+}
+
+.filter.active{
+  border-color:var(--blue);
+  background:#13283a;
+  color:#fff;
+  box-shadow:0 0 18px rgba(99,201,255,.15);
+}
+
+/* MAP */
+
+#map{
+  width:100%;
+  height:64vh;
+  min-height:470px;
+  background:#0a121b;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip{
+  background:#101722;
+  color:#fff;
+}
+
+.leaflet-popup-content{
+  line-height:1.45;
+}
+
+.popup-status{
+  display:inline-block;
+  margin:5px 0;
+  padding:4px 7px;
+  border-radius:8px;
+  background:#263444;
+  font-size:11px;
+}
+
+.private,
+.legend{
+  padding:16px 18px;
+  background:#0d1520;
+  color:#b8c3ce;
+  font-size:13px;
+  line-height:1.7;
+}
+
+.private{
+  border-top:1px solid var(--line);
+}
+
+.legend{
+  border-block:1px solid var(--line);
+  background:#080c13;
+}
+
+.legend-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:8px;
+}
+
+.legend-item{
+  white-space:nowrap;
+}
+
+.dot{
+  width:11px;
+  height:11px;
+  display:inline-block;
+  margin-right:5px;
+  border-radius:50%;
+}
+
+/* CONNECTIONS */
+
+.connections{
+  padding:45px 20px;
+  border-bottom:1px solid var(--line);
+}
+
+.connections h2{
+  margin:10px 0;
+  font-size:clamp(32px,8vw,48px);
+}
+
+.connections p{
+  color:var(--muted);
+  line-height:1.65;
+}
+
+.connection-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+  margin-top:22px;
+}
+
+.connection{
+  min-height:78px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:15px;
+  border:1px solid #304b63;
+  border-radius:16px;
+  background:#0a1622;
+  color:#fff;
+  text-decoration:none;
+}
+
+.connection strong{
+  color:var(--blue);
+  font-size:13px;
+}
+
+.connection span{
+  margin-top:5px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.45;
+}
+
+.connection.primary{
+  border-color:var(--blue);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(20,116,174,.26),
+      #0a1622
+    );
+}
+
+/* NOVA */
+
+.nova{
+  padding:40px 20px;
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(99,201,255,.14),
+      transparent 38%
+    ),
+    #07111a;
+}
+
+.nova-card{
+  padding:22px;
+  border:1px solid #397091;
+  border-radius:22px;
+  background:linear-gradient(145deg,#0c1c2a,#07111a);
+}
+
+.nova-status{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  color:var(--green);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.18em;
+}
+
+.nova h2{
+  margin:13px 0 10px;
+  font-size:29px;
+}
+
+.nova h2 span{
+  color:var(--blue);
+}
+
+.nova p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.65;
+}
+
+.nova-actions{
+  display:grid;
+  grid-template-columns:1.15fr 1fr;
+  gap:9px;
+  margin-top:18px;
+}
+
+.button{
+  min-height:54px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px;
+  border:1px solid #34536d;
+  border-radius:14px;
+  background:#091622;
+  color:#fff;
+  text-align:center;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:900;
+}
+
+.button.primary{
+  border-color:var(--blue);
+  background:linear-gradient(135deg,#1688da,#40c2f6);
+  color:#04101a;
+}
+
+/* FOOTER */
+
+footer{
+  padding:42px 20px 58px;
+  color:#718194;
+  text-align:center;
+  font-size:12px;
+  line-height:1.8;
+}
+
+footer strong{
+  display:block;
+  margin-bottom:8px;
+  color:#dce4ed;
+}
+
+@media(max-width:520px){
+  .brand-name{
+    max-width:175px;
+  }
+
+  .hero{
+    min-height:620px;
+    padding:38px 22px 46px;
+  }
+
+  .connection-grid,
+  .nova-actions{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(min-width:760px){
+  .hero{
+    min-height:670px;
+    padding:55px 45px;
+  }
+
+  .intro,
+  .connections,
+  .nova{
+    padding-right:40px;
+    padding-left:40px;
+  }
+
+  .connection-grid{
+    grid-template-columns:repeat(4,minmax(0,1fr));
+  }
+}
 </style>
 </head>
 
 <body>
-<header class="top">
-<div class="eyebrow">LOOKING4LIFT</div>
-<h1>Road to Flying America 🇺🇸</h1>
-<p>Christopher Champagne's hang gliding journey — training, flying and what's next.</p>
-<div class="stats">
-<span class="stat">🪂 17 Tandem Aerotows</span>
-<span class="stat">🛞 22 QuadTows</span>
-<span class="stat">🏔️ Solo Mountain Flight</span>
-<span class="stat">🔒 Private site respected</span>
-</div>
+
+<div class="shell">
+
+<header class="topbar">
+
+  <div class="identity">
+
+    <div class="logo">
+
+      <img
+        src="/Champagne247/assets/map/branding/map-logo-icon.png"
+        alt="Looking4Lift and My M.A.P.">
+
+    </div>
+
+    <div>
+
+      <div class="brand-name">
+        Looking4Lift
+      </div>
+
+      <div class="brand-subtitle">
+        Road to Flying America
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="top-actions">
+
+    <a
+      class="icon-link"
+      href="/Champagne247/"
+      aria-label="Open My Life">
+      🌍
+    </a>
+
+    <button
+      class="icon-link"
+      id="shareButton"
+      type="button"
+      aria-label="Share Looking4Lift">
+      ↗
+    </button>
+
+  </div>
+
 </header>
 
-<div class="filters">
-<button class="filter active" data-f="all">All</button>
-<button class="filter" data-f="flowntrained">🟣 Flown + Trained</button>
-<button class="filter" data-f="trained">🔵 Trained</button>
-<button class="filter" data-f="planned">🟡 Flying Soon</button>
-<button class="filter" data-f="goal">🟠 Goals</button>
-<button class="filter" data-f="other">⚪ Explore</button>
-</div>
+<section class="hero">
+
+  <div
+    class="hero-bg"
+    id="heroBackground">
+  </div>
+
+  <div class="hero-overlay"></div>
+
+  <div>
+
+    <div class="eyebrow">
+
+      <span class="live-dot"></span>
+
+      LOOKING4LIFT • FREEFLIGHT
+
+    </div>
+
+    <h1>
+      BORN<br>
+      TO <span>FLY.</span>
+    </h1>
+
+    <p class="hero-lead">
+
+      <strong>
+        The sky isn't the limit. It's the destination.
+      </strong>
+
+      Training, mountain flights, milestones, community
+      and the lifelong pursuit of freeflight.
+
+    </p>
+
+    <div class="motto">
+
+      MY LIFE. • MY MISSION. • MY M.A.P.<br>
+
+      LIVE ONCE. • CAPTURE ONCE. • CONNECT EVERYWHERE.
+
+    </div>
+
+  </div>
+
+</section>
+
+<nav class="nav">
+
+  <a href="/Champagne247/">
+    MY LIFE
+  </a>
+
+  <a href="/Champagne247/explore/">
+    EXPLORE
+  </a>
+
+  <a class="active" href="./">
+    LOOKING4LIFT
+  </a>
+
+  <a href="/Champagne247/map/">
+    MY M.A.P.
+  </a>
+
+</nav>
+
+<section class="intro">
+
+  <div class="section-label">
+    ROAD TO FLYING AMERICA
+  </div>
+
+  <h2>
+    Every flight builds the journey.
+  </h2>
+
+  <p>
+    Follow Christopher Champagne's hang gliding training,
+    mountain flights, sites flown and the destinations still ahead.
+  </p>
+
+  <div class="stats">
+
+    <span class="stat">
+      🪂 17 Tandem Flights
+    </span>
+
+    <span class="stat">
+      🛞 22 QuadTows
+    </span>
+
+    <span class="stat">
+      🏔️ 20+ Mountain Solos
+    </span>
+
+    <span class="stat">
+      🪽 H2 Pilot
+    </span>
+
+    <span class="stat">
+      🔒 Private Sites Respected
+    </span>
+
+  </div>
+
+</section>
+
+<section class="filters">
+
+  <button
+    class="filter active"
+    data-filter="all"
+    type="button">
+    All
+  </button>
+
+  <button
+    class="filter"
+    data-filter="flowntrained"
+    type="button">
+    🟣 Flown + Trained
+  </button>
+
+  <button
+    class="filter"
+    data-filter="trained"
+    type="button">
+    🔵 Trained
+  </button>
+
+  <button
+    class="filter"
+    data-filter="planned"
+    type="button">
+    🟡 Flying Soon
+  </button>
+
+  <button
+    class="filter"
+    data-filter="goal"
+    type="button">
+    🟠 Goals
+  </button>
+
+  <button
+    class="filter"
+    data-filter="other"
+    type="button">
+    ⚪ Explore
+  </button>
+
+</section>
 
 <div id="map"></div>
 
-<div class="private">
-🔒 <b>Private Oklahoma Training Site</b> — 22 QuadTows.
-It counts toward the journey, but its location and identifying details are intentionally not published.
-</div>
+<section class="private">
 
-<div class="legend">
-<b>Personal map colors:</b><br>
-<span class="dot" style="background:#a855f7"></span> Flown + Trained &nbsp;
-<span class="dot" style="background:#2f9bff"></span> Trained &nbsp;
-<span class="dot" style="background:#ffd43b"></span> Flying Soon &nbsp;
-<span class="dot" style="background:#ff8c2f"></span> Goal &nbsp;
-<span class="dot" style="background:#c8d0d9"></span> Explore
-<br>
-Planning markers only — verify current site access, local rules, weather, airspace and rating requirements before flying.
-</div>
+  🔒 <strong>Private Oklahoma Training Site</strong> — 22 QuadTows.
 
-<!-- CREATE YOUR OWN M.A.P. CTA -->
-<a class="map-cta" href="../map/" aria-label="Create Your Own M.A.P.">
-  <img src="create-your-map.png" alt="Create Your Own M.A.P. - Mission Alignment Protocol">
-</a>
+  <br>
+
+  It counts toward the journey, but its location and identifying
+  details are intentionally not published.
+
+</section>
+
+<section class="legend">
+
+  <strong>Personal map colors:</strong>
+
+  <div class="legend-row">
+
+    <span class="legend-item">
+      <span class="dot" style="background:#a855f7"></span>
+      Flown + Trained
+    </span>
+
+    <span class="legend-item">
+      <span class="dot" style="background:#2f9bff"></span>
+      Trained
+    </span>
+
+    <span class="legend-item">
+      <span class="dot" style="background:#ffd43b"></span>
+      Flying Soon
+    </span>
+
+    <span class="legend-item">
+      <span class="dot" style="background:#ff8c2f"></span>
+      Goal
+    </span>
+
+    <span class="legend-item">
+      <span class="dot" style="background:#c8d0d9"></span>
+      Explore
+    </span>
+
+  </div>
+
+  <br>
+
+  Planning markers only—verify current site access, local rules,
+  weather, airspace and rating requirements before flying.
+
+</section>
+
+<section class="connections">
+
+  <div class="section-label">
+    ONE LIFE • ONE CONNECTED SYSTEM
+  </div>
+
+  <h2>
+    Looking4Lift is part of My M.A.P.
+  </h2>
+
+  <p>
+    Freeflight has its own dedicated home while every flight,
+    milestone and destination remains connected to the complete journey.
+  </p>
+
+  <div class="connection-grid">
+
+    <a
+      class="connection primary"
+      href="/Champagne247/explore/">
+
+      <strong>
+        EXPLORE FREEFLIGHT →
+      </strong>
+
+      <span>
+        See every connected Freeflight entry.
+      </span>
+
+    </a>
+
+    <a
+      class="connection"
+      href="/Champagne247/">
+
+      <strong>
+        MY LIFE
+      </strong>
+
+      <span>
+        Return to the complete living timeline.
+      </span>
+
+    </a>
+
+    <a
+      class="connection"
+      href="/Champagne247/map/">
+
+      <strong>
+        MY M.A.P.
+      </strong>
+
+      <span>
+        See every mission and connected path.
+      </span>
+
+    </a>
+
+    <a
+      class="connection"
+      href="/Champagne247/manage/">
+
+      <strong>
+        ADD A FLIGHT
+      </strong>
+
+      <span>
+        Create a new Master Life Entry.
+      </span>
+
+    </a>
+
+  </div>
+
+</section>
+
+<section class="nova">
+
+  <div class="nova-card">
+
+    <div class="nova-status">
+
+      <span class="live-dot"></span>
+
+      N.O.V.A. ONLINE • VISION GUIDE
+
+    </div>
+
+    <h2>
+      Where does your vision
+      <span>take you?</span>
+    </h2>
+
+    <p>
+      N.O.V.A. helps turn the destinations, ratings, flights
+      and experiences you can see into a M.A.P. you can follow.
+    </p>
+
+    <div class="nova-actions">
+
+      <a
+        class="button primary"
+        href="/Champagne247/nova/">
+        MEET N.O.V.A. →
+      </a>
+
+      <a
+        class="button"
+        href="/Champagne247/create/">
+        BUILD MY M.A.P.
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <strong>
+    LOOKING4LIFT • ROAD TO FLYING AMERICA
+  </strong>
+
+  WORK HARD. • FLY HIGH.<br>
+
+  MY LIFE. • MY MISSION. • MY M.A.P.
+
+</footer>
+
+</div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="/Champagne247/assets/map/data/entries.js"></script>
+
 <script>
 const sites=[
-['Lookout Mountain Flight Park','GA',34.86,-85.48,'flowntrained','Solo • assisted launch • ridge soaring • thermalling • tandem aerotow training'],
-['Dockweiler Beach','CA',33.93,-118.44,'trained','Training'],
-['Cowboy Up Hang Gliding','TX',29.31,-96.10,'trained','Tandem aerotow training'],
-['Sonora Wings','AZ',32.99,-111.92,'trained','Tandem aerotow training'],
-['Buffalo Mountain','OK',34.79,-95.90,'planned','Flying soon'],
-['Point of the Mountain','UT',40.46,-111.89,'planned','Flying soon • confirm North/South Side and current protocols'],
-['Kagel Mountain / Sylmar','CA',34.33,-118.38,'planned','Flying soon'],
-['Fort Funston','CA',37.72,-122.50,'goal','Goal site'],
-['Wilotree Park / Paradise Airsports','FL',28.58,-81.85,'goal','Goal site'],
-['Kitty Hawk / Jockey’s Ridge','NC',35.96,-75.63,'goal','Goal site'],
-['Crestline / Marshall','CA',34.21,-117.30,'other','Explore'],
-['Torrey Pines','CA',32.89,-117.25,'other','Explore • separately managed'],
-['Woodrat Mountain','OR',42.22,-123.06,'other','Explore'],
-['Checkerboard','MT',48.10,-114.20,'other','Explore'],
-['Storm Peak / Steamboat','CO',40.46,-106.82,'other','Explore'],
-['Franklin Mountains','TX',31.90,-106.49,'other','Explore']
+
+  [
+    "Lookout Mountain Flight Park",
+    "GA",
+    34.86,
+    -85.48,
+    "flowntrained",
+    "Solo mountain flights • assisted launch • ridge soaring • thermalling • tandem aerotow training"
+  ],
+
+  [
+    "Dockweiler Beach",
+    "CA",
+    33.93,
+    -118.44,
+    "trained",
+    "Training"
+  ],
+
+  [
+    "Cowboy Up Hang Gliding",
+    "TX",
+    29.31,
+    -96.10,
+    "trained",
+    "Tandem aerotow training"
+  ],
+
+  [
+    "Sonora Wings",
+    "AZ",
+    32.99,
+    -111.92,
+    "trained",
+    "Tandem aerotow training"
+  ],
+
+  [
+    "Buffalo Mountain",
+    "OK",
+    34.79,
+    -95.90,
+    "planned",
+    "Flying soon"
+  ],
+
+  [
+    "Point of the Mountain",
+    "UT",
+    40.46,
+    -111.89,
+    "planned",
+    "Flying soon • confirm North or South Side and current protocols"
+  ],
+
+  [
+    "Kagel Mountain / Sylmar",
+    "CA",
+    34.33,
+    -118.38,
+    "planned",
+    "Flying soon"
+  ],
+
+  [
+    "Fort Funston",
+    "CA",
+    37.72,
+    -122.50,
+    "goal",
+    "Goal site"
+  ],
+
+  [
+    "Wilotree Park / Paradise Airsports",
+    "FL",
+    28.58,
+    -81.85,
+    "goal",
+    "Goal site"
+  ],
+
+  [
+    "Kitty Hawk / Jockey's Ridge",
+    "NC",
+    35.96,
+    -75.63,
+    "goal",
+    "Goal site"
+  ],
+
+  [
+    "Crestline / Marshall",
+    "CA",
+    34.21,
+    -117.30,
+    "other",
+    "Explore"
+  ],
+
+  [
+    "Torrey Pines",
+    "CA",
+    32.89,
+    -117.25,
+    "other",
+    "Explore • separately managed"
+  ],
+
+  [
+    "Woodrat Mountain",
+    "OR",
+    42.22,
+    -123.06,
+    "other",
+    "Explore"
+  ],
+
+  [
+    "Checkerboard",
+    "MT",
+    48.10,
+    -114.20,
+    "other",
+    "Explore"
+  ],
+
+  [
+    "Storm Peak / Steamboat",
+    "CO",
+    40.46,
+    -106.82,
+    "other",
+    "Explore"
+  ],
+
+  [
+    "Franklin Mountains",
+    "TX",
+    31.90,
+    -106.49,
+    "other",
+    "Explore"
+  ]
+
 ];
 
-const colors={flowntrained:'#a855f7',trained:'#2f9bff',planned:'#ffd43b',goal:'#ff8c2f',other:'#c8d0d9'};
-const labels={flowntrained:'Flown + Trained',trained:'Trained',planned:'Flying Soon',goal:'Goal',other:'Explore'};
-const map=L.map('map').setView([38.4,-98.5],4);
+const colors={
+  flowntrained:"#a855f7",
+  trained:"#2f9bff",
+  planned:"#ffd43b",
+  goal:"#ff8c2f",
+  other:"#c8d0d9"
+};
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
-maxZoom:18,attribution:'&copy; OpenStreetMap contributors'
-}).addTo(map);
+const labels={
+  flowntrained:"Flown + Trained",
+  trained:"Trained",
+  planned:"Flying Soon",
+  goal:"Goal",
+  other:"Explore"
+};
 
-const marks=[];
-sites.forEach(x=>{
-let m=L.circleMarker([x[2],x[3]],{
-radius:9,color:'#081018',weight:2,fillColor:colors[x[4]],fillOpacity:1
-}).bindPopup(`<b>${x[0]}</b> • ${x[1]}<br><span class="tag">${labels[x[4]]}</span><br>${x[5]}<br><small>Approximate planning marker — not navigation coordinates.</small>`);
-m.addTo(map);
-marks.push([m,x[4]]);
-});
+const map=
+  L.map("map").setView(
+    [38.4,-98.5],
+    4
+  );
 
-document.querySelectorAll('.filter').forEach(b=>b.onclick=()=>{
-document.querySelectorAll('.filter').forEach(z=>z.classList.remove('active'));
-b.classList.add('active');
-let f=b.dataset.f;
-marks.forEach(([m,s])=>{
-if(f==='all'||f===s)m.addTo(map);else map.removeLayer(m);
-});
-});
+L.tileLayer(
+  "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+  {
+    maxZoom:18,
+    attribution:
+      "&copy; OpenStreetMap contributors"
+  }
+).addTo(map);
+
+const markers=[];
+
+sites.forEach(
+  function(site){
+
+    const marker=
+      L.circleMarker(
+        [
+          site[2],
+          site[3]
+        ],
+        {
+          radius:9,
+          color:"#081018",
+          weight:2,
+          fillColor:colors[site[4]],
+          fillOpacity:1
+        }
+      );
+
+    marker.bindPopup(
+      `
+        <strong>
+          ${site[0]}
+        </strong>
+
+        • ${site[1]}
+
+        <br>
+
+        <span class="popup-status">
+          ${labels[site[4]]}
+        </span>
+
+        <br>
+
+        ${site[5]}
+
+        <br>
+
+        <small>
+          Approximate planning marker—not navigation coordinates.
+        </small>
+      `
+    );
+
+    marker.addTo(map);
+
+    markers.push({
+      marker,
+      status:site[4]
+    });
+
+  }
+);
+
+document.querySelectorAll(
+  ".filter"
+).forEach(
+  function(button){
+
+    button.addEventListener(
+      "click",
+      function(){
+
+        document.querySelectorAll(
+          ".filter"
+        ).forEach(
+          function(filter){
+            filter.classList.remove(
+              "active"
+            );
+          }
+        );
+
+        button.classList.add(
+          "active"
+        );
+
+        const selected=
+          button.dataset.filter;
+
+        markers.forEach(
+          function(item){
+
+            if(
+              selected==="all" ||
+              selected===item.status
+            ){
+
+              item.marker.addTo(map);
+
+            }else{
+
+              map.removeLayer(
+                item.marker
+              );
+
+            }
+
+          }
+        );
+
+      }
+    );
+
+  }
+);
+
+const mapData=
+  window.MAP_DATA || {};
+
+const freeflightImage=
+  mapData.categories?.freeflight?.image;
+
+if(freeflightImage){
+
+  document.getElementById(
+    "heroBackground"
+  ).style.backgroundImage=
+    `url("${freeflightImage}")`;
+
+}
+
+document.getElementById(
+  "shareButton"
+).addEventListener(
+  "click",
+  async function(){
+
+    const shareData={
+      title:
+        "Looking4Lift | Road to Flying America",
+      text:
+        "Follow Christopher Champagne's hang gliding journey—training, flying and the Road to Flying America.",
+      url:
+        "https://champagne247.github.io/Champagne247/looking4lift/"
+    };
+
+    if(navigator.share){
+
+      try{
+
+        await navigator.share(
+          shareData
+        );
+
+        return;
+
+      }catch(error){
+
+        if(error.name==="AbortError"){
+          return;
+        }
+
+      }
+
+    }
+
+    try{
+
+      await navigator.clipboard.writeText(
+        shareData.url
+      );
+
+      alert(
+        "Looking4Lift link copied."
+      );
+
+    }catch(error){
+
+      alert(
+        "Copy this link: " +
+        shareData.url
+      );
+
+    }
+
+  }
+);
 </script>
+
 </body>
 </html>
