@@ -1,1 +1,1691 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
+<title>My Life | Christopher Champagne</title>
+
+<meta
+  name="description"
+  content="Follow Christopher Champagne's life as it happens. One life, many connected paths, one living Mission Alignment Protocol.">
+
+<link
+  rel="canonical"
+  href="https://champagne247.github.io/Champagne247/pages/map/life/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mission Alignment Protocol">
+<meta property="og:title" content="My Life | Christopher Champagne">
+<meta
+  property="og:description"
+  content="Live once. Capture once. Connect everywhere.">
+<meta
+  property="og:url"
+  content="https://champagne247.github.io/Champagne247/pages/map/life/">
+<meta
+  property="og:image"
+  content="https://champagne247.github.io/Champagne247/assets/map/Hero/hero-all.webp">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="My Life | Christopher Champagne">
+<meta
+  name="twitter:description"
+  content="Live once. Capture once. Connect everywhere.">
+<meta
+  name="twitter:image"
+  content="https://champagne247.github.io/Champagne247/assets/map/Hero/hero-all.webp">
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+:root{
+  --bg:#03060b;
+  --panel:#09131e;
+  --panel2:#0d1926;
+  --line:#203247;
+  --blue:#58c3ff;
+  --live:#52f2a8;
+  --text:#f5f7fb;
+  --muted:#9eacbd;
+  --soft:#718298;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+button,
+a{
+  -webkit-tap-highlight-color:transparent;
+}
+
+button{
+  font:inherit;
+}
+
+.shell{
+  width:100%;
+  max-width:760px;
+  min-height:100vh;
+  margin:auto;
+  border-left:1px solid rgba(32,50,71,.45);
+  border-right:1px solid rgba(32,50,71,.45);
+  background:#03070c;
+}
+
+/* TOP BAR */
+
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  min-height:68px;
+  padding:10px 16px;
+  border-bottom:1px solid var(--line);
+  background:rgba(3,7,12,.93);
+  backdrop-filter:blur(18px);
+}
+
+.identity{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  min-width:0;
+}
+
+.logo{
+  width:44px;
+  height:44px;
+  flex:0 0 44px;
+  overflow:hidden;
+  border:1px solid rgba(88,195,255,.65);
+  border-radius:13px;
+  background:#06111c;
+  box-shadow:0 0 16px rgba(88,195,255,.18);
+}
+
+.logo img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.identity-copy{
+  min-width:0;
+}
+
+.identity-name{
+  margin:0;
+  color:#fff;
+  font-size:16px;
+  font-weight:900;
+  line-height:1.2;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.identity-handle{
+  margin-top:3px;
+  color:var(--muted);
+  font-size:12px;
+}
+
+.top-actions{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.icon-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:42px;
+  min-height:42px;
+  padding:8px 11px;
+  border:1px solid #31485f;
+  border-radius:12px;
+  background:#091522;
+  color:#fff;
+  text-decoration:none;
+  font-size:17px;
+  font-weight:800;
+}
+
+.icon-button.primary{
+  border-color:var(--blue);
+  background:linear-gradient(135deg,#178ee0,#58c3ff);
+  color:#04101a;
+}
+
+/* INTRO */
+
+.intro{
+  position:relative;
+  overflow:hidden;
+  padding:42px 22px 34px;
+  border-bottom:1px solid var(--line);
+  isolation:isolate;
+}
+
+.intro-bg{
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background:
+    url("../../../assets/map/Hero/hero-all.webp")
+    center 56% / cover no-repeat;
+  opacity:.38;
+}
+
+.intro-overlay{
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3,7,12,.98),
+      rgba(3,7,12,.76)
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3,7,12,.20),
+      #03070c
+    );
+}
+
+.eyebrow{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  color:var(--live);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.16em;
+}
+
+.pulse{
+  width:10px;
+  height:10px;
+  flex:none;
+  border-radius:50%;
+  background:var(--live);
+  box-shadow:0 0 0 0 rgba(82,242,168,.55);
+  animation:pulse 1.8s infinite;
+}
+
+@keyframes pulse{
+  70%{
+    box-shadow:0 0 0 10px rgba(82,242,168,0);
+  }
+
+  100%{
+    box-shadow:0 0 0 0 rgba(82,242,168,0);
+  }
+}
+
+.intro h1{
+  margin:14px 0 11px;
+  font-size:clamp(45px,13vw,74px);
+  line-height:.92;
+  letter-spacing:-.045em;
+}
+
+.intro h1 span{
+  color:var(--blue);
+}
+
+.intro p{
+  max-width:600px;
+  margin:0;
+  color:#c3ced9;
+  font-size:17px;
+  line-height:1.65;
+}
+
+.intro strong{
+  color:#fff;
+}
+
+.intro-motto{
+  margin-top:20px;
+  padding-left:13px;
+  border-left:3px solid var(--blue);
+  color:#fff;
+  font-size:14px;
+  font-weight:900;
+  line-height:1.7;
+}
+
+/* NAVIGATION */
+
+.life-nav{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-bottom:1px solid var(--line);
+  background:#07101a;
+}
+
+.life-nav a{
+  position:relative;
+  padding:15px 8px;
+  color:var(--muted);
+  text-align:center;
+  text-decoration:none;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.09em;
+}
+
+.life-nav a:hover,
+.life-nav a.active{
+  color:#fff;
+  background:rgba(88,195,255,.07);
+}
+
+.life-nav a.active{
+  color:var(--blue);
+}
+
+.life-nav a.active::after{
+  content:"";
+  position:absolute;
+  right:18px;
+  bottom:0;
+  left:18px;
+  height:3px;
+  border-radius:5px 5px 0 0;
+  background:var(--blue);
+  box-shadow:0 0 12px rgba(88,195,255,.7);
+}
+
+/* COMPOSER */
+
+.composer-launch{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:16px;
+  border-bottom:1px solid var(--line);
+  background:#060d15;
+}
+
+.composer-avatar{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:44px;
+  height:44px;
+  flex:0 0 44px;
+  border-radius:50%;
+  border:1px solid #35516a;
+  background:#0c1a27;
+  color:var(--blue);
+  font-size:18px;
+  font-weight:900;
+}
+
+.composer-link{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  width:100%;
+  min-height:48px;
+  padding:12px 15px;
+  border:1px solid #2d4359;
+  border-radius:999px;
+  background:#0a1520;
+  color:#b7c3d0;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.composer-link strong{
+  color:var(--blue);
+}
+
+/* FILTERS */
+
+.filters{
+  position:sticky;
+  top:68px;
+  z-index:900;
+  padding:13px 12px;
+  overflow-x:auto;
+  border-bottom:1px solid var(--line);
+  background:rgba(5,12,20,.95);
+  backdrop-filter:blur(15px);
+}
+
+.filter-row{
+  display:flex;
+  gap:8px;
+  width:max-content;
+}
+
+.filter{
+  flex:none;
+  min-height:40px;
+  padding:9px 14px;
+  border:1px solid #30485f;
+  border-radius:999px;
+  background:#0a1520;
+  color:#d5dee7;
+  font-size:12px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.filter.active{
+  border-color:var(--blue);
+  background:var(--blue);
+  color:#04101a;
+  box-shadow:0 0 16px rgba(88,195,255,.22);
+}
+
+/* FEED */
+
+.feed-heading{
+  padding:25px 18px 15px;
+  border-bottom:1px solid var(--line);
+}
+
+.feed-heading-label{
+  color:var(--blue);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.17em;
+}
+
+.feed-heading h2{
+  margin:8px 0 6px;
+  font-size:29px;
+  line-height:1.1;
+}
+
+.feed-heading p{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.55;
+}
+
+.feed{
+  min-height:300px;
+}
+
+/* ENTRY */
+
+.entry{
+  position:relative;
+  padding:18px 17px 6px;
+  border-bottom:1px solid var(--line);
+  background:#03070c;
+  transition:.2s ease;
+}
+
+.entry:hover{
+  background:#050c14;
+}
+
+.entry.now{
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(82,242,168,.06),
+      transparent 36%
+    ),
+    #03070c;
+}
+
+.entry-grid{
+  display:grid;
+  grid-template-columns:46px minmax(0,1fr);
+  gap:11px;
+}
+
+.entry-avatar{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:46px;
+  height:46px;
+  border:1px solid #34516c;
+  border-radius:50%;
+  background:linear-gradient(145deg,#0e2435,#08131e);
+  color:var(--blue);
+  font-size:17px;
+  font-weight:900;
+}
+
+.entry-main{
+  min-width:0;
+}
+
+.entry-meta{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:5px;
+  color:var(--muted);
+  font-size:12px;
+}
+
+.entry-author{
+  color:#fff;
+  font-size:14px;
+  font-weight:900;
+}
+
+.verified{
+  color:var(--blue);
+}
+
+.entry-status{
+  margin-left:auto;
+  font-size:11px;
+  font-weight:800;
+  white-space:nowrap;
+}
+
+.entry h3{
+  margin:8px 0 7px;
+  color:#fff;
+  font-size:22px;
+  line-height:1.22;
+}
+
+.entry-story{
+  margin:0;
+  color:#c0cad5;
+  font-size:15px;
+  line-height:1.58;
+  white-space:pre-line;
+}
+
+.media{
+  position:relative;
+  margin-top:14px;
+  overflow:hidden;
+  border:1px solid #263e55;
+  border-radius:18px;
+  background:#08131e;
+}
+
+.media img{
+  display:block;
+  width:100%;
+  max-height:520px;
+  object-fit:cover;
+}
+
+.media-overlay{
+  position:absolute;
+  right:0;
+  bottom:0;
+  left:0;
+  padding:30px 14px 12px;
+  background:linear-gradient(transparent,rgba(2,7,12,.88));
+  color:#fff;
+  font-size:11px;
+  font-weight:800;
+}
+
+.video-card{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:220px;
+  padding:25px;
+  color:#fff;
+  text-decoration:none;
+  background:
+    linear-gradient(rgba(4,10,17,.30),rgba(4,10,17,.84)),
+    url("../../../assets/map/Hero/hero-creator.webp")
+    center / cover no-repeat;
+}
+
+.play{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:62px;
+  height:62px;
+  border:2px solid #fff;
+  border-radius:50%;
+  background:rgba(3,9,15,.65);
+  box-shadow:0 0 25px rgba(88,195,255,.24);
+  font-size:24px;
+}
+
+.entry-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:13px;
+}
+
+.entry-tag{
+  padding:6px 9px;
+  border:1px solid #2c465f;
+  border-radius:999px;
+  background:#091520;
+  color:#bde6ff;
+  font-size:10px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.entry-location{
+  margin-top:12px;
+  color:var(--soft);
+  font-size:11px;
+  line-height:1.55;
+}
+
+.entry-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:13px;
+}
+
+.entry-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:38px;
+  padding:9px 12px;
+  border:1px solid #35516b;
+  border-radius:11px;
+  background:#091622;
+  color:#fff;
+  text-decoration:none;
+  font-size:11px;
+  font-weight:800;
+}
+
+.entry-link:hover{
+  border-color:var(--blue);
+  background:rgba(88,195,255,.12);
+}
+
+.entry-actions{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  margin-top:14px;
+  border-top:1px solid rgba(32,50,71,.65);
+}
+
+.entry-action{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  min-height:46px;
+  border:0;
+  background:transparent;
+  color:#8292a4;
+  font-size:11px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.entry-action:hover{
+  color:var(--blue);
+}
+
+.empty{
+  margin:20px;
+  padding:28px;
+  border:1px dashed #2a435b;
+  border-radius:18px;
+  color:var(--muted);
+  text-align:center;
+  line-height:1.6;
+}
+
+/* CTA */
+
+.map-cta{
+  padding:35px 20px;
+  text-align:center;
+  border-top:1px solid var(--line);
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(88,195,255,.08),
+      transparent 55%
+    ),
+    #050b12;
+}
+
+.map-cta-label{
+  color:var(--blue);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.16em;
+}
+
+.map-cta h2{
+  margin:9px 0;
+  font-size:31px;
+}
+
+.map-cta p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.cta-buttons{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:20px;
+}
+
+.cta-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:47px;
+  padding:12px 17px;
+  border:1px solid var(--blue);
+  border-radius:13px;
+  background:rgba(88,195,255,.10);
+  color:#fff;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:900;
+}
+
+.cta-button.primary{
+  background:linear-gradient(135deg,#178ee0,#58c3ff);
+  color:#04101a;
+}
+
+footer{
+  padding:38px 20px 54px;
+  border-top:1px solid var(--line);
+  color:#708094;
+  text-align:center;
+  font-size:12px;
+  line-height:1.7;
+}
+
+footer strong{
+  display:block;
+  margin-bottom:9px;
+  color:#dce4ed;
+  letter-spacing:.12em;
+}
+
+@media(max-width:480px){
+  .topbar{
+    padding:9px 12px;
+  }
+
+  .identity-name{
+    max-width:165px;
+  }
+
+  .intro{
+    padding:36px 18px 30px;
+  }
+
+  .entry{
+    padding-right:13px;
+    padding-left:13px;
+  }
+
+  .entry-grid{
+    grid-template-columns:39px minmax(0,1fr);
+    gap:9px;
+  }
+
+  .entry-avatar{
+    width:39px;
+    height:39px;
+    font-size:15px;
+  }
+
+  .entry h3{
+    font-size:20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="shell">
+
+<header class="topbar">
+
+  <div class="identity">
+
+    <div class="logo">
+      <img
+        src="../../../assets/map/branding/map-logo-icon.png"
+        alt="M.A.P.">
+    </div>
+
+    <div class="identity-copy">
+      <div class="identity-name">
+        Christopher Champagne
+      </div>
+
+      <div class="identity-handle">
+        @Champagne247
+      </div>
+    </div>
+
+  </div>
+
+  <div class="top-actions">
+
+    <a
+      class="icon-button"
+      href="../"
+      target="_top"
+      aria-label="Open M.A.P.">
+      🗺️
+    </a>
+
+    <a
+      class="icon-button primary"
+      href="../manage/"
+      target="_top"
+      aria-label="Add life entry">
+      ＋
+    </a>
+
+  </div>
+
+</header>
+
+<section class="intro">
+
+  <div class="intro-bg"></div>
+  <div class="intro-overlay"></div>
+
+  <div class="eyebrow">
+    <span class="pulse"></span>
+    MY JOURNEY • LIVE
+  </div>
+
+  <h1>
+    MY <span>LIFE.</span>
+  </h1>
+
+  <p>
+    <strong>This is the source.</strong>
+    Every experience, project, milestone and mission begins here,
+    connects across my M.A.P. and feeds outward to the world.
+  </p>
+
+  <div class="intro-motto">
+    LIVE ONCE. • CAPTURE ONCE.<br>
+    CONNECT EVERYWHERE.
+  </div>
+
+</section>
+
+<nav class="life-nav">
+  <a href="./" class="active">MY LIFE</a>
+  <a href="../explore/">MY M.A.P.</a>
+  <a href="../create/">CREATE YOURS</a>
+</nav>
+
+<section class="composer-launch">
+
+  <div class="composer-avatar">
+    CC
+  </div>
+
+  <a class="composer-link" href="../manage/">
+    <span>What are you doing right now?</span>
+    <strong>ADD ＋</strong>
+  </a>
+
+</section>
+
+<section class="filters">
+
+  <div class="filter-row">
+
+    <button class="filter active" data-filter="all">
+      ALL
+    </button>
+
+    <button class="filter" data-filter="family">
+      ❤️ Family
+    </button>
+
+    <button class="filter" data-filter="fitness">
+      💪 Fitness
+    </button>
+
+    <button class="filter" data-filter="freeflight">
+      ✈️ Freeflight
+    </button>
+
+    <button class="filter" data-filter="professional">
+      🔧 Professional
+    </button>
+
+    <button class="filter" data-filter="creator">
+      🎨 Creator
+    </button>
+
+    <button class="filter" data-filter="travel">
+      🌎 Food & Travel
+    </button>
+
+  </div>
+
+</section>
+
+<section class="feed-heading">
+
+  <div class="feed-heading-label">
+    THE LIVING TIMELINE
+  </div>
+
+  <h2 id="feedTitle">
+    Where I Am Right Now
+  </h2>
+
+  <p id="feedCopy">
+    Newest first. Every part of the journey connected.
+  </p>
+
+</section>
+
+<main class="feed" id="feed"></main>
+
+<section class="map-cta">
+
+  <div class="map-cta-label">
+    SEE HOW IT CONNECTS
+  </div>
+
+  <h2>Explore My M.A.P.</h2>
+
+  <p>
+    Follow every path, milestone, destination and mission.
+  </p>
+
+  <div class="cta-buttons">
+
+    <a
+      class="cta-button primary"
+      href="../explore/">
+      Explore My M.A.P. →
+    </a>
+
+    <a
+      class="cta-button"
+      href="../create/">
+      Create Your Own
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <strong>
+    WORK HARD. • FLY HIGH.<br>
+    EAT WELL. • LIVE FREE.
+  </strong>
+
+  My Life • Mission Alignment Protocol<br>
+  Christopher Champagne
+
+</footer>
+
+</div>
+
+<script>
+const categoryLabels={
+  family:"Family",
+  fitness:"Fitness",
+  freeflight:"Freeflight",
+  professional:"Professional",
+  creator:"Creator",
+  travel:"Food & Travel"
+};
+
+const categoryImages={
+  family:"../../../assets/map/Hero/hero-family.webp",
+  fitness:"../../../assets/map/Hero/hero-fitness.webp",
+  freeflight:"../../../assets/map/Hero/hero-freeflight.webp",
+  professional:"../../../assets/map/Hero/hero-professional.webp",
+  creator:"../../../assets/map/Hero/hero-creator.webp",
+  travel:"../../../assets/map/Hero/hero-travel.webp"
+};
+
+const statusLabels={
+  now:"Happening Now",
+  progress:"In Progress",
+  next:"Next",
+  goal:"Goal",
+  done:"Experienced"
+};
+
+const statusColors={
+  now:"#52f2a8",
+  progress:"#2f9bff",
+  next:"#ffd43b",
+  goal:"#ff8c2f",
+  done:"#a855f7"
+};
+
+/*
+One entry is created once.
+
+categories:
+Places the entry on multiple M.A.P. paths.
+
+media:
+Supports uploaded images, image URLs, video links
+and social-media links.
+
+links:
+Supports websites, products, services, resources
+and income opportunities.
+*/
+
+const lifeEntries=[
+  {
+    id:"live-map-build-2026-09-14",
+
+    title:"Building and Living the M.A.P.",
+
+    story:
+      "The day started over breakfast with a dream-driven breakthrough.\n\nNext: gym, Solar Supply, then back to Mission Control for desktop work and a live build stream.\n\nToday isn't preparation for the project. Today is the project.",
+
+    status:"now",
+
+    datetime:"2026-09-14T09:00:00-05:00",
+
+    displayDate:"September 14, 2026 • Happening now",
+
+    categories:[
+      "travel",
+      "fitness",
+      "professional",
+      "creator"
+    ],
+
+    locations:[
+      "Breakfast and M.A.P. planning • Leesville",
+      "Gym session • Leesville",
+      "Solar Supply run • Central Louisiana",
+      "Mission Control livestream • Leesville"
+    ],
+
+    media:[
+      {
+        type:"image",
+        url:"../../../assets/map/Hero/hero-all.webp",
+        caption:"Fuel → Fitness → Business → Build"
+      }
+    ],
+
+    links:[
+      {
+        label:"Explore this on My M.A.P. →",
+        url:"../explore/"
+      }
+    ]
+  },
+
+  {
+    id:"lookout-24-minute-flight",
+
+    title:"24-Minute Mountain Flight",
+
+    story:
+      "Ridge soared and thermalled for approximately 24 minutes, smashing my previous mountain-flight personal best.",
+
+    status:"done",
+
+    datetime:"2026-08-23T15:00:00-04:00",
+
+    displayDate:"August 2026",
+
+    categories:[
+      "freeflight",
+      "fitness",
+      "creator"
+    ],
+
+    locations:[
+      "Lookout Mountain Flight Park • Rising Fawn, Georgia"
+    ],
+
+    media:[
+      {
+        type:"image",
+        url:"../../../assets/map/Hero/hero-freeflight.webp",
+        caption:"Looking4Lift • Lookout Mountain"
+      }
+    ],
+
+    links:[
+      {
+        label:"Explore Freeflight →",
+        url:"../explore/freeflight/"
+      }
+    ]
+  },
+
+  {
+    id:"lookout-100-flights",
+
+    title:"100 Flights",
+
+    story:
+      "Crossed the 100-flight milestone during Wingman Weekend at Lookout Mountain Flight Park.",
+
+    status:"done",
+
+    datetime:"2026-08-22T15:00:00-04:00",
+
+    displayDate:"August 2026",
+
+    categories:[
+      "freeflight",
+      "fitness",
+      "creator"
+    ],
+
+    locations:[
+      "Lookout Mountain Flight Park • Rising Fawn, Georgia"
+    ],
+
+    media:[
+      {
+        type:"image",
+        url:"../../../assets/map/Hero/hero-freeflight.webp",
+        caption:"100 flights and still Looking4Lift"
+      }
+    ],
+
+    links:[
+      {
+        label:"Explore Freeflight →",
+        url:"../explore/freeflight/"
+      }
+    ]
+  },
+
+  {
+    id:"ccs-technical-services",
+
+    title:"CC'S Technical Services",
+
+    story:
+      "HVAC, electrical, refrigeration, security, automation, IT and technical services. Real work, real solutions and another income-producing path on the M.A.P.",
+
+    status:"progress",
+
+    datetime:"2026-06-25T09:00:00-05:00",
+
+    displayDate:"Building now",
+
+    categories:[
+      "professional",
+      "creator"
+    ],
+
+    locations:[
+      "Leesville, Louisiana"
+    ],
+
+    media:[
+      {
+        type:"image",
+        url:"../../../assets/map/Hero/hero-professional.webp",
+        caption:"Build. Solve. Get it done."
+      }
+    ],
+
+    links:[
+      {
+        label:"CC'S Technical Services →",
+        url:"https://ccstechnicalservices.com/"
+      }
+    ]
+  },
+
+  {
+    id:"mission-alignment-protocol",
+
+    title:"Mission Alignment Protocol",
+
+    story:
+      "Turning my goals, experiences, projects, destinations and opportunities into one living system—and building it publicly so others can create their own.",
+
+    status:"progress",
+
+    datetime:"2026-06-01T09:00:00-05:00",
+
+    displayDate:"Building now",
+
+    categories:[
+      "creator",
+      "professional",
+      "family"
+    ],
+
+    locations:[
+      "Mission Control • Louisiana"
+    ],
+
+    media:[
+      {
+        type:"image",
+        url:"../../../assets/map/Hero/hero-all.webp",
+        caption:"One life. Many paths. One mission."
+      }
+    ],
+
+    links:[
+      {
+        label:"Explore My M.A.P. →",
+        url:"../explore/"
+      },
+
+      {
+        label:"GitHub →",
+        url:"https://github.com/Champagne247"
+      }
+    ]
+  },
+
+  {
+    id:"certified-monster",
+
+    title:"Certified MONSTER • Strength & Mobility",
+
+    story:
+      "Controlled strength, functional mobility, conditioning and lifelong physical capability.",
+
+    status:"progress",
+
+    datetime:"2026-03-01T06:00:00-06:00",
+
+    displayDate:"Ongoing",
+
+    categories:[
+      "fitness",
+      "creator"
+    ],
+
+    locations:[
+      "Louisiana"
+    ],
+
+    media:[
+      {
+        type:"image",
+        url:"../../../assets/map/Hero/hero-fitness.webp",
+        caption:"Strength for life"
+      }
+    ],
+
+    links:[]
+  },
+
+  {
+    id:"dockweiler-first-day",
+
+    title:"Dockweiler • First Day of Flying Lessons",
+
+    story:
+      "Where it started. A full day learning to hang glide on the dunes at Dockweiler Beach—10 flights on my first day.",
+
+    status:"done",
+
+    datetime:"2015-08-24T09:00:00-07:00",
+
+    displayDate:"August 24, 2015 • 10 flights",
+
+    categories:[
+      "freeflight",
+      "fitness",
+      "travel"
+    ],
+
+    locations:[
+      "Dockweiler Beach • California"
+    ],
+
+    media:[
+      {
+        type:"image",
+        url:"../../../assets/map/Freeflight/dockweiler/dockweiler-2015-01.jpg",
+        caption:"Where the freeflight journey began"
+      }
+    ],
+
+    links:[
+      {
+        label:"Windsports →",
+        url:"https://www.windsports.com/beach"
+      }
+    ]
+  }
+];
+
+function esc(value){
+  return String(value || "").replace(
+    /[&<>"']/g,
+    function(character){
+      return{
+        "&":"&amp;",
+        "<":"&lt;",
+        ">":"&gt;",
+        '"':"&quot;",
+        "'":"&#39;"
+      }[character];
+    }
+  );
+}
+
+function getPrimaryCategory(entry){
+  return entry.categories[0] || "creator";
+}
+
+function getEntryImage(entry){
+  const image=entry.media.find(function(item){
+    return item.type==="image";
+  });
+
+  return image
+    ? image.url
+    : categoryImages[getPrimaryCategory(entry)];
+}
+
+function renderMedia(entry){
+  if(!entry.media || !entry.media.length){
+    return "";
+  }
+
+  const media=entry.media[0];
+
+  if(media.type==="image"){
+    return`
+      <div class="media">
+
+        <img
+          src="${esc(media.url)}"
+          alt="${esc(media.caption || entry.title)}"
+          loading="lazy"
+          onerror="this.src='${esc(
+            categoryImages[getPrimaryCategory(entry)]
+          )}'">
+
+        ${
+          media.caption
+            ? `
+              <div class="media-overlay">
+                ${esc(media.caption)}
+              </div>
+            `
+            : ""
+        }
+
+      </div>
+    `;
+  }
+
+  if(
+    media.type==="video" ||
+    media.type==="social"
+  ){
+    return`
+      <div class="media">
+
+        <a
+          class="video-card"
+          href="${esc(media.url)}"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open video">
+
+          <span class="play">▶</span>
+
+        </a>
+
+        ${
+          media.caption
+            ? `
+              <div class="media-overlay">
+                ${esc(media.caption)}
+              </div>
+            `
+            : ""
+        }
+
+      </div>
+    `;
+  }
+
+  return "";
+}
+
+function renderLinks(entry){
+  if(!entry.links || !entry.links.length){
+    return "";
+  }
+
+  return`
+    <div class="entry-links">
+
+      ${entry.links.map(function(link){
+        return`
+          <a
+            class="entry-link"
+            href="${esc(link.url)}"
+            target="_blank"
+            rel="noopener noreferrer">
+            ${esc(link.label)}
+          </a>
+        `;
+      }).join("")}
+
+    </div>
+  `;
+}
+
+function entryShareText(entry){
+  return[
+    entry.title,
+    "",
+    entry.story,
+    "",
+    "Follow the complete journey:",
+    window.location.href
+  ].join("\n");
+}
+
+async function shareEntry(entryId){
+  const entry=lifeEntries.find(function(item){
+    return item.id===entryId;
+  });
+
+  if(!entry){
+    return;
+  }
+
+  const shareData={
+    title:entry.title,
+    text:entryShareText(entry),
+    url:window.location.href
+  };
+
+  if(navigator.share){
+    try{
+      await navigator.share(shareData);
+      return;
+    }catch(error){
+      if(error.name==="AbortError"){
+        return;
+      }
+    }
+  }
+
+  try{
+    await navigator.clipboard.writeText(
+      entryShareText(entry)
+    );
+
+    alert("Entry copied. Paste it into any social platform.");
+  }catch(error){
+    alert("Copy this page URL to share the entry.");
+  }
+}
+
+async function copyEntry(entryId){
+  const entry=lifeEntries.find(function(item){
+    return item.id===entryId;
+  });
+
+  if(!entry){
+    return;
+  }
+
+  try{
+    await navigator.clipboard.writeText(
+      entryShareText(entry)
+    );
+
+    alert("Entry copied.");
+  }catch(error){
+    alert("Unable to copy automatically.");
+  }
+}
+
+function renderEntry(entry){
+  const primary=getPrimaryCategory(entry);
+  const statusColor=
+    statusColors[entry.status] || "#c8d0d9";
+
+  return`
+    <article
+      class="entry ${entry.status==="now" ? "now" : ""}"
+      data-entry-id="${esc(entry.id)}">
+
+      <div class="entry-grid">
+
+        <div class="entry-avatar">
+          CC
+        </div>
+
+        <div class="entry-main">
+
+          <div class="entry-meta">
+
+            <span class="entry-author">
+              Christopher Champagne
+            </span>
+
+            <span class="verified">◆</span>
+
+            <span>@Champagne247</span>
+
+            <span>·</span>
+
+            <span>${esc(entry.displayDate)}</span>
+
+            <span
+              class="entry-status"
+              style="color:${statusColor}">
+              ● ${esc(statusLabels[entry.status])}
+            </span>
+
+          </div>
+
+          <h3>
+            ${esc(entry.title)}
+          </h3>
+
+          <p class="entry-story">
+            ${esc(entry.story)}
+          </p>
+
+          ${renderMedia(entry)}
+
+          <div class="entry-tags">
+
+            ${entry.categories.map(function(category){
+              return`
+                <button
+                  class="entry-tag"
+                  data-filter-link="${esc(category)}">
+                  ${esc(categoryLabels[category])}
+                </button>
+              `;
+            }).join("")}
+
+          </div>
+
+          <div class="entry-location">
+            📍 ${entry.locations.map(esc).join(" • ")}
+          </div>
+
+          ${renderLinks(entry)}
+
+          <div class="entry-actions">
+
+            <button
+              class="entry-action"
+              data-copy-entry="${esc(entry.id)}">
+              ⧉ Copy
+            </button>
+
+            <button
+              class="entry-action"
+              data-share-entry="${esc(entry.id)}">
+              ↗ Share
+            </button>
+
+            <a
+              class="entry-action"
+              href="../explore/"
+              style="text-decoration:none">
+              ⌖ M.A.P.
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+  `;
+}
+
+function renderFeed(filter="all"){
+  const feed=document.getElementById("feed");
+
+  const visible=lifeEntries
+    .filter(function(entry){
+      return(
+        filter==="all" ||
+        entry.categories.includes(filter)
+      );
+    })
+    .sort(function(a,b){
+      if(a.status==="now" && b.status!=="now"){
+        return -1;
+      }
+
+      if(b.status==="now" && a.status!=="now"){
+        return 1;
+      }
+
+      return new Date(b.datetime)-new Date(a.datetime);
+    });
+
+  if(!visible.length){
+    feed.innerHTML=`
+      <div class="empty">
+        This path is ready for its first life entry.
+      </div>
+    `;
+
+    return;
+  }
+
+  feed.innerHTML=visible.map(renderEntry).join("");
+
+  if(filter==="all"){
+    document.getElementById("feedTitle").textContent=
+      "Where I Am Right Now";
+
+    document.getElementById("feedCopy").textContent=
+      "Newest first. Every part of the journey connected.";
+  }else{
+    document.getElementById("feedTitle").textContent=
+      categoryLabels[filter];
+
+    document.getElementById("feedCopy").textContent=
+      "Every life entry connected to this path.";
+  }
+}
+
+function selectFilter(filter){
+  document.querySelectorAll(".filter").forEach(function(button){
+    button.classList.toggle(
+      "active",
+      button.dataset.filter===filter
+    );
+  });
+
+  renderFeed(filter);
+}
+
+document.querySelectorAll(".filter").forEach(function(button){
+  button.addEventListener("click",function(){
+    selectFilter(this.dataset.filter);
+  });
+});
+
+document.addEventListener("click",function(event){
+  const filterLink=event.target.closest("[data-filter-link]");
+
+  if(filterLink){
+    selectFilter(filterLink.dataset.filterLink);
+
+    document.querySelector(".filters").scrollIntoView({
+      behavior:"smooth",
+      block:"start"
+    });
+
+    return;
+  }
+
+  const shareButton=event.target.closest("[data-share-entry]");
+
+  if(shareButton){
+    shareEntry(shareButton.dataset.shareEntry);
+    return;
+  }
+
+  const copyButton=event.target.closest("[data-copy-entry]");
+
+  if(copyButton){
+    copyEntry(copyButton.dataset.copyEntry);
+  }
+});
+
+renderFeed("all");
+</script>
+
+</body>
+</html>
