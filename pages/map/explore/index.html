@@ -6,62 +6,61 @@
 
 <title>Explore My M.A.P. | Christopher Champagne</title>
 
-<meta name="description"
-content="One life. Many paths. One mission. Explore my journey through Family, Fitness, Freeflight, Professional, Creator, Food & Travel.">
+<meta
+  name="description"
+  content="Follow Christopher Champagne's living Mission Alignment Protocol through one connected timeline of family, fitness, freeflight, professional work, creativity, food and travel.">
 
-<link rel="canonical"
-href="https://champagne247.github.io/Champagne247/pages/map/explore/">
-
-<!-- =================================================
-     SOCIAL SHARE — ALL M.A.P.
-================================================= -->
+<link
+  rel="canonical"
+  href="https://champagne247.github.io/Champagne247/pages/map/explore/">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Mission Alignment Protocol">
-
-<meta property="og:title"
-content="Explore My M.A.P. | Christopher Champagne">
-
-<meta property="og:description"
-content="One life. Many paths. One mission. Explore my journey through Family, Fitness, Freeflight, Professional, Creator, Food & Travel.">
-
-<meta property="og:url"
-content="https://champagne247.github.io/Champagne247/pages/map/explore/">
-
-<meta property="og:image"
-content="https://champagne247.github.io/Champagne247/assets/map/Hero/hero-all.webp">
-
-<meta property="og:image:alt"
-content="Explore Christopher Champagne's Mission Alignment Protocol">
+<meta property="og:title" content="Explore My M.A.P. | Christopher Champagne">
+<meta
+  property="og:description"
+  content="One life. Many paths. One mission. Follow the journey as it happens.">
+<meta
+  property="og:url"
+  content="https://champagne247.github.io/Champagne247/pages/map/explore/">
+<meta
+  property="og:image"
+  content="https://champagne247.github.io/Champagne247/assets/map/Hero/hero-all.webp">
+<meta
+  property="og:image:alt"
+  content="Explore Christopher Champagne's Mission Alignment Protocol">
 
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Explore My M.A.P. | Christopher Champagne">
+<meta
+  name="twitter:description"
+  content="One life. Many paths. One mission. Follow the journey as it happens.">
+<meta
+  name="twitter:image"
+  content="https://champagne247.github.io/Champagne247/assets/map/Hero/hero-all.webp">
 
-<meta name="twitter:title"
-content="Explore My M.A.P. | Christopher Champagne">
-
-<meta name="twitter:description"
-content="One life. Many paths. One mission. Explore my journey through Family, Fitness, Freeflight, Professional, Creator, Food & Travel.">
-
-<meta name="twitter:image"
-content="https://champagne247.github.io/Champagne247/assets/map/Hero/hero-all.webp">
-
-<link rel="stylesheet"
-href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
 <style>
-
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
 
 :root{
   --bg:#03060b;
   --panel:#0b1420;
   --line:#213246;
   --blue:#58c3ff;
+  --live:#52f2a8;
   --text:#f5f7fb;
   --muted:#9eacbd;
 }
 
-html{scroll-behavior:smooth}
+html{
+  scroll-behavior:smooth;
+}
 
 body{
   margin:0;
@@ -70,14 +69,17 @@ body{
   font-family:Arial,Helvetica,sans-serif;
 }
 
+button,
+a{
+  -webkit-tap-highlight-color:transparent;
+}
+
 .shell{
   max-width:1100px;
   margin:auto;
 }
 
-/* =================================================
-   HERO
-================================================= */
+/* HERO */
 
 .hero{
   position:relative;
@@ -124,9 +126,7 @@ body{
     );
 }
 
-/* =================================================
-   NAV
-================================================= */
+/* NAVIGATION */
 
 .topbar{
   position:relative;
@@ -213,9 +213,7 @@ body{
   box-shadow:0 0 10px var(--blue);
 }
 
-/* =================================================
-   HERO CONTENT
-================================================= */
+/* HERO CONTENT */
 
 .hero-content{
   margin-top:auto;
@@ -284,14 +282,131 @@ h1 span{
   color:var(--blue);
 }
 
-/* =================================================
-   FILTERS
-================================================= */
+/* WHERE I AM NOW */
 
-.filters{
+.now-section{
   padding:22px 16px;
   border-bottom:1px solid var(--line);
-  background:linear-gradient(180deg,#0c1c2b,#07101a);
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(82,242,168,.09),
+      transparent 42%
+    ),
+    linear-gradient(145deg,#0c1d2a,#07101a);
+}
+
+.now-card{
+  position:relative;
+  overflow:hidden;
+  padding:22px;
+  border:1px solid rgba(82,242,168,.45);
+  border-radius:22px;
+  background:rgba(7,17,27,.90);
+  box-shadow:
+    0 18px 40px rgba(0,0,0,.28),
+    0 0 28px rgba(82,242,168,.08);
+}
+
+.now-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:3px;
+  background:linear-gradient(90deg,var(--live),var(--blue));
+}
+
+.now-kicker{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:var(--live);
+  font-size:11px;
+  line-height:1.4;
+  letter-spacing:.17em;
+  font-weight:900;
+}
+
+.live-pulse{
+  width:10px;
+  height:10px;
+  flex:none;
+  border-radius:50%;
+  background:var(--live);
+  box-shadow:0 0 0 0 rgba(82,242,168,.55);
+  animation:pulse 1.8s infinite;
+}
+
+@keyframes pulse{
+  70%{
+    box-shadow:0 0 0 10px rgba(82,242,168,0);
+  }
+
+  100%{
+    box-shadow:0 0 0 0 rgba(82,242,168,0);
+  }
+}
+
+.now-card h2{
+  margin:11px 0 8px;
+  font-size:clamp(26px,7vw,40px);
+  line-height:1.05;
+}
+
+.now-card p{
+  margin:0;
+  color:#bdc9d5;
+  font-size:16px;
+  line-height:1.6;
+}
+
+.now-route{
+  margin-top:15px;
+  color:#fff;
+  font-size:13px;
+  line-height:1.8;
+  font-weight:900;
+  letter-spacing:.05em;
+}
+
+.now-tags,
+.card-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:15px;
+}
+
+.path-tag{
+  border:1px solid #36516b;
+  background:#0a1723;
+  color:#bfe8ff;
+  border-radius:999px;
+  padding:7px 10px;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.04em;
+  cursor:pointer;
+}
+
+.path-tag:hover{
+  color:#06111a;
+  border-color:var(--blue);
+  background:var(--blue);
+}
+
+/* FILTERS */
+
+.filters{
+  position:sticky;
+  top:0;
+  z-index:500;
+  padding:18px 16px;
+  border-bottom:1px solid var(--line);
+  background:rgba(7,16,26,.96);
+  backdrop-filter:blur(14px);
 }
 
 .filter-title{
@@ -299,7 +414,7 @@ h1 span{
   font-size:12px;
   letter-spacing:.18em;
   font-weight:800;
-  margin:0 5px 14px;
+  margin:0 5px 12px;
 }
 
 .filter-row{
@@ -307,13 +422,14 @@ h1 span{
   gap:8px;
   overflow-x:auto;
   padding-bottom:5px;
+  scrollbar-width:thin;
 }
 
 .filter{
   flex:none;
   border:1px solid #34506b;
   background:rgba(13,23,35,.86);
-  color:white;
+  color:#fff;
   padding:11px 15px;
   border-radius:30px;
   font-weight:700;
@@ -331,9 +447,7 @@ h1 span{
   box-shadow:0 0 18px rgba(88,195,255,.25);
 }
 
-/* =================================================
-   MAP
-================================================= */
+/* MAP */
 
 .map-section{
   background:#050a10;
@@ -392,15 +506,9 @@ h1 span{
   line-height:1.45;
 }
 
-.popup-actions{
-  display:flex;
-  flex-wrap:wrap;
-  gap:7px;
-  margin-top:12px;
-}
-
 .popup-link{
   display:inline-block;
+  margin-top:11px;
   padding:9px 11px;
   border-radius:8px;
   background:rgba(88,195,255,.12);
@@ -411,9 +519,7 @@ h1 span{
   font-weight:800;
 }
 
-/* =================================================
-   LEGEND
-================================================= */
+/* LEGEND */
 
 .legend{
   padding:20px;
@@ -438,9 +544,7 @@ h1 span{
   margin-right:5px;
 }
 
-/* =================================================
-   JOURNEY
-================================================= */
+/* JOURNEY FEED */
 
 .journey{
   padding:55px 20px;
@@ -472,6 +576,7 @@ h1 span{
 }
 
 .card{
+  scroll-margin-top:125px;
   border:1px solid var(--line);
   border-radius:24px;
   overflow:hidden;
@@ -486,6 +591,18 @@ h1 span{
   box-shadow:
     0 18px 45px rgba(0,0,0,.30),
     0 0 22px rgba(88,195,255,.08);
+}
+
+.card.now{
+  border-color:rgba(82,242,168,.55);
+  box-shadow:
+    0 18px 45px rgba(0,0,0,.30),
+    0 0 30px rgba(82,242,168,.10);
+}
+
+.card.map-focus{
+  border-color:var(--blue);
+  box-shadow:0 0 34px rgba(88,195,255,.28);
 }
 
 .card-media{
@@ -524,16 +641,22 @@ h1 span{
   position:absolute;
   z-index:2;
   left:16px;
+  right:16px;
   bottom:14px;
+  width:max-content;
+  max-width:calc(100% - 32px);
   padding:7px 10px;
   border-radius:999px;
   border:1px solid rgba(88,195,255,.45);
-  background:rgba(3,9,15,.82);
+  background:rgba(3,9,15,.86);
   color:#fff;
   font-size:10px;
   font-weight:800;
-  letter-spacing:.12em;
+  letter-spacing:.09em;
   text-transform:uppercase;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
 }
 
 .card-body{
@@ -562,6 +685,7 @@ h1 span{
 
 .card h3{
   font-size:24px;
+  line-height:1.2;
   margin:13px 0 8px;
 }
 
@@ -610,10 +734,6 @@ h1 span{
   background:#0b1520;
 }
 
-/* =================================================
-   EMPTY STATE
-================================================= */
-
 .empty-state{
   grid-column:1/-1;
   border:1px dashed #29415a;
@@ -631,9 +751,7 @@ h1 span{
   margin-bottom:8px;
 }
 
-/* =================================================
-   CTA
-================================================= */
+/* CTA */
 
 .cta{
   text-align:center;
@@ -652,16 +770,12 @@ h1 span{
   padding:17px 27px;
   border-radius:16px;
   background:linear-gradient(135deg,#178ee0,#58c3ff);
-  color:white;
+  color:#fff;
   text-decoration:none;
   font-weight:800;
   font-size:18px;
   box-shadow:0 10px 35px #0c7db755;
 }
-
-/* =================================================
-   CREATE BANNER
-================================================= */
 
 .map-banner{
   padding:10px 18px 45px;
@@ -683,10 +797,6 @@ h1 span{
   width:100%;
 }
 
-/* =================================================
-   FOOTER
-================================================= */
-
 footer{
   text-align:center;
   padding:45px 20px 60px;
@@ -702,12 +812,9 @@ footer strong{
   margin-bottom:12px;
 }
 
-/* =================================================
-   MOBILE
-================================================= */
+/* MOBILE */
 
 @media(max-width:749px){
-
   .hero{
     min-height:760px;
     padding:22px 18px 48px;
@@ -778,6 +885,14 @@ footer strong{
     font-size:18px;
   }
 
+  .filters{
+    top:0;
+  }
+
+  #map{
+    min-height:430px;
+  }
+
   .card-body{
     padding:19px;
   }
@@ -800,12 +915,9 @@ footer strong{
   }
 }
 
-/* =================================================
-   DESKTOP
-================================================= */
+/* DESKTOP */
 
 @media(min-width:750px){
-
   .hero{
     min-height:760px;
     padding:38px 48px 65px;
@@ -820,11 +932,18 @@ footer strong{
     padding-top:220px;
   }
 
+  .now-section{
+    padding:28px 34px;
+  }
+
   .cards{
     grid-template-columns:repeat(2,1fr);
   }
-}
 
+  .card.now{
+    grid-column:1/-1;
+  }
+}
 </style>
 </head>
 
@@ -834,193 +953,240 @@ footer strong{
 
 <header class="hero">
 
-<div class="hero-bg" id="heroBg"></div>
-<div class="hero-overlay"></div>
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
 
-<div class="topbar">
+  <div class="topbar">
 
-<a href="../" target="_top" class="brand-link">
+    <a href="../" target="_top" class="brand-link">
 
-<div class="logo">
-<img
-src="../../../assets/map/branding/map-logo-icon.png"
-alt="M.A.P.">
-</div>
+      <div class="logo">
+        <img
+          src="../../../assets/map/branding/map-logo-icon.png"
+          alt="M.A.P.">
+      </div>
 
-<div class="brand-name">
-MISSION ALIGNMENT<br>
-PROTOCOL
-</div>
+      <div class="brand-name">
+        MISSION ALIGNMENT<br>
+        PROTOCOL
+      </div>
 
-</a>
+    </a>
 
-<nav class="main-nav">
-<a href="../" target="_top">HOME</a>
-<a href="./" target="_top" class="active">EXPLORE</a>
-<a href="../create/" target="_top">CREATE</a>
-<a href="../about/" target="_top">ABOUT</a>
-</nav>
+    <nav class="main-nav">
+      <a href="../" target="_top">HOME</a>
+      <a href="./" target="_top" class="active">EXPLORE</a>
+      <a href="../create/" target="_top">CREATE</a>
+      <a href="../about/" target="_top">ABOUT</a>
+    </nav>
 
-</div>
+  </div>
 
-<div class="hero-content">
+  <div class="hero-content">
 
-<div class="eyebrow" id="heroEyebrow">
-Christopher's Journey
-</div>
+    <div class="eyebrow" id="heroEyebrow">
+      Christopher's Journey
+    </div>
 
-<h1 id="heroTitle">
-EXPLORE<br>MY <span>M.A.P.</span>
-</h1>
+    <h1 id="heroTitle">
+      EXPLORE<br>MY <span>M.A.P.</span>
+    </h1>
 
-<div class="hero-copy" id="heroCopy">
-<strong>One life. Many paths. One mission.</strong>
-<br><br>
-A living map of where I've been, what I've accomplished,
-what I'm building and where I'm going next.
-</div>
+    <div class="hero-copy" id="heroCopy">
+      <strong>One life. Many paths. One mission.</strong>
+      <br><br>
+      A living map of where I've been, what I've accomplished,
+      what I'm building and where I'm going next.
+    </div>
 
-<div class="motto">
-Don't just dream about it.<br>
-<span>M.A.P. it out.</span> Get it Done ✔️
-</div>
+    <div class="motto">
+      Don't just dream about it.<br>
+      <span>M.A.P. it out.</span> Get it Done ✔️
+    </div>
 
-</div>
+  </div>
 
 </header>
 
+<section class="now-section">
+
+  <article class="now-card">
+
+    <div class="now-kicker">
+      <span class="live-pulse"></span>
+      WHERE I AM NOW • SEPTEMBER 14, 2026
+    </div>
+
+    <h2>Building and living the M.A.P.</h2>
+
+    <p>
+      Breakfast and planning, then the gym, Solar Supply,
+      and back to Mission Control for desktop work and a live build stream.
+    </p>
+
+    <div class="now-route">
+      FUEL → FITNESS → BUSINESS → BUILD
+    </div>
+
+    <div class="now-tags">
+      <button class="path-tag" data-filter-link="travel">
+        Food & Travel
+      </button>
+
+      <button class="path-tag" data-filter-link="fitness">
+        Fitness
+      </button>
+
+      <button class="path-tag" data-filter-link="professional">
+        Professional
+      </button>
+
+      <button class="path-tag" data-filter-link="creator">
+        Creator
+      </button>
+    </div>
+
+  </article>
+
+</section>
+
 <section class="filters">
 
-<div class="filter-title">
-EXPLORE THE PATHS
-</div>
+  <div class="filter-title">
+    EXPLORE THE PATHS
+  </div>
 
-<div class="filter-row">
+  <div class="filter-row">
 
-<button class="filter active" data-filter="all">
-ALL
-</button>
+    <button class="filter active" data-filter="all">
+      ALL
+    </button>
 
-<button class="filter" data-filter="family">
-❤️ Family
-</button>
+    <button class="filter" data-filter="family">
+      ❤️ Family
+    </button>
 
-<button class="filter" data-filter="fitness">
-💪 Fitness
-</button>
+    <button class="filter" data-filter="fitness">
+      💪 Fitness
+    </button>
 
-<button class="filter" data-filter="freeflight">
-✈️ Freeflight
-</button>
+    <button class="filter" data-filter="freeflight">
+      ✈️ Freeflight
+    </button>
 
-<button class="filter" data-filter="professional">
-🔧 Professional
-</button>
+    <button class="filter" data-filter="professional">
+      🔧 Professional
+    </button>
 
-<button class="filter" data-filter="creator">
-🎨 Creator
-</button>
+    <button class="filter" data-filter="creator">
+      🎨 Creator
+    </button>
 
-<button class="filter" data-filter="travel">
-🌎 Food & Travel
-</button>
+    <button class="filter" data-filter="travel">
+      🌎 Food & Travel
+    </button>
 
-</div>
+  </div>
 
 </section>
 
 <section class="map-section">
-<div id="map"></div>
+  <div id="map"></div>
 </section>
 
 <section class="legend">
 
-<div class="legend-row">
+  <div class="legend-row">
 
-<span>
-<span class="dot" style="background:#a855f7"></span>
-Experienced
-</span>
+    <span>
+      <span class="dot" style="background:#52f2a8"></span>
+      Happening Now
+    </span>
 
-<span>
-<span class="dot" style="background:#2f9bff"></span>
-In Progress
-</span>
+    <span>
+      <span class="dot" style="background:#a855f7"></span>
+      Experienced
+    </span>
 
-<span>
-<span class="dot" style="background:#ffd43b"></span>
-Next
-</span>
+    <span>
+      <span class="dot" style="background:#2f9bff"></span>
+      In Progress
+    </span>
 
-<span>
-<span class="dot" style="background:#ff8c2f"></span>
-Goal
-</span>
+    <span>
+      <span class="dot" style="background:#ffd43b"></span>
+      Next
+    </span>
 
-</div>
+    <span>
+      <span class="dot" style="background:#ff8c2f"></span>
+      Goal
+    </span>
+
+  </div>
 
 </section>
 
 <section class="journey">
 
-<div class="section-label">
-THE JOURNEY
-</div>
+  <div class="section-label">
+    THE LIVE JOURNEY
+  </div>
 
-<h2 id="journeyTitle">
-One Life. Every Part of It.
-</h2>
+  <h2 id="journeyTitle">
+    Where I Am Right Now.
+  </h2>
 
-<div class="section-copy" id="journeyCopy">
-Different paths. Same mission.
-</div>
+  <div class="section-copy" id="journeyCopy">
+    One connected timeline. Every part of the mission.
+  </div>
 
-<div class="cards" id="cards"></div>
+  <div class="cards" id="cards"></div>
 
 </section>
 
 <section class="cta">
 
-<div class="section-label">
-YOUR TURN
-</div>
+  <div class="section-label">
+    YOUR TURN
+  </div>
 
-<h2>
-What's on your M.A.P.?
-</h2>
+  <h2>
+    What's on your M.A.P.?
+  </h2>
 
-<p>
-You don't need my path.<br>
-You need your own.
-</p>
+  <p>
+    You don't need my path.<br>
+    You need your own.
+  </p>
 
-<a href="../create/" target="_top" class="cta-button">
-Create Your M.A.P. →
-</a>
+  <a href="../create/" target="_top" class="cta-button">
+    Create Your M.A.P. →
+  </a>
 
 </section>
 
 <section class="map-banner">
 
-<a href="../create/" target="_top">
+  <a href="../create/" target="_top">
 
-<img
-src="../../../assets/map/Hero/create-your-map.png"
-alt="Create Your Own M.A.P.">
+    <img
+      src="../../../assets/map/Hero/create-your-map.png"
+      alt="Create Your Own M.A.P.">
 
-</a>
+  </a>
 
 </section>
 
 <footer>
 
-<strong>
-WORK HARD. • FLY HIGH.<br>
-EAT WELL. • LIVE FREE.
-</strong>
+  <strong>
+    WORK HARD. • FLY HIGH.<br>
+    EAT WELL. • LIVE FREE.
+  </strong>
 
-M.A.P. • Mission Alignment Protocol<br>
-Christopher Champagne
+  M.A.P. • Mission Alignment Protocol<br>
+  Christopher Champagne
 
 </footer>
 
@@ -1029,49 +1195,23 @@ Christopher Champagne
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
-
-/* =================================================
-   CLEAN SHAREABLE PATH URLS
-================================================= */
-
 const pathRoutes={
-
-  all:
-  "/Champagne247/pages/map/explore/",
-
-  family:
-  "/Champagne247/pages/map/explore/family/",
-
-  fitness:
-  "/Champagne247/pages/map/explore/fitness/",
-
-  freeflight:
-  "/Champagne247/pages/map/explore/freeflight/",
-
-  professional:
-  "/Champagne247/pages/map/explore/professional/",
-
-  creator:
-  "/Champagne247/pages/map/explore/creator/",
-
-  travel:
-  "/Champagne247/pages/map/explore/travel/"
-
+  all:"/Champagne247/pages/map/explore/",
+  family:"/Champagne247/pages/map/explore/family/",
+  fitness:"/Champagne247/pages/map/explore/fitness/",
+  freeflight:"/Champagne247/pages/map/explore/freeflight/",
+  professional:"/Champagne247/pages/map/explore/professional/",
+  creator:"/Champagne247/pages/map/explore/creator/",
+  travel:"/Champagne247/pages/map/explore/travel/"
 };
 
-
-/* =================================================
-   HERO STATES
-================================================= */
-
 const heroStates={
-
   all:{
     image:"../../../assets/map/Hero/hero-all.webp",
-    eyebrow:"Christopher's Journey",
+    eyebrow:"Christopher's Journey • Live",
     title:'EXPLORE<br>MY <span>M.A.P.</span>',
     lead:"One life. Many paths. One mission.",
-    copy:"A living map of where I've been, what I've accomplished, what I'm building and where I'm going next."
+    copy:"A living timeline showing where I've been, what I'm building, what I'm doing now and where I'm going next."
   },
 
   family:{
@@ -1087,7 +1227,7 @@ const heroStates={
     eyebrow:"Fitness • Strength For Life",
     title:'STRENGTH<br>FOR <span>LIFE.</span>',
     lead:"Stronger body. Sharper mind. Longer journey.",
-    copy:"Build the physical and mental capacity to do more, experience more and live the life you want."
+    copy:"Building the physical and mental capacity to experience more and live the life I want."
   },
 
   freeflight:{
@@ -1103,7 +1243,7 @@ const heroStates={
     eyebrow:"Professional • Technical Solutions",
     title:'BUILD. SOLVE.<br>GET IT <span>DONE.</span>',
     lead:"Decades of experience. One mindset: figure it out.",
-    copy:"Security. IT. Networking. Automation. Electrical. HVAC. Refrigeration. Different systems. Same mission — diagnose it, solve it, get it done."
+    copy:"Security, IT, networking, automation, electrical, HVAC and refrigeration."
   },
 
   creator:{
@@ -1111,7 +1251,7 @@ const heroStates={
     eyebrow:"Creator • Build The Vision",
     title:'IDEAS<br>TO <span>IMPACT.</span>',
     lead:"Create. Share. Inspire. Repeat.",
-    copy:"Content, technology, VR, video and digital tools — turning ideas and experiences into something others can explore."
+    copy:"M.A.P., N.O.V.A., content, technology, VR and digital tools turning ideas into experiences."
   },
 
   travel:{
@@ -1119,312 +1259,411 @@ const heroStates={
     eyebrow:"Food & Travel • Experience More",
     title:'GO.<br>SEE. <span>TASTE.</span>',
     lead:"Good food. Good places. Good memories.",
-    copy:"Road trips, coastlines, fishing, local food and the experiences that make the journey worth remembering."
+    copy:"Meals, road trips, coastlines, fishing and the experiences that make the journey worth remembering."
   }
-
 };
-
-
-/* =================================================
-   CATEGORY THUMBNAIL FALLBACKS
-================================================= */
 
 const categoryThumbs={
-
-  family:
-  "../../../assets/map/Hero/hero-family.webp",
-
-  fitness:
-  "../../../assets/map/Hero/hero-fitness.webp",
-
-  freeflight:
-  "../../../assets/map/Hero/hero-freeflight.webp",
-
-  professional:
-  "../../../assets/map/Hero/hero-professional.webp",
-
-  creator:
-  "../../../assets/map/Hero/hero-creator.webp",
-
-  travel:
-  "../../../assets/map/Hero/hero-travel.webp"
-
+  family:"../../../assets/map/Hero/hero-family.webp",
+  fitness:"../../../assets/map/Hero/hero-fitness.webp",
+  freeflight:"../../../assets/map/Hero/hero-freeflight.webp",
+  professional:"../../../assets/map/Hero/hero-professional.webp",
+  creator:"../../../assets/map/Hero/hero-creator.webp",
+  travel:"../../../assets/map/Hero/hero-travel.webp"
 };
 
+/*
+Every journey entry is created once.
 
-/* =================================================
-   JOURNEY DATA
-================================================= */
+categories:
+The same entry can appear under several tabs.
+
+locations:
+The same entry can create several map pins.
+
+sortDate:
+Controls newest-first ordering in ALL.
+*/
 
 const journeys=[
-
-/* -------------------------------------------------
-   FREEFLIGHT
-------------------------------------------------- */
-
-{
-  category:"freeflight",
-  status:"done",
-
-  title:"Dockweiler • First Day of Flying Lessons",
-
-  location:"Dockweiler Beach, California",
-
-  lat:33.936,
-  lng:-118.440,
-
-  date:"August 24, 2015 • Full-day lesson • 10 flights",
-
-  story:
-  "Where it started. A full day learning to hang glide on the dunes at Dockweiler Beach — 10 flights on my very first day. What started on the sand in California would eventually lead to mountain flying, soaring, thermalling and Looking4Lift.",
-
-  thumbnail:
-  "../../../assets/map/Freeflight/dockweiler/dockweiler-2015-01.jpg",
-
-  links:[
-    {
-      label:"Windsports • Dockweiler Lessons →",
-      url:"https://www.windsports.com/beach"
-    }
-  ]
-},
-
-{
-  category:"freeflight",
-  status:"done",
-
-  title:"Lookout Mountain Flight Park",
-
-  location:"Rising Fawn, Georgia",
-
-  lat:34.834,
-  lng:-85.489,
-
-  date:"2025–2026",
-
-  story:
-  "Mountain flying, training hills, ridge soaring, thermalling and a major chapter in my freeflight journey."
-},
-
-{
-  category:"freeflight",
-  status:"done",
-
-  title:"100 Flights",
-
-  location:"Lookout Mountain Flight Park",
-
-  lat:34.835,
-  lng:-85.487,
-
-  date:"August 2026",
-
-  story:
-  "Crossed the 100-flight milestone during Wingman Weekend."
-},
-
-{
-  category:"freeflight",
-  status:"done",
-
-  title:"24 Minute Mountain Flight",
-
-  location:"Lookout Mountain Flight Park",
-
-  lat:34.836,
-  lng:-85.486,
-
-  date:"August 2026",
-
-  story:
-  "Ridge soared and thermalled for approximately 24 minutes — smashing my previous mountain-flight personal best."
-},
-
-{
-  category:"freeflight",
-  status:"progress",
-
-  title:"Looking4Lift",
-
-  location:"United States",
-
-  lat:35.5,
-  lng:-92.5,
-
-  date:"Building Now",
-
-  story:
-  "Freeflight, hang gliding, VR training, travel and community."
-},
-
-/* -------------------------------------------------
-   PROFESSIONAL
-------------------------------------------------- */
-
-{
-  category:"professional",
-  status:"progress",
-
-  title:"CC'S Technical Services",
-
-  location:"Leesville, Louisiana",
-
-  lat:31.1435,
-  lng:-93.261,
-
-  date:"Building Now",
-
-  story:
-  "HVAC, electrical, refrigeration, security, automation, IT and technical services.",
-
-  links:[
-    {
-      label:"Visit CC'S Technical Services →",
-      url:"https://ccstechnicalservices.com/"
-    }
-  ]
-},
-
-/* -------------------------------------------------
-   CREATOR
-------------------------------------------------- */
-
-{
-  category:"creator",
-  status:"progress",
-
-  title:"Mission Alignment Protocol",
-
-  location:"Louisiana",
-
-  lat:31.1,
-  lng:-92.9,
-
-  date:"Building Now",
-
-  story:
-  "Turning goals, experiences, projects and destinations into one living system.",
-
-  links:[
-    {
-      label:"GitHub →",
-      url:"https://github.com/Champagne247"
-    }
-  ]
-},
-
-/* -------------------------------------------------
-   FITNESS
-------------------------------------------------- */
-
-{
-  category:"fitness",
-  status:"progress",
-
-  title:"Certified MONSTER • Strength & Mobility",
-
-  location:"Louisiana",
-
-  lat:31.2,
-  lng:-93.2,
-
-  date:"Ongoing",
-
-  story:
-  "Controlled strength, mobility, conditioning and lifelong physical capability."
-},
-
-/* -------------------------------------------------
-   FOOD & TRAVEL
-------------------------------------------------- */
-
-{
-  category:"travel",
-  status:"done",
-
-  title:"Galveston",
-
-  location:"Galveston, Texas",
-
-  lat:29.301,
-  lng:-94.797,
-
-  date:"2026",
-
-  story:
-  "Travel, fishing, food and another experience added to the M.A.P."
-},
-
-{
-  category:"travel",
-  status:"done",
-
-  title:"Panama City Beach",
-
-  location:"Panama City Beach, Florida",
-
-  lat:30.1766,
-  lng:-85.8055,
-
-  date:"2026",
-
-  story:
-  "Family travel, Gulf Coast and another destination on the journey."
-}
-
+  {
+    id:"live-map-build-2026-09-14",
+    categories:[
+      "travel",
+      "fitness",
+      "professional",
+      "creator"
+    ],
+    status:"now",
+    sortDate:"2026-09-14T09:00:00-05:00",
+
+    title:"Building and Living the M.A.P. • Live",
+
+    location:"Leesville, Louisiana",
+
+    locations:[
+      {
+        label:"Breakfast and M.A.P. planning • Leesville",
+        lat:31.1435,
+        lng:-93.261
+      },
+      {
+        label:"Gym session • Leesville",
+        lat:31.138,
+        lng:-93.265
+      },
+      {
+        label:"Solar Supply run • Central Louisiana",
+        lat:31.270,
+        lng:-92.890
+      },
+      {
+        label:"Mission Control livestream • Leesville",
+        lat:31.150,
+        lng:-93.250
+      }
+    ],
+
+    date:"September 14, 2026 • Happening now",
+
+    story:
+      "The day started over breakfast with a dream-driven breakthrough for M.A.P. Next comes the gym, a Solar Supply run, then desktop work and a live stream from Mission Control while building the system in public.",
+
+    thumbnail:
+      "../../../assets/map/Hero/hero-all.webp"
+  },
+
+  {
+    id:"lookout-24-minute-flight",
+    categories:[
+      "freeflight",
+      "fitness",
+      "creator"
+    ],
+    status:"done",
+    sortDate:"2026-08-23",
+
+    title:"24-Minute Mountain Flight",
+
+    location:"Lookout Mountain Flight Park",
+
+    locations:[
+      {
+        label:"Lookout Mountain Flight Park • Rising Fawn, Georgia",
+        lat:34.836,
+        lng:-85.486
+      }
+    ],
+
+    date:"August 2026",
+
+    story:
+      "Ridge soared and thermalled for approximately 24 minutes, smashing my previous mountain-flight personal best."
+  },
+
+  {
+    id:"lookout-100-flights",
+    categories:[
+      "freeflight",
+      "fitness",
+      "creator"
+    ],
+    status:"done",
+    sortDate:"2026-08-22",
+
+    title:"100 Flights",
+
+    location:"Lookout Mountain Flight Park",
+
+    locations:[
+      {
+        label:"Lookout Mountain Flight Park • Rising Fawn, Georgia",
+        lat:34.835,
+        lng:-85.487
+      }
+    ],
+
+    date:"August 2026",
+
+    story:
+      "Crossed the 100-flight milestone during Wingman Weekend."
+  },
+
+  {
+    id:"looking4lift",
+    categories:[
+      "freeflight",
+      "creator",
+      "professional"
+    ],
+    status:"progress",
+    sortDate:"2026-08-05",
+
+    title:"Looking4Lift",
+
+    location:"United States",
+
+    locations:[
+      {
+        label:"Looking4Lift • United States",
+        lat:35.5,
+        lng:-92.5
+      }
+    ],
+
+    date:"Building now",
+
+    story:
+      "Freeflight, hang gliding, VR experiences, travel, education, content and community."
+  },
+
+  {
+    id:"ccs-technical-services",
+    categories:[
+      "professional",
+      "creator"
+    ],
+    status:"progress",
+    sortDate:"2026-06-25",
+
+    title:"CC'S Technical Services",
+
+    location:"Leesville, Louisiana",
+
+    locations:[
+      {
+        label:"CC'S Technical Services • Leesville, Louisiana",
+        lat:31.1435,
+        lng:-93.261
+      }
+    ],
+
+    date:"Building now",
+
+    story:
+      "HVAC, electrical, refrigeration, security, automation, IT and technical services.",
+
+    links:[
+      {
+        label:"Visit CC'S Technical Services →",
+        url:"https://ccstechnicalservices.com/"
+      }
+    ]
+  },
+
+  {
+    id:"mission-alignment-protocol",
+    categories:[
+      "creator",
+      "professional",
+      "family"
+    ],
+    status:"progress",
+    sortDate:"2026-06-01",
+
+    title:"Mission Alignment Protocol",
+
+    location:"Louisiana",
+
+    locations:[
+      {
+        label:"M.A.P. Mission Control • Louisiana",
+        lat:31.1,
+        lng:-92.9
+      }
+    ],
+
+    date:"Building now",
+
+    story:
+      "Turning goals, experiences, projects, destinations and income opportunities into one living system.",
+
+    links:[
+      {
+        label:"GitHub →",
+        url:"https://github.com/Champagne247"
+      }
+    ]
+  },
+
+  {
+    id:"certified-monster",
+    categories:[
+      "fitness",
+      "creator"
+    ],
+    status:"progress",
+    sortDate:"2026-03-01",
+
+    title:"Certified MONSTER • Strength & Mobility",
+
+    location:"Louisiana",
+
+    locations:[
+      {
+        label:"Strength and mobility training • Louisiana",
+        lat:31.2,
+        lng:-93.2
+      }
+    ],
+
+    date:"Ongoing",
+
+    story:
+      "Controlled strength, functional mobility, conditioning and lifelong physical capability."
+  },
+
+  {
+    id:"lookout-mountain",
+    categories:[
+      "freeflight",
+      "travel",
+      "creator"
+    ],
+    status:"done",
+    sortDate:"2025-10-20",
+
+    title:"Lookout Mountain Flight Park",
+
+    location:"Rising Fawn, Georgia",
+
+    locations:[
+      {
+        label:"Lookout Mountain Flight Park • Rising Fawn, Georgia",
+        lat:34.834,
+        lng:-85.489
+      }
+    ],
+
+    date:"2025–2026",
+
+    story:
+      "Mountain flying, training hills, ridge soaring, thermalling and a major chapter in my freeflight journey."
+  },
+
+  {
+    id:"dockweiler-first-day",
+    categories:[
+      "freeflight",
+      "fitness",
+      "travel"
+    ],
+    status:"done",
+    sortDate:"2015-08-24",
+
+    title:"Dockweiler • First Day of Flying Lessons",
+
+    location:"Dockweiler Beach, California",
+
+    locations:[
+      {
+        label:"Dockweiler Beach • California",
+        lat:33.936,
+        lng:-118.440
+      }
+    ],
+
+    date:"August 24, 2015 • Full-day lesson • 10 flights",
+
+    story:
+      "Where it started. A full day learning to hang glide on the dunes at Dockweiler Beach—10 flights on my first day. What began on the sand would eventually lead to mountain flying, soaring, thermalling and Looking4Lift.",
+
+    thumbnail:
+      "../../../assets/map/Freeflight/dockweiler/dockweiler-2015-01.jpg",
+
+    links:[
+      {
+        label:"Windsports • Dockweiler Lessons →",
+        url:"https://www.windsports.com/beach"
+      }
+    ]
+  },
+
+  {
+    id:"galveston",
+    categories:[
+      "travel",
+      "family",
+      "creator"
+    ],
+    status:"done",
+    sortDate:"2026-01-15",
+
+    title:"Galveston",
+
+    location:"Galveston, Texas",
+
+    locations:[
+      {
+        label:"Galveston • Texas",
+        lat:29.301,
+        lng:-94.797
+      }
+    ],
+
+    date:"2026",
+
+    story:
+      "Travel, fishing, food and another experience added to the M.A.P."
+  },
+
+  {
+    id:"panama-city-beach",
+    categories:[
+      "travel",
+      "family",
+      "creator"
+    ],
+    status:"done",
+    sortDate:"2026-01-10",
+
+    title:"Panama City Beach",
+
+    location:"Panama City Beach, Florida",
+
+    locations:[
+      {
+        label:"Panama City Beach • Florida",
+        lat:30.1766,
+        lng:-85.8055
+      }
+    ],
+
+    date:"2026",
+
+    story:
+      "Family travel, the Gulf Coast and another destination on the journey."
+  }
 ];
 
-
-/* =================================================
-   LABELS
-================================================= */
-
 const statusColors={
-
+  now:"#52f2a8",
   done:"#a855f7",
   progress:"#2f9bff",
   next:"#ffd43b",
   goal:"#ff8c2f"
-
 };
 
-
 const statusLabels={
-
+  now:"Happening Now",
   done:"Experienced",
   progress:"In Progress",
   next:"Next",
   goal:"Goal"
-
 };
 
-
 const categoryLabels={
-
   family:"Family",
   fitness:"Fitness",
   freeflight:"Freeflight",
   professional:"Professional",
   creator:"Creator",
   travel:"Food & Travel"
-
 };
 
-
-/* =================================================
-   MAP
-================================================= */
-
-const map=L.map(
-  "map",
-  {
-    zoomControl:true
-  }
-).setView(
-  [34,-96],
-  4
-);
-
+const map=L.map("map",{
+  zoomControl:true
+}).setView([34,-96],4);
 
 L.tileLayer(
   "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
@@ -1434,513 +1673,438 @@ L.tileLayer(
   }
 ).addTo(map);
 
-
 let markers=[];
 
-
-/* =================================================
-   SECURITY / ESCAPE
-================================================= */
-
 function esc(value){
-
-  return String(value||"").replace(
+  return String(value || "").replace(
     /[&<>"']/g,
-    function(c){
-
+    function(character){
       return{
         "&":"&amp;",
         "<":"&lt;",
         ">":"&gt;",
         '"':"&quot;",
         "'":"&#39;"
-      }[c];
-
+      }[character];
     }
   );
-
 }
 
+function getCategories(item){
+  return item.categories || [];
+}
 
-/* =================================================
-   PRIMARY IMAGE
-   ONE IMAGE = CARD + MAP POPUP
-================================================= */
+function getPrimaryCategory(item){
+  return getCategories(item)[0] || "creator";
+}
 
 function getThumb(item){
-
-  return item.thumbnail ||
-         categoryThumbs[item.category] ||
-         heroStates.all.image;
-
+  return(
+    item.thumbnail ||
+    categoryThumbs[getPrimaryCategory(item)] ||
+    heroStates.all.image
+  );
 }
 
+function getLocations(item){
+  if(item.locations && item.locations.length){
+    return item.locations;
+  }
 
-/* =================================================
-   LINK RENDER
-================================================= */
+  return[
+    {
+      label:item.location,
+      lat:item.lat,
+      lng:item.lng
+    }
+  ];
+}
 
-function renderLinks(item,forPopup=false){
-
+function renderLinks(item,forPopup){
   if(!item.links || !item.links.length){
     return "";
   }
 
-  return item.links.map(
-    function(link,index){
+  return item.links.map(function(link,index){
+    const className=forPopup
+      ? "popup-link"
+      : index===0
+        ? "card-link"
+        : "card-link secondary";
 
-      const className=
-        forPopup
-          ? "popup-link"
-          : (
-              index===0
-                ? "card-link"
-                : "card-link secondary"
-            );
-
-      return `
-        <a
-          class="${className}"
-          href="${esc(link.url)}"
-          target="_blank"
-          rel="noopener noreferrer">
-          ${esc(link.label)}
-        </a>
-      `;
-
-    }
-  ).join("");
-
+    return`
+      <a
+        class="${className}"
+        href="${esc(link.url)}"
+        target="_blank"
+        rel="noopener noreferrer">
+        ${esc(link.label)}
+      </a>
+    `;
+  }).join("");
 }
 
-
-/* =================================================
-   HERO RENDER
-================================================= */
-
 function renderHero(filter){
-
-  const state=
-    heroStates[filter] ||
-    heroStates.all;
-
-  const heroBg=
-    document.getElementById("heroBg");
+  const state=heroStates[filter] || heroStates.all;
+  const heroBg=document.getElementById("heroBg");
 
   heroBg.style.opacity=".15";
 
-  setTimeout(
-    function(){
+  setTimeout(function(){
+    heroBg.style.backgroundImage=`url("${state.image}")`;
+    heroBg.style.opacity="1";
+  },150);
 
-      heroBg.style.backgroundImage=
-        `url("${state.image}")`;
+  document.getElementById("heroEyebrow").textContent=state.eyebrow;
+  document.getElementById("heroTitle").innerHTML=state.title;
 
-      heroBg.style.opacity="1";
-
-    },
-    150
-  );
-
-  document.getElementById(
-    "heroEyebrow"
-  ).textContent=
-    state.eyebrow;
-
-  document.getElementById(
-    "heroTitle"
-  ).innerHTML=
-    state.title;
-
-  document.getElementById(
-    "heroCopy"
-  ).innerHTML=
-    `<strong>${esc(state.lead)}</strong>
-     <br><br>
-     ${esc(state.copy)}`;
-
+  document.getElementById("heroCopy").innerHTML=`
+    <strong>${esc(state.lead)}</strong>
+    <br><br>
+    ${esc(state.copy)}
+  `;
 }
 
+function buildPopup(item,location,color){
+  const categories=getCategories(item);
+  const primary=getPrimaryCategory(item);
+  const primaryImage=getThumb(item);
+  const links=renderLinks(item,true);
 
-/* =================================================
-   JOURNEY RENDER
-================================================= */
+  return`
+    <img
+      class="popup-thumb"
+      src="${esc(primaryImage)}"
+      alt="${esc(item.title)}"
+      onerror="this.src='${esc(
+        categoryThumbs[primary] || heroStates.all.image
+      )}'">
+
+    <div class="popup-category">
+      ${categories.map(function(category){
+        return esc(categoryLabels[category]);
+      }).join(" • ")}
+    </div>
+
+    <div class="popup-title">
+      ${esc(item.title)}
+    </div>
+
+    <div class="popup-location">
+      📍 ${esc(location.label || item.location)}
+      <br>
+      <span style="color:${color}">
+        ● ${esc(statusLabels[item.status])}
+      </span>
+      <br>
+      ${esc(item.date)}
+    </div>
+
+    <div class="popup-copy">
+      ${esc(item.story)}
+    </div>
+
+    ${links}
+  `;
+}
+
+function focusCard(itemId){
+  document.querySelectorAll(".card").forEach(function(card){
+    card.classList.remove("map-focus");
+  });
+
+  const target=document.querySelector(
+    `[data-journey-id="${CSS.escape(itemId)}"]`
+  );
+
+  if(target){
+    target.classList.add("map-focus");
+
+    target.scrollIntoView({
+      behavior:"smooth",
+      block:"center"
+    });
+  }
+}
 
 function render(filter="all"){
-
   renderHero(filter);
 
-  markers.forEach(
-    marker=>map.removeLayer(marker)
-  );
+  markers.forEach(function(marker){
+    map.removeLayer(marker);
+  });
 
   markers=[];
 
-  const cards=
-    document.getElementById("cards");
-
+  const cards=document.getElementById("cards");
   cards.innerHTML="";
 
-  const visible=
-    journeys.filter(
-      item=>
+  const visible=journeys
+    .filter(function(item){
+      return(
         filter==="all" ||
-        item.category===filter
-    );
+        getCategories(item).includes(filter)
+      );
+    })
+    .sort(function(a,b){
+      if(a.status==="now" && b.status!=="now"){
+        return -1;
+      }
 
-  visible.forEach(
-    item=>{
+      if(b.status==="now" && a.status!=="now"){
+        return 1;
+      }
 
-      const color=
-        statusColors[item.status] ||
-        "#c8d0d9";
+      return String(
+        b.sortDate || b.date || ""
+      ).localeCompare(
+        String(a.sortDate || a.date || "")
+      );
+    });
 
-      /*
-       * ONE PRIMARY IMAGE:
-       * PIN POPUP + JOURNEY CARD
-       */
-      const primaryImage=
-        getThumb(item);
+  visible.forEach(function(item){
+    const categories=getCategories(item);
+    const primary=getPrimaryCategory(item);
+    const locations=getLocations(item);
+    const color=statusColors[item.status] || "#c8d0d9";
+    const primaryImage=getThumb(item);
+    const itemId=item.id || item.title;
 
+    locations.forEach(function(location){
+      const marker=L.circleMarker(
+        [location.lat,location.lng],
+        {
+          radius:item.status==="now" ? 11 : 9,
+          color:"#07101a",
+          weight:3,
+          fillColor:color,
+          fillOpacity:1
+        }
+      );
 
-      /* -------------------------------------------
-         MAP MARKER
-      ------------------------------------------- */
+      marker.bindPopup(
+        buildPopup(item,location,color)
+      );
 
-      const marker=
-        L.circleMarker(
-          [item.lat,item.lng],
-          {
-            radius:9,
-            color:"#07101a",
-            weight:3,
-            fillColor:color,
-            fillOpacity:1
-          }
-        );
+      marker.on("click",function(){
+        focusCard(itemId);
+      });
 
+      marker.addTo(map);
+      markers.push(marker);
+    });
 
-      const popupLinks=
-        renderLinks(item,true);
+    const card=document.createElement("article");
 
+    card.className=
+      "card" +
+      (item.status==="now" ? " now" : "");
 
-      marker.bindPopup(`
+    card.dataset.journeyId=itemId;
+
+    const links=renderLinks(item,false);
+
+    const categoryNames=categories.map(function(category){
+      return categoryLabels[category];
+    });
+
+    const locationNames=locations.map(function(location){
+      return location.label;
+    });
+
+    card.innerHTML=`
+      <div class="card-media">
 
         <img
-          class="popup-thumb"
           src="${esc(primaryImage)}"
           alt="${esc(item.title)}"
-          onerror="this.src='${esc(categoryThumbs[item.category] || heroStates.all.image)}'">
+          loading="lazy"
+          onerror="this.src='${esc(
+            categoryThumbs[primary] || heroStates.all.image
+          )}'">
 
-        <div class="popup-category">
-          ${esc(categoryLabels[item.category])}
+        <div class="card-media-label">
+          ${categoryNames.map(esc).join(" • ")}
         </div>
 
-        <div class="popup-title">
+      </div>
+
+      <div class="card-body">
+
+        <div class="card-top">
+
+          <div class="card-category">
+            ${
+              categories.length>1
+                ? "Connected Paths"
+                : esc(categoryLabels[primary])
+            }
+          </div>
+
+          <div
+            class="status"
+            style="color:${color}">
+            ● ${esc(statusLabels[item.status])}
+          </div>
+
+        </div>
+
+        <h3>
           ${esc(item.title)}
-        </div>
+        </h3>
 
-        <div class="popup-location">
-
-          📍 ${esc(item.location)}
-
-          <br>
-
-          ${esc(item.date)}
-
-        </div>
-
-        <div class="popup-copy">
+        <p>
           ${esc(item.story)}
+        </p>
+
+        <div class="card-tags">
+          ${categories.map(function(category){
+            return`
+              <button
+                class="path-tag"
+                data-filter-link="${esc(category)}">
+                ${esc(categoryLabels[category])}
+              </button>
+            `;
+          }).join("")}
+        </div>
+
+        <div class="card-date">
+          📍 ${locationNames.map(esc).join(" • ")}
+          <br>
+          ${esc(item.date)}
         </div>
 
         ${
-          popupLinks
-            ? `<div class="popup-actions">${popupLinks}</div>`
+          links
+            ? `<div class="card-actions">${links}</div>`
             : ""
         }
 
-      `);
+      </div>
+    `;
 
-
-      marker.addTo(map);
-
-      markers.push(marker);
-
-
-      /* -------------------------------------------
-         JOURNEY CARD
-      ------------------------------------------- */
-
-      const card=
-        document.createElement("article");
-
-      card.className="card";
-
-
-      const links=
-        renderLinks(item,false);
-
-
-      card.innerHTML=`
-
-        <div class="card-media">
-
-          <img
-            src="${esc(primaryImage)}"
-            alt="${esc(item.title)}"
-            loading="lazy"
-            onerror="this.src='${esc(categoryThumbs[item.category] || heroStates.all.image)}'">
-
-          <div class="card-media-label">
-            ${esc(categoryLabels[item.category])}
-          </div>
-
-        </div>
-
-
-        <div class="card-body">
-
-
-          <div class="card-top">
-
-            <div class="card-category">
-              ${esc(categoryLabels[item.category])}
-            </div>
-
-            <div
-              class="status"
-              style="color:${color}">
-              ● ${esc(statusLabels[item.status])}
-            </div>
-
-          </div>
-
-
-          <h3>
-            ${esc(item.title)}
-          </h3>
-
-
-          <p>
-            ${esc(item.story)}
-          </p>
-
-
-          <div class="card-date">
-
-            📍 ${esc(item.location)}
-
-            <br>
-
-            ${esc(item.date)}
-
-          </div>
-
-
-          ${
-            links
-              ? `<div class="card-actions">${links}</div>`
-              : ""
-          }
-
-
-        </div>
-
-      `;
-
-
-      cards.appendChild(card);
-
-    }
-  );
-
-
-  /* =================================================
-     EMPTY CATEGORY
-  ================================================= */
+    cards.appendChild(card);
+  });
 
   if(visible.length===0){
-
     cards.innerHTML=`
-
       <div class="empty-state">
-
         <strong>
           ${esc(categoryLabels[filter] || "This path")}
         </strong>
 
-        This path is ready.
-        We're building its real milestones,
-        destinations and goals next.
-
+        This path is ready. Its milestones,
+        destinations and goals will appear here.
       </div>
-
     `;
-
   }
-
-
-  /* =================================================
-     JOURNEY HEADING
-  ================================================= */
 
   if(filter==="all"){
+    document.getElementById("journeyTitle").textContent=
+      "Where I Am Right Now.";
 
-    document.getElementById(
-      "journeyTitle"
-    ).textContent=
-      "One Life. Every Part of It.";
-
-    document.getElementById(
-      "journeyCopy"
-    ).textContent=
-      "Different paths. Same mission.";
-
-  }
-
-  else{
-
-    document.getElementById(
-      "journeyTitle"
-    ).textContent=
+    document.getElementById("journeyCopy").textContent=
+      "Newest first. One connected timeline showing the journey as it happens.";
+  }else{
+    document.getElementById("journeyTitle").textContent=
       categoryLabels[filter];
 
-    document.getElementById(
-      "journeyCopy"
-    ).textContent=
-      "Explore the milestones, places and stories that make up this path.";
-
+    document.getElementById("journeyCopy").textContent=
+      "Every connected entry, milestone, location and opportunity along this path.";
   }
 
+  setTimeout(function(){
+    map.invalidateSize();
 
-  /* =================================================
-     MAP CAMERA
-  ================================================= */
+    if(markers.length>1){
+      const group=L.featureGroup(markers);
 
-  if(markers.length>1){
-
-    const group=
-      L.featureGroup(markers);
-
-    map.fitBounds(
-      group.getBounds(),
-      {
-        padding:[35,35],
-        maxZoom:7
-      }
-    );
-
-  }
-
-  else if(markers.length===1){
-
-    map.setView(
-      markers[0].getLatLng(),
-      8
-    );
-
-  }
-
-  else{
-
-    map.setView(
-      [34,-96],
-      4
-    );
-
-  }
-
+      map.fitBounds(
+        group.getBounds(),
+        {
+          padding:[35,35],
+          maxZoom:7
+        }
+      );
+    }else if(markers.length===1){
+      map.setView(
+        markers[0].getLatLng(),
+        8
+      );
+    }else{
+      map.setView([34,-96],4);
+    }
+  },100);
 }
-
-
-/* =================================================
-   ACTIVE FILTER
-================================================= */
 
 function setActiveFilter(filter){
-
-  document.querySelectorAll(
-    ".filter"
-  ).forEach(
-    button=>{
-
-      button.classList.toggle(
-        "active",
-        button.dataset.filter===filter
-      );
-
-    }
-  );
-
+  document.querySelectorAll(".filter").forEach(function(button){
+    button.classList.toggle(
+      "active",
+      button.dataset.filter===filter
+    );
+  });
 }
 
+function selectFilter(filter,scrollToFeed){
+  setActiveFilter(filter);
+  render(filter);
 
-/* =================================================
-   FILTER CONTROLS
-
-   IMPORTANT:
-
-   A REAL USER TAP:
-   Opens that category's clean shareable URL.
-
-   THE AUTOMATIC CLICK FROM A CATEGORY WRAPPER:
-   Only renders the selected category.
-
-   event.isTrusted keeps the wrapper from recursively
-   loading itself inside another iframe.
-================================================= */
-
-document.querySelectorAll(
-  ".filter"
-).forEach(
-  button=>{
-
-    button.addEventListener(
-      "click",
-      function(event){
-
-        const filter=
-          this.dataset.filter;
-
-        setActiveFilter(filter);
-
-        render(filter);
-
-        /*
-         * Programmatic wrapper click:
-         * render only — DO NOT navigate.
-         */
-        if(!event.isTrusted){
-          return;
-        }
-
-        /*
-         * Real human click:
-         * move the WHOLE browser to the clean
-         * category/share URL.
-         */
-        const route=
-          pathRoutes[filter] ||
-          pathRoutes.all;
-
-        window.top.location.href=
-          route;
-
-      }
-    );
-
+  if(scrollToFeed){
+    document.querySelector(".filters").scrollIntoView({
+      behavior:"smooth",
+      block:"start"
+    });
   }
-);
+}
 
+document.querySelectorAll(".filter").forEach(function(button){
+  button.addEventListener("click",function(event){
+    const filter=this.dataset.filter;
 
-/* =================================================
-   INITIAL LOAD
-================================================= */
+    selectFilter(filter,false);
+
+    /*
+    Category wrapper pages can still trigger these
+    buttons programmatically without recursive navigation.
+    */
+
+    if(!event.isTrusted){
+      return;
+    }
+
+    const route=pathRoutes[filter] || pathRoutes.all;
+
+    if(window.top!==window.self){
+      window.top.location.href=route;
+    }else{
+      history.replaceState(
+        null,
+        "",
+        filter==="all"
+          ? pathRoutes.all
+          : pathRoutes[filter]
+      );
+    }
+  });
+});
+
+document.addEventListener("click",function(event){
+  const tag=event.target.closest("[data-filter-link]");
+
+  if(!tag){
+    return;
+  }
+
+  selectFilter(
+    tag.dataset.filterLink,
+    true
+  );
+});
 
 setActiveFilter("all");
-
 render("all");
-
 </script>
 
 </body>
