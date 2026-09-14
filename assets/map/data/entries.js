@@ -188,7 +188,7 @@ window.MAP_DATA={
       "links":[
         {
           "label":"Explore Fitness on My M.A.P. →",
-          "url":"/Champagne247/pages/map/explore/?path=fitness"
+          "url":"/Champagne247/fitness/"
         }
       ],
 
@@ -300,12 +300,12 @@ window.MAP_DATA={
       "links":[
         {
           "label":"Explore My M.A.P. →",
-          "url":"/Champagne247/pages/map/explore/"
+          "url":"/Champagne247/explore/"
         },
 
         {
           "label":"Create Your Own M.A.P. →",
-          "url":"/Champagne247/pages/map/create/"
+          "url":"/Champagne247/create/"
         }
       ],
 
@@ -409,7 +409,7 @@ window.MAP_DATA={
       "links":[
         {
           "label":"Explore Freeflight →",
-          "url":"/Champagne247/pages/map/explore/?path=freeflight"
+          "url":"/Champagne247/looking4lift/"
         }
       ],
 
@@ -513,7 +513,7 @@ window.MAP_DATA={
       "links":[
         {
           "label":"Explore Freeflight →",
-          "url":"/Champagne247/pages/map/explore/?path=freeflight"
+          "url":"/Champagne247/looking4lift/"
         }
       ],
 
@@ -616,7 +616,7 @@ window.MAP_DATA={
       "links":[
         {
           "label":"Explore Freeflight →",
-          "url":"/Champagne247/pages/map/explore/?path=freeflight"
+          "url":"/Champagne247/looking4lift/"
         }
       ],
 
@@ -959,3 +959,4 @@ window.MAP_DATA={
 
   ]
 };
+
