@@ -537,6 +537,63 @@ button{
   color:#04101a;
 }
 
+/* DEDICATED PATH GATEWAY */
+
+.path-gateway{
+  padding:20px 17px;
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(circle at top right,rgba(88,195,255,.09),transparent 42%),
+    #07111b;
+}
+
+.path-gateway[hidden]{
+  display:none;
+}
+
+.path-gateway-card{
+  padding:20px;
+  border:1px solid #35536d;
+  border-radius:20px;
+  background:linear-gradient(145deg,#0c1b28,#07101a);
+}
+
+.path-gateway-label{
+  color:var(--blue);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.16em;
+}
+
+.path-gateway h2{
+  margin:9px 0 7px;
+  font-size:25px;
+}
+
+.path-gateway p{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.6;
+}
+
+.path-gateway a{
+  min-height:49px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:16px;
+  padding:12px 16px;
+  border:1px solid var(--blue);
+  border-radius:13px;
+  background:linear-gradient(135deg,#178ee0,var(--blue));
+  color:#04101a;
+  text-align:center;
+  font-size:13px;
+  font-weight:900;
+  text-decoration:none;
+}
+
 /* FEED */
 
 .feed-heading{
@@ -1096,6 +1153,29 @@ footer{
 
 </section>
 
+<section
+  class="path-gateway"
+  id="pathGateway"
+  hidden>
+
+  <div class="path-gateway-card">
+
+    <div class="path-gateway-label">
+      DEDICATED PATH
+    </div>
+
+    <h2 id="pathGatewayTitle"></h2>
+
+    <p id="pathGatewayCopy"></p>
+
+    <a id="pathGatewayLink" href="#">
+      OPEN PATH →
+    </a>
+
+  </div>
+
+</section>
+
 <section class="feed-heading">
 
   <div class="section-label">
@@ -1200,6 +1280,67 @@ function esc(value){
     }
   );
 
+}
+
+const pathRoutes={
+  family:{
+    title:"Family & Legacy",
+    copy:"The people, memories and legacy at the foundation of the mission.",
+    label:"OPEN FAMILY →",
+    url:"/Champagne247/family/"
+  },
+  fitness:{
+    title:"Strength & Fitness",
+    copy:"Training, health, mobility, strength and accountability.",
+    label:"OPEN FITNESS →",
+    url:"/Champagne247/fitness/"
+  },
+  freeflight:{
+    title:"Looking4Lift",
+    copy:"Training, flights, destinations and the Road to Flying America.",
+    label:"OPEN LOOKING4LIFT →",
+    url:"/Champagne247/looking4lift/"
+  },
+  professional:{
+    title:"Professional Missions",
+    copy:"Technical skills, service, solutions and income-producing missions.",
+    label:"OPEN PROFESSIONAL →",
+    url:"/Champagne247/professional/"
+  },
+  creator:{
+    title:"Creator",
+    copy:"M.A.P., N.O.V.A., robotics, VR, technology and content.",
+    label:"OPEN CREATOR →",
+    url:"/Champagne247/creator/"
+  },
+  travel:{
+    title:"Food & Travel",
+    copy:"Meals, destinations, road trips and lived experiences.",
+    label:"OPEN FOOD & TRAVEL →",
+    url:"/Champagne247/food-travel/"
+  }
+};
+
+function renderPathGateway(value){
+  const gateway=document.getElementById("pathGateway");
+  const route=pathRoutes[value];
+
+  if(!route){
+    gateway.hidden=true;
+    return;
+  }
+
+  document.getElementById("pathGatewayTitle").textContent=
+    route.title;
+
+  document.getElementById("pathGatewayCopy").textContent=
+    route.copy;
+
+  const link=document.getElementById("pathGatewayLink");
+  link.textContent=route.label;
+  link.href=route.url;
+
+  gateway.hidden=false;
 }
 
 function buildFilters(){
@@ -1648,6 +1789,7 @@ function filterTo(value){
   );
 
   render(value);
+  renderPathGateway(value);
 
 }
 
@@ -1855,3 +1997,4 @@ render();
 
 </body>
 </html>
+
