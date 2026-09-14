@@ -151,7 +151,7 @@ label{
   inset:0;
   z-index:-2;
   background:
-    url("../../../assets/map/Hero/hero-creator.webp")
+    url("/Champagne247/assets/map/Hero/hero-creator.webp")
     center/cover no-repeat;
   opacity:.25;
 }
@@ -737,7 +737,7 @@ footer{
 
       <div class="logo">
         <img
-          src="../../../assets/map/branding/map-logo-icon.png"
+          src="/Champagne247/assets/map/branding/map-logo-icon.png"
           alt="My Life, My Mission, My M.A.P.">
       </div>
 
@@ -750,7 +750,7 @@ footer{
 
     </div>
 
-    <a class="close" href="../life/" aria-label="Close">×</a>
+    <a class="close" href="/Champagne247/" aria-label="Close">×</a>
 
   </div>
 </header>
@@ -1320,7 +1320,7 @@ footer{
 </div>
 
 <!-- LOAD THE EXISTING MASTER DATA -->
-<script src="../../../assets/map/data/entries.js"></script>
+<script src="/Champagne247/assets/map/data/entries.js"></script>
 
 <script>
 const DATA=window.MAP_DATA || {
@@ -1440,7 +1440,7 @@ function suggestedFolder(date,title){
   const day=date.toISOString().slice(0,10);
 
   return(
-    `../../../assets/map/Life/${day}-${slug(title)}/`
+    `assets/map/Life/${day}-${slug(title)}/`
   );
 }
 
@@ -1509,7 +1509,7 @@ function addMedia(data={}){
       <input
         class="media-url"
         type="text"
-        placeholder="../../../assets/map/Life/.../picture.jpg or https://...">
+        placeholder="assets/map/Life/.../picture.jpg or https://...">
 
       <input
         class="media-caption-input"
@@ -1941,7 +1941,7 @@ async function shareEntry(){
     text:currentCaption,
     url:
       "https://champagne247.github.io/" +
-      "Champagne247/pages/map/life/"
+      "Champagne247/"
   };
 
   if(navigator.share){
