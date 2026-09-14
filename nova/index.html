@@ -1,0 +1,1173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#05070d">
+
+<title>Meet NOVA | Build Your M.A.P.</title>
+
+<meta name="description"
+content="Meet NOVA, describe the life you see, and begin building your Living Vision Board and M.A.P.">
+
+<style>
+:root{
+  --bg:#05070d;
+  --card:#0b1723;
+  --line:#29485e;
+  --text:#f7f9fc;
+  --muted:#9fb0bf;
+  --blue:#63c9ff;
+  --green:#55e29d;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  min-height:100vh;
+  color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;
+  background:
+    linear-gradient(90deg,rgba(5,7,13,.96),rgba(5,7,13,.82)),
+    url("../../../assets/map/backgrounds/nova-core-hero.webp") right top/cover fixed no-repeat,
+    radial-gradient(circle at 50% 0,
+    rgba(37,163,226,.22),transparent 28%),
+    linear-gradient(180deg,#07111c 0%,#05070d 55%);
+}
+
+button,textarea{font:inherit}
+
+button{cursor:pointer}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.shell{
+  width:min(100%,900px);
+  margin:auto;
+}
+
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:20px;
+}
+
+.back{
+  color:var(--muted);
+  font-size:13px;
+  font-weight:800;
+}
+
+.brand{
+  color:var(--blue);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.18em;
+}
+
+/* INTRO */
+
+.hero{
+  min-height:calc(100vh - 70px);
+  display:flex;
+  align-items:center;
+  padding:25px 20px 60px;
+}
+
+.nova-card{
+  width:100%;
+  padding:30px 22px;
+  border:1px solid #3e789c;
+  border-radius:28px;
+  background:
+    radial-gradient(circle at 50% 0,
+    rgba(67,187,244,.16),transparent 38%),
+    linear-gradient(145deg,rgba(14,32,48,.96),rgba(8,17,27,.94));
+  backdrop-filter:blur(10px);
+  box-shadow:0 25px 70px rgba(0,0,0,.35);
+}
+
+.status{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  color:var(--green);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.18em;
+}
+
+.dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--green);
+  box-shadow:0 0 14px var(--green);
+}
+
+.identity{
+  margin-top:32px;
+  text-align:center;
+}
+
+.orb{
+  width:92px;
+  height:92px;
+  margin:auto;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  border:1px solid #5bc8ff;
+  background:
+    radial-gradient(circle at 40% 35%,
+    #72d6ff 0%,#188dcc 22%,#0b2940 58%,#06111b 100%);
+  box-shadow:
+    0 0 25px rgba(70,196,255,.45),
+    0 0 65px rgba(35,157,216,.20);
+}
+
+.orb-inner{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.5);
+  box-shadow:
+    inset 0 0 16px rgba(255,255,255,.22),
+    0 0 18px rgba(113,216,255,.55);
+}
+
+.name{
+  margin-top:18px;
+  color:var(--blue);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.25em;
+}
+
+.full-name{
+  margin-top:5px;
+  color:#8198aa;
+  font-size:10px;
+  letter-spacing:.12em;
+}
+
+.message{
+  margin-top:34px;
+}
+
+.message h1{
+  margin:0 0 18px;
+  font-size:clamp(38px,10vw,62px);
+  line-height:1;
+  letter-spacing:-.045em;
+}
+
+.message h1 span{color:var(--blue)}
+
+.message p{
+  margin:0 0 15px;
+  color:#bdcad5;
+  font-size:17px;
+  line-height:1.65;
+}
+
+.message strong{color:#fff}
+
+.pause{
+  margin:27px 0;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#31536a,transparent);
+}
+
+.question-label{
+  color:var(--blue);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.2em;
+}
+
+.question{
+  margin:8px 0 20px;
+  font-size:clamp(27px,7vw,42px);
+  line-height:1.12;
+  letter-spacing:-.035em;
+}
+
+.vision-box{
+  padding:16px;
+  border:1px solid var(--line);
+  border-radius:19px;
+  background:#07111a;
+}
+
+textarea{
+  display:block;
+  width:100%;
+  min-height:150px;
+  resize:vertical;
+  border:0;
+  outline:none;
+  color:#fff;
+  background:transparent;
+  font-size:16px;
+  line-height:1.55;
+}
+
+textarea::placeholder{color:#657b8c}
+
+.input-tools{
+  display:flex;
+  gap:10px;
+  margin-top:13px;
+}
+
+.tool{
+  flex:1;
+  padding:12px 8px;
+  border:1px solid #29485e;
+  border-radius:12px;
+  background:#0c1925;
+  color:#c7d6e1;
+  text-align:center;
+  font-size:13px;
+  font-weight:800;
+}
+
+.tool.disabled{opacity:.55}
+
+.build{
+  width:100%;
+  margin-top:14px;
+  padding:18px;
+  border:0;
+  border-radius:14px;
+  color:#fff;
+  background:linear-gradient(135deg,#137ed0,#32b8f4);
+  font-size:15px;
+  font-weight:900;
+  letter-spacing:.04em;
+  box-shadow:0 12px 32px rgba(20,145,214,.25);
+}
+
+.error{
+  display:none;
+  margin-top:12px;
+  color:#ffb4b4;
+  font-size:13px;
+}
+
+.hint{
+  margin-top:14px;
+  color:#728797;
+  text-align:center;
+  font-size:11px;
+}
+
+/* VISION BOARD */
+
+.result{
+  display:none;
+  padding:25px 20px 70px;
+}
+
+.result.active{display:block}
+
+.result-head{
+  margin:25px 0 28px;
+}
+
+.result-head h1{
+  margin:10px 0;
+  font-size:clamp(40px,10vw,64px);
+  line-height:1;
+}
+
+.result-head p{
+  color:#b7c5cf;
+  font-size:17px;
+  line-height:1.6;
+}
+
+.nova-says{
+  padding:18px;
+  margin:22px 0;
+  border-left:3px solid var(--blue);
+  background:#08131d;
+  color:#e8f7ff;
+  line-height:1.6;
+}
+
+/* COLLAGE */
+
+.board-label{
+  margin:35px 0 12px;
+  color:var(--blue);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.2em;
+}
+
+.board{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  grid-auto-rows:150px;
+  gap:8px;
+}
+
+.tile{
+  position:relative;
+  overflow:hidden;
+  min-height:145px;
+  padding:16px;
+  border:1px solid rgba(120,205,255,.22);
+  border-radius:18px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  background:#102030;
+  isolation:isolate;
+}
+
+.tile:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  opacity:.95;
+}
+
+.tile:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:
+    linear-gradient(180deg,
+    rgba(3,8,13,.03) 10%,
+    rgba(3,8,13,.86) 100%);
+}
+
+.tile:nth-child(3n+1){
+  grid-row:span 2;
+}
+
+.tile:nth-child(5n){
+  grid-column:span 2;
+}
+
+/* Keep every vision readable in the two-column phone layout. */
+@media(max-width:699px){
+  .board{grid-auto-rows:minmax(180px,auto)}
+  .tile:nth-child(3n+1){grid-row:span 1}
+}
+
+.tile-icon{
+  position:absolute;
+  top:14px;
+  right:14px;
+  font-size:35px;
+  filter:drop-shadow(0 4px 12px rgba(0,0,0,.4));
+}
+
+.tile small{
+  color:#a8c7d9;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.16em;
+}
+
+.tile strong{
+  display:block;
+  margin-top:4px;
+  font-size:20px;
+  line-height:1.05;
+}
+
+.tile span{
+  margin-top:5px;
+  color:#c4d1da;
+  font-size:12px;
+  line-height:1.35;
+}
+
+/* visual worlds */
+
+.family:before{
+  background:
+    radial-gradient(circle at 20% 20%,#80573f,transparent 38%),
+    linear-gradient(135deg,#26334a,#111824);
+}
+
+.flight:before{
+  background:
+    radial-gradient(circle at 70% 15%,#80d6ff,transparent 20%),
+    linear-gradient(160deg,#1f7198,#18334b 48%,#18271e 49%,#0a1210);
+}
+
+.home:before{
+  background:
+    radial-gradient(circle at 75% 25%,#f1b96c,transparent 18%),
+    linear-gradient(150deg,#334e63,#172635 45%,#183125 46%,#0b1510);
+}
+
+.health:before{
+  background:
+    radial-gradient(circle at 25% 25%,#58dba1,transparent 24%),
+    linear-gradient(140deg,#164d48,#10222b);
+}
+
+.business:before{
+  background:
+    radial-gradient(circle at 75% 25%,#4cbcff,transparent 22%),
+    linear-gradient(140deg,#163650,#111927);
+}
+
+.maplife:before{
+  background:
+    radial-gradient(circle at 30% 30%,#66d0ff,transparent 25%),
+    linear-gradient(145deg,#193954,#101824);
+}
+
+.novaworld:before{
+  background:
+    radial-gradient(circle at 50% 20%,#39bdf5,transparent 23%),
+    radial-gradient(circle at 75% 70%,#745cff,transparent 30%),
+    #101726;
+}
+
+.money:before{
+  background:
+    radial-gradient(circle at 25% 25%,#e3bd5e,transparent 25%),
+    linear-gradient(145deg,#4c4421,#15190f);
+}
+
+.travel:before{
+  background:
+    radial-gradient(circle at 75% 20%,#f0a76d,transparent 20%),
+    linear-gradient(160deg,#315f75,#182d3a 45%,#293c24 46%,#11180e);
+}
+
+.purpose:before{
+  background:
+    radial-gradient(circle at 50% 20%,#f0d68a,transparent 20%),
+    linear-gradient(145deg,#493a26,#15151a);
+}
+
+.freedom:before{
+  background:
+    radial-gradient(circle at 50% 15%,#8cdcff,transparent 22%),
+    linear-gradient(160deg,#245c7a,#172c3b 45%,#263924 46%,#10160e);
+}
+
+/* ORIGINAL VISION */
+
+.original{
+  margin-top:32px;
+}
+
+.original summary{
+  cursor:pointer;
+  color:#9eb4c4;
+  font-weight:800;
+}
+
+.original-text{
+  margin-top:15px;
+  padding:18px;
+  max-height:280px;
+  overflow:auto;
+  border-left:3px solid var(--blue);
+  background:#07111a;
+  color:#c9d5de;
+  white-space:pre-wrap;
+  line-height:1.6;
+}
+
+/* CONFIRM */
+
+.confirm{
+  margin-top:35px;
+  padding:24px 20px;
+  border:1px solid #31546d;
+  border-radius:22px;
+  background:#0a1520;
+  text-align:center;
+}
+
+.confirm h2{
+  margin:0 0 10px;
+  font-size:30px;
+}
+
+.confirm p{
+  color:#aebec9;
+  line-height:1.55;
+}
+
+.map-btn{
+  display:block;
+  margin-top:20px;
+  padding:18px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#1686d9,#31b5f3);
+  font-weight:900;
+}
+
+.refine{
+  width:100%;
+  margin-top:10px;
+  padding:15px;
+  border:1px solid #31546d;
+  border-radius:14px;
+  background:#0b1722;
+  color:#c3d2dd;
+  font-weight:800;
+}
+
+footer{
+  padding:25px 20px 45px;
+  text-align:center;
+  color:#647989;
+  font-size:11px;
+  letter-spacing:.08em;
+}
+
+@media(min-width:700px){
+
+  .topbar,
+  .hero,
+  .result{
+    padding-left:35px;
+    padding-right:35px;
+  }
+
+  .nova-card{padding:42px}
+
+  .board{
+    grid-template-columns:repeat(3,1fr);
+    grid-auto-rows:180px;
+  }
+
+  .tile:nth-child(5n){
+    grid-column:span 1;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+
+<body>
+
+<div class="shell">
+
+<header class="topbar">
+  <a class="back" href="../">← M.A.P.</a>
+  <div class="brand">POWERED BY N.O.V.A.</div>
+</header>
+
+<main>
+
+<section class="hero" id="intro">
+
+<div class="nova-card">
+
+  <div class="status">
+    <span class="dot"></span>
+    N.O.V.A. ONLINE
+  </div>
+
+  <div class="identity">
+
+    <div class="orb">
+      <div class="orb-inner"></div>
+    </div>
+
+    <div class="name">N.O.V.A.</div>
+
+    <div class="full-name">
+      NEURAL ORCHESTRATION • VISION & ACTION
+    </div>
+
+  </div>
+
+  <div class="message">
+
+    <h1>
+      Hi.<br>
+      I'm <span>NOVA.</span>
+    </h1>
+
+    <p>
+      I'm going to help you get the life you see
+      in your head <strong>out in front of you</strong> —
+      where we can actually work with it.
+    </p>
+
+    <p>
+      Don't worry about goals, timelines, money,
+      or how you're going to make it happen yet.
+    </p>
+
+    <p>
+      For now, I just want you to <strong>see it.</strong>
+    </p>
+
+    <div class="pause"></div>
+
+    <div class="question-label">
+      LET'S START WITH YOUR VISION
+    </div>
+
+    <h2 class="question">
+      How do you see your life in your dreams?
+    </h2>
+
+    <p>
+      Describe it however it comes to you.
+      There are no wrong answers.
+    </p>
+
+    <div class="vision-box">
+
+      <textarea
+        id="visionInput"
+        placeholder="In my life I see..."
+        aria-label="Describe your vision"></textarea>
+
+      <div class="input-tools">
+        <div class="tool">⌨️ Type it</div>
+        <div class="tool disabled">🎙️ Talk to NOVA</div>
+      </div>
+
+    </div>
+
+    <button class="build" id="buildVision">
+      BUILD MY VISION →
+    </button>
+
+    <div class="error" id="error">
+      Give NOVA at least one piece of the life you see.
+    </div>
+
+    <div class="hint">
+      Don't build the plan yet. Just tell NOVA what you can see.
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+
+<section class="result" id="result">
+
+  <div class="status">
+    <span class="dot"></span>
+    N.O.V.A. • VISION RECEIVED
+  </div>
+
+  <div class="result-head">
+
+    <h1>I see it.</h1>
+
+    <p>
+      I pulled the major parts of the life you described
+      out of your words and brought them together.
+    </p>
+
+  </div>
+
+  <div class="nova-says">
+    <strong>NOVA:</strong><br><br>
+    This isn't your plan yet. This is your
+    <strong>Living Vision Board</strong> — the world
+    we're about to turn into your M.A.P.
+  </div>
+
+
+  <div class="board-label">
+    YOUR LIVING VISION BOARD
+  </div>
+
+  <div class="board" id="board"></div>
+
+
+  <details class="original">
+
+    <summary>
+      Read my original vision
+    </summary>
+
+    <div class="original-text"
+         id="originalText"></div>
+
+  </details>
+
+
+  <div class="confirm">
+
+    <h2>
+      Is this the life you see?
+    </h2>
+
+    <p>
+      If something is missing, go back and tell me more.
+      When this feels like your vision, we'll start
+      turning it into your M.A.P.
+    </p>
+
+    <a class="map-btn"
+       id="mapButton"
+       href="../create/">
+      YES — M.A.P. IT →
+    </a>
+
+    <button class="refine"
+            id="refine">
+      ← REFINE MY VISION
+    </button>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  SEE IT • M.A.P. IT • GET IT DONE
+</footer>
+
+</div>
+
+
+<script>
+
+const input =
+  document.getElementById("visionInput");
+
+const intro =
+  document.getElementById("intro");
+
+const result =
+  document.getElementById("result");
+
+const board =
+  document.getElementById("board");
+
+const original =
+  document.getElementById("originalText");
+
+const error =
+  document.getElementById("error");
+
+
+/*
+  V0 VISION INTERPRETER
+
+  This is intentionally local browser logic.
+  Later this gets replaced by NOVA AI interpretation
+  and real visual generation.
+*/
+
+const themes = [
+
+{
+  id:"family",
+  title:"Family & Legacy",
+  icon:"❤️",
+  className:"family",
+  words:[
+    "family","wife","husband","kids","children",
+    "son","sons","daughter","dad","father","mom",
+    "mother","parents","legacy","together"
+  ],
+  copy:"People, relationships, memories and the legacy you build together."
+},
+
+{
+  id:"flight",
+  title:"Flight & Adventure",
+  icon:"🪽",
+  className:"flight",
+  words:[
+    "fly","flying","flight","hang glider",
+    "hang gliding","pilot","aviation","airplane",
+    "freeflight","free flight","mountain"
+  ],
+  copy:"Freedom in the air, adventure and places that call you higher."
+},
+
+{
+  id:"home",
+  title:"Home & Place",
+  icon:"🏡",
+  className:"home",
+  words:[
+    "home","house","property","land","live",
+    "living","mountains","view","cabin"
+  ],
+  copy:"The place you wake up and the environment you choose to call home."
+},
+
+{
+  id:"health",
+  title:"Strength & Health",
+  icon:"💪",
+  className:"health",
+  words:[
+    "health","healthy","strong","strength",
+    "fitness","train","training","muscle",
+    "swim","athletic","martial arts","flexible"
+  ],
+  copy:"A body capable of carrying you through the life you're building."
+},
+
+{
+  id:"business",
+  title:"Business & Career",
+  icon:"🛠️",
+  className:"business",
+  words:[
+    "business","company","career","work",
+    "professional","customers","service",
+    "hvac","electrical","refrigeration"
+  ],
+  copy:"Work that creates value while building independence and opportunity."
+},
+
+{
+  id:"map",
+  title:"M.A.P.",
+  icon:"🗺️",
+  className:"maplife",
+  words:[
+    "m.a.p","map","mission alignment",
+    "missions","milestones","accountability",
+    "goals"
+  ],
+  copy:"Turning vision into visible missions, milestones, actions and memories."
+},
+
+{
+  id:"nova",
+  title:"NOVA",
+  icon:"✦",
+  className:"novaworld",
+  words:[
+    "nova","robot","robotic","ai ",
+    "artificial intelligence","glasses",
+    "voice","vision"
+  ],
+  copy:"An intelligent partner connecting vision, planning, action and the real world."
+},
+
+{
+  id:"money",
+  title:"Financial Freedom",
+  icon:"◈",
+  className:"money",
+  words:[
+    "money","financial","income","wealth",
+    "freedom","financial freedom","revenue"
+  ],
+  copy:"Enough independence that money stops deciding which life you're allowed to live."
+},
+
+{
+  id:"travel",
+  title:"Travel & Experiences",
+  icon:"🌎",
+  className:"travel",
+  words:[
+    "travel","traveling","trip","trips",
+    "world","places","experience",
+    "experiences","adventure"
+  ],
+  copy:"Places to go, things to experience and stories worth remembering."
+},
+
+{
+  id:"purpose",
+  title:"Purpose & Impact",
+  icon:"🔥",
+  className:"purpose",
+  words:[
+    "purpose","teach","teaching","coach",
+    "coaching","help","helping","people",
+    "create","creating","build","building"
+  ],
+  copy:"Building, teaching, helping and leaving something meaningful behind."
+},
+
+{
+  id:"freedom",
+  title:"Freedom",
+  icon:"☀️",
+  className:"freedom",
+  words:[
+    "freedom","free","independence",
+    "time","choice","choices"
+  ],
+  copy:"Owning your time and having the ability to choose how you live it."
+}
+
+];
+
+
+/* score themes */
+
+function getThemes(text){
+
+  const clean =
+    text.toLowerCase();
+
+  const scored =
+    themes.map(theme=>{
+
+      let score = 0;
+
+      theme.words.forEach(word=>{
+
+        if(clean.includes(word)){
+          score++;
+        }
+
+      });
+
+      return{
+        ...theme,
+        score:score
+      };
+
+    });
+
+  let matches =
+    scored
+      .filter(item=>item.score>0)
+      .sort((a,b)=>b.score-a.score);
+
+
+  /*
+    Short visions may not contain enough keywords.
+    Give them a useful starting board.
+  */
+
+  if(matches.length < 4){
+
+    const defaults = [
+      "family",
+      "home",
+      "health",
+      "freedom",
+      "purpose",
+      "travel"
+    ];
+
+    defaults.forEach(id=>{
+
+      if(matches.length >= 6) return;
+
+      const exists =
+        matches.some(item=>item.id===id);
+
+      if(!exists){
+
+        const found =
+          themes.find(item=>item.id===id);
+
+        if(found){
+          matches.push(found);
+        }
+
+      }
+
+    });
+
+  }
+
+  return matches.slice(0,10);
+
+}
+
+
+/* build visual board safely */
+
+function renderBoard(text){
+
+  board.textContent = "";
+
+  const selected =
+    getThemes(text);
+
+  selected.forEach((theme,index)=>{
+
+    const tile =
+      document.createElement("div");
+
+    tile.className =
+      "tile " + theme.className;
+
+
+    const icon =
+      document.createElement("div");
+
+    icon.className =
+      "tile-icon";
+
+    icon.textContent =
+      theme.icon;
+
+
+    const label =
+      document.createElement("small");
+
+    label.textContent =
+      "VISION " +
+      String(index+1).padStart(2,"0");
+
+
+    const title =
+      document.createElement("strong");
+
+    title.textContent =
+      theme.title;
+
+
+    const copy =
+      document.createElement("span");
+
+    copy.textContent =
+      theme.copy;
+
+
+    tile.appendChild(icon);
+    tile.appendChild(label);
+    tile.appendChild(title);
+    tile.appendChild(copy);
+
+    board.appendChild(tile);
+
+  });
+
+}
+
+
+/* saved vision */
+
+const saved =
+  localStorage.getItem("map_vision");
+
+if(saved){
+  input.value = saved;
+}
+
+
+/* build */
+
+document
+.getElementById("buildVision")
+.addEventListener("click",()=>{
+
+  const vision =
+    input.value.trim();
+
+  if(!vision){
+
+    error.style.display =
+      "block";
+
+    input.focus();
+
+    return;
+
+  }
+
+  error.style.display =
+    "none";
+
+  localStorage.setItem(
+    "map_vision",
+    vision
+  );
+
+  /*
+    Save a structured starter object too.
+    Future M.A.P. pages can read this.
+  */
+
+  const selected =
+    getThemes(vision);
+
+  const visionData = {
+    vision:vision,
+    themes:selected.map(item=>({
+      id:item.id,
+      title:item.title
+    })),
+    updatedAt:new Date().toISOString()
+  };
+
+  localStorage.setItem(
+    "map_nova_vision",
+    JSON.stringify(visionData)
+  );
+
+  original.textContent =
+    vision;
+
+  renderBoard(vision);
+
+  intro.style.display =
+    "none";
+
+  result.classList.add(
+    "active"
+  );
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+});
+
+
+/* refine */
+
+document
+.getElementById("refine")
+.addEventListener("click",()=>{
+
+  result.classList.remove(
+    "active"
+  );
+
+  intro.style.display =
+    "flex";
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+  setTimeout(()=>{
+    input.focus();
+  },300);
+
+});
+
+</script>
+
+</body>
+</html>
