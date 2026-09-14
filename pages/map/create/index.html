@@ -52,9 +52,16 @@ a{color:inherit;text-decoration:none}
 
 .top{
   padding:18px 18px 24px;
-  background:linear-gradient(180deg,#0a1622,#05070d);
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg,rgba(5,7,13,.96),rgba(5,7,13,.62)),
+    linear-gradient(180deg,rgba(5,7,13,.10),#05070d),
+    url("../../../assets/map/backgrounds/build-map-hero.webp") center 42%/cover no-repeat;
   border-bottom:1px solid #22303f;
 }
+
+.top>*{position:relative;z-index:1}
 
 .nav{
   display:flex;
@@ -632,7 +639,10 @@ h1{
 .geo-head{
   padding:26px 16px 16px;
   border-top:1px solid #1d2b38;
-  background:#070b11;
+  background:
+    linear-gradient(90deg,rgba(5,7,13,.98),rgba(5,7,13,.72)),
+    linear-gradient(180deg,rgba(5,7,13,.14),#070b11),
+    url("../../../assets/map/backgrounds/places-map-banner.webp") center/cover no-repeat;
 }
 
 .geo-head h2{
