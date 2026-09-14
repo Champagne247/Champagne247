@@ -17,18 +17,22 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Mission Alignment Protocol">
 <meta property="og:title" content="Explore My M.A.P.">
+
 <meta
   property="og:description"
   content="My Life. My Mission. My M.A.P. Live once. Capture once. Connect everywhere.">
+
 <meta
   property="og:image"
   content="https://champagne247.github.io/Champagne247/assets/map/Hero/hero-all.webp">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Explore My M.A.P.">
+
 <meta
   name="twitter:description"
   content="One life. Many paths. One connected mission.">
+
 <meta
   name="twitter:image"
   content="https://champagne247.github.io/Champagne247/assets/map/Hero/hero-all.webp">
@@ -94,10 +98,10 @@ button{
 }
 
 .brand{
+  min-width:0;
   display:flex;
   align-items:center;
   gap:13px;
-  min-width:0;
   color:#fff;
   text-decoration:none;
 }
@@ -114,9 +118,9 @@ button{
 }
 
 .logo img{
-  display:block;
   width:100%;
   height:100%;
+  display:block;
   object-fit:cover;
 }
 
@@ -169,10 +173,10 @@ button{
 
 .hero{
   position:relative;
+  isolation:isolate;
   min-height:620px;
   display:flex;
   align-items:flex-end;
-  isolation:isolate;
   overflow:hidden;
   padding:42px 30px 54px;
   border-bottom:1px solid var(--line);
@@ -183,7 +187,8 @@ button{
   position:absolute;
   inset:0;
   z-index:-2;
-  background-image:url("../assets/map/Hero/hero-all.webp");
+  background-image:
+    url("/Champagne247/assets/map/Hero/hero-all.webp");
   background-position:68% center;
   background-size:cover;
   transition:opacity .25s ease;
@@ -280,7 +285,6 @@ h1 span{
   font-size:16px;
   font-weight:900;
   line-height:1.65;
-  letter-spacing:.025em;
 }
 
 /* FILTERS */
@@ -329,13 +333,87 @@ h1 span{
   box-shadow:0 0 20px rgba(88,195,255,.22);
 }
 
+/* DEDICATED PATH GATEWAY */
+
+.path-gateway{
+  display:none;
+  padding:20px 16px;
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(88,195,255,.12),
+      transparent 42%
+    ),
+    #07111b;
+}
+
+.path-gateway.active{
+  display:block;
+}
+
+.path-gateway-card{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding:20px;
+  border:1px solid #37607d;
+  border-radius:20px;
+  background:linear-gradient(145deg,#0c1c2a,#07111a);
+}
+
+.path-gateway-copy{
+  min-width:0;
+}
+
+.path-gateway-label{
+  color:var(--blue);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.17em;
+}
+
+.path-gateway h2{
+  margin:8px 0 6px;
+  font-size:25px;
+}
+
+.path-gateway p{
+  margin:0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.55;
+}
+
+.path-gateway-button{
+  min-width:180px;
+  min-height:54px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:13px 16px;
+  border:1px solid var(--blue);
+  border-radius:14px;
+  background:linear-gradient(135deg,#178ee0,var(--blue));
+  color:#04101a;
+  text-align:center;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:900;
+}
+
 /* CURRENT ENTRY */
 
 .now-section{
   padding:22px 16px;
   border-bottom:1px solid var(--line);
   background:
-    radial-gradient(circle at top right,rgba(82,242,168,.10),transparent 42%),
+    radial-gradient(
+      circle at top right,
+      rgba(82,242,168,.10),
+      transparent 42%
+    ),
     #07101a;
 }
 
@@ -367,7 +445,6 @@ h1 span{
   font-size:11px;
   font-weight:900;
   letter-spacing:.15em;
-  text-transform:uppercase;
 }
 
 .now-card h2{
@@ -436,7 +513,6 @@ h1 span{
   font-size:10px;
   font-weight:900;
   letter-spacing:.09em;
-  text-transform:uppercase;
 }
 
 .popup-title{
@@ -469,8 +545,7 @@ h1 span{
   flex-wrap:wrap;
   gap:15px;
   padding:20px;
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
+  border-block:1px solid var(--line);
   background:#080e16;
   color:var(--muted);
   font-size:13px;
@@ -520,9 +595,6 @@ h1 span{
 
 .card.now{
   border-color:rgba(82,242,168,.52);
-  box-shadow:
-    0 15px 38px rgba(0,0,0,.30),
-    0 0 30px rgba(82,242,168,.08);
 }
 
 .card.map-focus{
@@ -553,7 +625,6 @@ h1 span{
   padding:7px 10px;
   border-radius:999px;
   background:rgba(3,8,13,.82);
-  color:#fff;
   font-size:11px;
   font-weight:900;
 }
@@ -568,7 +639,6 @@ h1 span{
   border:1px solid rgba(88,195,255,.40);
   border-radius:999px;
   background:rgba(3,8,13,.84);
-  color:#fff;
   font-size:11px;
   font-weight:800;
   text-overflow:ellipsis;
@@ -591,7 +661,6 @@ h1 span{
   font-size:11px;
   font-weight:900;
   letter-spacing:.14em;
-  text-transform:uppercase;
 }
 
 .status{
@@ -635,8 +704,8 @@ h1 span{
 }
 
 .card-link{
-  display:inline-flex;
   min-height:43px;
+  display:inline-flex;
   align-items:center;
   justify-content:center;
   padding:11px 15px;
@@ -652,6 +721,11 @@ h1 span{
 .card-link.primary{
   border-color:var(--blue);
   background:rgba(88,195,255,.10);
+}
+
+.dedicated-link{
+  border-color:var(--blue);
+  color:#bfeaff;
 }
 
 .opportunity{
@@ -703,17 +777,32 @@ h1 span{
   line-height:1.6;
 }
 
-.cta-button{
-  display:inline-block;
+.cta-actions{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
   margin-top:18px;
-  padding:17px 26px;
+}
+
+.cta-button{
+  display:inline-flex;
+  min-height:55px;
+  align-items:center;
+  justify-content:center;
+  padding:15px 22px;
+  border:1px solid #355b78;
   border-radius:16px;
-  background:linear-gradient(135deg,#178ee0,var(--blue));
-  color:#03101a;
-  font-size:17px;
+  background:#0a1723;
+  color:#fff;
   font-weight:900;
   text-decoration:none;
-  box-shadow:0 12px 35px rgba(12,125,183,.30);
+}
+
+.cta-button.primary{
+  border-color:var(--blue);
+  background:linear-gradient(135deg,#178ee0,var(--blue));
+  color:#03101a;
 }
 
 footer{
@@ -746,20 +835,9 @@ footer strong{
     padding:17px 18px;
   }
 
-  .logo{
-    width:54px;
-    height:54px;
-    flex-basis:54px;
-  }
-
   .brand-name{
     max-width:210px;
     font-size:16px;
-  }
-
-  .icon-link{
-    width:48px;
-    height:48px;
   }
 
   .hero{
@@ -767,29 +845,17 @@ footer strong{
     padding:35px 22px 48px;
   }
 
-  .hero-bg{
-    background-position:67% center;
-  }
-
-  .hero-overlay{
-    background:
-      linear-gradient(
-        90deg,
-        rgba(3,6,11,.87),
-        rgba(3,6,11,.44) 63%,
-        rgba(3,6,11,.08)
-      ),
-      linear-gradient(
-        180deg,
-        rgba(3,6,11,.10),
-        rgba(3,6,11,.18) 38%,
-        rgba(3,6,11,.96) 82%,
-        #03060b 100%
-      );
-  }
-
   .hero-copy{
     font-size:18px;
+  }
+
+  .path-gateway-card{
+    display:block;
+  }
+
+  .path-gateway-button{
+    width:100%;
+    margin-top:17px;
   }
 
   .card-actions{
@@ -824,17 +890,29 @@ footer strong{
 
 <header class="topbar">
 
-  <a class="brand" href="../" target="_top">
+  <a
+    class="brand"
+    href="/Champagne247/"
+    target="_top">
 
     <div class="logo">
+
       <img
-        src="../assets/map/branding/map-logo-icon.png"
+        src="/Champagne247/assets/map/branding/map-logo-icon.png"
         alt="My Life, My Mission, My M.A.P.">
+
     </div>
 
     <div class="brand-copy">
-      <div class="brand-name">Christopher Champagne</div>
-      <div class="brand-handle">@Champagne247</div>
+
+      <div class="brand-name">
+        Christopher Champagne
+      </div>
+
+      <div class="brand-handle">
+        @Champagne247
+      </div>
+
     </div>
 
   </a>
@@ -843,7 +921,7 @@ footer strong{
 
     <a
       class="icon-link"
-      href="../"
+      href="/Champagne247/"
       target="_top"
       aria-label="Open My Life">
       🌍
@@ -851,7 +929,7 @@ footer strong{
 
     <a
       class="icon-link primary"
-      href="../manage/"
+      href="/Champagne247/manage/"
       target="_top"
       aria-label="Add to My Life">
       +
@@ -869,23 +947,37 @@ footer strong{
   <div class="hero-content">
 
     <div class="eyebrow">
+
       <span class="hero-live"></span>
-      <span id="heroEyebrow">MY JOURNEY • LIVE</span>
+
+      <span id="heroEyebrow">
+        MY JOURNEY • LIVE
+      </span>
+
     </div>
 
     <h1 id="heroTitle">
-      EXPLORE<br>MY <span>M.A.P.</span>
+      EXPLORE<br>
+      MY <span>M.A.P.</span>
     </h1>
 
     <div class="hero-copy" id="heroCopy">
-      <strong>One life. Many paths. One connected mission.</strong>
+
+      <strong>
+        One life. Many paths. One connected mission.
+      </strong>
+
       Every experience, project, milestone and destination
       begins in My Life and connects across My M.A.P.
+
     </div>
 
     <div class="motto">
+
       MY LIFE. • MY MISSION. • MY M.A.P.<br>
+
       LIVE ONCE. • CAPTURE ONCE. • CONNECT EVERYWHERE.
+
     </div>
 
   </div>
@@ -894,11 +986,16 @@ footer strong{
 
 <section class="filters">
 
-  <div class="filter-title">EXPLORE THE PATHS</div>
+  <div class="filter-title">
+    EXPLORE THE PATHS
+  </div>
 
   <div class="filter-row" id="filters">
 
-    <button class="filter active" data-filter="all">
+    <button
+      class="filter active"
+      data-filter="all"
+      type="button">
       ALL
     </button>
 
@@ -906,41 +1003,105 @@ footer strong{
 
 </section>
 
-<section class="now-section" id="nowSection"></section>
+<section
+  class="path-gateway"
+  id="pathGateway">
+
+  <div class="path-gateway-card">
+
+    <div class="path-gateway-copy">
+
+      <div class="path-gateway-label">
+        DEDICATED PATH
+      </div>
+
+      <h2 id="pathGatewayTitle"></h2>
+
+      <p id="pathGatewayCopy"></p>
+
+    </div>
+
+    <a
+      class="path-gateway-button"
+      id="pathGatewayButton"
+      href="#">
+    </a>
+
+  </div>
+
+</section>
+
+<section
+  class="now-section"
+  id="nowSection">
+</section>
 
 <section>
   <div id="map"></div>
 </section>
 
-<section class="legend" id="legend"></section>
+<section
+  class="legend"
+  id="legend">
+</section>
 
 <section class="journey">
 
-  <div class="section-label">THE CONNECTED JOURNEY</div>
-
-  <h2 id="journeyTitle">Every Path. One Life.</h2>
-
-  <div class="section-copy" id="journeyCopy">
-    Every entry is created once and connected everywhere it belongs.
+  <div class="section-label">
+    THE CONNECTED JOURNEY
   </div>
 
-  <div class="cards" id="cards"></div>
+  <h2 id="journeyTitle">
+    Every Path. One Life.
+  </h2>
+
+  <div
+    class="section-copy"
+    id="journeyCopy">
+
+    Every entry is created once and connected everywhere it belongs.
+
+  </div>
+
+  <div
+    class="cards"
+    id="cards">
+  </div>
 
 </section>
 
 <section class="cta">
 
-  <div class="section-label">BUILD YOUR LIVING VISION</div>
+  <div class="section-label">
+    BUILD YOUR LIVING VISION
+  </div>
 
-  <h2>What's on your M.A.P.?</h2>
+  <h2>
+    What's on your M.A.P.?
+  </h2>
 
   <p>
-    Get it out of your head, make it visible and start moving.
+    Meet N.O.V.A., get the vision out of your head,
+    make it visible and start moving.
   </p>
 
-  <a class="cta-button" href="../create/" target="_top">
-    Create Your M.A.P. →
-  </a>
+  <div class="cta-actions">
+
+    <a
+      class="cta-button"
+      href="/Champagne247/nova/"
+      target="_top">
+      Meet N.O.V.A.
+    </a>
+
+    <a
+      class="cta-button primary"
+      href="/Champagne247/create/"
+      target="_top">
+      Create Your M.A.P. →
+    </a>
+
+  </div>
 
 </section>
 
@@ -960,255 +1121,492 @@ footer strong{
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-<!-- THE SINGLE SOURCE OF TRUTH -->
-<script src="../assets/map/data/entries.js"></script>
+<script src="/Champagne247/assets/map/data/entries.js"></script>
 
 <script>
-const DATA=window.MAP_DATA;
+const DATA=
+  window.MAP_DATA;
 
 function esc(value){
-  return String(value ?? "").replace(/[&<>"']/g,function(character){
-    return{
-      "&":"&amp;",
-      "<":"&lt;",
-      ">":"&gt;",
-      '"':"&quot;",
-      "'":"&#39;"
-    }[character];
-  });
+
+  return String(value ?? "").replace(
+    /[&<>"']/g,
+    function(character){
+
+      return{
+        "&":"&amp;",
+        "<":"&lt;",
+        ">":"&gt;",
+        '"':"&quot;",
+        "'":"&#39;"
+      }[character];
+
+    }
+  );
+
 }
 
-if(!DATA || !Array.isArray(DATA.entries)){
+if(
+  !DATA ||
+  !Array.isArray(DATA.entries)
+){
+
   document.body.innerHTML=`
     <div class="data-error">
-      <strong>The M.A.P. data could not load.</strong><br><br>
+
+      <strong>
+        The M.A.P. data could not load.
+      </strong>
+
+      <br><br>
+
       Confirm that this file exists:<br>
+
       assets/map/data/entries.js
+
     </div>
   `;
 
-  throw new Error("MAP_DATA did not load.");
+  throw new Error(
+    "MAP_DATA did not load."
+  );
+
 }
 
-const categories=DATA.categories || {};
-const statuses=DATA.statuses || {};
-const entries=DATA.entries || [];
+const categories=
+  DATA.categories || {};
+
+const statuses=
+  DATA.statuses || {};
+
+const entries=
+  DATA.entries || [];
+
+const pathRoutes={
+
+  family:{
+    title:"Family & Legacy",
+    button:"OPEN FAMILY →",
+    url:"/Champagne247/family/",
+    copy:
+      "The people, memories and legacy at the foundation of the mission."
+  },
+
+  fitness:{
+    title:"Strength & Fitness",
+    button:"OPEN FITNESS →",
+    url:"/Champagne247/fitness/",
+    copy:
+      "Training, health, mobility, strength and accountability."
+  },
+
+  freeflight:{
+    title:"Looking4Lift",
+    button:"OPEN LOOKING4LIFT →",
+    url:"/Champagne247/looking4lift/",
+    copy:
+      "Training, mountain flights, freeflight locations, videos and the Road to Flying America."
+  },
+
+  professional:{
+    title:"Professional",
+    button:"OPEN PROFESSIONAL →",
+    url:"/Champagne247/professional/",
+    copy:
+      "CC's Technical Services, HVAC, electrical, refrigeration, security, IT and real-world solutions."
+  },
+
+  creator:{
+    title:"Creator",
+    button:"OPEN CREATOR →",
+    url:"/Champagne247/creator/",
+    copy:
+      "M.A.P., N.O.V.A., robotics, VR, technology, media and ideas becoming real."
+  },
+
+  travel:{
+    title:"Food & Travel",
+    button:"OPEN FOOD & TRAVEL →",
+    url:"/Champagne247/food-travel/",
+    copy:
+      "Meals, destinations, adventures and experiences worth remembering."
+  }
+
+};
 
 const heroWords={
+
   all:{
     eyebrow:"MY JOURNEY • LIVE",
     title:'EXPLORE<br>MY <span>M.A.P.</span>',
     lead:"One life. Many paths. One connected mission.",
-    copy:"Every experience, project, milestone and destination begins in My Life and connects across My M.A.P."
+    copy:
+      "Every experience, project, milestone and destination begins in My Life and connects across My M.A.P."
   },
 
   family:{
     eyebrow:"FAMILY • THE FOUNDATION",
     title:'FAMILY<br>IS <span>HOME.</span>',
     lead:"The people behind the mission.",
-    copy:"The memories, relationships and milestones that make every other path worth taking."
+    copy:
+      "The memories, relationships and milestones that make every other path worth taking."
   },
 
   fitness:{
     eyebrow:"FITNESS • STRENGTH FOR LIFE",
     title:'STRENGTH<br>FOR <span>LIFE.</span>',
     lead:"The M begins with my choices.",
-    copy:"Building strength, mobility, conditioning and the physical capacity to live everything on my M.A.P."
+    copy:
+      "Building strength, mobility, conditioning and the physical capacity to live everything on my M.A.P."
   },
 
   freeflight:{
     eyebrow:"LOOKING4LIFT • FREEFLIGHT",
     title:'BORN<br>TO <span>FLY.</span>',
     lead:"The sky isn't the limit. It's the destination.",
-    copy:"Training, flights, milestones, community and the lifelong pursuit of freeflight."
+    copy:
+      "Training, flights, milestones, community and the lifelong pursuit of freeflight."
   },
 
   professional:{
     eyebrow:"PROFESSIONAL • TECHNICAL SOLUTIONS",
     title:'BUILD. SOLVE.<br>GET IT <span>DONE.</span>',
     lead:"Real work. Real solutions.",
-    copy:"HVAC, electrical, refrigeration, security, IT, automation and income-producing missions."
+    copy:
+      "HVAC, electrical, refrigeration, security, IT, automation and income-producing missions."
   },
 
   creator:{
     eyebrow:"CREATOR • BUILD THE VISION",
     title:'IDEAS<br>TO <span>IMPACT.</span>',
     lead:"Create it. Connect it. Share it.",
-    copy:"M.A.P., N.O.V.A., technology, VR and content turning imagination into something real."
+    copy:
+      "M.A.P., N.O.V.A., robotics, VR and content turning imagination into something real."
   },
 
   travel:{
     eyebrow:"FOOD & TRAVEL • EXPERIENCE MORE",
     title:'GO.<br>SEE. <span>TASTE.</span>',
     lead:"Good food. Good places. Good memories.",
-    copy:"Meals, journeys, coastlines and experiences that make life worth documenting."
+    copy:
+      "Meals, journeys, coastlines and experiences that make life worth documenting."
   }
+
 };
 
 function categoryLabel(key){
-  return categories[key]?.label || key;
+
+  return(
+    categories[key]?.label ||
+    pathRoutes[key]?.title ||
+    key
+  );
+
 }
 
 function categoryImage(key){
-  return categories[key]?.image ||
-    "../assets/map/Hero/hero-all.webp";
+
+  return(
+    categories[key]?.image ||
+    "/Champagne247/assets/map/Hero/hero-all.webp"
+  );
+
 }
 
 function statusLabel(key){
-  return statuses[key]?.label || key || "Journey";
+
+  return(
+    statuses[key]?.label ||
+    key ||
+    "Journey"
+  );
+
 }
 
 function statusColor(key){
-  return statuses[key]?.color || "#9eacbd";
+
+  return(
+    statuses[key]?.color ||
+    "#9eacbd"
+  );
+
 }
 
 function firstMedia(entry){
-  const media=(entry.media || []).find(function(item){
-    return item.type==="image" && item.url;
-  });
 
-  return media || {
-    type:"image",
-    url:categoryImage(entry.categories?.[0]),
-    caption:entry.title
-  };
+  const media=
+    (entry.media || []).find(
+      function(item){
+
+        return(
+          item.type==="image" &&
+          item.url
+        );
+
+      }
+    );
+
+  return(
+    media || {
+      type:"image",
+      url:categoryImage(
+        entry.categories?.[0]
+      ),
+      caption:entry.title
+    }
+  );
+
 }
 
 function entryLocations(entry){
+
   return Array.isArray(entry.locations)
-    ? entry.locations.filter(function(location){
-        return Number.isFinite(Number(location.lat)) &&
-          Number.isFinite(Number(location.lng));
-      })
+    ? entry.locations.filter(
+        function(location){
+
+          return(
+            Number.isFinite(
+              Number(location.lat)
+            ) &&
+            Number.isFinite(
+              Number(location.lng)
+            )
+          );
+
+        }
+      )
     : [];
+
 }
 
 function sortedEntries(list){
-  return [...list].sort(function(a,b){
-    if(a.status==="now" && b.status!=="now"){
-      return -1;
-    }
 
-    if(b.status==="now" && a.status!=="now"){
-      return 1;
-    }
+  return[
+    ...list
+  ].sort(
+    function(a,b){
 
-    return new Date(b.datetime || 0) -
-      new Date(a.datetime || 0);
-  });
+      if(
+        a.status==="now" &&
+        b.status!=="now"
+      ){
+        return -1;
+      }
+
+      if(
+        b.status==="now" &&
+        a.status!=="now"
+      ){
+        return 1;
+      }
+
+      return(
+        new Date(
+          b.datetime || 0
+        ) -
+        new Date(
+          a.datetime || 0
+        )
+      );
+
+    }
+  );
+
+}
+
+function visibleEntries(filter){
+
+  return sortedEntries(
+    entries.filter(
+      function(entry){
+
+        return(
+          entry.lifecycle!=="archived" &&
+          entry.visibility!=="private" &&
+          (
+            filter==="all" ||
+            (entry.categories || []).includes(filter)
+          )
+        );
+
+      }
+    )
+  );
+
 }
 
 function buildFilters(){
-  const holder=document.getElementById("filters");
 
-  Object.entries(categories).forEach(function([key,category]){
-    const button=document.createElement("button");
+  const holder=
+    document.getElementById("filters");
 
-    button.className="filter";
-    button.dataset.filter=key;
-    button.innerHTML=`
-      ${esc(category.icon || "")}
-      ${esc(category.label || key)}
-    `;
+  Object.entries(categories).forEach(
+    function([key,category]){
 
-    holder.appendChild(button);
-  });
+      const button=
+        document.createElement("button");
+
+      button.className=
+        "filter";
+
+      button.dataset.filter=
+        key;
+
+      button.type=
+        "button";
+
+      button.innerHTML=`
+        ${esc(category.icon || "")}
+        ${esc(category.label || key)}
+      `;
+
+      holder.appendChild(button);
+
+    }
+  );
+
 }
 
 function buildLegend(){
+
   document.getElementById("legend").innerHTML=
-    Object.entries(statuses).map(function([key,status]){
-      return`
-        <span>
-          <span
-            class="legend-dot"
-            style="background:${esc(status.color)}">
-          </span>
-          ${esc(status.label || key)}
-        </span>
-      `;
-    }).join("");
-}
+    Object.entries(statuses).map(
+      function([key,status]){
 
-function buildLinks(entry){
-  const links=Array.isArray(entry.links)
-    ? entry.links
-    : [];
-
-  if(!links.length){
-    return "";
-  }
-
-  return`
-    <div class="card-actions">
-      ${links.map(function(link,index){
         return`
-          <a
-            class="card-link ${index===0 ? "primary" : ""}"
-            href="${esc(link.url)}"
-            ${/^https?:/i.test(link.url)
-              ? 'target="_blank" rel="noopener noreferrer"'
-              : 'target="_top"'}>
-            ${esc(link.label)}
-          </a>
+          <span>
+
+            <span
+              class="legend-dot"
+              style="background:${esc(status.color)}">
+            </span>
+
+            ${esc(status.label || key)}
+
+          </span>
         `;
-      }).join("")}
-    </div>
-  `;
+
+      }
+    ).join("");
+
 }
 
-function buildOpportunity(entry){
-  const opportunity=entry.opportunity;
+function setGateway(filter){
 
-  if(!opportunity || !opportunity.active){
-    return "";
+  const gateway=
+    document.getElementById(
+      "pathGateway"
+    );
+
+  const route=
+    pathRoutes[filter];
+
+  if(!route){
+
+    gateway.classList.remove(
+      "active"
+    );
+
+    return;
+
   }
 
-  return`
-    <div class="opportunity">
-      <div class="opportunity-label">
-        CONNECTED OPPORTUNITY
-      </div>
+  document.getElementById(
+    "pathGatewayTitle"
+  ).textContent=
+    route.title;
 
-      <strong>${esc(opportunity.title)}</strong>
+  document.getElementById(
+    "pathGatewayCopy"
+  ).textContent=
+    route.copy;
 
-      <p>${esc(opportunity.description)}</p>
-    </div>
-  `;
+  const button=
+    document.getElementById(
+      "pathGatewayButton"
+    );
+
+  button.textContent=
+    route.button;
+
+  button.href=
+    route.url;
+
+  gateway.classList.add(
+    "active"
+  );
+
 }
 
-function buildNowCard(){
-  const current=sortedEntries(entries).find(function(entry){
-    return entry.status==="now";
-  });
+function buildNowCard(filter){
 
-  const section=document.getElementById("nowSection");
+  const section=
+    document.getElementById(
+      "nowSection"
+    );
+
+  const matching=
+    visibleEntries(filter);
+
+  const current=
+    matching.find(
+      function(entry){
+        return entry.status==="now";
+      }
+    ) || matching[0];
 
   if(!current){
-    section.style.display="none";
+
+    section.style.display=
+      "none";
+
     return;
+
   }
 
-  const paths=(current.categories || []).map(function(key){
-    return`
-      <button class="path-tag" data-path="${esc(key)}">
-        ${esc(categories[key]?.icon || "")}
-        ${esc(categoryLabel(key))}
-      </button>
-    `;
-  }).join("");
+  section.style.display=
+    "block";
+
+  const paths=
+    (current.categories || []).map(
+      function(key){
+
+        return`
+          <button
+            class="path-tag"
+            data-path="${esc(key)}"
+            type="button">
+
+            ${esc(categories[key]?.icon || "")}
+            ${esc(categoryLabel(key))}
+
+          </button>
+        `;
+
+      }
+    ).join("");
 
   section.innerHTML=`
     <article class="now-card">
 
       <div class="now-kicker">
+
         <span class="hero-live"></span>
-        WHERE I AM RIGHT NOW
+
+        ${current.status==="now"
+          ? "WHERE I AM RIGHT NOW"
+          : "LATEST CONNECTED ENTRY"
+        }
+
       </div>
 
-      <h2>${esc(current.title)}</h2>
+      <h2>
+        ${esc(current.title)}
+      </h2>
 
-      <p>${esc(current.story)}</p>
+      <p>
+        ${esc(current.story)}
+      </p>
 
       <div class="tag-row">
         ${paths}
@@ -1216,54 +1614,190 @@ function buildNowCard(){
 
     </article>
   `;
+
 }
 
-const map=L.map("map",{
-  zoomControl:true
-}).setView([33,-96],4);
+function buildLinks(entry){
+
+  const links=
+    Array.isArray(entry.links)
+      ? entry.links
+      : [];
+
+  if(!links.length){
+    return "";
+  }
+
+  return`
+    <div class="card-actions">
+
+      ${links.map(
+        function(link,index){
+
+          return`
+            <a
+              class="card-link ${index===0 ? "primary" : ""}"
+              href="${esc(link.url)}"
+              ${/^https?:/i.test(link.url)
+                ? 'target="_blank" rel="noopener noreferrer"'
+                : 'target="_top"'
+              }>
+
+              ${esc(link.label)}
+
+            </a>
+          `;
+
+        }
+      ).join("")}
+
+    </div>
+  `;
+
+}
+
+function buildDedicatedLink(entry){
+
+  const primaryPath=
+    (entry.categories || []).find(
+      function(key){
+        return pathRoutes[key];
+      }
+    );
+
+  if(!primaryPath){
+    return "";
+  }
+
+  const route=
+    pathRoutes[primaryPath];
+
+  return`
+    <div class="card-actions">
+
+      <a
+        class="card-link dedicated-link"
+        href="${esc(route.url)}"
+        target="_top">
+
+        ${esc(route.button)}
+
+      </a>
+
+    </div>
+  `;
+
+}
+
+function buildOpportunity(entry){
+
+  const opportunity=
+    entry.opportunity;
+
+  if(
+    !opportunity ||
+    !opportunity.active
+  ){
+    return "";
+  }
+
+  return`
+    <div class="opportunity">
+
+      <div class="opportunity-label">
+        CONNECTED OPPORTUNITY
+      </div>
+
+      <strong>
+        ${esc(opportunity.title)}
+      </strong>
+
+      <p>
+        ${esc(opportunity.description)}
+      </p>
+
+    </div>
+  `;
+
+}
+
+const map=
+  L.map(
+    "map",
+    {
+      zoomControl:true
+    }
+  ).setView(
+    [33,-96],
+    4
+  );
 
 L.tileLayer(
   "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
   {
     maxZoom:18,
-    attribution:"&copy; OpenStreetMap contributors"
+    attribution:
+      "&copy; OpenStreetMap contributors"
   }
 ).addTo(map);
 
 let markers=[];
 
 function clearMarkers(){
-  markers.forEach(function(marker){
-    map.removeLayer(marker);
-  });
+
+  markers.forEach(
+    function(marker){
+      map.removeLayer(marker);
+    }
+  );
 
   markers=[];
+
 }
 
 function focusCard(id){
-  document.querySelectorAll(".card").forEach(function(card){
-    card.classList.remove("map-focus");
-  });
 
-  const card=document.querySelector(
-    `[data-entry-id="${CSS.escape(id)}"]`
+  document.querySelectorAll(
+    ".card"
+  ).forEach(
+    function(card){
+
+      card.classList.remove(
+        "map-focus"
+      );
+
+    }
   );
 
+  const card=
+    document.querySelector(
+      `[data-entry-id="${CSS.escape(id)}"]`
+    );
+
   if(card){
-    card.classList.add("map-focus");
+
+    card.classList.add(
+      "map-focus"
+    );
 
     card.scrollIntoView({
       behavior:"smooth",
       block:"center"
     });
+
   }
+
 }
 
 function popupHTML(entry,location){
-  const media=firstMedia(entry);
-  const paths=(entry.categories || [])
-    .map(categoryLabel)
-    .join(" • ");
+
+  const media=
+    firstMedia(entry);
+
+  const paths=
+    (entry.categories || [])
+      .map(categoryLabel)
+      .join(" • ");
 
   return`
     <img
@@ -1271,57 +1805,110 @@ function popupHTML(entry,location){
       src="${esc(media.url)}"
       alt="${esc(entry.title)}">
 
-    <div class="popup-paths">${esc(paths)}</div>
+    <div class="popup-paths">
+      ${esc(paths)}
+    </div>
 
-    <div class="popup-title">${esc(entry.title)}</div>
+    <div class="popup-title">
+      ${esc(entry.title)}
+    </div>
 
     <div class="popup-location">
+
       📍 ${esc(location.label)}<br>
-      <span style="color:${esc(statusColor(entry.status))}">
-        ● ${esc(statusLabel(entry.status))}
-      </span><br>
+
+      <span
+        style="color:${esc(
+          statusColor(entry.status)
+        )}">
+
+        ● ${esc(
+          statusLabel(entry.status)
+        )}
+
+      </span>
+
+      <br>
+
       ${esc(entry.displayDate || "")}
+
     </div>
 
     <a
       class="popup-button"
       href="#${esc(entry.id)}"
       data-popup-entry="${esc(entry.id)}">
+
       View Entry →
+
     </a>
   `;
+
 }
 
 function addEntryMarkers(entry){
-  entryLocations(entry).forEach(function(location){
-    const marker=L.circleMarker(
-      [Number(location.lat),Number(location.lng)],
-      {
-        radius:entry.status==="now" ? 12 : 9,
-        color:"#04101a",
-        weight:3,
-        fillColor:statusColor(entry.status),
-        fillOpacity:1
-      }
-    );
 
-    marker.bindPopup(popupHTML(entry,location));
+  entryLocations(entry).forEach(
+    function(location){
 
-    marker.on("click",function(){
-      focusCard(entry.id);
-    });
+      const marker=
+        L.circleMarker(
+          [
+            Number(location.lat),
+            Number(location.lng)
+          ],
+          {
+            radius:
+              entry.status==="now"
+                ? 12
+                : 9,
+            color:"#04101a",
+            weight:3,
+            fillColor:
+              statusColor(entry.status),
+            fillOpacity:1
+          }
+        );
 
-    marker.addTo(map);
-    markers.push(marker);
-  });
+      marker.bindPopup(
+        popupHTML(
+          entry,
+          location
+        )
+      );
+
+      marker.on(
+        "click",
+        function(){
+          focusCard(entry.id);
+        }
+      );
+
+      marker.addTo(map);
+
+      markers.push(marker);
+
+    }
+  );
+
 }
 
 function cardHTML(entry){
-  const media=firstMedia(entry);
-  const paths=entry.categories || [];
-  const locations=entryLocations(entry);
-  const hashtags=entry.hashtags || [];
-  const mediaCount=(entry.media || []).length;
+
+  const media=
+    firstMedia(entry);
+
+  const paths=
+    entry.categories || [];
+
+  const locations=
+    entryLocations(entry);
+
+  const hashtags=
+    entry.hashtags || [];
+
+  const mediaCount=
+    (entry.media || []).length;
 
   return`
     <article
@@ -1333,17 +1920,29 @@ function cardHTML(entry){
 
         <img
           src="${esc(media.url)}"
-          alt="${esc(media.caption || entry.title)}"
+          alt="${esc(
+            media.caption ||
+            entry.title
+          )}"
           loading="lazy"
-          onerror="this.src='${esc(categoryImage(paths[0]))}'">
+          onerror="this.src='${esc(
+            categoryImage(paths[0])
+          )}'">
 
         ${mediaCount>1
-          ? `<div class="media-count">1/${mediaCount}</div>`
+          ? `
+            <div class="media-count">
+              1/${mediaCount}
+            </div>
+          `
           : ""
         }
 
         <div class="media-caption">
-          ${esc(media.caption || entry.title)}
+          ${esc(
+            media.caption ||
+            entry.title
+          )}
         </div>
 
       </div>
@@ -1353,43 +1952,87 @@ function cardHTML(entry){
         <div class="card-top">
 
           <div class="card-path">
+
             ${paths.length>1
               ? "CONNECTED PATHS"
-              : esc(categoryLabel(paths[0]))
+              : esc(
+                  categoryLabel(
+                    paths[0]
+                  )
+                )
             }
+
           </div>
 
           <div
             class="status"
-            style="color:${esc(statusColor(entry.status))}">
-            ● ${esc(statusLabel(entry.status))}
+            style="color:${esc(
+              statusColor(entry.status)
+            )}">
+
+            ● ${esc(
+              statusLabel(entry.status)
+            )}
+
           </div>
 
         </div>
 
-        <h3>${esc(entry.title)}</h3>
+        <h3>
+          ${esc(entry.title)}
+        </h3>
 
-        <div class="story">${esc(entry.story)}</div>
+        <div class="story">
+          ${esc(entry.story)}
+        </div>
 
         <div class="tag-row">
-          ${paths.map(function(key){
-            return`
-              <button class="path-tag" data-path="${esc(key)}">
-                ${esc(categories[key]?.icon || "")}
-                ${esc(categoryLabel(key))}
-              </button>
-            `;
-          }).join("")}
+
+          ${paths.map(
+            function(key){
+
+              return`
+                <button
+                  class="path-tag"
+                  data-path="${esc(key)}"
+                  type="button">
+
+                  ${esc(
+                    categories[key]?.icon ||
+                    ""
+                  )}
+
+                  ${esc(
+                    categoryLabel(key)
+                  )}
+
+                </button>
+              `;
+
+            }
+          ).join("")}
+
         </div>
 
         ${locations.length
           ? `
             <div class="location">
-              📍 ${locations.map(function(location){
-                return esc(location.label);
-              }).join("<br>📍 ")}
+
+              📍 ${locations.map(
+                function(location){
+                  return esc(
+                    location.label
+                  );
+                }
+              ).join("<br>📍 ")}
+
               <br>
-              ${esc(entry.displayDate || "")}
+
+              ${esc(
+                entry.displayDate ||
+                ""
+              )}
+
             </div>
           `
           : ""
@@ -1398,9 +2041,13 @@ function cardHTML(entry){
         ${hashtags.length
           ? `
             <div class="hashtags">
-              ${hashtags.map(function(tag){
-                return "#" + esc(tag);
-              }).join(" ")}
+
+              ${hashtags.map(
+                function(tag){
+                  return "#" + esc(tag);
+                }
+              ).join(" ")}
+
             </div>
           `
           : ""
@@ -1408,147 +2055,263 @@ function cardHTML(entry){
 
         ${buildOpportunity(entry)}
         ${buildLinks(entry)}
+        ${buildDedicatedLink(entry)}
 
       </div>
 
     </article>
   `;
+
 }
 
 function setHero(filter){
-  const state=heroWords[filter] || heroWords.all;
-  const image=filter==="all"
-    ? "../assets/map/Hero/hero-all.webp"
-    : categoryImage(filter);
 
-  const background=document.getElementById("heroBg");
+  const state=
+    heroWords[filter] ||
+    heroWords.all;
 
-  background.style.opacity=".15";
+  const image=
+    filter==="all"
+      ? "/Champagne247/assets/map/Hero/hero-all.webp"
+      : categoryImage(filter);
 
-  setTimeout(function(){
-    background.style.backgroundImage=`url("${image}")`;
-    background.style.opacity="1";
-  },120);
+  const background=
+    document.getElementById(
+      "heroBg"
+    );
 
-  document.getElementById("heroEyebrow").textContent=
+  background.style.opacity=
+    ".15";
+
+  setTimeout(
+    function(){
+
+      background.style.backgroundImage=
+        `url("${image}")`;
+
+      background.style.opacity=
+        "1";
+
+    },
+    120
+  );
+
+  document.getElementById(
+    "heroEyebrow"
+  ).textContent=
     state.eyebrow;
 
-  document.getElementById("heroTitle").innerHTML=
+  document.getElementById(
+    "heroTitle"
+  ).innerHTML=
     state.title;
 
-  document.getElementById("heroCopy").innerHTML=`
-    <strong>${esc(state.lead)}</strong>
+  document.getElementById(
+    "heroCopy"
+  ).innerHTML=`
+    <strong>
+      ${esc(state.lead)}
+    </strong>
+
     ${esc(state.copy)}
   `;
+
 }
 
 function fitMap(){
-  setTimeout(function(){
-    map.invalidateSize();
 
-    if(markers.length>1){
-      const group=L.featureGroup(markers);
+  setTimeout(
+    function(){
 
-      map.fitBounds(group.getBounds(),{
-        padding:[35,35],
-        maxZoom:7
-      });
-    }else if(markers.length===1){
-      map.setView(markers[0].getLatLng(),8);
-    }else{
-      map.setView([33,-96],4);
-    }
-  },100);
+      map.invalidateSize();
+
+      if(markers.length>1){
+
+        const group=
+          L.featureGroup(markers);
+
+        map.fitBounds(
+          group.getBounds(),
+          {
+            padding:[35,35],
+            maxZoom:7
+          }
+        );
+
+      }else if(markers.length===1){
+
+        map.setView(
+          markers[0].getLatLng(),
+          8
+        );
+
+      }else{
+
+        map.setView(
+          [33,-96],
+          4
+        );
+
+      }
+
+    },
+    100
+  );
+
 }
 
 function render(filter="all"){
+
   setHero(filter);
+  setGateway(filter);
+  buildNowCard(filter);
   clearMarkers();
 
-  document.querySelectorAll(".filter").forEach(function(button){
-    button.classList.toggle(
-      "active",
-      button.dataset.filter===filter
-    );
-  });
+  document.querySelectorAll(
+    ".filter"
+  ).forEach(
+    function(button){
 
-  const visible=sortedEntries(
-    entries.filter(function(entry){
-      return filter==="all" ||
-        (entry.categories || []).includes(filter);
-    })
+      button.classList.toggle(
+        "active",
+        button.dataset.filter===filter
+      );
+
+    }
   );
 
-  const cards=document.getElementById("cards");
+  const visible=
+    visibleEntries(filter);
+
+  const cards=
+    document.getElementById(
+      "cards"
+    );
 
   if(!visible.length){
+
     cards.innerHTML=`
       <div class="empty">
-        <strong>This path is ready.</strong><br><br>
-        New entries will appear here automatically when they
-        are added to the shared M.A.P. data.
+
+        <strong>
+          This path is ready.
+        </strong>
+
+        <br><br>
+
+        New entries will appear here automatically
+        when they are added to the shared M.A.P. data.
+
       </div>
     `;
+
   }else{
-    cards.innerHTML=visible.map(cardHTML).join("");
+
+    cards.innerHTML=
+      visible.map(cardHTML).join("");
+
   }
 
-  visible.forEach(addEntryMarkers);
+  visible.forEach(
+    addEntryMarkers
+  );
 
   if(filter==="all"){
-    document.getElementById("journeyTitle").textContent=
+
+    document.getElementById(
+      "journeyTitle"
+    ).textContent=
       "Every Path. One Life.";
 
-    document.getElementById("journeyCopy").textContent=
+    document.getElementById(
+      "journeyCopy"
+    ).textContent=
       "Newest first. Every entry is created once and connected everywhere it belongs.";
+
   }else{
-    document.getElementById("journeyTitle").textContent=
+
+    document.getElementById(
+      "journeyTitle"
+    ).textContent=
       categoryLabel(filter);
 
-    document.getElementById("journeyCopy").textContent=
+    document.getElementById(
+      "journeyCopy"
+    ).textContent=
       "Every connected entry, milestone, location and opportunity along this path.";
+
   }
 
   fitMap();
+
 }
 
-document.addEventListener("click",function(event){
-  const filterButton=event.target.closest("[data-filter]");
+document.addEventListener(
+  "click",
+  function(event){
 
-  if(filterButton){
-    render(filterButton.dataset.filter);
-    return;
+    const filterButton=
+      event.target.closest(
+        "[data-filter]"
+      );
+
+    if(filterButton){
+
+      render(
+        filterButton.dataset.filter
+      );
+
+      return;
+
+    }
+
+    const pathButton=
+      event.target.closest(
+        "[data-path]"
+      );
+
+    if(pathButton){
+
+      const filter=
+        pathButton.dataset.path;
+
+      render(filter);
+
+      document
+        .querySelector(".filters")
+        .scrollIntoView({
+          behavior:"smooth",
+          block:"start"
+        });
+
+      return;
+
+    }
+
+    const popupButton=
+      event.target.closest(
+        "[data-popup-entry]"
+      );
+
+    if(popupButton){
+
+      event.preventDefault();
+
+      focusCard(
+        popupButton.dataset.popupEntry
+      );
+
+      map.closePopup();
+
+    }
+
   }
-
-  const pathButton=event.target.closest("[data-path]");
-
-  if(pathButton){
-    const filter=pathButton.dataset.path;
-
-    render(filter);
-
-    document.querySelector(".filters").scrollIntoView({
-      behavior:"smooth",
-      block:"start"
-    });
-
-    return;
-  }
-
-  const popupButton=event.target.closest("[data-popup-entry]");
-
-  if(popupButton){
-    event.preventDefault();
-    focusCard(popupButton.dataset.popupEntry);
-    map.closePopup();
-  }
-});
+);
 
 buildFilters();
 buildLegend();
-buildNowCard();
 render("all");
 </script>
 
 </body>
-</html>
+  </html>
