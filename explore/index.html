@@ -12,7 +12,7 @@
 
 <link
   rel="canonical"
-  href="https://champagne247.github.io/Champagne247/pages/map/explore/">
+  href="https://champagne247.github.io/Champagne247/explore/">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Mission Alignment Protocol">
@@ -183,7 +183,7 @@ button{
   position:absolute;
   inset:0;
   z-index:-2;
-  background-image:url("../../../assets/map/Hero/hero-all.webp");
+  background-image:url("../assets/map/Hero/hero-all.webp");
   background-position:68% center;
   background-size:cover;
   transition:opacity .25s ease;
@@ -329,7 +329,7 @@ h1 span{
   box-shadow:0 0 20px rgba(88,195,255,.22);
 }
 
-/* LIVE SUMMARY */
+/* CURRENT ENTRY */
 
 .now-section{
   padding:22px 16px;
@@ -824,11 +824,11 @@ footer strong{
 
 <header class="topbar">
 
-  <a class="brand" href="../life/" target="_top">
+  <a class="brand" href="../" target="_top">
 
     <div class="logo">
       <img
-        src="../../../assets/map/branding/map-logo-icon.png"
+        src="../assets/map/branding/map-logo-icon.png"
         alt="My Life, My Mission, My M.A.P.">
     </div>
 
@@ -843,7 +843,7 @@ footer strong{
 
     <a
       class="icon-link"
-      href="../life/"
+      href="../"
       target="_top"
       aria-label="Open My Life">
       🌍
@@ -961,7 +961,7 @@ footer strong{
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <!-- THE SINGLE SOURCE OF TRUTH -->
-<script src="../../../assets/map/data/entries.js"></script>
+<script src="../assets/map/data/entries.js"></script>
 
 <script>
 const DATA=window.MAP_DATA;
@@ -1051,7 +1051,7 @@ function categoryLabel(key){
 
 function categoryImage(key){
   return categories[key]?.image ||
-    "../../../assets/map/Hero/hero-all.webp";
+    "../assets/map/Hero/hero-all.webp";
 }
 
 function statusLabel(key){
@@ -1146,7 +1146,9 @@ function buildLinks(entry){
           <a
             class="card-link ${index===0 ? "primary" : ""}"
             href="${esc(link.url)}"
-            ${/^https?:/i.test(link.url) ? 'target="_blank" rel="noopener noreferrer"' : 'target="_top"'}>
+            ${/^https?:/i.test(link.url)
+              ? 'target="_blank" rel="noopener noreferrer"'
+              : 'target="_top"'}>
             ${esc(link.label)}
           </a>
         `;
@@ -1416,7 +1418,7 @@ function cardHTML(entry){
 function setHero(filter){
   const state=heroWords[filter] || heroWords.all;
   const image=filter==="all"
-    ? "../../../assets/map/Hero/hero-all.webp"
+    ? "../assets/map/Hero/hero-all.webp"
     : categoryImage(filter);
 
   const background=document.getElementById("heroBg");
@@ -1549,4 +1551,4 @@ render("all");
 </script>
 
 </body>
-  </html>
+</html>
