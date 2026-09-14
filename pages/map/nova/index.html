@@ -362,6 +362,12 @@ textarea::placeholder{color:#657b8c}
   grid-column:span 2;
 }
 
+/* Keep every vision readable in the two-column phone layout. */
+@media(max-width:699px){
+  .board{grid-auto-rows:minmax(180px,auto)}
+  .tile:nth-child(3n+1){grid-row:span 1}
+}
+
 .tile-icon{
   position:absolute;
   top:14px;
