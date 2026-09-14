@@ -17,27 +17,34 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="My Life • My Mission • My M.A.P.">
 <meta property="og:title" content="My Life | Christopher Champagne">
+
 <meta
   property="og:description"
   content="My Life. My Mission. My M.A.P. Live once. Capture once. Connect everywhere.">
+
 <meta
   property="og:url"
   content="https://champagne247.github.io/Champagne247/">
+
 <meta
   property="og:image"
   content="https://champagne247.github.io/Champagne247/assets/map/Hero/hero-all.webp">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="My Life | Christopher Champagne">
+
 <meta
   name="twitter:description"
   content="My Life. My Mission. My M.A.P.">
+
 <meta
   name="twitter:image"
   content="https://champagne247.github.io/Champagne247/assets/map/Hero/hero-all.webp">
 
 <style>
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
 
 :root{
   --bg:#03060b;
@@ -49,7 +56,9 @@
   --muted:#9eacbd;
 }
 
-html{scroll-behavior:smooth}
+html{
+  scroll-behavior:smooth;
+}
 
 body{
   margin:0;
@@ -64,7 +73,9 @@ a{
   -webkit-tap-highlight-color:transparent;
 }
 
-button{font:inherit}
+button{
+  font:inherit;
+}
 
 .shell{
   width:100%;
@@ -176,7 +187,7 @@ button{font:inherit}
   inset:0;
   z-index:-2;
   background:
-    url("/Champagne247/assets/map/Hero/hero-all.webp")
+    url("assets/map/Hero/hero-all.webp")
     68% center/cover no-repeat;
   opacity:.48;
 }
@@ -223,7 +234,9 @@ button{font:inherit}
 }
 
 @keyframes pulse{
-  70%{box-shadow:0 0 0 11px rgba(82,242,168,0)}
+  70%{
+    box-shadow:0 0 0 11px rgba(82,242,168,0);
+  }
 }
 
 .intro h1{
@@ -233,7 +246,9 @@ button{font:inherit}
   letter-spacing:-.045em;
 }
 
-.intro h1 span{color:var(--blue)}
+.intro h1 span{
+  color:var(--blue);
+}
 
 .intro p{
   margin:0;
@@ -242,7 +257,9 @@ button{font:inherit}
   line-height:1.7;
 }
 
-.intro strong{color:#fff}
+.intro strong{
+  color:#fff;
+}
 
 .motto{
   margin-top:28px;
@@ -254,22 +271,174 @@ button{font:inherit}
   line-height:1.75;
 }
 
-/* MAIN NAVIGATION */
+/* NOVA FUNNEL */
+
+.nova-funnel{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  padding:38px 20px;
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(
+      circle at 88% 8%,
+      rgba(88,195,255,.16),
+      transparent 35%
+    ),
+    linear-gradient(145deg,#091724,#050c14);
+}
+
+.nova-funnel::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:
+    url("assets/map/backgrounds/nova-core-hero.webp")
+    center/cover no-repeat;
+  opacity:.12;
+}
+
+.nova-card{
+  padding:25px 21px;
+  border:1px solid #3b7598;
+  border-radius:24px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(12,29,43,.96),
+      rgba(5,13,21,.94)
+    );
+  box-shadow:0 20px 45px rgba(0,0,0,.28);
+}
+
+.nova-status{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  color:var(--live);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.18em;
+}
+
+.nova-orb{
+  width:68px;
+  height:68px;
+  display:grid;
+  place-items:center;
+  margin:25px 0 22px;
+  border:1px solid #63c9ff;
+  border-radius:50%;
+  background:
+    radial-gradient(
+      circle at 38% 34%,
+      #79dcff 0%,
+      #188dcc 25%,
+      #0b2940 58%,
+      #06111b 100%
+    );
+  box-shadow:
+    0 0 24px rgba(70,196,255,.45),
+    0 0 55px rgba(35,157,216,.18);
+}
+
+.nova-orb::after{
+  content:"";
+  width:34px;
+  height:34px;
+  border:1px solid rgba(255,255,255,.52);
+  border-radius:50%;
+  box-shadow:
+    inset 0 0 13px rgba(255,255,255,.22),
+    0 0 15px rgba(113,216,255,.55);
+}
+
+.nova-label{
+  color:var(--blue);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.17em;
+}
+
+.nova-card h2{
+  margin:9px 0 14px;
+  font-size:clamp(34px,9vw,50px);
+  line-height:1;
+  letter-spacing:-.035em;
+}
+
+.nova-card h2 span{
+  color:var(--blue);
+}
+
+.nova-card p{
+  margin:0;
+  color:#b8c6d2;
+  font-size:16px;
+  line-height:1.65;
+}
+
+.nova-card strong{
+  color:#fff;
+}
+
+.nova-question{
+  margin-top:20px;
+  padding:16px;
+  border-left:3px solid var(--blue);
+  background:#06111a;
+  color:#e8f7ff;
+  font-size:15px;
+  line-height:1.6;
+}
+
+.nova-actions{
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:9px;
+  margin-top:19px;
+}
+
+.nova-button{
+  min-height:54px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px;
+  border:1px solid #31516b;
+  border-radius:14px;
+  background:#091622;
+  color:#fff;
+  text-align:center;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:900;
+}
+
+.nova-button.primary{
+  border-color:var(--blue);
+  background:linear-gradient(135deg,#1688da,#40c2f6);
+  color:#04101a;
+}
+
+/* NAVIGATION */
 
 .life-nav{
   display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-columns:repeat(4,minmax(0,1fr));
   border-bottom:1px solid var(--line);
   background:#07101a;
 }
 
 .life-nav a{
   position:relative;
-  padding:17px 4px;
+  min-width:0;
+  padding:17px 2px;
   color:var(--muted);
   text-align:center;
   text-decoration:none;
-  font-size:11px;
+  font-size:10px;
   font-weight:900;
 }
 
@@ -281,9 +450,9 @@ button{font:inherit}
 .life-nav a.active::after{
   content:"";
   position:absolute;
-  right:18px;
+  right:12px;
   bottom:0;
-  left:18px;
+  left:12px;
   height:3px;
   background:var(--blue);
 }
@@ -344,14 +513,14 @@ button{font:inherit}
 }
 
 .filter-row{
+  width:max-content;
   display:flex;
   gap:9px;
-  width:max-content;
 }
 
 .filter{
-  flex:none;
   min-height:43px;
+  flex:none;
   padding:10px 15px;
   border:1px solid #30485f;
   border-radius:999px;
@@ -412,7 +581,9 @@ button{font:inherit}
   gap:11px;
 }
 
-.entry-main{min-width:0}
+.entry-main{
+  min-width:0;
+}
 
 .meta{
   display:flex;
@@ -429,7 +600,9 @@ button{font:inherit}
   font-weight:900;
 }
 
-.verified{color:var(--blue)}
+.verified{
+  color:var(--blue);
+}
 
 .status{
   margin-left:auto;
@@ -451,7 +624,7 @@ button{font:inherit}
   white-space:pre-line;
 }
 
-/* MEDIA GALLERY */
+/* MEDIA */
 
 .gallery{
   position:relative;
@@ -467,7 +640,9 @@ button{font:inherit}
   margin:0;
 }
 
-.slide.active{display:block}
+.slide.active{
+  display:block;
+}
 
 .slide img{
   width:100%;
@@ -498,8 +673,13 @@ button{font:inherit}
   font-size:28px;
 }
 
-.prev{left:10px}
-.next{right:10px}
+.prev{
+  left:10px;
+}
+
+.next{
+  right:10px;
+}
 
 .counter{
   position:absolute;
@@ -664,6 +844,11 @@ button{font:inherit}
   font-weight:900;
 }
 
+.cta a.primary{
+  background:linear-gradient(135deg,#178ee0,var(--blue));
+  color:#04101a;
+}
+
 footer{
   padding:40px 20px 58px;
   border-top:1px solid var(--line);
@@ -674,11 +859,17 @@ footer{
 }
 
 @media(max-width:480px){
-  .name{max-width:185px}
+  .name{
+    max-width:185px;
+  }
 
   .intro{
     min-height:670px;
     padding:40px 22px 50px;
+  }
+
+  .nova-actions{
+    grid-template-columns:1fr;
   }
 
   .entry{
@@ -711,7 +902,7 @@ footer{
 
     <div class="logo">
       <img
-        src="/Champagne247/assets/map/branding/map-logo-icon.png"
+        src="assets/map/branding/map-logo-icon.png"
         alt="My Life, My Mission, My M.A.P.">
     </div>
 
@@ -726,14 +917,14 @@ footer{
 
     <a
       class="icon"
-      href="/Champagne247/pages/map/explore/"
-      aria-label="Open My M.A.P.">
+      href="explore/"
+      aria-label="Explore My M.A.P.">
       🌍
     </a>
 
     <a
       class="icon primary"
-      href="/Champagne247/pages/map/manage/"
+      href="manage/"
       aria-label="Add to My Life">
       +
     </a>
@@ -770,18 +961,70 @@ footer{
 
 </section>
 
+<section class="nova-funnel">
+
+  <div class="nova-card">
+
+    <div class="nova-status">
+      <span class="pulse"></span>
+      N.O.V.A. ONLINE • VISION GUIDE
+    </div>
+
+    <div class="nova-orb"></div>
+
+    <div class="nova-label">
+      NEURAL ORCHESTRATION • VISION & ACTION
+    </div>
+
+    <h2>
+      See your life.<br>
+      <span>Build your M.A.P.</span>
+    </h2>
+
+    <p>
+      N.O.V.A. helps you get the life you see in your head
+      <strong>out in front of you</strong>—then turns that vision
+      into missions, milestones and the next action you can take.
+    </p>
+
+    <div class="nova-question">
+      <strong>N.O.V.A.:</strong><br>
+      How do you see your life in your dreams—if fear, money,
+      time and other people's expectations were not deciding it for you?
+    </div>
+
+    <div class="nova-actions">
+
+      <a class="nova-button primary" href="nova/">
+        MEET N.O.V.A. →
+      </a>
+
+      <a class="nova-button" href="create/">
+        BUILD MY VISION
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
 <nav class="life-nav">
 
-  <a class="active" href="/Champagne247/">
+  <a class="active" href="./">
     MY LIFE
   </a>
 
-  <a href="/Champagne247/pages/map/explore/">
+  <a href="explore/">
     MY M.A.P.
   </a>
 
-  <a href="/Champagne247/pages/map/create/">
-    CREATE YOURS
+  <a href="nova/">
+    N.O.V.A.
+  </a>
+
+  <a href="create/">
+    CREATE
   </a>
 
 </nav>
@@ -790,7 +1033,7 @@ footer{
 
   <div class="avatar">CC</div>
 
-  <a href="/Champagne247/pages/map/manage/">
+  <a href="manage/">
     <span>What are you doing right now?</span>
     <strong>ADD ＋</strong>
   </a>
@@ -830,14 +1073,19 @@ footer{
   <h2>Explore My M.A.P.</h2>
 
   <p>
-    Follow every path, milestone, destination and mission.
+    Follow every path, milestone, destination and mission—or
+    meet N.O.V.A. and begin building the life you see.
   </p>
 
-  <a href="/Champagne247/pages/map/explore/">
+  <a href="explore/">
     Explore My M.A.P. →
   </a>
 
-  <a href="/Champagne247/pages/map/create/">
+  <a href="nova/">
+    Meet N.O.V.A.
+  </a>
+
+  <a class="primary" href="create/">
     Create Your Own
   </a>
 
@@ -853,18 +1101,34 @@ footer{
 
 </div>
 
-<script src="/Champagne247/assets/map/data/entries.js"></script>
+<script src="assets/map/data/entries.js"></script>
 
 <script>
-const data=window.MAP_DATA;
-const entries=data?.entries || [];
-const categories=data?.categories || {};
-const statuses=data?.statuses || {};
+const data=
+  window.MAP_DATA || {
+    owner:{},
+    categories:{},
+    statuses:{},
+    entries:[]
+  };
+
+const entries=
+  Array.isArray(data.entries)
+    ? data.entries
+    : [];
+
+const categories=
+  data.categories || {};
+
+const statuses=
+  data.statuses || {};
 
 function esc(value){
+
   return String(value || "").replace(
     /[&<>"']/g,
     function(character){
+
       return{
         "&":"&amp;",
         "<":"&lt;",
@@ -872,66 +1136,95 @@ function esc(value){
         '"':"&quot;",
         "'":"&#39;"
       }[character];
+
     }
   );
+
 }
 
 function buildFilters(){
+
   const filters=[
-    `<button class="filter active" data-filter="all">
-      ALL
-    </button>`
+    `
+      <button
+        class="filter active"
+        data-filter="all"
+        type="button">
+        ALL
+      </button>
+    `
   ];
 
   Object.entries(categories).forEach(
     function([key,category]){
-      filters.push(`
-        <button
-          class="filter"
-          data-filter="${esc(key)}">
-          ${esc(category.icon)}
-          ${esc(category.label)}
-        </button>
-      `);
+
+      filters.push(
+        `
+          <button
+            class="filter"
+            data-filter="${esc(key)}"
+            type="button">
+
+            ${esc(category.icon)}
+            ${esc(category.label)}
+
+          </button>
+        `
+      );
+
     }
   );
 
   document.getElementById("filters").innerHTML=
     filters.join("");
+
 }
 
 function gallery(entry){
-  const images=(entry.media || []).filter(
-    function(media){
-      return media.type==="image";
-    }
-  );
+
+  const images=
+    (entry.media || []).filter(
+      function(media){
+        return media.type==="image";
+      }
+    );
 
   if(!images.length){
     return "";
   }
 
   return`
-    <div class="gallery" data-gallery data-index="0">
+    <div
+      class="gallery"
+      data-gallery
+      data-index="0">
 
-      ${images.map(function(image,index){
-        return`
-          <figure
-            class="slide ${index===0 ? "active" : ""}"
-            data-slide="${index}">
+      ${images.map(
+        function(image,index){
 
-            <img
-              src="${esc(image.url)}"
-              alt="${esc(image.alt || image.caption || entry.title)}"
-              loading="lazy">
+          return`
+            <figure
+              class="slide ${index===0 ? "active" : ""}"
+              data-slide="${index}">
 
-            <figcaption class="media-caption">
-              ${esc(image.caption || "")}
-            </figcaption>
+              <img
+                src="${esc(image.url)}"
+                alt="${esc(
+                  image.alt ||
+                  image.caption ||
+                  entry.title
+                )}"
+                loading="lazy">
 
-          </figure>
-        `;
-      }).join("")}
+              <figcaption class="media-caption">
+                ${esc(image.caption || "")}
+              </figcaption>
+
+            </figure>
+          `;
+
+        }
+      ).join("")}
 
       ${images.length>1
         ? `
@@ -955,16 +1248,20 @@ function gallery(entry){
 
           <div class="dots">
 
-            ${images.map(function(image,index){
-              return`
-                <button
-                  class="${index===0 ? "active" : ""}"
-                  data-dot="${index}"
-                  type="button"
-                  aria-label="Image ${index+1}">
-                </button>
-              `;
-            }).join("")}
+            ${images.map(
+              function(image,index){
+
+                return`
+                  <button
+                    class="${index===0 ? "active" : ""}"
+                    data-dot="${index}"
+                    type="button"
+                    aria-label="Image ${index+1}">
+                  </button>
+                `;
+
+              }
+            ).join("")}
 
           </div>
         `
@@ -973,9 +1270,11 @@ function gallery(entry){
 
     </div>
   `;
+
 }
 
 function opportunity(entry){
+
   if(!entry.opportunity?.active){
     return "";
   }
@@ -994,9 +1293,11 @@ function opportunity(entry){
 
     </div>
   `;
+
 }
 
 function shareText(entry){
+
   return[
     entry.title,
     "",
@@ -1010,21 +1311,27 @@ function shareText(entry){
     "",
     "https://champagne247.github.io/Champagne247/"
   ].join("\n");
+
 }
 
 function card(entry){
-  const status=statuses[entry.status] || {
-    label:entry.status,
-    color:"#c8d0d9"
-  };
 
-  const locationNames=(entry.locations || []).map(
-    function(location){
-      return typeof location==="string"
-        ? location
-        : location.label;
-    }
-  );
+  const status=
+    statuses[entry.status] || {
+      label:entry.status,
+      color:"#c8d0d9"
+    };
+
+  const locationNames=
+    (entry.locations || []).map(
+      function(location){
+
+        return typeof location==="string"
+          ? location
+          : location.label;
+
+      }
+    );
 
   return`
     <article
@@ -1040,13 +1347,13 @@ function card(entry){
           <div class="meta">
 
             <span class="author">
-              ${esc(data.owner.name)}
+              ${esc(data.owner?.name || "Christopher Champagne")}
             </span>
 
             <span class="verified">◆</span>
 
             <span>
-              ${esc(data.owner.handle)}
+              ${esc(data.owner?.handle || "@Champagne247")}
             </span>
 
             <span>
@@ -1056,7 +1363,9 @@ function card(entry){
             <span
               class="status"
               style="color:${esc(status.color)}">
+
               ● ${esc(status.label)}
+
             </span>
 
           </div>
@@ -1071,16 +1380,19 @@ function card(entry){
 
             ${(entry.categories || []).map(
               function(category){
+
                 return`
                   <button
                     class="tag"
-                    data-tag="${esc(category)}">
+                    data-tag="${esc(category)}"
+                    type="button">
 
                     ${esc(categories[category]?.icon || "")}
                     ${esc(categories[category]?.label || category)}
 
                   </button>
                 `;
+
               }
             ).join("")}
 
@@ -1118,6 +1430,7 @@ function card(entry){
 
                 ${entry.links.map(
                   function(link){
+
                     return`
                       <a
                         class="entry-link"
@@ -1125,6 +1438,7 @@ function card(entry){
                         ${esc(link.label)}
                       </a>
                     `;
+
                   }
                 ).join("")}
 
@@ -1137,19 +1451,21 @@ function card(entry){
 
             <button
               class="action"
-              data-copy="${encodeURIComponent(shareText(entry))}">
+              data-copy="${encodeURIComponent(shareText(entry))}"
+              type="button">
               ⧉ Copy
             </button>
 
             <button
               class="action"
-              data-share="${encodeURIComponent(shareText(entry))}">
+              data-share="${encodeURIComponent(shareText(entry))}"
+              type="button">
               ↗ Share
             </button>
 
             <a
               class="action"
-              href="/Champagne247/pages/map/explore/">
+              href="explore/">
               ⌖ M.A.P.
             </a>
 
@@ -1161,42 +1477,55 @@ function card(entry){
 
     </article>
   `;
+
 }
 
 function render(filter="all"){
-  const visible=entries
-    .filter(function(entry){
-      return(
-        entry.lifecycle!=="archived" &&
-        entry.visibility==="public" &&
-        (
-          filter==="all" ||
-          entry.categories?.includes(filter)
-        )
-      );
-    })
-    .sort(function(a,b){
-      if(a.status==="now" && b.status!=="now"){
-        return -1;
-      }
 
-      if(b.status==="now" && a.status!=="now"){
-        return 1;
-      }
+  const visible=
+    entries
+      .filter(
+        function(entry){
 
-      return new Date(
-        b.eventAt || b.datetime
-      ) - new Date(
-        a.eventAt || a.datetime
+          return(
+            entry.lifecycle!=="archived" &&
+            entry.visibility==="public" &&
+            (
+              filter==="all" ||
+              entry.categories?.includes(filter)
+            )
+          );
+
+        }
+      )
+      .sort(
+        function(a,b){
+
+          if(a.status==="now" && b.status!=="now"){
+            return -1;
+          }
+
+          if(b.status==="now" && a.status!=="now"){
+            return 1;
+          }
+
+          return new Date(
+            b.eventAt || b.datetime
+          ) - new Date(
+            a.eventAt || a.datetime
+          );
+
+        }
       );
-    });
 
   document.getElementById("feed").innerHTML=
     visible.length
       ? visible.map(card).join("")
-      : `<div class="empty">
-          No public entries on this path yet.
-        </div>`;
+      : `
+          <div class="empty">
+            No public entries on this path yet.
+          </div>
+        `;
 
   document.getElementById("feedTitle").textContent=
     filter==="all"
@@ -1207,22 +1536,28 @@ function render(filter="all"){
     filter==="all"
       ? "Newest first. Every part of the journey connected."
       : "Every Master Life Entry connected to this path.";
+
 }
 
 function filterTo(value){
+
   document.querySelectorAll(".filter").forEach(
     function(button){
+
       button.classList.toggle(
         "active",
         button.dataset.filter===value
       );
+
     }
   );
 
   render(value);
+
 }
 
 function moveGallery(gallery,index){
+
   const slides=[
     ...gallery.querySelectorAll("[data-slide]")
   ];
@@ -1238,19 +1573,27 @@ function moveGallery(gallery,index){
   const target=
     (index+slides.length)%slides.length;
 
-  slides.forEach(function(slide,current){
-    slide.classList.toggle(
-      "active",
-      current===target
-    );
-  });
+  slides.forEach(
+    function(slide,current){
 
-  dots.forEach(function(dot,current){
-    dot.classList.toggle(
-      "active",
-      current===target
-    );
-  });
+      slide.classList.toggle(
+        "active",
+        current===target
+      );
+
+    }
+  );
+
+  dots.forEach(
+    function(dot,current){
+
+      dot.classList.toggle(
+        "active",
+        current===target
+      );
+
+    }
+  );
 
   gallery.dataset.index=target;
 
@@ -1260,6 +1603,7 @@ function moveGallery(gallery,index){
   if(counter){
     counter.textContent=target+1;
   }
+
 }
 
 document.addEventListener(
@@ -1278,20 +1622,24 @@ document.addEventListener(
       event.target.closest("[data-tag]");
 
     if(tag){
+
       filterTo(tag.dataset.tag);
 
-      document.querySelector(".filters")
+      document
+        .querySelector(".filters")
         .scrollIntoView({
           behavior:"smooth"
         });
 
       return;
+
     }
 
     const galleryControl=
       event.target.closest(".arrow,[data-dot]");
 
     if(galleryControl){
+
       const gallery=
         galleryControl.closest("[data-gallery]");
 
@@ -1311,13 +1659,16 @@ document.addEventListener(
       );
 
       return;
+
     }
 
     const copyButton=
       event.target.closest("[data-copy]");
 
     if(copyButton){
+
       try{
+
         await navigator.clipboard.writeText(
           decodeURIComponent(
             copyButton.dataset.copy
@@ -1325,38 +1676,56 @@ document.addEventListener(
         );
 
         alert("Entry copied.");
-      }catch(error){
-        alert("Press and hold to copy this entry.");
+
+      }catch(copyError){
+
+        alert(
+          "Your browser blocked automatic copying."
+        );
+
       }
 
       return;
+
     }
 
     const shareButton=
       event.target.closest("[data-share]");
 
     if(shareButton){
-      const text=decodeURIComponent(
-        shareButton.dataset.share
-      );
+
+      const text=
+        decodeURIComponent(
+          shareButton.dataset.share
+        );
 
       if(navigator.share){
+
         try{
+
           await navigator.share({
             title:"My Life • My Mission • My M.A.P.",
-            text:text,
+            text,
             url:
               "https://champagne247.github.io/" +
               "Champagne247/"
           });
-        }catch(error){}
+
+        }catch(shareError){}
+
       }else{
+
         try{
+
           await navigator.clipboard.writeText(text);
           alert("Entry copied for sharing.");
-        }catch(error){}
+
+        }catch(copyError){}
+
       }
+
     }
+
   }
 );
 
