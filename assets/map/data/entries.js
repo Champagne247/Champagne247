@@ -17,7 +17,7 @@ window.MAP_DATA={
     "name":"M.A.P. Master Life Data",
     "description":"Single source of truth for My Life, My Mission and My M.A.P.",
     "canonicalBase":"https://champagne247.github.io/Champagne247",
-    "updatedAt":"2026-09-14T12:15:00-05:00"
+    "updatedAt":"2026-09-15T00:00:00-05:00"
   },
 
   "owner":{
@@ -105,6 +105,88 @@ window.MAP_DATA={
   },
 
   "entries":[
+
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "mini-split-heats-and-cools-2026-09-15",
+      "authorId": "christopher-champagne",
+      "title": "Mini-Splits Cool in Summer and Heat in Winter",
+      "story": "Think mini-splits are just for summer? 👀\n\nThey cool when it’s hot and heat when it’s cold—all from the same system. Great for a bedroom, garage, shop, or a space your current system struggles to keep comfortable.\n\nWinter’s coming. If you’ve been thinking about a mini-split, text or email CC’s Technical Services and tell me about your space. I’ll help you find the right setup for it. 🔥❄️",
+      "status": "now",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-15T00:00:00-05:00",
+      "updatedAt": "2026-09-15T00:00:00-05:00",
+      "eventAt": "2026-09-15T00:00:00-05:00",
+      "datetime": "2026-09-15T00:00:00-05:00",
+      "displayDate": "September 15, 2026",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "locations": [
+        {
+          "id": "mini-split-heats-and-cools-location-1",
+          "label": "CC’s Technical Services • Leesville, Louisiana",
+          "lat": 31.1435,
+          "lng": -93.261,
+          "precision": "approximate",
+          "visibility": "public"
+        }
+      ],
+      "media": [
+        {
+          "id": "mini-split-heats-and-cools-media-1",
+          "type": "image",
+          "source": "repository",
+          "url": "/Champagne247/assets/map/Professional/mini-split-heat-cool-2026-09-15.jpg",
+          "caption": "Cools in summer. Heats in winter.",
+          "alt": "CC’s Technical Services mini-split heating and cooling advertisement"
+        }
+      ],
+      "hashtags": [
+        "CCsTechnicalServices",
+        "MiniSplit",
+        "Heating",
+        "Cooling",
+        "Leesville"
+      ],
+      "links": [
+        {
+          "label": "Text or email CC’s Technical Services",
+          "url": "https://ccstechnicalservices.com/"
+        },
+        {
+          "label": "View the Facebook post",
+          "url": "https://www.facebook.com/share/p/19T4baahx1/"
+        }
+      ],
+      "opportunity": {
+        "active": true,
+        "type": "service",
+        "title": "Mini-split heating and cooling installations",
+        "description": "Discuss the space and choose a properly sized heating and cooling setup.",
+        "actions": [
+          "Mini-split quotes",
+          "Heating and cooling installations"
+        ]
+      },
+      "distribution": {
+        "destinations": [
+          "map",
+          "facebook"
+        ],
+        "state": "ready",
+        "published": {
+          "facebook": "https://www.facebook.com/share/p/19T4baahx1/"
+        }
+      },
+      "platforms": [
+        "map",
+        "facebook"
+      ]
+    },
 
     {
       "schemaVersion":"1.0.0",
@@ -959,4 +1041,3 @@ window.MAP_DATA={
 
   ]
 };
-
