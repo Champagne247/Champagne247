@@ -6,6 +6,7 @@ window.mapCloud = { client };
 
 async function currentUser() {
   const { data, error } = await client.auth.getUser();
+  if (error?.name === "AuthSessionMissingError" || error?.message === "Auth session missing!") return null;
   if (error) throw error;
   return data.user;
 }
