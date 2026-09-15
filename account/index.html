@@ -31,7 +31,7 @@ const cloud=window.mapCloud.client, state=document.getElementById("state");
 function say(message,error=false){state.textContent=message;state.style.color=error?"#ff8d8d":"#55e29d";}
 async function refresh(){
   const {data,error}=await cloud.auth.getUser();
-  if(error) say(error.message,true);
+  if(error && error.name!=="AuthSessionMissingError" && error.message!=="Auth session missing!") say(error.message,true);
   document.getElementById("signedIn").hidden=!data.user;
   document.getElementById("authForm").hidden=!!data.user;
   document.getElementById("forgot").hidden=!!data.user;
