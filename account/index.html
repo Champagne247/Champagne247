@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My M.A.P. Account</title><meta name="theme-color" content="#05070d">
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at top,#123148,#05070d 52%);color:#f5f7fb;font:16px Arial,sans-serif}
+main{width:min(100% - 32px,480px);margin:32px auto}a{color:#79d2ff}h1{font-size:clamp(34px,8vw,52px);margin:24px 0 8px}p{line-height:1.5;color:#bdccda}
+.card{padding:24px;border:1px solid #365e79;border-radius:22px;background:#0b1a27}
+label{display:block;margin:15px 0 6px;font-weight:bold}input{width:100%;min-height:48px;padding:12px;border:1px solid #537289;border-radius:10px;background:#06111b;color:white;font:inherit}
+button{min-height:48px;padding:12px 16px;border:1px solid #69c9ff;border-radius:10px;background:#127cb9;color:white;font:inherit;font-weight:bold;cursor:pointer}
+button.secondary{background:#0a2639}button:disabled{opacity:.5}nav{display:flex;flex-wrap:wrap;gap:12px}nav a{padding:10px;border:1px solid #365e79;border-radius:10px;text-decoration:none}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}#state{margin:16px 0;min-height:24px}#passwordReset{margin-top:12px}
+</style></head><body><main>
+<nav><a href="../">My Life</a><a href="../create/">Create</a><a href="../manage/">Master Entry</a></nav>
+<h1>My M.A.P. Account</h1><p>Save your vision and drafts privately, then continue on another device.</p>
+<div class="card">
+<div id="signedIn" hidden><p id="identity"></p><button id="signOut" type="button" class="secondary">Sign out</button></div>
+<form id="authForm">
+<label for="email">Email</label><input id="email" type="email" autocomplete="email" required>
+<label for="password">Password</label><input id="password" type="password" autocomplete="current-password" minlength="8" required>
+<div class="actions"><button id="signIn" type="submit">Sign in</button><button id="signUp" type="button" class="secondary">Create account</button></div>
+</form>
+<button id="forgot" type="button" class="secondary" style="margin-top:12px">Forgot password?</button>
+<div id="passwordReset" hidden><label for="newPassword">New password</label><input id="newPassword" type="password" minlength="8" autocomplete="new-password"><button id="updatePassword" type="button">Update password</button></div>
+<p id="state" role="status" aria-live="polite"></p>
+</div><p>Your work stays on this device until you choose <strong>Save to account</strong> on the Create or Master Entry page. Loading a saved version asks before replacing local work.</p>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.0/dist/umd/supabase.min.js"></script>
+<script src="../assets/map/cloud.js"></script>
+<script>
+const cloud=window.mapCloud.client, state=document.getElementById("state");
+function say(message,error=false){state.textContent=message;state.style.color=error?"#ff8d8d":"#55e29d";}
+async function refresh(){
+  const {data,error}=await cloud.auth.getUser();
+  if(error) say(error.message,true);
+  document.getElementById("signedIn").hidden=!data.user;
+  document.getElementById("authForm").hidden=!!data.user;
+  document.getElementById("forgot").hidden=!!data.user;
+  document.getElementById("identity").textContent=data.user?"Signed in as "+data.user.email:"";
+}
+async function run(action){
+  const email=document.getElementById("email").value.trim();
+  const password=document.getElementById("password").value;
+  if(!email||password.length<8){say("Enter an email and a password of at least 8 characters.",true);return;}
+  say("Working…");
+  const {data,error}= action==="up"
+    ? await cloud.auth.signUp({email,password,options:{emailRedirectTo:location.origin+location.pathname}})
+    : await cloud.auth.signInWithPassword({email,password});
+  if(error){say(error.message,true);return;}
+  if(action==="up"&&!data.session) say("Check your email to confirm your account, then return here to sign in.");
+  else {say("Account ready. Go to Create or Master Entry to save your work.");await refresh();}
+}
+document.getElementById("authForm").onsubmit=e=>{e.preventDefault();run("in")};
+document.getElementById("signUp").onclick=()=>run("up");
+document.getElementById("signOut").onclick=async()=>{const {error}=await cloud.auth.signOut();if(error)say(error.message,true);else{say("Signed out.");refresh();}};
+document.getElementById("forgot").onclick=async()=>{
+  const email=document.getElementById("email").value.trim();
+  if(!email){say("Enter your email first.",true);return;}
+  const {error}=await cloud.auth.resetPasswordForEmail(email,{redirectTo:location.origin+location.pathname});
+  say(error?error.message:"If this account exists, a reset email has been sent.",!!error);
+};
+cloud.auth.onAuthStateChange((event)=>{
+  if(event==="PASSWORD_RECOVERY"){document.getElementById("passwordReset").hidden=false;say("Choose a new password.");}
+  setTimeout(refresh,0);
+});
+document.getElementById("updatePassword").onclick=async()=>{
+  const password=document.getElementById("newPassword").value;
+  if(password.length<8){say("Use at least 8 characters.",true);return;}
+  const {error}=await cloud.auth.updateUser({password});
+  say(error?error.message:"Password updated.",!!error);
+  if(!error)document.getElementById("passwordReset").hidden=true;
+};
+refresh();
+</script></body></html>
