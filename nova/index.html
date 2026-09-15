@@ -642,6 +642,39 @@ footer{
 }
 
 @media(max-width:699px){
+  body{
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5,7,13,.10) 0,
+        rgba(5,7,13,.26) 250px,
+        rgba(5,7,13,.82) 470px,
+        #05070d 760px
+      ),
+      url("../assets/map/backgrounds/nova-core-hero.webp")
+        72% 58px/auto 500px no-repeat,
+      #05070d;
+  }
+
+  .hero{
+    align-items:flex-start;
+    padding-top:280px;
+  }
+
+  .nova-card{
+    background:
+      radial-gradient(
+        circle at 50% 0,
+        rgba(67,187,244,.14),
+        transparent 38%
+      ),
+      linear-gradient(
+        145deg,
+        rgba(14,32,48,.93),
+        rgba(8,17,27,.97)
+      );
+  }
+
   .board{
     grid-auto-rows:minmax(180px,auto);
   }
