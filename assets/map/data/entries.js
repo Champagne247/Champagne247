@@ -140,7 +140,7 @@ window.MAP_DATA={
           "id": "mini-split-heats-and-cools-media-1",
           "type": "image",
           "source": "repository",
-          "url": "/Champagne247/assets/map/professional/mini-split-heat-cool-2026-09-15.jpg",
+          "url": "/Champagne247/assets/map/professional/mini-split-heat-cool-2026-09-15-2.jpg",
           "caption": "Cools in summer. Heats in winter.",
           "alt": "CC’s Technical Services mini-split heating and cooling advertisement"
         }
