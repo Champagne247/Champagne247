@@ -1,22 +1,10 @@
-/*
-=========================================================
-M.A.P. MASTER LIFE DATA — SCHEMA v1.0.0
-=========================================================
-One source of truth for My Life, My Mission and My M.A.P.
-
-This browser-ready data bundle is compatible with the
-current GitHub Pages site. A future API or database can
-return the same structure without redesigning the pages.
-=========================================================
-*/
-
-window.MAP_DATA={
+window.MAP_DATA = {
   "schemaVersion": "1.0.0",
   "meta": {
     "name": "M.A.P. Master Life Data",
     "description": "Single source of truth for My Life, My Mission and My M.A.P.",
     "canonicalBase": "https://champagne247.github.io/Champagne247",
-    "updatedAt": "2026-10-02T08:44:00-05:00"
+    "updatedAt": "2026-10-04T09:18:43-05:00"
   },
   "owner": {
     "id": "christopher-champagne",
@@ -90,6 +78,63 @@ window.MAP_DATA={
     }
   },
   "entries": [
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "home-open-mat-2026-10-04",
+      "authorId": "christopher-champagne",
+      "title": "Sunday Open Mat • Boxing & Jiu-Jitsu",
+      "story": "Getting ready for today's open mat at the house—boxing, jiu-jitsu and around 20 people expected.\n\nWe had an open mat last Sunday, too. Back on the mats, training together and building the next generation.\n\nTikTok LIVE is set up with two windows: My Life and the Fitness M.A.P. Real life becomes the Living Vision Board.",
+      "status": "now",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-04T09:18:43-05:00",
+      "updatedAt": "2026-10-04T09:18:43-05:00",
+      "eventAt": "2026-10-04T09:18:43-05:00",
+      "datetime": "2026-10-04T09:18:43-05:00",
+      "displayDate": "October 4, 2026 • Open mat today",
+      "primaryCategory": "fitness",
+      "categories": [
+        "fitness",
+        "family",
+        "creator"
+      ],
+      "locations": [
+        {
+          "id": "home-open-mat-2026-10-04-location-1",
+          "label": "Home Open Mat • New Llano, Louisiana (approximate area)",
+          "lat": 31.1,
+          "lng": -93.3,
+          "precision": "approximate",
+          "visibility": "public"
+        }
+      ],
+      "media": [],
+      "hashtags": [
+        "CertifiedMONSTER",
+        "OpenMat",
+        "Boxing",
+        "JiuJitsu",
+        "MyLife",
+        "MyMAP"
+      ],
+      "links": [
+        {
+          "label": "TikTok • Certified MONSTER",
+          "url": "https://www.tiktok.com/@christopher.m.champagne"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
     {
       "schemaVersion": "1.0.0",
       "type": "life-entry",
@@ -218,14 +263,14 @@ window.MAP_DATA={
       "authorId": "christopher-champagne",
       "title": "Gym Time • All Hours Fitness Leesville",
       "story": "Breakfast and planning are complete. Now it’s gym time at All Hours Fitness in Leesville.\n\nStarting today at 185.8 pounds, headphones on, “Hold On” playing, and continuing the mission—building controlled strength, functional mobility and the physical capacity to live everything on my M.A.P.\n\nThe M begins with MY choices. Accountability means doing what I said I would do.",
-      "status": "now",
+      "status": "done",
       "lifecycle": "published",
       "visibility": "public",
       "createdAt": "2026-09-14T10:34:00-05:00",
-      "updatedAt": "2026-09-14T10:34:00-05:00",
+      "updatedAt": "2026-10-04T09:18:43-05:00",
       "eventAt": "2026-09-14T10:34:00-05:00",
       "datetime": "2026-09-14T10:34:00-05:00",
-      "displayDate": "September 14, 2026 • Happening now",
+      "displayDate": "September 14, 2026",
       "primaryCategory": "fitness",
       "categories": [
         "fitness",
