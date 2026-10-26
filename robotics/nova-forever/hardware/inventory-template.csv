@@ -1,0 +1,14 @@
+Item,Owned (yes/no/unknown),Model or SKU,Quantity,Condition,Dimensions mm,Voltage or interface,Test result,Notes
+Samsung S20 Ultra,unknown,,1,screen cracked and touch partly impaired (user report),,,not tested,Optional UI/compute reuse; inspect battery first
+3D printer or print service,unknown,,,,,,,
+Raspberry Pi 5,unknown,,,,,,,
+Raspberry Pi Pico 2 or other MCU,unknown,,,,,,,
+Bench DC supply,unknown,,,,,,,
+Digital multimeter,unknown,,,,,,,
+Soldering equipment,unknown,,,,,,,
+DC gearmotors with encoders,unknown,,,,,,,
+Servos,unknown,,,,,,,
+Camera modules,unknown,,,,,,,
+Display,unknown,,,,,,,
+Battery and charger,unknown,,,,,,,
+Emergency stop and fuses,unknown,,,,,,,
