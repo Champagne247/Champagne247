@@ -9,7 +9,7 @@ Build expressive, independently mobile AI companions with a shared, model-agnost
 - NOVA: orange-and-black rugged explorer / pathfinder; binocular camera eyes; navigation, observation, exploration, terrain awareness.
 - MILO: white-and-blue helper; animated screen face; voice and visual interaction, family assistance, schedules, smart-home integration and task coordination.
 - ZIGGY: green-and-white inventive maker; playful pointed-ear silhouette; prototyping, electronics, diagnostics, fabrication and experimentation.
-The current image uses MILO and ZIGGY. Earlier planning called the helper BUDDY and the inventor PIP. Treat those as earlier working names; do not silently conflate character identities or claim final naming was explicitly ratified.
+CURRENT CHARACTER NAMES ARE NOVA, MILO, AND ZIGGY. Use these names consistently when describing the current NOVA Family. Historical drafts must not override the current artwork or character roster.
 
 ## Forever Build architecture
 - A portable, model-agnostic NOVA AI core with local-first operation, optional cloud reasoning, durable memory and explicit permissioned tools.
