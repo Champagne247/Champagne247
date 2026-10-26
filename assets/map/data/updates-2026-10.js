@@ -8,6 +8,16 @@
     const at = date + "T12:00:00-05:00";
     d.entries.push({schemaVersion:"1.0.0",type:"life-entry",id,authorId:"christopher-champagne",title,story,status,lifecycle:"published",visibility:"public",createdAt:at,updatedAt:"2026-10-26T12:00:00-05:00",eventAt:at,datetime:at,displayDate:date,primaryCategory,categories,locations:[],media:[],hashtags:["MyLife","MyMAP"],links:[],distribution:{destinations:["map"],state:"published",published:{}},platforms:["map"]});
   }
+  // Verified reference links and illustrative category images (not event photographs).
+  const resources = {
+    "nova-rocky-community-2026":[["Rocky open-source project","https://github.com/cgro00/desk-robot"],["NOVA adaptation plan","https://github.com/Champagne247/Champagne247/blob/main/NOVA/prototypes/expressive-head-rocky-adaptation.md"]],
+    "nova-phone-reuse-2026":[["NOVA build preparation","https://github.com/Champagne247/Champagne247/blob/main/NOVA/planning/build-readiness.md"]],
+    "map-timeline-refresh-2026":[["Explore My M.A.P.","/Champagne247/explore/"]],
+    "sound-system-work-2026":[["CC's Technical Services","https://ccstechnicalservices.com/"]]
+  };
+  for (const entry of d.entries) {
+    if (resources[entry.id]) entry.links = resources[entry.id].map(([label,url])=>({label,url}));
+  }
   d.entries.sort((a,b)=>String(b.eventAt).localeCompare(String(a.eventAt)));
   d.meta.updatedAt="2026-10-26T12:00:00-05:00";
 })();
