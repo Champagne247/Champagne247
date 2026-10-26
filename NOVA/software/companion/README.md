@@ -43,3 +43,17 @@ Type `/cloud` to select cloud requests, or `/local` to switch back. The last 20 
 ## Why this structure?
 
 `main.py` holds the interface and provider adapter. The persona and local database are independent of the model, so future voice, vision, robot modules, and BUDDY/PIP can be developed separately. Next: extract providers into modules, add tests and configuration, and introduce explicit permissions for tools.
+
+## NOVA Family knowledge (GitHub-managed)
+
+The versioned `NOVA_FAMILY.md` is loaded automatically into the system context on **every** model request. It describes NOVA, MILO, ZIGGY, the shared docking architecture, current working software, and design-vs-built boundaries. To refresh your Windows checkout while NOVA is not running:
+
+```powershell
+cd C:\nova-repo
+ git status
+ git pull --ff-only origin nova/hybrid-core-starter
+cd NOVA\software\companion
+python main.py
+```
+
+If `git status` reports local changes, stop and review before pulling. The local `data/nova.sqlite3` conversation database is not committed to GitHub and is not reset by this update. Ask NOVA what it knows about MILO and ZIGGY to test knowledge loading. This is static project context, not yet semantic memory.
