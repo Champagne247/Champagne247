@@ -4,7 +4,7 @@ window.MAP_DATA = {
     "name": "M.A.P. Master Life Data",
     "description": "Single source of truth for My Life, My Mission and My M.A.P.",
     "canonicalBase": "https://champagne247.github.io/Champagne247",
-    "updatedAt": "2026-10-04T09:18:43-05:00"
+    "updatedAt": "2026-10-26T12:00:00-05:00"
   },
   "owner": {
     "id": "christopher-champagne",
@@ -78,6 +78,399 @@ window.MAP_DATA = {
     }
   },
   "entries": [
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "nova-rocky-reference",
+      "authorId": "christopher-champagne",
+      "title": "NOVA Forever Build • From Vision to Build Plan",
+      "story": "Our NOVA Forever Build has moved into hands-on preparation. We're researching proven open-source robotics, including Casey Grothaus's Rocky desk robot, and preparing an expressive AI companion with animated eyes, voice, camera, and a modular future. The first goal is a safe working prototype; then mobility, docking and new capabilities.",
+      "status": "progress",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-26T12:00:00-05:00",
+      "updatedAt": "2026-10-26T12:00:00-05:00",
+      "eventAt": "2026-10-26T12:00:00-05:00",
+      "datetime": "2026-10-26T12:00:00-05:00",
+      "displayDate": "October 26, 2026",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator",
+        "professional"
+      ],
+      "locations": [],
+      "media": [],
+      "hashtags": [
+        "MyLife",
+        "MyMAP",
+        "NOVA"
+      ],
+      "links": [
+        {
+          "label": "NOVA build preparation on GitHub",
+          "url": "https://github.com/Champagne247/Champagne247/blob/main/NOVA/planning/build-readiness.md"
+        },
+        {
+          "label": "Rocky-inspired adaptation plan",
+          "url": "https://github.com/Champagne247/Champagne247/blob/main/NOVA/prototypes/expressive-head-rocky-adaptation.md"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "nova-modular-robotics",
+      "authorId": "christopher-champagne",
+      "title": "Exploring Open-Source Robotics & Reusable Hardware",
+      "story": "Researching affordable 3D-printable robot bodies, tracked platforms, expressive faces, controllers and open-source projects. NOVA, BUDDY and PIP are envisioned as distinct companion characters sharing a universal docking ecosystem. Our focus is on learning from builders and adapting proven solutions rather than reinventing everything.",
+      "status": "progress",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-25T12:00:00-05:00",
+      "updatedAt": "2026-10-26T12:00:00-05:00",
+      "eventAt": "2026-10-25T12:00:00-05:00",
+      "datetime": "2026-10-25T12:00:00-05:00",
+      "displayDate": "October 25, 2026",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator",
+        "professional"
+      ],
+      "locations": [],
+      "media": [],
+      "hashtags": [
+        "MyLife",
+        "MyMAP",
+        "NOVA"
+      ],
+      "links": [],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "freeflight-mexico-opportunity",
+      "authorId": "christopher-champagne",
+      "title": "Freeflight • A Dream Instructor Opportunity",
+      "story": "Exploring a seasonal hang-gliding instruction opportunity in Valle de Bravo, Mexico. Continuing to build experience and qualifications while considering what it would take to turn a lifelong passion for freeflight into the next chapter.",
+      "status": "goal",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-24T12:00:00-05:00",
+      "updatedAt": "2026-10-26T12:00:00-05:00",
+      "eventAt": "2026-10-24T12:00:00-05:00",
+      "datetime": "2026-10-24T12:00:00-05:00",
+      "displayDate": "October 24, 2026",
+      "primaryCategory": "freeflight",
+      "categories": [
+        "freeflight",
+        "travel",
+        "professional"
+      ],
+      "locations": [],
+      "media": [],
+      "hashtags": [
+        "MyLife",
+        "MyMAP"
+      ],
+      "links": [],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "costa-rica-lifestyle",
+      "authorId": "christopher-champagne",
+      "title": "The Dream • Fly, Swim, Grow and Live",
+      "story": "Exploring a future home in Costa Rica where hang gliding, water, nature, gardening and community could all fit together. The vision is a place to fly, swim, grow food and enjoy a more adventurous, self-sufficient life.",
+      "status": "goal",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-22T12:00:00-05:00",
+      "updatedAt": "2026-10-26T12:00:00-05:00",
+      "eventAt": "2026-10-22T12:00:00-05:00",
+      "datetime": "2026-10-22T12:00:00-05:00",
+      "displayDate": "October 22, 2026",
+      "primaryCategory": "travel",
+      "categories": [
+        "travel",
+        "freeflight",
+        "family"
+      ],
+      "locations": [],
+      "media": [],
+      "hashtags": [
+        "MyLife",
+        "MyMAP"
+      ],
+      "links": [],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "security-camera-install",
+      "authorId": "christopher-champagne",
+      "title": "CC's Technical Services • Clean Camera Installation",
+      "story": "Completed a residential security camera installation with concealed cable routing, tidy wire management and a clean final presentation. A good reminder that professional technical work is as much about finish and care as functionality.",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-22T12:00:00-05:00",
+      "updatedAt": "2026-10-26T12:00:00-05:00",
+      "eventAt": "2026-10-22T12:00:00-05:00",
+      "datetime": "2026-10-22T12:00:00-05:00",
+      "displayDate": "October 22, 2026",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "locations": [],
+      "media": [],
+      "hashtags": [
+        "MyLife",
+        "MyMAP"
+      ],
+      "links": [],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "treenet-family-build",
+      "authorId": "christopher-champagne",
+      "title": "Exploring Tree Nets • Building Together",
+      "story": "Researching elevated tree-net platforms and walkways as a hands-on family building project. Combining climbing, creativity, practical fabrication skills and the possibility of developing something bigger together.",
+      "status": "progress",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-20T12:00:00-05:00",
+      "updatedAt": "2026-10-26T12:00:00-05:00",
+      "eventAt": "2026-10-20T12:00:00-05:00",
+      "datetime": "2026-10-20T12:00:00-05:00",
+      "displayDate": "October 20, 2026",
+      "primaryCategory": "family",
+      "categories": [
+        "family",
+        "creator",
+        "fitness"
+      ],
+      "locations": [],
+      "media": [],
+      "hashtags": [
+        "MyLife",
+        "MyMAP"
+      ],
+      "links": [],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "freeflight-minimax",
+      "authorId": "christopher-champagne",
+      "title": "Freeflight • Excited About Mini-MAX",
+      "story": "Following the renewed excitement around the Mini-MAX USA announcement and the wider world of recreational aviation. Keeping the dream of building, flying and exploring alive.",
+      "status": "progress",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-19T12:00:00-05:00",
+      "updatedAt": "2026-10-26T12:00:00-05:00",
+      "eventAt": "2026-10-19T12:00:00-05:00",
+      "datetime": "2026-10-19T12:00:00-05:00",
+      "displayDate": "October 19, 2026",
+      "primaryCategory": "freeflight",
+      "categories": [
+        "freeflight",
+        "creator"
+      ],
+      "locations": [],
+      "media": [],
+      "hashtags": [
+        "MyLife",
+        "MyMAP"
+      ],
+      "links": [],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "hvac-camera-work",
+      "authorId": "christopher-champagne",
+      "title": "CC's Technical Services • HVAC and Low-Voltage Work",
+      "story": "Continuing to grow CC's Technical Services across HVAC, refrigeration, electrical and low-voltage work. Recent projects have included motor and compressor service, troubleshooting, customer communication and surveillance installation planning.",
+      "status": "progress",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-16T12:00:00-05:00",
+      "updatedAt": "2026-10-26T12:00:00-05:00",
+      "eventAt": "2026-10-16T12:00:00-05:00",
+      "datetime": "2026-10-16T12:00:00-05:00",
+      "displayDate": "October 16, 2026",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "locations": [],
+      "media": [],
+      "hashtags": [
+        "MyLife",
+        "MyMAP"
+      ],
+      "links": [],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "nova-forever-build",
+      "authorId": "christopher-champagne",
+      "title": "NOVA Forever Build • The Universal Dock Vision",
+      "story": "Developing the NOVA Forever Build concept: a portable AI companion that can operate independently and connect to interchangeable platforms. The first HOME dock will support service and charging; future carrier modules may include tracked mobility and other tools after careful testing.",
+      "status": "progress",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-15T12:00:00-05:00",
+      "updatedAt": "2026-10-26T12:00:00-05:00",
+      "eventAt": "2026-10-15T12:00:00-05:00",
+      "datetime": "2026-10-15T12:00:00-05:00",
+      "displayDate": "October 15, 2026",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator",
+        "professional"
+      ],
+      "locations": [],
+      "media": [],
+      "hashtags": [
+        "MyLife",
+        "MyMAP",
+        "NOVA"
+      ],
+      "links": [],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "zero-mercy-return",
+      "authorId": "christopher-champagne",
+      "title": "Zero Mercy Fight Team • Back to the Mats",
+      "story": "Planning the return of structured mixed martial arts training, bringing years of coaching experience together with a new generation of athletes. The mission remains teaching discipline, technique, confidence and community.",
+      "status": "progress",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-07T12:00:00-05:00",
+      "updatedAt": "2026-10-26T12:00:00-05:00",
+      "eventAt": "2026-10-07T12:00:00-05:00",
+      "datetime": "2026-10-07T12:00:00-05:00",
+      "displayDate": "October 7, 2026",
+      "primaryCategory": "fitness",
+      "categories": [
+        "fitness",
+        "family"
+      ],
+      "locations": [],
+      "media": [],
+      "hashtags": [
+        "MyLife",
+        "MyMAP"
+      ],
+      "links": [],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
     {
       "schemaVersion": "1.0.0",
       "type": "life-entry",
