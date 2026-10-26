@@ -57,3 +57,7 @@ python main.py
 ```
 
 If `git status` reports local changes, stop and review before pulling. The local `data/nova.sqlite3` conversation database is not committed to GitHub and is not reset by this update. Ask NOVA what it knows about MILO and ZIGGY to test knowledge loading. This is static project context, not yet semantic memory.
+
+## Offline regression tests
+
+From `NOVA/software/companion`, run `python -m unittest discover -s . -p "test_*.py" -v`. These checks cover current character names, project knowledge injection, SQLite history persistence, and local/cloud request safeguards. They do not require Ollama, an API key, or network access. They must pass on the user's PC before treating this milestone as verified.
