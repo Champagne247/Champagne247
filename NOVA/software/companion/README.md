@@ -42,7 +42,7 @@ Type `/cloud` to select cloud requests, or `/local` to switch back. The last 20 
 
 ## Why this structure?
 
-`main.py` holds the interface and provider adapter. The persona and local database are independent of the model, so future voice, vision, robot modules, and BUDDY/PIP can be developed separately. Next: extract providers into modules, add tests and configuration, and introduce explicit permissions for tools.
+`main.py` holds the interface and provider adapter. The persona and local database are independent of the model, so future voice, vision, robot modules, and MILO/ZIGGY can be developed separately. Next: extract providers into modules, add tests and configuration, and introduce explicit permissions for tools.
 
 ## NOVA Family knowledge (GitHub-managed)
 
