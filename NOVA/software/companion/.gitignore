@@ -1,0 +1,9 @@
+# Local environment, conversation memory, and secrets must never be committed
+.venv/
+__pycache__/
+*.py[cod]
+data/
+*.sqlite3
+.env
+.env.*
+!.env.example
