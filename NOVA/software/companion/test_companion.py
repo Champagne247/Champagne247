@@ -16,7 +16,7 @@ class CompanionTests(unittest.TestCase):
             self.assertIn(name, knowledge)
         self.assertIn("explorer", knowledge.lower())
         self.assertIn("helper", knowledge.lower())
-        self.assertIn("inventor", knowledge.lower())
+        self.assertIn("inventive maker", knowledge.lower())
 
     def test_history_loads_current_knowledge_before_old_chat(self):
         with sqlite3.connect(":memory:") as connection:
