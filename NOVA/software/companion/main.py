@@ -14,6 +14,17 @@ DB_PATH = Path(os.environ.get("NOVA_DB_PATH", str(BASE / "data" / "nova.sqlite3"
 OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://127.0.0.1:11434")
 OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "llama3.2:1b")
 CLOUD_MODEL = os.environ.get("OPENAI_MODEL", "gpt-4.1-mini")
+KNOWLEDGE_PATH = BASE / "NOVA_FAMILY.md"
+
+
+def load_project_knowledge() -> str:
+    """Load versioned project context at startup without touching local memories."""
+    try:
+        return KNOWLEDGE_PATH.read_text(encoding="utf-8")
+    except FileNotFoundError:
+        return "Project knowledge file not installed yet."
+
+
 SYSTEM = (
     "You are NOVA, the warm, practical companion of the NOVA Forever Build. "
     "You are model-agnostic and may later inhabit modular robot hardware. "
@@ -39,7 +50,7 @@ def history(connection: sqlite3.Connection, limit: int = 20) -> list[dict[str, s
         "SELECT role, content FROM (SELECT id, role, content FROM messages "
         "ORDER BY id DESC LIMIT ?) ORDER BY id", (limit,)
     ).fetchall()
-    return [{"role": "system", "content": SYSTEM}] + [
+    return [{"role": "system", "content": SYSTEM + "\n\nPROJECT KNOWLEDGE:\n" + load_project_knowledge()}] + [
         {"role": role, "content": content} for role, content in rows
     ]
 
