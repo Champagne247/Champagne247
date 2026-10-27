@@ -4,7 +4,7 @@ window.MAP_DATA = {
     "name": "M.A.P. Master Life Data",
     "description": "Single source of truth for My Life, My Mission and My M.A.P.",
     "canonicalBase": "https://champagne247.github.io/Champagne247",
-    "updatedAt": "2026-10-26T12:00:00-05:00"
+    "updatedAt": "2026-10-27T08:29:00-05:00"
   },
   "owner": {
     "id": "christopher-champagne",
@@ -78,6 +78,87 @@ window.MAP_DATA = {
     }
   },
   "entries": [
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "authorId": "christopher-champagne",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-27T08:29:00-05:00",
+      "updatedAt": "2026-10-27T08:29:00-05:00",
+      "eventAt": "2026-10-27T08:29:00-05:00",
+      "datetime": "2026-10-27T08:29:00-05:00",
+      "displayDate": "October 27, 2026",
+      "locations": [],
+      "media": [],
+      "hashtags": [
+        "MyLife",
+        "MyMAP",
+        "Family",
+        "Travel"
+      ],
+      "links": [],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ],
+      "id": "family-holiday-cruise-2026",
+      "title": "Family • Holiday Cruise Ahead",
+      "story": "The family has an upcoming cruise planned for November. Another opportunity to make memories, enjoy time together and add a new chapter to our Living Vision Board. Exact travel dates and personal itinerary details stay private.",
+      "status": "next",
+      "primaryCategory": "family",
+      "categories": [
+        "family",
+        "travel"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "authorId": "christopher-champagne",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-27T08:29:00-05:00",
+      "updatedAt": "2026-10-27T08:29:00-05:00",
+      "eventAt": "2026-10-27T08:29:00-05:00",
+      "datetime": "2026-10-27T08:29:00-05:00",
+      "displayDate": "October 27, 2026",
+      "locations": [],
+      "media": [],
+      "hashtags": [
+        "MyLife",
+        "MyMAP",
+        "Family",
+        "Travel"
+      ],
+      "links": [],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ],
+      "id": "kat-cancun-getaway-2026",
+      "title": "Kat & Me • A Cancun Adventure Ahead",
+      "story": "Kat and I have an upcoming getaway to Cancun, Mexico, with time to explore, reconnect and experience something new together. I'm especially excited to try kiteboarding for the first time, building on my background in surfing, wakeboarding and freeflight. Detailed travel dates and lodging information stay private.",
+      "status": "next",
+      "primaryCategory": "travel",
+      "categories": [
+        "travel",
+        "family",
+        "freeflight"
+      ]
+    },
     {
       "schemaVersion": "1.0.0",
       "type": "life-entry",
