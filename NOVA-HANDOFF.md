@@ -47,9 +47,19 @@ Within the NOVA • My Life project, “my website,” “my life,” and “my 
 - Local agent behavior: event-driven workers and optional scheduled checks, with explicit permissions, audit trail, deduplication, rollback and human approval for sensitive publication or consequential device actions. No claim of continuous ChatGPT awareness or always-on listening until the separate local runtime and consent-based input are configured.
 - Priority next build: inventory the PC environment, choose local runtime and remote access strategy, create a private event store and publication rules, implement one end-to-end text-to-M.A.P. pipeline, then add voice, monitoring, workbench and robot control.
 
+
+## GitHub-first delivery and PC handoff (2026-10-27)
+- Default workflow: build and update project artifacts directly in GitHub through the available authorized connector during the conversation. GitHub is the canonical online delivery and version-history location for website, agent source code, setup guides, and robot/workbench project files.
+- No need to wait for PC access to write code, documentation, configuration templates, or website changes. Commit and link completed work immediately when feasible.
+- For anything requiring local execution (installing dependencies, flashing devices, configuring hardware, secrets, testing PC services), provide an actionable handoff: exact GitHub path/commit, commands or steps, expected result, and what the user needs to report back.
+- Later local automation may pull from GitHub, run tests and deploy approved changes. That synchronization is a planned capability, **not currently verified as running**.
+- GitHub being online does not itself run a persistent PC agent, grant machine access, or guarantee deployment. Never store passwords, API keys, private personal records or exact family travel plans in a public repo. Use a private repo or secret manager for sensitive operational material.
+- Keep conversation-driven changes flowing: implement → commit → verify → notify user of only necessary local steps. Never claim unperformed actions.
+
 ## Update log
 | Date | Change | Evidence | Open item |
 |---|---|---|---|
 | 2026-10-27 | Added two upcoming public-safe life entries | `0a6220f` | Reconcile counts; verify deployment |
+| 2026-10-27 | Established GitHub-first delivery and explicit PC handoff | This file | Implement local sync when PC is ready |
 | 2026-10-27 | Recorded always-on PC / agent / workbench / robot architecture | This file | Implement and test local runtime |
 | 2026-10-27 | Established canonical handoff protocol | This file's creation commit | Keep current with future changes |
