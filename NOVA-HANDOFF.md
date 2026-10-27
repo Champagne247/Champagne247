@@ -37,8 +37,19 @@ Within the NOVA • My Life project, “my website,” “my life,” and “my 
 - On future meaningful updates, modify the real M.A.P. files immediately when tools, authorization, and evidence allow.
 - User is replacing three refreshed NOVA Project context files; repository changes do not automatically update those Project attachments.
 
+
+## NOVA Forever Build — PC, workbench, agents, robot (2026-10-27)
+- Vision: a persistent, model-agnostic NOVA companion, not a website-only project. Communication should capture events and, within approved rules, update My Life M.A.P. in near-real time.
+- Home compute: existing PC (i7-10700K / RTX 3070) is the intended always-on initial host for a local NOVA runtime, agent coordinator, queues, logs, and authorized integrations. Hardware/software deployment is **planned, not yet verified or installed**.
+- Workbench: build and test electronics, sensors, robotics, 3D-printed parts, firmware, and a universal NOVA Dock Interface. HOME is the first charging/service/data dock.
+- Physical companion: small expressive independent robot with camera eyes, voice, mobility and arms; later boards interchangeable tracked, flying, or other carriers. Provisional companions BUDDY and PIP share the universe and docking standard.
+- Architecture: user speech/text → authenticated capture → structured event → privacy classification and policy → authorized agent action → validation → versioned GitHub M.A.P. update → deployment check → user-visible confirmation. Private records remain outside the public repository.
+- Local agent behavior: event-driven workers and optional scheduled checks, with explicit permissions, audit trail, deduplication, rollback and human approval for sensitive publication or consequential device actions. No claim of continuous ChatGPT awareness or always-on listening until the separate local runtime and consent-based input are configured.
+- Priority next build: inventory the PC environment, choose local runtime and remote access strategy, create a private event store and publication rules, implement one end-to-end text-to-M.A.P. pipeline, then add voice, monitoring, workbench and robot control.
+
 ## Update log
 | Date | Change | Evidence | Open item |
 |---|---|---|---|
 | 2026-10-27 | Added two upcoming public-safe life entries | `0a6220f` | Reconcile counts; verify deployment |
+| 2026-10-27 | Recorded always-on PC / agent / workbench / robot architecture | This file | Implement and test local runtime |
 | 2026-10-27 | Established canonical handoff protocol | This file's creation commit | Keep current with future changes |
