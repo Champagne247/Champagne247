@@ -115,6 +115,11 @@ window.MAP_DATA = {
         {
           "label": "Explore Strength & Fitness",
           "url": "/Champagne247/fitness/"
+        },
+        {
+          "label": "Follow Zachary’s training on TikTok",
+          "url": "https://www.tiktok.com/@zacharychampagne14",
+          "source": "Profile screenshot supplied by Chris"
         }
       ],
       "distribution": {
