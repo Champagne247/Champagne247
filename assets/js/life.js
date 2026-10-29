@@ -105,6 +105,21 @@
       };
       document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('places').classList.contains('expanded'))$('map-expand').click();});
     }
+    if(!$('life-map-legend')){
+      const legend=document.createElement('div');
+      legend.id='life-map-legend';
+      legend.setAttribute('aria-label','Map pin color legend');
+      legend.style.cssText='display:flex;flex-wrap:wrap;gap:12px 20px;padding:16px 0;line-height:1.5';
+      const items=[...Object.values(data.statuses||{}),{label:'Multiple activity statuses at one place',color:'#d8e2ee'}];
+      items.forEach(item=>{
+        const label=document.createElement('span');
+        const dot=document.createElement('span');
+        dot.setAttribute('aria-hidden','true');
+        dot.style.cssText='display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:7px;background:'+item.color;
+        label.append(dot,document.createTextNode(item.label));legend.append(label);
+      });
+      $('life-map').after(legend);
+    }
     pinLayer.clearLayers();
     const groups=new Map();
     visible.forEach(entry=>MAP_CONTENT.places(entry).filter(MAP_CONTENT.coordinates).forEach(place=>{
@@ -115,7 +130,7 @@
     const bounds=[];
     groups.forEach(rows=>{
       const {entry,place}=rows[0];const point=[Number(place.lat),Number(place.lng)];bounds.push(point);
-      const marker=L.circleMarker(point,{radius:rows.length>1?12:8,color:'#152433',weight:2,fillColor:data.statuses?.[entry.status]?.color||'#58c3ff',fillOpacity:1});
+      const marker=L.circleMarker(point,{radius:rows.length>1?12:8,color:'#152433',weight:2,fillColor:new Set(rows.map(row=>row.entry.status)).size>1?'#d8e2ee':data.statuses?.[entry.status]?.color||'#58c3ff',fillOpacity:1});
       marker.bindPopup(rows.map(({entry,place})=>{
         const actual=MAP_CONTENT.media(entry).find(m=>m.type==='image');
         return `<article>${actual?MAP_CONTENT.hero(actual,entry.title):''}<h3>${esc(entry.title)}</h3><p>${esc(statusLabel(entry))} · ${esc(place.label)}</p><p>${esc(entry.story?.slice(0,220))}</p><p><a href="#${encodeURIComponent(entry.id)}">Read this story ↓</a></p>${(entry.links||[]).filter(l=>safeURL(l.url)).map(l=>`<p><a href="${esc(safeURL(l.url))}" target="_blank" rel="noopener noreferrer">${esc(l.label)} ↗</a></p>`).join('')}</article>`;
