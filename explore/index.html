@@ -1121,6 +1121,7 @@ footer strong{
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
+<script src="/Champagne247/assets/map/content.js"></script>
 <script src="/Champagne247/assets/map/data/entries.js"></script>
 <script src="/Champagne247/assets/map/data/updates-2026-10.js"></script>
 
@@ -1334,50 +1335,10 @@ function statusColor(key){
 }
 
 function firstMedia(entry){
-
-  const media=
-    (entry.media || []).find(
-      function(item){
-
-        return(
-          item.type==="image" &&
-          item.url
-        );
-
-      }
-    );
-
-  return(
-    media || {
-      type:"image",
-      url:categoryImage(
-        entry.categories?.[0]
-      ),
-      caption:entry.title
-    }
-  );
-
+  return MAP_CONTENT.primary(entry,categoryImage(entry.categories?.[0]));
 }
-
 function entryLocations(entry){
-
-  return Array.isArray(entry.locations)
-    ? entry.locations.filter(
-        function(location){
-
-          return(
-            Number.isFinite(
-              Number(location.lat)
-            ) &&
-            Number.isFinite(
-              Number(location.lng)
-            )
-          );
-
-        }
-      )
-    : [];
-
+  return MAP_CONTENT.places(entry).filter(MAP_CONTENT.coordinates);
 }
 
 function sortedEntries(list){
@@ -1422,8 +1383,9 @@ function visibleEntries(filter){
       function(entry){
 
         return(
-          entry.lifecycle!=="archived" &&
-          entry.visibility!=="private" &&
+          !["archived","draft"].includes(entry.lifecycle) &&
+          entry.visibility==="public" &&
+          entry.distribution?.state!=="testing" &&
           (
             filter==="all" ||
             (entry.categories || []).includes(filter)
@@ -1621,9 +1583,7 @@ function buildNowCard(filter){
 function buildLinks(entry){
 
   const links=
-    Array.isArray(entry.links)
-      ? entry.links
-      : [];
+    (entry.links || []).filter(link=>MAP_CONTENT.url(link.url));
 
   if(!links.length){
     return "";
@@ -1801,10 +1761,10 @@ function popupHTML(entry,location){
       .join(" • ");
 
   return`
-    <img
-      class="popup-image"
-      src="${esc(media.url)}"
-      alt="${esc(entry.title)}">
+    ${MAP_CONTENT.hero(media,entry.title)}
+    <p>${esc(MAP_CONTENT.label(media))}</p>
+    ${buildLinks(entry)}
+    ${MAP_CONTENT.details(entry)}
 
     <div class="popup-paths">
       ${esc(paths)}
@@ -1865,6 +1825,7 @@ function addEntryMarkers(entry){
                 : 9,
             color:"#04101a",
             weight:3,
+            dashArray:MAP_CONTENT.placeVerified(location) ? null : "4 4",
             fillColor:
               statusColor(entry.status),
             fillOpacity:1
@@ -1903,7 +1864,7 @@ function cardHTML(entry){
     entry.categories || [];
 
   const locations=
-    entryLocations(entry);
+    MAP_CONTENT.places(entry);
 
   const hashtags=
     entry.hashtags || [];
@@ -1919,16 +1880,7 @@ function cardHTML(entry){
 
       <div class="card-media">
 
-        <img
-          src="${esc(media.url)}"
-          alt="${esc(
-            media.caption ||
-            entry.title
-          )}"
-          loading="lazy"
-          onerror="this.src='${esc(
-            categoryImage(paths[0])
-          )}'">
+        ${MAP_CONTENT.hero(media,entry.title)}
 
         ${mediaCount>1
           ? `
@@ -1940,10 +1892,7 @@ function cardHTML(entry){
         }
 
         <div class="media-caption">
-          ${esc(
-            media.caption ||
-            entry.title
-          )}
+          ${esc(MAP_CONTENT.label(media))} · ${esc(media.caption || entry.title)}
         </div>
 
       </div>
@@ -2056,6 +2005,7 @@ function cardHTML(entry){
 
         ${buildOpportunity(entry)}
         ${buildLinks(entry)}
+        ${MAP_CONTENT.details(entry)}
         ${buildDedicatedLink(entry)}
 
       </div>

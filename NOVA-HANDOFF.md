@@ -32,7 +32,9 @@ Within the NOVA • My Life project, “my website,” “my life,” and “my 
 - Deployment / live page rendering: not verified.
 
 ## Current work
-- Reconcile the life-entry count and confirm the Explore and My Life pages render current data.
+- 2026-10-29 development milestone (prepared for PR review; not deployed): cloud helpers are scoped separately from local drafts; composer exports preserve the combined data/schema and distinguish reviewed public entries from drafts. Four browser regressions in `tests/composer.test.cjs` cover reload persistence, actual exported files, media, connections, export freshness after edits and draft exclusion. Supplement replay preserves edited links and newer metadata. See `tests/README.md` for commands.
+- Count reconciliation: `entries.js` has 23 unique base records, and `updates-2026-10.js` adds 12, giving 35 combined records. My Life's public filter admits 34; its initial page displays six.
+- Next: review the local milestone changes, then separately verify any authorized GitHub Pages deployment. Live deployment remains unverified.
 - Keep a dated public-safe log of changes and a private detailed handoff in the ChatGPT Project files.
 - On future meaningful updates, modify the real M.A.P. files immediately when tools, authorization, and evidence allow.
 - User is replacing three refreshed NOVA Project context files; repository changes do not automatically update those Project attachments.

@@ -835,6 +835,8 @@ footer{
   <div class="field">
     <label for="date">Date and time</label>
     <input id="date" type="datetime-local">
+    <label for="datePrecision">How certain is the event date?</label>
+    <select id="datePrecision"><option value="exact">Confirmed date/time</option><option value="day">Day known; time approximate</option><option value="unknown">Event date not confirmed</option></select>
   </div>
 
 </section>
@@ -958,8 +960,9 @@ footer{
 
   <div class="notice">
     GitHub Pages cannot permanently store a camera upload by itself.
-    Upload the file into the suggested assets folder, then use that
-    path in the media list below.
+    Selected files are temporary previews: saving a draft stores text and links,
+    not the photo/video itself. Keep the original file and upload it separately
+    into the suggested assets folder before using that path in a reviewed entry.
   </div>
 
   <div class="field" style="margin-top:17px">
@@ -993,6 +996,10 @@ footer{
       Connected buttons and links
     </span>
 
+    <label for="projects">Connected projects (comma-separated)</label>
+    <input id="projects" placeholder="NOVA, Looking4Lift, CCs">
+    <label for="sourceURLs">Public source URLs (one per line; keep private records outside this export)</label>
+    <textarea id="sourceURLs" placeholder="https://official-source.example/"></textarea>
     <div class="list" id="linkList"></div>
 
     <button class="add" id="addLink" type="button">
@@ -1123,17 +1130,21 @@ footer{
 
   <div class="field" style="margin-top:17px">
 
-    <label for="mode">Publishing mode</label>
+    <label for="mode">Review & export status</label>
 
     <select id="mode">
-      <option value="draft">Prepare drafts for approval</option>
-      <option value="now">Publish/share now</option>
-      <option value="schedule">Schedule for later</option>
+      <option value="draft">Draft — exclude from public feeds</option>
+      <option value="now">Reviewed — include in public M.A.P. feeds</option>
+      <option value="schedule">Planned — exclude until reviewed</option>
     </select>
 
   </div>
 
   <div class="notice">
+    Review the story, connections and media before choosing Reviewed.
+    Exporting downloads a file for review; it does not publish or schedule it.
+    Reviewed exports exclude private/draft records and private places. Draft exports
+    are private backups: never upload them to a public repository.
     Platform selections are recorded in the master entry.
     Direct automatic posting will be connected later through secure
     platform authorization. For now, the composer prepares the
@@ -1320,7 +1331,9 @@ footer{
 </div>
 
 <!-- LOAD THE EXISTING MASTER DATA -->
+<script src="/Champagne247/assets/map/content.js"></script>
 <script src="/Champagne247/assets/map/data/entries.js"></script>
+<script src="/Champagne247/assets/map/data/updates-2026-10.js"></script>
 
 <script>
 const DATA=window.MAP_DATA || {
@@ -1369,6 +1382,7 @@ let freshFilePreview="";
 let currentEntry=null;
 let currentMasterFile="";
 let currentCaption="";
+let currentDraftSignature="";
 
 const byId=function(id){
   return document.getElementById(id);
@@ -1475,6 +1489,12 @@ function addLocation(data={}){
 
     </div>
 
+    <label>Place role<select class="location-role"><option value="place">Place</option><option value="hotel">Hotel</option><option value="launch">Launch site</option><option value="restaurant">Restaurant</option><option value="worksite">Worksite</option><option value="destination">Destination / goal</option></select></label>
+    <input class="location-maps" placeholder="Google Maps place URL (optional)">
+    <input class="location-source" placeholder="Public source that confirms this place/coordinates">
+    <label>Evidence<select class="location-verification"><option value="unverified">Not verified — follow up</option><option value="verified">Verified against the source above</option></select></label>
+    <label>Precision<select class="location-precision"><option value="unknown">Unknown</option><option value="approximate">Approximate area</option><option value="exact">Exact source-confirmed place</option></select></label>
+    <label>Visibility<select class="location-visibility"><option value="public">Public place</option><option value="private">Private — keep out of public export</option></select></label>
     <button class="remove" type="button">
       Remove Location
     </button>
@@ -1489,6 +1509,10 @@ function addLocation(data={}){
   item.querySelector(".location-lng").value=
     data.lng ?? "";
 
+  for (const key of ['role','mapsUrl','sourceUrl','verification','precision','visibility']) {
+    const cls={mapsUrl:'maps',sourceUrl:'source'}[key]||key;
+    if(data[key]) item.querySelector('.location-'+cls).value=data[key];
+  }
   byId("locationList").appendChild(item);
 }
 
@@ -1515,6 +1539,10 @@ function addMedia(data={}){
         class="media-caption-input"
         type="text"
         placeholder="Media caption">
+      <label>Image/video origin<select class="media-origin"><option value="unverified">Needs provenance review</option><option value="own">My actual photo/video of this subject</option><option value="official">Official image/video of this actual subject</option><option value="ai">AI illustration (not an event photo)</option></select></label>
+      <input class="media-source" placeholder="Official/source URL">
+      <input class="media-credit" placeholder="Photographer / source credit">
+      <input class="media-reason" placeholder="If AI: why no suitable actual/official image is available">
 
     </div>
 
@@ -1532,6 +1560,10 @@ function addMedia(data={}){
   item.querySelector(".media-caption-input").value=
     data.caption || "";
 
+  const provenance=data.provenance || {};
+  for (const [cls,key] of [['origin','kind'],['source','sourceUrl'],['credit','credit'],['reason','reason']]) {
+    if(provenance[key]) item.querySelector('.media-'+cls).value=provenance[key];
+  }
   byId("mediaList").appendChild(item);
 }
 
@@ -1551,7 +1583,10 @@ function addLink(data={}){
       <input
         class="link-url"
         type="text"
-        placeholder="../explore/fitness/ or https://...">
+        placeholder="/Champagne247/fitness/ or https://...">
+      <select class="link-kind"><option value="reference">Reference / connection</option><option value="business">Business / operator</option></select>
+      <input class="link-source" placeholder="Public source for this business link">
+      <select class="link-verification"><option value="unverified">Not verified</option><option value="verified">Verified from official source</option></select>
 
     </div>
 
@@ -1566,6 +1601,9 @@ function addLink(data={}){
   item.querySelector(".link-url").value=
     data.url || "";
 
+  for (const [cls,key] of [['kind','kind'],['source','sourceUrl'],['verification','verification']]) {
+    if(data[key]) item.querySelector('.link-'+cls).value=data[key];
+  }
   byId("linkList").appendChild(item);
 }
 
@@ -1598,8 +1636,18 @@ function collectLocations(){
       location.lng=lng;
     }
 
+    for (const key of ['role','mapsUrl','sourceUrl','verification','precision','visibility']) {
+      const cls={mapsUrl:'maps',sourceUrl:'source'}[key]||key;
+      location[key]=item.querySelector('.location-'+cls).value.trim();
+    }
     return location;
   }).filter(Boolean);
+}
+
+function mediaURL(value){
+  if(/^(?:[a-z][a-z\d+.-]*:|\/)/i.test(value)) return value;
+  const url=new URL(value,location.origin+"/Champagne247/");
+  return url.pathname+url.search+url.hash;
 }
 
 function collectMedia(){
@@ -1621,8 +1669,16 @@ function collectMedia(){
 
     return{
       type,
-      url,
-      caption
+      // Repository-relative media must work on both the composer and feed routes.
+      url:mediaURL(url),
+      caption,
+      provenance:{
+        kind:item.querySelector('.media-origin').value,
+        actualSubject:['own','official'].includes(item.querySelector('.media-origin').value),
+        sourceUrl:item.querySelector('.media-source').value.trim(),
+        credit:item.querySelector('.media-credit').value.trim(),
+        reason:item.querySelector('.media-reason').value.trim()
+      }
     };
   }).filter(Boolean);
 }
@@ -1643,7 +1699,10 @@ function collectLinks(){
 
     return{
       label,
-      url
+      url,
+      kind:item.querySelector('.link-kind').value,
+      sourceUrl:item.querySelector('.link-source').value.trim(),
+      verification:item.querySelector('.link-verification').value
     };
   }).filter(Boolean);
 }
@@ -1711,20 +1770,69 @@ function buildEntry(){
     .toISOString()
     .slice(0,10)}`;
 
+  const existing=(DATA.entries || []).find(entry => entry.id===id);
+  const updatedAt=new Date().toISOString();
+  const reviewed=byId("mode").value==="now";
+  const platforms=checkedValues("platforms");
+  const media=collectMedia();
+  const locations=collectLocations();
+  const links=collectLinks();
+  const sources=byId('sourceURLs').value.split(/\n/).map(url=>url.trim()).filter(Boolean).map(url=>({label:url,url}));
+  if(reviewed && (media.some(item=>!MAP_CONTENT.url(item.url) || item.provenance.kind==='unverified' ||
+      (item.provenance.kind==='official' && (!/^https?:\/\//i.test(item.provenance.sourceUrl) || !MAP_CONTENT.url(item.provenance.sourceUrl))) ||
+      (item.provenance.kind==='ai' && !item.provenance.reason)) ||
+      locations.some(place=>place.visibility==='private'))) {
+    alert('Before public export, verify media origins, explain any AI illustration, and remove private places.');
+    return null;
+  }
+  if(reviewed && (sources.some(ref=>!/^https?:\/\//i.test(ref.url) || !MAP_CONTENT.url(ref.url)) ||
+      links.some(link=>!MAP_CONTENT.url(link.url) || (link.verification==='verified' && (!/^https?:\/\//i.test(link.sourceUrl) || !MAP_CONTENT.url(link.sourceUrl)))))) {
+    alert('Use valid public URLs for evidence and business links. A verified link also needs its public source.');
+    return null;
+  }
+  if(locations.some(place => (place.lat!==undefined || place.lng!==undefined) && !MAP_CONTENT.coordinates({...place,visibility:'public'}))) {
+    alert('A pin needs both latitude and longitude within their valid ranges. Leave both blank when unknown.');
+    return null;
+  }
+  if(locations.some(place=>place.verification==='verified' && !MAP_CONTENT.placeVerified(place))) {
+    alert('A verified place needs its public source and Google Maps place URL. Otherwise mark it unverified.');
+    return null;
+  }
+
   return{
+    ...existing,
+    schemaVersion:existing?.schemaVersion || DATA.schemaVersion || "1.0.0",
+    type:existing?.type || "life-entry",
+    authorId:existing?.authorId || DATA.owner?.id,
+    createdAt:existing?.createdAt || updatedAt,
+    updatedAt,
+    datePrecision:byId('datePrecision').value,
+    reportedAt:updatedAt,
+    eventAt:byId('datePrecision').value==='unknown' ? null : date.toISOString(),
+    lifecycle:reviewed ? "published" : "draft",
+    visibility:reviewed ? "public" : "private",
     id,
     title,
     story,
     status,
-    datetime:date.toISOString(),
-    displayDate:displayDate(date,status),
+    datetime:byId('datePrecision').value==='unknown' ? null : date.toISOString(),
+    displayDate:byId('datePrecision').value==='unknown' ? 'Date not yet confirmed' : displayDate(date,status),
     categories,
-    locations:collectLocations(),
-    media:collectMedia(),
+    primaryCategory:categories[0],
+    locations,
+    media,
+    projects:commaValues(byId('projects').value),
+    sources,
     hashtags,
-    links:collectLinks(),
+    links,
     opportunity:collectOpportunity(),
-    platforms:checkedValues("platforms"),
+    distribution:{
+      ...existing?.distribution,
+      destinations:platforms,
+      state:reviewed ? "ready" : "draft",
+      published:existing?.distribution?.published || {}
+    },
+    platforms,
     publishMode:byId("mode").value
   };
 }
@@ -1764,10 +1872,9 @@ function masterFile(entry){
   ];
 
   const completeData={
-    owner:DATA.owner || {},
-    categories:DATA.categories || {},
-    statuses:DATA.statuses || {},
-    entries
+    ...DATA,
+    meta:{...DATA.meta,updatedAt:entry.updatedAt},
+    entries: entry.visibility === "public" ? MAP_CONTENT.publicEntries(entries) : entries
   };
 
   return(
@@ -1807,6 +1914,7 @@ function showPreview(){
   currentEntry=entry;
   currentCaption=buildSocialCaption(entry);
   currentMasterFile=masterFile(entry);
+  currentDraftSignature=JSON.stringify(collectDraft());
 
   byId("previewStatus").textContent=
     `● ${statusLabels[entry.status]}`;
@@ -1842,9 +1950,7 @@ function showPreview(){
       return `#${tag}`;
     }).join(" ");
 
-  const firstImage=entry.media.find(function(media){
-    return media.type==="image" && media.url;
-  });
+  const firstImage=MAP_CONTENT.media(entry,'image')[0];
 
   const previewImage=byId("previewImage");
 
@@ -1903,12 +2009,16 @@ async function copyText(text,message){
   }
 }
 
-function downloadMaster(){
-  if(!currentEntry){
+function ensureCurrentPreview(){
+  if(!currentEntry || currentDraftSignature!==JSON.stringify(collectDraft())){
+    currentEntry=null;
     showPreview();
   }
+  return Boolean(currentEntry);
+}
 
-  if(!currentEntry){
+function downloadMaster(){
+  if(!ensureCurrentPreview()){
     return;
   }
 
@@ -1921,18 +2031,14 @@ function downloadMaster(){
   const link=document.createElement("a");
 
   link.href=url;
-  link.download="entries.js";
+  link.download=currentEntry.visibility === "public" ? "entries.js" : "private-map-backup.js";
   link.click();
 
   URL.revokeObjectURL(url);
 }
 
 async function shareEntry(){
-  if(!currentEntry){
-    showPreview();
-  }
-
-  if(!currentEntry){
+  if(!ensureCurrentPreview()){
     return;
   }
 
@@ -1963,6 +2069,9 @@ async function shareEntry(){
 
 function collectDraft(){
   return{
+    projects:byId('projects').value,
+    sourceURLs:byId('sourceURLs').value,
+    datePrecision:byId('datePrecision').value,
     title:byId("title").value,
     story:byId("story").value,
     status:byId("status").value,
@@ -1990,7 +2099,7 @@ function saveDraft(notify=true){
   );
 
   if(notify){
-    alert("Draft saved on this device. Use Save to account above to sync it.");
+    alert("Draft text and media links saved on this device. Selected photo/video files are NOT saved or uploaded. Keep the original files. Use Save to account above to sync draft text and links.");
   }
 }
 
@@ -2007,6 +2116,9 @@ function restoreDraft(){
     const draft=JSON.parse(stored);
 
     [
+      "projects",
+      "sourceURLs",
+      "datePrecision",
       "title",
       "story",
       "status",
@@ -2096,13 +2208,9 @@ byId("freshUpload").addEventListener(
 
     byId("uploadPreview").classList.add("active");
 
-    addMedia({
-      type:freshFile.type.startsWith("video/")
-        ? "video"
-        : "image",
-      url:suggestedPath,
-      caption:title
-    });
+    // A preview is not an upload. Never insert an uncreated asset URL.
+    byId("uploadName").textContent +=
+      " — preview only; keep the original, upload it separately, then add its URL below.";
   }
 );
 
@@ -2184,11 +2292,7 @@ byId("saveDraft").onclick=function(){
 };
 
 byId("copyEntry").onclick=function(){
-  if(!currentEntry){
-    showPreview();
-  }
-
-  if(currentEntry){
+  if(ensureCurrentPreview()){
     copyText(
       JSON.stringify(currentEntry,null,2),
       "New entry copied."
@@ -2197,11 +2301,7 @@ byId("copyEntry").onclick=function(){
 };
 
 byId("copyMaster").onclick=function(){
-  if(!currentEntry){
-    showPreview();
-  }
-
-  if(currentEntry){
+  if(ensureCurrentPreview()){
     copyText(
       currentMasterFile,
       "Complete entries.js copied."
@@ -2213,11 +2313,7 @@ byId("downloadMaster").onclick=
   downloadMaster;
 
 byId("copyCaption").onclick=function(){
-  if(!currentEntry){
-    showPreview();
-  }
-
-  if(currentEntry){
+  if(ensureCurrentPreview()){
     copyText(
       currentCaption,
       "Social caption copied."
@@ -2229,11 +2325,7 @@ byId("share").onclick=shareEntry;
 
 byId("date").value=localDateValue();
 
-addLocation({
-  label:"Leesville, Louisiana",
-  lat:31.1437,
-  lng:-93.2610
-});
+addLocation();
 
 addMedia();
 addLink();
@@ -2245,3 +2337,4 @@ restoreDraft();
 
 </body>
 </html>
+

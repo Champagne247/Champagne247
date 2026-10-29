@@ -28,12 +28,13 @@
     } catch { return ''; }
   }
   const time = entry => {
+    if(entry.datePrecision==='unknown') return 0;
     const value = Date.parse(entry.eventAt || entry.datetime || entry.createdAt || '');
     return Number.isFinite(value) ? value : 0;
   };
   const isCurrent = entry => entry.status === 'now' && time(entry) <= Date.now() && Date.now() - time(entry) < 48 * 60 * 60 * 1000;
   entries.sort((a,b) => Number(isCurrent(b)) - Number(isCurrent(a)) || time(b) - time(a));
-  const photos = entry => (entry.media || []).filter(item => item.type === 'image' && safeURL(item.url));
+  const photos = entry => MAP_CONTENT.media(entry, 'image');
   const labels = key => categories[key]?.label || key;
   const params = new URLSearchParams(location.search);
   let activeFilter = routes[params.get('path')] ? params.get('path') : 'all';
@@ -66,12 +67,13 @@
   }
   function card(entry) {
     const images = photos(entry);
+    const leading=MAP_CONTENT.primary(entry,fallbackImage);
     const paragraphs = String(entry.story || '').trim().split(/\n\s*\n/);
     const locations = (entry.locations || []).filter(item => typeof item === 'string' || item.visibility !== 'private').map(item => typeof item === 'string' ? item : item.label).filter(Boolean);
     const links = (entry.links || []).filter(link => safeURL(link.url));
     const entryURL = `${canonical}#${encodeURIComponent(entry.id)}`;
     return `<article class="entry" id="${esc(entry.id)}">
-      ${images.length ? `<button type="button" class="entry-media" data-gallery="${esc(entry.id)}" aria-label="View ${images.length} photo${images.length === 1 ? '' : 's'} from ${esc(entry.title)}"><img src="${esc(safeURL(images[0].url))}" alt="${esc(images[0].alt || images[0].caption || entry.title)}" loading="lazy" width="900" height="600"><span class="photo-label"><span aria-hidden="true">↗</span> ${images.length > 1 ? `${images.length} photos` : 'View photo'}</span></button>` : ''}
+      ${leading.type === 'video' ? `<figure>${MAP_CONTENT.hero(leading,entry.title)}<figcaption>${esc(MAP_CONTENT.label(leading))}</figcaption></figure>` : images.length ? `<button type="button" class="entry-media" data-gallery="${esc(entry.id)}" aria-label="View ${images.length} photo${images.length === 1 ? '' : 's'} from ${esc(entry.title)}"><img src="${esc(safeURL(images[0].url))}" alt="${esc(images[0].alt || images[0].caption || entry.title)}" loading="lazy" width="900" height="600"><span class="photo-label"><span aria-hidden="true">↗</span> ${esc(MAP_CONTENT.label(images[0]))} · ${images.length > 1 ? `${images.length} photos` : 'View photo'}</span></button>` : ''}
       <div class="entry-content">
         <div class="entry-meta"><span>${esc((entry.categories || []).map(labels).join(' / '))}</span><span aria-hidden="true">·</span><time ${time(entry) ? `datetime="${new Date(time(entry)).toISOString()}"` : ''}>${esc(displayDate(entry))}</time><span class="entry-status">${isCurrent(entry) ? '● ' : ''}${esc(statusLabel(entry))}</span></div>
         <h3>${esc(entry.title)}</h3><p class="entry-story">${esc(paragraphs[0])}</p>
@@ -79,7 +81,7 @@
         ${locations.length ? `<p class="entry-location">${esc(locations.join(' · '))}</p>` : ''}
         <div class="entry-tags">${(entry.categories || []).filter(key => routes[key]).map(key => `<button class="entry-tag" data-tag="${esc(key)}" type="button">${esc(labels(key))}</button>`).join('')}</div>
         ${links.length ? `<div class="entry-links">${links.map(link => {const external = new URL(safeURL(link.url)).origin !== location.origin; return `<a href="${esc(safeURL(link.url))}" ${external ? 'target="_blank" rel="noopener noreferrer"' : ''}>${esc(link.label)} <span aria-hidden="true">&nbsp;↗</span>${external ? '<span class="sr-only"> (opens in a new tab)</span>' : ''}</a>`;}).join('')}</div>` : ''}
-        <div class="entry-footer"><div class="entry-author"><span class="author-avatar" aria-hidden="true">CC</span><span>Christopher Champagne</span></div><div class="entry-actions"><button type="button" data-copy="${esc(entry.id)}" aria-label="Copy ${esc(entry.title)}">Copy</button><button type="button" data-share="${esc(entry.id)}" aria-label="Share ${esc(entry.title)}">Share ↗</button><a href="${esc(entryURL)}" aria-label="Link to ${esc(entry.title)}">Link</a></div></div>
+        ${MAP_CONTENT.details(entry)}<div class="entry-footer"><div class="entry-author"><span class="author-avatar" aria-hidden="true">CC</span><span>Christopher Champagne</span></div><div class="entry-actions"><button type="button" data-copy="${esc(entry.id)}" aria-label="Copy ${esc(entry.title)}">Copy</button><button type="button" data-share="${esc(entry.id)}" aria-label="Share ${esc(entry.title)}">Share ↗</button><a href="${esc(entryURL)}" aria-label="Link to ${esc(entry.title)}">Link</a></div></div>
       </div>
     </article>`;
   }
@@ -136,7 +138,7 @@
     $('lightbox-image').src = safeURL(image.url);
     $('lightbox-image').alt = image.alt || image.caption || openedEntry.title;
     $('lightbox-title').textContent = openedEntry.title;
-    $('lightbox-caption').textContent = `${image.caption || openedEntry.title} · ${photoIndex + 1} / ${images.length}`;
+    $('lightbox-caption').textContent = `${image.caption || openedEntry.title} · ${photoIndex + 1} / ${images.length} · ${MAP_CONTENT.label(image)}`;
     $('lightbox-prev').hidden = $('lightbox-next').hidden = images.length < 2;
   }
   $('lightbox-close').addEventListener('click',() => $('lightbox').close());
@@ -152,6 +154,7 @@
   $('lightbox-image').addEventListener('touchend',event => {if(touchStart !== undefined){const distance = event.changedTouches[0].clientX - touchStart;if(Math.abs(distance) > 60)showPhoto(photoIndex + (distance < 0 ? 1 : -1));touchStart = undefined;}},{passive:true});
   document.addEventListener('error',event => {
     const image = event.target;
+    if(image instanceof HTMLImageElement && image.closest('.entry-media')) {image.hidden=true;image.closest('.entry-media').querySelector('.photo-label').textContent='Image unavailable — source retained';return;}
     if(image instanceof HTMLImageElement && image.src !== new URL(fallbackImage,location.origin).href) {image.src = fallbackImage;image.alt = 'My Life journey illustration';}
   },true);
   async function copy(text) {
