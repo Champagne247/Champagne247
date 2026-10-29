@@ -4,7 +4,7 @@ window.MAP_DATA = {
     "name": "M.A.P. Master Life Data",
     "description": "Single source of truth for My Life, My Mission and My M.A.P.",
     "canonicalBase": "https://champagne247.github.io/Champagne247",
-    "updatedAt": "2026-10-29T14:00:00-05:00"
+    "updatedAt": "2026-10-29T14:15:00-05:00"
   },
   "owner": {
     "id": "christopher-champagne",
@@ -137,6 +137,16 @@ window.MAP_DATA = {
           "label": "Explore the NOVA project",
           "url": "/Champagne247/nova/",
           "kind": "project"
+        },
+        {
+          "label": "Follow Creator",
+          "url": "/Champagne247/creator/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Professional",
+          "url": "/Champagne247/professional/",
+          "kind": "project"
         }
       ],
       "distribution": {
@@ -157,11 +167,22 @@ window.MAP_DATA = {
       "lifecycle": "published",
       "visibility": "public",
       "createdAt": "2026-10-27T08:29:00-05:00",
-      "updatedAt": "2026-10-29T13:30:00-05:00",
+      "updatedAt": "2026-10-29T14:15:00-05:00",
       "eventAt": "2026-10-27T08:29:00-05:00",
       "datetime": "2026-10-27T08:29:00-05:00",
       "displayDate": "October 27, 2026",
-      "locations": [],
+      "locations": [
+        {
+          "label": "New Orleans, Louisiana · cruise departure city",
+          "lat": 29.95,
+          "lng": -90.07,
+          "precision": "city",
+          "role": "departure",
+          "visibility": "public",
+          "verification": "approximate",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=29.95,-90.07"
+        }
+      ],
       "media": [
         {
           "type": "image",
@@ -195,6 +216,20 @@ window.MAP_DATA = {
           "url": "https://www.carnival.com/itinerary/4-day-western-caribbean-cruise/new-orleans/valor/4-days/wcd",
           "kind": "business",
           "verification": "source-checked"
+        },
+        {
+          "label": "Follow Family",
+          "url": "/Champagne247/family/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Food & Travel",
+          "url": "/Champagne247/food-travel/",
+          "kind": "project"
+        },
+        {
+          "label": "View this activity on the map",
+          "url": "/Champagne247/explore/?entry=family-holiday-cruise-2026"
         }
       ],
       "distribution": {
@@ -224,11 +259,22 @@ window.MAP_DATA = {
       "lifecycle": "published",
       "visibility": "public",
       "createdAt": "2026-10-27T08:29:00-05:00",
-      "updatedAt": "2026-10-29T13:30:00-05:00",
+      "updatedAt": "2026-10-29T14:15:00-05:00",
       "eventAt": "2026-10-27T08:29:00-05:00",
       "datetime": "2026-10-27T08:29:00-05:00",
       "displayDate": "October 27, 2026",
-      "locations": [],
+      "locations": [
+        {
+          "label": "Cancún, Mexico · destination city",
+          "lat": 21.16,
+          "lng": -86.85,
+          "precision": "city",
+          "role": "destination",
+          "visibility": "public",
+          "verification": "approximate",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=21.16,-86.85"
+        }
+      ],
       "media": [
         {
           "type": "image",
@@ -267,6 +313,25 @@ window.MAP_DATA = {
           "url": "https://www.expedia.com/Cancun.d179995.Destination-Travel-Guides",
           "kind": "business",
           "verification": "source-checked"
+        },
+        {
+          "label": "Follow Food & Travel",
+          "url": "/Champagne247/food-travel/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Family",
+          "url": "/Champagne247/family/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Freeflight",
+          "url": "/Champagne247/looking4lift/",
+          "kind": "project"
+        },
+        {
+          "label": "View this activity on the map",
+          "url": "/Champagne247/explore/?entry=kat-cancun-getaway-2026"
         }
       ],
       "distribution": {
@@ -343,6 +408,165 @@ window.MAP_DATA = {
           "label": "Meet the crew · two independent concept pitches",
           "url": "/Champagne247/#nova-trinity-concept-challenge-2026",
           "kind": "project"
+        },
+        {
+          "label": "Follow Creator",
+          "url": "/Champagne247/creator/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Professional",
+          "url": "/Champagne247/professional/",
+          "kind": "project"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "family-cruise-planning-2026",
+      "authorId": "christopher-champagne",
+      "title": "Family Vacation • Cruise Plans",
+      "story": "A family cruise is coming up. Looking forward to making new memories and sharing the adventure after everyone returns.",
+      "status": "next",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-26T12:00:00-05:00",
+      "updatedAt": "2026-10-29T14:15:00-05:00",
+      "eventAt": "2026-10-26T12:00:00-05:00",
+      "datetime": "2026-10-26T12:00:00-05:00",
+      "displayDate": "2026-10-26",
+      "primaryCategory": "family",
+      "categories": [
+        "family",
+        "travel"
+      ],
+      "locations": [
+        {
+          "label": "New Orleans, Louisiana · cruise planning",
+          "lat": 29.95,
+          "lng": -90.07,
+          "precision": "city",
+          "role": "departure",
+          "visibility": "public",
+          "verification": "approximate",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=29.95,-90.07"
+        }
+      ],
+      "media": [
+        {
+          "type": "image",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Carnival_Valor_Cruise_Ship_%283%29_%2821009123989%29.jpg",
+          "alt": "Carnival Valor cruise ship",
+          "caption": "Carnival Valor — reference photo from 2015, not a photo of our trip.",
+          "provenance": {
+            "kind": "licensed",
+            "actualSubject": true,
+            "credit": "Chris Gent · CC BY-SA 2.0 · original photograph, displayed without file modifications",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carnival_Valor_Cruise_Ship_(3)_(21009123989).jpg",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/"
+          }
+        }
+      ],
+      "hashtags": [
+        "MyLife",
+        "MyMAP"
+      ],
+      "links": [
+        {
+          "label": "Explore Carnival Valor",
+          "url": "https://www.carnival.com/cruise-ships/carnival-valor",
+          "kind": "business",
+          "verification": "source-checked"
+        },
+        {
+          "label": "Book this route · Carnival Valor from New Orleans",
+          "url": "https://www.carnival.com/itinerary/4-day-western-caribbean-cruise/new-orleans/valor/4-days/wcd",
+          "kind": "business",
+          "verification": "source-checked"
+        },
+        {
+          "label": "Follow Family",
+          "url": "/Champagne247/family/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Food & Travel",
+          "url": "/Champagne247/food-travel/",
+          "kind": "project"
+        },
+        {
+          "label": "View this activity on the map",
+          "url": "/Champagne247/explore/?entry=family-cruise-planning-2026"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "map-timeline-refresh-2026",
+      "authorId": "christopher-champagne",
+      "title": "My Life M.A.P. • Keeping the Living Vision Board Current",
+      "story": "Refreshing the public My Life timeline to reflect current work, family milestones, flying goals and the NOVA robotics build. Capturing the journey as it happens.",
+      "status": "progress",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-26T12:00:00-05:00",
+      "updatedAt": "2026-10-26T12:00:00-05:00",
+      "eventAt": "2026-10-26T12:00:00-05:00",
+      "datetime": "2026-10-26T12:00:00-05:00",
+      "displayDate": "2026-10-26",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator",
+        "family",
+        "professional"
+      ],
+      "locations": [],
+      "media": [],
+      "hashtags": [
+        "MyLife",
+        "MyMAP"
+      ],
+      "links": [
+        {
+          "label": "Explore My M.A.P.",
+          "url": "/Champagne247/explore/"
+        },
+        {
+          "label": "Follow Creator",
+          "url": "/Champagne247/creator/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Family",
+          "url": "/Champagne247/family/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Professional",
+          "url": "/Champagne247/professional/",
+          "kind": "project"
         }
       ],
       "distribution": {
@@ -383,7 +607,122 @@ window.MAP_DATA = {
         "MyMAP",
         "NOVA"
       ],
-      "links": [],
+      "links": [
+        {
+          "label": "Follow Creator",
+          "url": "/Champagne247/creator/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Professional",
+          "url": "/Champagne247/professional/",
+          "kind": "project"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "family-game-night-2026",
+      "authorId": "christopher-champagne",
+      "title": "Family Time • Mexican Train",
+      "story": "An evening of Mexican Train dominoes, conversation, laughter and family time.",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-25T12:00:00-05:00",
+      "updatedAt": "2026-10-26T12:00:00-05:00",
+      "eventAt": "2026-10-25T12:00:00-05:00",
+      "datetime": "2026-10-25T12:00:00-05:00",
+      "displayDate": "2026-10-25",
+      "primaryCategory": "family",
+      "categories": [
+        "family"
+      ],
+      "locations": [],
+      "media": [],
+      "hashtags": [
+        "MyLife",
+        "MyMAP"
+      ],
+      "links": [
+        {
+          "label": "Follow Family",
+          "url": "/Champagne247/family/",
+          "kind": "project"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "nova-phone-reuse-2026",
+      "authorId": "christopher-champagne",
+      "title": "NOVA • Old Phones, New Possibilities",
+      "story": "Researching PhoneBot from UCLA’s RoMeLa team: a walking robot that reuses an Android phone for sensing and computing. It is a reference for our old-phone experiments, not hardware we have built or tested.",
+      "status": "progress",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-25T12:00:00-05:00",
+      "updatedAt": "2026-10-29T14:00:00-05:00",
+      "eventAt": "2026-10-25T12:00:00-05:00",
+      "datetime": "2026-10-25T12:00:00-05:00",
+      "displayDate": "2026-10-25",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator",
+        "professional"
+      ],
+      "locations": [],
+      "media": [],
+      "hashtags": [
+        "MyLife",
+        "MyMAP"
+      ],
+      "links": [
+        {
+          "label": "PhoneBot · project, demonstrations and hardware",
+          "url": "https://phonebot.dev/"
+        },
+        {
+          "label": "PhoneBot · research paper",
+          "url": "https://arxiv.org/abs/2610.08737"
+        },
+        {
+          "label": "NOVA build preparation",
+          "url": "https://github.com/Champagne247/Champagne247/blob/main/NOVA/planning/build-readiness.md"
+        },
+        {
+          "label": "Follow Creator",
+          "url": "/Champagne247/creator/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Professional",
+          "url": "/Champagne247/professional/",
+          "kind": "project"
+        }
+      ],
       "distribution": {
         "destinations": [
           "map"
@@ -406,7 +745,7 @@ window.MAP_DATA = {
       "lifecycle": "published",
       "visibility": "public",
       "createdAt": "2026-10-24T12:00:00-05:00",
-      "updatedAt": "2026-10-29T14:00:00-05:00",
+      "updatedAt": "2026-10-29T14:15:00-05:00",
       "eventAt": "2026-10-24T12:00:00-05:00",
       "datetime": "2026-10-24T12:00:00-05:00",
       "displayDate": "October 24, 2026",
@@ -416,7 +755,18 @@ window.MAP_DATA = {
         "travel",
         "professional"
       ],
-      "locations": [],
+      "locations": [
+        {
+          "label": "Valle de Bravo, Mexico · opportunity under consideration",
+          "lat": 19.19,
+          "lng": -100.13,
+          "precision": "city",
+          "role": "opportunity",
+          "visibility": "public",
+          "verification": "approximate",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=19.19,-100.13"
+        }
+      ],
       "media": [],
       "hashtags": [
         "MyLife",
@@ -430,6 +780,399 @@ window.MAP_DATA = {
         {
           "label": "Explore Valle de Bravo",
           "url": "https://willswing.org/valle-de-bravo-mexico/"
+        },
+        {
+          "label": "Follow Freeflight",
+          "url": "/Champagne247/looking4lift/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Food & Travel",
+          "url": "/Champagne247/food-travel/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Professional",
+          "url": "/Champagne247/professional/",
+          "kind": "project"
+        },
+        {
+          "label": "View this activity on the map",
+          "url": "/Champagne247/explore/?entry=freeflight-mexico-opportunity"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "pops-birthday-2026",
+      "authorId": "christopher-champagne",
+      "title": "Happy 77th Birthday, Pops!",
+      "story": "Celebrating Pops, our family's adventures, and the generations of coaching, flying and learning together.",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-24T12:00:00-05:00",
+      "updatedAt": "2026-10-26T12:00:00-05:00",
+      "eventAt": "2026-10-24T12:00:00-05:00",
+      "datetime": "2026-10-24T12:00:00-05:00",
+      "displayDate": "2026-10-24",
+      "primaryCategory": "family",
+      "categories": [
+        "family",
+        "freeflight"
+      ],
+      "locations": [],
+      "media": [],
+      "hashtags": [
+        "MyLife",
+        "MyMAP"
+      ],
+      "links": [
+        {
+          "label": "Follow Family",
+          "url": "/Champagne247/family/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Freeflight",
+          "url": "/Champagne247/looking4lift/",
+          "kind": "project"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "nova-rocky-community-2026",
+      "authorId": "christopher-champagne",
+      "title": "NOVA • Learning From Rocky's Creator",
+      "story": "Following Casey Grothaus's Rocky robot build and studying its open-source software, expressive face, camera, voice and pan-tilt controls as references for our own original NOVA prototype.",
+      "status": "progress",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-24T12:00:00-05:00",
+      "updatedAt": "2026-10-29T14:00:00-05:00",
+      "eventAt": "2026-10-24T12:00:00-05:00",
+      "datetime": "2026-10-24T12:00:00-05:00",
+      "displayDate": "2026-10-24",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator"
+      ],
+      "locations": [],
+      "media": [
+        {
+          "type": "image",
+          "url": "https://raw.githubusercontent.com/cgro00/desk-robot/main/docs/rocky.jpg",
+          "caption": "Rocky V2 · Casey’s actual desk-robot build",
+          "alt": "Rocky V2 desk robot with expressive eyes and a pan-tilt neck",
+          "provenance": {
+            "kind": "official",
+            "actualSubject": true,
+            "sourceUrl": "https://github.com/cgro00/desk-robot",
+            "credit": "Copyright (c) 2026 Casey (github.com/cgro00) · MIT License",
+            "licenseUrl": "https://github.com/cgro00/desk-robot/blob/main/LICENSE"
+          }
+        }
+      ],
+      "hashtags": [
+        "MyLife",
+        "MyMAP"
+      ],
+      "links": [
+        {
+          "label": "Rocky open-source project",
+          "url": "https://github.com/cgro00/desk-robot"
+        },
+        {
+          "label": "NOVA adaptation plan",
+          "url": "https://github.com/Champagne247/Champagne247/blob/main/NOVA/prototypes/expressive-head-rocky-adaptation.md"
+        },
+        {
+          "label": "Follow Creator",
+          "url": "/Champagne247/creator/",
+          "kind": "project"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "freeflight-mexico-cv-2026",
+      "authorId": "christopher-champagne",
+      "title": "Freeflight • Preparing for Future Instructor Opportunities",
+      "story": "Exploring Wills Wing Flight School’s seasonal opportunity in Valle de Bravo and the experience and qualifications needed to work toward teaching hang gliding. This remains an aspiration, not a confirmed teaching appointment.",
+      "status": "goal",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-24T12:00:00-05:00",
+      "updatedAt": "2026-10-29T14:15:00-05:00",
+      "eventAt": "2026-10-24T12:00:00-05:00",
+      "datetime": "2026-10-24T12:00:00-05:00",
+      "displayDate": "2026-10-24",
+      "primaryCategory": "freeflight",
+      "categories": [
+        "freeflight",
+        "professional",
+        "travel"
+      ],
+      "locations": [
+        {
+          "label": "Valle de Bravo, Mexico · instructor goal",
+          "lat": 19.19,
+          "lng": -100.13,
+          "precision": "city",
+          "role": "opportunity",
+          "visibility": "public",
+          "verification": "approximate",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=19.19,-100.13"
+        }
+      ],
+      "media": [],
+      "hashtags": [
+        "MyLife",
+        "MyMAP"
+      ],
+      "links": [
+        {
+          "label": "Wills Wing Flight School",
+          "url": "https://willswing.org/wills-wing-flight-school/"
+        },
+        {
+          "label": "Valle de Bravo",
+          "url": "https://willswing.org/valle-de-bravo-mexico/"
+        },
+        {
+          "label": "Follow Freeflight",
+          "url": "/Champagne247/looking4lift/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Professional",
+          "url": "/Champagne247/professional/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Food & Travel",
+          "url": "/Champagne247/food-travel/",
+          "kind": "project"
+        },
+        {
+          "label": "View this activity on the map",
+          "url": "/Champagne247/explore/?entry=freeflight-mexico-cv-2026"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "family-homecoming-2026",
+      "authorId": "christopher-champagne",
+      "title": "Family Milestone • Homecoming",
+      "story": "Celebrating a family homecoming milestone and the little details that make the occasion memorable.",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-24T12:00:00-05:00",
+      "updatedAt": "2026-10-26T12:00:00-05:00",
+      "eventAt": "2026-10-24T12:00:00-05:00",
+      "datetime": "2026-10-24T12:00:00-05:00",
+      "displayDate": "2026-10-24",
+      "primaryCategory": "family",
+      "categories": [
+        "family"
+      ],
+      "locations": [],
+      "media": [],
+      "hashtags": [
+        "MyLife",
+        "MyMAP"
+      ],
+      "links": [
+        {
+          "label": "Follow Family",
+          "url": "/Champagne247/family/",
+          "kind": "project"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "family-finance-education-2026",
+      "authorId": "christopher-champagne",
+      "title": "Learning Together • Chart Reading and Market Education",
+      "story": "Sharing lessons about chart trends, higher lows, risk and patience with family as an educational activity.",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-23T12:00:00-05:00",
+      "updatedAt": "2026-10-26T12:00:00-05:00",
+      "eventAt": "2026-10-23T12:00:00-05:00",
+      "datetime": "2026-10-23T12:00:00-05:00",
+      "displayDate": "2026-10-23",
+      "primaryCategory": "family",
+      "categories": [
+        "family",
+        "creator"
+      ],
+      "locations": [],
+      "media": [],
+      "hashtags": [
+        "MyLife",
+        "MyMAP"
+      ],
+      "links": [
+        {
+          "label": "Follow Family",
+          "url": "/Champagne247/family/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Creator",
+          "url": "/Champagne247/creator/",
+          "kind": "project"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "sound-system-work-2026",
+      "authorId": "christopher-champagne",
+      "title": "Technical Services • Sound Systems",
+      "story": "Researching audio systems and installation opportunities, drawing on years of experience with electronics and technical work.",
+      "status": "progress",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-23T12:00:00-05:00",
+      "updatedAt": "2026-10-26T12:00:00-05:00",
+      "eventAt": "2026-10-23T12:00:00-05:00",
+      "datetime": "2026-10-23T12:00:00-05:00",
+      "displayDate": "2026-10-23",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "locations": [],
+      "media": [],
+      "hashtags": [
+        "MyLife",
+        "MyMAP"
+      ],
+      "links": [
+        {
+          "label": "CC's Technical Services",
+          "url": "https://ccstechnicalservices.com/"
+        },
+        {
+          "label": "Follow Professional",
+          "url": "/Champagne247/professional/",
+          "kind": "project"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "laundromat-research-2026",
+      "authorId": "christopher-champagne",
+      "title": "Exploring Small Business Opportunities",
+      "story": "Learning how to evaluate a potential laundromat business using operating costs, financial statements, maintenance and profitability.",
+      "status": "progress",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-23T12:00:00-05:00",
+      "updatedAt": "2026-10-26T12:00:00-05:00",
+      "eventAt": "2026-10-23T12:00:00-05:00",
+      "datetime": "2026-10-23T12:00:00-05:00",
+      "displayDate": "2026-10-23",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "locations": [],
+      "media": [],
+      "hashtags": [
+        "MyLife",
+        "MyMAP"
+      ],
+      "links": [
+        {
+          "label": "Follow Professional",
+          "url": "/Champagne247/professional/",
+          "kind": "project"
         }
       ],
       "distribution": {
@@ -454,7 +1197,7 @@ window.MAP_DATA = {
       "lifecycle": "published",
       "visibility": "public",
       "createdAt": "2026-10-22T12:00:00-05:00",
-      "updatedAt": "2026-10-29T14:00:00-05:00",
+      "updatedAt": "2026-10-29T14:15:00-05:00",
       "eventAt": "2026-10-22T12:00:00-05:00",
       "datetime": "2026-10-22T12:00:00-05:00",
       "displayDate": "October 22, 2026",
@@ -464,13 +1207,44 @@ window.MAP_DATA = {
         "freeflight",
         "family"
       ],
-      "locations": [],
+      "locations": [
+        {
+          "label": "Costa Rica · country-level relocation research",
+          "lat": 9.75,
+          "lng": -83.75,
+          "precision": "country",
+          "role": "research",
+          "visibility": "public",
+          "verification": "approximate",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=9.75,-83.75"
+        }
+      ],
       "media": [],
       "hashtags": [
         "MyLife",
         "MyMAP"
       ],
-      "links": [],
+      "links": [
+        {
+          "label": "Follow Food & Travel",
+          "url": "/Champagne247/food-travel/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Freeflight",
+          "url": "/Champagne247/looking4lift/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Family",
+          "url": "/Champagne247/family/",
+          "kind": "project"
+        },
+        {
+          "label": "View this activity on the map",
+          "url": "/Champagne247/explore/?entry=costa-rica-lifestyle"
+        }
+      ],
       "distribution": {
         "destinations": [
           "map"
@@ -507,7 +1281,13 @@ window.MAP_DATA = {
         "MyLife",
         "MyMAP"
       ],
-      "links": [],
+      "links": [
+        {
+          "label": "Follow Professional",
+          "url": "/Champagne247/professional/",
+          "kind": "project"
+        }
+      ],
       "distribution": {
         "destinations": [
           "map"
@@ -546,7 +1326,78 @@ window.MAP_DATA = {
         "MyLife",
         "MyMAP"
       ],
-      "links": [],
+      "links": [
+        {
+          "label": "Follow Family",
+          "url": "/Champagne247/family/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Creator",
+          "url": "/Champagne247/creator/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Fitness",
+          "url": "/Champagne247/fitness/",
+          "kind": "project"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "family-tree-climbing-2026",
+      "authorId": "christopher-champagne",
+      "title": "Family Adventure • Climbing and Tree Nets",
+      "story": "Exploring a family tree-net build that combines climbing skills, creativity, fabrication and outdoor fun.",
+      "status": "progress",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-20T12:00:00-05:00",
+      "updatedAt": "2026-10-26T12:00:00-05:00",
+      "eventAt": "2026-10-20T12:00:00-05:00",
+      "datetime": "2026-10-20T12:00:00-05:00",
+      "displayDate": "2026-10-20",
+      "primaryCategory": "family",
+      "categories": [
+        "family",
+        "fitness",
+        "creator"
+      ],
+      "locations": [],
+      "media": [],
+      "hashtags": [
+        "MyLife",
+        "MyMAP"
+      ],
+      "links": [
+        {
+          "label": "Follow Family",
+          "url": "/Champagne247/family/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Fitness",
+          "url": "/Champagne247/fitness/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Creator",
+          "url": "/Champagne247/creator/",
+          "kind": "project"
+        }
+      ],
       "distribution": {
         "destinations": [
           "map"
@@ -605,6 +1456,16 @@ window.MAP_DATA = {
         {
           "label": "New ownership · Av8r Capital Group",
           "url": "https://www.av8rcapital.com/companies/"
+        },
+        {
+          "label": "Follow Freeflight",
+          "url": "/Champagne247/looking4lift/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Creator",
+          "url": "/Champagne247/creator/",
+          "kind": "project"
         }
       ],
       "distribution": {
@@ -643,7 +1504,13 @@ window.MAP_DATA = {
         "MyLife",
         "MyMAP"
       ],
-      "links": [],
+      "links": [
+        {
+          "label": "Follow Professional",
+          "url": "/Champagne247/professional/",
+          "kind": "project"
+        }
+      ],
       "distribution": {
         "destinations": [
           "map"
@@ -700,6 +1567,16 @@ window.MAP_DATA = {
           "label": "Meet the crew · two independent concept pitches",
           "url": "/Champagne247/#nova-trinity-concept-challenge-2026",
           "kind": "project"
+        },
+        {
+          "label": "Follow Creator",
+          "url": "/Champagne247/creator/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Professional",
+          "url": "/Champagne247/professional/",
+          "kind": "project"
         }
       ],
       "distribution": {
@@ -739,7 +1616,18 @@ window.MAP_DATA = {
         "MyLife",
         "MyMAP"
       ],
-      "links": [],
+      "links": [
+        {
+          "label": "Follow Fitness",
+          "url": "/Champagne247/fitness/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Family",
+          "url": "/Champagne247/family/",
+          "kind": "project"
+        }
+      ],
       "distribution": {
         "destinations": [
           "map"
@@ -795,6 +1683,25 @@ window.MAP_DATA = {
         {
           "label": "TikTok • Certified MONSTER",
           "url": "https://www.tiktok.com/@christopher.m.champagne"
+        },
+        {
+          "label": "Follow Fitness",
+          "url": "/Champagne247/fitness/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Family",
+          "url": "/Champagne247/family/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Creator",
+          "url": "/Champagne247/creator/",
+          "kind": "project"
+        },
+        {
+          "label": "View this activity on the map",
+          "url": "/Champagne247/explore/?entry=home-open-mat-2026-10-04"
         }
       ],
       "distribution": {
@@ -902,6 +1809,15 @@ window.MAP_DATA = {
         {
           "label": "View the Facebook post",
           "url": "https://www.facebook.com/share/p/19T4baahx1/"
+        },
+        {
+          "label": "Follow Professional",
+          "url": "/Champagne247/professional/",
+          "kind": "project"
+        },
+        {
+          "label": "View this activity on the map",
+          "url": "/Champagne247/explore/?entry=mini-split-heats-and-cools-2026-09-15"
         }
       ],
       "opportunity": {
@@ -955,7 +1871,7 @@ window.MAP_DATA = {
           "label": "All Hours Fitness • Leesville, Louisiana",
           "lat": 31.1437,
           "lng": -93.261,
-          "precision": "exact",
+          "precision": "approximate",
           "visibility": "public"
         }
       ],
@@ -999,6 +1915,15 @@ window.MAP_DATA = {
         {
           "label": "Explore Fitness on My M.A.P. →",
           "url": "/Champagne247/fitness/"
+        },
+        {
+          "label": "Follow Creator",
+          "url": "/Champagne247/creator/",
+          "kind": "project"
+        },
+        {
+          "label": "View this activity on the map",
+          "url": "/Champagne247/explore/?entry=gym-all-hours-2026-09-14"
         }
       ],
       "opportunity": {
@@ -1060,7 +1985,7 @@ window.MAP_DATA = {
           "label": "Breakfast and M.A.P. planning • Leesville",
           "lat": 31.1435,
           "lng": -93.261,
-          "precision": "exact",
+          "precision": "approximate",
           "visibility": "public"
         },
         {
@@ -1068,7 +1993,7 @@ window.MAP_DATA = {
           "label": "Mission Control • Leesville",
           "lat": 31.15,
           "lng": -93.25,
-          "precision": "exact",
+          "precision": "approximate",
           "visibility": "public"
         }
       ],
@@ -1097,6 +2022,30 @@ window.MAP_DATA = {
         {
           "label": "Create Your Own M.A.P. →",
           "url": "/Champagne247/create/"
+        },
+        {
+          "label": "Follow Food & Travel",
+          "url": "/Champagne247/food-travel/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Fitness",
+          "url": "/Champagne247/fitness/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Professional",
+          "url": "/Champagne247/professional/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Creator",
+          "url": "/Champagne247/creator/",
+          "kind": "project"
+        },
+        {
+          "label": "View this activity on the map",
+          "url": "/Champagne247/explore/?entry=map-build-2026-09-14"
         }
       ],
       "opportunity": {
@@ -1184,6 +2133,25 @@ window.MAP_DATA = {
         {
           "label": "Explore Freeflight →",
           "url": "/Champagne247/looking4lift/"
+        },
+        {
+          "label": "Follow Fitness",
+          "url": "/Champagne247/fitness/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Creator",
+          "url": "/Champagne247/creator/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Food & Travel",
+          "url": "/Champagne247/food-travel/",
+          "kind": "project"
+        },
+        {
+          "label": "View this activity on the map",
+          "url": "/Champagne247/explore/?entry=lookout-24-minute-flight"
         }
       ],
       "opportunity": {
@@ -1271,6 +2239,25 @@ window.MAP_DATA = {
         {
           "label": "Explore Freeflight →",
           "url": "/Champagne247/looking4lift/"
+        },
+        {
+          "label": "Follow Fitness",
+          "url": "/Champagne247/fitness/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Creator",
+          "url": "/Champagne247/creator/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Food & Travel",
+          "url": "/Champagne247/food-travel/",
+          "kind": "project"
+        },
+        {
+          "label": "View this activity on the map",
+          "url": "/Champagne247/explore/?entry=lookout-100-flights"
         }
       ],
       "opportunity": {
@@ -1333,7 +2320,7 @@ window.MAP_DATA = {
           "label": "Looking4Lift • United States",
           "lat": 35.5,
           "lng": -92.5,
-          "precision": "exact",
+          "precision": "approximate",
           "visibility": "public"
         }
       ],
@@ -1357,6 +2344,25 @@ window.MAP_DATA = {
         {
           "label": "Explore Freeflight →",
           "url": "/Champagne247/looking4lift/"
+        },
+        {
+          "label": "Follow Creator",
+          "url": "/Champagne247/creator/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Professional",
+          "url": "/Champagne247/professional/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Food & Travel",
+          "url": "/Champagne247/food-travel/",
+          "kind": "project"
+        },
+        {
+          "label": "View this activity on the map",
+          "url": "/Champagne247/explore/?entry=looking4lift"
         }
       ],
       "opportunity": {
@@ -1419,7 +2425,7 @@ window.MAP_DATA = {
           "label": "CC'S Technical Services • Leesville, Louisiana",
           "lat": 31.1435,
           "lng": -93.261,
-          "precision": "exact",
+          "precision": "approximate",
           "visibility": "public"
         }
       ],
@@ -1444,6 +2450,20 @@ window.MAP_DATA = {
         {
           "label": "CC'S Technical Services →",
           "url": "https://ccstechnicalservices.com/"
+        },
+        {
+          "label": "Follow Professional",
+          "url": "/Champagne247/professional/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Creator",
+          "url": "/Champagne247/creator/",
+          "kind": "project"
+        },
+        {
+          "label": "View this activity on the map",
+          "url": "/Champagne247/explore/?entry=ccs-technical-services"
         }
       ],
       "opportunity": {
@@ -1501,7 +2521,7 @@ window.MAP_DATA = {
           "label": "Louisiana",
           "lat": 31.2,
           "lng": -93.2,
-          "precision": "exact",
+          "precision": "approximate",
           "visibility": "public"
         }
       ],
@@ -1521,7 +2541,22 @@ window.MAP_DATA = {
         "Strength",
         "Mobility"
       ],
-      "links": [],
+      "links": [
+        {
+          "label": "Follow Fitness",
+          "url": "/Champagne247/fitness/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Creator",
+          "url": "/Champagne247/creator/",
+          "kind": "project"
+        },
+        {
+          "label": "View this activity on the map",
+          "url": "/Champagne247/explore/?entry=certified-monster"
+        }
+      ],
       "opportunity": {
         "active": true,
         "type": "brand",
@@ -1606,6 +2641,25 @@ window.MAP_DATA = {
         {
           "label": "Windsports →",
           "url": "https://www.windsports.com/beach"
+        },
+        {
+          "label": "Follow Freeflight",
+          "url": "/Champagne247/looking4lift/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Fitness",
+          "url": "/Champagne247/fitness/",
+          "kind": "project"
+        },
+        {
+          "label": "Follow Food & Travel",
+          "url": "/Champagne247/food-travel/",
+          "kind": "project"
+        },
+        {
+          "label": "View this activity on the map",
+          "url": "/Champagne247/explore/?entry=dockweiler-first-flight"
         }
       ],
       "opportunity": {
