@@ -157,7 +157,7 @@ window.MAP_DATA = {
       "lifecycle": "published",
       "visibility": "public",
       "createdAt": "2026-10-27T08:29:00-05:00",
-      "updatedAt": "2026-10-27T08:29:00-05:00",
+      "updatedAt": "2026-10-29T13:30:00-05:00",
       "eventAt": "2026-10-27T08:29:00-05:00",
       "datetime": "2026-10-27T08:29:00-05:00",
       "displayDate": "October 27, 2026",
@@ -189,6 +189,12 @@ window.MAP_DATA = {
           "url": "https://www.carnival.com/cruise-ships/carnival-valor",
           "kind": "business",
           "verification": "source-checked"
+        },
+        {
+          "label": "Book this route · Carnival Valor from New Orleans",
+          "url": "https://www.carnival.com/itinerary/4-day-western-caribbean-cruise/new-orleans/valor/4-days/wcd",
+          "kind": "business",
+          "verification": "source-checked"
         }
       ],
       "distribution": {
@@ -218,7 +224,7 @@ window.MAP_DATA = {
       "lifecycle": "published",
       "visibility": "public",
       "createdAt": "2026-10-27T08:29:00-05:00",
-      "updatedAt": "2026-10-27T08:29:00-05:00",
+      "updatedAt": "2026-10-29T13:30:00-05:00",
       "eventAt": "2026-10-27T08:29:00-05:00",
       "datetime": "2026-10-27T08:29:00-05:00",
       "displayDate": "October 27, 2026",
@@ -226,8 +232,8 @@ window.MAP_DATA = {
       "media": [
         {
           "type": "image",
-          "url": "https://static.barcelo.com/content/dam/bhg/master/es/hoteles/mexico/cancun/occidental-costa-cancun/main-photos/hotel/OCCAN_VIEW_07.jpg",
-          "alt": "Occidental Costa Cancun beachfront",
+          "url": "https://static.barcelo.com/content/dam/bhg/master/es/hoteles/mexico/cancun/occidental-costa-cancun/main-photos/hotel/OCCAN_BEA_016.jpg",
+          "alt": "Aerial view of Occidental Costa Cancun, its pool and the bay",
           "caption": "Occidental Costa Cancún · official resort photo, not a personal trip photo.",
           "provenance": {
             "kind": "official",
@@ -251,8 +257,14 @@ window.MAP_DATA = {
           "verification": "source-checked"
         },
         {
-          "label": "View the resort on Expedia",
+          "label": "Book Occidental Costa Cancún on Expedia",
           "url": "https://www.expedia.com/Cancun-Hotels-Occidental-Costa-Cancun-All-Inclusive.h197382.Hotel-Information",
+          "kind": "business",
+          "verification": "source-checked"
+        },
+        {
+          "label": "Find Cancun flight + hotel packages on Expedia",
+          "url": "https://www.expedia.com/Cancun.d179995.Destination-Travel-Guides",
           "kind": "business",
           "verification": "source-checked"
         }
@@ -269,7 +281,7 @@ window.MAP_DATA = {
       ],
       "id": "kat-cancun-getaway-2026",
       "title": "Kat & Me • A Cancun Adventure Ahead",
-      "story": "Kat and I have an upcoming getaway to Cancun, Mexico, with time to explore, reconnect and experience something new together. I'm especially excited to try kiteboarding for the first time, building on my background in surfing, wakeboarding and freeflight. Our destination is Occidental Costa Cancún, an all-inclusive beachfront resort. Exact travel dates and booking details stay private.",
+      "story": "Kat and I have an upcoming getaway to Cancun, Mexico, with time to explore, reconnect and experience something new together. I'm especially excited to try kiteboarding for the first time, building on my background in surfing, wakeboarding and freeflight. Our destination is Occidental Costa Cancún, an all-inclusive beachfront resort. Exact travel dates and booking details stay private.\n\nPlan your own getaway: view this resort on Expedia or search Cancun flight + hotel packages, then choose your departure airport, dates and preferred resort. Package availability and pricing depend on your selections.",
       "status": "next",
       "primaryCategory": "travel",
       "categories": [
