@@ -33,7 +33,8 @@
     const p = provenance(item);
     return p.kind === 'own' && p.actualSubject ? 'Chris’s actual photo/video'
       : p.kind === 'official' && rank(item) === 1 ? 'Official subject image/video'
-      : p.kind === 'ai' ? 'AI illustration — not an event photo'
+      : p.kind === 'licensed' ? 'Licensed subject photo — not a trip photo'
+      : p.kind === 'ai' ? 'AI illustration — concept, not an event photo'
       : p.kind === 'illustration' ? 'Category illustration — origin unverified'
       : 'Existing media — provenance awaiting verification';
   }
@@ -83,7 +84,7 @@
       ? `<figure><video src="${esc(url(item.url))}" controls preload="metadata" style="max-width:100%"></video><figcaption>${esc(label(item))} · ${esc(item.caption)}</figcaption></figure>`
       : item.type === 'image' ? `<figure>${hero(item,entry.title)}<figcaption>${esc(label(item))} · ${esc(item.caption)}</figcaption></figure>`
       : `<a href="${esc(url(item.url))}" target="_blank" rel="noopener noreferrer">${esc(item.caption || 'Media source')}</a>`).join('');
-    const credits = media(entry).map(item => { const p=provenance(item); return `<li>${esc(label(item))}${p.credit ? ' · '+esc(p.credit) : ''}${p.reason ? ' · '+esc(p.reason) : ''}${url(p.sourceUrl) ? ` · <a href="${esc(url(p.sourceUrl))}" target="_blank" rel="noopener noreferrer">Image source</a>` : ''}</li>`; }).join('');
+    const credits = media(entry).map(item => { const p=provenance(item); return `<li>${esc(label(item))}${p.credit ? ' · '+esc(p.credit) : ''}${p.reason ? ' · '+esc(p.reason) : ''}${url(p.licenseUrl) ? ` · <a href="${esc(url(p.licenseUrl))}" target="_blank" rel="noopener noreferrer">Image license</a>` : ''}${url(p.sourceUrl) ? ` · <a href="${esc(url(p.sourceUrl))}" target="_blank" rel="noopener noreferrer">Image source</a>` : ''}</li>`; }).join('');
     return `<div class="map-record-details" data-record-id="${esc(entry.id)}">${dateNote}${projects}${locations ? `<ul class="record-places">${locations}</ul>` : ''}${business || refs || credits ? `<ul>${business}${refs}${credits}</ul>` : ''}${extraMedia}</div>`;
   }
   function publicEntries(entries) {

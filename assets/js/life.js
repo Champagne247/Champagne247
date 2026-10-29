@@ -67,13 +67,13 @@
   }
   function card(entry) {
     const images = photos(entry);
-    const leading=MAP_CONTENT.primary(entry,fallbackImage);
+    const leading=MAP_CONTENT.primary(entry,categories[entry.primaryCategory]?.image || fallbackImage);
     const paragraphs = String(entry.story || '').trim().split(/\n\s*\n/);
     const locations = (entry.locations || []).filter(item => typeof item === 'string' || item.visibility !== 'private').map(item => typeof item === 'string' ? item : item.label).filter(Boolean);
     const links = (entry.links || []).filter(link => safeURL(link.url));
     const entryURL = `${canonical}#${encodeURIComponent(entry.id)}`;
     return `<article class="entry" id="${esc(entry.id)}">
-      ${leading.type === 'video' ? `<figure>${MAP_CONTENT.hero(leading,entry.title)}<figcaption>${esc(MAP_CONTENT.label(leading))}</figcaption></figure>` : images.length ? `<button type="button" class="entry-media" data-gallery="${esc(entry.id)}" aria-label="View ${images.length} photo${images.length === 1 ? '' : 's'} from ${esc(entry.title)}"><img src="${esc(safeURL(images[0].url))}" alt="${esc(images[0].alt || images[0].caption || entry.title)}" loading="lazy" width="900" height="600"><span class="photo-label"><span aria-hidden="true">↗</span> ${esc(MAP_CONTENT.label(images[0]))} · ${images.length > 1 ? `${images.length} photos` : 'View photo'}</span></button>` : ''}
+      ${leading.type === 'video' ? `<figure>${MAP_CONTENT.hero(leading,entry.title)}<figcaption>${esc(MAP_CONTENT.label(leading))}</figcaption></figure>` : images.length ? `<button type="button" class="entry-media" data-gallery="${esc(entry.id)}" aria-label="View ${images.length} photo${images.length === 1 ? '' : 's'} from ${esc(entry.title)}"><img src="${esc(safeURL(images[0].url))}" alt="${esc(images[0].alt || images[0].caption || entry.title)}" loading="lazy" width="900" height="600"><span class="photo-label"><span aria-hidden="true">↗</span> ${esc(MAP_CONTENT.label(images[0]))} · ${images.length > 1 ? `${images.length} photos` : 'View photo'}</span></button>` : `<figure class="entry-media entry-illustration">${MAP_CONTENT.hero(leading,entry.title)}<figcaption class="photo-label">Category illustration</figcaption></figure>`}
       <div class="entry-content">
         <div class="entry-meta"><span>${esc((entry.categories || []).map(labels).join(' / '))}</span><span aria-hidden="true">·</span><time ${time(entry) ? `datetime="${new Date(time(entry)).toISOString()}"` : ''}>${esc(displayDate(entry))}</time><span class="entry-status">${isCurrent(entry) ? '● ' : ''}${esc(statusLabel(entry))}</span></div>
         <h3>${esc(entry.title)}</h3><p class="entry-story">${esc(paragraphs[0])}</p>
