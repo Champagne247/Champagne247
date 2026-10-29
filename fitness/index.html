@@ -135,6 +135,7 @@ footer{padding:42px 20px 58px;border-top:1px solid var(--line);color:#718093;tex
 
 </div>
 
+<script src="/Champagne247/assets/map/content.js"></script>
 <script src="/Champagne247/assets/map/data/entries.js"></script>
 <script src="/Champagne247/assets/map/data/updates-2026-10.js"></script>
 <script>
@@ -163,14 +164,11 @@ if(!DATA||!Array.isArray(DATA.entries)){
   });
 
   function firstMedia(entry){
-    return (entry.media||[]).find(function(item){return item.type==="image"&&item.url;})||{
-      url:categories.fitness?.image||"/Champagne247/assets/map/Hero/hero-fitness.webp",
-      caption:entry.title
-    };
+    return MAP_CONTENT.primary(entry, categories[entry.categories?.[0]]?.image);
   }
 
   function linksHTML(entry){
-    const links=Array.isArray(entry.links)?entry.links:[];
+    const links=(entry.links||[]).filter(link=>MAP_CONTENT.url(link.url));
     if(!links.length)return "";
     return '<div class="links">'+links.map(function(link){
       const external=/^https?:/i.test(link.url||"");
@@ -181,16 +179,16 @@ if(!DATA||!Array.isArray(DATA.entries)){
   function cardHTML(entry){
     const media=firstMedia(entry);
     const paths=entry.categories||[];
-    const locations=Array.isArray(entry.locations)?entry.locations:[];
+    const locations=MAP_CONTENT.places(entry);
     const color=statuses[entry.status]?.color||"#9eacbd";
     const status=statuses[entry.status]?.label||entry.status||"Journey";
     return '<article class="card">'+
-      '<div class="media"><img src="'+esc(media.url)+'" alt="'+esc(media.caption||entry.title)+'" loading="lazy" onerror="this.src=\'/Champagne247/assets/map/Hero/hero-fitness.webp\'"><div class="caption">'+esc(media.caption||entry.title)+'</div></div>'+
+      '<div class="media">'+MAP_CONTENT.hero(media,entry.title)+'<div class="caption">'+esc(MAP_CONTENT.label(media)+" · "+(media.caption||entry.title))+'</div></div>'+
       '<div class="card-body"><div class="card-top"><div class="card-path">STRENGTH & FITNESS</div><div class="status" style="color:'+esc(color)+'">● '+esc(status)+'</div></div>'+
       '<h3>'+esc(entry.title)+'</h3><div class="story">'+esc(entry.story)+'</div>'+
       '<div class="tags">'+paths.map(function(key){return '<span class="tag">'+esc(categories[key]?.icon||"")+' '+esc(categories[key]?.label||key)+'</span>';}).join("")+'</div>'+
       (locations.length?'<div class="meta">📍 '+locations.map(function(location){return esc(location.label);}).join('<br>📍 ')+'<br>'+esc(entry.displayDate||"")+'</div>':'')+
-      linksHTML(entry)+'</div></article>';
+      linksHTML(entry)+MAP_CONTENT.details(entry)+'</div></article>';
   }
 
   document.getElementById("cards").innerHTML=entries.length

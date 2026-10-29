@@ -75,8 +75,9 @@ async function compose(page, mode = 'draft') {
   await page.fill('#story', 'Synthetic local story for the reviewed export regression.');
   await page.fill('#date', '2026-10-29T12:00');
   for (const category of categories) {
-    await page.locator(`input[name=paths][value=${category}]`).check({ force: true });
+    if (!(await page.locator(`input[name=paths][value=${category}]`).isChecked())) await page.locator(`label[for=${category}]`).click();
   }
+  await page.locator('.media-origin').first().selectOption('own');
   await page.locator('.media-url').first().fill('assets/map/Hero/hero-all.webp?review=1#photo');
   await page.locator('.media-caption-input').first().fill('Synthetic media caption');
   await page.locator('.link-label').first().fill('Connected M.A.P.');
@@ -183,7 +184,7 @@ test('downloaded reviewed export preserves complete data and renders media and c
     assert.equal(await card.locator('.entry-links a').getAttribute('href'), new URL(entry.links[0].url, origin).href);
     assert.equal(await card.locator('.entry-tag').count(), categories.length);
     await card.locator('.entry-media').click();
-    assert.equal(await page.textContent('#lightbox-caption'), 'Synthetic media caption · 1 / 1');
+    assert.equal(await page.textContent('#lightbox-caption'), 'Synthetic media caption · 1 / 1 · Chris’s actual photo/video');
     await page.click('#lightbox-close');
     for (const category of categories) {
       await page.click(`[data-filter=${category}]`);
@@ -198,7 +199,7 @@ test('downloaded reviewed export preserves complete data and renders media and c
       await page.goto(`${origin}/Champagne247/${route}/`);
       const connected = page.locator('#cards article').filter({ has: page.locator('h3', { hasText: entry.title }) });
       assert.equal(await connected.count(), 1);
-      assert.equal(await connected.locator('img').getAttribute('src'), entry.media[0].url);
+      assert.equal(await connected.locator('img').getAttribute('src'), new URL(entry.media[0].url,origin).href);
       assert.equal(await connected.locator('.card-link').getAttribute('href'), entry.links[0].url);
     }
     await page.goto(`${origin}/Champagne247/explore/`);
@@ -245,4 +246,92 @@ test('draft and planned exports remain excluded from My Life, Explore and connec
       assert.deepEqual(errors, []);
     } finally { await context.close(); }
   }
+});
+
+test('provenance, business/source links, projects and multiple places survive reload/export and share map records', async () => {
+  const { context, page, errors } = await session();
+  try {
+    await compose(page, 'now');
+    await page.fill('#projects','NOVA, content-audit');
+    await page.fill('#sourceURLs','https://example.test/public-evidence');
+    await page.locator('.link-kind').selectOption('business');
+    await page.locator('.link-source').fill('https://example.test/operator');
+    await page.locator('.media-origin').first().selectOption('ai');
+    await page.locator('.media-reason').first().fill('Synthetic fallback for regression only');
+    for (const [kind,asset] of [['official','hero-family.webp'],['own','hero-fitness.webp']]) {
+      await page.click('#addMedia');
+      const row=page.locator('.media-item').last();
+      await row.locator('.media-origin').selectOption(kind);
+      await row.locator('.media-url').fill('/Champagne247/assets/map/Hero/'+asset);
+      await row.locator('.media-source').fill('https://example.test/subject');
+    }
+    for (const [index,role] of ['launch','restaurant','hotel'].entries()) {
+      if(index) await page.click('#addLocation');
+      const row=page.locator('.location-item').nth(index);
+      await row.locator('.location-label').fill('Synthetic '+role);
+      await row.locator('.location-role').selectOption(role);
+      if(index<2) {
+        await row.locator('.location-lat').fill(String(index));
+        await row.locator('.location-lng').fill(String(index));
+      }
+    }
+    await page.click('#saveDraft');
+    await page.reload();
+    assert.equal(await page.inputValue('#projects'),'NOVA, content-audit');
+    assert.equal(await page.locator('.media-origin').nth(2).inputValue(),'own');
+    assert.equal(await page.locator('.location-role').nth(1).inputValue(),'restaurant');
+    await page.click('#prepare');
+    const source=await page.inputValue('#masterOutput');
+    const entry=parseExport(source).entries[0];
+    assert.equal(entry.locations.length,3);
+    assert.equal(entry.media.length,3); // Original AI metadata remains stored, but is not presented over actual media.
+    assert.equal(entry.links[0].kind,'business');
+    assert.deepEqual(entry.projects,['NOVA','content-audit']);
+    assert.equal(entry.sources[0].url,'https://example.test/public-evidence');
+    await useExport(context,source);
+    await page.goto(`${origin}/Champagne247/#${entry.id}`);
+    const card=page.locator('#'+entry.id);
+    assert.ok((await card.locator('.entry-media img').getAttribute('src')).endsWith('hero-fitness.webp'));
+    assert.match(await card.textContent(),/Business: Connected M.A.P./);
+    assert.match(await card.textContent(),/Project: NOVA/);
+    assert.match(await card.textContent(),/Source: https:\/\/example.test\/public-evidence/);
+    assert.equal(await card.locator('.record-places li').count(),3);
+    assert.doesNotMatch(await card.textContent(),/AI illustration/);
+    await page.goto(`${origin}/Champagne247/explore/`);
+    const pinData=await page.evaluate(id=>markers.filter(marker=>marker.getPopup().getContent().includes(`data-record-id="${id}"`)).map(marker=>({point:marker.getLatLng(),popup:marker.getPopup().getContent()})),entry.id);
+    assert.equal(pinData.length,2); // Third place has no coordinates; it must not become a (0,0) pin.
+    assert.match(pinData[0].popup,/Business: Connected M.A.P./);
+    assert.match(pinData[0].popup,/hero-fitness.webp/);
+    assert.match(pinData[0].popup,/place unverified/);
+    await page.evaluate(()=>render('fitness'));
+    assert.equal(await page.locator(`[data-entry-id="${entry.id}"]`).count(),1);
+    await page.evaluate(id=>markers.find(marker=>marker.getPopup().getContent().includes(`data-record-id="${id}"`)).openPopup(),entry.id);
+    assert.match(await page.locator('.leaflet-popup-content').textContent(),/Synthetic restaurant/);
+    for(const route of categoryRoutes) {
+      await page.goto(`${origin}/Champagne247/${route}/`);
+      const details=page.locator(`.map-record-details[data-record-id="${entry.id}"]`);
+      assert.match(await details.textContent(),/Business: Connected M.A.P./);
+      assert.equal(await details.locator('.record-places li').count(),3);
+    }
+    assert.deepEqual(errors,[]);
+  } finally { await context.close(); }
+});
+
+test('unknown event dates stay unknown; reviewed exports reject unsupported media provenance and private places', async () => {
+  const {context,page,errors}=await session();
+  try {
+    await compose(page,'now');
+    await page.selectOption('#datePrecision','unknown');
+    await page.locator('.media-origin').first().selectOption('ai');
+    assert.equal(await page.evaluate(()=>buildEntry()),null); // No reason provided for an illustration.
+    await page.locator('.media-reason').first().fill('No actual/official subject media supplied for this synthetic fixture');
+    const entry=await page.evaluate(()=>buildEntry());
+    assert.equal(entry.eventAt,null);
+    assert.equal(entry.datetime,null);
+    assert.equal(entry.displayDate,'Date not yet confirmed');
+    await page.locator('.location-label').first().fill('Private synthetic place');
+    await page.locator('.location-visibility').first().selectOption('private');
+    assert.equal(await page.evaluate(()=>buildEntry()),null);
+    assert.deepEqual(errors,[]);
+  } finally {await context.close();}
 });
