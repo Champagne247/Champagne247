@@ -18,6 +18,9 @@
   <meta name="twitter:image" content="https://champagne247.github.io/Champagne247/assets/map/Hero/hero-all.webp">
   <link rel="preload" as="image" href="/Champagne247/assets/map/Hero/hero-all.webp" fetchpriority="high">
   <link rel="stylesheet" href="/Champagne247/assets/css/life.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+<style>#life-map{height:460px;border-radius:20px;z-index:0}.life-map-section{padding-top:32px;padding-bottom:32px}.life-map-section.expanded{position:fixed;inset:0;z-index:2000;background:#080d14;width:100%;max-width:none;padding:20px;overflow:auto}.life-map-section.expanded #life-map{height:75vh}.leaflet-popup-content{color:#14202c;max-height:320px;overflow:auto}.leaflet-popup-content img{max-width:100%;max-height:140px;object-fit:cover}.leaflet-popup-content a{color:#08629d}@media(max-width:600px){#life-map{height:380px}}</style>
   <script src="/Champagne247/assets/map/data/entries.js" defer></script>
   <script src="/Champagne247/assets/map/data/updates-2026-10.js" defer></script>
   <script src="/Champagne247/assets/map/content.js" defer></script>
@@ -34,10 +37,10 @@
         <span><strong>MY LIFE<span class="brand-dot">.</span></strong><small>Christopher Champagne</small></span>
       </a>
       <nav class="desktop-nav" aria-label="Main navigation">
-        <a href="#journey">The journey</a><a href="#paths">Life paths</a><a href="/Champagne247/explore/">My M.A.P.</a><a href="/Champagne247/nova/">N.O.V.A.</a>
+        <a href="#journey">The journey</a><a href="#paths">Life paths</a><a href="#places">My M.A.P.</a><a href="/Champagne247/nova/">N.O.V.A.</a>
       </nav>
       <a class="button button-small capture" href="/Champagne247/manage/"><span aria-hidden="true">＋</span> Capture a moment</a>
-      <details class="mobile-menu"><summary>Menu <span aria-hidden="true">☰</span></summary><nav aria-label="Mobile navigation"><a href="#journey">The journey</a><a href="#paths">Life paths</a><a href="/Champagne247/explore/">My M.A.P.</a><a href="/Champagne247/nova/">N.O.V.A.</a><a href="/Champagne247/manage/">＋ Capture a moment</a></nav></details>
+      <details class="mobile-menu"><summary>Menu <span aria-hidden="true">☰</span></summary><nav aria-label="Mobile navigation"><a href="#journey">The journey</a><a href="#paths">Life paths</a><a href="#places">My M.A.P.</a><a href="/Champagne247/nova/">N.O.V.A.</a><a href="/Champagne247/manage/">＋ Capture a moment</a></nav></details>
     </div>
   </header>
   <main id="main">
@@ -54,6 +57,14 @@
       <div class="orbit-dots" id="orbit-dots" role="group" aria-label="Choose life path"></div>
       <div class="orbit-caption"><div><span class="eyebrow">CURRENT DIRECTION</span><h3 id="orbit-title"></h3><p id="orbit-copy"></p></div><a class="button" id="orbit-open" href="/Champagne247/family/">Explore this path ↗</a></div>
       <noscript><p><a href="/Champagne247/explore/">Explore all life paths →</a></p></noscript>
+    </section>
+    <section class="life-map-section wrap" id="places" aria-labelledby="places-title">
+      <div class="section-heading"><div><p class="eyebrow">YOUR JOURNEY, ON THE MAP</p><h2 id="places-title">Every path leads somewhere.</h2></div><button class="button" id="map-expand" type="button" aria-expanded="false">Expand map ↗</button></div>
+      <div id="map-paths" class="filters" role="group" aria-label="Filter map and timeline"></div>
+      <p id="life-map-summary" role="status">Loading the journey map…</p>
+      <div id="life-map" aria-label="Interactive map of life activities"></div>
+      <p class="vision-note">Zoom in and tap a pin for stories and links. Shared places contain several activities. City and country pins show approximate areas; goals are places being explored.</p>
+      <noscript><a href="/Champagne247/explore/">Explore the map</a></noscript>
     </section>
     <section class="vision-section wrap" id="vision" aria-labelledby="vision-title"><div class="section-heading"><div><p class="eyebrow">VISION → PURPOSE → ACTION</p><h2 id="vision-title">Your next chapter starts here.</h2></div><button class="button" type="button" data-plan-open>＋ Add a destination</button></div><p class="vision-note">A personal planning space. Saved in this browser on this device.</p><div id="vision-list" class="vision-list"></div></section>
     <section class="journey-section wrap" id="journey" aria-labelledby="journey-title">
