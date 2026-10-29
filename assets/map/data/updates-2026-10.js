@@ -28,9 +28,31 @@
     cruisePlan.media = JSON.parse(JSON.stringify(cruise.media || []));
     cruisePlan.links = JSON.parse(JSON.stringify(cruise.links || []));
   }
+
+  // Subject-specific references requested during the October 29 walkthrough.
+  // Apply only to newly added supplement rows; reviewed exports remain authoritative.
+  const subjectUpdates = {
+    "nova-phone-reuse-2026": {
+      story: "Researching PhoneBot from UCLA’s RoMeLa team: a walking robot that reuses an Android phone for sensing and computing. It is a reference for our old-phone experiments, not hardware we have built or tested.",
+      links: [{label:"PhoneBot · project, demonstrations and hardware",url:"https://phonebot.dev/"},{label:"PhoneBot · research paper",url:"https://arxiv.org/abs/2610.08737"},{label:"NOVA build preparation",url:"https://github.com/Champagne247/Champagne247/blob/main/NOVA/planning/build-readiness.md"}]
+    },
+    "nova-rocky-community-2026": {
+      media: [{type:"image",url:"https://raw.githubusercontent.com/cgro00/desk-robot/main/docs/rocky.jpg",caption:"Rocky V2 · Casey’s actual desk-robot build",alt:"Rocky V2 desk robot with expressive eyes and a pan-tilt neck",provenance:{kind:"official",actualSubject:true,sourceUrl:"https://github.com/cgro00/desk-robot",credit:"Copyright (c) 2026 Casey (github.com/cgro00) · MIT License",licenseUrl:"https://github.com/cgro00/desk-robot/blob/main/LICENSE"}}]
+    },
+    "freeflight-mexico-cv-2026": {
+      story: "Exploring Wills Wing Flight School’s seasonal opportunity in Valle de Bravo and the experience and qualifications needed to work toward teaching hang gliding. This remains an aspiration, not a confirmed teaching appointment.",
+      links: [{label:"Wills Wing Flight School",url:"https://willswing.org/wills-wing-flight-school/"},{label:"Valle de Bravo",url:"https://willswing.org/valle-de-bravo-mexico/"}]
+    }
+  };
+  for (const entry of d.entries) {
+    if (added.has(entry.id) && subjectUpdates[entry.id]) {
+      Object.assign(entry, subjectUpdates[entry.id], {updatedAt:"2026-10-29T14:00:00-05:00"});
+    }
+  }
+
   d.entries.sort((a,b)=>String(b.eventAt).localeCompare(String(a.eventAt)));
   // Replaying this supplement after a reviewed export must not backdate metadata.
-  const updatedAt="2026-10-26T12:00:00-05:00";
+  const updatedAt="2026-10-29T14:00:00-05:00";
   d.meta ||= {};
   if (!d.meta.updatedAt || Date.parse(d.meta.updatedAt) < Date.parse(updatedAt)) {
     d.meta.updatedAt=updatedAt;
