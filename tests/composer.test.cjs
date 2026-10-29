@@ -335,3 +335,34 @@ test('unknown event dates stay unknown; reviewed exports reject unsupported medi
     assert.deepEqual(errors,[]);
   } finally {await context.close();}
 });
+
+
+test('reviewed export excludes preexisting private records and private locations', async () => {
+ const {context,page,errors}=await session();
+ try {
+  await compose(page,'now');
+  await page.evaluate(()=>{
+   DATA.entries.push({id:'secret-draft',title:'SECRET DRAFT',visibility:'private',lifecycle:'draft'});
+   DATA.entries[0].locations.push({label:'SECRET HOME',lat:1,lng:2,visibility:'private'});
+  });
+  await page.click('#prepare');
+  const source=await page.inputValue('#masterOutput');
+  assert.doesNotMatch(source,/SECRET DRAFT|SECRET HOME/);
+  assert.ok((await page.evaluate(()=>DATA.entries)).some(e=>e.id==='secret-draft'));
+  assert.deepEqual(errors,[]);
+ } finally {await context.close();}
+});
+
+test('selected files remain previews and never create an unuploaded media link', async () => {
+ const {context,page,errors}=await session();
+ try {
+  await page.goto(`${origin}/Champagne247/manage/`);
+  await page.setInputFiles('#freshUpload',{name:'synthetic.png',mimeType:'image/png',buffer:Buffer.from('preview only')});
+  assert.match(await page.textContent('#uploadName'),/preview only/);
+  assert.equal(await page.locator('.media-url').first().inputValue(),'');
+  await page.click('#saveDraft');
+  await page.reload();
+  assert.equal(await page.locator('.media-url').first().inputValue(),'');
+  assert.deepEqual(errors,[]);
+ } finally {await context.close();}
+});

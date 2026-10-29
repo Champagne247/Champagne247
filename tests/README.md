@@ -16,3 +16,6 @@ NODE_PATH=/workspace/.onboarding/browser/node_modules node --test tests/*.test.c
 ```
 
 Use an execution context permitted to open local sockets and launch Chromium. The site itself still requires no dependency installation or build.
+
+
+Reviewed exports remove private/draft/archived records and private places from the serialized file. Draft downloads are named `private-map-backup.js` and must never be uploaded publicly. Selected files are temporary previews, not stored uploads; keep originals and upload assets separately before adding their URL. GitHub Actions runs the full suite on pull requests and main.

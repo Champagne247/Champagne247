@@ -32,3 +32,36 @@ test('details preserve multiple places, business and source links; escape text a
  assert.equal(content.url('https://user:password@example.test/'),'');
  assert.doesNotMatch(content.details({id:'<script>',projects:['<img>'],media:[]}),/<script>|<img>/);
 });
+
+
+test('public export removes private/draft records and private places without mutating working data',()=>{
+ const entries=[
+  {id:'public',visibility:'public',lifecycle:'published',locations:[{label:'Park'},{label:'SECRET HOME',visibility:'private'}]},
+  {id:'SECRET DRAFT',visibility:'private',lifecycle:'draft'},
+  {id:'draft',visibility:'public',lifecycle:'draft'},
+  {id:'archived',visibility:'public',lifecycle:'archived'},
+  {id:'unknown'}
+ ];
+ const exported=content.publicEntries(entries);
+ assert.deepEqual(Array.from(exported,e=>e.id),['public']);
+ assert.equal(exported[0].locations.length,1);
+ assert.doesNotMatch(JSON.stringify(exported),/SECRET/);
+ assert.equal(entries[0].locations.length,2);
+});
+
+test('composer reviewed master file filters working data; private backups remain distinguishable',()=>{
+ const html=fs.readFileSync(path.join(__dirname,'../manage/index.html'),'utf8');
+ const fn=html.slice(html.indexOf('function masterFile(entry){'),html.indexOf('function showPreview(){'));
+ const working={meta:{},entries:[{id:'private',visibility:'private',lifecycle:'draft',story:'SECRET'},
+  {id:'visible',visibility:'public',lifecycle:'published',locations:[{label:'SECRET',visibility:'private'}]}]};
+ const sandbox={DATA:working,MAP_CONTENT:content};
+ vm.runInNewContext(fn,sandbox);
+ const entry={id:'new',visibility:'public',lifecycle:'published',updatedAt:'2026-10-29'};
+ const exported=sandbox.masterFile(entry);
+ assert.doesNotMatch(exported,/SECRET/);
+ assert.match(exported,/visible/);
+ assert.equal(working.entries.length,2);
+ assert.match(sandbox.masterFile({...entry,visibility:'private',lifecycle:'draft'}),/SECRET/);
+ assert.match(html,/private-map-backup\.js/);
+ assert.match(html,/Selected photo\/video files are NOT saved or uploaded/);
+});

@@ -86,5 +86,13 @@
     const credits = media(entry).map(item => { const p=provenance(item); return `<li>${esc(label(item))}${p.credit ? ' · '+esc(p.credit) : ''}${p.reason ? ' · '+esc(p.reason) : ''}${url(p.sourceUrl) ? ` · <a href="${esc(url(p.sourceUrl))}" target="_blank" rel="noopener noreferrer">Image source</a>` : ''}</li>`; }).join('');
     return `<div class="map-record-details" data-record-id="${esc(entry.id)}">${dateNote}${projects}${locations ? `<ul class="record-places">${locations}</ul>` : ''}${business || refs || credits ? `<ul>${business}${refs}${credits}</ul>` : ''}${extraMedia}</div>`;
   }
-  window.MAP_CONTENT = { esc, url, provenance, media, label, primary, hero, coordinates, places, mapsURL, placeVerified, details };
+  function publicEntries(entries) {
+    return entries.filter(entry => entry.visibility === 'public' &&
+      !['draft', 'archived'].includes(entry.lifecycle)).map(entry => ({
+        ...entry,
+        locations: places(entry)
+      }));
+  }
+  window.MAP_CONTENT = { publicEntries, esc, url, provenance, media, label, primary, hero, coordinates, places, mapsURL, placeVerified, details };
 })();
+

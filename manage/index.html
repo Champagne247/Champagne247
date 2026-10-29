@@ -960,8 +960,9 @@ footer{
 
   <div class="notice">
     GitHub Pages cannot permanently store a camera upload by itself.
-    Upload the file into the suggested assets folder, then use that
-    path in the media list below.
+    Selected files are temporary previews: saving a draft stores text and links,
+    not the photo/video itself. Keep the original file and upload it separately
+    into the suggested assets folder before using that path in a reviewed entry.
   </div>
 
   <div class="field" style="margin-top:17px">
@@ -1142,7 +1143,8 @@ footer{
   <div class="notice">
     Review the story, connections and media before choosing Reviewed.
     Exporting downloads a file for review; it does not publish or schedule it.
-    Never upload a file containing private or unreviewed entries to a public repository.
+    Reviewed exports exclude private/draft records and private places. Draft exports
+    are private backups: never upload them to a public repository.
     Platform selections are recorded in the master entry.
     Direct automatic posting will be connected later through secure
     platform authorization. For now, the composer prepares the
@@ -1872,7 +1874,7 @@ function masterFile(entry){
   const completeData={
     ...DATA,
     meta:{...DATA.meta,updatedAt:entry.updatedAt},
-    entries
+    entries: entry.visibility === "public" ? MAP_CONTENT.publicEntries(entries) : entries
   };
 
   return(
@@ -2029,7 +2031,7 @@ function downloadMaster(){
   const link=document.createElement("a");
 
   link.href=url;
-  link.download="entries.js";
+  link.download=currentEntry.visibility === "public" ? "entries.js" : "private-map-backup.js";
   link.click();
 
   URL.revokeObjectURL(url);
@@ -2097,7 +2099,7 @@ function saveDraft(notify=true){
   );
 
   if(notify){
-    alert("Draft saved on this device. Use Save to account above to sync it.");
+    alert("Draft text and media links saved on this device. Selected photo/video files are NOT saved or uploaded. Keep the original files. Use Save to account above to sync draft text and links.");
   }
 }
 
@@ -2206,13 +2208,9 @@ byId("freshUpload").addEventListener(
 
     byId("uploadPreview").classList.add("active");
 
-    addMedia({
-      type:freshFile.type.startsWith("video/")
-        ? "video"
-        : "image",
-      url:suggestedPath,
-      caption:title
-    });
+    // A preview is not an upload. Never insert an uncreated asset URL.
+    byId("uploadName").textContent +=
+      " — preview only; keep the original, upload it separately, then add its URL below.";
   }
 );
 
@@ -2339,3 +2337,4 @@ restoreDraft();
 
 </body>
 </html>
+
