@@ -1037,7 +1037,7 @@ footer strong{
 </section>
 
 <section>
-  <div id="map"></div>
+  <p id="map-coverage" role="status" style="padding:12px 20px"></p><div id="map"></div>
 </section>
 
 <section
@@ -1703,6 +1703,7 @@ L.tileLayer(
 ).addTo(map);
 
 let markers=[];
+const markersByEntry = new Map();
 
 function clearMarkers(){
 
@@ -1713,6 +1714,7 @@ function clearMarkers(){
   );
 
   markers=[];
+  markersByEntry.clear();
 
 }
 
@@ -1763,6 +1765,8 @@ function popupHTML(entry,location){
   return`
     ${MAP_CONTENT.hero(media,entry.title)}
     <p>${esc(MAP_CONTENT.label(media))}</p>
+    <a href="/Champagne247/#${esc(entry.id)}" target="_top">Read the My Life story →</a>
+    ${buildDedicatedLink(entry)}
     ${buildLinks(entry)}
     ${MAP_CONTENT.details(entry)}
 
@@ -1797,7 +1801,7 @@ function popupHTML(entry,location){
 
     <a
       class="popup-button"
-      href="#${esc(entry.id)}"
+      href="/Champagne247/#${esc(entry.id)}"
       data-popup-entry="${esc(entry.id)}">
 
       View Entry →
@@ -1849,6 +1853,7 @@ function addEntryMarkers(entry){
       marker.addTo(map);
 
       markers.push(marker);
+      markersByEntry.set(entry.id, marker);
 
     }
   );
@@ -2163,9 +2168,29 @@ function render(filter="all"){
 
   }
 
-  visible.forEach(
-    addEntryMarkers
-  );
+  // One marker per coordinate; its popup exposes every activity at that place.
+  const groups = new Map();
+  visible.forEach(entry => entryLocations(entry).forEach(place => {
+    const key = Number(place.lat) + ',' + Number(place.lng);
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push({entry, place});
+  }));
+  groups.forEach(rows => {
+    const {entry, place} = rows[0];
+    const marker = L.circleMarker([Number(place.lat),Number(place.lng)], {
+      radius: rows.length > 1 ? 13 : 9, color:'#04101a', weight:3,
+      fillColor:statusColor(entry.status),fillOpacity:1,
+      dashArray:MAP_CONTENT.placeVerified(place) ? null : '4 4'
+    });
+    marker.bindPopup(rows.map(row => popupHTML(row.entry,row.place)).join('<hr>'));
+    marker.addTo(map); markers.push(marker);
+    rows.forEach(row => markersByEntry.set(row.entry.id,marker));
+    if(rows.length>1) marker.bindTooltip(rows.length+' activities · click to explore');
+  });
+  const located = visible.filter(entry=>entryLocations(entry).length).length;
+  document.getElementById('map-coverage').textContent = located + ' of ' + visible.length +
+    ' activities have map locations · ' + groups.size + ' places. ' +
+    (visible.length-located) + ' activities remain in the timeline without confirmed coordinates. City and country pins are approximate; goals are not completed visits.';
 
   if(filter==="all"){
 
@@ -2261,7 +2286,16 @@ document.addEventListener(
 
 buildFilters();
 buildLegend();
-render("all");
+const initial = new URLSearchParams(location.search);
+render(pathRoutes[initial.get('path')] ? initial.get('path') : 'all');
+const selectedEntry = initial.get('entry');
+if(selectedEntry && entries.some(entry=>entry.id===selectedEntry)) {
+  setTimeout(()=>{
+    focusCard(selectedEntry);
+    const marker=markersByEntry.get(selectedEntry);
+    if(marker){map.setView(marker.getLatLng(),7);marker.openPopup();}
+  },250);
+}
 </script>
 
 </body>
