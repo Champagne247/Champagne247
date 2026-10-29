@@ -4,7 +4,7 @@ window.MAP_DATA = {
     "name": "M.A.P. Master Life Data",
     "description": "Single source of truth for My Life, My Mission and My M.A.P.",
     "canonicalBase": "https://champagne247.github.io/Champagne247",
-    "updatedAt": "2026-10-29T14:15:00-05:00"
+    "updatedAt": "2026-10-29T15:00:00-05:00"
   },
   "owner": {
     "id": "christopher-champagne",
@@ -78,6 +78,56 @@ window.MAP_DATA = {
     }
   },
   "entries": [
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "zachary-wrestling-first-week-2026",
+      "authorId": "christopher-champagne",
+      "title": "Zachary • A New Chapter on the Wrestling Mat",
+      "story": "Zachary started wrestling this week, and he’s excited to get to work. Wrestling runs through our family, and now he’s building his own chapter in that tradition. We’re capturing his practice and progress, and he’s starting a TikTok page dedicated to his training.",
+      "status": "progress",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-29T15:00:00-05:00",
+      "updatedAt": "2026-10-29T15:00:00-05:00",
+      "eventAt": null,
+      "datetime": null,
+      "reportedAt": "2026-10-29T15:00:00-05:00",
+      "datePrecision": "unknown",
+      "displayDate": "First week of wrestling · October 2026",
+      "primaryCategory": "family",
+      "categories": [
+        "family",
+        "fitness"
+      ],
+      "locations": [],
+      "media": [],
+      "hashtags": [
+        "Family",
+        "Wrestling",
+        "Training"
+      ],
+      "links": [
+        {
+          "label": "Follow the Family journey",
+          "url": "/Champagne247/family/"
+        },
+        {
+          "label": "Explore Strength & Fitness",
+          "url": "/Champagne247/fitness/"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
     {
       "schemaVersion": "1.0.0",
       "type": "life-entry",
