@@ -136,6 +136,7 @@ footer{padding:42px 20px 58px;border-top:1px solid var(--line);color:#718093;tex
 </div>
 
 <script src="/Champagne247/assets/map/data/entries.js"></script>
+<script src="/Champagne247/assets/map/data/updates-2026-10.js"></script>
 <script>
 const DATA=window.MAP_DATA;
 
@@ -151,7 +152,10 @@ if(!DATA||!Array.isArray(DATA.entries)){
   const categories=DATA.categories||{};
   const statuses=DATA.statuses||{};
   const entries=DATA.entries.filter(function(entry){
-    return (entry.categories||[]).includes("family");
+    return entry.visibility==="public" &&
+      !["archived","draft"].includes(entry.lifecycle) &&
+      entry.distribution?.state!=="testing" &&
+      (entry.categories||[]).includes("family");
   }).sort(function(a,b){
     if(a.status==="now"&&b.status!=="now")return -1;
     if(b.status==="now"&&a.status!=="now")return 1;

@@ -3,8 +3,10 @@
   const d = window.MAP_DATA;
   if (!d || !Array.isArray(d.entries)) return;
   const existing = new Set(d.entries.map(e => e.id));
+  const added = new Set();
   for (const [date,id,title,story,status,primaryCategory,categories] of rows) {
     if (existing.has(id)) continue;
+    added.add(id);
     const at = date + "T12:00:00-05:00";
     d.entries.push({schemaVersion:"1.0.0",type:"life-entry",id,authorId:"christopher-champagne",title,story,status,lifecycle:"published",visibility:"public",createdAt:at,updatedAt:"2026-10-26T12:00:00-05:00",eventAt:at,datetime:at,displayDate:date,primaryCategory,categories,locations:[],media:[],hashtags:["MyLife","MyMAP"],links:[],distribution:{destinations:["map"],state:"published",published:{}},platforms:["map"]});
   }
@@ -16,8 +18,15 @@
     "sound-system-work-2026":[["CC's Technical Services","https://ccstechnicalservices.com/"]]
   };
   for (const entry of d.entries) {
-    if (resources[entry.id]) entry.links = resources[entry.id].map(([label,url])=>({label,url}));
+    if (resources[entry.id] && added.has(entry.id)) {
+      entry.links = resources[entry.id].map(([label,url])=>({label,url}));
+    }
   }
   d.entries.sort((a,b)=>String(b.eventAt).localeCompare(String(a.eventAt)));
-  d.meta.updatedAt="2026-10-26T12:00:00-05:00";
+  // Replaying this supplement after a reviewed export must not backdate metadata.
+  const updatedAt="2026-10-26T12:00:00-05:00";
+  d.meta ||= {};
+  if (!d.meta.updatedAt || Date.parse(d.meta.updatedAt) < Date.parse(updatedAt)) {
+    d.meta.updatedAt=updatedAt;
+  }
 })();

@@ -1,3 +1,5 @@
+// Keep cloud helpers private: the composer has its own local saveDraft.
+(() => {
 const MAP_URL = "https://xmwqixegyourwhusuhjb.supabase.co";
 const MAP_KEY = "sb_publishable_9fMQiHsBWGFZcmQhKeJLdQ_PmBORNrJ"; // Public publishable key; RLS protects user data.
 if (!window.supabase?.createClient) throw new Error("Supabase client failed to load.");
@@ -112,3 +114,4 @@ async function mountCloudPanel() {
 if (document.readyState === "loading")
   document.addEventListener("DOMContentLoaded", mountCloudPanel);
 else mountCloudPanel();
+})();

@@ -1123,17 +1123,20 @@ footer{
 
   <div class="field" style="margin-top:17px">
 
-    <label for="mode">Publishing mode</label>
+    <label for="mode">Review & export status</label>
 
     <select id="mode">
-      <option value="draft">Prepare drafts for approval</option>
-      <option value="now">Publish/share now</option>
-      <option value="schedule">Schedule for later</option>
+      <option value="draft">Draft — exclude from public feeds</option>
+      <option value="now">Reviewed — include in public M.A.P. feeds</option>
+      <option value="schedule">Planned — exclude until reviewed</option>
     </select>
 
   </div>
 
   <div class="notice">
+    Review the story, connections and media before choosing Reviewed.
+    Exporting downloads a file for review; it does not publish or schedule it.
+    Never upload a file containing private or unreviewed entries to a public repository.
     Platform selections are recorded in the master entry.
     Direct automatic posting will be connected later through secure
     platform authorization. For now, the composer prepares the
@@ -1321,6 +1324,7 @@ footer{
 
 <!-- LOAD THE EXISTING MASTER DATA -->
 <script src="/Champagne247/assets/map/data/entries.js"></script>
+<script src="/Champagne247/assets/map/data/updates-2026-10.js"></script>
 
 <script>
 const DATA=window.MAP_DATA || {
@@ -1369,6 +1373,7 @@ let freshFilePreview="";
 let currentEntry=null;
 let currentMasterFile="";
 let currentCaption="";
+let currentDraftSignature="";
 
 const byId=function(id){
   return document.getElementById(id);
@@ -1602,6 +1607,12 @@ function collectLocations(){
   }).filter(Boolean);
 }
 
+function mediaURL(value){
+  if(/^(?:[a-z][a-z\d+.-]*:|\/)/i.test(value)) return value;
+  const url=new URL(value,location.origin+"/Champagne247/");
+  return url.pathname+url.search+url.hash;
+}
+
 function collectMedia(){
   return[
     ...document.querySelectorAll(".media-item")
@@ -1621,7 +1632,8 @@ function collectMedia(){
 
     return{
       type,
-      url,
+      // Repository-relative media must work on both the composer and feed routes.
+      url:mediaURL(url),
       caption
     };
   }).filter(Boolean);
@@ -1711,7 +1723,21 @@ function buildEntry(){
     .toISOString()
     .slice(0,10)}`;
 
+  const existing=(DATA.entries || []).find(entry => entry.id===id);
+  const updatedAt=new Date().toISOString();
+  const reviewed=byId("mode").value==="now";
+  const platforms=checkedValues("platforms");
+
   return{
+    ...existing,
+    schemaVersion:existing?.schemaVersion || DATA.schemaVersion || "1.0.0",
+    type:existing?.type || "life-entry",
+    authorId:existing?.authorId || DATA.owner?.id,
+    createdAt:existing?.createdAt || updatedAt,
+    updatedAt,
+    eventAt:date.toISOString(),
+    lifecycle:reviewed ? "published" : "draft",
+    visibility:reviewed ? "public" : "private",
     id,
     title,
     story,
@@ -1719,12 +1745,19 @@ function buildEntry(){
     datetime:date.toISOString(),
     displayDate:displayDate(date,status),
     categories,
+    primaryCategory:categories[0],
     locations:collectLocations(),
     media:collectMedia(),
     hashtags,
     links:collectLinks(),
     opportunity:collectOpportunity(),
-    platforms:checkedValues("platforms"),
+    distribution:{
+      ...existing?.distribution,
+      destinations:platforms,
+      state:reviewed ? "ready" : "draft",
+      published:existing?.distribution?.published || {}
+    },
+    platforms,
     publishMode:byId("mode").value
   };
 }
@@ -1764,9 +1797,8 @@ function masterFile(entry){
   ];
 
   const completeData={
-    owner:DATA.owner || {},
-    categories:DATA.categories || {},
-    statuses:DATA.statuses || {},
+    ...DATA,
+    meta:{...DATA.meta,updatedAt:entry.updatedAt},
     entries
   };
 
@@ -1807,6 +1839,7 @@ function showPreview(){
   currentEntry=entry;
   currentCaption=buildSocialCaption(entry);
   currentMasterFile=masterFile(entry);
+  currentDraftSignature=JSON.stringify(collectDraft());
 
   byId("previewStatus").textContent=
     `● ${statusLabels[entry.status]}`;
@@ -1903,12 +1936,16 @@ async function copyText(text,message){
   }
 }
 
-function downloadMaster(){
-  if(!currentEntry){
+function ensureCurrentPreview(){
+  if(!currentEntry || currentDraftSignature!==JSON.stringify(collectDraft())){
+    currentEntry=null;
     showPreview();
   }
+  return Boolean(currentEntry);
+}
 
-  if(!currentEntry){
+function downloadMaster(){
+  if(!ensureCurrentPreview()){
     return;
   }
 
@@ -1928,11 +1965,7 @@ function downloadMaster(){
 }
 
 async function shareEntry(){
-  if(!currentEntry){
-    showPreview();
-  }
-
-  if(!currentEntry){
+  if(!ensureCurrentPreview()){
     return;
   }
 
@@ -2184,11 +2217,7 @@ byId("saveDraft").onclick=function(){
 };
 
 byId("copyEntry").onclick=function(){
-  if(!currentEntry){
-    showPreview();
-  }
-
-  if(currentEntry){
+  if(ensureCurrentPreview()){
     copyText(
       JSON.stringify(currentEntry,null,2),
       "New entry copied."
@@ -2197,11 +2226,7 @@ byId("copyEntry").onclick=function(){
 };
 
 byId("copyMaster").onclick=function(){
-  if(!currentEntry){
-    showPreview();
-  }
-
-  if(currentEntry){
+  if(ensureCurrentPreview()){
     copyText(
       currentMasterFile,
       "Complete entries.js copied."
@@ -2213,11 +2238,7 @@ byId("downloadMaster").onclick=
   downloadMaster;
 
 byId("copyCaption").onclick=function(){
-  if(!currentEntry){
-    showPreview();
-  }
-
-  if(currentEntry){
+  if(ensureCurrentPreview()){
     copyText(
       currentCaption,
       "Social caption copied."

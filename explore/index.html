@@ -1422,8 +1422,9 @@ function visibleEntries(filter){
       function(entry){
 
         return(
-          entry.lifecycle!=="archived" &&
-          entry.visibility!=="private" &&
+          !["archived","draft"].includes(entry.lifecycle) &&
+          entry.visibility==="public" &&
+          entry.distribution?.state!=="testing" &&
           (
             filter==="all" ||
             (entry.categories || []).includes(filter)
