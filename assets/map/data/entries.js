@@ -4,7 +4,7 @@ window.MAP_DATA = {
     "name": "M.A.P. Master Life Data",
     "description": "Single source of truth for My Life, My Mission and My M.A.P.",
     "canonicalBase": "https://champagne247.github.io/Champagne247",
-    "updatedAt": "2026-10-27T08:29:00-05:00"
+    "updatedAt": "2026-10-29T12:00:00-05:00"
   },
   "owner": {
     "id": "christopher-champagne",
@@ -81,6 +81,78 @@ window.MAP_DATA = {
     {
       "schemaVersion": "1.0.0",
       "type": "life-entry",
+      "id": "nova-trinity-concept-challenge-2026",
+      "authorId": "christopher-champagne",
+      "title": "Three AIs. Three Robot Personalities. One Build Challenge.",
+      "story": "I gave three AIs a challenge: design your own robot, develop your own ideas, and show me how you would work together. This is our build in progress: NOVA, ZIGGY and MILO, each with a distinct personality and a place in the crew.\n\nNOVA’s pitch — TRIARCH: Three Minds. One Mission. Orange, green and blue points join around one center. The idea is to bring mission planning, engineering and discovery together without losing each character’s identity. NOVA’s proposed role is coordination and integration; ZIGGY’s is engineering and verification; MILO’s is research and discovery.\n\nZIGGY’s pitch — THE TRIUMVIRATE: Designed apart. Built together. ZIGGY describes three equals, each responsible for its own robot. Three pillars of different heights stand on a shared base: distinct designs supported by the proposed Universal Dock. The simple mark is intended to work on small badges as well as posters.\n\nDesign contributions go beyond the posters. NOVA is developing its own body and eye-motion concept; ZIGGY is developing its body, independently moving ears and mechanical fit checks; MILO is developing its body, sensory plan and movable antenna. These are design contributions and requirements, with physical fit and operation still to be tested. Chris guides the work, compares the submissions and owns the build decisions.\n\nWhat we’re working toward: three serviceable robots with expressive faces and moving features, compatible power/data connections and a shared docking ecosystem. Each AI develops its own concept, critiques the others and contributes to a practical first prototype. I set the challenge and make the final decisions.\n\nThese are competing creative proposals, not a selected crew name or proof of working hardware. The artwork shows the vision; component fit, printable parts, assembly and bench tests are the next milestones. Follow along as we turn the ideas into something we can build.",
+      "status": "progress",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-29T12:00:00-05:00",
+      "updatedAt": "2026-10-29T12:00:00-05:00",
+      "eventAt": "2026-10-29T12:00:00-05:00",
+      "datetime": "2026-10-29T12:00:00-05:00",
+      "displayDate": "October 29, 2026",
+      "datePrecision": "day",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator",
+        "professional"
+      ],
+      "locations": [],
+      "media": [
+        {
+          "type": "image",
+          "url": "/Champagne247/assets/map/concepts/triarch-crew.webp",
+          "caption": "NOVA’s TRIARCH proposal · Three Minds. One Mission.",
+          "alt": "NOVA’s TRIARCH proposal · Three Minds. One Mission.",
+          "provenance": {
+            "kind": "ai",
+            "actualSubject": false,
+            "reason": "Original project concept artwork explaining the proposed design; working hardware is still in development.",
+            "credit": "NOVA · AI-generated concept"
+          }
+        },
+        {
+          "type": "image",
+          "url": "/Champagne247/assets/map/concepts/triumvirate-poster.webp",
+          "caption": "ZIGGY’s THE TRIUMVIRATE proposal · Designed apart. Built together.",
+          "alt": "ZIGGY’s THE TRIUMVIRATE proposal · Designed apart. Built together.",
+          "provenance": {
+            "kind": "ai",
+            "actualSubject": false,
+            "reason": "Original project concept artwork explaining the proposed design; working hardware is still in development.",
+            "credit": "ZIGGY · submitted concept poster"
+          }
+        }
+      ],
+      "hashtags": [
+        "MyLife",
+        "MyMAP",
+        "NOVA",
+        "Robotics"
+      ],
+      "links": [
+        {
+          "label": "Explore the NOVA project",
+          "url": "/Champagne247/nova/",
+          "kind": "project"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
       "authorId": "christopher-champagne",
       "lifecycle": "published",
       "visibility": "public",
@@ -90,14 +162,35 @@ window.MAP_DATA = {
       "datetime": "2026-10-27T08:29:00-05:00",
       "displayDate": "October 27, 2026",
       "locations": [],
-      "media": [],
+      "media": [
+        {
+          "type": "image",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Carnival_Valor_Cruise_Ship_%283%29_%2821009123989%29.jpg",
+          "alt": "Carnival Valor cruise ship",
+          "caption": "Carnival Valor — reference photo from 2015, not a photo of our trip.",
+          "provenance": {
+            "kind": "licensed",
+            "actualSubject": true,
+            "credit": "Chris Gent · CC BY-SA 2.0 · original photograph, displayed without file modifications",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carnival_Valor_Cruise_Ship_(3)_(21009123989).jpg",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/"
+          }
+        }
+      ],
       "hashtags": [
         "MyLife",
         "MyMAP",
         "Family",
         "Travel"
       ],
-      "links": [],
+      "links": [
+        {
+          "label": "Explore Carnival Valor",
+          "url": "https://www.carnival.com/cruise-ships/carnival-valor",
+          "kind": "business",
+          "verification": "source-checked"
+        }
+      ],
       "distribution": {
         "destinations": [
           "map"
@@ -110,7 +203,7 @@ window.MAP_DATA = {
       ],
       "id": "family-holiday-cruise-2026",
       "title": "Family • Holiday Cruise Ahead",
-      "story": "The family has an upcoming cruise planned for November. Another opportunity to make memories, enjoy time together and add a new chapter to our Living Vision Board. Exact travel dates and personal itinerary details stay private.",
+      "story": "The family is looking forward to a Carnival Valor adventure out of New Orleans. New places, time together and another chapter in our Living Vision Board. Exact travel dates and personal itinerary details stay private.",
       "status": "next",
       "primaryCategory": "family",
       "categories": [
@@ -130,14 +223,40 @@ window.MAP_DATA = {
       "datetime": "2026-10-27T08:29:00-05:00",
       "displayDate": "October 27, 2026",
       "locations": [],
-      "media": [],
+      "media": [
+        {
+          "type": "image",
+          "url": "https://static.barcelo.com/content/dam/bhg/master/es/hoteles/mexico/cancun/occidental-costa-cancun/main-photos/hotel/OCCAN_VIEW_07.jpg",
+          "alt": "Occidental Costa Cancun beachfront",
+          "caption": "Occidental Costa Cancún · official resort photo, not a personal trip photo.",
+          "provenance": {
+            "kind": "official",
+            "actualSubject": true,
+            "credit": "Barceló Hotel Group / Occidental Costa Cancún",
+            "sourceUrl": "https://www.barcelo.com/en-us/occidental-costa-cancun/"
+          }
+        }
+      ],
       "hashtags": [
         "MyLife",
         "MyMAP",
         "Family",
         "Travel"
       ],
-      "links": [],
+      "links": [
+        {
+          "label": "Occidental Costa Cancún · Official resort",
+          "url": "https://www.barcelo.com/en-us/occidental-costa-cancun/",
+          "kind": "business",
+          "verification": "source-checked"
+        },
+        {
+          "label": "View the resort on Expedia",
+          "url": "https://www.expedia.com/Cancun-Hotels-Occidental-Costa-Cancun-All-Inclusive.h197382.Hotel-Information",
+          "kind": "business",
+          "verification": "source-checked"
+        }
+      ],
       "distribution": {
         "destinations": [
           "map"
@@ -150,7 +269,7 @@ window.MAP_DATA = {
       ],
       "id": "kat-cancun-getaway-2026",
       "title": "Kat & Me • A Cancun Adventure Ahead",
-      "story": "Kat and I have an upcoming getaway to Cancun, Mexico, with time to explore, reconnect and experience something new together. I'm especially excited to try kiteboarding for the first time, building on my background in surfing, wakeboarding and freeflight. Detailed travel dates and lodging information stay private.",
+      "story": "Kat and I have an upcoming getaway to Cancun, Mexico, with time to explore, reconnect and experience something new together. I'm especially excited to try kiteboarding for the first time, building on my background in surfing, wakeboarding and freeflight. Our destination is Occidental Costa Cancún, an all-inclusive beachfront resort. Exact travel dates and booking details stay private.",
       "status": "next",
       "primaryCategory": "travel",
       "categories": [
@@ -180,7 +299,20 @@ window.MAP_DATA = {
         "professional"
       ],
       "locations": [],
-      "media": [],
+      "media": [
+        {
+          "type": "image",
+          "url": "/Champagne247/assets/map/concepts/nova-forever-build.webp",
+          "caption": "NOVA: The Forever Build · original vision board",
+          "alt": "NOVA: The Forever Build · original vision board",
+          "provenance": {
+            "kind": "ai",
+            "actualSubject": false,
+            "reason": "Original project concept artwork explaining the proposed design; working hardware is still in development.",
+            "credit": "NOVA / Chris’s project concept"
+          }
+        }
+      ],
       "hashtags": [
         "MyLife",
         "MyMAP",
@@ -194,6 +326,11 @@ window.MAP_DATA = {
         {
           "label": "Rocky-inspired adaptation plan",
           "url": "https://github.com/Champagne247/Champagne247/blob/main/NOVA/prototypes/expressive-head-rocky-adaptation.md"
+        },
+        {
+          "label": "Meet the crew · two independent concept pitches",
+          "url": "/Champagne247/#nova-trinity-concept-challenge-2026",
+          "kind": "project"
         }
       ],
       "distribution": {
@@ -213,7 +350,7 @@ window.MAP_DATA = {
       "id": "nova-modular-robotics",
       "authorId": "christopher-champagne",
       "title": "Exploring Open-Source Robotics & Reusable Hardware",
-      "story": "Researching affordable 3D-printable robot bodies, tracked platforms, expressive faces, controllers and open-source projects. NOVA, BUDDY and PIP are envisioned as distinct companion characters sharing a universal docking ecosystem. Our focus is on learning from builders and adapting proven solutions rather than reinventing everything.",
+      "story": "Researching affordable 3D-printable robot bodies, tracked platforms, expressive faces, controllers and open-source projects. NOVA, ZIGGY and MILO are envisioned as distinct companion characters sharing a universal docking ecosystem. Our focus is on learning from builders and adapting proven solutions rather than reinventing everything.",
       "status": "progress",
       "lifecycle": "published",
       "visibility": "public",
@@ -496,13 +633,32 @@ window.MAP_DATA = {
         "professional"
       ],
       "locations": [],
-      "media": [],
+      "media": [
+        {
+          "type": "image",
+          "url": "/Champagne247/assets/map/concepts/nova-forever-build.webp",
+          "caption": "NOVA: The Forever Build · original vision board",
+          "alt": "NOVA: The Forever Build · original vision board",
+          "provenance": {
+            "kind": "ai",
+            "actualSubject": false,
+            "reason": "Original project concept artwork explaining the proposed design; working hardware is still in development.",
+            "credit": "NOVA / Chris’s project concept"
+          }
+        }
+      ],
       "hashtags": [
         "MyLife",
         "MyMAP",
         "NOVA"
       ],
-      "links": [],
+      "links": [
+        {
+          "label": "Meet the crew · two independent concept pitches",
+          "url": "/Champagne247/#nova-trinity-concept-challenge-2026",
+          "kind": "project"
+        }
+      ],
       "distribution": {
         "destinations": [
           "map"

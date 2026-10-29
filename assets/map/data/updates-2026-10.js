@@ -22,6 +22,12 @@
       entry.links = resources[entry.id].map(([label,url])=>({label,url}));
     }
   }
+  const cruise = d.entries.find(e => e.id === 'family-holiday-cruise-2026');
+  const cruisePlan = d.entries.find(e => e.id === 'family-cruise-planning-2026');
+  if (cruise && cruisePlan && added.has(cruisePlan.id)) {
+    cruisePlan.media = JSON.parse(JSON.stringify(cruise.media || []));
+    cruisePlan.links = JSON.parse(JSON.stringify(cruise.links || []));
+  }
   d.entries.sort((a,b)=>String(b.eventAt).localeCompare(String(a.eventAt)));
   // Replaying this supplement after a reviewed export must not backdate metadata.
   const updatedAt="2026-10-26T12:00:00-05:00";
