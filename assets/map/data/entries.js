@@ -101,7 +101,63 @@ window.MAP_DATA = {
         "fitness"
       ],
       "locations": [],
-      "media": [],
+      "media": [
+        {
+          "type": "image",
+          "url": "/Champagne247/assets/map/family/zachary-wrestling/practice-1.jpg",
+          "alt": "Wrestling team gathered on the practice mat",
+          "caption": "Zachary’s first week of wrestling · team practice",
+          "provenance": {
+            "kind": "own",
+            "actualSubject": true,
+            "credit": "Chris Champagne · supplied practice photo"
+          }
+        },
+        {
+          "type": "image",
+          "url": "/Champagne247/assets/map/family/zachary-wrestling/practice-2.jpg",
+          "alt": "Wrestling team gathered on the practice mat",
+          "caption": "Zachary’s first week of wrestling · team practice",
+          "provenance": {
+            "kind": "own",
+            "actualSubject": true,
+            "credit": "Chris Champagne · supplied practice photo"
+          }
+        },
+        {
+          "type": "image",
+          "url": "/Champagne247/assets/map/family/zachary-wrestling/practice-3.jpg",
+          "alt": "Wrestling team gathered on the practice mat",
+          "caption": "Zachary’s first week of wrestling · team practice",
+          "provenance": {
+            "kind": "own",
+            "actualSubject": true,
+            "credit": "Chris Champagne · supplied practice photo"
+          }
+        },
+        {
+          "type": "image",
+          "url": "/Champagne247/assets/map/family/zachary-wrestling/practice-4.jpg",
+          "alt": "Wrestling team gathered on the practice mat",
+          "caption": "Zachary’s first week of wrestling · team practice",
+          "provenance": {
+            "kind": "own",
+            "actualSubject": true,
+            "credit": "Chris Champagne · supplied practice photo"
+          }
+        },
+        {
+          "type": "image",
+          "url": "/Champagne247/assets/map/family/zachary-wrestling/practice-5.jpg",
+          "alt": "Wrestling team gathered on the practice mat",
+          "caption": "Zachary’s first week of wrestling · team practice",
+          "provenance": {
+            "kind": "own",
+            "actualSubject": true,
+            "credit": "Chris Champagne · supplied practice photo"
+          }
+        }
+      ],
       "hashtags": [
         "Family",
         "Wrestling",
