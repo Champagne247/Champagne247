@@ -4,7 +4,7 @@ window.MAP_DATA = {
     "name": "M.A.P. Master Life Data",
     "description": "Single source of truth for My Life, My Mission and My M.A.P.",
     "canonicalBase": "https://champagne247.github.io/Champagne247",
-    "updatedAt": "2026-10-29T12:00:00-05:00"
+    "updatedAt": "2026-10-29T14:00:00-05:00"
   },
   "owner": {
     "id": "christopher-champagne",
@@ -401,12 +401,12 @@ window.MAP_DATA = {
       "id": "freeflight-mexico-opportunity",
       "authorId": "christopher-champagne",
       "title": "Freeflight • A Dream Instructor Opportunity",
-      "story": "Exploring a seasonal hang-gliding instruction opportunity in Valle de Bravo, Mexico. Continuing to build experience and qualifications while considering what it would take to turn a lifelong passion for freeflight into the next chapter.",
+      "story": "Exploring the Wills Wing Flight School seasonal instructor opportunity in Valle de Bravo, Mexico. This is a goal under consideration while I continue building experience and qualifications, not a confirmed instructor position.",
       "status": "goal",
       "lifecycle": "published",
       "visibility": "public",
       "createdAt": "2026-10-24T12:00:00-05:00",
-      "updatedAt": "2026-10-26T12:00:00-05:00",
+      "updatedAt": "2026-10-29T14:00:00-05:00",
       "eventAt": "2026-10-24T12:00:00-05:00",
       "datetime": "2026-10-24T12:00:00-05:00",
       "displayDate": "October 24, 2026",
@@ -422,7 +422,16 @@ window.MAP_DATA = {
         "MyLife",
         "MyMAP"
       ],
-      "links": [],
+      "links": [
+        {
+          "label": "Wills Wing Flight School · Valle de Bravo",
+          "url": "https://willswing.org/wills-wing-flight-school/"
+        },
+        {
+          "label": "Explore Valle de Bravo",
+          "url": "https://willswing.org/valle-de-bravo-mexico/"
+        }
+      ],
       "distribution": {
         "destinations": [
           "map"
@@ -440,12 +449,12 @@ window.MAP_DATA = {
       "id": "costa-rica-lifestyle",
       "authorId": "christopher-champagne",
       "title": "The Dream • Fly, Swim, Grow and Live",
-      "story": "Exploring a future home in Costa Rica where hang gliding, water, nature, gardening and community could all fit together. The vision is a place to fly, swim, grow food and enjoy a more adventurous, self-sufficient life.",
+      "story": "Exploring future possibilities in Costa Rica and Mexico: a place where hang gliding, water, nature, growing food and community fit together. Still comparing options and learning about places; no relocation decision or property purchase has been made.",
       "status": "goal",
       "lifecycle": "published",
       "visibility": "public",
       "createdAt": "2026-10-22T12:00:00-05:00",
-      "updatedAt": "2026-10-26T12:00:00-05:00",
+      "updatedAt": "2026-10-29T14:00:00-05:00",
       "eventAt": "2026-10-22T12:00:00-05:00",
       "datetime": "2026-10-22T12:00:00-05:00",
       "displayDate": "October 22, 2026",
@@ -560,7 +569,7 @@ window.MAP_DATA = {
       "lifecycle": "published",
       "visibility": "public",
       "createdAt": "2026-10-19T12:00:00-05:00",
-      "updatedAt": "2026-10-26T12:00:00-05:00",
+      "updatedAt": "2026-10-29T14:00:00-05:00",
       "eventAt": "2026-10-19T12:00:00-05:00",
       "datetime": "2026-10-19T12:00:00-05:00",
       "displayDate": "October 19, 2026",
@@ -570,12 +579,34 @@ window.MAP_DATA = {
         "creator"
       ],
       "locations": [],
-      "media": [],
+      "media": [
+        {
+          "type": "image",
+          "url": "https://www.flyminimax.com/cdn/shop/files/398681740_10233433787127037_1550414447046430813_n.jpg?v=1778134935&width=1600",
+          "caption": "Mini-Max aircraft in flight · Mini-Max USA reference image",
+          "alt": "A Mini-Max aircraft in flight",
+          "provenance": {
+            "kind": "official",
+            "actualSubject": true,
+            "sourceUrl": "https://www.flyminimax.com/",
+            "credit": "Mini-Max USA · linked manufacturer image"
+          }
+        }
+      ],
       "hashtags": [
         "MyLife",
         "MyMAP"
       ],
-      "links": [],
+      "links": [
+        {
+          "label": "Mini-Max USA · official aircraft and builder resources",
+          "url": "https://www.flyminimax.com/"
+        },
+        {
+          "label": "New ownership · Av8r Capital Group",
+          "url": "https://www.av8rcapital.com/companies/"
+        }
+      ],
       "distribution": {
         "destinations": [
           "map"
