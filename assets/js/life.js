@@ -85,10 +85,54 @@
       </div>
     </article>`;
   }
+
+  let journeyMap;
+  let pinLayer;
+  function updateJourneyMap(visible) {
+    if (!window.L || !$('life-map')) {
+      if($('life-map-summary')) $('life-map-summary').textContent='Map unavailable. The complete journey remains below.';
+      return;
+    }
+    if(!journeyMap){
+      journeyMap=L.map('life-map',{scrollWheelZoom:false}).setView([30,-96],3);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'© OpenStreetMap contributors'}).addTo(journeyMap);
+      pinLayer=L.layerGroup().addTo(journeyMap);
+      $('map-expand').onclick=()=>{
+        const expanded=$('places').classList.toggle('expanded');
+        $('map-expand').setAttribute('aria-expanded',String(expanded));
+        $('map-expand').textContent=expanded?'Close expanded map ×':'Expand map ↗';
+        setTimeout(()=>journeyMap.invalidateSize(),50);
+      };
+      document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('places').classList.contains('expanded'))$('map-expand').click();});
+    }
+    pinLayer.clearLayers();
+    const groups=new Map();
+    visible.forEach(entry=>MAP_CONTENT.places(entry).filter(MAP_CONTENT.coordinates).forEach(place=>{
+      const key=Number(place.lat)+','+Number(place.lng);
+      if(!groups.has(key))groups.set(key,[]);
+      groups.get(key).push({entry,place});
+    }));
+    const bounds=[];
+    groups.forEach(rows=>{
+      const {entry,place}=rows[0];const point=[Number(place.lat),Number(place.lng)];bounds.push(point);
+      const marker=L.circleMarker(point,{radius:rows.length>1?12:8,color:'#152433',weight:2,fillColor:data.statuses?.[entry.status]?.color||'#58c3ff',fillOpacity:1});
+      marker.bindPopup(rows.map(({entry,place})=>{
+        const actual=MAP_CONTENT.media(entry).find(m=>m.type==='image');
+        return `<article>${actual?MAP_CONTENT.hero(actual,entry.title):''}<h3>${esc(entry.title)}</h3><p>${esc(statusLabel(entry))} · ${esc(place.label)}</p><p>${esc(entry.story?.slice(0,220))}</p><p><a href="#${encodeURIComponent(entry.id)}">Read this story ↓</a></p>${(entry.links||[]).filter(l=>safeURL(l.url)).map(l=>`<p><a href="${esc(safeURL(l.url))}" target="_blank" rel="noopener noreferrer">${esc(l.label)} ↗</a></p>`).join('')}</article>`;
+      }).join('<hr>')).addTo(pinLayer);
+      if(rows.length>1)marker.bindTooltip(rows.length+' activities at this place');
+    });
+    if(bounds.length)journeyMap.fitBounds(bounds,{padding:[25,25],maxZoom:7});
+    const located=visible.filter(e=>MAP_CONTENT.places(e).some(MAP_CONTENT.coordinates)).length;
+    $('life-map-summary').textContent=`${located} mapped activities · ${groups.size} places · ${visible.length-located} more stories in the timeline`;
+    $('map-paths').innerHTML=[['all','All paths'],...Object.keys(routes).map(k=>[k,labels(k)])].map(([k,label])=>`<button type="button" class="filter" data-filter="${k}" aria-pressed="${k===activeFilter}">${esc(label)}</button>`).join('');
+  }
+
   function render() {
     const term = query.trim().toLocaleLowerCase();
     const visible = entries.filter(entry => (activeFilter === 'all' || entry.categories?.includes(activeFilter)) &&
       [entry.title,entry.story,...(entry.categories || []).map(labels),...(entry.locations || []).map(item => typeof item === 'string' ? item : item.visibility === 'private' ? '' : item.label)].join(' ').toLocaleLowerCase().includes(term));
+    updateJourneyMap(visible);
     $('feed').innerHTML = visible.length ? visible.slice(0,limit).map(card).join('') : `<div class="empty"><strong>${data.entries ? 'No moments found.' : 'The journey could not load.'}</strong><br>${data.entries ? 'Try another word or clear the filters to explore the whole journey.' : 'Refresh the page to try again.'}</div>`;
     $('result-count').textContent = `${visible.length} moment${visible.length === 1 ? '' : 's'}${activeFilter !== 'all' ? ` · ${labels(activeFilter)}` : ' · All paths'}${query.trim() ? ' · Search results' : ''}`;
     $('reset').hidden = activeFilter === 'all' && !query;
