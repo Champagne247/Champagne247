@@ -177,7 +177,7 @@ test('downloaded reviewed export preserves complete data and renders media and c
     // The welcome screen is intentionally shown even with reduced motion.
     const intro = page.locator('#nova-cinematic');
     if (await intro.count()) {
-      await intro.locator('[data-action="skip"]').click();
+      await page.keyboard.press('Escape');
       await intro.waitFor({ state: 'detached' });
     }
     const card = page.locator(`#${entry.id}`);
