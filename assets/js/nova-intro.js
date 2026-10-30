@@ -69,7 +69,9 @@ function speakWelcome(){
  if(preferred)novaUtterance.voice=preferred;
  novaUtterance.lang=preferred?.lang||'en-US';novaUtterance.rate=.98;novaUtterance.pitch=.9;novaUtterance.volume=1;
  novaUtterance.onstart=()=>{novaSpeaking=true;el.dataset.welcomeSpoken='true'};
- novaUtterance.onend=novaUtterance.onerror=()=>{novaSpeaking=false};
+ novaUtterance.onend=()=>{novaSpeaking=false;novaUtterance=null};
+ novaUtterance.onerror=()=>{novaSpeaking=false;novaUtterance=null};
+ if(speech.paused)speech.resume();
  speech.speak(novaUtterance);
 }
 function stopWelcome(){if(novaUtterance&&'speechSynthesis' in window){window.speechSynthesis.cancel();novaUtterance=null}novaSpeaking=false}
@@ -86,9 +88,15 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&el.isConnected)exit
 const forceIntro=new URLSearchParams(location.search).get('intro')==='1';
 if(!forceIntro&&sessionStorage.getItem('nova-intro-seen')==='1'){exit()}
 else if('speechSynthesis' in window){
- const autoWelcome=()=>{if(el.isConnected&&el.querySelector('.nc-entry')&&!novaUtterance)speakWelcome()};
+ const autoWelcome=()=>{if(el.isConnected&&el.querySelector('.nc-entry')&&el.dataset.welcomeSpoken!=='true'&&!novaSpeaking)speakWelcome()};
  window.speechSynthesis.getVoices();
  setTimeout(autoWelcome,500);
+ const unlockWelcome=e=>{
+  if(!el.querySelector('.nc-entry')||el.dataset.welcomeSpoken==='true'||e.target.closest('button,a'))return;
+  speakWelcome();
+ };
+ el.addEventListener('pointerup',unlockWelcome);
+ el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')unlockWelcome(e)});
  // Some devices populate their voice list after initial page rendering.
  window.speechSynthesis.addEventListener('voiceschanged',autoWelcome,{once:true});
 }
