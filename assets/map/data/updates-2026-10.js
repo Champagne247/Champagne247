@@ -50,6 +50,16 @@
     }
   }
 
+
+  // Chris supplied and approved these actual Homecoming 2026 photos on October 30.
+  const homecoming=d.entries.find(e=>e.id==='family-homecoming-2026');
+  if(homecoming){
+    homecoming.title='Aiden & Zachary • Homecoming 2026';
+    homecoming.story='Looking sharp—Aiden and Zachary getting ready to head to Homecoming 2026. Navy and paisley, red and gold, and a proud family moment before the dance.';
+    homecoming.media=[{"type":"image","url":"/Champagne247/assets/map/photos/homecoming-2026-wide.webp","caption":"The twins heading to Homecoming 2026.","alt":"Aiden and Zachary wearing suits outdoors before Homecoming 2026","provenance":{"kind":"own","actualSubject":true,"credit":"Christopher Champagne"}},{"type":"image","url":"/Champagne247/assets/map/photos/homecoming-2026-portrait.webp","caption":"Looking sharp before the dance.","alt":"Aiden and Zachary wearing suits outdoors before Homecoming 2026","provenance":{"kind":"own","actualSubject":true,"credit":"Christopher Champagne"}},{"type":"image","url":"/Champagne247/assets/map/photos/homecoming-2026-full.webp","caption":"Homecoming 2026—from the suits to the shoes.","alt":"Aiden and Zachary wearing suits outdoors before Homecoming 2026","provenance":{"kind":"own","actualSubject":true,"credit":"Christopher Champagne"}}];
+    homecoming.updatedAt='2026-10-30T08:45:00-05:00';
+  }
+
   d.entries.sort((a,b)=>String(b.eventAt).localeCompare(String(a.eventAt)));
   // Replaying this supplement after a reviewed export must not backdate metadata.
   const updatedAt="2026-10-29T14:00:00-05:00";
