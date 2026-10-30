@@ -9,10 +9,11 @@ const { chromium } = require('playwright');
 const root = path.resolve(__dirname, '..');
 const categories = ['family', 'fitness', 'freeflight', 'professional', 'creator', 'travel'];
 const categoryRoutes = ['family', 'fitness', 'professional', 'creator', 'food-travel'];
-let server, browser, origin, leaflet;
+let server, browser, origin, leaflet, leafletCSS;
 
 before(async () => {
   leaflet = await fs.readFile(require.resolve('leaflet/dist/leaflet.js'), 'utf8');
+  leafletCSS = await fs.readFile(require.resolve('leaflet/dist/leaflet.css'), 'utf8');
   server = http.createServer(async (req, res) => {
     const pathname = decodeURIComponent(new URL(req.url, 'http://local').pathname);
     const relative = pathname.replace(/^\/Champagne247\//, '');
@@ -60,6 +61,9 @@ async function session({ unavailableCloud = false } = {}) {
           auth:{getUser:async()=>({data:{user:null},error:null})},
           from:()=>{throw new Error('Unexpected account write')}
         })};` });
+    }
+    if (url.hostname === 'unpkg.com' && url.pathname.endsWith('/leaflet.css')) {
+      return route.fulfill({ contentType: 'text/css', body: leafletCSS });
     }
     if (url.hostname === 'unpkg.com' && url.pathname.endsWith('/leaflet.js')) {
       return route.fulfill({ contentType: 'text/javascript', body: leaflet });
