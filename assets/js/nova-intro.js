@@ -65,7 +65,7 @@ welcomeAudio.onplay=()=>{novaSpeaking=true;el.dataset.welcomeSpoken='true'};
 welcomeAudio.onended=()=>{novaSpeaking=false};
 welcomeAudio.onerror=()=>{novaSpeaking=false;el.querySelector('[data-action=start]')?.setAttribute('title','NOVA voice could not load. Try refreshing.')};
 function speakWelcome(){
- if(!el.isConnected||!el.querySelector('.nc-entry')||novaSpeaking)return;
+ if(!el.isConnected||novaSpeaking)return;
  welcomeAudio.currentTime=0;
  welcomeAudio.play().catch(()=>{ /* Mobile Chrome may require a user gesture. */ });
 }
