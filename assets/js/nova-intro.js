@@ -33,7 +33,34 @@ const toolsScene=document.createElement('div');toolsScene.className='nc-tools-sc
 document.body.append(el);document.body.classList.add('nova-intro-active');
 const ring=el.querySelector('.nc-ring');paths.forEach((p,i)=>{const card=document.createElement('div');card.className='nc-card';card.innerHTML='<img alt="" src="'+root+'hero-'+p+'.webp"><div class="nc-label"><small>0'+(i+1)+' / MY LIFE</small>'+labels[i]+'</div>';ring.append(card)});
 let angle=0,last=performance.now(),running=false,drag=false,px=0,ctx=null,voices=[],elapsed=0,raf=0,muted=false,mapStarted=false,ncMap=null,phase=-1;
-function synth(){try{ctx=new(window.AudioContext||window.webkitAudioContext)();ctx.resume();const master=ctx.createGain();master.gain.value=.16;master.connect(ctx.destination);const now=ctx.currentTime;const notes=[55,82.41,110,164.81,220,164.81,146.83,110];for(let i=0;i<28;i++){const o=ctx.createOscillator(),g=ctx.createGain();o.type=i%4===0?'sawtooth':'sine';o.frequency.setValueAtTime(notes[i%notes.length],now+i*.72);g.gain.setValueAtTime(.0001,now+i*.72);g.gain.exponentialRampToValueAtTime(.11,now+i*.72+.15);g.gain.exponentialRampToValueAtTime(.0001,now+i*.72+.85);o.connect(g);g.connect(master);o.start(now+i*.72);o.stop(now+i*.72+.9);voices.push(o)}const sub=ctx.createOscillator(),gain=ctx.createGain();sub.type='sine';sub.frequency.value=43.65;gain.gain.setValueAtTime(.0001,now);gain.gain.linearRampToValueAtTime(.18,now+1);gain.gain.linearRampToValueAtTime(.0001,now+21);sub.connect(gain);gain.connect(master);sub.start(now);sub.stop(now+21.1);voices.push(sub)}catch(e){el.querySelector('[data-action=sound]').textContent='AUDIO UNAVAILABLE'}}
+function synth(){try{
+ctx=new(window.AudioContext||window.webkitAudioContext)();ctx.resume();
+const now=ctx.currentTime, length=Math.max(1,21-elapsed);
+const master=ctx.createGain(),compressor=ctx.createDynamicsCompressor();
+master.gain.setValueAtTime(.0001,now);master.gain.exponentialRampToValueAtTime(.55,now+Math.min(1.8,length/3));master.gain.setValueAtTime(.55,now+Math.max(length-2, length/2));master.gain.exponentialRampToValueAtTime(.0001,now+length);
+compressor.threshold.value=-20;compressor.ratio.value=3;master.connect(compressor);compressor.connect(ctx.destination);
+const delay=ctx.createDelay(2),feedback=ctx.createGain(),wet=ctx.createGain();
+delay.delayTime.value=.48;feedback.gain.value=.32;wet.gain.value=.3;delay.connect(feedback);feedback.connect(delay);delay.connect(wet);wet.connect(master);
+function tone(freq,at,duration,volume,type='sine',pan=0){
+if(at>=length)return;duration=Math.min(duration,length-at);
+const o=ctx.createOscillator(),g=ctx.createGain(),filter=ctx.createBiquadFilter(),p=ctx.createStereoPanner();
+o.type=type;o.frequency.value=freq;filter.type='lowpass';filter.frequency.value=type==='sawtooth'?620:2400;p.pan.value=pan;
+g.gain.setValueAtTime(.0001,now+at);g.gain.exponentialRampToValueAtTime(volume,now+at+Math.min(.8,duration*.25));g.gain.exponentialRampToValueAtTime(.0001,now+at+duration);
+o.connect(filter);filter.connect(g);g.connect(p);p.connect(master);g.connect(delay);o.start(now+at);o.stop(now+at+duration+.05);voices.push(o);
+}
+// Warm detuned D-minor / suspended pad: broad, slowly evolving, no sharp beeps.
+[73.416,110,146.832,174.614,220].forEach((f,i)=>{tone(f*.998,0,length,.035,'sawtooth',-.55);tone(f*1.002,.05,length-.05,.035,'sawtooth',.55)});
+tone(36.708,0,length,.19);
+for(let t=0;t<length;t+=.8)tone(73.416,t,.65,.085);
+const notes=[293.665,440,523.251,587.33,659.255,587.33,440,349.228];
+for(let i=0;i*.65<length;i++)tone(notes[i%notes.length],i*.65,2.6,.023,'sine',i%2?.65:-.65);
+// Filtered air swell provides a quiet cinematic lift.
+const buffer=ctx.createBuffer(1,Math.ceil(ctx.sampleRate*length),ctx.sampleRate),samples=buffer.getChannelData(0);
+for(let i=0;i<samples.length;i++)samples[i]=Math.random()*2-1;
+const air=ctx.createBufferSource(),filter=ctx.createBiquadFilter(),gain=ctx.createGain();air.buffer=buffer;filter.type='bandpass';filter.Q.value=.7;filter.frequency.setValueAtTime(180,now);filter.frequency.exponentialRampToValueAtTime(2200,now+length);
+gain.gain.setValueAtTime(.0001,now);gain.gain.linearRampToValueAtTime(.025,now+length*.65);gain.gain.linearRampToValueAtTime(.0001,now+length);
+air.connect(filter);filter.connect(gain);gain.connect(master);air.start(now);air.stop(now+length);voices.push(air);
+}catch(e){el.querySelector('[data-action=sound]').textContent='AUDIO UNAVAILABLE'}}
 function startMap(){if(mapStarted||!window.L)return;mapStarted=true;ncMap=L.map('nc-map',{zoomControl:false,scrollWheelZoom:false,dragging:false}).setView([38,-101],3);const tiles=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',maxZoom:19}).addTo(ncMap);let tileErrors=0;tiles.on('tileerror',()=>{tileErrors++;if(tileErrors===3){document.getElementById('nc-map-tag').textContent='MAP UNAVAILABLE · LIFE LOCATIONS';}});const stops=[['Leesville · Home',31.1435,-93.261],['Lookout Mountain · Freeflight',34.915,-85.387],['Dockweiler Beach · Flying lessons',33.930,-118.435],['Cancún · Adventure',21.1619,-86.8515]];stops.forEach(([name,lat,lng])=>L.circleMarker([lat,lng],{radius:7,color:'#a6f8ff',fillColor:'#20cfff',fillOpacity:.9}).addTo(ncMap).bindPopup(name));setTimeout(()=>{if(!running)return;ncMap.invalidateSize();ncMap.flyTo([35,-108],4,{duration:1.4})},250);setTimeout(()=>{if(!running)return;ncMap.flyTo([33.93,-118.435],11,{duration:1.7});document.getElementById('nc-map-tag').textContent='DOCKWEILER / FREEFLIGHT'},2100);setTimeout(()=>{if(!running)return;ncMap.eachLayer(l=>{if(l instanceof L.CircleMarker&&Math.abs(l.getLatLng().lat-33.93)<.01)l.openPopup()})},4100)}
 function stopAudio(){if(ctx){ctx.close().catch(()=>{});ctx=null;voices=[]}}
 function exit(){running=false;cancelAnimationFrame(raf);stopAudio();el.classList.add('nc-leaving');document.body.classList.remove('nova-intro-active');sessionStorage.setItem('nova-intro-seen','1');setTimeout(()=>{el.remove();style.remove();const replay=document.createElement('button');replay.textContent='◈ REPLAY NOVA INTRO';replay.type='button';replay.style.cssText='position:fixed;right:12px;bottom:12px;z-index:100;border:1px solid #79e8ff77;border-radius:22px;background:#071d30d9;color:#b8eeff;padding:10px 13px;font:10px monospace;cursor:pointer';replay.onclick=()=>{sessionStorage.removeItem('nova-intro-seen');location.reload()};document.body.append(replay)},950)}
