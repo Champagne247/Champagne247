@@ -58,23 +58,18 @@ const fade=Math.min(1,Math.max(0,(21-elapsed)/1.5));
 ncSoundCues.forEach(cue=>cue.audio.volume=cue.volume*fade*(novaSpeaking?.23:1));
 }
 
-let novaSpeaking=false,novaUtterance=null;
+let novaSpeaking=false;
+const welcomeAudio=new Audio('/Champagne247/assets/Audio/ElevenLabs_2026-10-30T15_28_09_Adam%20Stone%20-%20Smooth%20and%20Relaxed_pvc_sp96_s83_sb86_v4.mp3');
+welcomeAudio.preload='auto';
+welcomeAudio.onplay=()=>{novaSpeaking=true;el.dataset.welcomeSpoken='true'};
+welcomeAudio.onended=()=>{novaSpeaking=false};
+welcomeAudio.onerror=()=>{novaSpeaking=false;el.querySelector('[data-action=start]')?.setAttribute('title','NOVA voice could not load. Try refreshing.')};
 function speakWelcome(){
- if(!el.isConnected||!el.querySelector('.nc-entry')||!('speechSynthesis' in window))return;
- stopWelcome();
- const speech=window.speechSynthesis;
- const available=speech.getVoices().filter(v=>/^en\b/i.test(v.lang));
- const preferred=available.find(v=>/Daniel|David|Guy|George|James|Aaron|Alex/i.test(v.name))||available.find(v=>/^en-US/i.test(v.lang))||available[0];
- novaUtterance=new SpeechSynthesisUtterance("Welcome to LIFE. Living intentionally, focused and empowered. I'm NOVA. Neural orchestration, vision and action. Your passions, people, dreams and memories, connected. Turn purpose into action with your MAP. Mission Alignment Protocol.");
- if(preferred)novaUtterance.voice=preferred;
- novaUtterance.lang=preferred?.lang||'en-US';novaUtterance.rate=.98;novaUtterance.pitch=.9;novaUtterance.volume=1;
- novaUtterance.onstart=()=>{novaSpeaking=true;el.dataset.welcomeSpoken='true'};
- novaUtterance.onend=()=>{novaSpeaking=false;novaUtterance=null};
- novaUtterance.onerror=()=>{novaSpeaking=false;novaUtterance=null};
- if(speech.paused)speech.resume();
- speech.speak(novaUtterance);
+ if(!el.isConnected||!el.querySelector('.nc-entry')||novaSpeaking)return;
+ welcomeAudio.currentTime=0;
+ welcomeAudio.play().catch(()=>{ /* Mobile Chrome may require a user gesture. */ });
 }
-function stopWelcome(){if(novaUtterance&&'speechSynthesis' in window){window.speechSynthesis.cancel();novaUtterance=null}novaSpeaking=false}
+function stopWelcome(){welcomeAudio.pause();welcomeAudio.currentTime=0;novaSpeaking=false}
 
 function synth(){ncSoundEnabled=true;syncSound()}
 function startMap(){if(mapStarted||!window.L)return;mapStarted=true;ncMap=L.map('nc-map',{zoomControl:false,scrollWheelZoom:false,dragging:false}).setView([38,-101],3);const tiles=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',maxZoom:19}).addTo(ncMap);let tileErrors=0;tiles.on('tileerror',()=>{tileErrors++;if(tileErrors===3){document.getElementById('nc-map-tag').textContent='MAP UNAVAILABLE · LIFE LOCATIONS';}});const stops=[['Leesville · Home',31.1435,-93.261],['Lookout Mountain · Freeflight',34.915,-85.387],['Dockweiler Beach · Flying lessons',33.930,-118.435],['Cancún · Adventure',21.1619,-86.8515]];stops.forEach(([name,lat,lng])=>L.circleMarker([lat,lng],{radius:7,color:'#a6f8ff',fillColor:'#20cfff',fillOpacity:.9}).addTo(ncMap).bindPopup(name));setTimeout(()=>{if(!running||phase!==1)return;ncMap.invalidateSize();ncMap.flyTo([35,-108],4,{duration:reduced?0:1.4,animate:!reduced})},250);setTimeout(()=>{if(!running||phase!==1)return;ncMap.flyTo([33.93,-118.435],11,{duration:reduced?0:1.7,animate:!reduced});document.getElementById('nc-map-tag').textContent='DOCKWEILER / FREEFLIGHT'},2100);setTimeout(()=>{if(!running||phase!==1)return;ncMap.eachLayer(l=>{if(l instanceof L.CircleMarker&&Math.abs(l.getLatLng().lat-33.93)<.01)l.openPopup()})},4100)}
@@ -88,17 +83,14 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&el.isConnected)exit
 const forceIntro=new URLSearchParams(location.search).get('intro')==='1';
 let introSeen=false;try{introSeen=sessionStorage.getItem('nova-intro-seen')==='1'}catch{}
 if(!forceIntro&&introSeen){exit()}
-else if('speechSynthesis' in window){
- const autoWelcome=()=>{if(el.isConnected&&el.querySelector('.nc-entry')&&el.dataset.welcomeSpoken!=='true'&&!novaSpeaking)speakWelcome()};
- window.speechSynthesis.getVoices();
- setTimeout(autoWelcome,500);
+else {
+ // Attempt autoplay on desktop; Android can unlock narration with a tap.
+ setTimeout(speakWelcome,500);
  const unlockWelcome=e=>{
-  if(!el.querySelector('.nc-entry')||el.dataset.welcomeSpoken==='true'||e.target.closest('button,a'))return;
+  if(!el.querySelector('.nc-entry')||el.dataset.welcomeSpoken==='true'||e.target.closest?.('button,a'))return;
   speakWelcome();
  };
  el.addEventListener('pointerup',unlockWelcome);
  el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')unlockWelcome(e)});
- // Some devices populate their voice list after initial page rendering.
- window.speechSynthesis.addEventListener('voiceschanged',autoWelcome,{once:true});
 }
 })();
