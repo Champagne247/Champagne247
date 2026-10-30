@@ -174,6 +174,12 @@ test('downloaded reviewed export preserves complete data and renders media and c
 
     await useExport(context, source);
     await page.goto(`${origin}/Champagne247/#${entry.id}`);
+    // The welcome screen is intentionally shown even with reduced motion.
+    const intro = page.locator('#nova-cinematic');
+    if (await intro.count()) {
+      await intro.locator('[data-action="skip"]').click();
+      await intro.waitFor({ state: 'detached' });
+    }
     const card = page.locator(`#${entry.id}`);
     assert.equal(await card.locator('h3').textContent(), entry.title);
     assert.equal(await card.locator('.entry-story').textContent(), entry.story);
@@ -366,3 +372,4 @@ test('selected files remain previews and never create an unuploaded media link',
   assert.deepEqual(errors,[]);
  } finally {await context.close();}
 });
+
