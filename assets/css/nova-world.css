@@ -1,0 +1,36 @@
+/* NOVA world: shared entrance artwork, scoped to the My LIFE homepage. */
+.nova-world{background:#050c17}
+.nova-world #main{background:linear-gradient(180deg,transparent 500px,#050c17 1080px),linear-gradient(90deg,#050c17 0%,#050c17e8 24%,#050c1766 53%,#050c1708 78%),url("/Champagne247/assets/map/backgrounds/nova-core-hero.webp") right top / auto 1030px no-repeat}
+.nova-world .site-header{background:#050c17d9;border-bottom-color:#82dfff22}
+.nova-world .future-hero{min-height:740px;min-height:min(860px,calc(100svh - 88px));display:flex;flex-direction:column;align-items:flex-start;justify-content:center;text-align:left;padding-block:100px 110px;position:relative}
+.nova-world .future-hero h1{max-width:660px;font-size:clamp(46px,5.1vw,76px);font-weight:600;line-height:1.04;letter-spacing:-.055em;text-wrap:balance;text-shadow:0 4px 35px #020812}
+.nova-world .future-hero h1 em{background:linear-gradient(110deg,#e7fcff,#7dddff 65%,#83aaff);background-clip:text}
+.nova-world .future-lead{max-width:510px;font-size:17px;line-height:1.8;color:#c8dce9;text-shadow:0 2px 16px #020812}
+.nova-world .future-lead strong{color:#effbff}
+.nova-world .future-hero .hero-actions{justify-content:flex-start;gap:22px;max-width:550px}
+.nova-world .eyebrow{color:#8fe6ff}
+.nova-world .signal{box-shadow:0 0 18px #7af3df}
+.nova-world .button.primary{color:#effcff;background:linear-gradient(120deg,#087fa7,#154971);border:1px solid #8cdeef;box-shadow:0 6px 28px #04b9e82b,inset 0 1px #ffffff30}
+.nova-world .button.primary:hover{background:linear-gradient(120deg,#1196be,#21638d);box-shadow:0 8px 32px #04b9e845}
+.nova-world .connections-card,.nova-world .nova-card,.nova-world .entry,.nova-world .vision-card,.nova-world .journal-tools{background:linear-gradient(135deg,#102b3be8,#081420f5);border-color:#79d9f12e;box-shadow:0 14px 45px #0003}
+.nova-world .connections-card h3{color:#a3e9ff;letter-spacing:.06em}
+.nova-world .connections-card p{line-height:1.75;color:#bdcfdc;font-size:14px}
+.nova-world .connections-card strong{color:#edf9ff}
+.nova-world .orbit-section{background:radial-gradient(ellipse at center,#066b8c18,transparent 65%)}
+.nova-world .orbit-caption{background:linear-gradient(110deg,#12374ad9,#081524);border-color:#79dcff3b}
+.nova-world .life-alignment{border-color:#71cde333!important}
+.nova-world .closing{background:radial-gradient(ellipse at right,#0a76922b,transparent 70%)}
+@media(min-width:1600px){.nova-world #main{background-size:auto,auto,cover;background-size:auto,auto,100% auto}.nova-world .future-hero{min-height:820px}}
+@media(max-width:1000px) and (min-width:701px){.nova-world #main{background-position:top,top,68% top}.nova-world .future-hero h1{max-width:520px}.nova-world .future-lead{max-width:430px}.nova-world .future-hero{min-height:690px}}
+@media(max-width:700px){
+.nova-world #main{background:linear-gradient(180deg,#050c1700 100px,#050c1722 220px,#050c17ed 440px,#050c17 690px),url("/Champagne247/assets/map/backgrounds/nova-core-hero.webp") 72% top / auto 570px no-repeat}
+.nova-world .future-hero{min-height:0;padding-top:340px;padding-bottom:40px;align-items:center;text-align:center}
+.nova-world .future-hero h1{font-size:clamp(38px,10.5vw,60px);max-width:580px;margin-block:20px}
+.nova-world .future-lead{font-size:15px;max-width:440px;margin-top:0;line-height:1.75}
+.nova-world .future-hero .hero-actions{justify-content:center;gap:14px;width:100%;margin-top:20px}
+.nova-world .future-hero .hero-actions .primary{min-width:240px;min-height:54px}
+.nova-world .future-hero .eyebrow{font-size:8px;letter-spacing:.13em}
+.nova-world .site-header{background:#050c17ed}
+}
+@media(max-width:380px){.nova-world .future-hero{padding-top:300px}.nova-world #main{background-size:auto,auto 510px}}
+@media(max-height:520px) and (orientation:landscape){.nova-world .future-hero{min-height:560px;padding-top:65px;padding-bottom:65px;align-items:flex-start;text-align:left}.nova-world #main{background:linear-gradient(90deg,#050c17f5,#050c17a6 50%,#050c1733),url("/Champagne247/assets/map/backgrounds/nova-core-hero.webp") right top / auto 650px no-repeat}.nova-world .future-hero h1{max-width:480px}.nova-world .future-lead{max-width:430px}}
