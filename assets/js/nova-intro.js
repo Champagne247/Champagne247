@@ -65,7 +65,7 @@ welcomeAudio.onplay=()=>{novaSpeaking=true;el.dataset.welcomeSpoken='true'};
 welcomeAudio.onended=()=>{novaSpeaking=false};
 welcomeAudio.onerror=()=>{novaSpeaking=false;el.querySelector('[data-action=start]')?.setAttribute('title','NOVA voice could not load. Try refreshing.')};
 function speakWelcome(){
- if(!el.isConnected||novaSpeaking)return;
+ if(!el.isConnected||exiting||muted||novaSpeaking||el.dataset.welcomeSpoken==='true')return;
  welcomeAudio.currentTime=0;
  welcomeAudio.play().catch(()=>{ /* Mobile Chrome may require a user gesture. */ });
 }
@@ -85,7 +85,7 @@ let introSeen=false;try{introSeen=sessionStorage.getItem('nova-intro-seen')==='1
 if(!forceIntro&&introSeen){exit()}
 else {
  // Attempt autoplay on desktop; Android can unlock narration with a tap.
- setTimeout(speakWelcome,500);
+ setTimeout(()=>{if(el.querySelector('.nc-entry'))speakWelcome()},500);
  const unlockWelcome=e=>{
   if(!el.querySelector('.nc-entry')||el.dataset.welcomeSpoken==='true'||e.target.closest?.('button,a'))return;
   speakWelcome();
