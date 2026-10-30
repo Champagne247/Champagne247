@@ -377,3 +377,25 @@ test('selected files remain previews and never create an unuploaded media link',
  } finally {await context.close();}
 });
 
+
+test('multi-photo moments stay in one inline carousel with arrows and keyboard navigation', async () => {
+  const { context, page, errors } = await session();
+  try {
+    await page.goto(origin + '/Champagne247/#family-homecoming-2026');
+    await page.keyboard.press('Escape');
+    await page.locator('#nova-cinematic').waitFor({state:'detached'});
+    const card=page.locator('#family-homecoming-2026');
+    const gallery=card.locator('.moment-gallery');
+    assert.equal(await gallery.locator('.moment-slide').count(),3);
+    assert.equal(await card.locator('.map-record-details figure').count(),0);
+    await gallery.getByRole('button',{name:'Next media',exact:true}).click();
+    await page.waitForFunction(() => document.querySelector('#family-homecoming-2026 .moment-count')?.textContent === '2 / 3');
+    await gallery.locator('.moment-track').focus();
+    await page.keyboard.press('ArrowRight');
+    await page.waitForFunction(() => document.querySelector('#family-homecoming-2026 .moment-count')?.textContent === '3 / 3');
+    await gallery.locator('.entry-media').nth(2).click();
+    assert.match(await page.textContent('#lightbox-caption'), /3 \/ 3/);
+    await page.click('#lightbox-close');
+    assert.deepEqual(errors,[]);
+  } finally {await context.close();}
+});

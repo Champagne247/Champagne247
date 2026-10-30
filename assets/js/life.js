@@ -73,7 +73,7 @@
     const links = (entry.links || []).filter(link => safeURL(link.url));
     const entryURL = `${canonical}#${encodeURIComponent(entry.id)}`;
     return `<article class="entry" id="${esc(entry.id)}">
-      ${leading.type === 'video' ? `<figure>${MAP_CONTENT.hero(leading,entry.title)}<figcaption>${esc(MAP_CONTENT.label(leading))}</figcaption></figure>` : images.length ? `<button type="button" class="entry-media" data-gallery="${esc(entry.id)}" aria-label="View ${images.length} photo${images.length === 1 ? '' : 's'} from ${esc(entry.title)}"><img src="${esc(safeURL(images[0].url))}" alt="${esc(images[0].alt || images[0].caption || entry.title)}" loading="lazy" width="900" height="600"><span class="photo-label"><span aria-hidden="true">↗</span> ${esc(MAP_CONTENT.label(images[0]))} · ${images.length > 1 ? `${images.length} photos` : 'View photo'}</span></button>` : `<figure class="entry-media entry-illustration">${MAP_CONTENT.hero(leading,entry.title)}<figcaption class="photo-label">Category illustration</figcaption></figure>`}
+      ${MAP_CONTENT.gallery(entry,categories[entry.primaryCategory]?.image || fallbackImage)}
       <div class="entry-content">
         <div class="entry-meta"><span>${esc((entry.categories || []).map(labels).join(' / '))}</span><span aria-hidden="true">·</span><time ${time(entry) ? `datetime="${new Date(time(entry)).toISOString()}"` : ''}>${esc(displayDate(entry))}</time><span class="entry-status">${isCurrent(entry) ? '● ' : ''}${esc(statusLabel(entry))}</span></div>
         <h3>${esc(entry.title)}</h3><p class="entry-story">${esc(paragraphs[0])}</p>
@@ -213,7 +213,7 @@
   $('lightbox-image').addEventListener('touchend',event => {if(touchStart !== undefined){const distance = event.changedTouches[0].clientX - touchStart;if(Math.abs(distance) > 60)showPhoto(photoIndex + (distance < 0 ? 1 : -1));touchStart = undefined;}},{passive:true});
   document.addEventListener('error',event => {
     const image = event.target;
-    if(image instanceof HTMLImageElement && image.closest('.entry-media')) {image.hidden=true;image.closest('.entry-media').querySelector('.photo-label').textContent='Image unavailable — source retained';return;}
+    if(image instanceof HTMLImageElement && image.closest('.entry-media')) {image.hidden=true;const caption=image.closest('.moment-slide')?.querySelector('.moment-caption')||image.closest('.entry-media').querySelector('.photo-label');if(caption)caption.textContent='Image unavailable — source retained';return;}
     if(image instanceof HTMLImageElement && image.src !== new URL(fallbackImage,location.origin).href) {image.src = fallbackImage;image.alt = 'My Life journey illustration';}
   },true);
   async function copy(text) {
@@ -224,7 +224,7 @@
     const button = event.target.closest('button');
     if(button?.dataset.filter) {filterTo(button.dataset.filter);return;}
     if(button?.dataset.tag) {filterTo(button.dataset.tag);$('journey').scrollIntoView({behavior:scrollBehavior()});$('filters').querySelector(`[data-filter="${activeFilter}"]`)?.focus({preventScroll:true});return;}
-    if(button?.dataset.gallery) {openedEntry = entries.find(entry => entry.id === button.dataset.gallery);galleryOpener = button;showPhoto(0);$('lightbox').showModal();return;}
+    if(button?.dataset.gallery) {openedEntry = entries.find(entry => entry.id === button.dataset.gallery);galleryOpener = button;showPhoto(Number(button.dataset.photoIndex)||0);$('lightbox').showModal();return;}
     const id = button?.dataset.copy || button?.dataset.share;
     if(id) {
       const entry = entries.find(item => item.id === id);
