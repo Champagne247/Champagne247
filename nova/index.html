@@ -725,7 +725,7 @@ footer{
   </a>
 
   <div class="brand">
-    YOUR L.I.F.E. COMPANION
+    YOUR PERSONAL INTELLIGENCE
   </div>
 
 </header>
@@ -757,7 +757,7 @@ footer{
 
     </div>
 
-    <div class="message"><p><strong>L.I.F.E. — Living Intentionally, Focused &amp; Empowered.</strong><br>The experience is yours. N.O.V.A. is your companion. M.A.P.—Mission Alignment Protocol—connects your purpose to action.</p>
+    <div class="message"><p><strong>L.I.F.E. — Living Intentionally, Focused &amp; Empowered.</strong><br>The experience is yours. N.O.V.A. is the personal superintelligence we’re building toward. M.A.P.—Mission Alignment Protocol—connects your purpose to action.</p>
 
       <h1>
         Hi.<br>
@@ -930,6 +930,7 @@ footer{
 
 </main>
 
+<aside class="life-alignment" aria-label="L.I.F.E., N.O.V.A. and M.A.P." style="max-width:1100px;margin:32px auto;padding:24px 20px;border-top:1px solid #29485e;color:#bdd7e5;font:14px/1.7 Arial,sans-serif"><strong style="color:#8bdcff">L.I.F.E. — Living Intentionally, Focused &amp; Empowered.</strong><p>Your whole experience. N.O.V.A.—Neural Orchestration, Vision &amp; Action—is the personal superintelligence we’re building toward. M.A.P.—Mission Alignment Protocol—connects your purpose to your next meaningful step.</p><nav aria-label="L.I.F.E. connections" style="display:flex;gap:18px;flex-wrap:wrap"><a href="/Champagne247/">My L.I.F.E.</a><a href="/Champagne247/nova/">Meet N.O.V.A.</a><a href="/Champagne247/map/">Understand M.A.P.</a><a href="/Champagne247/create/">Build my M.A.P.</a><a href="/Champagne247/account/">My account</a></nav></aside>
 <footer>
   N.O.V.A. ONLINE<br><br>
   SEE IT • M.A.P. IT • GET IT DONE
@@ -1202,43 +1203,9 @@ function getThemes(text){
         return b.score-a.score;
       });
 
-  if(matches.length<4){
-
-    const defaults=[
-      "family",
-      "home",
-      "health",
-      "freedom",
-      "purpose",
-      "travel"
-    ];
-
-    defaults.forEach(function(id){
-
-      if(matches.length>=6){
-        return;
-      }
-
-      const exists=
-        matches.some(function(item){
-          return item.id===id;
-        });
-
-      if(exists){
-        return;
-      }
-
-      const found=
-        themes.find(function(item){
-          return item.id===id;
-        });
-
-      if(found){
-        matches.push(found);
-      }
-
-    });
-
+  // Reflect only the user’s stated themes. Do not invent life priorities.
+  if(!matches.length){
+    return [{id:"personal",title:"My Vision",icon:"✦",className:"maplife",copy:"Your own words are the starting point. Refine your vision to connect specific life themes."}];
   }
 
   return matches.slice(0,10);
@@ -1300,6 +1267,8 @@ function renderBoard(text){
 
 function getSavedVision(){
 
+  const structuredFirst=localStorage.getItem("map_nova_vision");
+  if(structuredFirst){try{const saved=JSON.parse(structuredFirst);if(saved.vision)return saved.vision;}catch{}}
   const direct=
     localStorage.getItem("map_vision");
 
@@ -1335,7 +1304,7 @@ function getSavedVision(){
 }
 
 const savedVision=
-  getSavedVision();
+  (()=>{try{return getSavedVision();}catch{return "";}})();
 
 if(savedVision){
   input.value=savedVision;
@@ -1380,6 +1349,7 @@ document
         updatedAt:new Date().toISOString()
       };
 
+      try{
       localStorage.setItem(
         "map_vision",
         vision
@@ -1389,6 +1359,8 @@ document
         "map_nova_vision",
         JSON.stringify(visionData)
       );
+
+      }catch{error.textContent="Your browser could not save your vision. Check storage settings and try again.";error.style.display="block";return;}
 
       original.textContent=
         vision;
@@ -1438,3 +1410,4 @@ document
 
 </body>
 </html>
+
