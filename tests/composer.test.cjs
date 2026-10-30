@@ -301,7 +301,7 @@ test('provenance, business/source links, projects and multiple places survive re
     await useExport(context,source);
     await page.goto(`${origin}/Champagne247/#${entry.id}`);
     const card=page.locator('#'+entry.id);
-    assert.ok((await card.locator('.entry-media img').getAttribute('src')).endsWith('hero-fitness.webp'));
+    assert.ok((await card.locator('.entry-media img').first().getAttribute('src')).endsWith('hero-fitness.webp'));
     assert.match(await card.textContent(),/Business: Connected M.A.P./);
     assert.match(await card.textContent(),/Project: NOVA/);
     assert.match(await card.textContent(),/Source: https:\/\/example.test\/public-evidence/);

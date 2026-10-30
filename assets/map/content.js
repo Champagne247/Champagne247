@@ -61,6 +61,7 @@
         '<div class="moment-caption">'+esc(item.caption||item.alt||entry.title)+'</div></div>').join('')+'</div>'+
       (items.length>1?'<div class="moment-controls"><button type="button" data-moment-step="-1" aria-label="Previous media">←</button><span class="moment-count" aria-live="polite">1 / '+items.length+'</span><button type="button" data-moment-step="1" aria-label="Next media">→</button></div>':'')+'</div>';
   }
+  if(typeof document !== 'undefined') {
   const galleryStyle=document.createElement('style');
   galleryStyle.textContent=`
 .moment-gallery{position:relative;isolation:isolate;width:100%;height:100%;background:#050c16;overflow:hidden}
@@ -107,6 +108,7 @@
     track.querySelectorAll('video').forEach(video=>{if(!track.children[index]?.contains(video))video.pause();});
   },true);
 
+  }
   function coordinates(place) {
     if (place.visibility === 'private') return false;
     return ['lat','lng'].every(key => place[key] !== null && place[key] !== undefined && String(place[key]).trim() !== '' && Number.isFinite(Number(place[key]))) &&
