@@ -1017,10 +1017,6 @@ const themes=[
       "house",
       "property",
       "land",
-      "live",
-      "living",
-      "mountains",
-      "view",
       "cabin"
     ],
     copy:
@@ -1181,7 +1177,7 @@ function getThemes(text){
 
       theme.words.forEach(function(word){
 
-        if(clean.includes(word)){
+        if(new RegExp("\\b" + word + "\\b", "i").test(clean)){
           score++;
         }
 
