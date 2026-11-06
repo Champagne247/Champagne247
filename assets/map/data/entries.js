@@ -4,7 +4,7 @@ window.MAP_DATA = {
     "name": "M.A.P. Master Life Data",
     "description": "Single source of truth for My Life, My Mission and My M.A.P.",
     "canonicalBase": "https://champagne247.github.io/Champagne247",
-    "updatedAt": "2026-10-29T15:00:00-05:00"
+    "updatedAt": "2026-11-06T13:22:00-06:00"
   },
   "owner": {
     "id": "christopher-champagne",
@@ -78,6 +78,68 @@ window.MAP_DATA = {
     }
   },
   "entries": [
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "looking4lift-youtube-launch-2026",
+      "authorId": "christopher-champagne",
+      "title": "Looking4Lift • YouTube Channel Launch",
+      "story": "A second-generation hang glider pilot, following a dream held since childhood. Today I launched Looking4Lift on YouTube with a custom channel banner, matching profile emblem, a new description and my first Short about where the journey began. See it. Believe it. Achieve it.",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-11-06T13:22:00-06:00",
+      "updatedAt": "2026-11-06T13:22:00-06:00",
+      "eventAt": "2026-11-06T13:22:00-06:00",
+      "datetime": "2026-11-06T13:22:00-06:00",
+      "displayDate": "November 6, 2026 • Channel launch",
+      "primaryCategory": "freeflight",
+      "categories": [
+        "freeflight",
+        "creator"
+      ],
+      "locations": [],
+      "media": [
+        {
+          "id": "looking4lift-youtube-launch-hero",
+          "type": "image",
+          "source": "repository",
+          "url": "/Champagne247/assets/map/Hero/hero-freeflight.webp",
+          "caption": "Freeflight visual • temporary until the actual YouTube banner and screenshots are uploaded",
+          "alt": "Freeflight artwork (not the new YouTube banner)"
+        }
+      ],
+      "hashtags": [
+        "Looking4Lift",
+        "HangGliding",
+        "SecondGenerationPilot",
+        "YouTube"
+      ],
+      "links": [
+        {
+          "label": "Watch Looking4Lift on YouTube",
+          "url": "https://www.youtube.com/@Looking4Lift-247",
+          "kind": "social"
+        },
+        {
+          "label": "Explore Looking4Lift",
+          "url": "/Champagne247/looking4lift/",
+          "kind": "project"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "youtube"
+        ],
+        "state": "ready",
+        "published": {}
+      },
+      "platforms": [
+        "map",
+        "youtube"
+      ]
+    },
     {
       "schemaVersion": "1.0.0",
       "type": "life-entry",
@@ -2409,12 +2471,12 @@ window.MAP_DATA = {
       "id": "looking4lift",
       "authorId": "christopher-champagne",
       "title": "Looking4Lift",
-      "story": "Freeflight, hang gliding, VR experiences, travel, education, content and community.",
+      "story": "Looking4Lift is my second-generation hang gliding journey: a lifelong dream inspired by my father, now documented through flights, training, places and adventures. The YouTube channel launched with its new banner, profile logo, description and first origin-story Short.",
       "status": "progress",
       "lifecycle": "published",
       "visibility": "public",
       "createdAt": "2026-08-05T09:00:00-05:00",
-      "updatedAt": "2026-08-05T09:00:00-05:00",
+      "updatedAt": "2026-11-06T13:22:00-06:00",
       "eventAt": "2026-08-05T09:00:00-05:00",
       "datetime": "2026-08-05T09:00:00-05:00",
       "displayDate": "Building now",
@@ -2452,6 +2514,11 @@ window.MAP_DATA = {
         "VR"
       ],
       "links": [
+        {
+          "label": "Looking4Lift on YouTube • @Looking4Lift-247",
+          "url": "https://www.youtube.com/@Looking4Lift-247",
+          "kind": "social"
+        },
         {
           "label": "Explore Freeflight →",
           "url": "/Champagne247/looking4lift/"
