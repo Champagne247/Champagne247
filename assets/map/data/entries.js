@@ -84,7 +84,7 @@ window.MAP_DATA = {
       "id": "looking4lift-youtube-launch-2026",
       "authorId": "christopher-champagne",
       "title": "Looking4Lift • YouTube Launch | Where It All Began",
-      "story": "Looking4Lift is live! A second-generation hang glider pilot following a dream inspired by Pops. We created the channel emblem, cinematic and mobile-safe banners, wrote the channel description and launched our first Short: Where It All Began. Follow the flights, the people and the road to flying America. The YouTube channel is the home for the original media.",
+      "story": "Looking4Lift is live! A second-generation hang glider pilot following a dream inspired by Pops. We created the channel emblem, cinematic and mobile-safe banners, wrote the channel description and launched our first Short: Where It All Began. Follow the flights, the people and the road to flying America. Our first Short is now live: Where It All Began. Watch it directly from this story.",
       "status": "done",
       "lifecycle": "published",
       "visibility": "public",
@@ -116,6 +116,11 @@ window.MAP_DATA = {
         "YouTube"
       ],
       "links": [
+        {
+          "label": "Watch our first Short • Where It All Began",
+          "url": "https://youtube.com/shorts/N8nrGqnhRsA",
+          "kind": "video"
+        },
         {
           "label": "Looking4Lift • YouTube channel and videos",
           "url": "https://www.youtube.com/@Looking4Lift-247",
