@@ -83,8 +83,8 @@ window.MAP_DATA = {
       "type": "life-entry",
       "id": "looking4lift-youtube-launch-2026",
       "authorId": "christopher-champagne",
-      "title": "Looking4Lift • YouTube Channel Launch",
-      "story": "A second-generation hang glider pilot, following a dream held since childhood. Today I launched Looking4Lift on YouTube with a custom channel banner, matching profile emblem, a new description and my first Short about where the journey began. See it. Believe it. Achieve it.",
+      "title": "Looking4Lift • YouTube Launch | Where It All Began",
+      "story": "Looking4Lift is live! A second-generation hang glider pilot following a dream inspired by Pops. We created the channel emblem, cinematic and mobile-safe banners, wrote the channel description and launched our first Short: Where It All Began. Follow the flights, the people and the road to flying America. The YouTube channel is the home for the original media.",
       "status": "done",
       "lifecycle": "published",
       "visibility": "public",
@@ -105,8 +105,8 @@ window.MAP_DATA = {
           "type": "image",
           "source": "repository",
           "url": "/Champagne247/assets/map/Hero/hero-freeflight.webp",
-          "caption": "Freeflight visual • temporary until the actual YouTube banner and screenshots are uploaded",
-          "alt": "Freeflight artwork (not the new YouTube banner)"
+          "caption": "Looking4Lift freeflight cover — original YouTube branding is on the channel",
+          "alt": "Looking4Lift freeflight cover artwork"
         }
       ],
       "hashtags": [
@@ -116,6 +116,11 @@ window.MAP_DATA = {
         "YouTube"
       ],
       "links": [
+        {
+          "label": "Looking4Lift • YouTube channel and videos",
+          "url": "https://www.youtube.com/@Looking4Lift-247",
+          "kind": "video"
+        },
         {
           "label": "Watch Looking4Lift on YouTube",
           "url": "https://www.youtube.com/@Looking4Lift-247",
