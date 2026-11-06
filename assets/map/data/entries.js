@@ -101,12 +101,20 @@ window.MAP_DATA = {
       "locations": [],
       "media": [
         {
-          "id": "looking4lift-youtube-launch-hero",
+          "id": "looking4lift-first-short-thumbnail",
+          "type": "image",
+          "source": "external",
+          "url": "https://i.ytimg.com/vi/N8nrGqnhRsA/hqdefault.jpg",
+          "caption": "Where It All Began • First Looking4Lift YouTube Short",
+          "alt": "Thumbnail for the first Looking4Lift YouTube Short"
+        },
+        {
+          "id": "looking4lift-freeflight-hero",
           "type": "image",
           "source": "repository",
           "url": "/Champagne247/assets/map/Hero/hero-freeflight.webp",
-          "caption": "Looking4Lift freeflight cover — original YouTube branding is on the channel",
-          "alt": "Looking4Lift freeflight cover artwork"
+          "caption": "Looking4Lift freeflight journey",
+          "alt": "Looking4Lift freeflight hero artwork"
         }
       ],
       "hashtags": [
