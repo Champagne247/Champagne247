@@ -529,8 +529,7 @@ window.MAP_DATA = {
       "primaryCategory": "travel",
       "categories": [
         "travel",
-        "family",
-        "freeflight"
+        "family"
       ]
     },
     {
@@ -2492,16 +2491,7 @@ window.MAP_DATA = {
         "professional",
         "travel"
       ],
-      "locations": [
-        {
-          "id": "looking4lift-location-1",
-          "label": "Looking4Lift • United States",
-          "lat": 35.5,
-          "lng": -92.5,
-          "precision": "approximate",
-          "visibility": "public"
-        }
-      ],
+      "locations": [],
       "media": [
         {
           "id": "looking4lift-media-1",
