@@ -33,8 +33,9 @@
     return Number.isFinite(value) ? value : 0;
   };
   const isCurrent = entry => entry.status === 'now' && time(entry) <= Date.now() && Date.now() - time(entry) < 48 * 60 * 60 * 1000;
-  const active = entry => ['now','progress','next','goal'].includes(entry.status);
-  entries.sort((a,b) => Number(isCurrent(b)) - Number(isCurrent(a)) || Number(active(b)) - Number(active(a)) || time(b) - time(a));
+  // Sort by publication, not status or maintenance/import timestamps.
+  const publishedTime = entry => Date.parse(entry.createdAt || entry.reportedAt || entry.eventAt || entry.datetime || '') || 0;
+  entries.sort((a,b) => publishedTime(b) - publishedTime(a));
   const photos = entry => MAP_CONTENT.media(entry, 'image');
   const labels = key => categories[key]?.label || key;
   const params = new URLSearchParams(location.search);

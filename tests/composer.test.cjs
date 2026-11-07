@@ -400,7 +400,7 @@ test('multi-photo moments stay in one inline carousel with arrows and keyboard n
   } finally {await context.close();}
 });
 
-test('homepage blends map pins with five active-first moments and expandable journey', async () => {
+test('homepage blends map pins with five newest-first moments and expandable journey', async () => {
  const {context,page,errors}=await session();
  try {
   await context.addInitScript(()=>sessionStorage.setItem('nova-intro-seen','1'));
@@ -409,7 +409,7 @@ test('homepage blends map pins with five active-first moments and expandable jou
   assert.equal(await page.locator('#feed > article').count(),5);
   assert.ok(await page.locator('#life-map .leaflet-interactive').count()>0);
   assert.ok(await page.evaluate(()=>document.querySelector('#places').compareDocumentPosition(document.querySelector('#journey')) & Node.DOCUMENT_POSITION_FOLLOWING));
-  assert.equal(await page.evaluate(()=>{const id=document.querySelector('#feed > article').id;return ['now','progress','next','goal'].includes(window.MAP_DATA.entries.find(e=>e.id===id).status)}),true);
+  assert.equal(await page.evaluate(()=>{const date=e=>Date.parse(e.createdAt||e.reportedAt||e.eventAt||e.datetime||'')||0;const publicEntries=window.MAP_DATA.entries.filter(e=>e.visibility==='public'&&!['archived','draft'].includes(e.lifecycle)&&e.distribution?.state!=='testing');return date(publicEntries.find(e=>e.id===document.querySelector('#feed > article').id))===Math.max(...publicEntries.map(date));}),true);
   await page.click('#load-more');
   assert.equal(await page.locator('#feed > article').count(),10);
   // A provider failure cannot hide or interrupt the journey feed.
