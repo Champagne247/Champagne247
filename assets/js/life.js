@@ -33,13 +33,14 @@
     return Number.isFinite(value) ? value : 0;
   };
   const isCurrent = entry => entry.status === 'now' && time(entry) <= Date.now() && Date.now() - time(entry) < 48 * 60 * 60 * 1000;
-  entries.sort((a,b) => Number(isCurrent(b)) - Number(isCurrent(a)) || time(b) - time(a));
+  const active = entry => ['now','progress','next','goal'].includes(entry.status);
+  entries.sort((a,b) => Number(isCurrent(b)) - Number(isCurrent(a)) || Number(active(b)) - Number(active(a)) || time(b) - time(a));
   const photos = entry => MAP_CONTENT.media(entry, 'image');
   const labels = key => categories[key]?.label || key;
   const params = new URLSearchParams(location.search);
   let activeFilter = routes[params.get('path')] ? params.get('path') : 'all';
   let query = (params.get('q') || '').slice(0,200);
-  let limit = entries.length;
+  let limit = location.hash && entries.some(entry => `#${entry.id}` === location.hash) ? entries.length : 5;
   let toastTimer;
   let openedEntry;
   let photoIndex = 0;
@@ -147,11 +148,15 @@
     const term = query.trim().toLocaleLowerCase();
     const visible = entries.filter(entry => (activeFilter === 'all' || entry.categories?.includes(activeFilter)) &&
       [entry.title,entry.story,...(entry.categories || []).map(labels),...(entry.locations || []).map(item => typeof item === 'string' ? item : item.visibility === 'private' ? '' : item.label)].join(' ').toLocaleLowerCase().includes(term));
-    updateJourneyMap(visible);
     $('feed').innerHTML = visible.length ? visible.slice(0,limit).map(card).join('') : `<div class="empty"><strong>${data.entries ? 'No moments found.' : 'The journey could not load.'}</strong><br>${data.entries ? 'Try another word or clear the filters to explore the whole journey.' : 'Refresh the page to try again.'}</div>`;
     $('result-count').textContent = `${visible.length} moment${visible.length === 1 ? '' : 's'}${activeFilter !== 'all' ? ` · ${labels(activeFilter)}` : ' · All paths'}${query.trim() ? ' · Search results' : ''}`;
     $('reset').hidden = activeFilter === 'all' && !query;
     $('load-more').hidden = visible.length <= limit;
+    // A map failure must never prevent stories from rendering.
+    try { updateJourneyMap(visible); } catch(error) {
+      if($('life-map-summary')) $('life-map-summary').textContent='The map could not load. Your journey is still available below.';
+      console.warn('Journey map unavailable:',error);
+    }
     document.querySelectorAll('[data-filter]').forEach(button => button.setAttribute('aria-pressed',String(button.dataset.filter === activeFilter)));
   }
   function syncURL() {
@@ -163,7 +168,7 @@
   }
   function filterTo(value) {
     activeFilter = routes[value] ? value : 'all';
-    limit = entries.length;
+    limit = 5;
     render(); syncURL();
   }
   function toast(message) {
@@ -183,11 +188,11 @@
   $('path-grid').addEventListener('scroll',updatePathControls,{passive:true});
   new ResizeObserver(updatePathControls).observe($('path-grid'));
 
-  $('search').addEventListener('input',event => {query = event.target.value.slice(0,200);limit = entries.length;render();syncURL();});
-  $('reset').addEventListener('click',() => {query = '';activeFilter = 'all';limit = entries.length;$('search').value = '';render();syncURL();$('search').focus();});
+  $('search').addEventListener('input',event => {query = event.target.value.slice(0,200);limit = 5;render();syncURL();});
+  $('reset').addEventListener('click',() => {query = '';activeFilter = 'all';limit = 5;$('search').value = '';render();syncURL();$('search').focus();});
   $('load-more').addEventListener('click',() => {
     const previous = $('feed').children.length;
-    limit += 6;render();
+    limit += 5;render();
     $('feed').children[previous]?.querySelector('button,a,summary')?.focus();
   });
   function showPhoto(index) {

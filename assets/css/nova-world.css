@@ -43,3 +43,8 @@
 .nova-world .future-hero{min-height:0;padding-block:60px;background:radial-gradient(ellipse at right,#173f5b55,transparent 70%)}
 .nova-world .future-hero h2{font-size:clamp(32px,4vw,54px);max-width:660px;line-height:1.1;margin:20px 0}
 @media(max-width:600px){.nova-world #journey{padding-top:18px}.journey-section>.section-heading{align-items:start}.journey-intro{font-size:13px}.nova-world .future-hero{padding-top:40px;padding-bottom:40px}}
+
+/* Blend the geographic overview with a compact, expandable journey feed. */
+.journey-welcome{padding-block:28px 12px}.journey-welcome h1{font-size:clamp(28px,4vw,44px);font-weight:500;line-height:1.1;letter-spacing:-.04em;margin:12px 0}.journey-welcome>p:not(.eyebrow){color:#b9c8d7;font-size:14px;line-height:1.6;margin:10px 0}.welcome-links{display:flex;gap:24px;flex-wrap:wrap;margin-top:12px}
+.nova-world #places{padding-top:16px;padding-bottom:24px}#places .section-heading{margin-bottom:16px}#places #life-map{height:340px}#places.expanded #life-map{height:75vh}
+@media(max-width:600px){.journey-welcome{padding-top:20px}.journey-welcome h1{font-size:30px}#places #life-map{height:290px}#places.expanded #life-map{height:75vh}.welcome-links{gap:18px}}
