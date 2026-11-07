@@ -1,0 +1,14 @@
+Category,Part or subsystem,Qty,Candidate,Unit estimate USD low,Unit estimate USD high,Extended low USD,Extended high USD,Status,Verification needed,Source
+Compute,Single-board computer,1,Raspberry Pi 5 8GB,175,175,175,175,Reseller listing,Power and cooling; actual stock,https://www.pishop.us/product/raspberry-pi-5-8gb/
+Control,Microcontroller,1,Raspberry Pi Pico 2,5,15,5,15,Planning range,Logic levels and firmware,https://www.raspberrypi.com/products/
+Vision,Camera,1,Raspberry Pi Camera Module 3,25,40,25,40,Planning range,Cable and lens geometry,
+Drive,Encoder gearmotor,2,Pololu 4868 172:1 MP 12V,53.95,53.95,107.90,107.90,Manufacturer listing,Torque and speed for actual mass,https://www.pololu.com/product/4868/resources
+Drive,Dual motor driver,1,TBD 12V brushed DC,30,70,30,70,Estimate,Peak current and thermal margin,
+Expression,Face display,1,TBD LCD/OLED,20,60,20,60,Estimate,Display interface and power,
+Audio,Microphone and speaker,1,TBD USB/I2S audio set,20,60,20,60,Estimate,Driver and acoustic testing,
+Actuation,Head arms servo package,1,TBD servos and brackets,60,180,60,180,Estimate,Stall current and torque,
+Sensing,IMU and proximity package,1,TBD,20,70,20,70,Estimate,Electrical interface and field of view,
+Power,Protected battery and regulators,1,TBD,70,160,70,160,Estimate,Cell protection fuses and charger,
+Mechanical,Printed body chassis wheels hardware,1,TBD,60,180,60,180,Estimate,Print volume strength and tolerance,
+Consumables,Wiring connectors test consumables,1,TBD,40,100,40,100,Estimate,Existing inventory and safety,
+TOTAL,Planning estimate excluding contingency,,,,,632.90,1307.90,NOT A QUOTE,Reprice before purchase,
