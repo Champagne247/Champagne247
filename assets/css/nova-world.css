@@ -34,3 +34,12 @@
 }
 @media(max-width:380px){.nova-world .future-hero{padding-top:300px}.nova-world #main{background-size:auto,auto 510px}}
 @media(max-height:520px) and (orientation:landscape){.nova-world .future-hero{min-height:560px;padding-top:65px;padding-bottom:65px;align-items:flex-start;text-align:left}.nova-world #main{background:linear-gradient(90deg,#050c17f5,#050c17a6 50%,#050c1733),url("/Champagne247/assets/map/backgrounds/nova-core-hero.webp") right top / auto 650px no-repeat}.nova-world .future-hero h1{max-width:480px}.nova-world .future-lead{max-width:430px}}
+
+/* The public homepage opens on Christopher's complete journey after the intro. */
+.nova-world #main{background:#050c17}
+.nova-world #journey{padding-top:28px}
+#journey-title{margin:8px 0;font-size:clamp(32px,4vw,48px);line-height:1.1;font-weight:500;letter-spacing:-.045em}
+.journey-intro{color:#b9c8d7;font-size:14px;line-height:1.6;max-width:620px;margin:12px 0 0}
+.nova-world .future-hero{min-height:0;padding-block:60px;background:radial-gradient(ellipse at right,#173f5b55,transparent 70%)}
+.nova-world .future-hero h2{font-size:clamp(32px,4vw,54px);max-width:660px;line-height:1.1;margin:20px 0}
+@media(max-width:600px){.nova-world #journey{padding-top:18px}.journey-section>.section-heading{align-items:start}.journey-intro{font-size:13px}.nova-world .future-hero{padding-top:40px;padding-bottom:40px}}

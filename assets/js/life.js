@@ -39,7 +39,7 @@
   const params = new URLSearchParams(location.search);
   let activeFilter = routes[params.get('path')] ? params.get('path') : 'all';
   let query = (params.get('q') || '').slice(0,200);
-  let limit = location.hash && entries.some(entry => `#${entry.id}` === location.hash) ? entries.length : 6;
+  let limit = entries.length;
   let toastTimer;
   let openedEntry;
   let photoIndex = 0;
@@ -90,7 +90,7 @@
   let pinLayer;
   function updateJourneyMap(visible) {
     if (!window.L || !$('life-map')) {
-      if($('life-map-summary')) $('life-map-summary').textContent='Map unavailable. The complete journey remains below.';
+      if($('life-map-summary')) $('life-map-summary').textContent='Map unavailable. The complete journey is available in the feed.';
       return;
     }
     if(!journeyMap){
@@ -163,7 +163,7 @@
   }
   function filterTo(value) {
     activeFilter = routes[value] ? value : 'all';
-    limit = 6;
+    limit = entries.length;
     render(); syncURL();
   }
   function toast(message) {
@@ -183,8 +183,8 @@
   $('path-grid').addEventListener('scroll',updatePathControls,{passive:true});
   new ResizeObserver(updatePathControls).observe($('path-grid'));
 
-  $('search').addEventListener('input',event => {query = event.target.value.slice(0,200);limit = 6;render();syncURL();});
-  $('reset').addEventListener('click',() => {query = '';activeFilter = 'all';limit = 6;$('search').value = '';render();syncURL();$('search').focus();});
+  $('search').addEventListener('input',event => {query = event.target.value.slice(0,200);limit = entries.length;render();syncURL();});
+  $('reset').addEventListener('click',() => {query = '';activeFilter = 'all';limit = entries.length;$('search').value = '';render();syncURL();$('search').focus();});
   $('load-more').addEventListener('click',() => {
     const previous = $('feed').children.length;
     limit += 6;render();
