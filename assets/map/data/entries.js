@@ -1223,13 +1223,13 @@ window.MAP_DATA = {
       "type": "life-entry",
       "id": "family-homecoming-2026",
       "authorId": "christopher-champagne",
-      "title": "Family Milestone • Homecoming",
-      "story": "Celebrating a family homecoming milestone and the little details that make the occasion memorable.",
+      "title": "Aiden & Zachary • Homecoming 2026",
+      "story": "Aiden and Zachary looking sharp for homecoming 2026. A family milestone, captured in our actual photos.",
       "status": "done",
       "lifecycle": "published",
       "visibility": "public",
       "createdAt": "2026-10-24T12:00:00-05:00",
-      "updatedAt": "2026-10-26T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:45:00-06:00",
       "eventAt": "2026-10-24T12:00:00-05:00",
       "datetime": "2026-10-24T12:00:00-05:00",
       "displayDate": "2026-10-24",
@@ -1238,7 +1238,41 @@ window.MAP_DATA = {
         "family"
       ],
       "locations": [],
-      "media": [],
+      "media": [
+        {
+          "type": "image",
+          "url": "/Champagne247/assets/map/photos/homecoming-2026-wide.webp",
+          "alt": "Aiden and Zachary dressed for homecoming 2026",
+          "caption": "Aiden & Zachary • Homecoming 2026",
+          "provenance": {
+            "kind": "own",
+            "actualSubject": true,
+            "credit": "Chris Champagne • supplied family photo"
+          }
+        },
+        {
+          "type": "image",
+          "url": "/Champagne247/assets/map/photos/homecoming-2026-full.webp",
+          "alt": "Aiden and Zachary dressed for homecoming 2026",
+          "caption": "Aiden & Zachary • Homecoming 2026",
+          "provenance": {
+            "kind": "own",
+            "actualSubject": true,
+            "credit": "Chris Champagne • supplied family photo"
+          }
+        },
+        {
+          "type": "image",
+          "url": "/Champagne247/assets/map/photos/homecoming-2026-portrait.webp",
+          "alt": "Aiden and Zachary dressed for homecoming 2026",
+          "caption": "Aiden & Zachary • Homecoming 2026",
+          "provenance": {
+            "kind": "own",
+            "actualSubject": true,
+            "credit": "Chris Champagne • supplied family photo"
+          }
+        }
+      ],
       "hashtags": [
         "MyLife",
         "MyMAP"
