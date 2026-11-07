@@ -1,6 +1,3 @@
-Warning: truncated output (original token count: 70244)
-Total output lines: 6726
-
 window.MAP_DATA = {
   "schemaVersion": "1.0.0",
   "meta": {
@@ -3183,7 +3180,1195 @@ window.MAP_DATA = {
           "url": "https://facebook.com/122118461787465672/posts/122113870959465672",
           "publishedDate": "20260922",
           "verifiedAt": "2026-11-07",
-          "caption": "GOT A $20,000 HVAC QUOTE? 👀\n\…15244 tokens truncated…d. 🦪 Fresh oysters 🍤 Gulf seafood 🎣 Pier life 🪁 Flying the new foil kite on the beach ☀️ Sunshine & Gulf breeze 🎨 Exploring the Strand ❤️ And most importantly — making memories with my wife. We ate, explored, laughed, flew, walked the beach and squeezed about as much as possible into one weekend. 😂 THIS is what weekends are for. Work hard. Fly high. Eat well. Live free. 🤙 #Galveston #GalvestonTX #GalvestonIsland #TexasCoast #GulfCoast "
+          "caption": "GOT A $20,000 HVAC QUOTE? 👀\n\nBefore you sign, get a second quote from a local technician.\n\nComplete heat pump replacements starting at $7,500 for qualifying standard installations. I’ll inspect your setup, explain what your home needs, and give you a written price before work begins.\n\n📍 Serving Leesville, Fort Johnson, DeRidder & surrounding areas\n\n📲 Text “20K” and a photo of your quote to CC’s Technical Services for a second opinion.\n\nFinal price depends on equipment size, existing ductwork, electrical needs, and installation conditions."
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "facebook"
+        ],
+        "state": "published",
+        "published": {
+          "facebook": "https://facebook.com/122118461787465672/posts/122113870959465672"
+        }
+      },
+      "platforms": [
+        "map",
+        "facebook"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-facebook-122110717077465672",
+      "authorId": "christopher-champagne",
+      "title": "CC’s • Custom Security Systems",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-16T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-09-16T12:00:00-05:00",
+      "datetime": "2026-09-16T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-09-16 · shared on facebook",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "story": "Build your security system your way!\n\nCameras starting at $129 and network recorders starting at $199. \n\nChoose your camera styles, resolution, recording capacity, storage and smart features.\n\nEquipment pricing shown. Professional installation quoted separately.\n\nText photos of your property to 337-423-2331 for a custom quote.\n\nHistorical post: prices and promotions reflect the original publication; contact CC’s for current pricing and availability.",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View facebook post · 2026-09-16",
+          "url": "https://facebook.com/122118461787465672/posts/122110717077465672",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "facebook original post",
+          "url": "https://facebook.com/122118461787465672/posts/122110717077465672",
+          "publishedDate": "20260916",
+          "verifiedAt": "2026-11-07",
+          "caption": "Build your security system your way!\n\nCameras starting at $129 and network recorders starting at $199. \n\nChoose your camera styles, resolution, recording capacity, storage and smart features.\n\nEquipment pricing shown. Professional installation quoted separately.\n\nText photos of your property to 337-423-2331 for a custom quote."
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "facebook"
+        ],
+        "state": "published",
+        "published": {
+          "facebook": "https://facebook.com/122118461787465672/posts/122110717077465672"
+        }
+      },
+      "platforms": [
+        "map",
+        "facebook"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-facebook-122110709199465672",
+      "authorId": "christopher-champagne",
+      "title": "CC’s • Surveillance Packages",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-16T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-09-16T12:00:00-05:00",
+      "datetime": "2026-09-16T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-09-16 · shared on facebook",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "story": "🛡️ PROFESSIONAL SECURITY CAMERA SYSTEMS\n\nCC’s Security & Surveillance is still actively installing professional surveillance systems for homes, shops, offices, and small businesses.\n\nChoose the coverage that fits your property:\n\n✅ 2-Camera System — Starting at $1,995 installed\n✅ 4-Camera System — Starting at $2,995 installed\n✅ 8-Camera System — Starting at $4,995 installed\n\nPackages include professional-grade cameras, local recording, remote phone viewing, professional installation, system setup, and customer training.\n\nSystems can be customized and expanded as your needs grow.\n\nServing Leesville, Fort Polk, DeRidder, and surrounding areas.\n\n📲 Text or message photos of your property for a personalized quote.\n\nCC’s Security & Surveillance\nA division of CC’s Technical Services\nCcstechnicalservices.com \n\nStarting prices cover standard installations. Extended wiring, difficult access, conduit, trenching, lifts, electrical work, network upgrades, and specialty mounting are quoted separately.\n\nHistorical post: prices and promotions reflect the original publication; contact CC’s for current pricing and availability.",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View facebook post · 2026-09-16",
+          "url": "https://facebook.com/122118461787465672/posts/122110709199465672",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "facebook original post",
+          "url": "https://facebook.com/122118461787465672/posts/122110709199465672",
+          "publishedDate": "20260916",
+          "verifiedAt": "2026-11-07",
+          "caption": "🛡️ PROFESSIONAL SECURITY CAMERA SYSTEMS\n\nCC’s Security & Surveillance is still actively installing professional surveillance systems for homes, shops, offices, and small businesses.\n\nChoose the coverage that fits your property:\n\n✅ 2-Camera System — Starting at $1,995 installed\n✅ 4-Camera System — Starting at $2,995 installed\n✅ 8-Camera System — Starting at $4,995 installed\n\nPackages include professional-grade cameras, local recording, remote phone viewing, professional installation, system setup, and customer training.\n\nSystems can be customized and expanded as your needs grow.\n\nServing Leesville, Fort Polk, DeRidder, and surrounding areas.\n\n📲 Text or message photos of your property for a personalized quote.\n\nCC’s Security & Surveillance\nA division of CC’s Technical Services\nCcstechnicalservices.com \n\nStarting prices cover standard installations. Extended wiring, difficult access, conduit, trenching, lifts, electrical work, network upgrades, and specialty mounting are quoted separately."
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "facebook"
+        ],
+        "state": "published",
+        "published": {
+          "facebook": "https://facebook.com/122118461787465672/posts/122110709199465672"
+        }
+      },
+      "platforms": [
+        "map",
+        "facebook"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-facebook-122110208739465672",
+      "authorId": "christopher-champagne",
+      "title": "Need heating and cooling for a garage, bedroom, shop, or a room your current system c",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-15T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-09-15T12:00:00-05:00",
+      "datetime": "2026-09-15T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-09-15 · shared on facebook",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "story": "Need heating and cooling for a garage, bedroom, shop, or a room your current system can’t keep comfortable?\n\nA mini-split can heat and cool that space without extending your existing ductwork. CC’s Technical Services installs them around Leesville, New Llano, Rosepine, and nearby communities.\n\nText 337-423-2331 with your ZIP code, room size, and a couple photos of the space. I’ll help you choose the right setup and give you a clear quote.\n\nChris Champagne \nCC'S Technical Services \nCcstechnicalservices.com",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View facebook post · 2026-09-15",
+          "url": "https://facebook.com/122118461787465672/posts/122110208739465672",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "facebook original post",
+          "url": "https://facebook.com/122118461787465672/posts/122110208739465672",
+          "publishedDate": "20260915",
+          "verifiedAt": "2026-11-07",
+          "caption": "Need heating and cooling for a garage, bedroom, shop, or a room your current system can’t keep comfortable?\n\nA mini-split can heat and cool that space without extending your existing ductwork. CC’s Technical Services installs them around Leesville, New Llano, Rosepine, and nearby communities.\n\nText 337-423-2331 with your ZIP code, room size, and a couple photos of the space. I’ll help you choose the right setup and give you a clear quote.\n\nChris Champagne \nCC'S Technical Services \nCcstechnicalservices.com"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "facebook"
+        ],
+        "state": "published",
+        "published": {
+          "facebook": "https://facebook.com/122118461787465672/posts/122110208739465672"
+        }
+      },
+      "platforms": [
+        "map",
+        "facebook"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-facebook-122110208127465672",
+      "authorId": "christopher-champagne",
+      "title": "AC not cooling in Leesville or the surrounding area",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-15T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-09-15T12:00:00-05:00",
+      "datetime": "2026-09-15T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-09-15 · shared on facebook",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "story": "AC not cooling in Leesville or the surrounding area? Before you agree to a full replacement, let’s find out what’s actually wrong.\n\nI’m Chris with CC’s Technical Services. I handle HVAC diagnostics, repairs, and system replacements, and I’ll explain your options clearly.\n\nText 337-423-2331 with your ZIP code, what the system is doing, and a photo of the unit if you have one. Let’s get you a practical answer.\n\nChris Champagne \nCC'S Technical Services \nCcstechnicalservices.com",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View facebook post · 2026-09-15",
+          "url": "https://facebook.com/122118461787465672/posts/122110208127465672",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "facebook original post",
+          "url": "https://facebook.com/122118461787465672/posts/122110208127465672",
+          "publishedDate": "20260915",
+          "verifiedAt": "2026-11-07",
+          "caption": "AC not cooling in Leesville or the surrounding area? Before you agree to a full replacement, let’s find out what’s actually wrong.\n\nI’m Chris with CC’s Technical Services. I handle HVAC diagnostics, repairs, and system replacements, and I’ll explain your options clearly.\n\nText 337-423-2331 with your ZIP code, what the system is doing, and a photo of the unit if you have one. Let’s get you a practical answer.\n\nChris Champagne \nCC'S Technical Services \nCcstechnicalservices.com"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "facebook"
+        ],
+        "state": "published",
+        "published": {
+          "facebook": "https://facebook.com/122118461787465672/posts/122110208127465672"
+        }
+      },
+      "platforms": [
+        "map",
+        "facebook"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-facebook-122107844919465672",
+      "authorId": "christopher-champagne",
+      "title": "CC’s • Restoring Bedroom Comfort",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-12T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-09-12T12:00:00-05:00",
+      "datetime": "2026-09-12T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-09-12 · shared on facebook",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "story": "🔥 ANOTHER MINI-SPLIT INSTALLED! ❄️\n\nThis one meant a little more than just getting another system running.\n\nThe customer had actually been sleeping in the living room after another technician left them in a bind. We got over there, figured out what needed to happen, corrected the situation, and got them back to being comfortable in their own bedroom. 🙌\n\nThat’s what CC’s Technical Services is about.\n\n✅ Mini-split installation\n✅ Troubleshooting & repairs\n✅ Second opinions\n✅ Upfront pricing\n✅ Local service\n\n If you’re ever in doubt, something doesn’t seem right, or you just want a second opinion — message me.\n\nSometimes you don’t need another sales pitch.\nYou just need someone willing to figure it out.\n\n📲 CC’s Technical Services\nLeesville • Fort Johnson • DeRidder & surrounding areas\n\nComfort You Can Count On. 🔧❄️🔥",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View facebook post · 2026-09-12",
+          "url": "https://facebook.com/122118461787465672/posts/122107844919465672",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "facebook original post",
+          "url": "https://facebook.com/122118461787465672/posts/122107844919465672",
+          "publishedDate": "20260912",
+          "verifiedAt": "2026-11-07",
+          "caption": "🔥 ANOTHER MINI-SPLIT INSTALLED! ❄️\n\nThis one meant a little more than just getting another system running.\n\nThe customer had actually been sleeping in the living room after another technician left them in a bind. We got over there, figured out what needed to happen, corrected the situation, and got them back to being comfortable in their own bedroom. 🙌\n\nThat’s what CC’s Technical Services is about.\n\n✅ Mini-split installation\n✅ Troubleshooting & repairs\n✅ Second opinions\n✅ Upfront pricing\n✅ Local service\n\n If you’re ever in doubt, something doesn’t seem right, or you just want a second opinion — message me.\n\nSometimes you don’t need another sales pitch.\nYou just need someone willing to figure it out.\n\n📲 CC’s Technical Services\nLeesville • Fort Johnson • DeRidder & surrounding areas\n\nComfort You Can Count On. 🔧❄️🔥"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "facebook"
+        ],
+        "state": "published",
+        "published": {
+          "facebook": "https://facebook.com/122118461787465672/posts/122107844919465672"
+        }
+      },
+      "platforms": [
+        "map",
+        "facebook"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-facebook-122103053553465672",
+      "authorId": "christopher-champagne",
+      "title": "CC’s • Mini-Split Installation",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-07T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-09-07T12:00:00-05:00",
+      "datetime": "2026-09-07T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-09-07 · shared on facebook",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "story": "🔥 I'M INSTALLING A MINI-SPLIT THIS WEEK — WHO NEEDS ONE? ❄️\n\nGarage too hot?\n\nWorkshop miserable?\n\nBedroom that never cools right?\n\nMan cave, home gym, shed, addition or office with no ductwork?\n\nA ductless mini-split may be one of the simplest ways to add heating + cooling exactly where you need it without replacing your entire HVAC system.\n\nI'm opening up a spot this week for a complete mini-split installation through CC's Technical Services.\n\n✅ Heating & cooling\n✅ Energy-efficient zoned comfort\n✅ No ductwork required\n✅ Great for garages, shops, additions & problem rooms\n✅ Professional installation\n✅ Upfront pricing\n✅ Local service\n\nBasic 12,000 BTU installation starting around $1,500 labor for a straightforward ground-level installation.\n\nNeed the system supplied too? Send me a couple pictures of the space and I'll put together an equipment + installation price.\n\nNo pressure. No sales call required.\n\n📲 Message me “MINI SPLIT” and send a few pictures of the room and where you'd like the outdoor unit.\n\nCC's Technical Services\nLeesville • Fort Johnson • DeRidder & surrounding areas\n\nHistorical post: prices and promotions reflect the original publication; contact CC’s for current pricing and availability.",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View facebook post · 2026-09-07",
+          "url": "https://facebook.com/122118461787465672/posts/122103053553465672",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "facebook original post",
+          "url": "https://facebook.com/122118461787465672/posts/122103053553465672",
+          "publishedDate": "20260907",
+          "verifiedAt": "2026-11-07",
+          "caption": "🔥 I'M INSTALLING A MINI-SPLIT THIS WEEK — WHO NEEDS ONE? ❄️\n\nGarage too hot?\n\nWorkshop miserable?\n\nBedroom that never cools right?\n\nMan cave, home gym, shed, addition or office with no ductwork?\n\nA ductless mini-split may be one of the simplest ways to add heating + cooling exactly where you need it without replacing your entire HVAC system.\n\nI'm opening up a spot this week for a complete mini-split installation through CC's Technical Services.\n\n✅ Heating & cooling\n✅ Energy-efficient zoned comfort\n✅ No ductwork required\n✅ Great for garages, shops, additions & problem rooms\n✅ Professional installation\n✅ Upfront pricing\n✅ Local service\n\nBasic 12,000 BTU installation starting around $1,500 labor for a straightforward ground-level installation.\n\nNeed the system supplied too? Send me a couple pictures of the space and I'll put together an equipment + installation price.\n\nNo pressure. No sales call required.\n\n📲 Message me “MINI SPLIT” and send a few pictures of the room and where you'd like the outdoor unit.\n\nCC's Technical Services\nLeesville • Fort Johnson • DeRidder & surrounding areas"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "facebook"
+        ],
+        "state": "published",
+        "published": {
+          "facebook": "https://facebook.com/122118461787465672/posts/122103053553465672"
+        }
+      },
+      "platforms": [
+        "map",
+        "facebook"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-facebook-122099947971465672",
+      "authorId": "christopher-champagne",
+      "title": "CC’s • Service Portal QR Test",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-03T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-09-03T12:00:00-05:00",
+      "datetime": "2026-09-03T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-09-03 · shared on facebook",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "story": "Here you go: 🚨 HELP US TEST SOMETHING NEW! 🚨 \n\nYou're looking at the new CC's Technical Services Service Portal sticker — and pretty soon you'll start seeing these on equipment we service and install around the area. 👀 \n\nBut before we start putting them out there, I want YOU to test it. 📱 Grab your phone and scan the QR code in this picture. Once you're on the site, \n\n👉 Find the TEXT US option. 👉 Send us the words \"QR TEST.\" That's it. 😎\n\n First 10 people who scan it and text \"QR TEST\" get a $25 service credit towards a future call.\n\n HVAC • Electrical • Refrigeration • Ice Machines • Restaurant • Equipment • Security • Low Voltage.\n\n CC's Technical Services, local, straightforward, one scan away. 🔧⚡❄️ \n\nHelp me HELP YOU!\n\nCC\n\nHistorical post: prices and promotions reflect the original publication; contact CC’s for current pricing and availability.",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View facebook post · 2026-09-03",
+          "url": "https://facebook.com/122118461787465672/posts/122099947971465672",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "facebook original post",
+          "url": "https://facebook.com/122118461787465672/posts/122099947971465672",
+          "publishedDate": "20260903",
+          "verifiedAt": "2026-11-07",
+          "caption": "Here you go: 🚨 HELP US TEST SOMETHING NEW! 🚨 \n\nYou're looking at the new CC's Technical Services Service Portal sticker — and pretty soon you'll start seeing these on equipment we service and install around the area. 👀 \n\nBut before we start putting them out there, I want YOU to test it. 📱 Grab your phone and scan the QR code in this picture. Once you're on the site, \n\n👉 Find the TEXT US option. 👉 Send us the words \"QR TEST.\" That's it. 😎\n\n First 10 people who scan it and text \"QR TEST\" get a $25 service credit towards a future call.\n\n HVAC • Electrical • Refrigeration • Ice Machines • Restaurant • Equipment • Security • Low Voltage.\n\n CC's Technical Services, local, straightforward, one scan away. 🔧⚡❄️ \n\nHelp me HELP YOU!\n\nCC"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "facebook"
+        ],
+        "state": "published",
+        "published": {
+          "facebook": "https://facebook.com/122118461787465672/posts/122099947971465672"
+        }
+      },
+      "platforms": [
+        "map",
+        "facebook"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-facebook-122098505655465672",
+      "authorId": "christopher-champagne",
+      "title": "CC’s • Customer Welcome Offer",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-01T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-09-01T12:00:00-05:00",
+      "datetime": "2026-09-01T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-09-01 · shared on facebook",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "story": "🔧 NEW CUSTOMER SPECIAL! New to CC’S\n\n Technical Services? Give us a try and receive $25 OFF your first service call! \n\nHVAC • Electrical • Refrigeration • Security • Low Voltage • IT \n\nProfessional diagnostics. Honest solutions. Quality workmanship. \n\nServing Leesville, Fort Johnson & surrounding areas.\n\nHistorical post: prices and promotions reflect the original publication; contact CC’s for current pricing and availability.",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View facebook post · 2026-09-01",
+          "url": "https://facebook.com/122118461787465672/posts/122098505655465672",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "facebook original post",
+          "url": "https://facebook.com/122118461787465672/posts/122098505655465672",
+          "publishedDate": "20260901",
+          "verifiedAt": "2026-11-07",
+          "caption": "🔧 NEW CUSTOMER SPECIAL! New to CC’S\n\n Technical Services? Give us a try and receive $25 OFF your first service call! \n\nHVAC • Electrical • Refrigeration • Security • Low Voltage • IT \n\nProfessional diagnostics. Honest solutions. Quality workmanship. \n\nServing Leesville, Fort Johnson & surrounding areas."
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "facebook"
+        ],
+        "state": "published",
+        "published": {
+          "facebook": "https://facebook.com/122118461787465672/posts/122098505655465672"
+        }
+      },
+      "platforms": [
+        "map",
+        "facebook"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-facebook-journal-202609",
+      "authorId": "christopher-champagne",
+      "title": "Facebook • Video & Photo Journal · 2026-09",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-01T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-09-01T12:00:00-05:00",
+      "datetime": "2026-09-01T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-09-01 · shared on facebook",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator"
+      ],
+      "story": "A collection of posts shared on facebook. Open the original posts below to watch or view them; captions were not supplied by the connected account.",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View facebook post · 2026-09-01",
+          "url": "https://facebook.com/122118461787465672/posts/122098499037465672",
+          "kind": "social"
+        },
+        {
+          "label": "View facebook post · 2026-09-01",
+          "url": "https://facebook.com/122118461787465672/posts/2921325994868133",
+          "kind": "social"
+        },
+        {
+          "label": "View facebook post · 2026-09-01",
+          "url": "https://facebook.com/122118461787465672/posts/122098463853465672",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "facebook original post",
+          "url": "https://facebook.com/122118461787465672/posts/122098499037465672",
+          "publishedDate": "20260901",
+          "verifiedAt": "2026-11-07",
+          "caption": "We just had to share!"
+        },
+        {
+          "label": "facebook original post",
+          "url": "https://facebook.com/122118461787465672/posts/2921325994868133",
+          "publishedDate": "20260901",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "facebook original post",
+          "url": "https://facebook.com/122118461787465672/posts/122098463853465672",
+          "publishedDate": "20260901",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "facebook"
+        ],
+        "state": "published",
+        "published": {
+          "facebook": "https://facebook.com/122118461787465672/posts/122098499037465672"
+        }
+      },
+      "platforms": [
+        "map",
+        "facebook"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-facebook-122098475745465672",
+      "authorId": "christopher-champagne",
+      "title": "CC’s • Introducing Our Services",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-01T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-09-01T12:00:00-05:00",
+      "datetime": "2026-09-01T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-09-01 · shared on facebook",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "story": "🔧 Welcome to CC’S Technical Services!\n\nI’m Christopher, and I created CC’s to provide straightforward, professional technical service without the unnecessary upselling.\n\n❄️ HVAC & Refrigeration\n⚡ Electrical\n📹 Security & Surveillance\n🌐 Low Voltage, Networking & IT\n🏠 Automation & Technical Solutions\n\nFrom troubleshooting and repairs to installations and system upgrades, my approach is simple: diagnose it correctly, explain your options, and get the job done right.\n\nProudly serving Leesville, Fort Johnson and surrounding communities.\n\nNeed something diagnosed or repaired? Reach out to CC’S Technical Services.\n\nDiagnostic. Repair. Install. Maintain.",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View facebook post · 2026-09-01",
+          "url": "https://facebook.com/122118461787465672/posts/122098475745465672",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "facebook original post",
+          "url": "https://facebook.com/122118461787465672/posts/122098475745465672",
+          "publishedDate": "20260901",
+          "verifiedAt": "2026-11-07",
+          "caption": "🔧 Welcome to CC’S Technical Services!\n\nI’m Christopher, and I created CC’s to provide straightforward, professional technical service without the unnecessary upselling.\n\n❄️ HVAC & Refrigeration\n⚡ Electrical\n📹 Security & Surveillance\n🌐 Low Voltage, Networking & IT\n🏠 Automation & Technical Solutions\n\nFrom troubleshooting and repairs to installations and system upgrades, my approach is simple: diagnose it correctly, explain your options, and get the job done right.\n\nProudly serving Leesville, Fort Johnson and surrounding communities.\n\nNeed something diagnosed or repaired? Reach out to CC’S Technical Services.\n\nDiagnostic. Repair. Install. Maintain."
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "facebook"
+        ],
+        "state": "published",
+        "published": {
+          "facebook": "https://facebook.com/122118461787465672/posts/122098475745465672"
+        }
+      },
+      "platforms": [
+        "map",
+        "facebook"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-ccs-louisiana-services-2026",
+      "authorId": "christopher-champagne",
+      "title": "CC’s Technical Services • Ready for Louisiana Heat",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-05T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-09-05T12:00:00-05:00",
+      "datetime": "2026-09-05T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-09-05 · shared on facebook",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "story": "Louisiana heat doesn’t wait—and neither should you. 🥵❄️\n\nFrom HVAC and mini-splits to electrical, refrigeration, ice machines, restaurant equipment, security, and low voltage—CC’s Technical Services is ready to help keep your home or business running.\n\n📍 Serving Leesville, New Llano, Fort Johnson, and surrounding areas\n📲 Prefer to text or email? Visit CCsTechnicalServices.com to get started.\n\nReliable service. Honest solutions. Work done right.\n\n#CCsTechnicalServices #LeesvilleLouisiana #FortJohnson #LouisianaHVAC #MiniSplit #HVACTechnician #LocalBusiness",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View facebook video · 2026-09-05",
+          "url": "https://www.facebook.com/reel/1635659757924796/",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-09-05",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7682056112572534047",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "facebook original post",
+          "url": "https://www.facebook.com/reel/1635659757924796/",
+          "publishedDate": "20260905",
+          "verifiedAt": "2026-11-07",
+          "caption": "Louisiana heat doesn’t wait—and neither should you. 🥵❄️\n\nFrom HVAC and mini-splits to electrical, refrigeration, ice machines, restaurant equipment, security, and low voltage—CC’s Technical Services is ready to help keep your home or business running.\n\n📍 Serving Leesville, New Llano, Fort Johnson, and surrounding areas\n📲 Prefer to text or email? Visit CCsTechnicalServices.com to get started.\n\nReliable service. Honest solutions. Work done right.\n\n#CCsTechnicalServices #LeesvilleLouisiana #FortJohnson #LouisianaHVAC #MiniSplit #HVACTechnician #LocalBusiness"
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7682056112572534047",
+          "publishedDate": "20260905",
+          "verifiedAt": "2026-11-07",
+          "caption": "Louisiana heat doesn’t wait—and neither should you. 🥵❄️ From HVAC and mini-splits to electrical, refrigeration, ice machines, restaurant equipment, security, and low voltage—CC’s Technical Services is ready to help keep your home or business running. 📍 Serving Leesville, New Llano, Fort Johnson, and surrounding areas 📲 Prefer to text or email? Visit CCsTechnicalServices.com to get started. Reliable service. Honest solutions. Work done right. #CCsTechnicalServices #LeesvilleLouisiana #FortJohnson #LouisianaHVAC #MiniSplit "
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "facebook",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "facebook": "https://www.facebook.com/reel/1635659757924796/",
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7682056112572534047"
+        }
+      },
+      "platforms": [
+        "map",
+        "facebook",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-facebook-1590332056207439",
+      "authorId": "christopher-champagne",
+      "title": "CC’s • Low-Voltage Repair",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-01T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-09-01T12:00:00-05:00",
+      "datetime": "2026-09-01T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-09-01 · shared on facebook",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "story": "Another happy customer! 🙌🔧❄️\n\nToday’s service call started with a low-voltage issue that had the system down and the homeowner’s preferred thermostat unable to operate.\n\nAfter troubleshooting the system, we got everything corrected properly:\n\n✅ Replaced the failed transformer\n✅ Replaced the blown fuse\n✅ Ran new thermostat wire\n✅ Got the homeowner’s preferred thermostat working\n✅ Tested and verified proper system operation\n\nEverything is back up and running like it should!\n\nSometimes you don’t need a new system or an expensive replacement — you just need the right diagnosis and the right fix. 💪\n\nCC’s Technical Services\nHVAC • Electrical • Refrigeration • Low Voltage\n\nHONEST WORK. FAIR PRICES. QUALITY RESULTS. ⚡❄️🔧",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View facebook video · 2026-09-01",
+          "url": "https://www.facebook.com/reel/1590332056207439/",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "facebook original post",
+          "url": "https://www.facebook.com/reel/1590332056207439/",
+          "publishedDate": "20260901",
+          "verifiedAt": "2026-11-07",
+          "caption": "Another happy customer! 🙌🔧❄️\n\nToday’s service call started with a low-voltage issue that had the system down and the homeowner’s preferred thermostat unable to operate.\n\nAfter troubleshooting the system, we got everything corrected properly:\n\n✅ Replaced the failed transformer\n✅ Replaced the blown fuse\n✅ Ran new thermostat wire\n✅ Got the homeowner’s preferred thermostat working\n✅ Tested and verified proper system operation\n\nEverything is back up and running like it should!\n\nSometimes you don’t need a new system or an expensive replacement — you just need the right diagnosis and the right fix. 💪\n\nCC’s Technical Services\nHVAC • Electrical • Refrigeration • Low Voltage\n\nHONEST WORK. FAIR PRICES. QUALITY RESULTS. ⚡❄️🔧"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "facebook"
+        ],
+        "state": "published",
+        "published": {
+          "facebook": "https://www.facebook.com/reel/1590332056207439/"
+        }
+      },
+      "platforms": [
+        "map",
+        "facebook"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-instagram-ddhdzklo8ky",
+      "authorId": "christopher-champagne",
+      "title": "Chris & Kat • AI Imagination Challenge",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-10T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-09-10T12:00:00-05:00",
+      "datetime": "2026-09-10T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-09-10 · shared on instagram",
+      "primaryCategory": "family",
+      "categories": [
+        "family",
+        "travel"
+      ],
+      "story": "We asked ChatGPT to put us in the LAST place you'd ever expect to find us… apparently it knows us a little TOO well. 🤣🤣🤣\n\nKat got dropped into the Arctic riding a polar bear. 🐻‍❄️❄️\n\nI got sent to a freaking PRINCESS TEA PARTY. 👑🫖🌸\n\nWTF ChatGPT?! 😂😂😂\nWhich one is more ridiculous?! 👇",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View instagram post · 2026-09-10",
+          "url": "https://www.instagram.com/p/DdHdZkLo8ky/",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "instagram original post",
+          "url": "https://www.instagram.com/p/DdHdZkLo8ky/",
+          "publishedDate": "20260910",
+          "verifiedAt": "2026-11-07",
+          "caption": "We asked ChatGPT to put us in the LAST place you'd ever expect to find us… apparently it knows us a little TOO well. 🤣🤣🤣\n\nKat got dropped into the Arctic riding a polar bear. 🐻‍❄️❄️\n\nI got sent to a freaking PRINCESS TEA PARTY. 👑🫖🌸\n\nWTF ChatGPT?! 😂😂😂\nWhich one is more ridiculous?! 👇"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "instagram"
+        ],
+        "state": "published",
+        "published": {
+          "instagram": "https://www.instagram.com/p/DdHdZkLo8ky/"
+        }
+      },
+      "platforms": [
+        "map",
+        "instagram"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-instagram-ddetgrpdyx1",
+      "authorId": "christopher-champagne",
+      "title": "Building My Life • My Mission • My M.A.P.",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-09T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-09-09T12:00:00-05:00",
+      "datetime": "2026-09-09T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-09-09 · shared on instagram",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator"
+      ],
+      "story": "Now that my Looking4Lift | Road to Flying America map is live and functioning correctly… it’s time to keep building the BIG picture. 👀\n\nLooking4Lift was the proof of concept.\n\nThe original vision was much bigger: M.A.P. — Mission Alignment Protocol. \n\nOne interactive map of my life — where I’ve been, what I’m building, what I’ve accomplished, where I’m going, and what’s next.\n\n❤️ Family • 💪 Fitness • 🪂 Freeflight • 🔧 Professional • 🎨 Creator • 🌎 Food + Travel\n\nAnd eventually… you’ll be able to build your own.\n\nDon’t just dream about it…\nM.A.P. IT OUT AND GET IT DONE ✔️\n\nLittle behind-the-scenes preview of where this is headed. 👀🗺️",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View instagram post · 2026-09-09",
+          "url": "https://www.instagram.com/p/DdETgRpDYX1/",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "instagram original post",
+          "url": "https://www.instagram.com/p/DdETgRpDYX1/",
+          "publishedDate": "20260909",
+          "verifiedAt": "2026-11-07",
+          "caption": "Now that my Looking4Lift | Road to Flying America map is live and functioning correctly… it’s time to keep building the BIG picture. 👀\n\nLooking4Lift was the proof of concept.\n\nThe original vision was much bigger: M.A.P. — Mission Alignment Protocol. \n\nOne interactive map of my life — where I’ve been, what I’m building, what I’ve accomplished, where I’m going, and what’s next.\n\n❤️ Family • 💪 Fitness • 🪂 Freeflight • 🔧 Professional • 🎨 Creator • 🌎 Food + Travel\n\nAnd eventually… you’ll be able to build your own.\n\nDon’t just dream about it…\nM.A.P. IT OUT AND GET IT DONE ✔️\n\nLittle behind-the-scenes preview of where this is headed. 👀🗺️"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "instagram"
+        ],
+        "state": "published",
+        "published": {
+          "instagram": "https://www.instagram.com/p/DdETgRpDYX1/"
+        }
+      },
+      "platforms": [
+        "map",
+        "instagram"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-instagram-det2k2ihhd",
+      "authorId": "christopher-champagne",
+      "title": "Learning a Language Through Music",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-20T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-10-20T12:00:00-05:00",
+      "datetime": "2026-10-20T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-10-20 · shared on instagram",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator"
+      ],
+      "story": "Pretty badass way to learn another language! 🔥🎶 Put it to music and suddenly learning feels like something you WANT to do. Yeah, I definitely love this! 🤘",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View instagram video · 2026-10-20",
+          "url": "https://www.instagram.com/reel/Det2K2ih-hD/",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "instagram original post",
+          "url": "https://www.instagram.com/reel/Det2K2ih-hD/",
+          "publishedDate": "20261020",
+          "verifiedAt": "2026-11-07",
+          "caption": "Pretty badass way to learn another language! 🔥🎶 Put it to music and suddenly learning feels like something you WANT to do. Yeah, I definitely love this! 🤘"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "instagram"
+        ],
+        "state": "published",
+        "published": {
+          "instagram": "https://www.instagram.com/reel/Det2K2ih-hD/"
+        }
+      },
+      "platforms": [
+        "map",
+        "instagram"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-flying-with-friends-2026",
+      "authorId": "christopher-champagne",
+      "title": "Looking4Lift • Flying With Friends",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-07T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-09-07T12:00:00-05:00",
+      "datetime": "2026-09-07T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-09-07 · shared on instagram",
+      "primaryCategory": "freeflight",
+      "categories": [
+        "freeflight"
+      ],
+      "story": "Flying with Friends 🧡\n\n8 minutes on the ridge at Lookout Mountain Flight Park.\n\nBest day of my life. 🪂\n\nThere’s just something different about sharing the sky with your friends.\n\n#FlyingWithFriends #LMFP #LookoutMountainFlightPark #HangGliding #FreeFlight \n\nWant to experience Lookout Mountain from the sky?\n\nClick the link for an experience you won’t soon forget! ⛰️🧡",
+      "locations": [
+        {
+          "label": "Lookout Mountain Flight Park • Rising Fawn, Georgia",
+          "lat": 34.835,
+          "lng": -85.487,
+          "precision": "approximate",
+          "visibility": "public",
+          "verification": "source-caption"
+        }
+      ],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View instagram video · 2026-09-07",
+          "url": "https://www.instagram.com/reel/Dc_t3aAD_8t/",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-09-07",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7682853918304472351",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "instagram original post",
+          "url": "https://www.instagram.com/reel/Dc_t3aAD_8t/",
+          "publishedDate": "20260907",
+          "verifiedAt": "2026-11-07",
+          "caption": "Flying with Friends 🧡\n\n8 minutes on the ridge at Lookout Mountain Flight Park.\n\nBest day of my life. 🪂\n\nThere’s just something different about sharing the sky with your friends.\n\n#FlyingWithFriends #LMFP #LookoutMountainFlightPark #HangGliding #FreeFlight \n\nWant to experience Lookout Mountain from the sky?\n\nClick the link for an experience you won’t soon forget! ⛰️🧡"
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7682853918304472351",
+          "publishedDate": "20260907",
+          "verifiedAt": "2026-11-07",
+          "caption": "Flying with Friends 🧡 8 minutes on the ridge at Lookout Mountain Flight Park. Best day of my life. 🪂 There’s just something different about sharing the sky with your friends. #FlyingWithFriends #LMFP #LookoutMountainFlightPark #HangGliding #FreeFlight "
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "instagram",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "instagram": "https://www.instagram.com/reel/Dc_t3aAD_8t/",
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7682853918304472351"
+        }
+      },
+      "platforms": [
+        "map",
+        "instagram",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-instagram-dc3yk2ehr3",
+      "authorId": "christopher-champagne",
+      "title": "Local Football • Hooper Trophy Night",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-04T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-09-04T12:00:00-05:00",
+      "datetime": "2026-09-04T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-09-04 · shared on instagram",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator"
+      ],
+      "story": "🏆🏈 IT’S GAME DAY! 🏈🏆\n\nOne of the biggest nights of the year for our local high schools…\n\n🖤💛 LEESVILLE WAMPUS CATS\nVS.\n💙🤍 DERIDDER DRAGONS\n\n🔥 THE BATTLE OF THE HOOPER TROPHY 🔥\nTwo teams.\n\nTwo communities.\n\nOne trophy. 🏆\n\nGood luck to BOTH teams, coaches, families, bands, cheerleaders and everyone representing their schools tonight. Play hard, play safe, and make your communities proud! 💪🏈\n\nNow let's hear it, Vernon & Beauregard Parishes… 👀👇\n\n🐾 WAMPUS CATS or 🐉 DRAGONS — WHO TAKES HOME THE HOOPER TROPHY TONIGHT?!\n\n#BattleOfTheHooperTrophy #LeesvilleWampusCats #DeRidderDragons #FridayNightLights #HighSchoolFootball #GameDay #LouisianaFootball",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View instagram video · 2026-09-04",
+          "url": "https://www.instagram.com/reel/Dc3Y-K2EhR3/",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "instagram original post",
+          "url": "https://www.instagram.com/reel/Dc3Y-K2EhR3/",
+          "publishedDate": "20260904",
+          "verifiedAt": "2026-11-07",
+          "caption": "🏆🏈 IT’S GAME DAY! 🏈🏆\n\nOne of the biggest nights of the year for our local high schools…\n\n🖤💛 LEESVILLE WAMPUS CATS\nVS.\n💙🤍 DERIDDER DRAGONS\n\n🔥 THE BATTLE OF THE HOOPER TROPHY 🔥\nTwo teams.\n\nTwo communities.\n\nOne trophy. 🏆\n\nGood luck to BOTH teams, coaches, families, bands, cheerleaders and everyone representing their schools tonight. Play hard, play safe, and make your communities proud! 💪🏈\n\nNow let's hear it, Vernon & Beauregard Parishes… 👀👇\n\n🐾 WAMPUS CATS or 🐉 DRAGONS — WHO TAKES HOME THE HOOPER TROPHY TONIGHT?!\n\n#BattleOfTheHooperTrophy #LeesvilleWampusCats #DeRidderDragons #FridayNightLights #HighSchoolFootball #GameDay #LouisianaFootball"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "instagram"
+        ],
+        "state": "published",
+        "published": {
+          "instagram": "https://www.instagram.com/reel/Dc3Y-K2EhR3/"
+        }
+      },
+      "platforms": [
+        "map",
+        "instagram"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-freeflight-vr-demo-2026",
+      "authorId": "christopher-champagne",
+      "title": "Freeflight Experience • Virtual Flight Demo",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-08-27T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-08-27T12:00:00-05:00",
+      "datetime": "2026-08-27T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-08-27 · shared on instagram",
+      "primaryCategory": "freeflight",
+      "categories": [
+        "freeflight",
+        "creator"
+      ],
+      "story": "Think you’re watching real hang-gliding footage? 👀\n\nNope—every second of this is Freeflight Experience! 🔥\n\nFrom the pilot hanging in the VR simulator to the breathtaking view over Lookout Mountain—it’s all virtual.\n\nFly the ramp. Explore the ridge. Learn the terrain. Experience free flight before ever leaving the ground.\n\nThe line between simulation and reality is getting seriously hard to see. 🦅\n\nTrain virtually. Fly confidently. Live free.\n\n#FreeflightExperience #HangGliding #VirtualReality #FlightSimulator #VRFlying #Looking4Lift #LookoutMountain #WingmanWeekend2026",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View instagram video · 2026-08-27",
+          "url": "https://www.instagram.com/reel/DcjBHxRG62L/",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-08-27",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7678719435363994911",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "instagram original post",
+          "url": "https://www.instagram.com/reel/DcjBHxRG62L/",
+          "publishedDate": "20260827",
+          "verifiedAt": "2026-11-07",
+          "caption": "Think you’re watching real hang-gliding footage? 👀\n\nNope—every second of this is Freeflight Experience! 🔥\n\nFrom the pilot hanging in the VR simulator to the breathtaking view over Lookout Mountain—it’s all virtual.\n\nFly the ramp. Explore the ridge. Learn the terrain. Experience free flight before ever leaving the ground.\n\nThe line between simulation and reality is getting seriously hard to see. 🦅\n\nTrain virtually. Fly confidently. Live free.\n\n#FreeflightExperience #HangGliding #VirtualReality #FlightSimulator #VRFlying #Looking4Lift #LookoutMountain #WingmanWeekend2026"
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7678719435363994911",
+          "publishedDate": "20260827",
+          "verifiedAt": "2026-11-07",
+          "caption": "Think you’re watching real hang-gliding footage? 👀 Nope—every second of this is Freeflight Experience! 🔥 From the pilot hanging in the VR simulator to the breathtaking view over Lookout Mountain—it’s all virtual. Fly the ramp. Explore the ridge. Learn the terrain. Experience free flight before ever leaving the ground. The line between simulation and reality is getting seriously hard to see. 🦅 Train virtually. Fly confidently. Live free. #FreeflightExperience #HangGliding #VirtualReality #FlightSimulator #VRFlying   "
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "instagram",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "instagram": "https://www.instagram.com/reel/DcjBHxRG62L/",
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7678719435363994911"
+        }
+      },
+      "platforms": [
+        "map",
+        "instagram",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-instagram-dcjfnzndgcy",
+      "authorId": "christopher-champagne",
+      "title": "Took Susie Q — my Eagle 164 — to the Big Hill this morning to knock some rust off",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-08-17T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-08-17T12:00:00-05:00",
+      "datetime": "2026-08-17T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-08-17 · shared on instagram",
+      "primaryCategory": "freeflight",
+      "categories": [
+        "freeflight",
+        "creator"
+      ],
+      "story": "Took Susie Q — my Eagle 164 — to the Big Hill this morning to knock some rust off. 🦅🤙\n\nGot some solid flights in and MAN it felt good to be back on the hill!\n\nNo rush, nothing to prove — just getting reps, sharpening the fundamentals and enjoying every damn second of it.\n\nRust coming off. Confidence coming back. Looking 4 Lift. 🔥🪂\n\n#Looking4Lift #HangGliding #LookoutMountain #WingmanWeekend2026 #FreeFlight #H2",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View instagram video · 2026-08-17",
+          "url": "https://www.instagram.com/reel/DcJfNznDGCy/",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "instagram original post",
+          "url": "https://www.instagram.com/reel/DcJfNznDGCy/",
+          "publishedDate": "20260817",
+          "verifiedAt": "2026-11-07",
+          "caption": "Took Susie Q — my Eagle 164 — to the Big Hill this morning to knock some rust off. 🦅🤙\n\nGot some solid flights in and MAN it felt good to be back on the hill!\n\nNo rush, nothing to prove — just getting reps, sharpening the fundamentals and enjoying every damn second of it.\n\nRust coming off. Confidence coming back. Looking 4 Lift. 🔥🪂\n\n#Looking4Lift #HangGliding #LookoutMountain #WingmanWeekend2026 #FreeFlight #H2"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "instagram"
+        ],
+        "state": "published",
+        "published": {
+          "instagram": "https://www.instagram.com/reel/DcJfNznDGCy/"
+        }
+      },
+      "platforms": [
+        "map",
+        "instagram"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-galveston-weekend-2026",
+      "authorId": "christopher-champagne",
+      "title": "Galveston • A Weekend With Kat",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-08-09T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-08-09T12:00:00-05:00",
+      "datetime": "2026-08-09T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-08-09 · shared on instagram",
+      "primaryCategory": "travel",
+      "categories": [
+        "travel",
+        "family"
+      ],
+      "story": "🌴 GALVESTON WEEKEND = SUCCESS! 🌊\n\nCame down looking for a little adventure and Galveston absolutely delivered.\n\n🦪 Fresh oysters\n🍤 Gulf seafood\n🎣 Pier life\n🪁 Flying the new foil kite on the beach\n☀️ Sunshine & Gulf breeze\n🎨 Exploring the Strand\n❤️ And most importantly — making memories with my wife.\n\nWe ate, explored, laughed, flew, walked the beach and squeezed about as much as possible into one weekend. 😂\n\nTHIS is what weekends are for.\nWork hard. Fly high. Eat well. Live free. 🤙\n\n#Galveston #GalvestonTX #GalvestonIsland #TexasCoast #GulfCoast",
+      "locations": [
+        {
+          "label": "Galveston, Texas",
+          "lat": 29.3,
+          "lng": -94.8,
+          "precision": "city",
+          "visibility": "public",
+          "verification": "approximate"
+        }
+      ],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View instagram video · 2026-08-09",
+          "url": "https://www.instagram.com/reel/Db1NtLbjGq-/",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-08-09",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7672116623385316639",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-08-09",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7672069404229651742",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "instagram original post",
+          "url": "https://www.instagram.com/reel/Db1NtLbjGq-/",
+          "publishedDate": "20260809",
+          "verifiedAt": "2026-11-07",
+          "caption": "🌴 GALVESTON WEEKEND = SUCCESS! 🌊\n\nCame down looking for a little adventure and Galveston absolutely delivered.\n\n🦪 Fresh oysters\n🍤 Gulf seafood\n🎣 Pier life\n🪁 Flying the new foil kite on the beach\n☀️ Sunshine & Gulf breeze\n🎨 Exploring the Strand\n❤️ And most importantly — making memories with my wife.\n\nWe ate, explored, laughed, flew, walked the beach and squeezed about as much as possible into one weekend. 😂\n\nTHIS is what weekends are for.\nWork hard. Fly high. Eat well. Live free. 🤙\n\n#Galveston #GalvestonTX #GalvestonIsland #TexasCoast #GulfCoast"
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7672116623385316639",
+          "publishedDate": "20260809",
+          "verifiedAt": "2026-11-07",
+          "caption": "🌴 GALVESTON WEEKEND = SUCCESS! 🌊 Came down looking for a little adventure and Galveston absolutely delivered. 🦪 Fresh oysters 🍤 Gulf seafood 🎣 Pier life 🪁 Flying the new foil kite on the beach ☀️ Sunshine & Gulf breeze 🎨 Exploring the Strand ❤️ And most importantly — making memories with my wife. We ate, explored, laughed, flew, walked the beach and squeezed about as much as possible into one weekend. 😂 THIS is what weekends are for. Work hard. Fly high. Eat well. Live free. 🤙 #Galveston #GalvestonTX #GalvestonIsland #TexasCoast #GulfCoast "
         },
         {
           "label": "tiktok original post",
