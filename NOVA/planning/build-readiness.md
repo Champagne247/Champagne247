@@ -2,8 +2,10 @@
 Status: PREPARATION / working assumptions, not a validated engineering design
 Updated: 2026-10-26
 
+> Character continuity: the current approved family is NOVA (orange explorer), MILO (white/blue helper), and ZIGGY (green inventor). Older BUDDY/PIP labels are superseded historical concepts. Do not change the family roster without an explicit new decision.
+
 ## North star
-Build NOVA as a small expressive independently mobile companion (camera eyes/face, voice, arms as feasible) that can physically dock into interchangeable powered carriers. First HOME dock; later tracked base, tools, and eventually a separately safety-reviewed flight carrier. BUDDY and PIP are distinct characters sharing a compatible interface. AI/persona must be portable and model-agnostic, not locked to a chassis or cloud vendor.
+Build NOVA as a small expressive independently mobile companion (camera eyes/face, voice, arms as feasible) that can physically dock into interchangeable powered carriers. First HOME dock; later tracked base, tools, and eventually a separately safety-reviewed flight carrier. MILO and ZIGGY are distinct characters sharing a compatible interface. AI/persona must be portable and model-agnostic, not locked to a chassis or cloud vendor.
 
 ## Design rules
 1. Prototype using off-the-shelf low-voltage modules before ordering custom PCBs.
@@ -63,7 +65,7 @@ Gate 4: repeated dock/undock cycles without connector damage, accidental energiz
 ## Phase 5 — Carrier integration and other characters
 - [ ] Tracked carrier: independent protected motor controller; NOVA issues high-level commands; carrier safety controller enforces limits.
 - [ ] HOME dock: service, safe charging, telemetry, backup, update and diagnostics.
-- [ ] BUDDY and PIP: different appearance/personality, same UDI protocol where practical.
+- [ ] MILO and ZIGGY: different appearance/personality, same UDI protocol where practical.
 - [ ] Flight module: research only until independent aviation, structural, electrical, radio and fail-safe safety review. No flight testing based on a ground dock prototype.
 
 ## Candidate software architecture
