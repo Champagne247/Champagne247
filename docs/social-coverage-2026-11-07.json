@@ -1,0 +1,702 @@
+{
+  "reviewedAt": "2026-11-07T14:30:00-06:00",
+  "coverage": {
+    "reviewedAt": "2026-11-07",
+    "retrievalWindow": "2019-01-01 through 2026-11-07",
+    "sources": 113,
+    "coverage": "Connected CC’s Facebook Page, Instagram, TikTok and legacy YouTube only. Personal Facebook and X unavailable; empty results do not establish complete coverage."
+  },
+  "accounts": {
+    "facebook": "CC’s Technical Services Page",
+    "instagram": "certifiedmonster",
+    "tiktok": "christopher.m.champagne",
+    "youtube": "UCIZi1lyvW-lutoj5asw065w"
+  },
+  "limitations": [
+    "Personal Facebook and X not connected",
+    "Looking4Lift-247 is a newer channel; its first Short was already in master data",
+    "Connected API results may omit posts, stories or deleted content",
+    "Publication date retained at day precision; platform time zone was not supplied",
+    "Captionless posts grouped as journals; no subject or location inferred"
+  ],
+  "posts": [
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122127339639465672",
+      "entryId": "map-timeline-refresh-2026",
+      "captionAvailable": true
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122126751507465672",
+      "entryId": "social-facebook-122126751507465672",
+      "captionAvailable": true
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122126726841465672",
+      "entryId": "social-facebook-122126726841465672",
+      "captionAvailable": true
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122125350129465672",
+      "entryId": "security-camera-install",
+      "captionAvailable": true
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122118470487465672",
+      "entryId": "nova-hello-world-test-2026-10-02",
+      "captionAvailable": true
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122117715657465672",
+      "entryId": "social-facebook-122117715657465672",
+      "captionAvailable": true
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122113870959465672",
+      "entryId": "social-facebook-122113870959465672",
+      "captionAvailable": true
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122110717077465672",
+      "entryId": "social-facebook-122110717077465672",
+      "captionAvailable": true
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122110709199465672",
+      "entryId": "social-facebook-122110709199465672",
+      "captionAvailable": true
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122110208739465672",
+      "entryId": "social-facebook-122110208739465672",
+      "captionAvailable": true
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122110208127465672",
+      "entryId": "social-facebook-122110208127465672",
+      "captionAvailable": true
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122110087389465672",
+      "entryId": "mini-split-heats-and-cools-2026-09-15",
+      "captionAvailable": true
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122107844919465672",
+      "entryId": "social-facebook-122107844919465672",
+      "captionAvailable": true
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122103053553465672",
+      "entryId": "social-facebook-122103053553465672",
+      "captionAvailable": true
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122099947971465672",
+      "entryId": "social-facebook-122099947971465672",
+      "captionAvailable": true
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122098505655465672",
+      "entryId": "social-facebook-122098505655465672",
+      "captionAvailable": true
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122098499037465672",
+      "entryId": "social-facebook-journal-202609",
+      "captionAvailable": false
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122098475745465672",
+      "entryId": "social-facebook-122098475745465672",
+      "captionAvailable": true
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/2921325994868133",
+      "entryId": "social-facebook-journal-202609",
+      "captionAvailable": false
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122098463853465672",
+      "entryId": "social-facebook-journal-202609",
+      "captionAvailable": false
+    },
+    {
+      "network": "facebook",
+      "url": "https://www.facebook.com/reel/1635659757924796/",
+      "entryId": "social-ccs-louisiana-services-2026",
+      "captionAvailable": true
+    },
+    {
+      "network": "facebook",
+      "url": "https://www.facebook.com/reel/1590332056207439/",
+      "entryId": "social-facebook-1590332056207439",
+      "captionAvailable": true
+    },
+    {
+      "network": "instagram",
+      "url": "https://www.instagram.com/p/DdHdZkLo8ky/",
+      "entryId": "social-instagram-ddhdzklo8ky",
+      "captionAvailable": true
+    },
+    {
+      "network": "instagram",
+      "url": "https://www.instagram.com/p/DdETgRpDYX1/",
+      "entryId": "social-instagram-ddetgrpdyx1",
+      "captionAvailable": true
+    },
+    {
+      "network": "instagram",
+      "url": "https://www.instagram.com/reel/Det2K2ih-hD/",
+      "entryId": "social-instagram-det2k2ihhd",
+      "captionAvailable": true
+    },
+    {
+      "network": "instagram",
+      "url": "https://www.instagram.com/reel/Dc_t3aAD_8t/",
+      "entryId": "social-flying-with-friends-2026",
+      "captionAvailable": true
+    },
+    {
+      "network": "instagram",
+      "url": "https://www.instagram.com/reel/Dc3Y-K2EhR3/",
+      "entryId": "social-instagram-dc3yk2ehr3",
+      "captionAvailable": true
+    },
+    {
+      "network": "instagram",
+      "url": "https://www.instagram.com/reel/DcjBHxRG62L/",
+      "entryId": "social-freeflight-vr-demo-2026",
+      "captionAvailable": true
+    },
+    {
+      "network": "instagram",
+      "url": "https://www.instagram.com/reel/DcWqcabiYnB/",
+      "entryId": "lookout-100-flights",
+      "captionAvailable": true
+    },
+    {
+      "network": "instagram",
+      "url": "https://www.instagram.com/reel/DcJfNznDGCy/",
+      "entryId": "social-instagram-dcjfnzndgcy",
+      "captionAvailable": true
+    },
+    {
+      "network": "instagram",
+      "url": "https://www.instagram.com/reel/Db1NtLbjGq-/",
+      "entryId": "social-galveston-weekend-2026",
+      "captionAvailable": true
+    },
+    {
+      "network": "instagram",
+      "url": "https://www.instagram.com/reel/DbnoLzADQDl/",
+      "entryId": "social-freeflight-vr-practice-2026",
+      "captionAvailable": true
+    },
+    {
+      "network": "instagram",
+      "url": "https://www.instagram.com/reel/DblNTFlihRK/",
+      "entryId": "social-instagram-dblntflihrk",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7691398868998556958",
+      "entryId": "social-tiktok-journal-202609",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7690294115510078750",
+      "entryId": "social-tiktok-journal-202609",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7686128599916612894",
+      "entryId": "social-tiktok-7686128599916612894",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7685929611082927391",
+      "entryId": "social-tiktok-7685929611082927391",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7685798253555649823",
+      "entryId": "social-tiktok-journal-202609",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7685726085220273439",
+      "entryId": "social-tiktok-7685726085220273439",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7685718038120893726",
+      "entryId": "social-tiktok-7685718038120893726",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7683878512117239071",
+      "entryId": "social-tiktok-journal-202609",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7683877427805818142",
+      "entryId": "social-tiktok-journal-202609",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7683873731940191519",
+      "entryId": "social-tiktok-journal-202609",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7682868704102583583",
+      "entryId": "social-freeflight-vr-practice-2026",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7682853918304472351",
+      "entryId": "social-flying-with-friends-2026",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7682484381218311455",
+      "entryId": "social-tiktok-7682484381218311455",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7682056112572534047",
+      "entryId": "social-ccs-louisiana-services-2026",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7681752029965995294",
+      "entryId": "social-tiktok-7681752029965995294",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7681655199169137950",
+      "entryId": "social-tiktok-journal-202609",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7679915074273774878",
+      "entryId": "social-tiktok-journal-202608",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7679543471920680223",
+      "entryId": "social-tiktok-journal-202608",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7679140128748571935",
+      "entryId": "social-tiktok-7679140128748571935",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7679083594588949790",
+      "entryId": "social-tiktok-journal-202608",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7678738745025154335",
+      "entryId": "social-tiktok-7678738745025154335",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7678719435363994911",
+      "entryId": "social-freeflight-vr-demo-2026",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7678047278648610078",
+      "entryId": "social-tiktok-journal-202608",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7678011901808266526",
+      "entryId": "social-tiktok-journal-202608",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7677950584300883230",
+      "entryId": "social-tiktok-7677950584300883230",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7677634088412384542",
+      "entryId": "social-tiktok-journal-202608",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7676950325785365791",
+      "entryId": "lookout-100-flights",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7676122582617165086",
+      "entryId": "social-tiktok-7676122582617165086",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7675841674316139807",
+      "entryId": "social-tiktok-journal-202608",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7675555556437806367",
+      "entryId": "social-tiktok-7675555556437806367",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7675475483382926622",
+      "entryId": "social-tiktok-journal-202608",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7675034770484530463",
+      "entryId": "social-tiktok-journal-202608",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7673533017314348318",
+      "entryId": "social-tiktok-journal-202608",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7673499101597666590",
+      "entryId": "social-tiktok-journal-202608",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7672939335087295774",
+      "entryId": "social-tiktok-journal-202608",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7672752421969415454",
+      "entryId": "social-tiktok-7672752421969415454",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7672116623385316639",
+      "entryId": "social-galveston-weekend-2026",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7672069404229651742",
+      "entryId": "social-galveston-weekend-2026",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7671820651728063775",
+      "entryId": "social-tiktok-journal-202608",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7671795392312315166",
+      "entryId": "social-tiktok-journal-202608",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7670563787350527263",
+      "entryId": "social-tiktok-7670563787350527263",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7670159934369189151",
+      "entryId": "social-freeflight-vr-practice-2026",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7669793548916608287",
+      "entryId": "social-tiktok-7669793548916608287",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7669560387561426206",
+      "entryId": "social-tiktok-journal-202608",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7669545298158538015",
+      "entryId": "social-tiktok-journal-202608",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7669487584933907742",
+      "entryId": "social-tiktok-journal-202608",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7669479256082222367",
+      "entryId": "social-tiktok-journal-202608",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7669422881561988382",
+      "entryId": "social-tiktok-7669422881561988382",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7668781796447833375",
+      "entryId": "social-tiktok-journal-202607",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7667765035535519006",
+      "entryId": "social-tiktok-7667765035535519006",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7667286300583660831",
+      "entryId": "social-tiktok-journal-202607",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7666852744174652703",
+      "entryId": "social-tiktok-7666852744174652703",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7666672818007887134",
+      "entryId": "social-tiktok-journal-202607",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7666535269901946143",
+      "entryId": "social-tiktok-7666535269901946143",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7663146700441242911",
+      "entryId": "social-tiktok-journal-202607",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7662417898878586142",
+      "entryId": "social-tiktok-journal-202607",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7662101584389623070",
+      "entryId": "social-tiktok-journal-202607",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7661062317336972574",
+      "entryId": "social-tiktok-journal-202607",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7660574216479149342",
+      "entryId": "social-tiktok-7660574216479149342",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7660279237391306014",
+      "entryId": "social-garage-minisplit-2026",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7660277669128457502",
+      "entryId": "social-garage-minisplit-2026",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7659493778549476639",
+      "entryId": "social-tiktok-journal-202607",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7659179389552250142",
+      "entryId": "social-tiktok-journal-202607",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7659031703041756447",
+      "entryId": "social-tiktok-journal-202607",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7659017481075330334",
+      "entryId": "social-tiktok-journal-202607",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7658429133847842079",
+      "entryId": "social-tiktok-7658429133847842079",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7652892244751420703",
+      "entryId": "social-tiktok-journal-202606",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7652783576794156319",
+      "entryId": "social-tiktok-journal-202606",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7652774819427142942",
+      "entryId": "social-tiktok-journal-202606",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7652771666518363405",
+      "entryId": "social-tiktok-journal-202606",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7652766506647883022",
+      "entryId": "social-tiktok-journal-202606",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7650513250190134558",
+      "entryId": "social-tiktok-7650513250190134558",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7649800582676417823",
+      "entryId": "social-tiktok-journal-202606",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7648767607910305037",
+      "entryId": "social-tiktok-journal-202606",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7648762461604056333",
+      "entryId": "social-tiktok-journal-202606",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7648660105042414879",
+      "entryId": "social-tiktok-7648660105042414879",
+      "captionAvailable": true
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7645763413003472159",
+      "entryId": "social-tiktok-journal-202605",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7645722046361636127",
+      "entryId": "social-tiktok-journal-202605",
+      "captionAvailable": false
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7640082338503773471",
+      "entryId": "social-tiktok-7640082338503773471",
+      "captionAvailable": true
+    },
+    {
+      "network": "youtube",
+      "url": "https://www.youtube.com/watch?v=h6-o2mrNayA",
+      "entryId": "social-youtube-video-journal-20260805",
+      "captionAvailable": false
+    }
+  ]
+}

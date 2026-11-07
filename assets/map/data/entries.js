@@ -1,10 +1,19 @@
+Warning: truncated output (original token count: 70244)
+Total output lines: 6726
+
 window.MAP_DATA = {
   "schemaVersion": "1.0.0",
   "meta": {
     "name": "M.A.P. Master Life Data",
     "description": "Single source of truth for My Life, My Mission and My M.A.P.",
     "canonicalBase": "https://champagne247.github.io/Champagne247",
-    "updatedAt": "2026-11-06T13:22:00-06:00"
+    "updatedAt": "2026-11-07T14:30:00-06:00",
+    "socialReview": {
+      "reviewedAt": "2026-11-07",
+      "retrievalWindow": "2019-01-01 through 2026-11-07",
+      "sources": 113,
+      "coverage": "Connected CC’s Facebook Page, Instagram, TikTok and legacy YouTube only. Personal Facebook and X unavailable; empty results do not establish complete coverage."
+    }
   },
   "owner": {
     "id": "christopher-champagne",
@@ -722,7 +731,7 @@ window.MAP_DATA = {
       "lifecycle": "published",
       "visibility": "public",
       "createdAt": "2026-10-26T12:00:00-05:00",
-      "updatedAt": "2026-10-26T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
       "eventAt": "2026-10-26T12:00:00-05:00",
       "datetime": "2026-10-26T12:00:00-05:00",
       "displayDate": "2026-10-26",
@@ -757,17 +766,35 @@ window.MAP_DATA = {
           "label": "Follow Professional",
           "url": "/Champagne247/professional/",
           "kind": "project"
+        },
+        {
+          "label": "View facebook post · 2026-10-29",
+          "url": "https://facebook.com/122118461787465672/posts/122127339639465672",
+          "kind": "social"
         }
       ],
       "distribution": {
         "destinations": [
-          "map"
+          "map",
+          "facebook"
         ],
         "state": "published",
-        "published": {}
+        "published": {
+          "facebook": "https://facebook.com/122118461787465672/posts/122127339639465672"
+        }
       },
       "platforms": [
-        "map"
+        "map",
+        "facebook"
+      ],
+      "sources": [
+        {
+          "label": "facebook original post",
+          "url": "https://facebook.com/122118461787465672/posts/122127339639465672",
+          "publishedDate": "20261029",
+          "verifiedAt": "2026-11-07",
+          "caption": "I shared My Life a while back, and a lot has changed since then. Figured I’d invite you back to see what we’re building. 👀\n\nI’ve got a lot going on—family, work, wrestling, flying, travel, and now robots. I wanted one place to connect where I’ve been, what I’m doing, and what I’m working toward.\n\nSo I’m building it with NOVA, my AI collaborator.\n\nMy Life • My Mission • My M.A.P.\nMy living vision board, taking shape as we go.\n\nIt’s still a work in progress. Explore the map, click around, and tell me: what would you improve or add next? If something’s confusing or broken, I want to hear that too.\n\nGot an idea or see a project you’d like to be part of? Jump in. I’m learning as I build, and your input is welcome.\n\nhttps://champagne247.github.io/Champagne247/\n\n— Written by NOVA, Chris’s AI collaborator, and shared with his authorization. Chris may edit this post. We’re building and testing technology together, one step at a time."
+        }
       ]
     },
     {
@@ -1457,7 +1484,7 @@ window.MAP_DATA = {
       "lifecycle": "published",
       "visibility": "public",
       "createdAt": "2026-10-22T12:00:00-05:00",
-      "updatedAt": "2026-10-26T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
       "eventAt": "2026-10-22T12:00:00-05:00",
       "datetime": "2026-10-22T12:00:00-05:00",
       "displayDate": "October 22, 2026",
@@ -1476,17 +1503,35 @@ window.MAP_DATA = {
           "label": "Follow Professional",
           "url": "/Champagne247/professional/",
           "kind": "project"
+        },
+        {
+          "label": "View facebook post · 2026-10-22",
+          "url": "https://facebook.com/122118461787465672/posts/122125350129465672",
+          "kind": "social"
         }
       ],
       "distribution": {
         "destinations": [
-          "map"
+          "map",
+          "facebook"
         ],
         "state": "published",
-        "published": {}
+        "published": {
+          "facebook": "https://facebook.com/122118461787465672/posts/122125350129465672"
+        }
       },
       "platforms": [
-        "map"
+        "map",
+        "facebook"
+      ],
+      "sources": [
+        {
+          "label": "facebook original post",
+          "url": "https://facebook.com/122118461787465672/posts/122125350129465672",
+          "publishedDate": "20261022",
+          "verifiedAt": "2026-11-07",
+          "caption": "📹🔒 ANOTHER HAPPY CUSTOMER!\n\nProfessional Security Camera Installation — Only $250! 💪\n\nOur customer already had their surveillance system but wanted it installed the RIGHT way!\n\n✅ 4 security cameras professionally mounted\n\n✅ Clean, discreet installation\n\n✅ Wires tucked away and hidden\n\n✅ Professional cable routing and wire management\n\n✅ DVR connected to a clean monitoring display\n\n✅ Cameras positioned for property coverage\n\n✅ No messy wires hanging everywhere!\n\nCustomer supplied the surveillance system. We handled the installation for just $250!\n\nAlready purchased a security camera system but don't want to deal with running wires, mounting cameras, or setting everything up?\n\nThat's where we come in! 😎\n\n🔧 CC'S Technical Services LLC\n\n📍 Serving Leesville, New Llano, Fort Johnson & surrounding Louisiana communities.\n\n🌐 CCsTechnicalServices.com\n\n📩 Message us today for a free installation quote!\n\nYour property. Your security. Our expertise.\n\n#CCsTechnicalServices #SecurityCameraInstallation #HomeSecurity #LeesvilleLA #FortJohnson #VeteranOwnedBusiness #SupportLocalBusiness"
+        }
       ]
     },
     {
@@ -1916,7 +1961,7 @@ window.MAP_DATA = {
       "lifecycle": "published",
       "visibility": "public",
       "createdAt": "2026-10-02T08:44:00-05:00",
-      "updatedAt": "2026-10-02T08:44:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
       "eventAt": "2026-10-02T08:44:00-05:00",
       "datetime": "2026-10-02T08:44:00-05:00",
       "displayDate": "October 2, 2026 • Temporary publishing test",
@@ -1928,7 +1973,13 @@ window.MAP_DATA = {
       "locations": [],
       "media": [],
       "hashtags": [],
-      "links": [],
+      "links": [
+        {
+          "label": "View facebook post · 2026-10-02",
+          "url": "https://facebook.com/122118461787465672/posts/122118470487465672",
+          "kind": "social"
+        }
+      ],
       "opportunity": {
         "active": false
       },
@@ -1938,11 +1989,22 @@ window.MAP_DATA = {
           "facebook"
         ],
         "state": "testing",
-        "published": {}
+        "published": {
+          "facebook": "https://facebook.com/122118461787465672/posts/122118470487465672"
+        }
       },
       "platforms": [
         "map",
         "facebook"
+      ],
+      "sources": [
+        {
+          "label": "facebook original post",
+          "url": "https://facebook.com/122118461787465672/posts/122118470487465672",
+          "publishedDate": "20261002",
+          "verifiedAt": "2026-11-07",
+          "caption": "Hello world! This is a temporary NOVA publishing test connecting My Life, My M.A.P., and our selected channels. Test ID: NOVA-HW-20261002. We’ll remove this test after checking delivery."
+        }
       ]
     },
     {
@@ -1956,7 +2018,7 @@ window.MAP_DATA = {
       "lifecycle": "published",
       "visibility": "public",
       "createdAt": "2026-09-15T00:00:00-05:00",
-      "updatedAt": "2026-09-15T00:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
       "eventAt": "2026-09-15T00:00:00-05:00",
       "datetime": "2026-09-15T00:00:00-05:00",
       "displayDate": "September 15, 2026",
@@ -2008,6 +2070,11 @@ window.MAP_DATA = {
         {
           "label": "View this activity on the map",
           "url": "/Champagne247/explore/?entry=mini-split-heats-and-cools-2026-09-15"
+        },
+        {
+          "label": "View facebook post · 2026-09-15",
+          "url": "https://facebook.com/122118461787465672/posts/122110087389465672",
+          "kind": "social"
         }
       ],
       "opportunity": {
@@ -2033,6 +2100,15 @@ window.MAP_DATA = {
       "platforms": [
         "map",
         "facebook"
+      ],
+      "sources": [
+        {
+          "label": "facebook original post",
+          "url": "https://facebook.com/122118461787465672/posts/122110087389465672",
+          "publishedDate": "20260915",
+          "verifiedAt": "2026-11-07",
+          "caption": "Think mini-splits are just for summer? 👀\n\nThey cool when it’s hot and heat when it’s cold—all from the same system. Great for a bedroom, garage, shop, or a space your current system struggles to keep comfortable.\n\nWinter’s coming. If you’ve been thinking about a mini-split, text or email CC’s Technical Services and tell me about your space. I’ll help you find the right setup for it. 🔥❄️\n\nCcstechnicalservices.com"
+        }
       ]
     },
     {
@@ -2388,7 +2464,7 @@ window.MAP_DATA = {
       "lifecycle": "published",
       "visibility": "public",
       "createdAt": "2026-08-22T15:00:00-04:00",
-      "updatedAt": "2026-08-22T15:00:00-04:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
       "eventAt": "2026-08-22T15:00:00-04:00",
       "datetime": "2026-08-22T15:00:00-04:00",
       "displayDate": "August 2026",
@@ -2448,6 +2524,16 @@ window.MAP_DATA = {
         {
           "label": "View this activity on the map",
           "url": "/Champagne247/explore/?entry=lookout-100-flights"
+        },
+        {
+          "label": "View instagram video · 2026-08-22",
+          "url": "https://www.instagram.com/reel/DcWqcabiYnB/",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-08-22",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7676950325785365791",
+          "kind": "social"
         }
       ],
       "opportunity": {
@@ -2471,7 +2557,10 @@ window.MAP_DATA = {
           "x"
         ],
         "state": "ready",
-        "published": {}
+        "published": {
+          "instagram": "https://www.instagram.com/reel/DcWqcabiYnB/",
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7676950325785365791"
+        }
       },
       "platforms": [
         "map",
@@ -2480,6 +2569,22 @@ window.MAP_DATA = {
         "tiktok",
         "youtube",
         "x"
+      ],
+      "sources": [
+        {
+          "label": "instagram original post",
+          "url": "https://www.instagram.com/reel/DcWqcabiYnB/",
+          "publishedDate": "20260822",
+          "verifiedAt": "2026-11-07",
+          "caption": "🦅 FLIGHT #100!!! 🦅\n\nMan… this one means something.\n\nI came to Lookout Mountain this week hoping to grow as a pilot, get more comfortable with my Eagle, and put everything I've been working on together.\n\nNow I'm leaving with 10+ mountain flights this week and today I hit 100 TOTAL FLIGHTS! 🤯🤙\n\nFlying prone, in my own harness, under my own Wills Wing Eagle — Susie Q ❤️🦅\n\nThis launch was assisted, and every flight, every launch, every landing and every person helping me learn is another piece of the journey.\n\nAnd after fighting with this damn 360 camera all week... 😂\n\nI FINALLY GOT THE FLIGHT ON VIDEO!\n\nStill learning.\nStill progressing.\nStill Looking4Lift. 🤙\n\n#Flight100 #Looking4Lift #HangGliding #LookoutMountain #WingmanWeekend2026 #FreeFlight #WillsWing #Eagle164"
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7676950325785365791",
+          "publishedDate": "20260822",
+          "verifiedAt": "2026-11-07",
+          "caption": "🦅 FLIGHT #100!!! 🦅 Man… this one means something. I came to Lookout Mountain this week hoping to grow as a pilot, get more comfortable with my Eagle, and put everything I've been working on together. Now I'm leaving with 10+ mountain flights this week and today I hit 100 TOTAL FLIGHTS! 🤯🤙 Flying prone, in my own harness, under my own Wills Wing Eagle — Susie Q ❤️🦅 This launch was assisted, and every flight, every launch, every landing and every person helping me learn is another piece of the journey. And after fighting with this damn 360 camera all week... 😂 I FINALLY GOT THE FLIGHT ON VIDEO! Still learning. Still progressing. Still Looking4Lift. 🤙 #Flight100 #Looking4Lift #HangGliding #LookoutMountain    "
+        }
       ]
     },
     {
@@ -2878,6 +2983,2558 @@ window.MAP_DATA = {
         "tiktok",
         "youtube",
         "x"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-facebook-122126751507465672",
+      "authorId": "christopher-champagne",
+      "title": "CC’s • Veteran Owned and Operated",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-27T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-10-27T12:00:00-05:00",
+      "datetime": "2026-10-27T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-10-27 · shared on facebook",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "story": "🇺🇸 Veteran-Owned & Operated!\n\n🔧 Need HVAC, electrical, refrigeration, security cameras, or technical services?\n\nAt CC's Technical Services, we believe in honest work, fair prices, and doing the job right the first time!\n\n📍 Serving Leesville, Fort Polk, DeRidder & surrounding areas.\n\n📲 PLEASE TEXT ME for the fastest response!\n\nWhether you need a quick repair, an estimate, or just have a question, don't hesitate to reach out!\n\nQuality Work Without the High Prices! 💪",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View facebook post · 2026-10-27",
+          "url": "https://facebook.com/122118461787465672/posts/122126751507465672",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "facebook original post",
+          "url": "https://facebook.com/122118461787465672/posts/122126751507465672",
+          "publishedDate": "20261027",
+          "verifiedAt": "2026-11-07",
+          "caption": "🇺🇸 Veteran-Owned & Operated!\n\n🔧 Need HVAC, electrical, refrigeration, security cameras, or technical services?\n\nAt CC's Technical Services, we believe in honest work, fair prices, and doing the job right the first time!\n\n📍 Serving Leesville, Fort Polk, DeRidder & surrounding areas.\n\n📲 PLEASE TEXT ME for the fastest response!\n\nWhether you need a quick repair, an estimate, or just have a question, don't hesitate to reach out!\n\nQuality Work Without the High Prices! 💪"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "facebook"
+        ],
+        "state": "published",
+        "published": {
+          "facebook": "https://facebook.com/122118461787465672/posts/122126751507465672"
+        }
+      },
+      "platforms": [
+        "map",
+        "facebook"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-facebook-122126726841465672",
+      "authorId": "christopher-champagne",
+      "title": "CC’s • Local Technical Services",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-10-27T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-10-27T12:00:00-05:00",
+      "datetime": "2026-10-27T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-10-27 · shared on facebook",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "story": "🔧 NEED SOMETHING FIXED? CALL YOUR LOCAL TECH!\n\nYour AC not cooling? Electrical problems? Need security cameras installed or commercial refrigeration repaired?\n\nCC'S Technical Services LLC is ready to help!\n\n✅ HVAC & Heat Pump Repairs\n✅ Mini-Split Installation & Service\n✅ Electrical Troubleshooting\n✅ Security Cameras & Access Control\n✅ Refrigeration & Restaurant Equipment\n✅ Networking & Low-Voltage Systems\n\n💰 Service calls start at $100 for the first hour on-site, then $50/hour.\n\n🇺🇸 Locally operated. Veteran owned. Straightforward pricing and professional workmanship.\n\n📍 Serving Leesville, New Llano, Fort Polk, DeRidder & surrounding communities.\n\n📲 TEXT 337-423-2331 TODAY!\n\nTell me what you're having trouble with and where you're located. I'll help you figure out the next step.\n\n🌐 CCsTechnicalServices.com\n\nLOCAL SERVICE. REAL PEOPLE. WORK DONE RIGHT.\n\n#LeesvilleLA #DeRidderLA #FortPolk #HVACRepair #ElectricalServices #SecurityCameras #VeteranOwned #CCsTechnicalServices\n\nHistorical post: prices and promotions reflect the original publication; contact CC’s for current pricing and availability.",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View facebook post · 2026-10-27",
+          "url": "https://facebook.com/122118461787465672/posts/122126726841465672",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "facebook original post",
+          "url": "https://facebook.com/122118461787465672/posts/122126726841465672",
+          "publishedDate": "20261027",
+          "verifiedAt": "2026-11-07",
+          "caption": "🔧 NEED SOMETHING FIXED? CALL YOUR LOCAL TECH!\n\nYour AC not cooling? Electrical problems? Need security cameras installed or commercial refrigeration repaired?\n\nCC'S Technical Services LLC is ready to help!\n\n✅ HVAC & Heat Pump Repairs\n✅ Mini-Split Installation & Service\n✅ Electrical Troubleshooting\n✅ Security Cameras & Access Control\n✅ Refrigeration & Restaurant Equipment\n✅ Networking & Low-Voltage Systems\n\n💰 Service calls start at $100 for the first hour on-site, then $50/hour.\n\n🇺🇸 Locally operated. Veteran owned. Straightforward pricing and professional workmanship.\n\n📍 Serving Leesville, New Llano, Fort Polk, DeRidder & surrounding communities.\n\n📲 TEXT 337-423-2331 TODAY!\n\nTell me what you're having trouble with and where you're located. I'll help you figure out the next step.\n\n🌐 CCsTechnicalServices.com\n\nLOCAL SERVICE. REAL PEOPLE. WORK DONE RIGHT.\n\n#LeesvilleLA #DeRidderLA #FortPolk #HVACRepair #ElectricalServices #SecurityCameras #VeteranOwned #CCsTechnicalServices"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "facebook"
+        ],
+        "state": "published",
+        "published": {
+          "facebook": "https://facebook.com/122118461787465672/posts/122126726841465672"
+        }
+      },
+      "platforms": [
+        "map",
+        "facebook"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-facebook-122117715657465672",
+      "authorId": "christopher-champagne",
+      "title": "CC’s • Smart Thermostats",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-30T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-09-30T12:00:00-05:00",
+      "datetime": "2026-09-30T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-09-30 · shared on facebook",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "story": "SMARTEN UP YOUR HVAC 🍂\n\nSmart Wi-Fi Thermostat\n\nInstalled from $199*\nControl your heat & AC from your phone\nScheduling • Energy savings • Remote control\n\nNot sure your system is compatible? \n\nText me a photo of your current thermostat.\n\n337-423-2331\nCCsTechnicalServices.com\nLeesville • Fort Johnson • DeRidder\n\nHistorical post: prices and promotions reflect the original publication; contact CC’s for current pricing and availability.",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View facebook post · 2026-09-30",
+          "url": "https://facebook.com/122118461787465672/posts/122117715657465672",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "facebook original post",
+          "url": "https://facebook.com/122118461787465672/posts/122117715657465672",
+          "publishedDate": "20260930",
+          "verifiedAt": "2026-11-07",
+          "caption": "SMARTEN UP YOUR HVAC 🍂\n\nSmart Wi-Fi Thermostat\n\nInstalled from $199*\nControl your heat & AC from your phone\nScheduling • Energy savings • Remote control\n\nNot sure your system is compatible? \n\nText me a photo of your current thermostat.\n\n337-423-2331\nCCsTechnicalServices.com\nLeesville • Fort Johnson • DeRidder"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "facebook"
+        ],
+        "state": "published",
+        "published": {
+          "facebook": "https://facebook.com/122118461787465672/posts/122117715657465672"
+        }
+      },
+      "platforms": [
+        "map",
+        "facebook"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-facebook-122113870959465672",
+      "authorId": "christopher-champagne",
+      "title": "CC’s • HVAC Second Opinions",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-22T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-09-22T12:00:00-05:00",
+      "datetime": "2026-09-22T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-09-22 · shared on facebook",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "story": "GOT A $20,000 HVAC QUOTE? 👀\n\nBefore you sign, get a second quote from a local technician.\n\nComplete heat pump replacements starting at $7,500 for qualifying standard installations. I’ll inspect your setup, explain what your home needs, and give you a written price before work begins.\n\n📍 Serving Leesville, Fort Johnson, DeRidder & surrounding areas\n\n📲 Text “20K” and a photo of your quote to CC’s Technical Services for a second opinion.\n\nFinal price depends on equipment size, existing ductwork, electrical needs, and installation conditions.\n\nHistorical post: prices and promotions reflect the original publication; contact CC’s for current pricing and availability.",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View facebook post · 2026-09-22",
+          "url": "https://facebook.com/122118461787465672/posts/122113870959465672",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "facebook original post",
+          "url": "https://facebook.com/122118461787465672/posts/122113870959465672",
+          "publishedDate": "20260922",
+          "verifiedAt": "2026-11-07",
+          "caption": "GOT A $20,000 HVAC QUOTE? 👀\n\…15244 tokens truncated…d. 🦪 Fresh oysters 🍤 Gulf seafood 🎣 Pier life 🪁 Flying the new foil kite on the beach ☀️ Sunshine & Gulf breeze 🎨 Exploring the Strand ❤️ And most importantly — making memories with my wife. We ate, explored, laughed, flew, walked the beach and squeezed about as much as possible into one weekend. 😂 THIS is what weekends are for. Work hard. Fly high. Eat well. Live free. 🤙 #Galveston #GalvestonTX #GalvestonIsland #TexasCoast #GulfCoast "
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7672069404229651742",
+          "publishedDate": "20260809",
+          "verifiedAt": "2026-11-07",
+          "caption": "🌴🌊 Sometimes you just gotta GO. No big itinerary, no overthinking it… just me and my favorite adventure partner exploring Galveston, finding good food, chasing the ocean breeze and seeing where the day takes us. ❤️ Work hard. Play harder. Make memories. 🤙 GALVESTON BABY! 🌊☀️ #Galveston #GalvestonTexas #GalvestonIsland #TexasTravel #CouplesAdventure "
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "instagram",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "instagram": "https://www.instagram.com/reel/Db1NtLbjGq-/",
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7672116623385316639"
+        }
+      },
+      "platforms": [
+        "map",
+        "instagram",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-freeflight-vr-practice-2026",
+      "authorId": "christopher-champagne",
+      "title": "Freeflight Experience • Practice Before the Trip",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-08-04T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-08-04T12:00:00-05:00",
+      "datetime": "2026-08-04T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-08-04 · shared on instagram",
+      "primaryCategory": "freeflight",
+      "categories": [
+        "freeflight",
+        "creator"
+      ],
+      "story": "Flying #LMFP (Lookout Mountain Flight Park)... virtually! 🪂🥽\n\nEvery session in the Freeflight Experience VR simulator helps sharpen launch planning, flight decisions, and landing patterns before the real thing.\n\nThe countdown is officially on. Can't wait to get back in the air, knock the rust off, and see everyone at Wingman Weekend!\n\nWho else is heading to LMFP this year?\n\nCloudbase Game Labs, LLC \n#HangGliding #LookoutMountain #LMFP #FreeflightExperience #VirtualReality #Paragliding #HangGlider #WingmanWeekend #Looking4Lift #USHPA #FlySafe #Adventure #CloudbaseGameLabs #VRTraining",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View instagram video · 2026-08-04",
+          "url": "https://www.instagram.com/reel/DbnoLzADQDl/",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-09-07",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7682868704102583583",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-08-04",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7670159934369189151",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "instagram original post",
+          "url": "https://www.instagram.com/reel/DbnoLzADQDl/",
+          "publishedDate": "20260804",
+          "verifiedAt": "2026-11-07",
+          "caption": "Flying #LMFP (Lookout Mountain Flight Park)... virtually! 🪂🥽\n\nEvery session in the Freeflight Experience VR simulator helps sharpen launch planning, flight decisions, and landing patterns before the real thing.\n\nThe countdown is officially on. Can't wait to get back in the air, knock the rust off, and see everyone at Wingman Weekend!\n\nWho else is heading to LMFP this year?\n\nCloudbase Game Labs, LLC \n#HangGliding #LookoutMountain #LMFP #FreeflightExperience #VirtualReality #Paragliding #HangGlider #WingmanWeekend #Looking4Lift #USHPA #FlySafe #Adventure #CloudbaseGameLabs #VRTraining"
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7682868704102583583",
+          "publishedDate": "20260907",
+          "verifiedAt": "2026-11-07",
+          "caption": "The final 8 minutes… 🦅🎯 Spent the last few minutes trying to thermal with 3 buzzards, then headed into an active LZ for my spot landing. I had the points… but tried to squeeze out 5 more feet for extra points. 😂 Touched my knees and turned ALL my points into ZERO. 🤦‍♂️ Sometimes you gotta know when to take the win. 😂 #HangGliding #FreeFlight #SpotLanding #ThermalFlying #LMFP "
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7670159934369189151",
+          "publishedDate": "20260804",
+          "verifiedAt": "2026-11-07",
+          "caption": "Flying #LMFP (Lookout Mountain Flight Park)... virtually! 🪂🥽 Just one more week until Pops and I hit the road for Lookout Mountain. Every session in the Freeflight Experience VR simulator helps sharpen launch planning, flight decisions, and landing patterns before the real thing. The countdown is officially on. Can't wait to get back in the air, knock the rust off, and see everyone at Wingman Weekend! Who else is heading to LMFP this year? #HangGliding #LookoutMountain #LMFP #FreeflightExperience "
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "instagram",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "instagram": "https://www.instagram.com/reel/DbnoLzADQDl/",
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7682868704102583583"
+        }
+      },
+      "platforms": [
+        "map",
+        "instagram",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-instagram-dblntflihrk",
+      "authorId": "christopher-champagne",
+      "title": "🪂 The countdown is ON",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-08-03T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-08-03T12:00:00-05:00",
+      "datetime": "2026-08-03T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-08-03 · shared on instagram",
+      "primaryCategory": "freeflight",
+      "categories": [
+        "freeflight",
+        "creator"
+      ],
+      "story": "🪂 The countdown is ON!\n\nPops and I are heading to Lookout Mountain Flight Park on August 12th to shake the rust off, re-clear the training hills, and hopefully get a few mountain flights in before Wingman Weekend 2026 officially kicks off on August 20th.\n\nLast year was one of the most unforgettable experiences of my life. Since then I've earned my H2 rating, logged more flights, and I'm coming back with even more excitement to continue learning from some of the best pilots in the sport.\nBut this year... we're bringing something special.\n\n🎮 The Freeflight Experience VR Rig is almost finished, and the goal is to have it ready for Wingman Weekend so everyone can experience flying Lookout Mountain virtually before ever leaving the ground.\n\nWhether you're brand new to hang gliding or a seasoned pilot, the simulator lets you: 🪂 Learn the site 🪂 Practice launch approaches 🪂 Dial in flight plans 🪂 Build confidence 🪂 And just have an absolute blast flying in VR!\n\nI truly believe this is one of the best training tools our sport has ever seen, and I can't wait for everyone to experience it.\n\nIf you're attending Wingman Weekend, come find Pops and me! We'd love to meet you, talk flying, let you try the simulator, and share our passion for this incredible sport.\n\n📅 Wingman Weekend 2026 https://facebook.com/events/s/wingman-weekend/2133939827359211/⁠�\n\n🌐 The Freeflight Experience https://freeflightexperience.com⁠�\n\n💬 Join the Cloudbase Game Labs Discord https://discord.gg/bxaxFZZ2xM⁠�\n\n📘 Follow Cloudbase Game Labs on Facebook https://www.facebook.com/share/1DFK9UZH19/⁠�\n\nThis is going to be an incredible week of learning, flying, reconnecting with friends, making new ones, and helping grow the future of hang gliding.\nBlue skies... see y'all at Lookout! 🤙🪂\n\n#HangGliding #LMFP #LookoutMountain #WingmanWeekend2026 #FreeflightExperience #CloudbaseGameLabs #VirtualReality #VR #FlightSimulator #PilotTraining #USHPA #Looking4Lift #CertifiedMONSTER #BlueSkies #Adventure #FlyMore #HangGlidingLife",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View instagram video · 2026-08-03",
+          "url": "https://www.instagram.com/reel/DblNTFlihRK/",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "instagram original post",
+          "url": "https://www.instagram.com/reel/DblNTFlihRK/",
+          "publishedDate": "20260803",
+          "verifiedAt": "2026-11-07",
+          "caption": "🪂 The countdown is ON!\n\nPops and I are heading to Lookout Mountain Flight Park on August 12th to shake the rust off, re-clear the training hills, and hopefully get a few mountain flights in before Wingman Weekend 2026 officially kicks off on August 20th.\n\nLast year was one of the most unforgettable experiences of my life. Since then I've earned my H2 rating, logged more flights, and I'm coming back with even more excitement to continue learning from some of the best pilots in the sport.\nBut this year... we're bringing something special.\n\n🎮 The Freeflight Experience VR Rig is almost finished, and the goal is to have it ready for Wingman Weekend so everyone can experience flying Lookout Mountain virtually before ever leaving the ground.\n\nWhether you're brand new to hang gliding or a seasoned pilot, the simulator lets you: 🪂 Learn the site 🪂 Practice launch approaches 🪂 Dial in flight plans 🪂 Build confidence 🪂 And just have an absolute blast flying in VR!\n\nI truly believe this is one of the best training tools our sport has ever seen, and I can't wait for everyone to experience it.\n\nIf you're attending Wingman Weekend, come find Pops and me! We'd love to meet you, talk flying, let you try the simulator, and share our passion for this incredible sport.\n\n📅 Wingman Weekend 2026 https://facebook.com/events/s/wingman-weekend/2133939827359211/⁠�\n\n🌐 The Freeflight Experience https://freeflightexperience.com⁠�\n\n💬 Join the Cloudbase Game Labs Discord https://discord.gg/bxaxFZZ2xM⁠�\n\n📘 Follow Cloudbase Game Labs on Facebook https://www.facebook.com/share/1DFK9UZH19/⁠�\n\nThis is going to be an incredible week of learning, flying, reconnecting with friends, making new ones, and helping grow the future of hang gliding.\nBlue skies... see y'all at Lookout! 🤙🪂\n\n#HangGliding #LMFP #LookoutMountain #WingmanWeekend2026 #FreeflightExperience #CloudbaseGameLabs #VirtualReality #VR #FlightSimulator #PilotTraining #USHPA #Looking4Lift #CertifiedMONSTER #BlueSkies #Adventure #FlyMore #HangGlidingLife"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "instagram"
+        ],
+        "state": "published",
+        "published": {
+          "instagram": "https://www.instagram.com/reel/DblNTFlihRK/"
+        }
+      },
+      "platforms": [
+        "map",
+        "instagram"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-journal-202609",
+      "authorId": "christopher-champagne",
+      "title": "TikTok • Video & Photo Journal · 2026-09",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-30T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-09-30T12:00:00-05:00",
+      "datetime": "2026-09-30T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-09-30 · shared on tiktok",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator"
+      ],
+      "story": "A collection of posts shared on tiktok. Open the original posts below to watch or view them; captions were not supplied by the connected account.",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-09-30",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7691398868998556958",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-09-27",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7690294115510078750",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-09-15",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7685798253555649823",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-09-10",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7683878512117239071",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-09-10",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7683877427805818142",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-09-10",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7683873731940191519",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-09-04",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7681655199169137950",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7691398868998556958",
+          "publishedDate": "20260930",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7690294115510078750",
+          "publishedDate": "20260927",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7685798253555649823",
+          "publishedDate": "20260915",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7683878512117239071",
+          "publishedDate": "20260910",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7683877427805818142",
+          "publishedDate": "20260910",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7683873731940191519",
+          "publishedDate": "20260910",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7681655199169137950",
+          "publishedDate": "20260904",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7691398868998556958"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-7686128599916612894",
+      "authorId": "christopher-champagne",
+      "title": "One room always too hot or too cold",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-16T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-09-16T12:00:00-05:00",
+      "datetime": "2026-09-16T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-09-16 · shared on tiktok",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "story": "One room always too hot or too cold? A mini-split may be the perfect solution. ❄️🔥 CC’s Technical Services serves Leesville, Fort Polk, DeRidder, and surrounding areas. Text me a photo of your space for help choosing the right setup. #MiniSplit #HVAC #LeesvilleLA #FortPolk #DeRidderLA ",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-09-16",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7686128599916612894",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7686128599916612894",
+          "publishedDate": "20260916",
+          "verifiedAt": "2026-11-07",
+          "caption": "One room always too hot or too cold? A mini-split may be the perfect solution. ❄️🔥 CC’s Technical Services serves Leesville, Fort Polk, DeRidder, and surrounding areas. Text me a photo of your space for help choosing the right setup. #MiniSplit #HVAC #LeesvilleLA #FortPolk #DeRidderLA "
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7686128599916612894"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-7685929611082927391",
+      "authorId": "christopher-champagne",
+      "title": "Too hot in summer",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-16T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-09-16T12:00:00-05:00",
+      "datetime": "2026-09-16T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-09-16 · shared on tiktok",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "story": "Too hot in summer? Too cold in winter? A mini-split could make that room comfortable year-round. ❄️☀️ CC’s Technical Services serves Leesville, Fort Polk, DeRidder, and surrounding areas. Text me a photo of your space and let’s talk options. #MiniSplit #HVAC #LeesvilleLA #DeRidderLA #FortPolk ",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-09-16",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7685929611082927391",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7685929611082927391",
+          "publishedDate": "20260916",
+          "verifiedAt": "2026-11-07",
+          "caption": "Too hot in summer? Too cold in winter? A mini-split could make that room comfortable year-round. ❄️☀️ CC’s Technical Services serves Leesville, Fort Polk, DeRidder, and surrounding areas. Text me a photo of your space and let’s talk options. #MiniSplit #HVAC #LeesvilleLA #DeRidderLA #FortPolk "
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7685929611082927391"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-7685726085220273439",
+      "authorId": "christopher-champagne",
+      "title": "Building My Life • My Mission • My M.A.P.",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-15T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-09-15T12:00:00-05:00",
+      "datetime": "2026-09-15T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-09-15 · shared on tiktok",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator"
+      ],
+      "story": "I’ve got a lot of paths I’m working on—family, fitness, flying, business, and building N.O.V.A. So I started building M.A.P. to see the life I want and keep taking real steps toward it. This is early development, and I’m looking for a few people to try it with me. 👀 Take a look: https://champagne247.github.io/Champagne247/ What would you put on your M.A.P.? Drop it in the comments. 👇 #MAP #MissionAlignmentProtocol #NOVA",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-09-15",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7685726085220273439",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7685726085220273439",
+          "publishedDate": "20260915",
+          "verifiedAt": "2026-11-07",
+          "caption": "I’ve got a lot of paths I’m working on—family, fitness, flying, business, and building N.O.V.A. So I started building M.A.P. to see the life I want and keep taking real steps toward it. This is early development, and I’m looking for a few people to try it with me. 👀 Take a look: https://champagne247.github.io/Champagne247/ What would you put on your M.A.P.? Drop it in the comments. 👇 #MAP #MissionAlignmentProtocol #NOVA"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7685726085220273439"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-7685718038120893726",
+      "authorId": "christopher-champagne",
+      "title": "Building My Life • My Mission • My M.A.P.",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-15T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-09-15T12:00:00-05:00",
+      "datetime": "2026-09-15T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-09-15 · shared on tiktok",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator"
+      ],
+      "story": "Too many ideas in my head. Too many paths I want to chase. So I built a way to SEE them—and start moving. 👊 This is M.A.P., my living vision board, with N.O.V.A. helping turn the dream into the next move. We’re still building it live, and I need alpha testers who’ll click around and tell me what works and what doesn’t. Wanna help build this with me? Comment MAP and I’ll get you in. 🚀 #MAP #NOVA #AlphaTesters #BuildInPublic",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-09-15",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7685718038120893726",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7685718038120893726",
+          "publishedDate": "20260915",
+          "verifiedAt": "2026-11-07",
+          "caption": "Too many ideas in my head. Too many paths I want to chase. So I built a way to SEE them—and start moving. 👊 This is M.A.P., my living vision board, with N.O.V.A. helping turn the dream into the next move. We’re still building it live, and I need alpha testers who’ll click around and tell me what works and what doesn’t. Wanna help build this with me? Comment MAP and I’ll get you in. 🚀 #MAP #NOVA #AlphaTesters #BuildInPublic"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7685718038120893726"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-7682484381218311455",
+      "authorId": "christopher-champagne",
+      "title": "Think you could do this",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-06T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-09-06T12:00:00-05:00",
+      "datetime": "2026-09-06T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-09-06 · shared on tiktok",
+      "primaryCategory": "freeflight",
+      "categories": [
+        "freeflight",
+        "creator"
+      ],
+      "story": "Think you could do this? 👀 Experience hang gliding at Lookout Mountain Flight Park! Tap the link to book your tandem flight and come see why we’re #Looking4Lift 🪂 #HangGliding #Freeflight #LookoutMountainFlightPark #TandemFlight ",
+      "locations": [
+        {
+          "label": "Lookout Mountain Flight Park • Rising Fawn, Georgia",
+          "lat": 34.835,
+          "lng": -85.487,
+          "precision": "approximate",
+          "visibility": "public",
+          "verification": "source-caption"
+        }
+      ],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-09-06",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7682484381218311455",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7682484381218311455",
+          "publishedDate": "20260906",
+          "verifiedAt": "2026-11-07",
+          "caption": "Think you could do this? 👀 Experience hang gliding at Lookout Mountain Flight Park! Tap the link to book your tandem flight and come see why we’re #Looking4Lift 🪂 #HangGliding #Freeflight #LookoutMountainFlightPark #TandemFlight "
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7682484381218311455"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-7681752029965995294",
+      "authorId": "christopher-champagne",
+      "title": "There’s just something different about Lookout Mountain",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-09-04T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-09-04T12:00:00-05:00",
+      "datetime": "2026-09-04T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-09-04 · shared on tiktok",
+      "primaryCategory": "freeflight",
+      "categories": [
+        "freeflight",
+        "creator"
+      ],
+      "story": "There’s just something different about Lookout Mountain. Hang gliders, pilots, mountain views and one of the coolest free-flight communities I've had the opportunity to be part of. 🤙 If you've ever wondered what hang gliding is really like… this is one place worth experiencing. Who would actually try it? 👀 #HangGliding #FreeFlight #LookoutMountain #Looking4Lift #Adventure ",
+      "locations": [
+        {
+          "label": "Lookout Mountain Flight Park • Rising Fawn, Georgia",
+          "lat": 34.835,
+          "lng": -85.487,
+          "precision": "approximate",
+          "visibility": "public",
+          "verification": "source-caption"
+        }
+      ],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-09-04",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7681752029965995294",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7681752029965995294",
+          "publishedDate": "20260904",
+          "verifiedAt": "2026-11-07",
+          "caption": "There’s just something different about Lookout Mountain. Hang gliders, pilots, mountain views and one of the coolest free-flight communities I've had the opportunity to be part of. 🤙 If you've ever wondered what hang gliding is really like… this is one place worth experiencing. Who would actually try it? 👀 #HangGliding #FreeFlight #LookoutMountain #Looking4Lift #Adventure "
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7681752029965995294"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-journal-202608",
+      "authorId": "christopher-champagne",
+      "title": "TikTok • Video & Photo Journal · 2026-08",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-08-30T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-08-30T12:00:00-05:00",
+      "datetime": "2026-08-30T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-08-30 · shared on tiktok",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator"
+      ],
+      "story": "A collection of posts shared on tiktok. Open the original posts below to watch or view them; captions were not supplied by the connected account.",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-08-30",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7679915074273774878",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-08-29",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7679543471920680223",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-08-28",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7679083594588949790",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-08-25",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7678047278648610078",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-08-25",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7678011901808266526",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-08-24",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7677634088412384542",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-08-19",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7675841674316139807",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-08-18",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7675475483382926622",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-08-17",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7675034770484530463",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-08-13",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7673533017314348318",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-08-13",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7673499101597666590",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-08-12",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7672939335087295774",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-08-09",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7671820651728063775",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-08-08",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7671795392312315166",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-08-02",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7669560387561426206",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-08-02",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7669545298158538015",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-08-02",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7669487584933907742",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-08-02",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7669479256082222367",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7679915074273774878",
+          "publishedDate": "20260830",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7679543471920680223",
+          "publishedDate": "20260829",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7679083594588949790",
+          "publishedDate": "20260828",
+          "verifiedAt": "2026-11-07",
+          "caption": "#tiktoklive #livehighlights "
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7678047278648610078",
+          "publishedDate": "20260825",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7678011901808266526",
+          "publishedDate": "20260825",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7677634088412384542",
+          "publishedDate": "20260824",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7675841674316139807",
+          "publishedDate": "20260819",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7675475483382926622",
+          "publishedDate": "20260818",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7675034770484530463",
+          "publishedDate": "20260817",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7673533017314348318",
+          "publishedDate": "20260813",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7673499101597666590",
+          "publishedDate": "20260813",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7672939335087295774",
+          "publishedDate": "20260812",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7671820651728063775",
+          "publishedDate": "20260809",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7671795392312315166",
+          "publishedDate": "20260808",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7669560387561426206",
+          "publishedDate": "20260802",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7669545298158538015",
+          "publishedDate": "20260802",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7669487584933907742",
+          "publishedDate": "20260802",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7669479256082222367",
+          "publishedDate": "20260802",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7679915074273774878"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-7679140128748571935",
+      "authorId": "christopher-champagne",
+      "title": "CC’s • Filter and Condenser Cleanup",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-08-28T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-08-28T12:00:00-05:00",
+      "datetime": "2026-08-28T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-08-28 · shared on tiktok",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "story": "❓ HOW OFTEN DO YOU CHANGE YOUR A/C FILTER? Every month? Every three months? Or only when your A/C stops cooling? Be honest! 😂👇 This is what your system could be trying to breathe through right now. 😳 Before servicing this system, the supply air measured 72.5°F. After replacing the filthy filter, thoroughly cleaning the condenser and allowing the system to stabilize, the supply air dropped to 58.4°F—that’s 14.1°F colder! ❄️ The supply-air dew point also dropped from 60.6°F to 50.5°F, showing a major improvement in moisture removal. 🔥 Limited-time residential condenser cleaning: ONLY $99 📞 Call or text CC’s Technical Services 337-423-2331 Veteran-owned 🇺🇸 Honest work • Fair pricing • Done right #CCTechnicalServices #HVAC #ACMaintenance #ACRepair #LeesvilleLA \n\nHistorical post: prices and promotions reflect the original publication; contact CC’s for current pricing and availability.",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-08-28",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7679140128748571935",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7679140128748571935",
+          "publishedDate": "20260828",
+          "verifiedAt": "2026-11-07",
+          "caption": "❓ HOW OFTEN DO YOU CHANGE YOUR A/C FILTER? Every month? Every three months? Or only when your A/C stops cooling? Be honest! 😂👇 This is what your system could be trying to breathe through right now. 😳 Before servicing this system, the supply air measured 72.5°F. After replacing the filthy filter, thoroughly cleaning the condenser and allowing the system to stabilize, the supply air dropped to 58.4°F—that’s 14.1°F colder! ❄️ The supply-air dew point also dropped from 60.6°F to 50.5°F, showing a major improvement in moisture removal. 🔥 Limited-time residential condenser cleaning: ONLY $99 📞 Call or text CC’s Technical Services 337-423-2331 Veteran-owned 🇺🇸 Honest work • Fair pricing • Done right #CCTechnicalServices #HVAC #ACMaintenance #ACRepair #LeesvilleLA "
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7679140128748571935"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-7678738745025154335",
+      "authorId": "christopher-champagne",
+      "title": "Want to experience free flight for yourself",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-08-27T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-08-27T12:00:00-05:00",
+      "datetime": "2026-08-27T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-08-27 · shared on tiktok",
+      "primaryCategory": "freeflight",
+      "categories": [
+        "freeflight",
+        "creator"
+      ],
+      "story": "Want to experience free flight for yourself? 🦅 Start virtually with Freeflight Experience, then experience the real thing at Lookout Mountain Flight Park—an incredible flying community with professional, friendly staff who provide the training, encouragement, and support you need to fly with confidence. I experienced firsthand how valuable simulator training can be, but nothing replaces professional instruction, real conditions, and the amazing people at Lookout who help turn the dream of flight into reality. Follow @Looking4Lift as we connect VR training with real-world hang gliding! 🥽 Freeflight Experience 🦅 Lookout Mountain Flight Park 🎥 Looking4Lift 💬 Join our free-flight community: https://discord.gg/Z8EHmwckab Fly it virtually. Train with the professionals. Then take it to the sky! 🔥 #Looking4Lift #FreeflightExperience #LookoutMountainFlightPark #HangGliding #HangGlider ",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-08-27",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7678738745025154335",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7678738745025154335",
+          "publishedDate": "20260827",
+          "verifiedAt": "2026-11-07",
+          "caption": "Want to experience free flight for yourself? 🦅 Start virtually with Freeflight Experience, then experience the real thing at Lookout Mountain Flight Park—an incredible flying community with professional, friendly staff who provide the training, encouragement, and support you need to fly with confidence. I experienced firsthand how valuable simulator training can be, but nothing replaces professional instruction, real conditions, and the amazing people at Lookout who help turn the dream of flight into reality. Follow @Looking4Lift as we connect VR training with real-world hang gliding! 🥽 Freeflight Experience 🦅 Lookout Mountain Flight Park 🎥 Looking4Lift 💬 Join our free-flight community: https://discord.gg/Z8EHmwckab Fly it virtually. Train with the professionals. Then take it to the sky! 🔥 #Looking4Lift #FreeflightExperience #LookoutMountainFlightPark #HangGliding #HangGlider "
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7678738745025154335"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-7677950584300883230",
+      "authorId": "christopher-champagne",
+      "title": "Looking4Lift • Wingman Weekend Video",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-08-25T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-08-25T12:00:00-05:00",
+      "datetime": "2026-08-25T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-08-25 · shared on tiktok",
+      "primaryCategory": "freeflight",
+      "categories": [
+        "freeflight",
+        "creator"
+      ],
+      "story": "#Lookout Mountain Flight Park  #WINGMANWEEKEND2026 ",
+      "locations": [
+        {
+          "label": "Lookout Mountain Flight Park • Rising Fawn, Georgia",
+          "lat": 34.835,
+          "lng": -85.487,
+          "precision": "approximate",
+          "visibility": "public",
+          "verification": "source-caption"
+        }
+      ],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-08-25",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7677950584300883230",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7677950584300883230",
+          "publishedDate": "20260825",
+          "verifiedAt": "2026-11-07",
+          "caption": "#Lookout Mountain Flight Park  #WINGMANWEEKEND2026 "
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7677950584300883230"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-7676122582617165086",
+      "authorId": "christopher-champagne",
+      "title": "🔥🪂 GOOOOOOD MORNING WINGMAN WEEKEND 2026",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-08-20T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-08-20T12:00:00-05:00",
+      "datetime": "2026-08-20T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-08-20 · shared on tiktok",
+      "primaryCategory": "freeflight",
+      "categories": [
+        "freeflight",
+        "creator"
+      ],
+      "story": "🔥🪂 GOOOOOOD MORNING WINGMAN WEEKEND 2026!!! 🪂🔥 IT'S OFFICIALLY HERE! Today kicks off DAY ONE at Lookout Mountain Flight Park — registration, teams getting picked, pilots rolling in, old friends reconnecting, new friendships being made… and the FUN OFFICIALLY BEGINS! 🤙⛰️ We've been here early getting some hill time, knocking the rust off, getting the Freeflight Experience VR rig ready and soaking up everything Lookout has to offer… But now we're done getting ready for Wingman Weekend. WE'RE IN IT. 😎🔥 August 20–23 — four days of flying, learning, competition, community, stories, laughs and everything that makes FREEFLIGHT what it is. And you already know we're going to be sharing as much of it as we can! 👇 CALLING ALL PILOTS & FREEFLIGHT FANS: 🪂 Who's at Lookout for Wingman Weekend? 🤙 What team are you on? 🥽 Come find me and take the Freeflight Experience VR rig for a flight! 📸 If you see us, COME SAY HELLO — let's get you on camera and hear your story. Can't make it this year? FOLLOW ALONG, SHARE THIS POST and TAG somebody who should be here next year. 🔥 WINGMAN WEEKEND 2026 — LET'S FREAKING GOOOOOO! 🔥 #WingmanWeekend2026 #WingmanWeekend #LookoutMountainFlightPark #LookoutMountain #HangGliding ",
+      "locations": [
+        {
+          "label": "Lookout Mountain Flight Park • Rising Fawn, Georgia",
+          "lat": 34.835,
+          "lng": -85.487,
+          "precision": "approximate",
+          "visibility": "public",
+          "verification": "source-caption"
+        }
+      ],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-08-20",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7676122582617165086",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7676122582617165086",
+          "publishedDate": "20260820",
+          "verifiedAt": "2026-11-07",
+          "caption": "🔥🪂 GOOOOOOD MORNING WINGMAN WEEKEND 2026!!! 🪂🔥 IT'S OFFICIALLY HERE! Today kicks off DAY ONE at Lookout Mountain Flight Park — registration, teams getting picked, pilots rolling in, old friends reconnecting, new friendships being made… and the FUN OFFICIALLY BEGINS! 🤙⛰️ We've been here early getting some hill time, knocking the rust off, getting the Freeflight Experience VR rig ready and soaking up everything Lookout has to offer… But now we're done getting ready for Wingman Weekend. WE'RE IN IT. 😎🔥 August 20–23 — four days of flying, learning, competition, community, stories, laughs and everything that makes FREEFLIGHT what it is. And you already know we're going to be sharing as much of it as we can! 👇 CALLING ALL PILOTS & FREEFLIGHT FANS: 🪂 Who's at Lookout for Wingman Weekend? 🤙 What team are you on? 🥽 Come find me and take the Freeflight Experience VR rig for a flight! 📸 If you see us, COME SAY HELLO — let's get you on camera and hear your story. Can't make it this year? FOLLOW ALONG, SHARE THIS POST and TAG somebody who should be here next year. 🔥 WINGMAN WEEKEND 2026 — LET'S FREAKING GOOOOOO! 🔥 #WingmanWeekend2026 #WingmanWeekend #LookoutMountainFlightPark #LookoutMountain #HangGliding "
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7676122582617165086"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-7675555556437806367",
+      "authorId": "christopher-champagne",
+      "title": "Looking4Lift • Sunset Launch",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-08-19T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-08-19T12:00:00-05:00",
+      "datetime": "2026-08-19T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-08-19 · shared on tiktok",
+      "primaryCategory": "freeflight",
+      "categories": [
+        "freeflight",
+        "creator"
+      ],
+      "story": "Launching into the #Sunset #,LookoutMountainFlightPark #LMFP ",
+      "locations": [
+        {
+          "label": "Lookout Mountain Flight Park • Rising Fawn, Georgia",
+          "lat": 34.835,
+          "lng": -85.487,
+          "precision": "approximate",
+          "visibility": "public",
+          "verification": "source-caption"
+        }
+      ],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-08-19",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7675555556437806367",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7675555556437806367",
+          "publishedDate": "20260819",
+          "verifiedAt": "2026-11-07",
+          "caption": "Launching into the #Sunset #,LookoutMountainFlightPark #LMFP "
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7675555556437806367"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-7672752421969415454",
+      "authorId": "christopher-champagne",
+      "title": "🔥 FROM FOLLOWING THE BUILD… TO BUILDING MY OWN",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-08-11T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-08-11T12:00:00-05:00",
+      "datetime": "2026-08-11T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-08-11 · shared on tiktok",
+      "primaryCategory": "freeflight",
+      "categories": [
+        "freeflight",
+        "creator"
+      ],
+      "story": "🔥 FROM FOLLOWING THE BUILD… TO BUILDING MY OWN. 🔥 This one means a little more to me. I’ve literally been following Thomas Low and Cloudbase Game Labs since the early days of The Freeflight Experience, watching this hang gliding simulator evolve from an idea into what I believe is one of the coolest tools ever created for the freeflight community. And now… MY PERSONAL FREEFLIGHT VR RIG is in the FINAL stages of becoming reality. 🤯🤙 What started with flying The Freeflight Experience in VR has turned into a full-size, purpose-built steel simulator frame designed around an actual prone hang gliding position, control frame, weight-shift input, VR, sensors, airflow and eventually the complete interactive experience. 🔥 The frame is BUILT. 🔥 Hardware and controls are coming together. 🔥 VR system is ready. 🔥 Next comes assembly, testing, calibration and LOTS of flying. And the timing couldn't be better… 🏔️ LOOKOUT MOUNTAIN — HERE WE COME. Huge shoutout to Thomas Low and Cloudbase Game Labs for putting the work into The Freeflight Experience and continuing to push this project forward. Seeing the hardware Thomas has developed — and now being this close to having my own physical simulator running with TFFE — is freaking awesome. 👉 WANT TO FLY BEFORE YOU EVER LEAVE THE GROUND? Join The Freeflight Experience Discord and get involved with the community — real-world hang glider pilots, VR pilots, new pilots, simulator builders and everyone interested in pushing freeflight simulation forward. 🔥 JOIN THE TFFE DISCORD: https://discord.gg/RANFVGU8eV⁠� Come fly with us, follow the development, share your setup and see what Thomas Low & Cloudbase Game Labs are building. I’ll be documenting the final stages of my Freeflight VR Rig, the first full test flights, and then taking this beast to LOOKOUT MOUNTAIN for WINGMAN WEEKEND 2026. 👀🔥🤙 TRAIN. BUILD. FLY. WORK HARD. FLY HIGH. LIVE FREE. #TheFreeflightExperience #CloudbaseGameLabs #ThomasLow #Looking4Lift #FreeflightRig ",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-08-11",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7672752421969415454",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7672752421969415454",
+          "publishedDate": "20260811",
+          "verifiedAt": "2026-11-07",
+          "caption": "🔥 FROM FOLLOWING THE BUILD… TO BUILDING MY OWN. 🔥 This one means a little more to me. I’ve literally been following Thomas Low and Cloudbase Game Labs since the early days of The Freeflight Experience, watching this hang gliding simulator evolve from an idea into what I believe is one of the coolest tools ever created for the freeflight community. And now… MY PERSONAL FREEFLIGHT VR RIG is in the FINAL stages of becoming reality. 🤯🤙 What started with flying The Freeflight Experience in VR has turned into a full-size, purpose-built steel simulator frame designed around an actual prone hang gliding position, control frame, weight-shift input, VR, sensors, airflow and eventually the complete interactive experience. 🔥 The frame is BUILT. 🔥 Hardware and controls are coming together. 🔥 VR system is ready. 🔥 Next comes assembly, testing, calibration and LOTS of flying. And the timing couldn't be better… 🏔️ LOOKOUT MOUNTAIN — HERE WE COME. Huge shoutout to Thomas Low and Cloudbase Game Labs for putting the work into The Freeflight Experience and continuing to push this project forward. Seeing the hardware Thomas has developed — and now being this close to having my own physical simulator running with TFFE — is freaking awesome. 👉 WANT TO FLY BEFORE YOU EVER LEAVE THE GROUND? Join The Freeflight Experience Discord and get involved with the community — real-world hang glider pilots, VR pilots, new pilots, simulator builders and everyone interested in pushing freeflight simulation forward. 🔥 JOIN THE TFFE DISCORD: https://discord.gg/RANFVGU8eV⁠� Come fly with us, follow the development, share your setup and see what Thomas Low & Cloudbase Game Labs are building. I’ll be documenting the final stages of my Freeflight VR Rig, the first full test flights, and then taking this beast to LOOKOUT MOUNTAIN for WINGMAN WEEKEND 2026. 👀🔥🤙 TRAIN. BUILD. FLY. WORK HARD. FLY HIGH. LIVE FREE. #TheFreeflightExperience #CloudbaseGameLabs #ThomasLow #Looking4Lift #FreeflightRig "
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7672752421969415454"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-7670563787350527263",
+      "authorId": "christopher-champagne",
+      "title": "🪂 FREEFLIGHT PILOTS",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-08-05T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-08-05T12:00:00-05:00",
+      "datetime": "2026-08-05T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-08-05 · shared on tiktok",
+      "primaryCategory": "freeflight",
+      "categories": [
+        "freeflight",
+        "creator"
+      ],
+      "story": "🪂 FREEFLIGHT PILOTS... WHERE Y'ALL AT?! 🎮☁️ If you're passionate about hang gliding, paragliding, or just curious about learning to fly, come join one of the fastest-growing Freeflight communities around! ! This Discord is home to: 🪂 H0 students through H5 pilots 🎮 Cloudbase VR simulator pilots 🏔️ Lookout Mountain Flight Park pilots & instructors 💻 Cloudbase Game Labs developers 🤝 Mentors, instructors, and freeflight enthusiasts from around the world. (Currently 76 active Pilots)! Whether you're making your first training hill flights, flying XC, or just discovered The Freeflight Experience, there's a place for you. 🔥 With Wingman Weekend right around the corner, the timing couldn't be better! I'll be bringing my physical Freeflight Experience VR simulator rig so pilots can experience flying LMFP in VR before leaving the ground. I can't wait to meet everyone and get more people flying! Come introduce yourself, share your flying stories, post your videos, ask questions, or just hang out with fellow pilots. Blue skies and see you in the Discord! 🤙☁️ 👇 Drop in here:  https://discord.gg/RANFVGU8eV RJ McKeehan Erika Klein Chad May Dalton Nagel  #HangGliding #Paragliding #Freeflight #Cloudbase #TheFreeflightExperience ",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-08-05",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7670563787350527263",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7670563787350527263",
+          "publishedDate": "20260805",
+          "verifiedAt": "2026-11-07",
+          "caption": "🪂 FREEFLIGHT PILOTS... WHERE Y'ALL AT?! 🎮☁️ If you're passionate about hang gliding, paragliding, or just curious about learning to fly, come join one of the fastest-growing Freeflight communities around! ! This Discord is home to: 🪂 H0 students through H5 pilots 🎮 Cloudbase VR simulator pilots 🏔️ Lookout Mountain Flight Park pilots & instructors 💻 Cloudbase Game Labs developers 🤝 Mentors, instructors, and freeflight enthusiasts from around the world. (Currently 76 active Pilots)! Whether you're making your first training hill flights, flying XC, or just discovered The Freeflight Experience, there's a place for you. 🔥 With Wingman Weekend right around the corner, the timing couldn't be better! I'll be bringing my physical Freeflight Experience VR simulator rig so pilots can experience flying LMFP in VR before leaving the ground. I can't wait to meet everyone and get more people flying! Come introduce yourself, share your flying stories, post your videos, ask questions, or just hang out with fellow pilots. Blue skies and see you in the Discord! 🤙☁️ 👇 Drop in here:  https://discord.gg/RANFVGU8eV RJ McKeehan Erika Klein Chad May Dalton Nagel  #HangGliding #Paragliding #Freeflight #Cloudbase #TheFreeflightExperience "
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7670563787350527263"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-7669793548916608287",
+      "authorId": "christopher-champagne",
+      "title": "Creator Journal • Exploring Social Platforms",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-08-03T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-08-03T12:00:00-05:00",
+      "datetime": "2026-08-03T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-08-03 · shared on tiktok",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator"
+      ],
+      "story": "🚨 YOOO... I know y'all are seeing this too... 👀 MYSPACE, MOTHERF***ERS, might actually be making a comeback! 🤯 I had to see it for myself, so I'm over here creating a new account and trying to lock in my username before everybody rushes over. If you've still got your old account—or want to claim your name—you might want to check it out. Who remembers spending HOURS customizing their profile, autoplay music, Top 8 drama, and talking to Tom? 😂 Are we really about to go full circle?! #Myspace #ComongBACK #MySpace #MySpaceIsBack #ComingBack ",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-08-03",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7669793548916608287",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7669793548916608287",
+          "publishedDate": "20260803",
+          "verifiedAt": "2026-11-07",
+          "caption": "🚨 YOOO... I know y'all are seeing this too... 👀 MYSPACE, MOTHERF***ERS, might actually be making a comeback! 🤯 I had to see it for myself, so I'm over here creating a new account and trying to lock in my username before everybody rushes over. If you've still got your old account—or want to claim your name—you might want to check it out. Who remembers spending HOURS customizing their profile, autoplay music, Top 8 drama, and talking to Tom? 😂 Are we really about to go full circle?! #Myspace #ComongBACK #MySpace #MySpaceIsBack #ComingBack "
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7669793548916608287"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-7669422881561988382",
+      "authorId": "christopher-champagne",
+      "title": "CC’s • Complete Heat Pump Replacement",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-08-02T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-08-02T12:00:00-05:00",
+      "datetime": "2026-08-02T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-08-02 · shared on tiktok",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "story": "💥 BEFORE ➜ AFTER 💥 This customer was quoted $20,000 for a complete HVAC system replacement. We completed the entire 2.5-ton system replacement for $10,000—saving them $10,000 while delivering a professional installation built to last. This wasn't just an outdoor unit swap. We replaced: ✅ New ComfortStar heat pump condenser ✅ New matching air handler ✅ New refrigerant lineset ✅ New filter drier ✅ New 10kW heat strip ✅ New thermostat & wiring ✅ New 20×20 filter grille & filter ✅ New PVC drain & plumbing ✅ Pressure tested with nitrogen ✅ Deep vacuum pulled ✅ System charged, commissioned & performance tested At CC's Technical Services, we believe in doing the job right the first time with quality workmanship, honest pricing, and no shortcuts. If you've been quoted for a new HVAC system, get a second opinion before you spend your money. You may be surprised how much you can save. 📞 Call or Text: (337) 423-2331 CC's Technical Services ✔ Veteran Owned ✔ Honest Estimates ✔ Licensed Professional Installation ✔ Serving Leesville, Fort Johnson, DeRidder, Alexandria & surrounding areas #HVAC #HeatPump #ACReplacement #BeforeAndAfter #ComfortStar \n\nHistorical post: prices and promotions reflect the original publication; contact CC’s for current pricing and availability.",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-08-02",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7669422881561988382",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7669422881561988382",
+          "publishedDate": "20260802",
+          "verifiedAt": "2026-11-07",
+          "caption": "💥 BEFORE ➜ AFTER 💥 This customer was quoted $20,000 for a complete HVAC system replacement. We completed the entire 2.5-ton system replacement for $10,000—saving them $10,000 while delivering a professional installation built to last. This wasn't just an outdoor unit swap. We replaced: ✅ New ComfortStar heat pump condenser ✅ New matching air handler ✅ New refrigerant lineset ✅ New filter drier ✅ New 10kW heat strip ✅ New thermostat & wiring ✅ New 20×20 filter grille & filter ✅ New PVC drain & plumbing ✅ Pressure tested with nitrogen ✅ Deep vacuum pulled ✅ System charged, commissioned & performance tested At CC's Technical Services, we believe in doing the job right the first time with quality workmanship, honest pricing, and no shortcuts. If you've been quoted for a new HVAC system, get a second opinion before you spend your money. You may be surprised how much you can save. 📞 Call or Text: (337) 423-2331 CC's Technical Services ✔ Veteran Owned ✔ Honest Estimates ✔ Licensed Professional Installation ✔ Serving Leesville, Fort Johnson, DeRidder, Alexandria & surrounding areas #HVAC #HeatPump #ACReplacement #BeforeAndAfter #ComfortStar "
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7669422881561988382"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-journal-202607",
+      "authorId": "christopher-champagne",
+      "title": "TikTok • Video & Photo Journal · 2026-07",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-07-31T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-07-31T12:00:00-05:00",
+      "datetime": "2026-07-31T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-07-31 · shared on tiktok",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator"
+      ],
+      "story": "A collection of posts shared on tiktok. Open the original posts below to watch or view them; captions were not supplied by the connected account.",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-07-31",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7668781796447833375",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-07-27",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7667286300583660831",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-07-26",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7666672818007887134",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-07-16",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7663146700441242911",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-07-14",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7662417898878586142",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-07-13",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7662101584389623070",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-07-11",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7661062317336972574",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-07-06",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7659493778549476639",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-07-05",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7659179389552250142",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-07-05",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7659031703041756447",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-07-05",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7659017481075330334",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7668781796447833375",
+          "publishedDate": "20260731",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7667286300583660831",
+          "publishedDate": "20260727",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7666672818007887134",
+          "publishedDate": "20260726",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7663146700441242911",
+          "publishedDate": "20260716",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7662417898878586142",
+          "publishedDate": "20260714",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7662101584389623070",
+          "publishedDate": "20260713",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7661062317336972574",
+          "publishedDate": "20260711",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7659493778549476639",
+          "publishedDate": "20260706",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7659179389552250142",
+          "publishedDate": "20260705",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7659031703041756447",
+          "publishedDate": "20260705",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7659017481075330334",
+          "publishedDate": "20260705",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7668781796447833375"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-7667765035535519006",
+      "authorId": "christopher-champagne",
+      "title": "Looking Up • Moon and ISS",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-07-29T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-07-29T12:00:00-05:00",
+      "datetime": "2026-07-29T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-07-29 · shared on tiktok",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator"
+      ],
+      "story": "🌕 Beautiful Full Moon + International Space Station (ISS) flyover tonight! Had to stop and watch. 🚀✨ Did anyone else see it? #ISS #InternationalSpaceStation #FullMoon #Moon #Space ",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-07-29",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7667765035535519006",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7667765035535519006",
+          "publishedDate": "20260729",
+          "verifiedAt": "2026-11-07",
+          "caption": "🌕 Beautiful Full Moon + International Space Station (ISS) flyover tonight! Had to stop and watch. 🚀✨ Did anyone else see it? #ISS #InternationalSpaceStation #FullMoon #Moon #Space "
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7667765035535519006"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-7666852744174652703",
+      "authorId": "christopher-champagne",
+      "title": "What a perfect day for the pool and a BBQ with friends and family",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-07-26T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-07-26T12:00:00-05:00",
+      "datetime": "2026-07-26T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-07-26 · shared on tiktok",
+      "primaryCategory": "family",
+      "categories": [
+        "family",
+        "travel"
+      ],
+      "story": "What a perfect day for the pool and a BBQ with friends and family. ☀️🏊🍔 Y'all are always asking for an invite... so here's your invite. BYOF — Bring Your Own Food. ...and your own chlorine. 😏",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-07-26",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7666852744174652703",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7666852744174652703",
+          "publishedDate": "20260726",
+          "verifiedAt": "2026-11-07",
+          "caption": "What a perfect day for the pool and a BBQ with friends and family. ☀️🏊🍔 Y'all are always asking for an invite... so here's your invite. BYOF — Bring Your Own Food. ...and your own chlorine. 😏"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7666852744174652703"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-7666535269901946143",
+      "authorId": "christopher-champagne",
+      "title": "Leesville • Mayor Rick Allen Dirt Bike Track",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-07-25T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-07-25T12:00:00-05:00",
+      "datetime": "2026-07-25T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-07-25 · shared on tiktok",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator"
+      ],
+      "story": "\"I came back to the Mayor Rick Allen Dirt Bike Track today... and now there's an electric bike ripping around. This place is growing FAST.\"",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-07-25",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7666535269901946143",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7666535269901946143",
+          "publishedDate": "20260725",
+          "verifiedAt": "2026-11-07",
+          "caption": "\"I came back to the Mayor Rick Allen Dirt Bike Track today... and now there's an electric bike ripping around. This place is growing FAST.\""
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7666535269901946143"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-7660574216479149342",
+      "authorId": "christopher-champagne",
+      "title": "Leesville • Mayor Rick Allen Dirt Bike Track",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-07-09T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-07-09T12:00:00-05:00",
+      "datetime": "2026-07-09T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-07-09 · shared on tiktok",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator"
+      ],
+      "story": "I made a quick stop by the Mayor Rick Allen Dirt Bike Track today just to see it for myself... and wow. As luck would have it, Mayor Rick Allen pulled up while I was there, so I got to tell him in person what I was already thinking—the track looks incredible. You can probably hear the excitement in my voice in this video. 😄 The amount of work that's gone into this place is impressive, and I honestly believe it's going to become a destination for riders from all over. It's always great seeing positive things happening right here in our hometown. Huge thanks to Mayor Rick Allen, Leesville Motorsports, and everyone who had a hand in bringing this vision to life. I can't wait to see this place full of riders. Great things are happening in Leesville! #Leesville #MayorRickAllen #LeesvilleMotorsports #Motocross #DirtBikes ",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-07-09",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7660574216479149342",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7660574216479149342",
+          "publishedDate": "20260709",
+          "verifiedAt": "2026-11-07",
+          "caption": "I made a quick stop by the Mayor Rick Allen Dirt Bike Track today just to see it for myself... and wow. As luck would have it, Mayor Rick Allen pulled up while I was there, so I got to tell him in person what I was already thinking—the track looks incredible. You can probably hear the excitement in my voice in this video. 😄 The amount of work that's gone into this place is impressive, and I honestly believe it's going to become a destination for riders from all over. It's always great seeing positive things happening right here in our hometown. Huge thanks to Mayor Rick Allen, Leesville Motorsports, and everyone who had a hand in bringing this vision to life. I can't wait to see this place full of riders. Great things are happening in Leesville! #Leesville #MayorRickAllen #LeesvilleMotorsports #Motocross #DirtBikes "
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7660574216479149342"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-garage-minisplit-2026",
+      "authorId": "christopher-champagne",
+      "title": "CC’s • Garage Mini-Split Installation",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-07-08T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-07-08T12:00:00-05:00",
+      "datetime": "2026-07-08T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-07-08 · shared on tiktok",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "story": "❄️ Another Happy Customer! 🙌 This one started as a simple garage mini-split install, but the customer wanted it done right—not just done fast. ✅ Wall-mounted condenser ✅ Dedicated 230V electrical circuit ✅ Disconnect installed ✅ Line-set cover for a clean finish ✅ Vacuumed, pressure tested, and fully commissioned ✅ Verified cooling before we left The best part isn't the installation... it's receiving messages like this from customers after the job is complete. \"It's throwing snowballs, brother... Thank the Lord and thank you guys for all of your hard work. We really appreciate you!\" That's why we do what we do. Thank you for trusting CC's Technical Services with your home and your business. We're grateful for every customer and every opportunity to serve. 📍 Serving Leesville, Fort Johnson, DeRidder, Alexandria, and surrounding areas. Professional work. Personal pride. Reliable service. #CCTechnicalServices #MiniSplit #HVAC #Louisiana #VeteranOwned        🙏❄️💪",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-07-08",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7660279237391306014",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-07-08",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7660277669128457502",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7660279237391306014",
+          "publishedDate": "20260708",
+          "verifiedAt": "2026-11-07",
+          "caption": "❄️ Another Happy Customer! 🙌 This one started as a simple garage mini-split install, but the customer wanted it done right—not just done fast. ✅ Wall-mounted condenser ✅ Dedicated 230V electrical circuit ✅ Disconnect installed ✅ Line-set cover for a clean finish ✅ Vacuumed, pressure tested, and fully commissioned ✅ Verified cooling before we left The best part isn't the installation... it's receiving messages like this from customers after the job is complete. \"It's throwing snowballs, brother... Thank the Lord and thank you guys for all of your hard work. We really appreciate you!\" That's why we do what we do. Thank you for trusting CC's Technical Services with your home and your business. We're grateful for every customer and every opportunity to serve. 📍 Serving Leesville, Fort Johnson, DeRidder, Alexandria, and surrounding areas. Professional work. Personal pride. Reliable service. #CCTechnicalServices #MiniSplit #HVAC #Louisiana #VeteranOwned        🙏❄️💪"
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7660277669128457502",
+          "publishedDate": "20260708",
+          "verifiedAt": "2026-11-07",
+          "caption": "❄️ Another Happy Customer! 🙌 This one started as a simple garage mini-split install, but the customer wanted it done right—not just done fast. ✅ Wall-mounted condenser ✅ Dedicated 230V electrical circuit ✅ Disconnect installed ✅ Line-set cover for a clean finish ✅ Vacuumed, pressure tested, and fully commissioned ✅ Verified cooling before we left The best part isn't the installation... it's receiving messages like this from customers after the job is complete. \"It's throwing snowballs, brother... Thank the Lord and thank you guys for all of your hard work. We really appreciate you!\" That's why we do what we do. Thank you for trusting CC's Technical Services with your home and your business. We're grateful for every customer and every opportunity to serve. 📍 Serving Leesville, Fort Johnson, DeRidder, Alexandria, and surrounding areas. Professional work. Personal pride. Reliable service. #CCTechnicalServices #MiniSplit #HVAC #Louisiana #VeteranOwned        🙏❄️💪"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7660279237391306014"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-7658429133847842079",
+      "authorId": "christopher-champagne",
+      "title": "Date Night • Sushi With Kat",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-07-03T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-07-03T12:00:00-05:00",
+      "datetime": "2026-07-03T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-07-03 · shared on tiktok",
+      "primaryCategory": "family",
+      "categories": [
+        "family",
+        "travel"
+      ],
+      "story": "Date night with the most beautiful woman. ❤️🍣 Life gets busy, but moments like these remind me what really matters. Good sushi, great conversation, and my favorite person by my side. Grateful for every minute with you, babe. 🥢✨ #DateNight #SushiDate #MyFavoritePerson #Blessed #MarriageGoals ",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-07-03",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7658429133847842079",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7658429133847842079",
+          "publishedDate": "20260703",
+          "verifiedAt": "2026-11-07",
+          "caption": "Date night with the most beautiful woman. ❤️🍣 Life gets busy, but moments like these remind me what really matters. Good sushi, great conversation, and my favorite person by my side. Grateful for every minute with you, babe. 🥢✨ #DateNight #SushiDate #MyFavoritePerson #Blessed #MarriageGoals "
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7658429133847842079"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-journal-202606",
+      "authorId": "christopher-champagne",
+      "title": "TikTok • Video & Photo Journal · 2026-06",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-06-19T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-06-19T12:00:00-05:00",
+      "datetime": "2026-06-19T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-06-19 · shared on tiktok",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator"
+      ],
+      "story": "A collection of posts shared on tiktok. Open the original posts below to watch or view them; captions were not supplied by the connected account.",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-06-19",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7652892244751420703",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-06-18",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7652783576794156319",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-06-18",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7652774819427142942",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-06-18",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7652771666518363405",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-06-18",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7652766506647883022",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-06-10",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7649800582676417823",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-06-07",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7648767607910305037",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-06-07",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7648762461604056333",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7652892244751420703",
+          "publishedDate": "20260619",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7652783576794156319",
+          "publishedDate": "20260618",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7652774819427142942",
+          "publishedDate": "20260618",
+          "verifiedAt": "2026-11-07",
+          "caption": "#tiktoklive #livehighlights "
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7652771666518363405",
+          "publishedDate": "20260618",
+          "verifiedAt": "2026-11-07",
+          "caption": "#tiktoklive #livehighlights"
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7652766506647883022",
+          "publishedDate": "20260618",
+          "verifiedAt": "2026-11-07",
+          "caption": "The chat went wild\nDon't miss my next stream"
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7649800582676417823",
+          "publishedDate": "20260610",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7648767607910305037",
+          "publishedDate": "20260607",
+          "verifiedAt": "2026-11-07",
+          "caption": "Thank you all so much\nJoin my next LIVE"
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7648762461604056333",
+          "publishedDate": "20260607",
+          "verifiedAt": "2026-11-07",
+          "caption": "Thanks for all your Gifts and appreciation. You guys mean the world to me."
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7652892244751420703"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-7650513250190134558",
+      "authorId": "christopher-champagne",
+      "title": "Facebook and Messenger",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-06-12T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-06-12T12:00:00-05:00",
+      "datetime": "2026-06-12T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-06-12 · shared on tiktok",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator"
+      ],
+      "story": "Facebook and Messenger #DownDetector !?!?",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-06-12",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7650513250190134558",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7650513250190134558",
+          "publishedDate": "20260612",
+          "verifiedAt": "2026-11-07",
+          "caption": "Facebook and Messenger #DownDetector !?!?"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7650513250190134558"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-7648660105042414879",
+      "authorId": "christopher-champagne",
+      "title": "Ridge Soaring  inside the  The Freeflight Experience Sim Experience",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-06-07T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-06-07T12:00:00-05:00",
+      "datetime": "2026-06-07T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-06-07 · shared on tiktok",
+      "primaryCategory": "freeflight",
+      "categories": [
+        "freeflight",
+        "creator"
+      ],
+      "story": "Ridge Soaring #LMFP inside the #TFFE The Freeflight Experience Sim Experience..",
+      "locations": [
+        {
+          "label": "Lookout Mountain Flight Park • Rising Fawn, Georgia",
+          "lat": 34.835,
+          "lng": -85.487,
+          "precision": "approximate",
+          "visibility": "public",
+          "verification": "source-caption"
+        }
+      ],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-06-07",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7648660105042414879",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7648660105042414879",
+          "publishedDate": "20260607",
+          "verifiedAt": "2026-11-07",
+          "caption": "Ridge Soaring #LMFP inside the #TFFE The Freeflight Experience Sim Experience.."
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7648660105042414879"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-journal-202605",
+      "authorId": "christopher-champagne",
+      "title": "TikTok • Video & Photo Journal · 2026-05",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-05-30T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-05-30T12:00:00-05:00",
+      "datetime": "2026-05-30T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-05-30 · shared on tiktok",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator"
+      ],
+      "story": "A collection of posts shared on tiktok. Open the original posts below to watch or view them; captions were not supplied by the connected account.",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-05-30",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7645763413003472159",
+          "kind": "social"
+        },
+        {
+          "label": "View tiktok video · 2026-05-30",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7645722046361636127",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7645763413003472159",
+          "publishedDate": "20260530",
+          "verifiedAt": "2026-11-07",
+          "caption": "play time.."
+        },
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7645722046361636127",
+          "publishedDate": "20260530",
+          "verifiedAt": "2026-11-07",
+          "caption": ""
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7645763413003472159"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-tiktok-7640082338503773471",
+      "authorId": "christopher-champagne",
+      "title": "4Runner • A Rolling Living Vision Board",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-05-15T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-05-15T12:00:00-05:00",
+      "datetime": "2026-05-15T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-05-15 · shared on tiktok",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "story": "🎥🔥 POV: Turning my 4Runner into a rolling lifestyle brand… HVAC • Smart Tech • Security • Freeflight • Certified MONSTER Not just a work vehicle… A mobile command center for the life I’m building. ⚡ CC’S Technical Services 🛠 HVAC / Electrical / Automation 🪂 FREEFLIGHT EXPERIENCE 💪 MMA • BJJ • Strongman 🍔 FOOD • FAMILY • FUN This is bigger than a truck wrap… It’s the vision. #4Runner #Toyota4Runner #TruckWrap #HVAC #SmartHome ",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View tiktok video · 2026-05-15",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7640082338503773471",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "tiktok original post",
+          "url": "https://www.tiktok.com/@christopher.m.champagne/video/7640082338503773471",
+          "publishedDate": "20260515",
+          "verifiedAt": "2026-11-07",
+          "caption": "🎥🔥 POV: Turning my 4Runner into a rolling lifestyle brand… HVAC • Smart Tech • Security • Freeflight • Certified MONSTER Not just a work vehicle… A mobile command center for the life I’m building. ⚡ CC’S Technical Services 🛠 HVAC / Electrical / Automation 🪂 FREEFLIGHT EXPERIENCE 💪 MMA • BJJ • Strongman 🍔 FOOD • FAMILY • FUN This is bigger than a truck wrap… It’s the vision. #4Runner #Toyota4Runner #TruckWrap #HVAC #SmartHome "
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "tiktok"
+        ],
+        "state": "published",
+        "published": {
+          "tiktok": "https://www.tiktok.com/@christopher.m.champagne/video/7640082338503773471"
+        }
+      },
+      "platforms": [
+        "map",
+        "tiktok"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "social-youtube-video-journal-20260805",
+      "authorId": "christopher-champagne",
+      "title": "YouTube • Video Journal",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-08-05T12:00:00-05:00",
+      "updatedAt": "2026-11-07T14:30:00-06:00",
+      "eventAt": "2026-08-05T12:00:00-05:00",
+      "datetime": "2026-08-05T12:00:00-05:00",
+      "datePrecision": "day",
+      "displayDate": "2026-08-05 · shared on youtube",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator"
+      ],
+      "story": "A collection of posts shared on youtube. Open the original posts below to watch or view them; captions were not supplied by the connected account.",
+      "locations": [],
+      "media": [],
+      "hashtags": [],
+      "links": [
+        {
+          "label": "View youtube video · 2026-08-05",
+          "url": "https://www.youtube.com/watch?v=h6-o2mrNayA",
+          "kind": "social"
+        }
+      ],
+      "sources": [
+        {
+          "label": "youtube original post",
+          "url": "https://www.youtube.com/watch?v=h6-o2mrNayA",
+          "publishedDate": "20260805",
+          "verifiedAt": "2026-11-07",
+          "caption": "eb10732158ecef02f605d8061c764c34"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "youtube"
+        ],
+        "state": "published",
+        "published": {
+          "youtube": "https://www.youtube.com/watch?v=h6-o2mrNayA"
+        }
+      },
+      "platforms": [
+        "map",
+        "youtube"
       ]
     }
   ]
