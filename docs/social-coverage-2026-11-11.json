@@ -1,0 +1,27 @@
+{
+  "reviewedAt": "2026-11-11",
+  "window": "2026-11-04 through 2026-11-11 America/Chicago",
+  "baseEntries": 94,
+  "resultEntries": 96,
+  "addedSources": [
+    {"network":"facebook","url":"https://facebook.com/122118461787465672/posts/122129882679465672","evidence":"Connected Page analytics, November 9"},
+    {"network":"instagram","url":"https://www.instagram.com/p/Dfms9vuCIrY/","evidence":"Planner provider PUBLISHED, November 11; analytics returned no rows"}
+  ],
+  "coverage": {
+    "facebook": "CC’s business Page only; one post returned",
+    "instagram": "Feed and Reels analytics returned no rows; one published feed post found in planner",
+    "tiktok": "Connected; requested window returned no rows",
+    "youtube": "Connected legacy channel only; requested window returned no rows",
+    "personalFacebook": "Not connected",
+    "x": "Not connected",
+    "currentLooking4LiftYouTube": "Public destination linked; upload/history access not verified",
+    "linkedinIndeed": "No profile mutation access verified; prior preview-before-publication instruction retained"
+  },
+  "repositories": {
+    "Champagne247": "Main active website; latest inspected baseline 17500ec53fab5307aeeebfd5cb762a21c68c3566",
+    "CertifiedMonster": "Latest returned commit February 21, 2025; no last-week changes returned",
+    "test": "Latest returned commit January 4, 2025; no last-week changes returned",
+    "flashbot": "Latest returned commit September 28, 2023; no last-week changes returned"
+  },
+  "limits": "Partial connected-source review. Not an exhaustive archive of chats, DMs, social history or downloaded media. Public-only records; private job, calendar and family logistics remain outside repository. No continuous automatic sync claimed."
+}

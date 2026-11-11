@@ -2,7 +2,7 @@
 
 > Operational continuity document. This repository may be public. **Do not put private travel dates, lodging, addresses, personal contacts, health, financial information, credentials, or family logistics here.**
 >
-> Last verified update: 2026-10-27. Read the latest commit history and actual files before assuming this document is current.
+> Last reviewed: 2026-11-11. Read the latest commit history and actual files before assuming this document is current.
 
 ## Primary mission
 Build **My Life • My Mission • My M.A.P.** as a living vision board that evolves as life happens, not as a backlog for later.
@@ -25,20 +25,18 @@ Within the NOVA • My Life project, “my website,” “my life,” and “my 
 6. Update this handoff when project state materially changes; keep it short and factual.
 7. Report what was done, what was not done, and the next action. Never claim a background sync or automatic trigger that isn't configured.
 
-## Latest verified M.A.P. change
-- 2026-10-27: Two privacy-safe upcoming family/travel entries added to `assets/map/data/entries.js`.
-- Commit: `0a6220f62a13f65d8e5d04ce560f1897d9856a7e`.
-- At that commit, file contained 23 entries. A prior report claimed 33; **reconcile before assuming completeness**.
-- Deployment / live page rendering: not verified.
-
-## Current work
-- 2026-10-29 development milestone (prepared for PR review; not deployed): cloud helpers are scoped separately from local drafts; composer exports preserve the combined data/schema and distinguish reviewed public entries from drafts. Four browser regressions in `tests/composer.test.cjs` cover reload persistence, actual exported files, media, connections, export freshness after edits and draft exclusion. Supplement replay preserves edited links and newer metadata. See `tests/README.md` for commands.
-- Count reconciliation: `entries.js` has 23 unique base records, and `updates-2026-10.js` adds 12, giving 35 combined records. My Life's public filter admits 34; its initial page displays six.
-- Next: review the local milestone changes, then separately verify any authorized GitHub Pages deployment. Live deployment remains unverified.
-- Keep a dated public-safe log of changes and a private detailed handoff in the ChatGPT Project files.
-- On future meaningful updates, modify the real M.A.P. files immediately when tools, authorization, and evidence allow.
-- User is replacing three refreshed NOVA Project context files; repository changes do not automatically update those Project attachments.
-
+## Current state — November 11, 2026
+- Baseline main `17500ec`: Looking4Lift flight journal and preserved branding files. Pages deployment run 43034705619 succeeded.
+- Shared master now contains 96 entries: retained 94, added November 9 CC’s service post and November 11 published Looking4Lift Instagram story, with source URLs and media references.
+- Launch entry distribution now records the already-live first YouTube Short instead of an empty publication record.
+- Twelve main routes link to the shared profiles/project directory, CC’s and current Looking4Lift YouTube. Professional page identifies CC’s as primary business and Falcon Security as subcontract work.
+- Looking4Lift links the current user-supplied Cloudbase Game Labs community invitation.
+- Preserve cinematic intro → welcome → map/pins → five newest-first journey cards → expansion. November 7 newest-first fix supersedes earlier active-first wording.
+- See `docs/social-coverage-2026-11-11.json` for exact coverage. Do not overwrite the November 7 historic source inventory.
+- Existing CI failure: browser dependency installation could not resolve Ubuntu package mirrors; tests did not run. Workflow now uses the version-matched Playwright container with browsers/system dependencies preinstalled. New run still needs checking after publication.
+- Local content/privacy tests passed (5). Local browser launch failed on restricted socket creation; this does not establish a site failure.
+- Outstanding: actual Pops/Mexican Train photos, complete social/video archive, current YouTube upload access, personal Facebook/X, LinkedIn/Indeed profile access and preview, legacy robotics draft PR conflicts and printable CAD validation. No automatic cross-platform sync is running.
+- Private job scope, supplier prices, calendar appointments, payment and family logistics belong in private project records.
 
 ## NOVA Forever Build — PC, workbench, agents, robot (2026-10-27)
 - Vision: a persistent, model-agnostic NOVA companion, not a website-only project. Communication should capture events and, within approved rules, update My Life M.A.P. in near-real time.

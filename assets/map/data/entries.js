@@ -4,12 +4,18 @@ window.MAP_DATA = {
     "name": "M.A.P. Master Life Data",
     "description": "Single source of truth for My Life, My Mission and My M.A.P.",
     "canonicalBase": "https://champagne247.github.io/Champagne247",
-    "updatedAt": "2026-11-07T14:30:00-06:00",
+    "updatedAt": "2026-11-11T14:15:00-06:00",
     "socialReview": {
       "reviewedAt": "2026-11-07",
       "retrievalWindow": "2019-01-01 through 2026-11-07",
       "sources": 113,
-      "coverage": "Connected CC’s Facebook Page, Instagram, TikTok and legacy YouTube only. Personal Facebook and X unavailable; empty results do not establish complete coverage."
+      "coverage": "Connected CC’s Facebook Page, Instagram, TikTok and legacy YouTube only. Personal Facebook and X unavailable; empty results do not establish complete coverage.",
+      "latestIncrementalReview": {
+        "reviewedAt": "2026-11-11",
+        "window": "2026-11-04 through 2026-11-11",
+        "newSources": 2,
+        "coverage": "One CC’s Facebook post returned by analytics; one published Instagram post confirmed in planner. Instagram analytics, Reels, TikTok and legacy YouTube returned no rows. Personal Facebook, X and current Looking4Lift YouTube history are not connected; this is partial coverage."
+      }
     }
   },
   "owner": {
@@ -87,6 +93,153 @@ window.MAP_DATA = {
     {
       "schemaVersion": "1.0.0",
       "type": "life-entry",
+      "authorId": "christopher-champagne",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "updatedAt": "2026-11-11T14:15:00-06:00",
+      "datePrecision": "day",
+      "locations": [],
+      "media": [
+        {
+          "id": "looking4lift-instagram-published-art",
+          "type": "image",
+          "source": "external",
+          "url": "https://static.metricool.com/planner/202611/7203894-file-6061179100873648544.png",
+          "caption": "Looking4Lift • artwork from the published Instagram post"
+        }
+      ],
+      "hashtags": [],
+      "id": "looking4lift-family-legacy-instagram-20261111",
+      "title": "Looking4Lift • Pops, the Flying Legacy & the Next Chapter",
+      "story": "Before I flew, my dad was Looking4Lift. I grew up watching Pops fly Southern California in the late ’70s and early ’80s. Now I’m following him into the sky—with my own wing, my own milestones and a dream of returning to fly Sylmar where it all began. Follow the family legacy, training days, mountain flights and the road to flying America.",
+      "createdAt": "2026-11-11T08:30:00-06:00",
+      "eventAt": "2026-11-11T08:30:00-06:00",
+      "datetime": "2026-11-11T08:30:00-06:00",
+      "displayDate": "November 11, 2026 • Shared on Instagram",
+      "primaryCategory": "freeflight",
+      "categories": [
+        "freeflight",
+        "family",
+        "creator"
+      ],
+      "links": [
+        {
+          "label": "Read the published Instagram story",
+          "url": "https://www.instagram.com/p/Dfms9vuCIrY/",
+          "kind": "social"
+        },
+        {
+          "label": "Watch & subscribe • Looking4Lift",
+          "url": "https://www.youtube.com/@Looking4Lift-247",
+          "kind": "video"
+        },
+        {
+          "label": "Explore the flight journal",
+          "url": "/Champagne247/looking4lift/",
+          "kind": "project"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Published Instagram post confirmed in planner",
+          "url": "https://www.instagram.com/p/Dfms9vuCIrY/",
+          "publishedDate": "20261111",
+          "verifiedAt": "2026-11-11"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "instagram"
+        ],
+        "state": "published",
+        "published": {
+          "instagram": "https://www.instagram.com/p/Dfms9vuCIrY/"
+        }
+      },
+      "platforms": [
+        "map",
+        "instagram"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "authorId": "christopher-champagne",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "updatedAt": "2026-11-11T14:15:00-06:00",
+      "datePrecision": "day",
+      "locations": [],
+      "media": [
+        {
+          "id": "ccs-existing-brand-art",
+          "type": "image",
+          "url": "/Champagne247/assets/map/Hero/hero-professional.webp",
+          "caption": "CC’s technical services • category artwork",
+          "provenance": {
+            "kind": "illustration",
+            "actualSubject": false
+          }
+        }
+      ],
+      "hashtags": [],
+      "id": "ccs-local-service-booking-20261109",
+      "title": "CC’s Technical Services • Local Service Bookings",
+      "story": "Booking local HVAC, electrical, security camera and IT/networking service around Leesville, New Llano, Fort Polk and DeRidder. Veteran owned and operated. Text 337-423-2331 with what you need, your area and a photo if available. Scheduling and installation pricing depend on the job.",
+      "createdAt": "2026-11-09",
+      "eventAt": "2026-11-09",
+      "datetime": "2026-11-09",
+      "displayDate": "November 9, 2026 • Local service update",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "links": [
+        {
+          "label": "Original Facebook service post",
+          "url": "https://facebook.com/122118461787465672/posts/122129882679465672",
+          "kind": "social"
+        },
+        {
+          "label": "CC’s Technical Services",
+          "url": "https://ccstechnicalservices.com/",
+          "kind": "business"
+        },
+        {
+          "label": "Text CC’s",
+          "url": "sms:+13374232331",
+          "kind": "contact"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Connected CC’s Facebook Page",
+          "url": "https://facebook.com/122118461787465672/posts/122129882679465672",
+          "publishedDate": "20261109",
+          "verifiedAt": "2026-11-11"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "facebook"
+        ],
+        "state": "published",
+        "published": {
+          "facebook": "https://facebook.com/122118461787465672/posts/122129882679465672"
+        }
+      },
+      "platforms": [
+        "map",
+        "facebook"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
       "id": "looking4lift-youtube-launch-2026",
       "authorId": "christopher-champagne",
       "title": "Looking4Lift • YouTube Launch | Where It All Began",
@@ -156,8 +309,10 @@ window.MAP_DATA = {
           "map",
           "youtube"
         ],
-        "state": "ready",
-        "published": {}
+        "state": "published",
+        "published": {
+          "youtube": "https://youtube.com/shorts/N8nrGqnhRsA"
+        }
       },
       "platforms": [
         "map",
