@@ -74,3 +74,15 @@ Champagne247/
         ├── share/
         └── data/
             └── entries.js
+```
+
+## Connect with the journey
+
+- [All profiles and projects](https://champagne247.github.io/Champagne247/professional/network/)
+- [Looking4Lift — flights, family legacy and YouTube](https://champagne247.github.io/Champagne247/looking4lift/)
+- [Looking4Lift on YouTube](https://www.youtube.com/@Looking4Lift-247)
+- [CC’s Technical Services — HVAC, electrical, security and IT](https://ccstechnicalservices.com/)
+- [Professional portfolio](https://champagne247.github.io/Champagne247/professional/)
+- [Certified MONSTER](https://champagne247.github.io/Champagne247/fitness/)
+
+CC’s Technical Services LLC is my primary business. I also provide subcontract services through Falcon Security.
