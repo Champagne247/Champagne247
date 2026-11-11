@@ -630,6 +630,24 @@ footer strong{
     grid-template-columns:repeat(4,minmax(0,1fr));
   }
 }
+
+.flight-hub{padding:28px 20px;color:var(--text)}
+.flight-hub p{color:var(--muted);line-height:1.7}
+.flight-hub h2{font-size:clamp(26px,6vw,40px);line-height:1.15}
+.flight-hub h3{font-size:23px;margin:12px 0}
+.flight-hub a:not(.button){color:var(--blue);text-underline-offset:4px}
+.channel-banner{display:block;width:100%;border-radius:18px;margin-bottom:28px}
+.hub-actions{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin:20px 0}
+.hub-actions .button{flex:1 1 230px}
+#first-short{margin:32px 0;padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}
+.short-player{max-width:350px;margin:20px auto}
+.short-player iframe{display:block;width:100%;aspect-ratio:9/16;border:0;border-radius:14px}
+.flight-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px 0}
+.flight-card{padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}
+.hub-invite{padding-left:18px;border-left:3px solid var(--blue)}
+@media(max-width:600px){.flight-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.live-dot{animation:none}}
+
 </style>
 </head>
 
@@ -644,8 +662,8 @@ footer strong{
     <div class="logo">
 
       <img
-        src="/Champagne247/assets/map/branding/map-logo-icon.png"
-        alt="Looking4Lift and My M.A.P.">
+        src="/Champagne247/assets/map/branding/looking4lift/profile-blue.png"
+        alt="Looking4Lift mountain and hang glider emblem">
 
     </div>
 
@@ -751,26 +769,20 @@ footer strong{
 
 </nav>
 
-<section aria-label="Looking4Lift YouTube launch" style="padding:28px 20px;max-width:1050px;margin:auto">
-  <div style="border:1px solid #bd3434;border-radius:18px;overflow:hidden;background:#090c13">
-    <img src="/Champagne247/assets/map/Hero/hero-freeflight.webp" alt="Freeflight artwork; official YouTube channel branding gallery is being prepared" style="display:block;width:100%;max-height:330px;object-fit:cover">
-    <div style="padding:24px">
-      <div style="color:#ff8a68;letter-spacing:.14em;font-size:.8rem;font-weight:700">NOVEMBER 6, 2026 • CHANNEL LAUNCH</div>
-      <h2 style="margin:12px 0">Looking4Lift is on YouTube</h2>
-      <p>Second-generation hang glider pilot. Inspired by my father, I've dreamed of flying my entire life. This is where the story continues—one flight at a time.</p>
-      <p><a href="https://www.youtube.com/@Looking4Lift-247" target="_blank" rel="noopener noreferrer" style="color:#fff;text-decoration:underline">Watch Looking4Lift on YouTube ↗</a> &nbsp;·&nbsp; <a href="/Champagne247/#looking4lift-youtube-launch-2026" style="color:#fff;text-decoration:underline">View the launch in My Life ↗</a></p>
-      
-    </div>
-  </div>
+<section class="flight-hub" aria-labelledby="watch-heading">
+<img class="channel-banner" src="/Champagne247/assets/map/branding/looking4lift/banner-blue.png" alt="Looking4Lift: silver mountains and a hang glider against a blue sunset sky">
+<div class="section-label">SECOND-GENERATION PILOT • ONE LIFELONG DREAM</div>
+<h2 id="watch-heading">Before I flew, Dad led the way.</h2>
+<p>I'm Chris Champagne. My father, William “Pops” Champagne, flew Southern California in the late 1970s and early 1980s. He was one of Joe Greblo's early students. I was there as a little boy. Decades later, I'm following him into the sky.</p>
+<p>Sylmar is our old stomping grounds. Returning to fly there is one of my most personal goals: to experience the mountains where Dad flew, beneath my own wing.</p>
+<div class="hub-actions"><a class="button primary" href="https://www.youtube.com/@Looking4Lift-247" target="_blank" rel="noopener noreferrer">WATCH &amp; SUBSCRIBE ON YOUTUBE ↗</a><a class="button" href="#flight-library">EXPLORE THE FLIGHTS ↓</a></div>
+<section id="first-short" aria-labelledby="origin-heading"><h3 id="origin-heading">Where It All Began</h3><p>My launch today, rewound to the childhood memories behind it. Start with the first Looking4Lift Short, then visit the channel for the next chapter.</p><div class="short-player"><iframe title="Looking4Lift: Where It All Began" src="https://www.youtube-nocookie.com/embed/N8nrGqnhRsA" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><a href="https://youtube.com/shorts/N8nrGqnhRsA">Watch the first Short on YouTube ↗</a></section>
+<section id="flight-library" aria-labelledby="library-heading"><div class="section-label">THE FLIGHT JOURNAL</div><h2 id="library-heading">Training. Milestones. Shared skies.</h2><p>Explore the original posts while the Looking4Lift video collection takes shape. Dates below are when the posts were shared.</p><div class="flight-grid">
+<article class="flight-card"><p class="section-label">August 22, 2026</p><h3>Flight #100</h3><p>My Eagle 164, Susie Q, my own harness, and a milestone at Lookout Mountain. Every flight builds the journey.</p><div class="hub-actions"><a href="https://www.instagram.com/reel/DcWqcabiYnB/" target="_blank" rel="noopener noreferrer">Watch on Instagram ↗</a><a href="https://www.tiktok.com/@christopher.m.champagne/video/7676950325785365791" target="_blank" rel="noopener noreferrer">Watch on TikTok ↗</a></div></article><article class="flight-card"><p class="section-label">September 7, 2026</p><h3>Flying With Friends</h3><p>Eight minutes on the ridge at Lookout Mountain Flight Park, sharing the sky with friends.</p><div class="hub-actions"><a href="https://www.instagram.com/reel/Dc_t3aAD_8t/" target="_blank" rel="noopener noreferrer">Watch on Instagram ↗</a><a href="https://www.tiktok.com/@christopher.m.champagne/video/7682853918304472351" target="_blank" rel="noopener noreferrer">Watch on TikTok ↗</a></div></article><article class="flight-card"><p class="section-label">August 17, 2026</p><h3>Back on the Training Hill</h3><p>Getting reps with Susie Q on the Big Hill. Fundamentals, confidence, and the pleasure of being back under a wing.</p><div class="hub-actions"><a href="https://www.instagram.com/reel/DcJfNznDGCy/" target="_blank" rel="noopener noreferrer">Watch on Instagram ↗</a></div></article><article class="flight-card"><p class="section-label">August 19, 2026</p><h3>Launching Into the Sunset</h3><p>A sunset launch at Lookout Mountain Flight Park. Another moment from the road to flying America.</p><div class="hub-actions"><a href="https://www.tiktok.com/@christopher.m.champagne/video/7675555556437806367" target="_blank" rel="noopener noreferrer">Watch on TikTok ↗</a></div></article></div></section>
+<section class="flight-card" aria-labelledby="virtual-heading"><div class="section-label">VIRTUAL FLIGHT • REAL COMMUNITY</div><h2 id="virtual-heading">The Freeflight Experience</h2><p>Alongside my real flights, I'm building and flying a VR simulator with The Freeflight Experience from Thomas Low and Cloudbase Game Labs. Simulator footage is its own part of the journey.</p><div class="hub-actions"><a href="https://www.instagram.com/reel/DcjBHxRG62L/" target="_blank" rel="noopener noreferrer">Watch the VR demo ↗</a><a href="https://discord.gg/dNxrd5WFA8" target="_blank" rel="noopener noreferrer">Join the flying community on Discord ↗</a></div></section>
+<p class="hub-invite">Were you part of the old Sylmar flying crew? Recognize Dad or a launch from the early days? Leave a comment on YouTube—I'd love to hear your memories.</p>
 </section>
 
-<section id="first-short" style="max-width:1000px;margin:18px auto;padding:20px;border:1px solid #b63c32;border-radius:18px;background:#120c12;color:#fff"><p style="color:#ff9c81;letter-spacing:.12em">FIRST LOOKING4LIFT SHORT • NOVEMBER 2026</p><h2>Where It All Began</h2><p>A second-generation pilot's story, inspired by Pops. Watch the first chapter of Looking4Lift.</p><div style="max-width:350px;margin:16px auto"><iframe title="Looking4Lift first YouTube Short: Where It All Began" src="https://www.youtube-nocookie.com/embed/N8nrGqnhRsA" loading="lazy" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share" allowfullscreen style="width:100%;aspect-ratio:9/16;border:0;border-radius:14px"></iframe></div><p><a href="https://youtube.com/shorts/N8nrGqnhRsA" target="_blank" rel="noopener noreferrer" style="color:#8edbff">Watch directly on YouTube ↗</a></p></section>
-<section id="youtube-launch-gallery" aria-label="Looking4Lift launch gallery" style="max-width:1000px;margin:18px auto;padding:20px;border:1px solid #7b2525;border-radius:18px;background:#0b1019;color:#fff">
-<h2 style="margin:0 0 8px">Looking4Lift • The next chapter</h2><p style="color:#e8c7b6">Second-generation pilot. A lifelong dream inspired by Pops. Follow the flights, training, and adventures.</p>
-<div style="display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 0 16px" role="region" aria-label="Swipeable freeflight gallery">
-<a href="https://youtube.com/shorts/N8nrGqnhRsA" style="flex:0 0 min(85%,450px);scroll-snap-align:center;color:#fff;text-decoration:none"><img loading="lazy" src="https://i.ytimg.com/vi/N8nrGqnhRsA/hqdefault.jpg" alt="Actual first Looking4Lift YouTube Short thumbnail" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px"><strong>Where It All Began • First Short ↗</strong></a>
-<a href="/Champagne247/#looking4lift-youtube-launch-2026" style="flex:0 0 min(85%,450px);scroll-snap-align:center;color:#fff;text-decoration:none"><img loading="lazy" src="/Champagne247/assets/map/Hero/hero-all.webp" alt="My Life visual timeline" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px"><strong>November 6 • Launch story ↗</strong></a>
-</div><nav aria-label="Looking4Lift connections" style="display:flex;flex-wrap:wrap;gap:12px"><a href="https://www.youtube.com/@Looking4Lift-247" style="color:#8ad8ff">YouTube ↗</a><a href="/Champagne247/" style="color:#8ad8ff">My Life ↗</a><a href="/Champagne247/map/" style="color:#8ad8ff">My M.A.P. ↗</a></nav></section>
 <section class="intro">
 
   <div class="section-label">
