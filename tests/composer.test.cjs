@@ -424,7 +424,7 @@ test('homepage blends map pins with five newest-first moments and expandable jou
 test('original social posts load on request and stop when their carousel advances', async () => {
  const {context,page,errors}=await session();
  try {
-  await context.addInitScript(()=>sessionStorage.setItem('nova-intro-seen','1'));
+  await context.addInitScript(()=>{if(window===window.top)sessionStorage.setItem('nova-intro-seen','1');});
   await page.goto(origin+'/Champagne247/#looking4lift-youtube-launch-2026');
   const card=page.locator('#looking4lift-youtube-launch-2026');
   assert.equal(await card.locator('iframe').count(),0);
