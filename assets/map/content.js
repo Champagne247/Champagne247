@@ -31,7 +31,9 @@
   }
   function label(item) {
     const p = provenance(item);
-    return p.kind === 'own' && p.actualSubject ? 'Chris’s actual photo/video'
+    return item.type === 'embed' ? 'Original social post • hosted by the source platform'
+      : p.kind === 'social' ? 'Original social post preview • not a full media archive'
+      : p.kind === 'own' && p.actualSubject ? 'Chris’s actual photo/video'
       : p.kind === 'official' && rank(item) === 1 ? 'Official subject image/video'
       : p.kind === 'licensed' ? 'Licensed subject photo — not a trip photo'
       : p.kind === 'ai' ? 'AI illustration — concept, not an event photo'
@@ -39,10 +41,37 @@
       : 'Existing media — provenance awaiting verification';
   }
   function primary(entry, fallback) {
-    return media(entry).find(item=>['image','video'].includes(item.type)) || { type:'image',url:fallback,caption:'Category illustration',provenance:{kind:'illustration',actualSubject:false} };
+    return media(entry).find(item=>['image','video'].includes(item.type)) || socialMedia(entry)[0] || { type:'image',url:fallback,caption:'Category illustration',provenance:{kind:'illustration',actualSubject:false} };
+  }
+  // Build players only from exact public post URLs. Profile links are never players.
+  function socialMedia(entry) {
+    const seen=new Set();
+    return [...(entry.sources||[]),...(entry.links||[]).filter(link=>['social','video'].includes(link.kind))]
+      .flatMap(ref=>{
+        let parsed;try{parsed=new URL(url(ref.url));}catch{return [];}
+        const host=parsed.hostname.replace(/^www\./,'');
+        let network,src,id;
+        if(['youtube.com','youtu.be'].includes(host)){
+          id=host==='youtu.be'?parsed.pathname.slice(1):parsed.pathname==='/watch'?parsed.searchParams.get('v'):parsed.pathname.match(/^\/(?:shorts|embed)\/([^/]+)\/?$/)?.[1];
+          if(!/^[A-Za-z0-9_-]{11}$/.test(id||''))return [];
+          network='YouTube';src='https://www.youtube-nocookie.com/embed/'+id;
+        }else if(host==='tiktok.com'&&(id=parsed.pathname.match(/^\/@[^/]+\/video\/(\d+)\/?$/)?.[1])){
+          network='TikTok';src='https://www.tiktok.com/player/v1/'+id+'?autoplay=0';
+        }else if(host==='instagram.com'&&(id=parsed.pathname.match(/^\/(?:p|reel)\/([A-Za-z0-9_-]+)\/?$/)?.[1])){
+          network='Instagram';src='https://www.instagram.com/p/'+id+'/embed/';
+        }else if(host==='facebook.com'&&/^\/(?:\d+\/posts\/\d+|reel\/\d+|[^/]+\/videos\/\d+)\/?$/.test(parsed.pathname)){
+          network='Facebook';id=parsed.pathname;src='https://www.facebook.com/plugins/post.php?href='+encodeURIComponent(parsed.origin+parsed.pathname)+'&show_text=true&width=500';
+        }else return [];
+        const key=network+':'+id;if(seen.has(key))return [];seen.add(key);
+        return [{type:'embed',url:parsed.origin+parsed.pathname+(host==='youtube.com'&&parsed.pathname==='/watch'?'?v='+id:''),embedUrl:src,network,caption:network+' • original post',entryId:entry.id}];
+      });
+  }
+  function socialPlayer(item,title) {
+    return '<div class="social-player"><div class="social-player-stage"><p>'+esc(item.network)+' · Original post</p><button type="button" data-social-load="'+esc(item.embedUrl)+'" data-social-title="'+esc(title)+'">Load '+esc(item.network)+' post</button><p class="social-player-note">Load the post to view its photos or play its video here. The platform may require sign-in or block embedded playback.</p></div><a href="'+esc(url(item.url))+'" target="_blank" rel="noopener noreferrer">Open original on '+esc(item.network)+' ↗</a></div>';
   }
   function hero(item, title='', single=false) {
-    if(!single){const entry=(window.MAP_DATA?.entries||[]).find(e=>(e.media||[]).includes(item));if(entry&&media(entry).filter(m=>['image','video'].includes(m.type)).length>1)return gallery(entry);}
+    if(!single){const entry=(window.MAP_DATA?.entries||[]).find(e=>(e.media||[]).includes(item)||e.id===item.entryId);if(entry&&media(entry).filter(m=>['image','video'].includes(m.type)).length+socialMedia(entry).length>1)return gallery(entry);}
+    if(item.type==='embed')return socialPlayer(item,title);
     const source=url(item.url);
     return item.type==='video'
       ? `<video src="${esc(source)}" controls preload="metadata" aria-label="${esc(item.caption || title)}" style="width:100%;max-height:420px"></video>`
@@ -50,13 +79,13 @@
   }
 
   function gallery(entry, fallback='') {
-    const items=media(entry).filter(item=>['image','video'].includes(item.type));
+    const items=[...media(entry).filter(item=>['image','video'].includes(item.type)),...socialMedia(entry)];
     if(!items.length)return '<figure class="entry-media entry-illustration">'+hero(primary(entry,fallback),entry.title,true)+'<figcaption class="photo-label">Category illustration</figcaption></figure>';
     const images=media(entry,'image');
     return '<div class="moment-gallery" role="region" aria-roledescription="carousel" aria-label="'+esc(entry.title)+' media">'+
       '<div class="moment-track" tabindex="0" aria-label="Swipe or use arrow keys to browse media">'+items.map((item,i)=>
         '<div class="moment-slide" role="group" aria-roledescription="slide" aria-label="'+(i+1)+' of '+items.length+'">'+
-        (item.type==='video'?hero(item,entry.title,true):
+        (['video','embed'].includes(item.type)?hero(item,entry.title,true):
           '<button type="button" class="entry-media" data-gallery="'+esc(entry.id)+'" data-photo-index="'+images.indexOf(item)+'" aria-label="View '+images.length+' photo'+(images.length===1?'':'s')+' from '+esc(entry.title)+'">'+hero(item,entry.title,true)+'</button>')+
         '<div class="moment-caption">'+esc(item.caption||item.alt||entry.title)+'</div></div>').join('')+'</div>'+
       (items.length>1?'<div class="moment-controls"><button type="button" data-moment-step="-1" aria-label="Previous media">←</button><span class="moment-count" aria-live="polite">1 / '+items.length+'</span><button type="button" data-moment-step="1" aria-label="Next media">→</button></div>':'')+'</div>';
@@ -78,20 +107,40 @@
 .moment-controls button:hover{background:#1b607c}.moment-count{min-width:35px;text-align:center}
 .moment-gallery:has(video) .moment-controls{top:10px;bottom:auto}.moment-slide:has(video) .moment-caption{top:0;bottom:auto;padding-top:14px;background:linear-gradient(#020811e8,transparent)}
 .moment-track:focus-visible,.moment-controls button:focus-visible{outline:3px solid #a0efff;outline-offset:-3px}
+.social-player{display:flex;flex-direction:column;width:100%;height:100%;min-height:0;text-align:center;color:#e8f8ff;background:#071522}
+.social-player-stage{display:flex;flex:1;flex-direction:column;align-items:center;justify-content:center;padding:24px;min-height:0}
+.social-player button{padding:14px 22px;border:1px solid #81dfff;border-radius:24px;background:#123e53;color:#e8f8ff;font:600 15px system-ui;cursor:pointer}
+.social-player-note{max-width:390px;font:13px/1.6 system-ui;color:#a6bdcf}
+.social-player>a{padding:12px 155px 18px 15px;color:#8bd8ff;font:14px system-ui}
+.social-player iframe{width:100%;height:100%;min-height:0;border:0;background:#fff}
+.social-player-stage:has(iframe){padding:0}
 .media:has(.moment-gallery)>.caption{display:none}
 .moment-credits{font-size:11px;line-height:1.6;color:#a6bdcf;margin-top:16px}.moment-credits summary{cursor:pointer;min-height:36px;display:flex;align-items:center}.moment-credits ul{padding-left:18px}
 @media(max-width:600px){.entry>.moment-gallery{height:340px}.moment-caption{font-size:11px;padding-left:12px}.moment-controls{right:8px}.moment-gallery:has(.moment-controls) .moment-caption{padding-right:145px}}
 `;
   document.head.append(galleryStyle);
+  function stopPlayers(root){
+    root.querySelectorAll('video').forEach(video=>video.pause());
+    root.querySelectorAll('.social-player-stage:has(iframe)').forEach(stage=>{stage.innerHTML=stage.dataset.unloadedMarkup||'';});
+  }
   function moveGallery(gallery,delta){
     const track=gallery.querySelector('.moment-track');
     const slides=track.children.length;
     const current=Math.round(track.scrollLeft/track.clientWidth);
     const next=(current+delta+slides)%slides;
-    track.querySelectorAll('video').forEach(video=>video.pause());
+    stopPlayers(track);
     track.scrollTo({left:next*track.clientWidth,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
   }
   document.addEventListener('click',event=>{
+    const load=event.target.closest('[data-social-load]');
+    if(load){
+      // Never accept an arbitrary iframe target from data attributes.
+      const allowed=(window.MAP_DATA?.entries||[]).flatMap(socialMedia).some(item=>item.embedUrl===load.dataset.socialLoad);
+      if(!allowed)return;
+      const frame=document.createElement('iframe');frame.src=load.dataset.socialLoad;frame.title=load.dataset.socialTitle||'Original social post';
+      frame.allow='encrypted-media; fullscreen; picture-in-picture';frame.allowFullscreen=true;frame.referrerPolicy='strict-origin-when-cross-origin';
+      const stage=load.closest('.social-player-stage');stage.dataset.unloadedMarkup=stage.innerHTML;stage.replaceChildren(frame);return;
+    }
     const button=event.target.closest('[data-moment-step]');
     if(button){event.preventDefault();moveGallery(button.closest('.moment-gallery'),Number(button.dataset.momentStep));}
   });
@@ -105,7 +154,7 @@
     const index=Math.round(track.scrollLeft/track.clientWidth);
     const count=track.closest('.moment-gallery').querySelector('.moment-count');
     if(count)count.textContent=(index+1)+' / '+track.children.length;
-    track.querySelectorAll('video').forEach(video=>{if(!track.children[index]?.contains(video))video.pause();});
+    Array.from(track.children).forEach((slide,i)=>{if(i!==index)stopPlayers(slide);});
   },true);
 
   }
@@ -153,6 +202,6 @@
         locations: places(entry)
       }));
   }
-  window.MAP_CONTENT = { publicEntries, esc, url, provenance, media, label, primary, hero, gallery, coordinates, places, mapsURL, placeVerified, details };
+  window.MAP_CONTENT = { publicEntries, esc, url, provenance, media, label, primary, hero, gallery, socialMedia, coordinates, places, mapsURL, placeVerified, details };
 })();
 

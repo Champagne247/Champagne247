@@ -2,7 +2,7 @@
 
 > Operational continuity document. This repository may be public. **Do not put private travel dates, lodging, addresses, personal contacts, health, financial information, credentials, or family logistics here.**
 >
-> Last reviewed: 2026-11-11. Read the latest commit history and actual files before assuming this document is current.
+> Last reviewed: 2026-11-13. Read the latest commit history and actual files before assuming this document is current.
 
 ## Primary mission
 Build **My Life • My Mission • My M.A.P.** as a living vision board that evolves as life happens, not as a backlog for later.
@@ -24,6 +24,16 @@ Within the NOVA • My Life project, “my website,” “my life,” and “my 
 5. Verify commit SHA, changed paths and resulting data. Distinguish committed from deployed/live.
 6. Update this handoff when project state materially changes; keep it short and factual.
 7. Report what was done, what was not done, and the next action. Never claim a background sync or automatic trigger that isn't configured.
+
+## Social reconciliation — November 13, 2026
+- 97 master entries; retained all 96 and added the verified November 11 veteran-owned Facebook post.
+- Reviewed 113 analytics rows: 22 business Facebook, 2 Instagram feed, 9 Reels, 79 TikTok, 1 legacy YouTube. Previously published Instagram planner story remains included.
+- Saved 5 available source previews as local WebP assets. Most returned thumbnail URLs were expired/blocked or returned invalid image bytes. These are previews, not full videos or complete photo carousels.
+- Shared galleries now offer click-to-load original Facebook, Instagram, TikTok and YouTube posts, with permanent source links for sign-in/embedding restrictions. No third-party player is loaded until requested. Profile links are not treated as videos.
+- Preserve the intro, map/pins and five newest-first cards. Grouped source posts stay in one moment carousel. Personal and business Facebook are distinguished in the directory.
+- Coverage: `docs/social-coverage-2026-11-13.json`. Personal Facebook, X and newer Looking4Lift channel history remain unconnected; no full-archive claim.
+- Prior Pages build completed, artifact upload failed after retries. Latest old run had startup_failure and could not be retried. Verify the new commit deployment separately.
+- Local content/privacy/player tests: 6 pass. Full browser suite attempted but Chromium cannot create its singleton socket in this executor (Operation not permitted); use CI for full browser validation.
 
 ## Current state — November 11, 2026
 - Baseline main `17500ec`: Looking4Lift flight journal and preserved branding files. Pages deployment run 43034705619 succeeded.

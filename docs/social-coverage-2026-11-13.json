@@ -1,0 +1,823 @@
+{
+  "reviewedAt": "2026-11-13",
+  "baseEntries": 96,
+  "resultEntries": 97,
+  "newSources": [
+    "https://facebook.com/122118461787465672/posts/122130445599465672"
+  ],
+  "counts": {
+    "facebook": 22,
+    "instagram": 2,
+    "reels": 9,
+    "tiktok": 79,
+    "youtube": 1
+  },
+  "previewsSaved": 5,
+  "sources": [
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122130445599465672",
+      "entryId": "ccs-veteran-owned-services-20261111",
+      "preview": "/Champagne247/assets/map/social/facebook-8f443e50d359f567.webp",
+      "error": null
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122129882679465672",
+      "entryId": "ccs-local-service-booking-20261109",
+      "preview": null,
+      "error": "no thumbnail returned"
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122127339639465672",
+      "entryId": "map-timeline-refresh-2026",
+      "preview": null,
+      "error": "Returned bytes were not a valid image; source link retained."
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122126751507465672",
+      "entryId": "social-facebook-122126751507465672",
+      "preview": null,
+      "error": "no thumbnail returned"
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122126726841465672",
+      "entryId": "social-facebook-122126726841465672",
+      "preview": "/Champagne247/assets/map/social/facebook-3f8741970257723e.webp",
+      "error": null
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122125350129465672",
+      "entryId": "security-camera-install",
+      "preview": "/Champagne247/assets/map/social/facebook-4774fc44460408bd.webp",
+      "error": null
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122118470487465672",
+      "entryId": "nova-hello-world-test-2026-10-02",
+      "preview": null,
+      "error": "no thumbnail returned"
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122117715657465672",
+      "entryId": "social-facebook-122117715657465672",
+      "preview": null,
+      "error": "Returned bytes were not a valid image; source link retained."
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122113870959465672",
+      "entryId": "social-facebook-122113870959465672",
+      "preview": null,
+      "error": "Returned bytes were not a valid image; source link retained."
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122110717077465672",
+      "entryId": "social-facebook-122110717077465672",
+      "preview": null,
+      "error": "Returned bytes were not a valid image; source link retained."
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122110709199465672",
+      "entryId": "social-facebook-122110709199465672",
+      "preview": null,
+      "error": "Returned bytes were not a valid image; source link retained."
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122110208739465672",
+      "entryId": "social-facebook-122110208739465672",
+      "preview": null,
+      "error": "Returned bytes were not a valid image; source link retained."
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122110208127465672",
+      "entryId": "social-facebook-122110208127465672",
+      "preview": null,
+      "error": "Returned bytes were not a valid image; source link retained."
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122110087389465672",
+      "entryId": "mini-split-heats-and-cools-2026-09-15",
+      "preview": null,
+      "error": "Returned bytes were not a valid image; source link retained."
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122107844919465672",
+      "entryId": "social-facebook-122107844919465672",
+      "preview": null,
+      "error": "Returned bytes were not a valid image; source link retained."
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122103053553465672",
+      "entryId": "social-facebook-122103053553465672",
+      "preview": null,
+      "error": "Returned bytes were not a valid image; source link retained."
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122099947971465672",
+      "entryId": "social-facebook-122099947971465672",
+      "preview": null,
+      "error": "Returned bytes were not a valid image; source link retained."
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122098505655465672",
+      "entryId": "social-facebook-122098505655465672",
+      "preview": null,
+      "error": "Returned bytes were not a valid image; source link retained."
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122098499037465672",
+      "entryId": "social-facebook-journal-202609",
+      "preview": null,
+      "error": "Returned bytes were not a valid image; source link retained."
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122098475745465672",
+      "entryId": "social-facebook-122098475745465672",
+      "preview": null,
+      "error": "Returned bytes were not a valid image; source link retained."
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/2921325994868133",
+      "entryId": "social-facebook-journal-202609",
+      "preview": null,
+      "error": "Returned bytes were not a valid image; source link retained."
+    },
+    {
+      "network": "facebook",
+      "url": "https://facebook.com/122118461787465672/posts/122098463853465672",
+      "entryId": "social-facebook-journal-202609",
+      "preview": null,
+      "error": "Returned bytes were not a valid image; source link retained."
+    },
+    {
+      "network": "instagram",
+      "url": "https://www.instagram.com/p/DdHdZkLo8ky/",
+      "entryId": "social-instagram-ddhdzklo8ky",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "instagram",
+      "url": "https://www.instagram.com/p/DdETgRpDYX1/",
+      "entryId": "social-instagram-ddetgrpdyx1",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "reels",
+      "url": "https://www.instagram.com/reel/Det2K2ih-hD/",
+      "entryId": "social-instagram-det2k2ihhd",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "reels",
+      "url": "https://www.instagram.com/reel/Dc_t3aAD_8t/",
+      "entryId": "social-flying-with-friends-2026",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "reels",
+      "url": "https://www.instagram.com/reel/Dc3Y-K2EhR3/",
+      "entryId": "social-instagram-dc3yk2ehr3",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "reels",
+      "url": "https://www.instagram.com/reel/DcjBHxRG62L/",
+      "entryId": "social-freeflight-vr-demo-2026",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "reels",
+      "url": "https://www.instagram.com/reel/DcWqcabiYnB/",
+      "entryId": "lookout-100-flights",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "reels",
+      "url": "https://www.instagram.com/reel/DcJfNznDGCy/",
+      "entryId": "social-instagram-dcjfnzndgcy",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "reels",
+      "url": "https://www.instagram.com/reel/Db1NtLbjGq-/",
+      "entryId": "social-galveston-weekend-2026",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "reels",
+      "url": "https://www.instagram.com/reel/DbnoLzADQDl/",
+      "entryId": "social-freeflight-vr-practice-2026",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "reels",
+      "url": "https://www.instagram.com/reel/DblNTFlihRK/",
+      "entryId": "social-instagram-dblntflihrk",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7691398868998556958?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202609",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7690294115510078750?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202609",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7686128599916612894?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-7686128599916612894",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7685929611082927391?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-7685929611082927391",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7685798253555649823?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202609",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7685726085220273439?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-7685726085220273439",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7685718038120893726?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-7685718038120893726",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7683878512117239071?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202609",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7683877427805818142?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202609",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7683873731940191519?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202609",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7682868704102583583?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-freeflight-vr-practice-2026",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7682853918304472351?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-flying-with-friends-2026",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7682484381218311455?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-7682484381218311455",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7682056112572534047?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-ccs-louisiana-services-2026",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7681752029965995294?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-7681752029965995294",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7681655199169137950?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202609",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7679915074273774878?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202608",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7679543471920680223?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202608",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7679140128748571935?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-7679140128748571935",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7679083594588949790?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202608",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7678738745025154335?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-7678738745025154335",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7678719435363994911?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-freeflight-vr-demo-2026",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7678047278648610078?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202608",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7678011901808266526?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202608",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7677950584300883230?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-7677950584300883230",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7677634088412384542?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202608",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7676950325785365791?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "lookout-100-flights",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7676122582617165086?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-7676122582617165086",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7675841674316139807?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202608",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7675555556437806367?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-7675555556437806367",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7675475483382926622?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202608",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7675034770484530463?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202608",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7673533017314348318?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202608",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7673499101597666590?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202608",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7672939335087295774?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202608",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7672752421969415454?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-7672752421969415454",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7672116623385316639?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-galveston-weekend-2026",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7672069404229651742?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-galveston-weekend-2026",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7671820651728063775?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202608",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7671795392312315166?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202608",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7670563787350527263?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-7670563787350527263",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7670159934369189151?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-freeflight-vr-practice-2026",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7669793548916608287?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-7669793548916608287",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7669560387561426206?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202608",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7669545298158538015?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202608",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7669487584933907742?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202608",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7669479256082222367?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202608",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7669422881561988382?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-7669422881561988382",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7668781796447833375?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202607",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7667765035535519006?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-7667765035535519006",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7667286300583660831?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202607",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7666852744174652703?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-7666852744174652703",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7666672818007887134?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202607",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7666535269901946143?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-7666535269901946143",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7663146700441242911?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202607",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7662417898878586142?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202607",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7662101584389623070?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202607",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7661062317336972574?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202607",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7660574216479149342?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-7660574216479149342",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7660279237391306014?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-garage-minisplit-2026",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7660277669128457502?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-garage-minisplit-2026",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7659493778549476639?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202607",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7659179389552250142?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202607",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7659031703041756447?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202607",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7659017481075330334?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202607",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7658429133847842079?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-7658429133847842079",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7652892244751420703?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202606",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7652783576794156319?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202606",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7652774819427142942?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202606",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7652771666518363405?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202606",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7652766506647883022?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202606",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7650513250190134558?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-7650513250190134558",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7649800582676417823?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202606",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7648767607910305037?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202606",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7648762461604056333?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202606",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7648660105042414879?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-7648660105042414879",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7645763413003472159?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202605",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7645722046361636127?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-journal-202605",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "tiktok",
+      "url": "https://www.tiktok.com/@christopher.m.champagne/video/7640082338503773471?utm_campaign=tt4d_open_api&utm_source=awwuexz91plpu87c",
+      "entryId": "social-tiktok-7640082338503773471",
+      "preview": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "network": "youtube",
+      "url": "https://www.youtube.com/watch?v=h6-o2mrNayA",
+      "entryId": "social-youtube-video-journal-20260805",
+      "preview": "/Champagne247/assets/map/social/youtube-324013230078cfcc.webp",
+      "error": null
+    },
+    {
+      "network": "instagram",
+      "url": "https://www.instagram.com/p/Dfms9vuCIrY/",
+      "entryId": "looking4lift-family-legacy-instagram-20261111",
+      "preview": "/Champagne247/assets/map/social/instagram-0bda75af71aec3a3.webp",
+      "error": null
+    }
+  ],
+  "limitations": [
+    "Only connected source results were reconciled; this is not complete social history.",
+    "Personal Facebook, X and current Looking4Lift channel history not connected.",
+    "Previews are cached thumbnails/artwork, not downloaded full videos or complete photo carousels.",
+    "TikTok planner item failed with PNG format; it was not imported as published.",
+    "This review is a snapshot, not a continuous automatic sync."
+  ]
+}

@@ -6,6 +6,26 @@ const path=require('node:path');
 const context={window:{},location:{origin:'https://example.test'},URL};
 vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../assets/map/content.js'),'utf8'),context);
 const content=context.window.MAP_CONTENT;
+test('social players accept exact post URLs, deduplicate videos, and retain source fallbacks',()=>{
+ const entry={id:'social',title:'A moment',sources:[
+  {url:'https://www.tiktok.com/@chris/video/7691398868998556958?utm_source=test'},
+  {url:'https://youtube.com/shorts/N8nrGqnhRsA'},
+  {url:'https://youtu.be/N8nrGqnhRsA'},
+  {url:'https://www.instagram.com/reel/AbCd_123/'},
+  {url:'https://facebook.com/123/posts/456'},
+  {url:'https://www.youtube.com/@Looking4Lift-247'},
+  {url:'https://youtube.com.evil.test/watch?v=N8nrGqnhRsA'},
+  {url:'javascript:alert(1)'},
+  {url:'https://user:secret@youtube.com/watch?v=N8nrGqnhRsA'}
+ ],media:[]};
+ const items=content.socialMedia(entry);
+ assert.equal(items.length,4);
+ assert.equal(items[1].embedUrl,'https://www.youtube-nocookie.com/embed/N8nrGqnhRsA');
+ const html=content.gallery(entry);
+ assert.match(html,/Load TikTok post/);assert.match(html,/Open original on YouTube/);
+ assert.doesNotMatch(html,/<iframe|evil.test|secret|Category illustration/);
+ assert.equal(content.primary(entry).type,'embed');
+});
 test('actual own media precedes official actual subjects, then justified labeled AI illustrations',()=>{
  const entry={media:[
   {id:'ai',type:'image',url:'/ai.jpg',provenance:{kind:'ai',reason:'No actual or official image available'}},

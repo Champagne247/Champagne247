@@ -4,17 +4,17 @@ window.MAP_DATA = {
     "name": "M.A.P. Master Life Data",
     "description": "Single source of truth for My Life, My Mission and My M.A.P.",
     "canonicalBase": "https://champagne247.github.io/Champagne247",
-    "updatedAt": "2026-11-11T14:15:00-06:00",
+    "updatedAt": "2026-11-13T09:00:00-06:00",
     "socialReview": {
       "reviewedAt": "2026-11-07",
       "retrievalWindow": "2019-01-01 through 2026-11-07",
       "sources": 113,
       "coverage": "Connected CC’s Facebook Page, Instagram, TikTok and legacy YouTube only. Personal Facebook and X unavailable; empty results do not establish complete coverage.",
       "latestIncrementalReview": {
-        "reviewedAt": "2026-11-11",
-        "window": "2026-11-04 through 2026-11-11",
-        "newSources": 2,
-        "coverage": "One CC’s Facebook post returned by analytics; one published Instagram post confirmed in planner. Instagram analytics, Reels, TikTok and legacy YouTube returned no rows. Personal Facebook, X and current Looking4Lift YouTube history are not connected; this is partial coverage."
+        "reviewedAt": "2026-11-13",
+        "window": "2017-01-01 through 2026-11-13",
+        "newSources": 1,
+        "coverage": "Connected business Facebook, Instagram feed/Reels, TikTok and legacy YouTube: 113 returned rows. Published Instagram planner item also retained. Personal Facebook, X and current Looking4Lift YouTube history remain unconnected. Source previews are not full video archives. No continuous importer is running."
       }
     }
   },
@@ -94,6 +94,78 @@ window.MAP_DATA = {
       "schemaVersion": "1.0.0",
       "type": "life-entry",
       "authorId": "christopher-champagne",
+      "id": "ccs-veteran-owned-services-20261111",
+      "title": "CC’s • Veteran Owned. Locally Focused. Ready to Help.",
+      "story": "🇺🇸 Veteran owned. Locally focused. Ready to help.\n\nI’m Christopher with CC’S Technical Services LLC. I help homeowners and businesses around Leesville, New Llano, Fort Polk and DeRidder with HVAC, electrical, security cameras and IT/networking.\n\nNeed a repair or installation? Text 337-423-2331 with what you need, your area and a photo if available. I’ll follow up with the next step and scheduling availability.\n\nhttps://ccstechnicalservices.com/\n\nSee the work and the journey: https://champagne247.github.io/Champagne247/professional/\n\nThank you to everyone supporting a local veteran-owned business. Please share with someone who could use a dependable tech.\n\n#VeteranOwned #Leesville #DeRidder #HVAC #SecurityCameras",
+      "status": "done",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-11-11T14:25:39-06:00",
+      "eventAt": "2026-11-11T14:25:39-06:00",
+      "datetime": "2026-11-11T14:25:39-06:00",
+      "updatedAt": "2026-11-13T09:00:00-06:00",
+      "datePrecision": "day",
+      "displayDate": "November 11, 2026 • Shared on Facebook",
+      "primaryCategory": "professional",
+      "categories": [
+        "professional"
+      ],
+      "locations": [],
+      "media": [
+        {
+          "id": "social-preview-8f443e50d359f567",
+          "type": "image",
+          "source": "repository",
+          "url": "/Champagne247/assets/map/social/facebook-8f443e50d359f567.webp",
+          "caption": "Facebook • original post preview",
+          "provenance": {
+            "kind": "social",
+            "actualSubject": false,
+            "sourceUrl": "https://facebook.com/122118461787465672/posts/122130445599465672",
+            "credit": "Preview returned for the original social post; video and full carousel remain on the source platform."
+          }
+        }
+      ],
+      "hashtags": [],
+      "sources": [
+        {
+          "label": "Facebook original post",
+          "url": "https://facebook.com/122118461787465672/posts/122130445599465672",
+          "publishedDate": "20261111",
+          "verifiedAt": "2026-11-13"
+        }
+      ],
+      "links": [
+        {
+          "label": "View the published Facebook post",
+          "url": "https://facebook.com/122118461787465672/posts/122130445599465672",
+          "kind": "social"
+        },
+        {
+          "label": "CC’s Technical Services",
+          "url": "https://ccstechnicalservices.com/",
+          "kind": "business"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map",
+          "facebook"
+        ],
+        "state": "published",
+        "published": {
+          "facebook": "https://facebook.com/122118461787465672/posts/122130445599465672"
+        }
+      },
+      "platforms": [
+        "map",
+        "facebook"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "authorId": "christopher-champagne",
       "status": "done",
       "lifecycle": "published",
       "visibility": "public",
@@ -104,9 +176,15 @@ window.MAP_DATA = {
         {
           "id": "looking4lift-instagram-published-art",
           "type": "image",
-          "source": "external",
-          "url": "https://static.metricool.com/planner/202611/7203894-file-6061179100873648544.png",
-          "caption": "Looking4Lift • artwork from the published Instagram post"
+          "source": "repository",
+          "url": "/Champagne247/assets/map/social/instagram-0bda75af71aec3a3.webp",
+          "caption": "Looking4Lift • artwork from the published Instagram post",
+          "provenance": {
+            "kind": "social",
+            "actualSubject": false,
+            "sourceUrl": "https://www.instagram.com/p/Dfms9vuCIrY/",
+            "credit": "Artwork from the published post, not an event photo."
+          }
         }
       ],
       "hashtags": [],
@@ -1679,7 +1757,21 @@ window.MAP_DATA = {
         "professional"
       ],
       "locations": [],
-      "media": [],
+      "media": [
+        {
+          "id": "social-preview-4774fc44460408bd",
+          "type": "image",
+          "source": "repository",
+          "url": "/Champagne247/assets/map/social/facebook-4774fc44460408bd.webp",
+          "caption": "Facebook • original post preview",
+          "provenance": {
+            "kind": "social",
+            "actualSubject": false,
+            "sourceUrl": "https://facebook.com/122118461787465672/posts/122125350129465672",
+            "credit": "Preview returned for the original social post; video and full carousel remain on the source platform."
+          }
+        }
+      ],
       "hashtags": [
         "MyLife",
         "MyMAP"
@@ -3246,7 +3338,21 @@ window.MAP_DATA = {
       ],
       "story": "🔧 NEED SOMETHING FIXED? CALL YOUR LOCAL TECH!\n\nYour AC not cooling? Electrical problems? Need security cameras installed or commercial refrigeration repaired?\n\nCC'S Technical Services LLC is ready to help!\n\n✅ HVAC & Heat Pump Repairs\n✅ Mini-Split Installation & Service\n✅ Electrical Troubleshooting\n✅ Security Cameras & Access Control\n✅ Refrigeration & Restaurant Equipment\n✅ Networking & Low-Voltage Systems\n\n💰 Service calls start at $100 for the first hour on-site, then $50/hour.\n\n🇺🇸 Locally operated. Veteran owned. Straightforward pricing and professional workmanship.\n\n📍 Serving Leesville, New Llano, Fort Polk, DeRidder & surrounding communities.\n\n📲 TEXT 337-423-2331 TODAY!\n\nTell me what you're having trouble with and where you're located. I'll help you figure out the next step.\n\n🌐 CCsTechnicalServices.com\n\nLOCAL SERVICE. REAL PEOPLE. WORK DONE RIGHT.\n\n#LeesvilleLA #DeRidderLA #FortPolk #HVACRepair #ElectricalServices #SecurityCameras #VeteranOwned #CCsTechnicalServices\n\nHistorical post: prices and promotions reflect the original publication; contact CC’s for current pricing and availability.",
       "locations": [],
-      "media": [],
+      "media": [
+        {
+          "id": "social-preview-3f8741970257723e",
+          "type": "image",
+          "source": "repository",
+          "url": "/Champagne247/assets/map/social/facebook-3f8741970257723e.webp",
+          "caption": "Facebook • original post preview",
+          "provenance": {
+            "kind": "social",
+            "actualSubject": false,
+            "sourceUrl": "https://facebook.com/122118461787465672/posts/122126726841465672",
+            "credit": "Preview returned for the original social post; video and full carousel remain on the source platform."
+          }
+        }
+      ],
       "hashtags": [],
       "links": [
         {
@@ -6878,7 +6984,21 @@ window.MAP_DATA = {
       ],
       "story": "A collection of posts shared on youtube. Open the original posts below to watch or view them; captions were not supplied by the connected account.",
       "locations": [],
-      "media": [],
+      "media": [
+        {
+          "id": "social-preview-324013230078cfcc",
+          "type": "image",
+          "source": "repository",
+          "url": "/Champagne247/assets/map/social/youtube-324013230078cfcc.webp",
+          "caption": "Youtube • original post preview",
+          "provenance": {
+            "kind": "social",
+            "actualSubject": false,
+            "sourceUrl": "https://www.youtube.com/watch?v=h6-o2mrNayA",
+            "credit": "Preview returned for the original social post; video and full carousel remain on the source platform."
+          }
+        }
+      ],
       "hashtags": [],
       "links": [
         {

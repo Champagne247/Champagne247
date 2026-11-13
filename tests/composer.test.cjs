@@ -420,3 +420,21 @@ test('homepage blends map pins with five newest-first moments and expandable jou
   assert.deepEqual(errors,[]);
  } finally {await context.close();}
 });
+
+test('original social posts load on request and stop when their carousel advances', async () => {
+ const {context,page,errors}=await session();
+ try {
+  await context.addInitScript(()=>sessionStorage.setItem('nova-intro-seen','1'));
+  await page.goto(origin+'/Champagne247/#looking4lift-youtube-launch-2026');
+  const card=page.locator('#looking4lift-youtube-launch-2026');
+  assert.equal(await card.locator('iframe').count(),0);
+  const player=card.locator('.social-player');
+  await player.getByRole('button',{name:'Load YouTube post'}).scrollIntoViewIfNeeded();
+  await player.getByRole('button',{name:'Load YouTube post'}).click();
+  assert.equal(await player.locator('iframe').getAttribute('src'),'https://www.youtube-nocookie.com/embed/N8nrGqnhRsA');
+  assert.match(await player.getByRole('link',{name:/Open original/}).getAttribute('href'),/N8nrGqnhRsA/);
+  await card.getByRole('button',{name:'Next media',exact:true}).click();
+  assert.equal(await card.locator('iframe').count(),0);
+  assert.deepEqual(errors,[]);
+ } finally {await context.close();}
+});
