@@ -4,7 +4,7 @@ window.MAP_DATA = {
     "name": "M.A.P. Master Life Data",
     "description": "Single source of truth for My Life, My Mission and My M.A.P.",
     "canonicalBase": "https://champagne247.github.io/Champagne247",
-    "updatedAt": "2026-11-13T09:00:00-06:00",
+    "updatedAt": "2026-11-16T13:00:00-06:00",
     "socialReview": {
       "reviewedAt": "2026-11-07",
       "retrievalWindow": "2019-01-01 through 2026-11-07",
@@ -90,6 +90,73 @@ window.MAP_DATA = {
     }
   },
   "entries": [
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "crossfire-pocket-arena-20261116",
+      "authorId": "christopher-champagne",
+      "title": "CROSSFIRE is playable. Come hunt us down.",
+      "story": "We’re building a four-player mobile browser FPS with N.O.V.A. One small map, an assault rifle, cover, reloads and automatic respawns. Open the arena, create a room, and have your friends join with its six-character code. No downloads—just your phone and a little friendly rivalry. This is an early playable prototype; help us put the controls and connections through their paces. The permanent play page now lives here on My Life / My M.A.P.",
+      "status": "progress",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-11-16T13:00:00-06:00",
+      "updatedAt": "2026-11-16T13:00:00-06:00",
+      "eventAt": "2026-11-16T13:00:00-06:00",
+      "datetime": "2026-11-16T13:00:00-06:00",
+      "displayDate": "2026-11-16",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator"
+      ],
+      "locations": [],
+      "projects": [
+        "NOVA",
+        "CROSSFIRE"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "url": "/Champagne247/assets/games/crossfire/crossfire-cover.webp",
+          "alt": "CROSSFIRE promotional concept art with four colorful low-poly arena players",
+          "caption": "CROSSFIRE: Pocket Arena · AI promotional concept art; playable alpha graphics are simpler.",
+          "provenance": {
+            "kind": "ai",
+            "actualSubject": false,
+            "reason": "Promotional concept illustration created for the new CROSSFIRE project; not a gameplay screenshot.",
+            "credit": "Created with OpenAI image generation"
+          }
+        }
+      ],
+      "hashtags": [
+        "CROSSFIRE",
+        "NOVABuilds",
+        "MyLife",
+        "MyMAP"
+      ],
+      "links": [
+        {
+          "label": "Play CROSSFIRE now",
+          "url": "https://crossfire-pocket-arena.cladmonk1.chatgpt.site/",
+          "kind": "project"
+        },
+        {
+          "label": "How to play / join a room",
+          "url": "/Champagne247/play/",
+          "kind": "project"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
     {
       "schemaVersion": "1.0.0",
       "type": "life-entry",
