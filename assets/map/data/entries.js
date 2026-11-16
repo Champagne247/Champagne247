@@ -4,7 +4,7 @@ window.MAP_DATA = {
     "name": "M.A.P. Master Life Data",
     "description": "Single source of truth for My Life, My Mission and My M.A.P.",
     "canonicalBase": "https://champagne247.github.io/Champagne247",
-    "updatedAt": "2026-11-16T13:00:00-06:00",
+    "updatedAt": "2026-11-16T13:25:00-06:00",
     "socialReview": {
       "reviewedAt": "2026-11-07",
       "retrievalWindow": "2019-01-01 through 2026-11-07",
@@ -90,6 +90,78 @@ window.MAP_DATA = {
     }
   },
   "entries": [
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "crossfire-v2-20261116",
+      "authorId": "christopher-champagne",
+      "title": "CROSSFIRE V2 · The boys asked. We built.",
+      "story": "V2 takes our browser shooter into 3D. Neon-trimmed concrete, tiled floors, angular avatars, and two maps: The Compound with a raised walkway and ramps, plus Switchyard. Play free-for-all with up to eight players or 1v1, 2v2, 3v3, and 4v4 teams. Pick the Vanguard rifle, Raptor SMG or Breacher shotgun, customize your crosshair, and find a public room. The screenshot shows actual V2 compatibility graphics. This is still a field-test prototype—bring your phones, try a match, and help shape the next version. V1 remains playable, and the version history lives on our play page.",
+      "status": "progress",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-11-16T13:25:00-06:00",
+      "updatedAt": "2026-11-16T13:25:00-06:00",
+      "eventAt": "2026-11-16T13:25:00-06:00",
+      "datetime": "2026-11-16T13:25:00-06:00",
+      "displayDate": "November 16, 2026 · V2 field test",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator"
+      ],
+      "locations": [],
+      "projects": [
+        "NOVA",
+        "CROSSFIRE"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "url": "/Champagne247/assets/games/crossfire/crossfire-v2-gameplay.jpg",
+          "alt": "Actual CROSSFIRE V2 gameplay with neon-trimmed ramps, training target and rifle",
+          "caption": "Actual V2 gameplay · compatibility renderer. WebGL-capable browsers add lighting and shadows.",
+          "provenance": {
+            "kind": "official",
+            "actualSubject": true,
+            "sourceUrl": "https://crossfire-pocket-arena.cladmonk1.chatgpt.site/",
+            "credit": "CROSSFIRE V2 · build capture"
+          }
+        }
+      ],
+      "hashtags": [
+        "CROSSFIRE",
+        "NOVABuilds",
+        "MyLife",
+        "MyMAP"
+      ],
+      "links": [
+        {
+          "label": "Play CROSSFIRE V2",
+          "url": "https://crossfire-pocket-arena.cladmonk1.chatgpt.site/",
+          "kind": "project"
+        },
+        {
+          "label": "Version history / join a room",
+          "url": "/Champagne247/play/#versions",
+          "kind": "project"
+        },
+        {
+          "label": "Play the V1 archive",
+          "url": "https://crossfire-pocket-arena.cladmonk1.chatgpt.site/v1/",
+          "kind": "project"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
     {
       "schemaVersion": "1.0.0",
       "type": "life-entry",
