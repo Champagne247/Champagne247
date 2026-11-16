@@ -4,7 +4,7 @@ window.MAP_DATA = {
     "name": "M.A.P. Master Life Data",
     "description": "Single source of truth for My Life, My Mission and My M.A.P.",
     "canonicalBase": "https://champagne247.github.io/Champagne247",
-    "updatedAt": "2026-11-16T13:25:00-06:00",
+    "updatedAt": "2026-11-16T13:47:40-06:00",
     "socialReview": {
       "reviewedAt": "2026-11-07",
       "retrievalWindow": "2019-01-01 through 2026-11-07",
@@ -90,6 +90,72 @@ window.MAP_DATA = {
     }
   },
   "entries": [
+    {
+      "schemaVersion": "1.0.0",
+      "type": "life-entry",
+      "id": "crossfire-v2-1-dual-stick-20261116",
+      "authorId": "christopher-champagne",
+      "title": "CROSSFIRE V2.1 · Two thumbs. Full control.",
+      "story": "Your phone feedback is shaping the game. V2.1 adds a dedicated right joystick for looking around, alongside the left movement joystick. No more weaving screen swipes between buttons. Tap AIM to toggle the sight view, tap FIRE for a shot or hold to keep firing. The action buttons sit outside the thumb areas, and the look stick stops on release with slower precision turning while aiming. The image shows the actual phone-sized browser layout. Come test it on your phone and keep the feedback coming.",
+      "status": "progress",
+      "lifecycle": "published",
+      "visibility": "public",
+      "createdAt": "2026-11-16T13:47:40-06:00",
+      "updatedAt": "2026-11-16T13:47:40-06:00",
+      "eventAt": "2026-11-16T13:47:40-06:00",
+      "datetime": "2026-11-16T13:47:40-06:00",
+      "displayDate": "November 16, 2026 · V2.1 controls",
+      "primaryCategory": "creator",
+      "categories": [
+        "creator"
+      ],
+      "locations": [],
+      "projects": [
+        "NOVA",
+        "CROSSFIRE"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "url": "/Champagne247/assets/games/crossfire/crossfire-v2-1-controls.jpg",
+          "alt": "CROSSFIRE V2.1 with independent left movement and right look joysticks",
+          "caption": "Actual V2.1 layout · phone-sized browser viewport, compatibility graphics.",
+          "provenance": {
+            "kind": "official",
+            "actualSubject": true,
+            "sourceUrl": "https://crossfire-pocket-arena.cladmonk1.chatgpt.site/",
+            "credit": "CROSSFIRE V2.1 · browser build capture"
+          }
+        }
+      ],
+      "hashtags": [
+        "CROSSFIRE",
+        "NOVABuilds",
+        "MyMAP"
+      ],
+      "links": [
+        {
+          "label": "Play CROSSFIRE V2.1",
+          "url": "https://crossfire-pocket-arena.cladmonk1.chatgpt.site/",
+          "kind": "project"
+        },
+        {
+          "label": "Controls and version history",
+          "url": "/Champagne247/play/#versions",
+          "kind": "project"
+        }
+      ],
+      "distribution": {
+        "destinations": [
+          "map"
+        ],
+        "state": "published",
+        "published": {}
+      },
+      "platforms": [
+        "map"
+      ]
+    },
     {
       "schemaVersion": "1.0.0",
       "type": "life-entry",

@@ -2,6 +2,12 @@
 
 Permanent community entry: https://champagne247.github.io/Champagne247/play/
 
+## V2.1 — November 16, 2026
+
+Phone-feedback revision: dedicated left movement and right look joysticks. The right stick controls continuous angular velocity, with a radial dead zone, proportional speed, pitch clamps and aim precision. Buttons are positioned outside both stick areas in portrait and landscape. Tap AIM toggles ADS; tap FIRE shoots once or hold for sustained fire. Screen swipe look remains optional. Pointer release/cancel/capture loss and focus/menu changes clear the controls.
+
+Validation: input math checks for radial clamp, dead zone, direction, held/released movement, frame-rate independence and aiming precision; TypeScript/build checks; browser checks at phone-sized portrait and landscape viewports. Right-stick camera movement and centered release were verified without changing ammo; aim toggle and fire controls checked. Physical simultaneous multi-touch remains unverified.
+
 ## V2 — November 16, 2026
 
 - 3D scene geometry with a WebGL renderer and canvas compatibility fallback.
